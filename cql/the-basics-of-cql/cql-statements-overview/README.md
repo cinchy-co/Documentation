@@ -1,13 +1,13 @@
 # CQL Statements Overview
 
-## 1. Overview
+## Overview
 
-The Cinchy Query Language (CQL) statements are grouped into two (2) categories:
+The Cinchy Query Language (CQL) statements group into two (2) categories:
 
-* **Data Manipulation Language (**[**DML**](https://cinchy.gitbook.io/cql/cql-overview#data-manipulation-language-dml)**)** - DML is used to add, retrieve, update and manipulate data. For example, insert, update, delete.
-* **Data Definition Language (**[**DDL**](https://cinchy.gitbook.io/cql/cql-overview#data-definition-languages-ddl)**)** - DDL is used to create a database schema and define constraints. For example, create a table and alter a table.
+* **Data Manipulation Language (**[**DML**](https://cinchy.gitbook.io/cql/cql-overview#data-manipulation-language-dml)**)** - Use DML to add, retrieve, update and manipulate data. For example, insert, update, delete.
+* **Data Definition Language (**[**DDL**](https://cinchy.gitbook.io/cql/cql-overview#data-definition-languages-ddl)**)** - Use DDL to create a database schema and define constraints. For example, create a table and alter a table.
 
-## 2. Data Manipulation Language (DML) <a href="#data-manipulation-language-dml" id="data-manipulation-language-dml"></a>
+## Data Manipulation Language (DML) <a href="#data-manipulation-language-dml" id="data-manipulation-language-dml"></a>
 
 List of available DML statements:
 
@@ -19,7 +19,7 @@ List of available DML statements:
 * ​[Declare Variables​](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#declare-variable)
 * [​Set Variables​](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#set-variable)
 
-## 3. Data Definition Languages (DDL) <a href="#data-definition-languages-ddl" id="data-definition-languages-ddl"></a>
+## Data Definition Languages (DDL) <a href="#data-definition-languages-ddl" id="data-definition-languages-ddl"></a>
 
 List of available DDL statements:
 
