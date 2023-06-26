@@ -8,7 +8,7 @@ description: >-
 
 ### **Introduction** <a href="#1.-introduction" id="1.-introduction"></a>
 
-**Cinchy Query Language (CQL)** is a query language unique to dataware that is used to retrieve and manage/modify data and metadata from tables in your network. While data can reside across many tables, a query can isolate it to a single output, making the possibilities of CQL endlessly powerful.
+**Cinchy Query Language (CQL)** is a query language unique to dataware that's used to retrieve and manage/modify data and metadata from tables in your network. While data can reside across many tables, a query can isolate it to a single output, making the possibilities of CQL endlessly powerful.
 
 **Cinchy Query Language can be used in many ways, including but not limited to:**
 
