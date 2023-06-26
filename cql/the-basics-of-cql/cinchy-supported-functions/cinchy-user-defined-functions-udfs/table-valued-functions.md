@@ -15,7 +15,7 @@ FROM tableUDF() u
 
 ## Create a Table in a UDF <a href="#static-table" id="static-table"></a>
 
-To generate a table within a UDF for use in CQL, you need to create a dataTable in the same format as the default Cinchy JSON Saved Query response _(Image 1)._
+To generate a table within a UDF for use in CQL, you need to create a data table in the same format as the default Cinchy JSON Saved Query response _(Image 1)._
 
 ```sql
 function tableUDF()
