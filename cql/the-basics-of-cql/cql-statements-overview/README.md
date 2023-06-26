@@ -16,8 +16,8 @@ List of available DML statements:
 * ​[UPDATE​](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#update)
 * ​[DELETE​](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#delete)
 * [​IF​](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#if)
-* ​[Declare Variables​](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#declare-variable)
-* [​Set Variables​](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#set-variable)
+* ​[DECLARE​](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#declare-variable)
+* [SET](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements#set-variable)
 
 ## Data Definition Languages (DDL) <a href="#data-definition-languages-ddl" id="data-definition-languages-ddl"></a>
 

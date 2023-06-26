@@ -2,15 +2,15 @@
 
 ## Overview
 
-DML is used to add, retrieve, update and manipulate data.The Cinchy DML statements covered on this page are:
+Use Data Manipulation Language (DML) to add, retrieve, update and manipulate data. The Cinchy DML statements covered on this page are:
 
 - [​SELECT](cinchy-dml-statements.md#select)​
 - [​INSERT](cinchy-dml-statements.md#insert-1)​
 - [​UPDATE​](cinchy-dml-statements.md#update)
 - [​DELETE​](cinchy-dml-statements.md#delete)
 - ​[IF](cinchy-dml-statements.md#if)​
-- [​Declare Variables​](cinchy-dml-statements.md#declare-variable)
-- ​[Set Variables](cinchy-dml-statements.md#set-variable)​
+- [DECLARE​](cinchy-dml-statements.md#declare-variable)
+- ​[SET](cinchy-dml-statements.md#set-variable)​
 
 ## SELECT <a href="#select" id="select"></a>
 
@@ -93,7 +93,6 @@ Use an `INSERT` statement to add new rows to a table or view. You can also inclu
 The table name requires the domain prefix.
 {% endhint %}
 
-
 ```sql
 INSERT INTO [Domain].[Table_Name] ([Column1],[Column2],[Column3], ...)
 VALUES ([Value1],[Value2],[Value3], ...)
@@ -108,7 +107,7 @@ VALUES (@firstname, @lastname, @address, @jobtitle)
 
 ## UPDATE <a href="#update" id="update"></a>
 
-Use the `UPDATE` statement to change the data in a table. The `UPDATE` statement modifies zero or more rows of a table, depending on how many rows meet the search condition  specified in the `WHERE` clause. You can also use an `UPDATE` statement to specify the values to be updated in a single row. To do this, specify the constants, host variables, expressions, `DEFAULT`, or `NULL`. Specify `NULL` to remove a value from a row's column (without removing the row).
+Use the `UPDATE` statement to change the data in a table. The `UPDATE` statement modifies zero or more rows of a table, depending on how many rows meet the search condition specified in the `WHERE` clause. You can also use an `UPDATE` statement to specify the values to be updated in a single row. To do this, specify the constants, host variables, expressions, `DEFAULT`, or `NULL`. Specify `NULL` to remove a value from a row's column (without removing the row).
 
 {% hint style="info" %}
 The table name requires the domain prefix.
