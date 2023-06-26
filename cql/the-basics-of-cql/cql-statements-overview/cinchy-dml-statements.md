@@ -1,6 +1,6 @@
 # Cinchy DML Statements
 
-## 1. Overview
+## Overview
 
 DML is used to add, retrieve, update and manipulate data.The Cinchy DML statements covered on this page are:
 
@@ -182,7 +182,7 @@ DECLARE @variable_name variable_type;
 DECLARE @var varchar(50);
 ```
 
-## Set Variable <a href="#set-variable" id="set-variable"></a>
+## SET <a href="#set-variable" id="set-variable"></a>
 
 Use the `SET` variable to assign a value to a variable.
 
