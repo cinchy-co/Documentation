@@ -1,6 +1,6 @@
 # Cinchy DDL Statements
 
-## 1. Overview
+## Overview
 
 DDL is used to create a database schema and define constraints.The Cinchy DDL functions covered on this page are:
 
