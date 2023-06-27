@@ -1,52 +1,49 @@
 # Return Date and Time Values From Their Parts
 
-## 1. Overview
+## Overview
 
 The following return date and time values from their parts functions covered in this section are:
 
-* [DATEFROMPARTS](return-date-and-time-values-from-their-parts.md#datefromparts)
-* [DATETIME2FROMPARTS](return-date-and-time-values-from-their-parts.md#datetime2fromparts)
-* [DATETIMEFROMPARTS ](return-date-and-time-values-from-their-parts.md#datetimefromparts)
-* [DATETIMEOFFSETFROMPARTS](return-date-and-time-values-from-their-parts.md#datetimeoffsetfromparts)
-* [SMALLDATETIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#smalldatetimefromparts)
-* [TIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#timefromparts)
+- [DATEFROMPARTS](return-date-and-time-values-from-their-parts.md#datefromparts)
+- [DATETIME2FROMPARTS](return-date-and-time-values-from-their-parts.md#datetime2fromparts)
+- [DATETIMEFROMPARTS ](return-date-and-time-values-from-their-parts.md#datetimefromparts)
+- [DATETIMEOFFSETFROMPARTS](return-date-and-time-values-from-their-parts.md#datetimeoffsetfromparts)
+- [SMALLDATETIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#smalldatetimefromparts)
+- [TIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#timefromparts)
 
 ## DATEFROMPARTS
 
 This function returns a **date** value that maps to the specified year, month, and day values.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 DATEFROMPARTS ( year, month, day )
 ```
 
-#### Arguments
+### Arguments
 
-&#x20;`year`\
+`year`\
 An integer expression that specifies a year.
 
-&#x20;`month`\
+`month`\
 An integer expression that specifies a month, from 1 to 12.
 
-&#x20;`day`\
+`day`\
 An integer expression that specifies a day.
 
-#### Return Types&#x20;
+### Return types
 
 ```sql
 date
 ```
 
-#### Remarks&#x20;
+### Remarks
 
 `DATEFROMPARTS` returns a **date** value, with the date portion set to the specified year, month and day, and the time portion set to the default. For invalid arguments, `DATEFROMPARTS` will raise an error. `DATEFROMPARTS` returns null if at least one required argument has a null value.
 
@@ -58,23 +55,20 @@ SELECT DATEFROMPARTS(2010, 12, 31) AS Result
 
 ## DATETIME2FROMPARTS
 
-&#x20;DATETIME2FROMPARTS function returns a **datetime2** value for the specified date and time arguments. The returned value has a precision specified by the precision argument.
+`DATETIME2FROMPARTS` function returns a **datetime2** value for the specified date and time arguments. The returned value has a precision specified by the precision argument.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precision )
 ```
 
-#### Arguments
+### Arguments
 
 `year`\
 An integer expression that specifies a year.
@@ -100,25 +94,25 @@ An integer expression that specifies a fractional seconds value.
 `percision`\
 An integer expression that specifies the precision of the **datetime2** value that `DATETIME2FROMPARTS` will return.
 
-#### Return Types&#x20;
+### Return types
 
 ```sql
 datetime2( precision )
 ```
 
-#### Remarks&#x20;
+### Remarks
 
 `DATETIME2FROMPARTS` returns a fully initialized **datetime2** value. `DATETIME2FROMPARTS` will raise an error if at least one required argument has an invalid value. `DATETIME2FROMPARTS` returns null if at least one required argument has a null value. However, if the _precision_ argument has a null value, `DATETIME2FROMPARTS` will raise an error.
 
 The _fractions_ argument depends on the _precision_ argument. For example, for a _precision_ value of 7, each fraction represents 100 nanoseconds; for a _precision_ of 3, each fraction represents a millisecond. For a _precision_ value of zero, the value of _fractions_ must also be zero; otherwise, `DATETIME2FROMPARTS` will raise an error.
 
-**Example 1: Without Fractions of a Second**
+#### Example 1: Without fractions of a second
 
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;
 ```
 
-**Example 2: With Fractions of a Second**
+#### Example 2: With fractions of a second
 
 1. When _fractions_ have a value of 5, and _precision_ has a value of 1, the value of _fractions_ represents 5/10 of a second.
 2. When _fractions_ have a value of 50, and _precision_ has a value of 2, the value of _fractions_ represents 50/100 of a second.
@@ -128,25 +122,22 @@ SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;
 SELECT DATETIME2FROMPARTS(2011, 8, 15, 14, 23, 44, 5, 1)
 ```
 
-## DATETIMEFROMPARTS&#x20;
+## DATETIMEFROMPARTS
 
 DATETIMEFROMPARTS function returns a **datetime** value for the specified date and time arguments.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ```
 
-#### Arguments
+### Arguments
 
 `year`\
 An integer expression that specifies a year.
@@ -169,13 +160,13 @@ An integer expression that specifies seconds.
 `milliseconds`\
 An integer expression that specifies milliseconds.
 
-#### Return Types&#x20;
+### Return types
 
 ```sql
 datetime
 ```
 
-#### Remarks&#x20;
+### Remarks
 
 `DATETIMEFROMPARTS` returns a fully initialized **datetime** value. `DATETIMEFROMPARTS` will raise an error if at least one required argument has an invalid value. `DATETIMEFROMPARTS` returns null if at least one required argument has a null value.
 
@@ -190,20 +181,17 @@ SELECT DATETIMEFROMPARTS( 2010, 12, 31, 23, 59, 59, 0 ) AS Result
 Returns a **datetimeoffset** value for the specified date and time arguments. The returned value has a precision specified by the precision argument and an offset as specified by the offset arguments.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, hour_offset, minute_offset, precision )
 ```
 
-#### Arguments
+### Arguments
 
 `year`\
 An integer expression that specifies a year.
@@ -235,25 +223,25 @@ An integer expression that specifies the minute portion of the time zone offset.
 `precision` \
 An integer literal value that specifies the precision of the **datetimeoffset** value that `DATETIMEOFFSETFROMPARTS` will return.
 
-#### Return Types&#x20;
+### Return types
 
 ```sql
 datetimeoffset( precision )
 ```
 
-#### Remarks&#x20;
+#### Remarks
 
-`DATETIMEOFFSETFROMPARTS` returns a fully initialized **datetimeoffset** data type. The offset arguments represent the time zone offset. For omitted offset arguments, `DATETIMEOFFSETFROMPARTS` assumes a time zone offset of `00:00` - in other words, no time zone offset. For specified offset arguments, `DATETIMEOFFSETFROMPARTS` expects values for both arguments, and both values positive or negative. If _minute\_offset_ has a value and _hour\_offset_ has no value, `DATETIMEOFFSETFROMPARTS` will raise an error. `DATETIMEOFFSETFROMPARTS` will raise an error if the other arguments have invalid values. If at least one required arguments have a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will return `NULL`. However, if the _precision_ argument has a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will raise an error.
+`DATETIMEOFFSETFROMPARTS` returns a fully initialized **datetimeoffset** data type. The offset arguments represent the time zone offset. For omitted offset arguments, `DATETIMEOFFSETFROMPARTS` assumes a time zone offset of `00:00` - in other words, no time zone offset. For specified offset arguments, `DATETIMEOFFSETFROMPARTS` expects values for both arguments, and both values positive or negative. If _minute_offset_ has a value and _hour_offset_ has no value, `DATETIMEOFFSETFROMPARTS` will raise an error. `DATETIMEOFFSETFROMPARTS` will raise an error if the other arguments have invalid values. If at least one required arguments have a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will return `NULL`. However, if the _precision_ argument has a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will raise an error.
 
 The _fractions_ argument depends on the precision argument. For example, for a precision value of 7, each fraction represents 100 nanoseconds; for a precision of 3, each fraction represents a millisecond. For a precision value of zero, the value of fractions must also be zero; otherwise, `DATETIMEOFFSETFROMPARTS` will raise an error.
 
-**Example 1: Without Fractions of a Second**
+#### Example 1: Without fractions of a second
 
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;
 ```
 
-**Example 2: With Fractions of a Second**
+#### Example 2: With fractions of a second
 
 This example shows the use of the _fractions_ and _precision_ parameters:
 
@@ -270,20 +258,20 @@ SELECT DATETIMEOFFSETFROMPARTS( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 )
 SMALLDATETIMEFROMPARTS returns a **smalldatetime** value for the specified date and time.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
 You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```
 
-#### Arguments
+### Arguments
 
 `year`\
 Integer expression specifying a year.
@@ -300,15 +288,15 @@ Integer expression specifying hours.
 `minute`\
 Integer expression specifying minutes.
 
-#### Return Types&#x20;
+### Return types
 
 ```sql
 smalldatetime
 ```
 
-#### Remarks&#x20;
+### Remarks
 
-This function acts as a constructor for a fully initialized **smalldatetime** value. If the arguments are not valid, then an error is thrown. If required arguments are null, then null is returned.
+This function acts as a constructor for a fully initialized **smalldatetime** value. If the arguments aren't valid, then an error is thrown. If required arguments are null, then null is returned.
 
 #### Example
 
@@ -321,20 +309,17 @@ SELECT SMALLDATETIMEFROMPARTS( 2010, 12, 31, 23, 59 ) AS Result
 TIMEFROMPARTS returns a **time** value for the specified time and with the specified precision.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ```
 
-#### Arguments
+### Arguments
 
 `hour`\
 Integer expression specifying hours.
@@ -351,25 +336,25 @@ Integer expression specifying fractions.
 `precision`\
 Integer literal specifying the precision of the **time** value to be returned.
 
-#### Return Types&#x20;
+### Return types
 
 ```sql
 time( precision )
 ```
 
-#### Remarks&#x20;
+#### Remarks
 
 TIMEROMPARTS returns a fully initialized time value. If the arguments are invalid, then an error is raised. If any of the parameters are null, null is returned. However, if the _precision_ argument is null, then an error is raised.
 
 The _fractions_ argument depends on the _precision_ argument. For example, if _precision_ is 7, then each fraction represents 100 nanoseconds; if _precision_ is 3, then each fraction represents a millisecond. If the value of _precision_ is zero, then the value of _fractions_ must also be zero; otherwise, an error is raised.
 
-**Example 1: Without Fractions of a Second**
+#### Example 1: Without fractions of a second
 
 ```sql
 SELECT TIMEFROMPARTS( 23, 59, 59, 0, 0 ) AS Result
 ```
 
-**Example 2: With Fractions of a Second**
+#### Example 2: With fractions of a second
 
 The following example demonstrates the use of the _fractions_ and _precision_ parameters:
 

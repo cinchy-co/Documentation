@@ -1,10 +1,10 @@
 # Table-Valued Functions
 
-## 1. Overview
+## Overview
 
-Similar to the SQL construct of table-valued functions, a Cinchy User Defined Function can be SELECTED or CROSS JOINED from -- as if it is a table.
+Similar to the SQL construct of table-valued functions, you can `SELECT` or `CROSS JOIN` from a Cinchy UDF as if it is a table.
 
-## 2. Using a Table Valued UDF in CQL <a href="#static-table" id="static-table"></a>
+## Use a Table Valued UDF in CQL <a href="#static-table" id="static-table"></a>
 
 The SELECT and FROM clause work the same for a table-valued UDF as they would for a regular Cinchy table.
 
@@ -13,9 +13,9 @@ SELECT u.*
 FROM tableUDF() u
 ```
 
-## 3. Creating a Table in a UDF <a href="#static-table" id="static-table"></a>
+## Create a Table in a UDF <a href="#static-table" id="static-table"></a>
 
-To generate a table within a UDF for use in CQL, a dataTable will need to be created in the same format as the default Cinchy JSON Saved Query response _(Image 1)._
+To generate a table within a UDF for use in CQL, you need to create a data table in the same format as the default Cinchy JSON Saved Query response _(Image 1)._
 
 ```sql
 function tableUDF()

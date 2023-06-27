@@ -1,28 +1,25 @@
 # Return Date and Time Parts
 
-## 1. Overview
+## Overview
 
 The return date and time part functions covered in this section are:
 
-* [DATENAME](return-date-and-time-parts.md#datename-transact-sql)
-* [DATEPART](return-date-and-time-parts.md#datepart-transact-sql)
-* [DAY](return-date-and-time-parts.md#day-transact-sql)
-* [MONTH](return-date-and-time-parts.md#month-transact-sql)
-* [YEAR](return-date-and-time-parts.md#year-transact-sql)
+- [DATENAME](return-date-and-time-parts.md#datename-transact-sql)
+- [DATEPART](return-date-and-time-parts.md#datepart-transact-sql)
+- [DAY](return-date-and-time-parts.md#day-transact-sql)
+- [MONTH](return-date-and-time-parts.md#month-transact-sql)
+- [YEAR](return-date-and-time-parts.md#year-transact-sql)
 
-## DATENAME  <a href="#datename-transact-sql" id="datename-transact-sql"></a>
+## DATENAME <a href="#datename-transact-sql" id="datename-transact-sql"></a>
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-The DATENAME function returns a character string representing the specified _datepart_ of the specified _date_.
+The `DATENAME` function returns a character string representing the specified _datepart_ of the specified _date_.
 
-#### Syntax&#x20;
+#### Syntax
 
 ```sql
 DATENAME ( datepart , date )
@@ -30,7 +27,7 @@ DATENAME ( datepart , date )
 
 #### Arguments
 
-&#x20;`datepart`\
+`datepart`\
 The specific part of the _date_ argument that `DATENAME` will return. This table lists all valid _datepart_ arguments.
 
 | _datepart_  |
@@ -49,36 +46,36 @@ The specific part of the _date_ argument that `DATENAME` will return. This table
 | microsecond |
 | nanosecond  |
 | TZoffset    |
-| ISO\_WEEK   |
+| ISO_WEEK    |
 
 `date`
 
 An expression that can resolve to one of the following data types:
 
-* date
-* datetime
-* datetimeoffset
-* datetime2
-* smalldatetime
-* time
+- date
+- datetime
+- datetimeoffset
+- datetime2
+- smalldatetime
+- time
 
-For _date_, `DATENAME` will accept a column expression, expression, string literal, or user-defined variable. Use four-digit years to avoid ambiguity issues.&#x20;
+For _date_, `DATENAME` will accept a column expression, expression, string literal, or user-defined variable. Use four-digit years to avoid ambiguity issues.
 
-#### Return Types&#x20;
+#### Return types
 
 ```sql
 nvarchar
 ```
 
-#### Remarks&#x20;
+#### Remarks
 
 Use `DATENAME` in the following clauses:
 
-* GROUP BY
-* HAVING
-* ORDER BY
-* SELECT \<list>
-* WHERE
+- GROUP BY
+- HAVING
+- ORDER BY
+- SELECT \<list>
+- WHERE
 
 #### Examples
 
@@ -102,27 +99,24 @@ Result Set
 | microsecond | 123456       |
 | nanosecond  | 123456700    |
 | TZoffset    | +05:10       |
-| ISO\_WEEK   | 44           |
+| ISO_WEEK    | 44           |
 
 ## DATEPART <a href="#datepart-transact-sql" id="datepart-transact-sql"></a>
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-DATEPART  function returns an integer representing the specified _datepart_ of the specified _date_.
+DATEPART function returns an integer representing the specified _datepart_ of the specified _date_.
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 DATEPART ( datepart , date )
 ```
 
-#### Arguments
+### Arguments
 
 `datepart`\
 The specific part of the _date_ argument for which `DATEPART` will return an **integer**. This table lists all valid _datepart_ arguments.
@@ -130,28 +124,30 @@ The specific part of the _date_ argument for which `DATEPART` will return an **i
 `date`\
 An expression that resolves to one of the following data types:
 
-* date
-* datetime
-* datetimeoffset
-* datetime2
-* smalldatetime
-* time
+- date
+- datetime
+- datetimeoffset
+- datetime2
+- smalldatetime
+- time
 
-For _date_, `DATEPART` will accept a column expression, expression, string literal, or user-defined variable. Use four-digit years to avoid ambiguity issues.&#x20;
+For _date_, `DATEPART` will accept a column expression, expression, string literal, or user-defined variable. Use four-digit years to avoid ambiguity issues.
 
-#### Return Type
+### Return type
 
 ```sql
 int
 ```
 
-#### Remarks&#x20;
+### Remarks
 
 `DATEPART` can be used in the select list, WHERE, HAVING, GROUP BY, and ORDER BY clauses.
 
 DATEPART implicitly casts string literals as a **datetime2** type in SQL Server 2019 (15.x). This means that DATENAME does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
 
-**Example 1: Returns Base Year**
+#### Example 1
+
+This example returns the Base Year.
 
 ```sql
 SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0)
@@ -159,7 +155,9 @@ SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0)
 -- Returns: 1900 1 1
 ```
 
-**Example 2: Returns Day the Day Part of the Date**
+#### Example 2
+
+This example returns the Day part of the Date.
 
 ```sql
 SELECT TOP(1) DATEPART(day,[Modified])
@@ -169,7 +167,9 @@ WHERE [Deleted] IS NULL
 -- Returns: 20
 ```
 
-**Example 3: Returns the year Part of the Date**
+#### Example 3
+
+This example returns the Year part of the Date.
 
 ```sql
 SELECT TOP(1) DATEPART(year,[Modified])
@@ -179,45 +179,41 @@ WHERE [Deleted] IS NULL
 -- Returns: 2020
 ```
 
-## DAY  <a href="#day-transact-sql" id="day-transact-sql"></a>
+## DAY <a href="#day-transact-sql" id="day-transact-sql"></a>
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
-
 DAY function returns an integer that represents the day (day of the month) of the specified _date_.
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 DAY ( date )
 ```
 
-#### Arguments
+### Arguments
 
 `date`\
 An expression that resolves to one of the following data types:
 
-* date
-* datetime
-* datetimeoffset
-* datetime2
-* smalldatetime
-* time
+- date
+- datetime
+- datetimeoffset
+- datetime2
+- smalldatetime
+- time
 
 For _date_, `DAY` will accept a column expression, expression, string literal, or user-defined variable.
 
-#### Return Types&#x20;
+### Return types
 
 ```sql
 int
 ```
 
-**Example 1:**&#x20;
+#### Example 1
 
 This returns `30` - the number of the day itself
 
@@ -225,7 +221,7 @@ This returns `30` - the number of the day itself
 SELECT DAY('2015-04-30 01:01:01.1234567')
 ```
 
-**Example 2:**&#x20;
+#### Example 2
 
 This statement returns `1900, 1, 1`. The _date_ argument has a number value of `0`. SQL Server interprets `0` as January 1, 1900.
 
@@ -236,43 +232,40 @@ SELECT YEAR(0), MONTH(0), DAY(0)
 ## MONTH <a href="#month-transact-sql" id="month-transact-sql"></a>
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 MONTH returns an integer that represents the month of the specified _date_.
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 MONTH ( date )
 ```
 
-#### Arguments
+### Arguments
 
 `date`\
 Is an expression that can be resolved to a **time**, **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value. The _date_ argument can be an expression, column expression, user-defined variable, or string literal.
 
-#### Return Types&#x20;
+### Return types
 
 ```sql
 int
 ```
 
-**Example 1:**
+#### Example 1
 
-&#x20;The following statement returns `4`. This is the number of the month.
+The following statement returns `4`. This is the number of the month.
 
 ```sql
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00')
 ```
 
-**Example 2:**&#x20;
+#### Example 2
 
-&#x20;The following statement returns `1900, 1, 1`. The argument for _date_ is the number `0`. SQL Server interprets `0` as January 1, 1900.
+The following statement returns `1900, 1, 1`. The argument for _date_ is the number `0`. SQL Server interprets `0` as January 1, 1900.
 
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0)
@@ -281,16 +274,13 @@ SELECT YEAR(0), MONTH(0), DAY(0)
 ## YEAR <a href="#year-transact-sql" id="year-transact-sql"></a>
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 YEAR function returns an integer that represents the year of the specified _date_.
 
-#### Syntax&#x20;
+#### Syntax
 
 ```sql
 YEAR ( date )
@@ -301,7 +291,7 @@ YEAR ( date )
 `date`\
 Is an expression that can be resolved to a **time**, **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value. The _date_ argument can be an expression, column expression, user-defined variable or string literal.
 
-#### Return Types&#x20;
+#### Return Types
 
 ```sql
 int
@@ -309,13 +299,13 @@ int
 
 **Example 1:**
 
-&#x20;The following statement returns `2020`. This is the number of the year.
+The following statement returns `2020`. This is the number of the year.
 
 ```sql
 SELECT YEAR('2020-04-30T01:01:01.1234567-07:00')
 ```
 
-**Example 2:**&#x20;
+**Example 2:**
 
 The following statement returns `1900, 1, 1`. The argument for _date_ is the number `0`. SQL Server interprets `0` as January 1, 1900.
 
