@@ -4,7 +4,7 @@
 
 The validate date and time value function covered in this section is:
 
-* [​ISDATE](validate-date-and-time-values.md#isdate-transact-sql)​
+- [​ISDATE](validate-date-and-time-values.md#isdate-transact-sql)​
 
 ## ISDATE <a href="#isdate-transact-sql" id="isdate-transact-sql"></a>
 

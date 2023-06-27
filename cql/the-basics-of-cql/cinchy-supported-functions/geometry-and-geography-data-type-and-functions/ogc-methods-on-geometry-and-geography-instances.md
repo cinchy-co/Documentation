@@ -1,17 +1,16 @@
 # OGC Methods on Geometry & Geography Instances
 
-## 1. Overview
+## Overview
 
 Cinchy CQL supports the following on Open Geospatial Consortium (OGC) methods on geometry and geography instances.
 
-Please note that all functions that have been denoted with Geometry in parenthesis are only applicable to OGC methods on geometry instances.
+{% hint style="warning" %}
+All functions that have Geometry in parenthesis are only applicable to OGC methods on geometry instances.
+{% endhint %}
 
 {% hint style="warning" %}
-These function are not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 The OGC Methods covered in this section are:
@@ -41,8 +40,8 @@ When the geometry/geography instance contains only zero- and one-dimensional fig
 This example creates a `Polygon`geometry instance and computes the area of the `Polygon:`
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);
 SELECT @g.STArea();
 ```
 
@@ -51,8 +50,8 @@ SELECT @g.STArea();
 This example creates a `Polygon` geography instance and computes the area of the `Polygon`:
 
 ```sql
-DECLARE @g geography;  
-SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
+DECLARE @g geography;
+SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);
 SELECT @g.STArea();
 ```
 
@@ -63,7 +62,7 @@ SELECT @g.STArea();
 #### Syntax
 
 ```sql
-.STAsBinary ( )  
+.STAsBinary ( )
 ```
 
 #### Return Types
@@ -75,9 +74,9 @@ CQL: Base64 Text
 This example creates a `LineString` geometry instance from (0,0) to (2,3) from text. `STAsBinary()` returns the result in WKB:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);  
-SELECT @g.STAsBinary();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
+SELECT @g.STAsBinary();
 ```
 
 #### Geography Example
@@ -85,9 +84,9 @@ SELECT @g.STAsBinary();
 This example uses `STAsBinary()` to create a `LineString` geography instance from (-122.360, 47.656) to (-122.343, 47.656) from text. It then returns the result in WKB:
 
 ```sql
-DECLARE @g geography;  
-SET @g = geography::STGeomFromText('LINESTRING( -122.360 47.656, -122.343 47.656)', 4326);  
-SELECT @g.STAsBinary();  
+DECLARE @g geography;
+SET @g = geography::STGeomFromText('LINESTRING( -122.360 47.656, -122.343 47.656)', 4326);
+SELECT @g.STAsBinary();
 ```
 
 ## STAsText
@@ -97,7 +96,7 @@ SELECT @g.STAsBinary();
 #### Syntax
 
 ```sql
-.STAsText ( )  
+.STAsText ( )
 ```
 
 #### Return Types
@@ -106,7 +105,7 @@ CQL: Text
 
 #### Remarks
 
-OGC type of a geography instance can be determined by invoking [`STGeometryType()`](https://app.gitbook.com/@cinchy/s/cql/\~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeometryType)
+OGC type of a geography instance can be determined by invoking [`STGeometryType()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeometryType)
 
 The return text will not contain`Z` (elevation) and `M` (measure) values carried by the instance.
 
@@ -115,9 +114,9 @@ The return text will not contain`Z` (elevation) and `M` (measure) values carried
 This example creates a `LineString` geometry instance from (0,0) to (2,3) from text. `STAsText()` returns the result in text:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);  
-SELECT @g.STAsText();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
+SELECT @g.STAsText();
 ```
 
 #### Geography Example
@@ -125,9 +124,9 @@ SELECT @g.STAsText();
 This example uses `STAsText()` to create a `LineString` geography instance from (-122.360, 47.656) to (-122.343, 47.656) from text. It then returns the result in text:
 
 ```sql
-DECLARE @g geography;  
-SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
-SELECT @g.STAsText();  
+DECLARE @g geography;
+SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);
+SELECT @g.STAsText();
 ```
 
 ## STBoundary (Geometry)
@@ -137,7 +136,7 @@ SELECT @g.STAsText();
 #### Syntax
 
 ```sql
-.STBoundary ( )  
+.STBoundary ( )
 ```
 
 #### Return Types
@@ -149,8 +148,8 @@ CQL: geometry
 This example uses `STBoundary()` on a `CurvePolygon` instance. `STBoundary()` returns a `CircularString` instance:
 
 ```sql
- DECLARE @g geometry;  
- SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);  
+ DECLARE @g geometry;
+ SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);
  SELECT @g.STBoundary().ToString();
 ```
 
@@ -161,7 +160,7 @@ This example uses `STBoundary()` on a `CurvePolygon` instance. `STBoundary()` re
 #### Syntax
 
 ```sql
-.STBuffer ( distance )  
+.STBuffer ( distance )
 ```
 
 #### Arguments
@@ -185,8 +184,8 @@ Geometry:&#x20;
 
 When _distance_ > 0 then either a `Polygon`or `MultiPolygon`instance is returned. When _distance_ = 0, then a copy of the calling geometry instance is returned. When _distance_ < 0, then:
 
-* When the dimensions of the instance are 0 or 1, an empty `GeometryCollection`instance is returned.
-* when the dimensions of the instance are 2 or more, a negative buffer is returned.
+- When the dimensions of the instance are 0 or 1, an empty `GeometryCollection`instance is returned.
+- when the dimensions of the instance are 2 or more, a negative buffer is returned.
 
 Geography:
 
@@ -199,7 +198,7 @@ This method will throw an `ArgumentException`in `FullGlobe`instances where the d
 &#x20;This example returns a `Polygon` instance with a negative buffer from a `CurvePolygon` instance:
 
 ```sql
-DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';
  SELECT @g.STBuffer(-1).ToString();
 ```
 
@@ -208,9 +207,9 @@ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4),
 This example creates a `LineString` geography instance. It then uses `STBuffer()` to return the region within 1 meter of the instance:
 
 ```sql
-DECLARE @g geography;  
-SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
-SELECT @g.STBuffer(1).ToString(); 
+DECLARE @g geography;
+SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);
+SELECT @g.STBuffer(1).ToString();
 ```
 
 ## STCentroid
@@ -220,7 +219,7 @@ SELECT @g.STBuffer(1).ToString();
 #### Syntax
 
 ```sql
-.STCentroid ( )  
+.STCentroid ( )
 ```
 
 #### Return Types
@@ -236,9 +235,9 @@ If the geometry/geography instance is not a `Polygon`, `CurvePolygon`, or `Multi
 This example uses `STCentroid()` to compute the centroid of a `polygon`geography instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
-SELECT @g.STCentroid().ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);
+SELECT @g.STCentroid().ToString();
 ```
 
 ## STContains (Geometry)
@@ -248,12 +247,12 @@ SELECT @g.STCentroid().ToString();
 #### Syntax
 
 ```sql
-.STContains ( other_instance )  
+.STContains ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STContains()` is invoked.
 
 #### Return Types
@@ -269,11 +268,11 @@ If the spatial reference IDs (SRIDs) of the geometry instances do not match, `ST
 This example uses `STContains()` to test two geometry instances to see if the first instance contains the second instance:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))', 0);  
-SET @h = geometry::STGeomFromText('POINT(1 1)', 0);  
-SELECT @g.STContains(@h);  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))', 0);
+SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
+SELECT @g.STContains(@h);
 ```
 
 ## STConvexHull (Geometry)
@@ -283,7 +282,7 @@ SELECT @g.STContains(@h);
 #### Syntax
 
 ```sql
-.STConvexHull ( )  
+.STConvexHull ( )
 ```
 
 #### Return Types
@@ -299,9 +298,9 @@ Points or co-linear `LineString`instances will produce an instance of the same t
 This example uses `STConvexHull()` to find the convex hull of a non-convex `Polygon` geometry instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);  
-SELECT @g.STConvexHull().ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);
+SELECT @g.STConvexHull().ToString();
 ```
 
 ## STCrosses (Geometry)
@@ -311,12 +310,12 @@ SELECT @g.STConvexHull().ToString();
 #### Syntax&#x20;
 
 ```sql
-.STCrosses ( other_instance )  
+.STCrosses ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry/geography instance to compare against the instance on which `STCrosses()` is invoked.
 
 #### Return Types
@@ -329,19 +328,19 @@ If the spatial reference IDs (SRIDs) of the geometry instances do not match, thi
 
 Both conditions must be true for two geometry instances to cross:
 
-* The intersection of the two geometry instances results in a geometry whose dimensions are less than the maximum dimension of the source geometry instances.
-* The intersection set is interior to both source geometry instances.
+- The intersection of the two geometry instances results in a geometry whose dimensions are less than the maximum dimension of the source geometry instances.
+- The intersection set is interior to both source geometry instances.
 
 #### Geometry Examples
 
 This example uses `STCrosses()` to test two geometry instances to see if they cross:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0)', 0);  
-SET @h = geometry::STGeomFromText('LINESTRING(0 0, 2 2)', 0);  
-SELECT @g.STCrosses(@h);  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0)', 0);
+SET @h = geometry::STGeomFromText('LINESTRING(0 0, 2 2)', 0);
+SELECT @g.STCrosses(@h);
 ```
 
 ## STCurveToLine (Geometry)&#x20;
@@ -351,7 +350,7 @@ SELECT @g.STCrosses(@h);
 #### Syntax
 
 ```sql
-.STCurveToLine ( )  
+.STCurveToLine ( )
 ```
 
 #### Return Types
@@ -364,9 +363,9 @@ Returns null for uninitialized geometry variables&#x20;
 
 The polygonal approximation that the method returns depends on the geometry instance used to call the method:&#x20;
 
-* Returns a `LineString` instance for a `CircularString`or `CompoundCurve`instance.
-* Returns a `Polygon`instance for a `CurvePolygon`instance.
-* Returns a copy of the geometry instance if that instance is not a `CircularString`, `CompoundCurve`, or `CurvePolygon`instance.&#x20;
+- Returns a `LineString` instance for a `CircularString`or `CompoundCurve`instance.
+- Returns a `Polygon`instance for a `CurvePolygon`instance.
+- Returns a copy of the geometry instance if that instance is not a `CircularString`, `CompoundCurve`, or `CurvePolygon`instance.&#x20;
 
 Any z-coordinate values present in the calling geometry instance are ignored.
 
@@ -375,9 +374,9 @@ Any z-coordinate values present in the calling geometry instance are ignored.
 In this example, the SELECT statement uses a `LineString` instance to call the `STCurveToLine`method. Thus, the method returns a `LineString`instance:
 
 ```sql
- DECLARE @g geometry; 
- SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)'); 
- SET @g = @g.STCurveToLine(); 
+ DECLARE @g geometry;
+ SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)');
+ SET @g = @g.STCurveToLine();
  SELECT @g.STGeometryType();
 ```
 
@@ -388,12 +387,12 @@ In this example, the SELECT statement uses a `LineString` instance to call the `
 #### Syntax
 
 ```sql
-.STDifference ( other_instance )  
+.STDifference ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STDifference()` is invoked.
 
 #### Return Types
@@ -409,11 +408,11 @@ Returns null if the spatial reference IDs (SRIDs) of the geometry instances do n
 This example uses `STDifference()` to compute the difference between two `Polygons`:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
-SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);  
-SELECT @g.STDifference(@h).ToString();  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);
+SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
+SELECT @g.STDifference(@h).ToString();
 ```
 
 ## STDisjoint (Geometry)&#x20;
@@ -423,12 +422,12 @@ SELECT @g.STDifference(@h).ToString();
 #### Syntax
 
 ```sql
-.STDisjoint ( other_instance ) 
+.STDisjoint ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STDisjoint()` is invoked.
 
 #### Return Types
@@ -446,11 +445,11 @@ Returns null if the spatial reference IDs (SRIDs) of the geometry instances do n
 This example uses `STDisjoint()` to test two geometry instances for spatial disjoint:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  
-SET @h = geometry::STGeomFromText('POINT(1 1)', 0);  
-SELECT @g.STDisjoint(@h);  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);
+SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
+SELECT @g.STDisjoint(@h);
 ```
 
 ## STDistance
@@ -460,12 +459,12 @@ SELECT @g.STDisjoint(@h);
 #### Syntax
 
 ```sql
-.STDistance ( other_instance )  
+.STDistance ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry/geography instance to compare against the instance on which `STDistance()` is invoked.
 
 #### Return Types
@@ -481,11 +480,11 @@ CQL: Number
 This example finds the distance between two geometry instances:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))', 0);  
-SET @h = geometry::STGeomFromText('POINT(10 10)', 0);  
-SELECT @g.STDistance(@h); 
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))', 0);
+SET @h = geometry::STGeomFromText('POINT(10 10)', 0);
+SELECT @g.STDistance(@h);
 ```
 
 #### Geography Example
@@ -493,11 +492,11 @@ SELECT @g.STDistance(@h);
 &#x20;This example finds the distance between two geography instances:
 
 ```sql
-DECLARE @g geography;  
-DECLARE @h geography;  
-SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
-SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);  
-SELECT @g.STDistance(@h);  
+DECLARE @g geography;
+DECLARE @h geography;
+SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);
+SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
+SELECT @g.STDistance(@h);
 ```
 
 ## STEndpoint (Geometry)&#x20;
@@ -507,7 +506,7 @@ SELECT @g.STDistance(@h);
 #### Syntax
 
 ```sql
-.STEndPoint ( )  
+.STEndPoint ( )
 ```
 
 #### Return Types
@@ -516,18 +515,18 @@ CQL: geometry
 
 #### Remarks
 
-`STEndPoint()` is the equivalent of [`STPointN()`](https://app.gitbook.com/@cinchy/s/cql/\~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STPointN).&#x20;
+`STEndPoint()` is the equivalent of [`STPointN()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STPointN).&#x20;
 
 Returns null if called on an empty geometry instance.&#x20;
 
 #### Geometry Example
 
-This example creates a `LineString` instance with [`STGeomFromText()`](https://app.gitbook.com/@cinchy/s/cql/\~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeomFromText) and uses `STEndpoint()` to retrieve the end point of the `LineString:`
+This example creates a `LineString` instance with [`STGeomFromText()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeomFromText) and uses `STEndpoint()` to retrieve the end point of the `LineString:`
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
-SELECT @g.STEndPoint().ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
+SELECT @g.STEndPoint().ToString();
 ```
 
 ## STEnvelope (Geometry)
@@ -537,7 +536,7 @@ SELECT @g.STEndPoint().ToString();
 #### Syntax
 
 ```sql
-STEnvelope ( ) 
+STEnvelope ( )
 ```
 
 #### Return Types
@@ -546,12 +545,12 @@ CQL: geometry&#x20;
 
 #### Geometry Example
 
-This example uses [`STGeomFromText()`](https://app.gitbook.com/@cinchy/s/cql/\~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeomFromText) to create a `LineString` instance from (0,0) to (2,3), and uses `STEnvelope()` to return the bounding box of the `LineString:`
+This example uses [`STGeomFromText()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeomFromText) to create a `LineString` instance from (0,0) to (2,3), and uses `STEnvelope()` to return the bounding box of the `LineString:`
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);  
-SELECT @g.STEnvelope().ToString(); 
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
+SELECT @g.STEnvelope().ToString();
 ```
 
 ## STEquals (Geometry)&#x20;
@@ -561,12 +560,12 @@ SELECT @g.STEnvelope().ToString();
 #### Syntax
 
 ```sql
-.STEquals ( other_instance )  
+.STEquals ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STEquals()` is invoked.
 
 #### Return Types
@@ -579,14 +578,14 @@ Returns null if the spatial reference IDs (SRIDs) of the geometry instances do n
 
 #### Geometry Example
 
-This example creates two geometry instances with [`STGeomFromText()`](https://app.gitbook.com/@cinchy/s/cql/\~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeomFromText) that are equal but not trivially equal, and uses `STEquals()` to test their equality:
+This example creates two geometry instances with [`STGeomFromText()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeomFromText) that are equal but not trivially equal, and uses `STEquals()` to test their equality:
 
 ```sql
-DECLARE @g geometry  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  
-SET @h = geometry::STGeomFromText('MULTILINESTRING((4 2, 2 0), (0 2, 2 0))', 0);  
-SELECT @g.STEquals(@h);  
+DECLARE @g geometry
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);
+SET @h = geometry::STGeomFromText('MULTILINESTRING((4 2, 2 0), (0 2, 2 0))', 0);
+SELECT @g.STEquals(@h);
 ```
 
 ## STExteriorRing (Geometry)
@@ -596,7 +595,7 @@ SELECT @g.STEquals(@h);
 #### Syntax&#x20;
 
 ```sql
-.STExteriorRing ( ) 
+.STExteriorRing ( )
 ```
 
 #### Return Types
@@ -612,9 +611,9 @@ Returns null if the geometry instance is not a `Polygon`.
 This example creates a polygon instance and uses `STExteriorRing()` to return the exterior ring of the polygon as a `LineString`:&#x20;
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
-SELECT @g.STExteriorRing().ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);
+SELECT @g.STExteriorRing().ToString();
 ```
 
 ## STGeometryN (Geometry)&#x20;
@@ -624,7 +623,7 @@ SELECT @g.STExteriorRing().ToString();
 #### Syntax
 
 ```sql
-.STGeometryN ( expression )  
+.STGeometryN ( expression )
 ```
 
 #### Arguments
@@ -645,9 +644,9 @@ Returns null if the parameter is larger than the result of `STGeometryN()` and w
 This example creates a `MultiPoint` `GeometryCollection`and uses `STGeometryN()` to find the second geometry instance of the collection:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);  
-SELECT @g.STGeometryN(2).ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
+SELECT @g.STGeometryN(2).ToString();
 ```
 
 ## STGeometryType (Geometry)&#x20;
@@ -657,7 +656,7 @@ SELECT @g.STGeometryN(2).ToString();
 #### Syntax&#x20;
 
 ```sql
-.STGeometryType ( ) 
+.STGeometryType ( )
 ```
 
 #### Return Types
@@ -673,9 +672,9 @@ The OGC type names that can be returned by `STGeometryType()` are `Point`, `Line
 This example creates a `Polygon` instance and uses `STGeometryType()` to confirm that it is a `Polygon:`
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0))', 0);  
-SELECT @g.STGeometryType(); 
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0))', 0);
+SELECT @g.STGeometryType();
 ```
 
 ## STGeomCollFromText (Geometry)
@@ -685,12 +684,12 @@ Augmented with any `Z` (elevation) and `M` (measure) values carried by the insta
 #### Syntax&#x20;
 
 ```sql
-STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )  
+STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 ```
 
 #### Arguments
 
-_geometrycollection\_tagged\_text_\
+_geometrycollection_tagged_text_\
 An nvarchar(max) expression that is the WKT representation of the geometry instance you wish to return.
 
 _SRID_\
@@ -711,9 +710,9 @@ Throws an `ArgumentException` if the input is not valid.
 This example uses `STGeomCollFromText()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 10 10, 5 5)), POINT(10 10) )', 0);  
-SELECT @g.ToString(); 
+DECLARE @g geometry;
+SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 10 10, 5 5)), POINT(10 10) )', 0);
+SELECT @g.ToString();
 ```
 
 ## STGeomFromText
@@ -723,12 +722,12 @@ Augmented with any `Z` (elevation) and `M` (measure) values carried by the insta
 #### Syntax&#x20;
 
 ```sql
-STGeomFromText ( 'instance_tagged_text' , SRID )  
+STGeomFromText ( 'instance_tagged_text' , SRID )
 ```
 
 #### Arguments
 
-_inctance\_tagged\_text_\
+_inctance_tagged_text_\
 An nvarchar(max) expression that is the WKT representation of the geometry/geography instance you wish to return.
 
 _SRID_\
@@ -753,9 +752,9 @@ Throws an `ArgumentException` if the input contains an antipodal edge.
 This example uses `STGeomFromText()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0);  
-SELECT @g.ToString();    
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0);
+SELECT @g.ToString();
 ```
 
 #### Geography Example
@@ -763,9 +762,9 @@ SELECT @g.ToString();
 This example uses `STGeomCollFromText()` to create a geography instance:
 
 ```sql
-DECLARE @g geography;  
-SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
-SELECT @g.ToString();  
+DECLARE @g geography;
+SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);
+SELECT @g.ToString();
 ```
 
 ## STGeomFromWKB
@@ -775,12 +774,12 @@ SELECT @g.ToString();
 #### Syntax&#x20;
 
 ```sql
-STGeomFromWKB ( 'WKB_instance' , SRID )  
+STGeomFromWKB ( 'WKB_instance' , SRID )
 ```
 
 #### Arguments&#x20;
 
-_WKB\_instance_\
+_WKB_instance_\
 An nvarchar(max) expression that is the WKB representation of the geometry/geography instance to return.
 
 _SRID_\
@@ -805,9 +804,9 @@ Throws an `ArgumentException` if the input contains an antipodal edge.
 This example uses `STGeomFromWKB()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;   
-SET @g = geometry::STGeomFromWKB(0x010200000003000000000000000000594000000000000059400000000000003440000000000080664000000000008066400000000000806640, 0);  
-SELECT @g.STAsText();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromWKB(0x010200000003000000000000000000594000000000000059400000000000003440000000000080664000000000008066400000000000806640, 0);
+SELECT @g.STAsText();
 ```
 
 #### Geography Example
@@ -815,9 +814,9 @@ SELECT @g.STAsText();
 This example uses `STGeomFromWKB()` to create a geography instance:
 
 ```sql
-DECLARE @g geography;  
-SET @g = geography::STGeomFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7D34740CBA145B6F3955EC08716D9CEF7D34740, 4326);  
-SELECT @g.ToString();  
+DECLARE @g geography;
+SET @g = geography::STGeomFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7D34740CBA145B6F3955EC08716D9CEF7D34740, 4326);
+SELECT @g.ToString();
 ```
 
 ## STInteriorRingN (Geometry)
@@ -827,7 +826,7 @@ SELECT @g.ToString();
 #### Syntax&#x20;
 
 ```sql
-.STInteriorRingN ( expression )  
+.STInteriorRingN ( expression )
 ```
 
 #### Arguments&#x20;
@@ -843,16 +842,16 @@ CQL: geometry&#x20;
 
 Returns null if the geometry instance is not a `Polygon`.&#x20;
 
-This method will throw an `ArgumentOutOfRangeException`if the expression is larger than the number of rings. The number of rings can be returned using [`STNumInteriorRing()`](https://app.gitbook.com/@cinchy/s/cql/\~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STNumInteriorRing).
+This method will throw an `ArgumentOutOfRangeException`if the expression is larger than the number of rings. The number of rings can be returned using [`STNumInteriorRing()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STNumInteriorRing).
 
 #### Geometry Example
 
 This example creates a `Polygon` instance and uses `STInteriorRingN()` to return the interior ring of the `Polygon`as a `LineString`:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
-SELECT @g.STInteriorRingN(1).ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);
+SELECT @g.STInteriorRingN(1).ToString();
 ```
 
 ## STIntersection
@@ -862,12 +861,12 @@ SELECT @g.STInteriorRingN(1).ToString();
 #### Syntax&#x20;
 
 ```sql
-.STIntersection ( other_instance )  
+.STIntersection ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry/geography instance to compare against the instance on which `STIntersection()` is invoked.
 
 #### Return Types
@@ -885,11 +884,11 @@ The result may contain circular arc segments only if the input instances contain
 &#x20;This example uses `STIntersection()` to compute the intersection of two polygons:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
-SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);  
-SELECT @g.STIntersection(@h).ToString();  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);
+SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
+SELECT @g.STIntersection(@h).ToString();
 ```
 
 #### Geography Example
@@ -897,11 +896,11 @@ SELECT @g.STIntersection(@h).ToString();
 This example uses `STIntersection()` to compute the intersection of a `Polygon` and a `LineString:`
 
 ```sql
-DECLARE @g geography;  
-DECLARE @h geography;  
-SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
-SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
-SELECT @g.STIntersection(@h).ToString();  
+DECLARE @g geography;
+DECLARE @h geography;
+SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);
+SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);
+SELECT @g.STIntersection(@h).ToString();
 ```
 
 ## STIntersects
@@ -911,12 +910,12 @@ SELECT @g.STIntersection(@h).ToString();
 #### Syntax
 
 ```sql
-.STIntersects ( other_instance )  
+.STIntersects ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry/geography instance to compare against the instance on which `STIntersects()` is invoked.
 
 #### Return Types
@@ -932,11 +931,11 @@ Returns null if the spatial reference IDs (SRIDs) of the geometry/geography inst
 This example uses `STIntersects()` to determine if two geometry instances intersect each other:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  
-SET @h = geometry::STGeomFromText('POINT(1 1)', 0);  
-SELECT @g.STIntersects(@h);  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);
+SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
+SELECT @g.STIntersects(@h);
 ```
 
 #### Geography Example&#x20;
@@ -944,15 +943,15 @@ SELECT @g.STIntersects(@h);
 This example uses `STIntersects()` to determine whether two geography instances intersect each other:
 
 ```sql
-DECLARE @g geography;  
-DECLARE @h geography;  
-SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
-SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
- 
-SELECT CASE @g.STIntersects(@h) 
-WHEN 1 THEN '@g intersects @h'  
-ELSE '@g does not intersect @h'  
-END; 
+DECLARE @g geography;
+DECLARE @h geography;
+SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);
+SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);
+
+SELECT CASE @g.STIntersects(@h)
+WHEN 1 THEN '@g intersects @h'
+ELSE '@g does not intersect @h'
+END;
 ```
 
 ## STIsClosed (Geometry)&#x20;
@@ -962,7 +961,7 @@ END;
 #### Syntax
 
 ```sql
-.STIsClosed ( )  
+.STIsClosed ( )
 ```
 
 #### Return Types
@@ -980,9 +979,9 @@ All `Polygon`instances are considered closed.
 This example creates a `LineString` instance and uses `STIsClosed()` to test if the `LineString` is closed:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
-SELECT @g.STIsClosed();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
+SELECT @g.STIsClosed();
 ```
 
 ## STIsEmpty (Geometry)&#x20;
@@ -992,7 +991,7 @@ SELECT @g.STIsClosed();
 #### Syntax
 
 ```sql
-.STIsEmpty ( )  
+.STIsEmpty ( )
 ```
 
 #### Return Types
@@ -1004,19 +1003,19 @@ CQL: Yes/No
 This example creates an empty geometry instance and uses `STIsEmpty()` to test whether the instance is empty:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);  
-SELECT @g.STIsEmpty();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);
+SELECT @g.STIsEmpty();
 ```
 
 ## STIsRing (Geometry)
 
 `STIsRing()` returns 1 if a geometry instance fulfills the following requirements:
 
-* It is a `LineString`instance.
-* It is closed (for a geometry to be closed, STIsClosed() needs to return 1 when invoked on the instance).
-* It is simple (for a geometry to be simple, STIsSimple() needs to return 1 when invoked on the instance).
-* Returns 0 if the `LineString`instance does not meet the requirements.
+- It is a `LineString`instance.
+- It is closed (for a geometry to be closed, STIsClosed() needs to return 1 when invoked on the instance).
+- It is simple (for a geometry to be simple, STIsSimple() needs to return 1 when invoked on the instance).
+- Returns 0 if the `LineString`instance does not meet the requirements.
 
 #### Syntax&#x20;
 
@@ -1037,9 +1036,9 @@ CQL: Yes/No
 This example creates a `LineString` instance and uses `STIsRing()` to test whether the instance is a ring:&#x20;
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0, 0 0)', 0);  
-SELECT @g.STIsRing();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0, 0 0)', 0);
+SELECT @g.STIsRing();
 ```
 
 ## STIsSimple (Geometry)
@@ -1049,7 +1048,7 @@ SELECT @g.STIsRing();
 #### Syntax
 
 ```sql
-.STIsSimple ( ) 
+.STIsSimple ( )
 ```
 
 #### Return Types
@@ -1060,17 +1059,17 @@ CQL: Yes/No
 
 To be simple a geometry instance must meet the requirements:
 
-* Except at the endpoints, each figure of the instance must not intersect itself.
-* No two figures of the instance can intersect each other at a point that is not in both of their boundaries.
+- Except at the endpoints, each figure of the instance must not intersect itself.
+- No two figures of the instance can intersect each other at a point that is not in both of their boundaries.
 
 #### Geometry Example
 
 This example creates a non-simple `LineString` instance that intersects itself and uses `STIsSimple()` to test whether the `LineString` is simple:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);  
-SELECT @g.STIsSimple();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);
+SELECT @g.STIsSimple();
 ```
 
 ## STIsValid (Geometry)&#x20;
@@ -1080,7 +1079,7 @@ SELECT @g.STIsSimple();
 #### Syntax
 
 ```sql
-.STIsValid ( )  
+.STIsValid ( )
 ```
 
 #### Return Types
@@ -1089,7 +1088,7 @@ CQL: Yes/No
 
 #### Remarks
 
-The OGC type of a geometry instance can be determined by invoking  [`STGeometryType()`](https://app.gitbook.com/@cinchy/s/cql/\~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeometryType)`.`
+The OGC type of a geometry instance can be determined by invoking [`STGeometryType()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeometryType)`.`
 
 SQL Server produces only valid geometry instances, but allows for the storage and retrieval of invalid instances.
 
@@ -1098,9 +1097,9 @@ SQL Server produces only valid geometry instances, but allows for the storage an
 This example creates a geometry instance and uses `STIsValid()` to test if the instance is valid:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
-SELECT @g.STIsValid();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
+SELECT @g.STIsValid();
 ```
 
 ## STLength
@@ -1110,7 +1109,7 @@ SELECT @g.STIsValid();
 #### Syntax
 
 ```sql
-.STLength ( )  
+.STLength ( )
 ```
 
 #### Return Types
@@ -1130,9 +1129,9 @@ The length of a `GeometryCollection`is found by calculating the sum of the lengt
 This example creates a `LineString` instance and uses `STLength()` to find the length of the instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
-SELECT @g.STLength();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
+SELECT @g.STLength();
 ```
 
 #### Geography Example
@@ -1140,24 +1139,24 @@ SELECT @g.STLength();
 This example creates a `LineString` instance and uses `STLength()` to find the length of the instance:
 
 ```sql
-DECLARE @g geography;  
-SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
-SELECT @g.STLength();  
+DECLARE @g geography;
+SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);
+SELECT @g.STLength();
 ```
 
 ## STLineFromText (Geometry)
 
-Augmented with any  `Z` (elevation) and `M` (measure) values carried by the instance,`STLineFromText()`returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
+Augmented with any `Z` (elevation) and `M` (measure) values carried by the instance,`STLineFromText()`returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
 
 #### Syntax
 
 ```sql
-STLineFromText ( 'linestring_tagged_text' , SRID )  
+STLineFromText ( 'linestring_tagged_text' , SRID )
 ```
 
 #### Arguments&#x20;
 
-_linestring\_tagged\_text_\
+_linestring_tagged_text_\
 An nvarchar(max) expression that is the WKT representation of the geometry `LineString`instance you wish to return.&#x20;
 
 _SRID_\
@@ -1176,9 +1175,9 @@ If the input isn't well-formatted, method will throw a `FormatException`.
 This example uses `STLineFromText()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
-SELECT @g.ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);
+SELECT @g.ToString();
 ```
 
 ## STLineFromWKB (Geometry)
@@ -1188,12 +1187,12 @@ SELECT @g.ToString();
 #### Syntax
 
 ```sql
-STLineFromWKB ( 'WKB_linestring' , SRID )  
+STLineFromWKB ( 'WKB_linestring' , SRID )
 ```
 
 #### Arguments&#x20;
 
-_WKB\_linestring_\
+_WKB_linestring_\
 A varbinary(max) expression that is the WKB representation of the geometry `LineString`instance to return.
 
 _SRID_\
@@ -1212,14 +1211,14 @@ If the input isn't well-formatted, method will throw a `FormatException`.
 This example uses `STLineFromWKB()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;   
-SET @g = geometry::STLineFromWKB(0x0102000000020000000000000000005940000000000000594000000000000069400000000000006940, 0);  
-SELECT @g.STAsText();  
+DECLARE @g geometry;
+SET @g = geometry::STLineFromWKB(0x0102000000020000000000000000005940000000000000594000000000000069400000000000006940, 0);
+SELECT @g.STAsText();
 ```
 
 ## STMLineFromText (Geometry)
 
-Augmented with any  `Z` (elevation) and `M` (measure) values carried by the instance, `STMLineFromText()` returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
+Augmented with any `Z` (elevation) and `M` (measure) values carried by the instance, `STMLineFromText()` returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
 
 #### Syntax
 
@@ -1229,7 +1228,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 
 #### Arguments&#x20;
 
-_multilinestring\_tagged\_text_\
+_multilinestring_tagged_text_\
 An nvarchar(max) expression that is the WKT representation of the geometry`MultiLineString`instance you wish to return.&#x20;
 
 _SRID_\
@@ -1248,24 +1247,24 @@ If the input isn't well-formatted, method will throw a `FormatException`.
 This example uses `STMLineFromText()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7 8, 10 10))', 0); 
-SELECT @g.ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7 8, 10 10))', 0);
+SELECT @g.ToString();
 ```
 
 ## STMPointFromText (Geometry)
 
-Augmented with any `Z` (elevation) and `M` (measure)  values carried by the instance, `STMPointFromText()`returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
+Augmented with any `Z` (elevation) and `M` (measure) values carried by the instance, `STMPointFromText()`returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
 
 #### Syntax&#x20;
 
 ```sql
-STMPointFromText ( 'multipoint_tagged_text', SRID )   
+STMPointFromText ( 'multipoint_tagged_text', SRID )
 ```
 
 #### Arguments&#x20;
 
-_multipoint\_tagged\_text_\
+_multipoint_tagged_text_\
 An nvarchar(max) expression that is the WKT representation of the geometry `MultiPoint` instance you wish to return.&#x20;
 
 _SRID_\
@@ -1284,14 +1283,14 @@ If the input isn't well-formatted, method will throw a `FormatException`.
 This example uses `STMPointFromText()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;   
-SET @g = geometry::STMPointFromText('MULTIPOINT ((100 100), (200 200))', 0);  
-SELECT @g.ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STMPointFromText('MULTIPOINT ((100 100), (200 200))', 0);
+SELECT @g.ToString();
 ```
 
 ## STMPolyFromText (Geometry)
 
-Augmented with any  `Z` (elevation) and `M` (measure) values carried by the instance, `STMPolyFromText()`returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
+Augmented with any `Z` (elevation) and `M` (measure) values carried by the instance, `STMPolyFromText()`returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
 
 #### Syntax
 
@@ -1301,7 +1300,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 
 #### Arguments
 
-_multipolygon\_tagged\_text_\
+_multipolygon_tagged_text_\
 An nvarchar(max) expression that is the WKT representation of the geometry `MultiPolygon` instance you wish to return.&#x20;
 
 _SRID_\
@@ -1320,9 +1319,9 @@ If the input isn't well-formatted, method will throw a `FormatException`.
 This example uses`STMPolyFromText()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STMPolyFromText('MULTIPOLYGON (((5 5, 10 5, 10 10, 5 5)), ((10 10, 100 10, 200 200, 30 30, 10 10)))', 0);  
-SELECT @g.ToString(); 
+DECLARE @g geometry;
+SET @g = geometry::STMPolyFromText('MULTIPOLYGON (((5 5, 10 5, 10 10, 5 5)), ((10 10, 100 10, 200 200, 30 30, 10 10)))', 0);
+SELECT @g.ToString();
 ```
 
 ## STNumCurves (Geometry)&#x20;
@@ -1332,7 +1331,7 @@ SELECT @g.ToString();
 #### Syntax
 
 ```sql
-.STNumCurves()  
+.STNumCurves()
 ```
 
 #### Return Types
@@ -1345,15 +1344,15 @@ An empty one-dimensional geometry instance returns 0.
 
 Null is returned when the geometry instance is not a one-dimensional instance or is an uninitialized instance.
 
-One-dimensional spatial data types include `LineString`, `CircularString`, and `CompoundCurve`.  `STNumCurves()` works only on simple types; it does not work with geometry collections like `MultiLineString`.
+One-dimensional spatial data types include `LineString`, `CircularString`, and `CompoundCurve`. `STNumCurves()` works only on simple types; it does not work with geometry collections like `MultiLineString`.
 
 #### Example
 
 This example shows how to get the number of curves in a `CircularString` instance:
 
 ```sql
- DECLARE @g geometry;  
- SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');  
+ DECLARE @g geometry;
+ SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');
  SELECT @g.STNumCurves();
 ```
 
@@ -1364,7 +1363,7 @@ This example shows how to get the number of curves in a `CircularString` instanc
 #### Syntax
 
 ```sql
-.STNumGeometries ( )  
+.STNumGeometries ( )
 ```
 
 #### Return Types
@@ -1380,9 +1379,9 @@ This method returns 1 if the geometry instance is not a `MultiPoint`, `MultiLine
 This example creates a `MultiPoint` instance and uses `STNumGeometries()` to find out how many geometries the instance contains:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.656))', 4326);  
-SELECT @g.STNumGeometries();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.656))', 4326);
+SELECT @g.STNumGeometries();
 ```
 
 ## STNumInteriorRing (Geometry)
@@ -1392,7 +1391,7 @@ SELECT @g.STNumGeometries();
 #### Syntax
 
 ```sql
-.STNumInteriorRing ( )  
+.STNumInteriorRing ( )
 ```
 
 #### Return Types
@@ -1408,9 +1407,9 @@ CQL: Number
 This example creates a `Polygon` instance and uses `STNumInteriorRing()` to find how many interior rings the instance has:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
-SELECT @g.STNumInteriorRing();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);
+SELECT @g.STNumInteriorRing();
 ```
 
 ## STNumPoints (Geometry)&#x20;
@@ -1420,7 +1419,7 @@ SELECT @g.STNumInteriorRing();
 #### Syntax
 
 ```sql
-.STNumPoints ( )  
+.STNumPoints ( )
 ```
 
 #### Return Types
@@ -1436,9 +1435,9 @@ CQL: Number
 This example creates a `LineString` instance and uses `STNumPoints()` to determine how many points were used in the description of the instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
-SELECT @g.STNumPoints();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
+SELECT @g.STNumPoints();
 ```
 
 ## STOverlaps (Geometry)
@@ -1448,12 +1447,12 @@ SELECT @g.STNumPoints();
 #### Syntax
 
 ```sql
-.STOverlaps ( other_instance )  
+.STOverlaps ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STOverlaps()` is invoked.
 
 #### Return Types
@@ -1462,7 +1461,7 @@ CQL: Yes/No
 
 #### Remarks
 
-If the points where the geometry instances intersect are not in the same dimension,  `STOverlaps()` always returns 0.
+If the points where the geometry instances intersect are not in the same dimension, `STOverlaps()` always returns 0.
 
 If the spatial reference IDs (SRIDs) of the geometry instances do not match, `STOverlaps()` returns null.
 
@@ -1473,11 +1472,11 @@ Two geometry instances overlap if the region representing their intersection has
 This example uses `STOverlaps()` to test two geometry instances for overlap:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))', 0);  
-SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);  
-SELECT @g.STOverlaps(@h);  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))', 0);
+SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
+SELECT @g.STOverlaps(@h);
 ```
 
 ## **STPointFromText (Geometry)**&#x20;
@@ -1491,12 +1490,12 @@ Augmented with any `Z` (elevation) and `M` (measure) values carried by the insta
 #### Syntax
 
 ```sql
-STPointFromText ( 'point_tagged_text' , SRID )  
+STPointFromText ( 'point_tagged_text' , SRID )
 ```
 
 #### Arguments
 
-_point\_tagged\_text_\
+_point_tagged_text_\
 An nvarchar(max) expression that is the WKT representation of the geometry `Point` instance you wish to return.&#x20;
 
 _SRID_\
@@ -1515,9 +1514,9 @@ If the input isn't well-formatted, method will throw a `FormatException`.
 This example uses`STPointFromText()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STPointFromText('POINT (100 100)', 0);  
-SELECT @g.ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STPointFromText('POINT (100 100)', 0);
+SELECT @g.ToString();
 ```
 
 ## STPointFromWKB (Geometry)&#x20;
@@ -1527,12 +1526,12 @@ SELECT @g.ToString();
 #### Syntax
 
 ```sql
-STPointFromWKB ( 'WKB_point' , SRID )  
+STPointFromWKB ( 'WKB_point' , SRID )
 ```
 
 #### Arguments
 
-_WKB\_point_\
+_WKB_point_\
 A varbinary(max) expression that is the WKB representation of the geometry `Point` instance you wish to return.
 
 _SRID_\
@@ -1551,9 +1550,9 @@ If the input isn't well-formatted, method will throw a `FormatException`.
 This example uses`STPointFromWKB()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;   
-SET @g = geometry::STPointFromWKB(0x010100000000000000000059400000000000005940, 0);  
-SELECT @g.STAsText();  
+DECLARE @g geometry;
+SET @g = geometry::STPointFromWKB(0x010100000000000000000059400000000000005940, 0);
+SELECT @g.STAsText();
 ```
 
 ## STPointN (Geometry)&#x20;
@@ -1563,7 +1562,7 @@ SELECT @g.STAsText();
 #### Syntax
 
 ```sql
-.STPointN ( expression )  
+.STPointN ( expression )
 ```
 
 #### Arguments&#x20;
@@ -1590,9 +1589,9 @@ Returns null if this method is called with a value greater than the number of po
 This example creates a `LineString` instance and uses `STPointN()` to retrieve the second point in the description of the instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
-SELECT @g.STPointN(2).ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
+SELECT @g.STPointN(2).ToString();
 ```
 
 ## STPointOnSurface (Geometry)
@@ -1602,7 +1601,7 @@ SELECT @g.STPointN(2).ToString();
 #### Syntax
 
 ```sql
-.STPointOnSurface ( )  
+.STPointOnSurface ( )
 ```
 
 #### Return Types
@@ -1618,9 +1617,9 @@ If the instance is empty, method returns null.
 This example creates a `Polygon` instance and uses `STPointOnSurface()` to find a point on the instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
-SELECT @g.STPointOnSurface().ToString(); 
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);
+SELECT @g.STPointOnSurface().ToString();
 ```
 
 ## STPolyFromText (Geometry)
@@ -1634,12 +1633,12 @@ Augmented with any `Z` (elevation) and `M` (measure) values carried by the insta
 #### Syntax
 
 ```sql
-STPolyFromText ( 'polygon_tagged_text' , SRID )  
+STPolyFromText ( 'polygon_tagged_text' , SRID )
 ```
 
 #### Arguments
 
-_polygon\_tagged\_text_\
+_polygon_tagged_text_\
 An nvarchar(max) expression that is the WKT representation of the geometry `Polygon`instance you wish to return.
 
 _SRID_\
@@ -1658,9 +1657,9 @@ If the input isn't well-formatted, method will throw a `FormatException`.
 This example uses`STPolyFromText()` to create a geometry instance:
 
 ```sql
-DECLARE @g geometry;   
-SET @g = geometry::STPolyFromText('POLYGON ((5 5, 10 5, 10 10, 5 5))', 0);  
-SELECT @g.ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STPolyFromText('POLYGON ((5 5, 10 5, 10 10, 5 5))', 0);
+SELECT @g.ToString();
 ```
 
 ## STRelate (Geometry)
@@ -1670,15 +1669,15 @@ SELECT @g.ToString();
 #### Syntax
 
 ```sql
-.STRelate ( other_instance, intersection_pattern_matrix )  
+.STRelate ( other_instance, intersection_pattern_matrix )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STRelate()` is invoked.
 
-_intersection\_pattern\_matrix_\
+_intersection_pattern_matrix_\
 Is a string of type nchar(9) encoding acceptable values for the DE-9IM pattern matrix device between the two geometry instances.
 
 #### Return Types
@@ -1696,11 +1695,11 @@ If matrix is not well-formed, an `ArgumentException`will be thrown.
 This example uses `STRelate()` to test two geometry instances for spatial disjoint using an explicit DE-9IM pattern:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  
-SET @h = geometry::STGeomFromText('POINT(5 5)', 0);  
-SELECT @g.STRelate(@h, 'FF*FF****');  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);
+SET @h = geometry::STGeomFromText('POINT(5 5)', 0);
+SELECT @g.STRelate(@h, 'FF*FF****');
 ```
 
 ## STStartPoint (Geometry)&#x20;
@@ -1710,7 +1709,7 @@ SELECT @g.STRelate(@h, 'FF*FF****');
 #### Syntax
 
 ```sql
-.STStartPoint ( )  
+.STStartPoint ( )
 ```
 
 #### Return Types
@@ -1719,16 +1718,16 @@ CQL: geometry
 
 #### Remarks
 
-`STStartPoint()` is the equivalent of [`STPointN()`](https://app.gitbook.com/@cinchy/s/cql/\~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STPointN).
+`STStartPoint()` is the equivalent of [`STPointN()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STPointN).
 
 #### Example
 
 This example uses `STStartPoint()` to retrieve the start point of the instance and creates a `LineString` instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
-SELECT @g.STStartPoint().ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
+SELECT @g.STStartPoint().ToString();
 ```
 
 ## STSymDifference (Geometry)&#x20;
@@ -1738,12 +1737,12 @@ SELECT @g.STStartPoint().ToString();
 #### Syntax
 
 ```sql
-.STSymDifference ( other_instance )  
+.STSymDifference ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STSymDifference()` is invoked.
 
 #### Return Types
@@ -1761,11 +1760,11 @@ Result may contain circular arc segments (only if the input instances contain ci
 This example uses `STSymDifference()` to compute the symmetric difference of two `Polygon` instances:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
-SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);  
-SELECT @g.STSymDifference(@h).ToString();  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);
+SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
+SELECT @g.STSymDifference(@h).ToString();
 ```
 
 ## STTouches (Geometry)
@@ -1775,12 +1774,12 @@ SELECT @g.STSymDifference(@h).ToString();
 #### Syntax
 
 ```sql
-.STTouches ( other_instance )  
+.STTouches ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STTouches()` is invoked.
 
 #### Return Types
@@ -1798,11 +1797,11 @@ If the spatial reference IDs (SRIDs) of the geometry instances do not match, met
 This example uses `STTouches()` to test two `geometry` instances to see if they touch:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);  
-SET @h = geometry::STGeomFromText('POINT(1 1)', 0);  
-SELECT @g.STTouches(@h);  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 2, 2 0, 4 2)', 0);
+SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
+SELECT @g.STTouches(@h);
 ```
 
 ## STUnion (Geometry)&#x20;
@@ -1812,12 +1811,12 @@ SELECT @g.STTouches(@h);
 #### Syntax
 
 ```sql
-.STUnion ( other_instance )  
+.STUnion ( other_instance )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STUnion()` is invoked.
 
 #### Return Types
@@ -1835,11 +1834,11 @@ Result may contain circular arc segments (only if the input instances contain ci
 This example uses `STUnion()` to compute the union of two `Polygon` instances:&#x20;
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
-SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);  
-SELECT @g.STUnion(@h).ToString();  
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);
+SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
+SELECT @g.STUnion(@h).ToString();
 ```
 
 ## STWithin (Geometry)
@@ -1849,12 +1848,12 @@ SELECT @g.STUnion(@h).ToString();
 #### Syntax
 
 ```sql
-STWithin ( other_instances ) 
+STWithin ( other_instances )
 ```
 
 #### Arguments
 
-_other\_instance_\
+_other_instance_\
 Another geometry instance to compare against the instance on which `STWithin()` is invoked.
 
 #### Return Types
@@ -1872,9 +1871,9 @@ If the spatial reference IDs (SRIDs) of the geometry instances do not match, met
 This example uses `STWithin()` to test two `geometry` instances to see if the first instance is completely within the second instance:
 
 ```sql
-DECLARE @g geometry;  
-DECLARE @h geometry;  
-SET @g = geometry::STGeomFromText('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))', 0);  
-SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);  
-SELECT @g.STWithin(@h); 
+DECLARE @g geometry;
+DECLARE @h geometry;
+SET @g = geometry::STGeomFromText('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))', 0);
+SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
+SELECT @g.STWithin(@h);
 ```
