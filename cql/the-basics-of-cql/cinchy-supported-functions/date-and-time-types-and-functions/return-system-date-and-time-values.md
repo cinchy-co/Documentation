@@ -6,9 +6,9 @@ SQL derives all system date and time values from the operating system of the com
 
 SQL Server 2019 (15.x) derives the date and time values through use of the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of SQL Server running. This API has a precision fixed at 100 nanoseconds. Use the GetSystemTimeAdjustment() Windows API to determine the accuracy. The return system date and time value functions covered in this section are:
 
-* ​[SYSDATETIME​](return-system-date-and-time-values.md#sysdatetime)
-* [​SYSDATETIMEOFFSET​](return-system-date-and-time-values.md#sysdatetimeoffset)
-* [​SYSUTCDATETIME​](return-system-date-and-time-values.md#sysutcdatetime)
+- ​[SYSDATETIME​](return-system-date-and-time-values.md#sysdatetime)
+- [​SYSDATETIMEOFFSET​](return-system-date-and-time-values.md#sysdatetimeoffset)
+- [​SYSUTCDATETIME​](return-system-date-and-time-values.md#sysutcdatetime)
 
 ## SYSDATETIME
 
@@ -53,7 +53,7 @@ SYSDATETIME()        2020-04-30 13:10:02.0474381
 SYSDATETIMEOFFSET()  2020-04-30 13:10:02.0474381 -07:00
 SYSUTCDATETIME()     2020-04-30 20:10:02.0474381
 GETDATE()            2020-04-30 13:10:02.047
-GETUTCDATE()         2020-04-30 20:10:02.047  
+GETUTCDATE()         2020-04-30 20:10:02.047
 */
 ```
 
@@ -86,7 +86,7 @@ SYSDATETIME()        13:18:45.3490361
 SYSDATETIMEOFFSET()  13:18:45.3490361
 SYSUTCDATETIME()     20:18:45.3490361
 GETDATE()            13:18:45.3470000
-GETUTCDATE()         20:18:45.3470000  
+GETUTCDATE()         20:18:45.3470000
 */
 ```
 

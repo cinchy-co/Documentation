@@ -1,38 +1,39 @@
 # Extended Methods on Geometry & Geography Instances
 
-## 1. Overview
+## Overview
 
-Cinchy CQL supports a number of extended methods on Open Geospatial Consortium (OGC) methods on geometry and geography instances.Please note that all functions that have been denoted with Geography in parentheses are only applicable to OGC methods on geometry instances.
+Cinchy CQL supports several extended methods on Open Geospatial Consortium (OGC) methods on geometry and geography instances.
 
 {% hint style="warning" %}
-These function are not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+All functions that have Geometry in parenthesis are only applicable to OGC methods on geometry instances.
+{% endhint %}
 
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+{% hint style="warning" %}
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 The extended Methods covered in this section are:
 
 <table data-header-hidden><thead><tr><th></th><th width="137"></th><th width="101"></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td><a href="extended-methods-on-geometry-and-geography-instances.md#isvaliddetailed-geometry">IsValidDetailed</a></td><td><a href="extended-methods-on-geometry-and-geography-instances.md#makevalid-geometry">MakeValid</a></td><td><a href="extended-methods-on-geometry-and-geography-instances.md#reduce-geometry">Reduce</a></td><td><a href="extended-methods-on-geometry-and-geography-instances.md#shortestlineto-geometry">ShortestLineTo</a></td></tr></tbody></table>
 
-## IsValidDetailed (Geometry)&#x20;
+## IsValidDetailed (Geometry)
 
-`IsValidDetailed()`returns a message that can help to identify problems with a spatial object that is not valid.&#x20;
+`IsValidDetailed()`returns a message that can help to identify problems with a spatial object that's not valid.
 
 Only the first error is returned, when the object is not valid. When the object is valid, a value of 24400 is returned.
 
-#### Syntax
+### Syntax
 
 ```
-.IsValidDetailed()  
+.IsValidDetailed()
 ```
 
-#### Return Types
+### Return types
 
 CQL: Text
 
-#### Remarks
+### Remarks
 
 The following table contains possible return values:
 
@@ -56,64 +57,64 @@ The following table contains possible return values:
 | 24415        | Not valid some polygon has an invalid ring structure.                                                                          |
 | 24416        | Not valid because in curve {0} the edge that starts at point {1} is either a line or a degenerate arc with antipodal endpoints |
 
-#### Geometry Example
+#### Example
 
 This example of an invalid spatial object shows how the `IsValidDetailed()` methods behaves:
 
 ```sql
-DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
-SELECT @p.IsValidDetailed()  
+DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'
+SELECT @p.IsValidDetailed()
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.
 ```
 
-## MakeValid (Geometry)&#x20;
+## MakeValid (Geometry)
 
 `MakeValid()`converts an invalid geometry instance into a geometry instance with a valid Open Geospatial Consortium (OGC) type.
 
-#### Syntax
+### Syntax
 
 ```
-.MakeValid ()  
+.MakeValid ()
 ```
 
-#### Return Types
+### Return Types
 
 CQL: geometry
 
-#### Remarks
+### Remarks
 
 This method may cause a change in the type of the geometry instance, as well as cause the points of a geometry instance to shift slightly.
 
-#### Geometry Example
+#### Example
 
 This example creates an invalid `LineString` instance that overlaps itself and uses `MakeValid()` to make this instance valid:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 2, 1 1, 1 0, 1 1, 2 2)', 0);  
-SET @g = @g.MakeValid(); 
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 2, 1 1, 1 0, 1 1, 2 2)', 0);
+SET @g = @g.MakeValid();
 ```
 
-## Reduce (Geometry)&#x20;
+## Reduce (Geometry)
 
 By running the Douglas-Peucker algorithm on the instance with the given tolerance, `Reduce()`returns an approximation of the given geometry instance produced.
 
-#### Syntax
+### Syntax
 
 ```
-.Reduce ( tolerance )  
+.Reduce ( tolerance )
 ```
 
-#### Arguments
+### Arguments
 
 _tolerance_\
 The tolerance (type float) to input for the approximation algorithm.
 
-#### Return Types
+#### Return types
 
 CQL: geometry
 
-#### Remarks
+### Remarks
 
 This algorithm operates independently on each geometry contained in the instance, for collection types.
 
@@ -123,53 +124,53 @@ For `CircularString`instances,`Reduce()` returns a `LineString`, `CircularString
 
 For `CompoundCurve`instances,`Reduce()` returns either a `CompoundCurve`or `LineString`instance.
 
-On `Polygon`instances, the approximation algorithm is applied independently to each ring.  If the returned `Polygon`instance is not valid, `Reduce()` will produce a `FormatException.`
+On `Polygon`instances, the approximation algorithm is applied independently to each ring. If the returned `Polygon`instance is not valid, `Reduce()` will produce a `FormatException.`
 
 When a circular arc segment is found, the approximation algorithm checks whether the arc can be approximated by its chord within half the given tolerance. Chords meeting this criteria have the circular arc replaced in the calculations by the chord. If a chord doesn't meet this criteria, then the circular arc is kept and the approximation algorithm is applied to the remaining segments.
 
-#### Geometry Example
+#### Example
 
 This example creates a `LineString` instance and uses `Reduce()` to simplify the instance:
 
 ```sql
-DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0, 2 1, 3 0, 4 1)', 0);  
-SELECT @g.Reduce(.75).ToString();  
+DECLARE @g geometry;
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0, 2 1, 3 0, 4 1)', 0);
+SELECT @g.Reduce(.75).ToString();
 ```
 
-## ShortestLineTo (Geometry)&#x20;
+## ShortestLineTo (Geometry)
 
-`ShortestLineTo()`returns a `LineString`instance (which is the distance between the two geometry instances) with two points that represent the shortest distance between the two geometry instances.&#x20;
+`ShortestLineTo()`returns a `LineString`instance (which is the distance between the two geometry instances) with two points that represent the shortest distance between the two geometry instances.
 
-#### Syntax
+### Syntax
 
 ```sql
-.ShortestLineTo ( other_instance )  
+.ShortestLineTo ( other_instance )
 ```
 
-#### Arguments
+### Arguments
 
-_other\_instance_\
+_other_instance_\
 Specifies the second geometry instance that the calling geometry instance is trying to determine the shortest distance to.
 
-#### Return Types
+### Return types
 
 CQL: geometry
 
-#### Remarks
+### Remarks
 
-Returns a `LineString`instance with endpoints lying on the borders of the two non-intersecting geometry instances being compared.&#x20;
+Returns a `LineString` instance with endpoints lying on the borders of the two non-intersecting geometry instances being compared.
 
-The length of the `LineString`returned equals the shortest distance between the two geometry instances.&#x20;
+The length of the `LineString`returned equals the shortest distance between the two geometry instances.
 
-An empty `LineString`instance is returned when the two geometry instances intersect each other.
+Returns an empty `LineString`instance when the two geometry instances intersect each other.
 
-#### Geometry Example
+#### Example
 
 This example returns the `LineString` instance connecting the two points, by finding the shortest distance between a `CircularString` instance and a `LineString` instance:
 
 ```sql
- DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
- DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';  
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';
+ DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';
  SELECT @g1.ShortestLineTo(@g2).ToString();
 ```

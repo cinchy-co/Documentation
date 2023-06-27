@@ -4,12 +4,12 @@
 
 The following return date and time values from their parts functions covered in this section are:
 
-* [DATEFROMPARTS](return-date-and-time-values-from-their-parts.md#datefromparts)
-* [DATETIME2FROMPARTS](return-date-and-time-values-from-their-parts.md#datetime2fromparts)
-* [DATETIMEFROMPARTS ](return-date-and-time-values-from-their-parts.md#datetimefromparts)
-* [DATETIMEOFFSETFROMPARTS](return-date-and-time-values-from-their-parts.md#datetimeoffsetfromparts)
-* [SMALLDATETIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#smalldatetimefromparts)
-* [TIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#timefromparts)
+- [DATEFROMPARTS](return-date-and-time-values-from-their-parts.md#datefromparts)
+- [DATETIME2FROMPARTS](return-date-and-time-values-from-their-parts.md#datetime2fromparts)
+- [DATETIMEFROMPARTS ](return-date-and-time-values-from-their-parts.md#datetimefromparts)
+- [DATETIMEOFFSETFROMPARTS](return-date-and-time-values-from-their-parts.md#datetimeoffsetfromparts)
+- [SMALLDATETIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#smalldatetimefromparts)
+- [TIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#timefromparts)
 
 ## DATEFROMPARTS
 
@@ -231,7 +231,7 @@ datetimeoffset( precision )
 
 #### Remarks
 
-`DATETIMEOFFSETFROMPARTS` returns a fully initialized **datetimeoffset** data type. The offset arguments represent the time zone offset. For omitted offset arguments, `DATETIMEOFFSETFROMPARTS` assumes a time zone offset of `00:00` - in other words, no time zone offset. For specified offset arguments, `DATETIMEOFFSETFROMPARTS` expects values for both arguments, and both values positive or negative. If _minute\_offset_ has a value and _hour\_offset_ has no value, `DATETIMEOFFSETFROMPARTS` will raise an error. `DATETIMEOFFSETFROMPARTS` will raise an error if the other arguments have invalid values. If at least one required arguments have a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will return `NULL`. However, if the _precision_ argument has a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will raise an error.
+`DATETIMEOFFSETFROMPARTS` returns a fully initialized **datetimeoffset** data type. The offset arguments represent the time zone offset. For omitted offset arguments, `DATETIMEOFFSETFROMPARTS` assumes a time zone offset of `00:00` - in other words, no time zone offset. For specified offset arguments, `DATETIMEOFFSETFROMPARTS` expects values for both arguments, and both values positive or negative. If _minute_offset_ has a value and _hour_offset_ has no value, `DATETIMEOFFSETFROMPARTS` will raise an error. `DATETIMEOFFSETFROMPARTS` will raise an error if the other arguments have invalid values. If at least one required arguments have a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will return `NULL`. However, if the _precision_ argument has a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will raise an error.
 
 The _fractions_ argument depends on the precision argument. For example, for a precision value of 7, each fraction represents 100 nanoseconds; for a precision of 3, each fraction represents a millisecond. For a precision value of zero, the value of fractions must also be zero; otherwise, `DATETIMEOFFSETFROMPARTS` will raise an error.
 
