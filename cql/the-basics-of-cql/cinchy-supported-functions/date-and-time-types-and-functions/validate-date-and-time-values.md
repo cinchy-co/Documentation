@@ -1,6 +1,6 @@
-# Validate Date and Time Values
+# Validate Date and Time values
 
-## 1. Overview
+## Overview
 
 The validate date and time value function covered in this section is:
 
@@ -8,40 +8,37 @@ The validate date and time value function covered in this section is:
 
 ## ISDATE <a href="#isdate-transact-sql" id="isdate-transact-sql"></a>
 
-ISDATE checks an expression to see if it is correct.&#x20;
+ISDATE checks an expression to see if it's correct.
 
 It will return 1 if the _expression_ is a valid **date**, **time**, or **datetime** value; otherwise, it will return 0. ISDATE will also return 0 if the _expression_ is a **datetime2** value.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax&#x20;
+### Syntax
 
 ```sql
 ISDATE ( expression )
 ```
 
-#### Arguments
+### Arguments
 
 `expression`\
-Is a character string or expression that can be converted to a character string. The expression must be less than 4,000 characters. Date and time data types, except datetime and smalldatetime, are not allowed as the argument for ISDATE.
+Is a character string or expression that can be converted to a character string. The expression must be less than 4,000 characters. Date and time data types, except datetime and smalldatetime, aren't allowed as the argument for `ISDATE`.
 
-#### Return Types&#x20;
+#### Return types
 
 ```sql
 int
 ```
 
-#### Remarks&#x20;
+#### Remarks
 
-ISDATE is deterministic only when used with the CONVERT function, if the CONVERT style parameter is specified, and style is not equal to 0, 100, 9, or 109.
+`ISDATE` is deterministic only when used with the `CONVERT` function, if the `CONVERT` style parameter is specified, and style is not equal to 0, 100, 9, or 109.
 
-The return value of ISDATE depends on the settings set by SET DATEFORMAT, SET LANGUAGE and Configure the default language Server Configuration Option.
+The return value of `ISDATE` depends on the settings set by `SET DATEFORMAT`, `SET LANGUAGE` and Configure the default language Server Configuration Option.
 
 #### Example
 
