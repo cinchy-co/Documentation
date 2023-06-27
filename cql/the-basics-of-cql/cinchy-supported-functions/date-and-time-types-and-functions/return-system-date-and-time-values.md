@@ -1,10 +1,10 @@
-# Return System Date and Time Values
+# Return System Date and Time values
 
-## 1. Overview
+## Overview
 
 SQL derives all system date and time values from the operating system of the computer on which the instance of SQL Server runs.
 
-SQL Server 2019 (15.x) derives the date and time values through use of the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of SQL Server running. This API has a precision fixed at 100 nanoseconds. Use the GetSystemTimeAdjustment() Windows API to determine the accuracy.The return system date and time value functions covered in this section are:
+SQL Server 2019 (15.x) derives the date and time values through use of the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of SQL Server running. This API has a precision fixed at 100 nanoseconds. Use the GetSystemTimeAdjustment() Windows API to determine the accuracy. The return system date and time value functions covered in this section are:
 
 * ​[SYSDATETIME​](return-system-date-and-time-values.md#sysdatetime)
 * [​SYSDATETIMEOFFSET​](return-system-date-and-time-values.md#sysdatetimeoffset)
@@ -15,32 +15,29 @@ SQL Server 2019 (15.x) derives the date and time values through use of the GetSy
 SYSDATETIME returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of SQL Server is running.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax
+### Syntax
 
 ```sql
 SYSDATETIME ( )
 ```
 
-#### Return Types
+### Return Types
 
 ```sql
 datetime2(7)
 ```
 
-#### Remarks
+### Remarks
 
-SQL statements can refer to SYSDATETIME anywhere they can refer to a datetime2(7) expression.
+SQL statements can refer to `SYSDATETIME` anywhere they can refer to a datetime2(7) expression.
 
-SYSDATETIME is a nondeterministic function. Views and expressions that reference this function in a column cannot be indexed.
+`SYSDATETIME` is a nondeterministic function. You can't index views and expressions that reference this function.
 
-**Example 1: Getting the Current System Date and Time**
+#### Example 1: Get the current System Date and Time
 
 ```sql
 SELECT
@@ -60,7 +57,7 @@ GETUTCDATE()         2020-04-30 20:10:02.047
 */
 ```
 
-**Example 2: Getting the Current System Date**
+#### Example 2: Get the current System Date
 
 ```sql
 SELECT
@@ -73,7 +70,7 @@ SELECT
 /* All returned 2020-04-30 */
 ```
 
-**Example 3: Getting the Current System Time**
+#### Example 3: Get the current System Time
 
 ```sql
 SELECT
@@ -98,32 +95,29 @@ GETUTCDATE()         20:18:45.3470000
 SYSDATETIMEOFFSET returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of SQL Server is running. The time zone offset is included.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax
+### Syntax
 
 ```sql
 SYSDATETIMEOFFSET()
 ```
 
-#### Return Types
+### Return Types
 
 ```sql
 datetimeoffset(7)
 ```
 
-#### Remarks
+### Remarks
 
-SQL statements can refer to SYSDATETIMEOFFSET anywhere they can refer to a **datetimeoffset** expression.
+SQL statements can refer to `SYSDATETIMEOFFSET` anywhere they can refer to a **datetimeoffset** expression.
 
-SYSDATETIMEOFFSET is a nondeterministic function. Views and expressions that reference this function in a column cannot be indexed.
+`SYSDATETIMEOFFSET` is a nondeterministic function. You can't index views and expressions that reference this function.
 
-**Example 1: Showing Formats Returned by the Date and Time Functions**
+#### Example 1: Show formats Returned by the Date and Time Functions
 
 ```sql
 SELECT
@@ -134,7 +128,7 @@ SELECT
     GETUTCDATE() AS [GETUTCDATE()]
 ```
 
-**Example 2: Converting Date and Time to Date**
+#### Example 2: Convert Date and Time to Date
 
 ```sql
 SELECT
@@ -145,7 +139,7 @@ SELECT
     CONVERT(date, GETUTCDATE())
 ```
 
-**Example 3: Converting Date and Time to Times**
+#### Example 3: Convert Date and Time to Times
 
 ```sql
 SELECT
@@ -158,23 +152,20 @@ SELECT
 
 ## SYSUTCDATETIME
 
-SYSUTCDATETIME returns a **datetime2** value that contains the date and time of the computer on which the instance of SQL Server is running. The date and time are returned as UTC time (Coordinated Universal Time). The fractional second precision specification has a range from 1 to 7 digits. The default precision is 7 digits.
+`SYSUTCDATETIME` returns a **datetime2** value that contains the date and time of the computer on which the instance of SQL Server is running. The date and time are returned as UTC time (Coordinated Universal Time). The fractional second precision specification has a range from 1 to 7 digits. The default precision is 7 digits.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
-
-New function translations are actively being worked on by the development team; please check back at a later time.
-
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md)[.](../)
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
 {% endhint %}
 
-#### Syntax
+### Syntax
 
 ```sql
 SYSUTCDATETIME()
 ```
 
-#### Return Types
+### Return types
 
 ```sql
 datetime2
@@ -182,11 +173,11 @@ datetime2
 
 #### Remarks
 
-SQL statements can refer to SYSUTCDATETIME anywhere they can refer to a **datetime2** expression.
+SQL statements can refer to `SYSUTCDATETIME` anywhere they can refer to a **datetime2** expression.
 
-SYSUTCDATETIME is a nondeterministic function. Views and expressions that reference this function in a column cannot be indexed.
+`SYSUTCDATETIME` is a nondeterministic function. You can't index views and expressions that reference this function.
 
-**Example 1: Showing Formats Returned by Date and Time functions**
+#### Example 1: Show formats returned by Date and Time functions
 
 ```sql
 SELECT
@@ -197,7 +188,7 @@ SELECT
     GETUTCDATE() AS [GETUTCDATE()]
 ```
 
-**Example 2: Converting Date and Time to Date**
+#### Example 2: Convert Date and Time to Date
 
 ```sql
 SELECT
@@ -208,7 +199,7 @@ SELECT
     CONVERT(date, GETUTCDATE())
 ```
 
-**Example 3: Converting Date and Time to Time**
+#### Example 3: Convert Date and Time to Time
 
 ```sql
 DECLARE @DateTime DATETIME = GETDATE()

@@ -9,7 +9,7 @@ The return date and time difference value functions covered in this section are:
 
 ## DATEDIFF  <a href="#datediff-transact-sql" id="datediff-transact-sql"></a>
 
-DATDIFF  function returns the count of the specified datepart boundaries crossed between the specified _startdate_ and _enddate_.
+The `DATDIFF` function returns the count of the specified datepart boundaries crossed between the specified _startdate_ and _enddate_.
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
@@ -25,11 +25,11 @@ DATEDIFF ( datepart , startdate , enddate )
 #### Arguments
 
 `datepart`\
-The units in which **DATEDIFF** reports the difference between the _startdate_ and _enddate_. Commonly used _datepart_ units include `month` or `second`.
+The units in which `DATEDIFF` reports the difference between the _startdate_ and _enddate_. Commonly used _datepart_ units include `month` or `second`.
 
 The _datepart_ value cannot be specified in a variable, nor as a quoted string like `'month'`.
 
-The following table lists all the valid _datepart_ values. **DATEDIFF** accepts either the full name of the _datepart_, or any listed abbreviation of the full name.
+The following table lists all the valid _datepart_ values. `DATEDIFF` accepts either the full name of the _datepart_, or any listed abbreviation of the full name.
 
 | _datepart_  |
 | ----------- |
@@ -67,7 +67,7 @@ int
 
 Use `DATEDIFF` in the `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` and `ORDER BY` clauses.
 
-`DATEDIFF` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+`DATEDIFF` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF` doesn't support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
 
 Specifying `SET DATEFIRST` has no effect on `DATEDIFF`. `DATEDIFF` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
 
@@ -102,9 +102,9 @@ Example 3: Specifying scalar system functions for startdate and enddate
 SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME())
 ```
 
-## DATEDIFF\_BIG <a href="#datediff_big-transact-sql" id="datediff_big-transact-sql"></a>
+## DATEDIFF_BIG <a href="#datediff_big-transact-sql" id="datediff_big-transact-sql"></a>
 
-DATEIFF\_BIG  function returns the count of the specified _datepart_ boundaries crossed between the specified _startdate_ and _enddate_.
+`DATEIFF_BIG`  function returns the count of the specified _datepart_ boundaries crossed between the specified _startdate_ and _enddate_.
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
