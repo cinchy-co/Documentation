@@ -8,4 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: errata-ai/vale-action@reviewdog
-    files: cql\the-basics-of-cql
+    with:
+      files: cql\the-basics-of-cql
