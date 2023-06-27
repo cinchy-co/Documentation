@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Model xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CLS Prices Model" version="1.0.0" xmlns="http://www.cinchy.co">
+  <Schema>
+    <Tables>
+      <Table name="CLS Prices" domain="FX" guid="cff770e8-fbd6-470d-9247-8bff412c77e2" icon="fa fa-table" iconColour="#002060">
+        <Columns>
+          <Link name="Currency" guid="a9c23f4f-40f3-433f-9cb8-306c1a1f1b0c" allowLinking="false" linkedTableDomain="FX" linkedTable="Currency Pairs" linkFilterExpression="">
+            <SearchDisplayColumns>
+              <LinkedColumn isPrimary="true">CLSFX Abbreviation</LinkedColumn>
+            </SearchDisplayColumns>
+          </Link>
+          <Date name="Date" guid="a7e6c1ff-c77c-4fd1-aa48-9c45557c7cd0" allowLinking="false" displayFormat="MMM DD, YYYY" />
+          <Number name="Hour" guid="a431232a-a2c6-46b2-9358-97e4e4c64379" allowLinking="false" displayFormat="0,0" />
+          <Number name="Minute" guid="86a2b6ae-3b1d-4473-83d4-7cd002f61501" allowLinking="false" displayFormat="0,0" />
+          <Number name="VWAP Matched" guid="b5a5853e-d120-44e9-bf85-d54ac224ff7b" description="Volume weighted average price based on matched trades" allowLinking="false" displayFormat="0,0.00000" />
+          <Number name="TWAP Matched" guid="05e1c687-7588-4de1-bb8b-7ca5b7af732b" description="Time weighted average price based on matched trades" allowLinking="false" displayFormat="0,0.00000" />
+        </Columns>
+        <UniqueConstraints />
+        <Indexes>
+          <Index name="Cinchy Default Index">
+            <Column>Approval State</Column>
+            <Column>Deleted</Column>
+          </Index>
+        </Indexes>
+      </Table>
+      <Table name="Currency Pairs" domain="FX" guid="61091e8e-59ef-4ddd-ad99-65145fd7ef4d" icon="fa fa-dollar" iconColour="#002060">
+        <Columns>
+          <Text name="CLSFX Abbreviation" guid="38501a7f-9046-43d1-b1a7-585adb9836c3" />
+          <Link name="From Currency" guid="d97a2f7f-b744-4954-9aad-3aed3cbe8e7a" allowLinking="false" linkedTableDomain="FX" linkedTable="Currencies">
+            <SearchDisplayColumns>
+              <LinkedColumn isPrimary="true">Name</LinkedColumn>
+            </SearchDisplayColumns>
+          </Link>
+          <Link name="To Currency" guid="3e787265-06dd-4b85-a7a1-ff764b96ab1d" allowLinking="false" linkedTableDomain="FX" linkedTable="Currencies">
+            <SearchDisplayColumns>
+              <LinkedColumn isPrimary="true">Name</LinkedColumn>
+            </SearchDisplayColumns>
+          </Link>
+        </Columns>
+        <UniqueConstraints />
+        <Indexes>
+          <Index name="Cinchy Default Index">
+            <Column>Approval State</Column>
+            <Column>Deleted</Column>
+          </Index>
+        </Indexes>
+      </Table>
+      <Table name="Currencies" domain="FX" guid="a21c2603-5580-4ba5-801d-7b1f719910d0" icon="fa fa-dollar" iconColour="#002060">
+        <Columns>
+          <Text name="Name" guid="cbb1afdf-cc9c-42f0-bbb6-47836c080b92" />
+          <Text name="Abbreviation" guid="dfa08067-bb79-4e58-bf50-87dd8b5b0e1d" isMandatory="true" />
+        </Columns>
+        <UniqueConstraints>
+          <UniqueConstraint name="Col3696">
+            <Column>Abbreviation</Column>
+          </UniqueConstraint>
+        </UniqueConstraints>
+        <Indexes>
+          <Index name="Cinchy Default Index">
+            <Column>Approval State</Column>
+            <Column>Deleted</Column>
+          </Index>
+        </Indexes>
+      </Table>
+    </Tables>
+  </Schema>
+</Model>
