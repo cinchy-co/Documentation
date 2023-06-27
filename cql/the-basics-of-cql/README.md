@@ -10,7 +10,7 @@ description: >-
 
 **Cinchy Query Language (CQL)** is a query language unique to dataware that's used to retrieve and manage/modify data and metadata from tables in your network. While data can reside across many tables, a query can isolate it to a single output, making the possibilities of CQL endlessly powerful.
 
-For example, you can use CQL the following ways:
+For example, you can use CQL in the following ways:
 
 - ​Build queries through the query editor that can return, insert, delete, and otherwise manage your data.
 - ​Create, alter, or drop views for tables​.
@@ -19,7 +19,7 @@ For example, you can use CQL the following ways:
 For an overview of the supported functions of CQL, [see the CQL functions master list.​](cql-functions-master-list.md)
 
 {% hint style="success" %}
-All queries on Cinchy are automatically protected by universal data access controls. This means that if you run a CQL query, you only see the data that you have access to.
+All queries in Cinchy are automatically protected by universal data access controls. This means that if you run a CQL query, you only see the data that you have access to.
 {% endhint %}
 
 ### Basic rules <a href="#2.-basic-rules-of-cql" id="2.-basic-rules-of-cql"></a>
@@ -29,7 +29,7 @@ The following is a non-exhaustive list of some things to keep in mind while usin
 - Cinchy comes with an intuitive Query Builder UI. When you use the builder, the basic syntax is pre-written for you, as seen in the image below. You can then use the drag-and-drop interface, or type in your own search terms to build your query.​![](https://762429502-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MBtHkNqYteSDPDzpqqZ%2Fuploads%2FXPwQAuVPRZiEd8cM1N6p%2Fimage.png?alt=media&token=90cfce6d-cc3f-46dd-98a1-8392b7d88938)​
 
 {% hint style="info" %}
-[See the Saved Queries page for more information about using the Query Builder.](https://cinchy.gitbook.io/cinchy-v5.0.0/guides-for-using-cinchy/builder-guides/saved-queries)
+[See the Saved Queries page for more information about using the Query Builder.](https://cinchy.gitbook.io/guides-for-using-cinchy/builder-guides/saved-queries)
 {% endhint %}
 
 - All queries built using the Cinchy Query Builder include a **"WHERE \[Deleted] IS NULL"** clause. This prevents any deleted table data from ending up in your query. If you want to include deleted data, you must delete this clause.
