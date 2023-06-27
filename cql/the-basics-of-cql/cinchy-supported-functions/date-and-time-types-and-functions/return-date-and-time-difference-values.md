@@ -13,7 +13,7 @@ The `DATDIFF` function returns the count of the specified datepart boundaries cr
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 #### Syntax
@@ -108,7 +108,7 @@ SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME())
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 #### Syntax

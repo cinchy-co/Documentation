@@ -14,10 +14,10 @@ The return date and time part functions covered in this section are:
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
-The DATENAME function returns a character string representing the specified _datepart_ of the specified _date_.
+The `DATENAME` function returns a character string representing the specified _datepart_ of the specified _date_.
 
 #### Syntax
 
@@ -105,7 +105,7 @@ Result Set
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 DATEPART function returns an integer representing the specified _datepart_ of the specified _date_.
@@ -183,7 +183,7 @@ WHERE [Deleted] IS NULL
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 DAY function returns an integer that represents the day (day of the month) of the specified _date_.
 
@@ -233,7 +233,7 @@ SELECT YEAR(0), MONTH(0), DAY(0)
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 MONTH returns an integer that represents the month of the specified _date_.
@@ -275,7 +275,7 @@ SELECT YEAR(0), MONTH(0), DAY(0)
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 YEAR function returns an integer that represents the year of the specified _date_.

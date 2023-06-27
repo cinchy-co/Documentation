@@ -16,7 +16,7 @@ SYSDATETIME returns a **datetime2(7)** value that contains the date and time of 
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
@@ -96,7 +96,7 @@ SYSDATETIMEOFFSET returns a **datetimeoffset(7)** value that contains the date a
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
@@ -156,7 +156,7 @@ SELECT
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
