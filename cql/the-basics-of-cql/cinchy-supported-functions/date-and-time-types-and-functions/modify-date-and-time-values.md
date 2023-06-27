@@ -15,7 +15,7 @@ DATEADD function adds a specified _number_ value to a specified _datepart_ of an
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
@@ -147,7 +147,7 @@ The EOMONTH function returns the last day of the month containing a specified da
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
@@ -213,7 +213,7 @@ The SWITCHOFFSEET function returns a **datetimeoffset** value that is changed fr
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
@@ -254,7 +254,7 @@ TODATETIMEOFFSET function returns a **datetimeoffset** value that is translated 
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 ### Syntax
 

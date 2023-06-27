@@ -14,7 +14,7 @@ It will return 1 if the _expression_ is a valid **date**, **time**, or **datetim
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-You can review the full list of in-progress function translations[ on the CQL functions master list page](../../cql-functions-master-list.md).
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
