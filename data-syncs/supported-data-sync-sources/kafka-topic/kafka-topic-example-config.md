@@ -36,7 +36,7 @@ Tip: Click on an image in this document to enlarge it.
 | Data Type                              | Text         |
 | Trim Whitespace                        | True         |
 
-<figure><img src="../../../.gitbook/assets/image (337).png" alt=""><figcaption><p>Image 1: Inserting your source data</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (284).png" alt=""><figcaption><p>Image 1: Inserting your source data</p></figcaption></figure>
 
 ### 2.2 Destination Tab
 
@@ -58,7 +58,7 @@ Your destination tab should be set to **"Cinchy Table"**, and have the following
 | Source Column                         | Name         |
 | Target Column                         | Name         |
 
-<figure><img src="../../../.gitbook/assets/image (675).png" alt=""><figcaption><p>Image 2: Inserting your destination data</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (580).png" alt=""><figcaption><p>Image 2: Inserting your destination data</p></figcaption></figure>
 
 ### 2.3 Sync Behaviour
 

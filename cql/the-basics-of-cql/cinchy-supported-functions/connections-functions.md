@@ -32,7 +32,7 @@ The following example shows how you would use JSON\_ESCAPE in your REST API URL 
 
 In this example we have an API and want to add a value (@Parameter) that contains double quotes -- this could break the JSON structure, so we need to wrap the parameter with JSON\_ESCAPE().
 
-<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Image 1: Example 1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (535).png" alt=""><figcaption><p>Image 1: Example 1</p></figcaption></figure>
 
 #### Example 2
 
@@ -40,7 +40,7 @@ The following example shows how you would use JSON\_ESCAPE in your REST API Requ
 
 In this example we have an API and want to add a value (@Parameter) that contains double quotes -- this could break the JSON structure, so we need to wrap the parameter with JSON\_ESCAPE().
 
-<figure><img src="../../../.gitbook/assets/image (249).png" alt=""><figcaption><p>Image 2: Example 2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (189).png" alt=""><figcaption><p>Image 2: Example 2</p></figcaption></figure>
 
 ## URL\_ESCAPE
 
@@ -66,7 +66,7 @@ The following example shows how you would use URL\_ESCAPE in your REST API URL _
 
 In this example we have an API and want to add a value (@Parameter) that contains the "&" symbol to the URL field. To properly read the URL, we need to wrap the parameter with URL\_ESCAPE(), **which will escape the & to be %26.**
 
-<figure><img src="../../../.gitbook/assets/image (405).png" alt=""><figcaption><p>Image 3: Example 1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (259).png" alt=""><figcaption><p>Image 3: Example 1</p></figcaption></figure>
 
 ## STRING\_ESCAPE()
 
@@ -82,6 +82,12 @@ Or
 
 ```sql
 STRING_ESCAPE(@COLUMN('yourcolumn'))
+```
+
+Or, when used inside of a post sync script or the sync body:
+
+```sql
+STRING_ESCAPE("@yourparameter")
 ```
 
 #### Example

@@ -8,7 +8,7 @@ Setting up a Listener Configuration **is a required step** when doing a real-tim
 
 1. Navigate to the **Listener Config table** in Cinchy _(Image 1)._
 
-<figure><img src="../../.gitbook/assets/image (133).png" alt=""><figcaption><p>Image 1: Listener Config table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (448).png" alt=""><figcaption><p>Image 1: Listener Config table</p></figcaption></figure>
 
 2. In a new row, add in your listener config configuration data. Review [section 3](listener-configuration.md#1.-listener-configs-table-columns-1) for more information.
 3. Ensure that it is set to Enabled in order for your real-time data sync to run successfully.

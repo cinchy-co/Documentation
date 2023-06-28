@@ -4,7 +4,7 @@
 
 The Connections Experience is designed to facilitate the creation of data syncs through an easy to use Cinchy UI. Once installed, you can access Connections directly through your Cinchy platform using the applet _(Image 1)._
 
-<figure><img src="../../.gitbook/assets/image (162).png" alt=""><figcaption><p>Image 1: The Connections Applet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption><p>Image 1: The Connections Applet</p></figcaption></figure>
 
 {% hint style="warning" %}
 **In a Kubernetes deployment of the Cinchy Platform,** Connections is automatically installed. The below steps refer only to an IIS deployment of the Cinchy Platform.
@@ -59,27 +59,27 @@ _**Steps 4 and 5 are only needed if you deployed your Cinchy instance along a ba
 
 4. Within the Cinchy platform, navigate to the **\[Cinchy].\[Integrated Clients]** table _(Image 2)._
 
-<figure><img src="../../.gitbook/assets/image (643).png" alt=""><figcaption><p>Image 2: Integrated Clients table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (548).png" alt=""><figcaption><p>Image 2: Integrated Clients table</p></figcaption></figure>
 
 4. Navigate to the row where the **Client ID** column is **"cinchy\_connections\_experience"** _(Image 3)._
 
-<figure><img src="../../.gitbook/assets/image (160).png" alt=""><figcaption><p>Image 3: Navigate to the row where the Client ID column is " cinchy_connections_experience"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption><p>Image 3: Navigate to the row where the Client ID column is " cinchy_connections_experience"</p></figcaption></figure>
 
 4. In that same row, update the columns **“Permitted Login Redirect URLs”** and **“Permitted Logout Redirect URLs”** to **“\<url>/connections”** _(Image 4)._
 
-<figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption><p>Image 4: Update Permitted Redirects</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (446).png" alt=""><figcaption><p>Image 4: Update Permitted Redirects</p></figcaption></figure>
 
 5. Within the Cinchy platform, navigate to the **\[Cinchy].\[Applets]** table _(Image 5)._&#x20;
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption><p>Image 5: The Applets table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (380).png" alt=""><figcaption><p>Image 5: The Applets table</p></figcaption></figure>
 
 5. Navigate to the row where the Name column is **"Connections"** _(Image 6)._&#x20;
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Image 6: Navigate to the row where the Name column is "Connections" </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (518).png" alt=""><figcaption><p>Image 6: Navigate to the row where the Name column is "Connections" </p></figcaption></figure>
 
 5. Update the column **“Application URL”** to **“\<baseurl>/connections”** _(Image 7)._
 
-<figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption><p>Image 7: Update the Application URL column</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (434).png" alt=""><figcaption><p>Image 7: Update the Application URL column</p></figcaption></figure>
 
 5. Navigate to _C:\Connections\appsettings.json_ and update the below properties to match your environment:
 

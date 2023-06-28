@@ -22,6 +22,6 @@ The below example visualizer uses the following URL: \<base url>/apps/datanetwor
 * It only displays the **Max Depth of 2** connections from the central node.
 * It highlights the nodes that have a **Depth Level of 1** from the central node.
 
-<figure><img src="../../../../.gitbook/assets/image (431).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (149).png" alt=""><figcaption></figcaption></figure>
 
 ## Enhancements

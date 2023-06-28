@@ -21,7 +21,7 @@ If you wish to restore a row that has been deleted, you can do so through the fo
 3. Right click anywhere in the row > **Restore Row** _(Image 1)._
 4. You should see a "**Restore Successful"** pop-up.
 
-<figure><img src="../../../.gitbook/assets/image (137).png" alt=""><figcaption><p>Image 1: Restoring a Row</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (452).png" alt=""><figcaption><p>Image 1: Restoring a Row</p></figcaption></figure>
 
 ## 2. Restoring a Deleted or Changed Column
 
@@ -39,7 +39,7 @@ This method will revert the entire table, including any changes made after the c
 2. Find the row with **the table that has the column you want to restore > right click anywhere in the row > Collaboration Log > Revert to a previous version** _(Image 2)._
 3. You should see a "**Revert Successful"** pop-up.
 
-<figure><img src="../../../.gitbook/assets/image (156).png" alt=""><figcaption><p>Image 2: Restoring a Column</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Image 2: Restoring a Column</p></figcaption></figure>
 
 ## 3. Restoring a Deleted Table
 

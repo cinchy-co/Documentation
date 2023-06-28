@@ -30,19 +30,19 @@ You will need **"Execute Access"** for each Saved Query that you want to run. Yo
 
 
 
-![Image 1: You can execute saved queries by running them from the Saved Queries table](<../../.gitbook/assets/image (374).png>)
+![Image 1: You can execute saved queries by running them from the Saved Queries table](<../../.gitbook/assets/image (228).png>)
 
 ## 3. Generating Pivot Tables <a href="#generate-pivot-tables" id="generate-pivot-tables"></a>
 
 Once you have executed the query, click the Grid drop down list and select Pivot. Here is where you can take your standard table view and slice and dice your data _(Image 2)._
 
-![Image 2: Generating a Pivot Table](<../../.gitbook/assets/image (147).png>)
+![Image 2: Generating a Pivot Table](<../../.gitbook/assets/image (51).png>)
 
 ## 4. Generating Charts <a href="#generate-charts" id="generate-charts"></a>
 
 From within your pivot view, open the drop down list with the value “table” and select the type of chart you want to use to display the data _(Image 3)._
 
-![Image 3: Generating Charts](<../../.gitbook/assets/image (142).png>)
+![Image 3: Generating Charts](<../../.gitbook/assets/image (46).png>)
 
 ## 5. Building Shared Visualizations
 

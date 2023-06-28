@@ -35,7 +35,7 @@ There are a few updates that are required in the Data Experience that has been c
 
 1. Update the **Currency Converter** query to reflect column name changes that were made in the Table Updates section above _(Image 1)._
 
-![Image 1: Step 1](<../../../.gitbook/assets/image (336).png>)
+![Image 1: Step 1](<../../../.gitbook/assets/image (283).png>)
 
 {% hint style="success" %}
 Be sure to update the @Currency\_1 and @Currency\_2 labels to better reflect the input fields
@@ -43,8 +43,8 @@ Be sure to update the @Currency\_1 and @Currency\_2 labels to better reflect the
 
 2\. Test the query to validate that it is still functioning _(Image 2 and 3)._
 
-![Image 2: Step 2](<../../../.gitbook/assets/image (418).png>)
+![Image 2: Step 2](<../../../.gitbook/assets/image (136).png>)
 
-![Image 3: Step 2](<../../../.gitbook/assets/image (302).png>)
+![Image 3: Step 2](<../../../.gitbook/assets/image (620).png>)
 
 3\. Save your query.

@@ -22,15 +22,15 @@ Each node represents a table you have access to within Cinchy, and each edge is 
 
 It uses the user's entitlements for viewable tables and linked columns.
 
-![Image 1: The Network Map](<../../../../.gitbook/assets/image (324).png>)
+![Image 1: The Network Map](<../../../../.gitbook/assets/image (271).png>)
 
 When you click on a node, you will see its description in the top right hand corner. You can click the Open button to navigate to the table _(Image 2)._
 
-![Image 2: A closer look at the Network Map](<../../../../.gitbook/assets/image (253).png>)
+![Image 2: A closer look at the Network Map](<../../../../.gitbook/assets/image (193).png>)
 
 You will find the Network Map data experience on the Homepage _(Image 3)._
 
-![Image 3: The Network Map widget](<../../../../.gitbook/assets/image (239).png>)
+![Image 3: The Network Map widget](<../../../../.gitbook/assets/image (179).png>)
 
 ## 2. Custom Network Visualizer
 
@@ -52,9 +52,9 @@ The nodes query defines the nodes in the network _(Image 4 and 5)._
 | description | The description shows up in the top right hand corner when you click a node.                                                                      |
 | nodeURL     | Page to display when you click the open button next to the description.                                                                           |
 
-![Image 4: Adding your nodes](<../../../../.gitbook/assets/image (304).png>)
+![Image 4: Adding your nodes](<../../../../.gitbook/assets/image (622).png>)
 
-![Image 5: Adding your nodes](<../../../../.gitbook/assets/image (494).png>)
+![Image 5: Adding your nodes](<../../../../.gitbook/assets/image (633).png>)
 
 ### 2.2 Edges
 
@@ -69,7 +69,7 @@ The edges query defines the relationships between the nodes _(Image 6)._
 | showArrowTo   | Set this to True if you want to show the direction of the relationship.                        |
 | showArrowFrom | Generally should only be used for bi-directional relationships along with the arrow to.        |
 
-![Image 6: Node edges](<../../../../.gitbook/assets/image (549).png>)
+![Image 6: Node edges](<../../../../.gitbook/assets/image (455).png>)
 
 ### 2.3 Node Groups
 
@@ -80,9 +80,9 @@ Node groups are an optional query you can provide to group your nodes _(Image 7 
 | sub network | Name for the group                   |
 | color       | Hex value for the color of the group |
 
-![Image 7: Node groups](<../../../../.gitbook/assets/image (218).png>)
+![Image 7: Node groups](<../../../../.gitbook/assets/image (33).png>)
 
-![Image 8: Not all nodes need to be in a sub network](<../../../../.gitbook/assets/image (450).png>)
+![Image 8: Not all nodes need to be in a sub network](<../../../../.gitbook/assets/image (168).png>)
 
 ### 2.4 Timeline
 
@@ -117,9 +117,9 @@ To use slicers, you need to define the slicers in the **\[Slicers]** column and 
 
 Attribute is the column name from the nodes query, **displayName** is what shows up in the visualizer _(Image 9 and 10)._
 
-![Image 9: Slicers](<../../../../.gitbook/assets/image (58).png>)
+![Image 9: Slicers](<../../../../.gitbook/assets/image (373).png>)
 
-![Image 10: Slicers](<../../../../.gitbook/assets/image (561).png>)
+![Image 10: Slicers](<../../../../.gitbook/assets/image (467).png>)
 
 ### 2.6 System Tables
 
@@ -151,13 +151,13 @@ The below example visualizer uses the following URL: \<base url>/apps/datanetwor
 * It only displays the **Max Depth of 2** connections from the central node.
 * It highlights the nodes that have a **Depth Level of 1** from the central node.
 
-<figure><img src="../../../../.gitbook/assets/image (269).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (216).png" alt=""><figcaption></figcaption></figure>
 
 ## 3. Example Network
 
 The following is an example of a network map _(Image 11)._
 
-![Image 11: An example network](<../../../../.gitbook/assets/image (88).png>)
+![Image 11: An example network](<../../../../.gitbook/assets/image (403).png>)
 
 For ease of testing, save the following as saved queries and then in the Networks table simply add `exec [Domain].[Saved Query Name]` as the CQLs.
 

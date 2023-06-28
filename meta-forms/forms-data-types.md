@@ -6,7 +6,7 @@ There are various data types you can select from when setting up your Form Field
 
 Not specifying a data format type will default to a text input, date field, or non-editable text based on your source column.
 
-<figure><img src="../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (388).png" alt=""><figcaption></figcaption></figure>
 
 ## 2. Data Types
 
@@ -45,7 +45,7 @@ There are four different ImageUrl data types:
 
 The below image shows what an example ImageUrl Form Field may look like:
 
-<figure><img src="../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (396).png" alt=""><figcaption></figcaption></figure>
 
 To enable an ImageUrl data format type on your form:
 
@@ -65,7 +65,7 @@ An inline frame (iframe) is a HTML element that loads another HTML page within t
 
 The below example shows an interactive AI chat box embedded into the Form.
 
-<figure><img src="../.gitbook/assets/image (601).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (320).png" alt=""><figcaption></figcaption></figure>
 
 To enable iFrames in your form:
 

@@ -39,7 +39,7 @@ When creating tables to be used with real-time syncs, you need to ensure that th
 | Icon + Colour | Default                                                                                                                                     |
 | Domain        | Sandbox _(if this domain does not exist please either create it or make sure to update this parameter where required during the data sync)_ |
 
-<figure><img src="../../.gitbook/assets/image (451).png" alt=""><figcaption><p>Image 1: The People table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption><p>Image 1: The People table</p></figcaption></figure>
 
 6\.  Click **Columns** in the left hand navigation to create the columns for the table
 
@@ -68,7 +68,7 @@ When creating tables to be used with real-time syncs, you need to ensure that th
 | Icon + Colour | Default                                                                                                                                     |
 | Domain        | Sandbox _(if this domain does not exist please either create it or make sure to update this parameter where required during the data sync)_ |
 
-<figure><img src="../../.gitbook/assets/image (667).png" alt=""><figcaption><p>Image 2: New Employees Table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (572).png" alt=""><figcaption><p>Image 2: New Employees Table</p></figcaption></figure>
 
 6\.  Click **Columns** in the left hand navigation to create the columns for the table.
 
@@ -94,16 +94,16 @@ This example will walk you through both options.
 
 1. Within your Cinchy platform, navigate to the **Connections Experience** _(Image 3)._
 
-<figure><img src="../../.gitbook/assets/image (211).png" alt=""><figcaption><p>Image 3: The Connections Experience</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Image 3: The Connections Experience</p></figcaption></figure>
 
 2. In the **Info** tab, input the name of your data sync. For this example we are using **"New Hires"** _(Image 4)._
 
-<figure><img src="../../.gitbook/assets/image (662).png" alt=""><figcaption><p>Image 4: The Info Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (567).png" alt=""><figcaption><p>Image 4: The Info Tab</p></figcaption></figure>
 
 3. Navigate to the **Source** tab.
 4. Under **"Select a Source"**, choose "Cinchy Event Broker" _(Image 5)._&#x20;
 
-<figure><img src="../../.gitbook/assets/image (677).png" alt=""><figcaption><p>Image 5: Select your Source</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (582).png" alt=""><figcaption><p>Image 5: Select your Source</p></figcaption></figure>
 
 5. In the **Schema** section, input the columns from your source table (in this case the People table) that you will want to use in your data sync. In this example we are using the **Name** and **Title** columns, both of which are data type **Text** _(Image 6)_. You may also choose to set any Aliases or add a Description.
 
@@ -111,22 +111,22 @@ This example will walk you through both options.
 We are not using the RunQuery functionality in this example but you can review it's properties here.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (660).png" alt=""><figcaption><p>Image 6: Define your source schema</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (565).png" alt=""><figcaption><p>Image 6: Define your source schema</p></figcaption></figure>
 
 6. Navigate to the **Destination** tab and select **Cinchy Table** from the drop down _(Image 7)._
 7. In the **Load Metadata** pop-up, input the **Domain** and **Table** name for your destination. In this example, we are using the **Sandbox** domain and the **People** table.
 8. Click **Load.**
 
-<figure><img src="../../.gitbook/assets/image (617).png" alt=""><figcaption><p>Image 7: Load the Metadata</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (336).png" alt=""><figcaption><p>Image 7: Load the Metadata</p></figcaption></figure>
 
 12. &#x20;Select the columns that you wish to use in your data sync _(Image 8)._ These will be the columns that your source syncs to your target. In this example, we are using the **Name** and **Title** columns. Note that you will have many Cinchy system table available to use as well.&#x20;
 13. &#x20;Click **Load.**
 
-<figure><img src="../../.gitbook/assets/image (669).png" alt=""><figcaption><p>Image 8: Select your columns</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (574).png" alt=""><figcaption><p>Image 8: Select your columns</p></figcaption></figure>
 
 14. The Connections experience will attempt to automatically map your source and destination columns based on matching names. In the below screenshot, it has been able to correctly match the **Name** and **Title** columns _(Image 9)._
 
-<figure><img src="../../.gitbook/assets/image (329).png" alt=""><figcaption><p>Image 9: Map your columns</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (276).png" alt=""><figcaption><p>Image 9: Map your columns</p></figcaption></figure>
 
 15. Navigate to the **Sync Behaviour** tab. There are two options for data syncs: Full File and Delta. In this example, select **Full File.**
 
@@ -145,7 +145,7 @@ Full load processing means that the entire amount of data is imported iterativel
 | Dropped Record Behaviour  | <p>This defines what action is taken when a dropped record is found in the sync source.</p><p>This can be either Delete, Ignore, or Expire.</p>                                                                                  | Delete  |
 | Changed Record Behaviour  | <p>This defines what action is taken when a changed record is found in the sync source.</p><p>This can be either Update, Ignore, or Conditional.</p>                                                                             | Update  |
 
-<figure><img src="../../.gitbook/assets/image (223).png" alt=""><figcaption><p>Image 10: Sync Behaviour</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption><p>Image 10: Sync Behaviour</p></figcaption></figure>
 
 17. Navigate to the **Permissions** tab. Here you will define your group access controls for your data sync. You can set this how you like. For this example, we are giving **all users** access to Execute, Write, and Read our sync _(Image 11)._
 
@@ -153,15 +153,15 @@ Full load processing means that the entire amount of data is imported iterativel
 Any groups given Admin Access will have the ability to Execute, Write, and Read the data sync.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Image 11: Sync Permissions</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (522).png" alt=""><figcaption><p>Image 11: Sync Permissions</p></figcaption></figure>
 
 18. Click **Save.**
 19. [Navigate to the Cinchy Listener Config table and set up your configuration. ](real-time-sync-example.md#setting-the-listener-config)Ensure it is set to Enabled. Your real-time data sync should now be listening to your People table ready to push updates to your New Employees table.
 20. &#x20;Test your data sync by adding a new row to your People table. Ensure that the data is then updated across to the New Employees table _(Images 12 & 13)._
 
-<figure><img src="../../.gitbook/assets/image (325).png" alt=""><figcaption><p>Image 12: Test your Sync</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (272).png" alt=""><figcaption><p>Image 12: Test your Sync</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (595).png" alt=""><figcaption><p>Image 13: Test your Sync</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (314).png" alt=""><figcaption><p>Image 13: Test your Sync</p></figcaption></figure>
 
 ### 3.2 Using a Data Sync XML
 
@@ -245,7 +245,7 @@ The below filled XML example matches the Connections UI configuration we made in
 
 1. Once you have completed your Data Sync XML, navigate to the **Data Sync Configurations** table in Cinchy _(Image 14)._
 
-<figure><img src="../../.gitbook/assets/image (216).png" alt=""><figcaption><p>Image 14: Data Sync Config Table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Image 14: Data Sync Config Table</p></figcaption></figure>
 
 2. In a new row, **paste** the Data Sync XML into the **Config XML column.**&#x20;
 3. Define your group permissions in the applicable columns. In our example, we have given All Users the Admin Access.
@@ -273,9 +273,9 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 7. Test your data sync by adding a new row to your People table. Ensure that the data is then updated across to the New Employees table _(Images 15 & 16)._
 
-<figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption><p>Image 15: Test your Sync</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (427).png" alt=""><figcaption><p>Image 15: Test your Sync</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption><p>Image 16: Test your Sync</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Image 16: Test your Sync</p></figcaption></figure>
 
 ## 4. Setting the Listener Config
 
@@ -283,7 +283,7 @@ Setting up a Listener Configuration is a required step when doing a real-time da
 
 1. Navigate to the **Listener Config table** in Cinchy _(Image 17)._
 
-<figure><img src="../../.gitbook/assets/image (625).png" alt=""><figcaption><p>Image 17: Listener Config table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (344).png" alt=""><figcaption><p>Image 17: Listener Config table</p></figcaption></figure>
 
 2. In a new row, add in your listener config data using the below table as a guide:
 
@@ -348,10 +348,10 @@ Please note, you will need to replace "password" with your specific password.
 
 The Execution Log table is a system table in Cinchy that logs the outputs of all data syncs. You can always review the entries in this table for information on the progression of your syncs _(Image 18)._
 
-<figure><img src="../../.gitbook/assets/image (233).png" alt=""><figcaption><p>Image 18: Execution Logs</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (215).png" alt=""><figcaption><p>Image 18: Execution Logs</p></figcaption></figure>
 
 ### 5.3 Execution Errors
 
 The Execution Errors table is a system table in Cinchy that logs any errors that may occur in a data sync _(Image 19)._ Any data sync errors will also be logged in the temp directory outlined in the data sync execution command (e.g. `-d "C:\Cinchy\temp"`)
 
-<figure><img src="../../.gitbook/assets/image (673).png" alt=""><figcaption><p>Image 19: Execution Errors table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (578).png" alt=""><figcaption><p>Image 19: Execution Errors table</p></figcaption></figure>

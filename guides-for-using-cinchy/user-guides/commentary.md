@@ -27,7 +27,7 @@ To add a comment:
 3. Enter the comment in the comment window
 4. Click **"Comment"** to finish
 
-![Image 1: Commenting](<../../.gitbook/assets/image (83).png>)
+![Image 1: Commenting](<../../.gitbook/assets/image (398).png>)
 
 ## 2. Editing Comments <a href="#editing-comments" id="editing-comments"></a>
 
@@ -38,7 +38,7 @@ Comments can be modified only by only the individual(s) that have created the co
 3. Make the appropriate edit
 4. Click the **Submit** button to save the change
 
-![Image 2: Editing Comments](<../../.gitbook/assets/image (339).png>)
+![Image 2: Editing Comments](<../../.gitbook/assets/image (286).png>)
 
 ## 3. Deleting Comments <a href="#deleting-comments" id="deleting-comments"></a>
 
@@ -47,7 +47,7 @@ Comments can be deleted only by the individual(s) who has created the comment(s)
 1. Hover over the comment
 2. Click the **garbage bin** icon _(Image 3)._
 
-![Image 3: Deleting Comments](<../../.gitbook/assets/image (178).png>)
+![Image 3: Deleting Comments](<../../.gitbook/assets/image (82).png>)
 
 ## 4. Archiving Comments <a href="#archiving-comments" id="archiving-comments"></a>
 
@@ -60,7 +60,7 @@ To archive all comments in a cell:
 1. Hover over the comment
 2. Click the **Archive All** button _(Image 4)._
 
-![Image 4: Archiving](<../../.gitbook/assets/image (430).png>)
+![Image 4: Archiving](<../../.gitbook/assets/image (148).png>)
 
 {% hint style="info" %}
 You can also archive just one comment in a comment string by clicking the **archive icon** for the specific comment you wish to archive in the thread.

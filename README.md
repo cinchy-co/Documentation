@@ -14,7 +14,7 @@ Dataware is the emergence of a common group of technologies that solve data rela
 
 Data Collaboration solves the costly, time-consuming, and ineffective integration processes born from silo-ing your data in a traditional app-centric environment. Instead of your data serving your applications, data collaboration refocuses and pivots to a model where your data is at the forefront and is being served by your apps _(Image 1)._
 
-<figure><img src=".gitbook/assets/image (442).png" alt=""><figcaption><p>Image 1: Apps serve your data</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (160).png" alt=""><figcaption><p>Image 1: Apps serve your data</p></figcaption></figure>
 
 Harnessing this power, Cinchy connects unlimited data sources within a networked architecture, offering persistent delivery of real-time solutions, without complex integrations. And the more data you connect into your data network, the more powerful your processes can be.
 
@@ -26,7 +26,7 @@ Over time, this never-ending cycle of copying data between fragmented apps gets 
 
 This process of making copies now consumes up to 50% of the resources on large IT projects, and it's the reason that delivery often takes months, sometimes years, and costs millions _(Image 2)._
 
-![Image 2: The growing cost of integration](<.gitbook/assets/image (528).png>)
+![Image 2: The growing cost of integration](<.gitbook/assets/image (109).png>)
 
 _**How can this be fixed?**_
 
@@ -42,19 +42,19 @@ Cinchy's data collaboration platform does for application development what the *
 
 
 
-![Image 4: Dataware is like the power grid](<.gitbook/assets/image (468).png>)
+![Image 4: Dataware is like the power grid](<.gitbook/assets/image (655).png>)
 
 Organizations can build data collaboration applications in half the time, while enabling effortless and copyless data sharing across applications. Using Cinchy is unique in that it eliminates the **"integration tax"** that today consumes half of most enterprise IT budgets -- that is to say, **data collaboration makes integration obsolete **_**(Image 5).**_
 
 
 
-![Image 5: Saving on integration costs](<.gitbook/assets/image (466).png>)
+![Image 5: Saving on integration costs](<.gitbook/assets/image (653).png>)
 
 Now, instead of connecting apps to gain access to data through costly point-to-point integration, your apps **serve** your data by leveraging and connecting it all together via Cinchy. In this way, you can still gain the best usage out of your apps through **zero-copy integration** while avoiding the disadvantages of data silo-ing. You have both **full access to** and **full control of** your data _(Image 6)._
 
 
 
-![Image 6: Dataware means we have total control](<.gitbook/assets/image (386).png>)
+![Image 6: Dataware means we have total control](<.gitbook/assets/image (240).png>)
 
 ## Not just connected, but autonomous.
 
@@ -74,7 +74,7 @@ In effect, it is removing the need to maintain access controls within individual
 
 Compare this with designing and maintaining controls within thousands of apps and systems independently. It’s not only incredibly challenging and costly, but virtually impossible to maintain consistency _(Image 7)._
 
-![Image 7: Dataware ensures consistency](<.gitbook/assets/image (480).png>)
+![Image 7: Dataware ensures consistency](<.gitbook/assets/image (667).png>)
 
 ## Game Changer: Network Effects for IT delivery&#x20;
 

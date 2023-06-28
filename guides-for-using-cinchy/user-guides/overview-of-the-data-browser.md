@@ -26,13 +26,13 @@ Once you log in to Cinchy, you'll be on the Homepage _(Image 1)_. From here, you
 
 You can return to this page at any time by clicking the Cinchy logo in the top left corner.
 
-![Image 1: The Cinchy Homepage](<../../.gitbook/assets/image (475).png>)
+![Image 1: The Cinchy Homepage](<../../.gitbook/assets/image (662).png>)
 
 ## 2. Searching <a href="#searching" id="searching"></a>
 
 ‌All objects you have access to in your Marketplace (including bookmarks) are searchable and can be filtered by typing the partial or full name of the object you are searching for in the search bar _(Image 2)._
 
-![Image 2: The search bar](<../../.gitbook/assets/image (309).png>)
+![Image 2: The search bar](<../../.gitbook/assets/image (627).png>)
 
 You can also search by object type by clicking on either Tables, Queries, or Experiences in the toolbar.
 
@@ -42,7 +42,7 @@ You can also search by object type by clicking on either Tables, Queries, or Exp
 
 To bookmark an object, select the star. The star will be yellow when bookmarked, and grey when not _(Image 3)._
 
-![Image 3: Bookmarking](<../../.gitbook/assets/image (396).png>)
+![Image 3: Bookmarking](<../../.gitbook/assets/image (250).png>)
 
 The object will pop into your “Bookmark” section.To rearrange your bookmarks simply drag and drop the object into the desired order.
 
@@ -52,11 +52,11 @@ You "Network Map" shows a visualization of all tables in Cinchy you have access 
 
 Each of the coloured circles represents an object in Cinchy. The lines between them demonstrate the links between them.
 
-![Image 4: Cinchy Network Map](<../../.gitbook/assets/image (502).png>)
+![Image 4: Cinchy Network Map](<../../.gitbook/assets/image (642).png>)
 
 You are able to search and open tables from this view using the search bar on the left _(Image 5)._
 
-![Image 5: The search function](<../../.gitbook/assets/image (176).png>)
+![Image 5: The search function](<../../.gitbook/assets/image (80).png>)
 
 You can see what the network looked like in the past by clicking and dragging the pink circle along the timeline at the bottom.
 
@@ -84,7 +84,7 @@ The below example visualizer uses the following URL _(Image 6)_: \<base url>/app
 * It only displays the **Max Depth of 2** connections from the central node.
 * It highlights the nodes that have a **Depth Level of 1** from the central node.
 
-<figure><img src="../../.gitbook/assets/image (260).png" alt=""><figcaption><p>Image 6: A Network Map with Parameters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption><p>Image 6: A Network Map with Parameters</p></figcaption></figure>
 
 
 
@@ -94,11 +94,11 @@ You can upload a custom logo to appear on your platform login screen and homepag
 
 #### Examples without a logo uploaded (Images 7&8)
 
-<img src="../../.gitbook/assets/image (186).png" alt="" data-size="original">![](<../../.gitbook/assets/image (500).png>)
+<img src="../../.gitbook/assets/image (1).png" alt="" data-size="original">![](<../../.gitbook/assets/image (640).png>)
 
 #### Examples with a logo uploaded (Images 9&10)
 
-<img src="../../.gitbook/assets/image (435).png" alt="" data-size="original">![](<../../.gitbook/assets/image (179).png>)
+<img src="../../.gitbook/assets/image (153).png" alt="" data-size="original">![](<../../.gitbook/assets/image (83).png>)
 
 ### 5.1 Uploading a Logo:
 
@@ -114,6 +114,6 @@ You can upload a custom logo to appear on your platform login screen and homepag
 1. Once uploaded, your logo is stored in the **System Properties** table_._
 2. Navigate to the table and find the row with **Name: Logo** _(Image 12)_
 
-![Image 12: Find the Logo row in the System Properties table](<../../.gitbook/assets/image (434).png>)
+![Image 12: Find the Logo row in the System Properties table](<../../.gitbook/assets/image (152).png>)
 
 3\. **Delete** the Logo row to remove the logo.

@@ -24,7 +24,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 | Version    | **Mandatory.** This is a pre-populated field containing a version number for your data sync. You can override it if you wish.                                 | 1.0.0                       |
 | Parameters | **Optional.** Review our documentation on [Parameters here](../../building-data-syncs/advanced-settings/parameters.md) for more information about this field. |                             |
 
-<figure><img src="../../../.gitbook/assets/image (642).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (547).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
 ## 3. Source Tab
 
@@ -75,7 +75,7 @@ You have the option to add a source filter to your data sync. Please review the 
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../../.gitbook/assets/image (624).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (343).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
 ## 4. Next Steps
 
@@ -95,17 +95,17 @@ The Run Query parameter is available as an optional value for the Cinchy Event B
 
 You are able to use any parameters defined in your listener config.
 
-<figure><img src="../../../.gitbook/assets/image (207).png" alt=""><figcaption><p>Image 3: Run Query</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Image 3: Run Query</p></figcaption></figure>
 
 #### Example
 
 In the below example, we have a data sync using the Event Broker/CDC as a source. Our Listener Config has been set with the CinchyID attribute _(Image 4)._
 
-<figure><img src="../../../.gitbook/assets/image (608).png" alt=""><figcaption><p>Image 4: Run Query</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (327).png" alt=""><figcaption><p>Image 4: Run Query</p></figcaption></figure>
 
 We can enable the Run Query function to use the saved query "CDC Product Ticket Datestamps" as our source instead _(Image 5)._ If we change the data from Record A in our source table to trigger our event, the Query Parameters below show that the Cinchy ID of Record A will be used in the query. This query is now our source.
 
-<figure><img src="../../../.gitbook/assets/image (680).png" alt=""><figcaption><p>Image 5: Run Query</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (585).png" alt=""><figcaption><p>Image 5: Run Query</p></figcaption></figure>
 
 It would appear in the data sync config XML as follows:
 

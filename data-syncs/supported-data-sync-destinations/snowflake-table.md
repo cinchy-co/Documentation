@@ -63,7 +63,7 @@ You have the option to add a destination filter to your data sync. Please review
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../.gitbook/assets/image (637).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (356).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
 
 ## 4. Next Steps
 

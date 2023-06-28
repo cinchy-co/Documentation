@@ -32,35 +32,35 @@ To set up a data sync, you can use the Connections UI or manually input an XML i
 
 1. Navigate to the **Connections Experience** in Cinchy _(Image 1)._
 
-<figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption><p>Image 1: The Cinchy Connections Experience</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (423).png" alt=""><figcaption><p>Image 1: The Cinchy Connections Experience</p></figcaption></figure>
 
 2. In the experience, there are six tabs that you must or can input data for in order to define your connection _(Image 2)._
 
-<figure><img src="../../.gitbook/assets/image (126).png" alt=""><figcaption><p>Image 2: The Connections Tabs</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (441).png" alt=""><figcaption><p>Image 2: The Connections Tabs</p></figcaption></figure>
 
 3. **The Info tab** is used to define some basic information about your data sync such as its name _(Image 3)._ This tab is mandatory. You also have the optional ability to add in Parameters; [please review the documentation here for more details on Parameters.](advanced-settings/parameters.md)
 
-<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption><p>Image 3: The Info Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (416).png" alt=""><figcaption><p>Image 3: The Info Tab</p></figcaption></figure>
 
 4. **The Source tab** is used to define important information about the source of your data sync _(Image 4)_. This tab is mandatory. Cinchy supports many different source options including different file types and popular software systems. Each source will have different, and often unique, parameters that must be populated in the Source tab screen. You can review the full list of supported data sources, as well as their unique parameters and features, [here.](../supported-data-sync-sources/)
 
-<figure><img src="../../.gitbook/assets/image (333).png" alt=""><figcaption><p>Image 4: The Source Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (280).png" alt=""><figcaption><p>Image 4: The Source Tab</p></figcaption></figure>
 
 5. **The Destination tab** is used to define important information about the target of your data sync _(Image 5)_. This tab is mandatory. Like with sources, Cinchy supports many different destination options. Each destination must be properly mapped to its source, and some may have unique parameters that must be populated in the Destination tab. You can review the full list of supported destinations, as well as their unique parameters and features, [here.](../supported-data-sync-destinations/)
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Image 5: The Destination tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (506).png" alt=""><figcaption><p>Image 5: The Destination tab</p></figcaption></figure>
 
 6. **The Sync Behaviour tab** defines what you want to happen to your data _(Image 6)_. This tab is mandatory. There are two options on this page: Full File Sync and Delta Sync. You can review the differences between them [here.](sync-behaviour.md)
 
-<figure><img src="../../.gitbook/assets/image (175).png" alt=""><figcaption><p>Image 6: Sync Behaviour</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption><p>Image 6: Sync Behaviour</p></figcaption></figure>
 
 7. [**The Post Sync tab**](advanced-settings/post-sync-scripts.md) is an optional field that utilizes [Cinchy Query Language (CQL)](broken-reference) to perform actions on your resulting data _(Image 7)_. For example, you could set up a post sync script to push retrieved data values into a specific Cinchy table.
 
-<figure><img src="../../.gitbook/assets/image (173).png" alt=""><figcaption><p>Image 7: Post Sync Scripts</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (77).png" alt=""><figcaption><p>Image 7: Post Sync Scripts</p></figcaption></figure>
 
 8. **The Permissions tab** allows you to define various access controls for your data sync _(Image 8)_. This is a role based access system where you can give specific groups read, write, execute, and/or all of the above with admin access.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Image 8: Permissions</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (503).png" alt=""><figcaption><p>Image 8: Permissions</p></figcaption></figure>
 
 9. **The Jobs tab** will appear when you are configuring a **batch data sync** _(Image 9)_. This page allows you to start and track your batch jobs, and will show important info on any job successes or failures. You can also use this screen to download error logs for batch syncs.
 
@@ -71,11 +71,11 @@ By default, the job will run as whichever user is logged in (as long as you have
 
 You can configure this by clicking on **Advanced > Run Job as a Different User**
 
-<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption><p>Image 9: The Jobs tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption><p>Image 9: The Jobs tab</p></figcaption></figure>
 
 10. **The Executions Error tab** is a link to the Execution Errors table which will appear when you are configuring a **real-time sync** _(Image 10)_. This table is useful for tracking any errors associated with your real-time sync. Since you don't need to click "Start a Job" in the UI for real-time syncs, a sync is considered active when your Listener Config is set up and turned to "enabled". You can see more on Error Logging here.
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption><p>Image 10: Execution Errors</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (385).png" alt=""><figcaption><p>Image 10: Execution Errors</p></figcaption></figure>
 
 
 
@@ -89,7 +89,7 @@ To set up a data sync using a config XML:
 
 1. In the Cinchy platform, navigate to the Data Sync Config table _(Image 11)._
 
-<figure><img src="../../.gitbook/assets/image (458).png" alt=""><figcaption><p>Image 11: Data Sync Configurations table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (645).png" alt=""><figcaption><p>Image 11: Data Sync Configurations table</p></figcaption></figure>
 
 2. In a new row, paste your **Data Sync XML** into the **Config XML** column.&#x20;
 3. Define your group permissions in the applicable columns.
@@ -103,7 +103,7 @@ The Name and Config Version columns will be auto populated as they values are co
 Tip: Click on the below image to enlarge it.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (334).png" alt=""><figcaption><p>Image 12: Config XML</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (281).png" alt=""><figcaption><p>Image 12: Config XML</p></figcaption></figure>
 
 {% hint style="info" %}
 Be sure when you are pasting into the Config XML column that you double click into the column before pasting, otherwise each line of the XML will appear as an individual record in the Data Sync Configurations table.
@@ -127,7 +127,7 @@ Setting up a Listener Configuration is a required step when doing a real-time da
 
 1. Navigate to the **Listener Config table** in Cinchy _(Image 13)._
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Image 13: Listener Config table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (516).png" alt=""><figcaption><p>Image 13: Listener Config table</p></figcaption></figure>
 
 2. In a new row, add in your listener config configuration data. [Review the documentation here](../supported-real-time-sync-stream-sources/) for more information.
 3. Ensure that it is set to Enabled in order for your real-time data sync to run successfully.

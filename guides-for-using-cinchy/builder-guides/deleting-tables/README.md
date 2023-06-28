@@ -20,7 +20,7 @@ To ensure that the relevant user has the correct entitlements, you can navigate 
 Deleting a table via any of the below methods results in your data becoming inaccessible, however it will technically still be available on the underlying database. To fully remove deleted data, **you must use the Data Erasure capability,** [outlined here.](../creating-tables/data-controls/data-erasure.md)
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (539).png" alt=""><figcaption><p>Image 1: Ensuring the correct entitlements</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (120).png" alt=""><figcaption><p>Image 1: Ensuring the correct entitlements</p></figcaption></figure>
 
 ## Deleting a Table Using "Design Table"
 
@@ -31,7 +31,7 @@ Deleting a table via any of the below methods results in your data becoming inac
 Erroneously deleted tables can be restored via the **\[Tables] table**, [as outlined here.](restoring-tables-columns-and-rows.md#3.-restoring-a-deleted-table)
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (413).png" alt=""><figcaption><p>Image 2: Deleting using Design Table</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (131).png" alt=""><figcaption><p>Image 2: Deleting using Design Table</p></figcaption></figure>
 
 ## Deleting a Table Using CQL
 

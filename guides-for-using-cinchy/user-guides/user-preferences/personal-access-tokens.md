@@ -10,7 +10,7 @@ See [Authentication](../../../api-guide/api-overview/api-authentication.md) for 
 
 1. From the Cinchy homepage, navigate to your **User Settings > Tokens.** Any tokens that you make will appear here. You will also be able to see any expired tokens.
 
-<figure><img src="../../../.gitbook/assets/image (427).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (145).png" alt=""><figcaption></figcaption></figure>
 
 2. Click **“Generate New Token”.**
 
@@ -24,11 +24,11 @@ See [Authentication](../../../api-guide/api-overview/api-authentication.md) for 
 2. **Description**
 3. **Expiration**
 
-<figure><img src="../../../.gitbook/assets/image (262).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (202).png" alt=""><figcaption></figcaption></figure>
 
 4\. Once generated, make sure to copy down the PAT somewhere secure. You will not be able to view the PAT again once you navigate away from this screen.
 
-<figure><img src="../../../.gitbook/assets/image (301).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (619).png" alt=""><figcaption></figcaption></figure>
 
 ## 3. Deleting a PAT
 

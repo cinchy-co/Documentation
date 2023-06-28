@@ -26,7 +26,7 @@ Users are only able to enter data into Cinchy based on their access. Users can a
 
 Users are only able to insert or delete rows based on their access. If you have the ability to insert and/or delete a row of data it will be visible when right-clicking on a row of data _(Image 1)._
 
-![Image 1: Inserting/Deleting Rows](<../../.gitbook/assets/image (607).png>)
+![Image 1: Inserting/Deleting Rows](<../../.gitbook/assets/image (326).png>)
 
 ## 3. Import Data <a href="#import-data" id="import-data"></a>
 
@@ -40,13 +40,13 @@ To import data into a table, complete the following:
 
 1. From within the table, click the Import button on the top toolbar of the table _(Image 2)._
 
-![Image 2: Step 1, Clicking the import button](<../../.gitbook/assets/image (616).png>)
+![Image 2: Step 1, Clicking the import button](<../../.gitbook/assets/image (335).png>)
 
 2\. Click **Choose File** to locate and import your file.
 
 3\. Validate the imported columns and click **next** _(Image 3)._
 
-![Image 3: Step 3, validate your columns](<../../.gitbook/assets/image (29).png>)
+![Image 3: Step 3, validate your columns](<../../.gitbook/assets/image (530).png>)
 
 4\. Click the **Import** button
 
@@ -56,7 +56,7 @@ To import data into a table, complete the following:
 
 If there are import errors, click the download button next to Rejected Rows on the **Import Succeeded with Errors** window _(Image 4)._
 
-![Image 4: Import Errors](<../../.gitbook/assets/image (184).png>)
+![Image 4: Import Errors](<../../.gitbook/assets/image (88).png>)
 
 You will get a file back with all the rejected rows, as well as the 2 columns added called **‘Cinchy Import Errors'** and **'Cinchy Import Original Row Number’.**
 
@@ -80,7 +80,7 @@ To export data from a table, complete the following:
 2. Select the Export file type (CSV or TSV) _(Image 5)._
 3. Open your file in Excel, or any other CSV software, to view.
 
-![Image 5: Exporting Data](<../../.gitbook/assets/image (245).png>)
+![Image 5: Exporting Data](<../../.gitbook/assets/image (185).png>)
 
 ## 5. Approve/Reject  Data <a href="#approve-reject-data" id="approve-reject-data"></a>
 
@@ -108,13 +108,13 @@ To access Cinchy’s Collaboration Log:
 1. Open the desired table
 2. Locate the desired row **> Right Click > View Collaboration Log** _(Image 6)._
 
-![Image 6: Step 2, Open the Collaboration Log](<../../.gitbook/assets/image (33).png>)
+![Image 6: Step 2, Open the Collaboration Log](<../../.gitbook/assets/image (534).png>)
 
 Once the Collaboration Log is open you have the ability to view ALL changes with a version history for the row selected within the table.
 
 Users have the ability to revert to a prior version of the record. To do so, click the Revert button for the desired version _(Image 7)._
 
-![Image 7: Reverting Data in the Collaboration Log](<../../.gitbook/assets/image (145).png>)
+![Image 7: Reverting Data in the Collaboration Log](<../../.gitbook/assets/image (49).png>)
 
 {% hint style="info" %}
 There is a potential for a record to have a white coloured Revert button. This indicates that version record(s) are identical to the current version of the record in the table. Hovering over the Revert button will provide a tool-tip.
@@ -142,7 +142,7 @@ To restore data from the recycle bin:
 
 1. From the left-hand navigation, click Recycle Bin _(Image 8)_
 
-![Image 8: The Recycle Bin](<../../.gitbook/assets/image (527).png>)
+![Image 8: The Recycle Bin](<../../.gitbook/assets/image (108).png>)
 
 2\. Locate the row for restoring
 

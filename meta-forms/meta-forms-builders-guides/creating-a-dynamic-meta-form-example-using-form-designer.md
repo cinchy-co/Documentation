@@ -17,11 +17,11 @@ In this example, a **Contacts Form (Example Test)** form will be created to pull
 
 1. Navigate to the **Form Designer** experience from the homepage (Image 1).
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Image 1: Navigate to the Form Designer experience</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (543).png" alt=""><figcaption><p>Image 1: Navigate to the Form Designer experience</p></figcaption></figure>
 
 2. Open up the experience and it should look like this (Image 2):
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Image 2: The Forms Designer Experience</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (532).png" alt=""><figcaption><p>Image 2: The Forms Designer Experience</p></figcaption></figure>
 
 3. To create a new form, click the Create New Record button on the left-hand navigation pane (Image 3):
 
@@ -36,15 +36,15 @@ In this example, a **Contacts Form (Example Test)** form will be created to pull
 * **Is Accordion:** Select this checkbox if you want the form to open in accordion format or not.
 * **Brand:** Select a branding colour for this form.
 
-<figure><img src="../../.gitbook/assets/image (354).png" alt=""><figcaption><p>Image 4: Filling out the Forms Definition</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (301).png" alt=""><figcaption><p>Image 4: Filling out the Forms Definition</p></figcaption></figure>
 
 5. Once your Form Definitions are set, the **Form Sections** tab will open (Image 5).
 
-<figure><img src="../../.gitbook/assets/image (398).png" alt=""><figcaption><p>Image 5: Form Sections</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (252).png" alt=""><figcaption><p>Image 5: Form Sections</p></figcaption></figure>
 
 6. Click on the **plus sign** to add a Section Definition to your form (Image 6).
 
-<figure><img src="../../.gitbook/assets/image (358).png" alt=""><figcaption><p>Image 6: Section Definition</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (305).png" alt=""><figcaption><p>Image 6: Section Definition</p></figcaption></figure>
 
 7. You can now add your Form Sections. In this example we are adding three sections: Profile, Contact Info, and Company.
 

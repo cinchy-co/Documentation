@@ -88,24 +88,24 @@ Sample:\
 
 6\. Enter the export parameters into the Powershell window _(Image 1)._
 
-![Image 1: Step 6](<../../../.gitbook/assets/image (534).png>)
+![Image 1: Step 6](<../../../.gitbook/assets/image (115).png>)
 
 7\. Hit Enter on your keyboard to run the export command
 
 Powershell will begin to process the export. Once the export is complete, Powershell will provide you with an export complete message _(Image 2)._
 
-![Image 2: Step 7](<../../../.gitbook/assets/image (486).png>)
+![Image 2: Step 7](<../../../.gitbook/assets/image (673).png>)
 
 ## 4. Validate the Export
 
 1. Ensure that the **DXD Export Folder** is populated _(Image 3)._
 
-![Image 3: Step 1](<../../../.gitbook/assets/image (209).png>)
+![Image 3: Step 1](<../../../.gitbook/assets/image (24).png>)
 
 2\. Ensure that the **Data Experience Release** table is populated in the source environment _(Image 4)._
 
-![Image 4: Step 2](<../../../.gitbook/assets/image (280).png>)
+![Image 4: Step 2](<../../../.gitbook/assets/image (598).png>)
 
 3\. Ensure that the **Data Experience Release Artifacts** table is populated in the source environment _(Image 5)._
 
-![Image 5: Step 3](<../../../.gitbook/assets/image (622).png>)
+![Image 5: Step 3](<../../../.gitbook/assets/image (341).png>)

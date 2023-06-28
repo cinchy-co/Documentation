@@ -47,4 +47,4 @@ function tableUDF()
 }
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (86).png" alt=""><figcaption><p>Image 1: Table Valued Function</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (401).png" alt=""><figcaption><p>Image 1: Table Valued Function</p></figcaption></figure>

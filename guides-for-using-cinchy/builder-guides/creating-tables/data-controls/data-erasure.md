@@ -8,13 +8,13 @@ description: This page provides an overview on data erasure.
 
 Data erasure allows you to permanently delete data in Cinchy. As the data owner, you can set an erasure policy on your table if you need to delete data for compliance reasons _(Image 1)._
 
-![Image 1: Data Erasure](<../../../../.gitbook/assets/image (543).png>)
+![Image 1: Data Erasure](<../../../../.gitbook/assets/image (124).png>)
 
 The actual erasing of data happens during the maintenance window. Please check with your system administrators to confirm when maintenance is scheduled.
 
 Once data is erased, any links pointing to erased data will look like this _(Image 2)_:
 
-![Image 2: Data Erasure](<../../../../.gitbook/assets/image (319).png>)
+![Image 2: Data Erasure](<../../../../.gitbook/assets/image (266).png>)
 
 ## 2. Change Approval Enabled Tables
 

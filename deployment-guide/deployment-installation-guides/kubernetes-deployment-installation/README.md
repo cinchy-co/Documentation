@@ -252,7 +252,7 @@ The Access Key and Secret Access Key for the IAM user must be specified under th
 
 If you have the **key\_vault\_secrets\_provider\_enabled=true** value in the **azure.json** then the below secrets files would have been created during the execution of step 3.2:
 
-<figure><img src="../../../.gitbook/assets/image (352).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (299).png" alt=""><figcaption></figcaption></figure>
 
 You will need to add the following secrets to your azure key vault:
 

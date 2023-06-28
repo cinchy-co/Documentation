@@ -307,7 +307,7 @@ Table only instructions:
 
 &#x20;1\. Create a dummy Data Experience and add all your tables from your domain to it _(Image 2)._
 
-![Image 2: How to clone a domain](<.gitbook/assets/image (232).png>)
+![Image 2: How to clone a domain](<.gitbook/assets/image (214).png>)
 
 2\. Hit the following endpoint with the GUID in your row:
 
@@ -375,7 +375,7 @@ Access controls set on the table could cause you to have access to 0 records. Si
 
 There may be an error on the view. If the bottom of the page does not show 0 records then there may be an error on the page _(Image 3)._
 
-![Image 3: 0 records](<.gitbook/assets/image (495).png>)
+![Image 3: 0 records](<.gitbook/assets/image (636).png>)
 
 ## Is it possible to correct/replace a table or column's GUID?
 

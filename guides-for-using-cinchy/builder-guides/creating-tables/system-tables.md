@@ -4,7 +4,7 @@
 
 System tables are included out-of-the-box with your Cinchy platform, and can be used to track and manage a variety of data.
 
-![Some examples of system tables](<../../../.gitbook/assets/image (441).png>)
+![Some examples of system tables](<../../../.gitbook/assets/image (159).png>)
 
 You can easily query for a list of your system tables using the below:
 

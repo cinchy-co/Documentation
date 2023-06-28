@@ -32,7 +32,7 @@ Our example URL for an basic auth using CSV results would then become: `http://y
 
 1. Launch Excel and navigate to **Data > Get Data > From Other Sources > Blank Query** _(Image 1)._
 
-<figure><img src="../../.gitbook/assets/image (399).png" alt=""><figcaption><p>Image 1: Blank Query</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (253).png" alt=""><figcaption><p>Image 1: Blank Query</p></figcaption></figure>
 
 2. In the expression box that appears, enter the below text to add in your query as your data source _(Image 2)_:
 
@@ -42,7 +42,7 @@ Example:
 
 `=Csv.Document(Web.Contents("http://your.cinchy.instance.domain/BasicAuthAPI/YourQueryDomain/API Test?ResultFormat=CSV"))`
 
-<figure><img src="../../.gitbook/assets/image (584).png" alt=""><figcaption><p>Image 2: Add the query as your source</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (490).png" alt=""><figcaption><p>Image 2: Add the query as your source</p></figcaption></figure>
 
 3. Once you've entered that text either **click the check mark to the left of the input box** or **click away** and it will automatically attempt to run the expression.&#x20;
 4. The data may return in HTML format initially and not be what you're expecting. To correct this:&#x20;
@@ -117,36 +117,36 @@ Our example URL for an basic auth using CSV results would then become: `http://y
 1. Launch Power BI and navigate **Get Data > Web** _(Image 7)_\
 
 
-<figure><img src="../../.gitbook/assets/image (672).png" alt=""><figcaption><p>Image 7: Get Data > Web</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (577).png" alt=""><figcaption><p>Image 7: Get Data > Web</p></figcaption></figure>
 
 6\. In the window that launches, you will enter the below text, using your own URL endpoint where highlighted _(Image 8):_\
 `=Csv.Document(Web.Contents(`<mark style="color:yellow;background-color:yellow;">`"http://your.cinchy.instance.domain/BasicAuthAPI/YourQueryDomain/API Test?ResultFormat=CSV"`</mark>`))`
 
-![Image 8: Enter your expression](<../../.gitbook/assets/image (316).png>)
+![Image 8: Enter your expression](<../../.gitbook/assets/image (637).png>)
 
 7\. Click on the checkmark icon and Power BI will automatically attempt to run the expression _(Image 9)._
 
-![Image 9](<../../.gitbook/assets/image (237).png>)
+![Image 9](<../../.gitbook/assets/image (177).png>)
 
 8\. Click **Edit Credentials > Basic** _(Image 10)._ Enter the credentials for a Cinchy User Account that has access to run this query and select the level at which to apply these settings. By default it's the root URL.
 
 This process of entering your credentials won't occur with each query, it's just the first time and then they're saved locally.
 
-![Image 10](<../../.gitbook/assets/image (659).png>)
+![Image 10](<../../.gitbook/assets/image (564).png>)
 
 10\. Click **Connect** to see your data _(Image 11)._
 
-![Image 11](<../../.gitbook/assets/image (545).png>)
+![Image 11](<../../.gitbook/assets/image (126).png>)
 
 11\. You can now apply any transformations to the dataset.
 
 In this example we also changed the name from Query1 to Product Roadmap and have edited to use the first row as a header _(Image 12)._
 
-![Image 12](<../../.gitbook/assets/image (382).png>)
+![Image 12](<../../.gitbook/assets/image (236).png>)
 
 12\. Click **Close & Apply.** The metadata now shows up on the right hand side and you can begin to use it to create your visualizations _(Image 13)._
 
-![Image 13](<../../.gitbook/assets/image (507).png>)
+![Image 13](<../../.gitbook/assets/image (686).png>)
 
 ### 2.3 Using a Personal Access Token
 
@@ -158,7 +158,7 @@ In this example we also changed the name from Query1 to Product Roadmap and have
       1. In the first text box input **Authorization**
       2. In the second text box type **Bearer + your PAT.** For example: **"Bearer BGFHFHOJDF76DFDFD777"**
 
-<figure><img src="../../.gitbook/assets/image (250).png" alt=""><figcaption><p>Image 14</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (190).png" alt=""><figcaption><p>Image 14</p></figcaption></figure>
 
 4. Click **OK.**
 5. Click **Load** to use the query data in Power BI_._
@@ -166,11 +166,11 @@ In this example we also changed the name from Query1 to Product Roadmap and have
 
 In this example we also changed the name from Query1 to Product Roadmap and have edited to use the first row as a header _(Image 15)._
 
-![Image 15](<../../.gitbook/assets/image (382).png>)
+![Image 15](<../../.gitbook/assets/image (236).png>)
 
 7. Click **Close & Apply.** The metadata now shows up on the right hand side and you can begin to use it to create your visualizations _(Image 16)._
 
-![Image 13](<../../.gitbook/assets/image (507).png>)
+![Image 13](<../../.gitbook/assets/image (686).png>)
 
 ### 2.4 Using a Bearer Token
 

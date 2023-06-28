@@ -8,7 +8,7 @@
 
 To set up an Stream Source, you must navigate to the Listener Config table and insert a new row for your data sync _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
 
-<figure><img src="../../.gitbook/assets/image (566).png" alt=""><figcaption><p>Image 1: The Listener Config table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (472).png" alt=""><figcaption><p>Image 1: The Listener Config table</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="General Parameters" %}

@@ -28,7 +28,7 @@ description: >-
 
 1. Identify the table in Cinchy that you want the information to be pushed to. _(Image 1)_
 
-![Image 1: Identifying your Table (Step 1)](<../../.gitbook/assets/image (259).png>)
+![Image 1: Identifying your Table (Step 1)](<../../.gitbook/assets/image (199).png>)
 
 {% hint style="info" %}
 **Tip**: Click [here](../../guides-for-using-cinchy/builder-guides/creating-tables/) for instructions on creating a table within Cinchy.
@@ -38,7 +38,7 @@ description: >-
 
 * Your query will be running under a specific user account that you will assign in the next step. Ensure that whichever user you choose for this purpose has the correct permissions to execute the query, and to insert / update data in the target table.
 
-![Image 2: Creating your Query (Step 2)](<../../.gitbook/assets/image (402).png>)
+![Image 2: Creating your Query (Step 2)](<../../.gitbook/assets/image (256).png>)
 
 {% hint style="info" %}
 **Tip:** Click [here](../../guides-for-using-cinchy/builder-guides/saved-queries.md) for instructions on creating a query within Cinchy.
@@ -57,7 +57,7 @@ description: >-
    * If you are configuring individual parameters in the webhook payload (for example: @name, @url, etc.), you may leave this column blank.&#x20;
    * If you are not configuring individual parameters, as an alternative you can ingest the entire payload under one parameter and specify it in this field. In the below image, we have defined it as “JSON”. This means that the full payload (which happens to be a JSON file in this case) will be parameterized as @JSON and then inserted into a table column named JSON.
 
-![Image 3: Configuring your Table (Step 3)](<../../.gitbook/assets/image (389).png>)
+![Image 3: Configuring your Table (Step 3)](<../../.gitbook/assets/image (243).png>)
 
 4\. In your source application, navigate to the webhook settings and configure the following:
 

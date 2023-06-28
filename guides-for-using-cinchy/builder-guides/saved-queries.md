@@ -31,7 +31,7 @@ You can also search your Cinchy Homepage to find your Saved Query.
 
 1. From the homepage, select **Create > Query** _(Image 1)_
 
-![Image 1: Step 1, Click Create](<../../.gitbook/assets/image (492).png>)
+![Image 1: Step 1, Click Create](<../../.gitbook/assets/image (680).png>)
 
 2\. Fill out the following information:
 
@@ -39,7 +39,7 @@ You can also search your Cinchy Homepage to find your Saved Query.
 
 Under the Info tab, you can fill out information on the query if you wish to save it (Image 2):
 
-![Image 2: Step 2, The Info Tab](<../../.gitbook/assets/image (291).png>)
+![Image 2: Step 2, The Info Tab](<../../.gitbook/assets/image (609).png>)
 
 * Query Name: ‌Mandatory field. Must be unique within the Domain.‌
 * Icon: ‌You can optionally pick a non-default icon, as well as color for your table. This will be displayed in My Network.
@@ -69,7 +69,7 @@ Under the Info tab, you can fill out information on the query if you wish to sav
 
 In the Query screen, you can modify and run your query _(Image 3)._
 
-![Image 3](<../../.gitbook/assets/image (353).png>)
+![Image 3](<../../.gitbook/assets/image (300).png>)
 
 On the left hand side you have the Object tree, which shows you all the domains, tables, and columns you have access to query within Cinchy. You can search or simply navigate by expanding the domains and tables.
 
@@ -77,23 +77,23 @@ You can drag and drop the columns or table you're looking for into the Query Bui
 
 Once you are satisfied with your query, you can click save to keep a copy. You can then find your query in the "Saved Queries" table _(Image 4):_
 
-![Image 4: You can find saved queries in the Saved Queries table.](<../../.gitbook/assets/image (350).png>)
+![Image 4: You can find saved queries in the Saved Queries table.](<../../.gitbook/assets/image (297).png>)
 
 ## 3. Displaying a Saved Query
 
 1. Once you've set up your saved query, you can find it on your homepage _(Image 5)._
 
-![Image 5](<../../.gitbook/assets/image (447).png>)
+![Image 5](<../../.gitbook/assets/image (165).png>)
 
 2\. Clicking the query will allow you to **"Execute Query"** and show you the result set (if there is a SELECT at the end). Sometimes the query will have parameters you need to fill out first before executing _(Image 6)._
 
-![Image 6](<../../.gitbook/assets/image (684).png>)
+![Image 6](<../../.gitbook/assets/image (589).png>)
 
 ### 3.1 Pivot Reports
 
 1. Once you execute a query, you can switch the Display to **Pivot Mode** to see different visualizations of the data _(Image 7)._
 
-![Image 7](<../../.gitbook/assets/image (424).png>)
+![Image 7](<../../.gitbook/assets/image (142).png>)
 
 ### 3.2 Pivot URLs
 

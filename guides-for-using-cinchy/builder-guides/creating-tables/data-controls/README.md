@@ -4,7 +4,7 @@
 
 You can find the Data Controls menu on the left-hand navigation bar of a table.
 
-![](<../../../../.gitbook/assets/image (188).png>)
+![](<../../../../.gitbook/assets/image (3).png>)
 
 From here you may select to:
 

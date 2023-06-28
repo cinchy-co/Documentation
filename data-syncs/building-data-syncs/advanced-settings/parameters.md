@@ -8,7 +8,7 @@ The execution parameters are either passed in at the time of execution or calcul
 
 Below is an element that holds an array of `<Parameter>` elements, shown in the Connections experience _(Image 1)_ and the equivalent XML.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (118).png" alt=""><figcaption><p>Image 1: Connections UI</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (433).png" alt=""><figcaption><p>Image 1: Connections UI</p></figcaption></figure>
 
 ```markup
 <Parameters>
@@ -38,19 +38,19 @@ Below are the three Parameter examples shown in the Connections experience, foll
 
 _Example 1:_ A name attribute reference an execution parameter _(Image 2)._
 
-<figure><img src="../../../.gitbook/assets/image (270).png" alt=""><figcaption><p>Image 2: Example 1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (217).png" alt=""><figcaption><p>Image 2: Example 1</p></figcaption></figure>
 
 _Example 2:_ The FILEPATH function takes in two parameters, the first is a reference to the first parameter (i.e. a file path), and the second is a regular expression that includes a match group _(Image 3)_. The first match group's value is what gets assigned to the parameter. FILEPATH function executes regex against the full file path (including the directory structure) \[full formula in XML at end of page].
 
-<figure><img src="../../../.gitbook/assets/image (163).png" alt=""><figcaption><p>Image 3: Example 2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Image 3: Example 2</p></figcaption></figure>
 
 _Example 3:_ The FILENAME function takes in two parameters, the first is a reference to the first parameter (i.e. a file path), and the second is a regular expression that includes a match group _(Image 4)_. The first match group's value is what gets assigned to the parameter. FILENAME function applies the regex only to the name of the file (excluding the directory structure).
 
-<figure><img src="../../../.gitbook/assets/image (71).png" alt=""><figcaption><p>Image 4: Example 3</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (386).png" alt=""><figcaption><p>Image 4: Example 3</p></figcaption></figure>
 
 _Example 4:_ The ENV formula uses an environment variable available in the connections/worker pods as the value of the parameter _(Image 5)_. An example use case for this would be a situation where the URLs used in a REST API sync is different across environments -- instead of manually updating the syncs with the various URLs, you can use this formula to automatically calculated it from your pod configuration files.
 
-<figure><img src="../../../.gitbook/assets/image (107).png" alt=""><figcaption><p>Image 5: Example 4</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (422).png" alt=""><figcaption><p>Image 5: Example 4</p></figcaption></figure>
 
 #### Example XMLs
 
@@ -80,11 +80,11 @@ To create or modify environment variables on Windows:
 1. On the Windows taskbar, right-click the **Windows Icon** **>** **System.**
 2. In the **Settings** window, click **Related Settings > Advanced System Settings > Environment Variables** _(Image 6)._
 
-<figure><img src="../../../.gitbook/assets/image (102).png" alt=""><figcaption><p>Image 6: Environment Variables</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (417).png" alt=""><figcaption><p>Image 6: Environment Variables</p></figcaption></figure>
 
 3. Under **System Variables**, click **New** to create your new environment variable (_Image 7)._
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Image 7: New Environment Variable</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (501).png" alt=""><figcaption><p>Image 7: New Environment Variable</p></figcaption></figure>
 
 ### Configuring Environment Variables in Kubernetes
 

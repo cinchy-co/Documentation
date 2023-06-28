@@ -31,7 +31,7 @@ The Default of the Systems Properties table is set up as follows _(Image 1)_:
 | 11          | Password Expiration (Days)        | 90                    |
 | 15          | Maintenance Enabled               | 0                     |
 
-![Image 1: Default Set Up](<../../.gitbook/assets/image (589).png>)
+![Image 1: Default Set Up](<../../.gitbook/assets/image (495).png>)
 
 {% hint style="info" %}
 Please note that this table is case sensitive.&#x20;
@@ -81,7 +81,7 @@ Note that an administrator can also go into the 'Users' table to manually unlock
 
 This is a property, defaulted to 0, that is simply responsible for showing this warning when a data owner is setting up [Data Erasure](broken-reference) or [Data Compression](broken-reference) on a table _(Image 2)_. It is the administrator's responsibility to set up a scheduled maintenance job for performing compression and erasure, and then to change the property to 1 so that the warning no longer appears.
 
-![Image 2: Data Compression](<../../.gitbook/assets/image (279).png>)
+![Image 2: Data Compression](<../../.gitbook/assets/image (597).png>)
 
 ## 3. Forbidden Passwords
 

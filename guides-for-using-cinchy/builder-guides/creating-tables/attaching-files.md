@@ -33,7 +33,7 @@ Cinchy supports the attaching of any file type.
    4. **Linked Column:** File Name
    5. **Advanced Settings:** Make sure to select the "Multi-select" checkbox if you want the capability to add more than one file to a row.
 
-![Image 1: Step 3, creating your Files column](<../../../.gitbook/assets/image (159).png>)
+![Image 1: Step 3, creating your Files column](<../../../.gitbook/assets/image (63).png>)
 
 4\. Click **Save**
 
@@ -45,15 +45,15 @@ Cinchy supports the attaching of any file type.
 
 6\. To attach a file, click on the upload button (located in the top right hand corner of any cell in the column) _(Image 2)_.
 
-![Image 2: Step 6, uploading a file](<../../../.gitbook/assets/image (488).png>)
+![Image 2: Step 6, uploading a file](<../../../.gitbook/assets/image (674).png>)
 
 7\. From the pop-up window, select **Choose Files** to pick your file from your machine, then click **Submit** _(Image 3)._
 
-![Image 3: Step 7, choosing your file to upload](<../../../.gitbook/assets/image (308).png>)
+![Image 3: Step 7, choosing your file to upload](<../../../.gitbook/assets/image (626).png>)
 
 8\. Once uploaded, your cell should look like this _(Image 4)_:
 
-![Image 4: Step 8, a completed upload](<../../../.gitbook/assets/image (205).png>)
+![Image 4: Step 8, a completed upload](<../../../.gitbook/assets/image (20).png>)
 
 ## 3. Deleting an Attached File
 
@@ -65,4 +65,4 @@ You will need edit access to the Files table in order to do so.
 
 Your file will appear crossed out in your original table and cannot be opened or downloaded _(Image 5)._
 
-![Image 5: Deleting an attached file](<../../../.gitbook/assets/image (593).png>)
+![Image 5: Deleting an attached file](<../../../.gitbook/assets/image (499).png>)

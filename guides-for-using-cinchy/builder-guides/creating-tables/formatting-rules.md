@@ -34,6 +34,6 @@ Columns to apply the conditional formatting rules to. You do not need to include
 ## 2. Example
 
 ![Example formatting rules.
-](<../../../.gitbook/assets/image (195).png>)
+](<../../../.gitbook/assets/image (10).png>)
 
-![Formatting applied in the table](<../../../.gitbook/assets/image (626).png>)
+![Formatting applied in the table](<../../../.gitbook/assets/image (345).png>)

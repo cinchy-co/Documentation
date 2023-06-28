@@ -29,13 +29,13 @@ A binary search will not start from the top record. It will check the _middle_ r
 
 In this example, we have a table with employee names _(Image 1)_. We want to search for "John Smith", using the **Full Name** column.
 
-![Image 1: An example table](<../../../.gitbook/assets/image (321).png>)
+![Image 1: An example table](<../../../.gitbook/assets/image (268).png>)
 
 1. To set up your index, select **Design Table** from the left navigation tab.
 
 2\. Click **Indexes** _(Image 2)_.
 
-![Image 2: Select Indexes from the list](<../../../.gitbook/assets/image (82).png>)
+![Image 2: Select Indexes from the list](<../../../.gitbook/assets/image (397).png>)
 
 3\. Select **"Click Here to Add"** and fill out the following information for a new index. Click save when done _(Image 3)_:
 
@@ -46,11 +46,11 @@ In this example, we have a table with employee names _(Image 1)_. We want to sea
   * The difference between regular columns and Included columns is that indexes with included columns provide the greatest benefit when covering your query because you can include all columns your query may reference, such as columns with data types, numbers, or sizes not allowed as index key columns.
   * For more on Included Columns, [click here](https://www.sqlshack.com/sql-server-non-clustered-indexes-with-included-columns/)
 
-![Image 3: An example index](<../../../.gitbook/assets/image (620).png>)
+![Image 3: An example index](<../../../.gitbook/assets/image (339).png>)
 
 4\. We can now query our full name column for John Smith and receive our results quicker than if we hadn't set up our index _(Image 4)_.
 
-![Image 4: An example query on an indexed column](<../../../.gitbook/assets/image (656).png>)
+![Image 4: An example query on an indexed column](<../../../.gitbook/assets/image (561).png>)
 
 {% hint style="info" %}
 Note that there is no UI change in the query builder or your results when running a query on an indexed column. The difference will be in the speed of your returned results.
@@ -65,7 +65,7 @@ A full-text index is a special type of index that provides index access for full
 1. Click on **Design Table > Full-text Index**
 2. Add in the desired column(s) and click **save** when done _(Image 5)._
 
-![Image 5: Full text indexing](<../../../.gitbook/assets/image (258).png>)
+![Image 5: Full text indexing](<../../../.gitbook/assets/image (198).png>)
 
 ## 3. Columnar Indexing
 
@@ -83,7 +83,7 @@ You may want to use a columnar index when:
 1. Click on **Design Table > Columnar Index**
 2. Add in the desired column(s) and click **save** when done _(Image 6)._
 
-![Image 6: Columnar Indexing](<../../../.gitbook/assets/image (267).png>)
+![Image 6: Columnar Indexing](<../../../.gitbook/assets/image (207).png>)
 
 {% hint style="warning" %}
 When using a Columnar Index, you won't be able to add any new columns to your table. You will need to delete the index, add your column(s), and then re-add the index.
@@ -105,7 +105,7 @@ In this example we want to set up a partition that divides our employees based o
 
 1. Click on **Design Table > Partition**
 
-![Image 7: Partitioning](<../../../.gitbook/assets/image (533).png>)
+![Image 7: Partitioning](<../../../.gitbook/assets/image (114).png>)
 
 1. Fill in the following information and click save when done _(Image 8)_:
 
@@ -113,13 +113,13 @@ In this example we want to set up a partition that divides our employees based o
 * **Type:** Select either Range Left (which means that your boundary will be **<=**) or Range Right (where you boundary is only **<**). In this example we want our boundary to be **Range Left.**
 * **Add Boundary:** Add in your boundary value(s). Click the **+** key to add it to your boundary list. In this example we want to set our boundary to 2.
 
-![Image 8: Creating your Partition](<../../../.gitbook/assets/image (381).png>)
+![Image 8: Creating your Partition](<../../../.gitbook/assets/image (235).png>)
 
 Once set up, this partition will organize our data into two groups, based on our boundary of those who have a **Years Active value** of two or above.
 
 2\. You can now run a query on your partitioned table _(Image 9)._
 
-![Image 9: An example query on a partitioned table](<../../../.gitbook/assets/image (649).png>)
+![Image 9: An example query on a partitioned table](<../../../.gitbook/assets/image (554).png>)
 
 {% hint style="info" %}
 Note that there is no UI change in the query builder or your results when running a query on a partitioned table. The difference will be in the speed of your returned results.

@@ -34,7 +34,7 @@ The password should adhere to your organization's password policy.
 
 3\. You can now encrypt data via the user interface _(Image 1)_:
 
-![Image 1:  The Encryption option is now available for column types supported via UI.](<../../.gitbook/assets/image (187).png>)
+![Image 1:  The Encryption option is now available for column types supported via UI.](<../../.gitbook/assets/image (2).png>)
 
 ## 2. Backup Master Key <a href="#backup-master-key" id="backup-master-key"></a>
 

@@ -10,7 +10,7 @@ _Example 3_ demonstrates the use of Javascript in Calculated Columns.
 
 The value of this column for each record is whatever the value is of the lob parameter.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (482).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (668).png" alt=""><figcaption></figcaption></figure>
 
 XML equivalent of the above example_:_
 
@@ -33,7 +33,7 @@ The CONCAT function supports more than 2 parameters, and any literal values must
 
 The values of two columns are concatenating together.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (462).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (649).png" alt=""><figcaption></figcaption></figure>
 
 XML equivalent of the above example:
 

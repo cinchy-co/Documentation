@@ -4,7 +4,7 @@
 
 Post sync scripts are written in CQL and can be added to the end of a sync to allow you to do more with your data, such as inserted retrieved values into a Cinchy table.
 
-<figure><img src="../../../.gitbook/assets/image (344).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (291).png" alt=""><figcaption></figcaption></figure>
 
 ## 2. Example Walkthrough
 
@@ -18,7 +18,7 @@ The following steps will walk you through how to utilize this functionality.
 
 <figure><img src="https://lh5.googleusercontent.com/_eb2qTk-AHKJKOyTDs_x2INkb411fJsUr4SnJXZn-Lw-g-MmKYvDVS-8Ipbe365ylWIEKGfzIsryr4A50j7VNgyqdWDER4oc0b0plB3NXsTW4IpyWIjlvwZBJs24Y9zqeCK7hkQXWrTj2d5ZMmd5nuAnEulIjtQ-sE4cWSsWLZO0NcissuusyQs4On9FJQ" alt=""><figcaption><p>Image 1: Post Sync Scripts</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (355).png" alt=""><figcaption><p>Image 2: Post Sync Scripts</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (302).png" alt=""><figcaption><p>Image 2: Post Sync Scripts</p></figcaption></figure>
 
 <figure><img src="https://lh6.googleusercontent.com/Wbc5RRQRbhcuhULXlKvqBUrSiRw2HcDIimdA6-0WgC5_6LzW94wqRDOMLFDVCMNXOv7FlL8wGdvhmCe0-Ky6Xoz-S_5OlOLavKr421mVU6m6IOj852-ceSdR5Alth6IbeJZUhhaFAttoQTb191Gj9MeeZi0CNrsHJMMABqfHBz1Cbraiez2-A8DX6yTpsQ" alt=""><figcaption><p>Image 3: Post Sync Scripts</p></figcaption></figure>
 
@@ -32,4 +32,4 @@ The following steps will walk you through how to utilize this functionality.
 
 <figure><img src="https://lh4.googleusercontent.com/IBkC9bHB-O1iuPKmBiHIzim_SV_xgPkp79PH_R9LS6yUkLTbFEchp5jMLlu0-KzPu7-Cbd4SrcvR31XPJCLG8LHpvxgoIdu23IWArqX2EvQ3g7FnoF6feEp_V06X-WSAoZ08JXvG4ud0mZleVqiwwoCL5Xqp0fCSXAGGzBL-z3WcLDkOTubhx129kOP5Ww" alt=""><figcaption><p>Image 5: Post Sync Scripts</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (652).png" alt=""><figcaption><p>Imaage 6: Post Sync Scripts</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (557).png" alt=""><figcaption><p>Imaage 6: Post Sync Scripts</p></figcaption></figure>

@@ -14,7 +14,7 @@ Delta syncs also have the option to provide an **"Action Type Column"** for REST
 
 When using the Full File synchronization pattern there are two distinct sections that must be configured: the Sync Key and the Sync Record Behaviour _(Image 1)._
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption><p>Image 1: Full File Syncs</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (383).png" alt=""><figcaption><p>Image 1: Full File Syncs</p></figcaption></figure>
 
 ### 2.1 Sync Key
 
@@ -37,7 +37,7 @@ To set this using a config XML, use the following guide:
 
 **The Sync Record Behaviour** is broken down into three subsections which define what action will be taken on certain records _(Image 2)._
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption><p>Image 2: Sync Record Behaviour</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (384).png" alt=""><figcaption><p>Image 2: Sync Record Behaviour</p></figcaption></figure>
 
 {% hint style="warning" %}
 Values in the attributes section of the config XML for record behaviour are **case sensitive.**
@@ -96,7 +96,7 @@ When using the Delta synchronization pattern there is one optional configuration
 
 The **Action Type Column** reads the value of the source record from a specified column. If the value is "INSERT", then it inserts the record, "UPDATE", then it updates, "DELETE", then it deletes.
 
-<figure><img src="../../.gitbook/assets/image (130).png" alt=""><figcaption><p>Image 3: Delta Syncs</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (445).png" alt=""><figcaption><p>Image 3: Delta Syncs</p></figcaption></figure>
 
 ## Appendix A
 
@@ -118,8 +118,8 @@ Added in Cinchy v5.6, the **Changed Record Behaviour - Conditional** feature all
   * A plain value (ex: text, numerical, etc.) This will adjust based on the column data type picked in the left-most drop down. For example, if in the source schema the column is a date, then it renders a date picker.
   * Select either a source or a target column as defined in your Source and Destination tabs (when used in conjunction with the **Use Columns** checkbox)
 
-<figure><img src="../../.gitbook/assets/image (644).png" alt=""><figcaption><p>Image 4: Conditional record behaviours</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (549).png" alt=""><figcaption><p>Image 4: Conditional record behaviours</p></figcaption></figure>
 
 For example, the below condition would only update records where the **target column "Name" is null** _(Image 5)._
 
-<figure><img src="../../.gitbook/assets/image (158).png" alt=""><figcaption><p>Image 5: Conditional Example</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption><p>Image 5: Conditional Example</p></figcaption></figure>

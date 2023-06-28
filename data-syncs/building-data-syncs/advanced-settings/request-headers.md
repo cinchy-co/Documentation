@@ -4,7 +4,7 @@
 
 When configuring a Data Sync, you may have the option to add in additional configuration sections, such as an Request Headers, under the "Add a Section" drop down tab in the Connection Experience _(Image 1)._
 
-<figure><img src="../../../.gitbook/assets/image (166).png" alt=""><figcaption><p>Image 1: Other Configuration Settings Available </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (70).png" alt=""><figcaption><p>Image 1: Other Configuration Settings Available </p></figcaption></figure>
 
 1. To add in Request Headers, fill in the following parameters _(Image 2):_
 

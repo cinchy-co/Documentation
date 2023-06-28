@@ -62,7 +62,7 @@ You can choose to add in a **Transformation > String Replacement** by inputting 
 Note that you can have more than one String Replacement
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (615).png" alt=""><figcaption><p>Image 1: Standard Column</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (334).png" alt=""><figcaption><p>Image 1: Standard Column</p></figcaption></figure>
 
 ## 3. Standard Calculated Column
 
@@ -93,13 +93,13 @@ If a Destination column is being **used as a sync key**, its source column has t
 * **If just Validated is checked** on a column, then all rows are synced.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (463).png" alt=""><figcaption><p>Image 2: Standard Calculated Columns</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (650).png" alt=""><figcaption><p>Image 2: Standard Calculated Columns</p></figcaption></figure>
 
 ## 4. Conditional Calculated Column
 
 Fill in the following attributes for a Conditional Calculated Column _(Image 3)_:
 
-<figure><img src="../../../.gitbook/assets/image (476).png" alt=""><figcaption><p>Image 3: Conditional Calculated Column</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (663).png" alt=""><figcaption><p>Image 3: Conditional Calculated Column</p></figcaption></figure>
 
 * **Name:** The name of your column
 * **Data Type:** The return data type of your column, this can be either:
@@ -129,15 +129,15 @@ If a Destination column is being **used as a sync key**, its source column has t
   * **Name:**&#x20;
   * **IF:** Click Edit to create the "if" for your Conditional Statement _(Image 4)_
 
-<figure><img src="../../../.gitbook/assets/image (600).png" alt=""><figcaption><p>Image 4: Creating your Conditional statement</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (319).png" alt=""><figcaption><p>Image 4: Creating your Conditional statement</p></figcaption></figure>
 
 * **Then:** Click _Edit_ to create the "then" for your Conditional Statement _(Image 5)_
 
-<figure><img src="../../../.gitbook/assets/image (470).png" alt=""><figcaption><p>Image 5: Creating your Conditional Statement</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (657).png" alt=""><figcaption><p>Image 5: Creating your Conditional Statement</p></figcaption></figure>
 
 * **Default:** Click _Edit_ to create your default expression _(Image 6)_
 
-<figure><img src="../../../.gitbook/assets/image (422).png" alt=""><figcaption><p>Image 6: Creating your Default Expression</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (140).png" alt=""><figcaption><p>Image 6: Creating your Default Expression</p></figcaption></figure>
 
 ## 5. JavaScript Calculated Column
 
@@ -169,7 +169,7 @@ If a Destination column is being **used as a sync key**, its source column has t
 
 * **Script:** Enter in your JavaScript
 
-<figure><img src="../../../.gitbook/assets/image (599).png" alt=""><figcaption><p>Image 7: JavaScript Calculated Column</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (318).png" alt=""><figcaption><p>Image 7: JavaScript Calculated Column</p></figcaption></figure>
 
 ## 6. Columns in XML
 
@@ -257,7 +257,7 @@ Column mappings defines how a single column from the data source maps to a colum
 
 Below is an example of a Column Mapping in the experience followed by the equivalent XML. In the experience, the Source Column attribute is a dropdown of columns configured in the Source Section.
 
-<figure><img src="../../../.gitbook/assets/image (464).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (651).png" alt=""><figcaption></figcaption></figure>
 
 ```markup
 <ColumnMapping

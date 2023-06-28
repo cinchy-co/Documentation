@@ -16,7 +16,7 @@ All data that is connected to the network is protected through **Universal Acces
 
 **In a nutshell: building a data sync allows you to bring your data in and out of systems easily and without adding on to your integration tax.**
 
-<figure><img src="../.gitbook/assets/image (313).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (631).png" alt=""><figcaption></figcaption></figure>
 
 ## 2. Building a Data Sync
 

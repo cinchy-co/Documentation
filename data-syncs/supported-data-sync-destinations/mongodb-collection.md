@@ -31,7 +31,7 @@ The following parameters will help to define your data sync destination and how 
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (387).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
 
 ## **6. Retry Configuration**
 
@@ -47,7 +47,7 @@ To set up a retry configuration:
 
 1. Under the MongoDB destination tab, select **Retry Configuration**
 
-<figure><img src="../../.gitbook/assets/image (585).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (491).png" alt=""><figcaption></figcaption></figure>
 
 2\. Select your Delay Strategy.&#x20;
 

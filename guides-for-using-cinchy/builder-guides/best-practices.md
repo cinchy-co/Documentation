@@ -18,10 +18,10 @@ description: This page outlines a few common best practices when building in Cin
 
 **Table descriptions** are shown in the My Network screen, and will show up in search as well.‌ _(Image 1)._
 
-![Image 1: Table Description](<../../.gitbook/assets/image (490).png>)
+![Image 1: Table Description](<../../.gitbook/assets/image (676).png>)
 
 **Column descriptions** show up when you hover on the column in the Manage Data screen _(Image 2 and 3)._
 
 ![Image 2: Column Descriptions](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIP3Xr2BuWD7FDjJFmZ%2F-LXz6bNDosNNJwgl5b3c%2F-LXz7c6UP8Y78C4G0MXY%2Fimage.png?alt=media\&token=5a06e488-4faa-4924-a6de-f7445653f60c)
 
-![Image 3: Column Descriptions](<../../.gitbook/assets/image (433).png>)
+![Image 3: Column Descriptions](<../../.gitbook/assets/image (151).png>)

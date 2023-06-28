@@ -20,7 +20,7 @@ description: >-
 
 2\. Right-click on **Relying Party Trusts** and select **Add Relying Party Trust** to launch the **Add Relying Party Trust Wizard** _(Image 1)._
 
-![Image 1: Add Relying Party Trust Wizard](<../../../../../.gitbook/assets/image (371).png>)
+![Image 1: Add Relying Party Trust Wizard](<../../../../../.gitbook/assets/image (225).png>)
 
 3\. In the ADFS Wizard, select **Claims Aware > Start > Select Data Source**
 
@@ -51,7 +51,7 @@ https://<cinchy-sso-URL>/Saml2/Acs
 
 <table data-header-hidden><thead><tr><th>LDAP Attribute</th><th width="249.33333333333331">Outgoing Claim Type</th><th>Comments</th></tr></thead><tbody><tr><td>LDAP Attribute</td><td>Outgoing Claim Type</td><td>Comments</td></tr><tr><td>User-Principal-Name</td><td>Name ID</td><td></td></tr><tr><td>SAM-Account-Name</td><td>sub</td><td><code>sub</code>will need to be typed manually, make sure it does not autocomplete to something else like subject.</td></tr><tr><td>Given-Name</td><td>Given Name</td><td>Necessary for Automatic User Creation</td></tr><tr><td>Surname</td><td>Surname</td><td>Necessary for Automatic User Creation</td></tr><tr><td>E-Mail-Address</td><td>E-Mail Address</td><td>Necessary for Automatic User Creation</td></tr><tr><td>Is-Member-Of-DL</td><td>Role</td><td>Necessary for Automatic User Creation</td></tr></tbody></table>
 
-![Image 2: Add Transform Claim Rule Wizard](<../../../../../.gitbook/assets/image (7).png>)
+![Image 2: Add Transform Claim Rule Wizard](<../../../../../.gitbook/assets/image (508).png>)
 
 &#x20; 4\. Click **Finish**.
 
@@ -78,7 +78,7 @@ c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccou
 
 &#x20; 9\. Go to the **Advanced** tab and set the secure hash algorithm to **SHA-256** _(Image 3)._
 
-![Image 3: Set the secure hash algorithm to SHA-256](<../../../../../.gitbook/assets/image (368).png>)
+![Image 3: Set the secure hash algorithm to SHA-256](<../../../../../.gitbook/assets/image (222).png>)
 
 ## **3. Cinchy Configuration**
 

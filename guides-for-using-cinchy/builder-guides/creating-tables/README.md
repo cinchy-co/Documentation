@@ -19,7 +19,7 @@ description: This page guides you through creating table in Cinchy.
 
 1. Navigate to the Cinchy homepage. In the upper left-hand corner, click on **Create** to get started. _(Image 1)_
 
-![Image 1: Step 1, Getting Started](<../../../.gitbook/assets/image (364).png>)
+![Image 1: Step 1, Getting Started](<../../../.gitbook/assets/image (311).png>)
 
 2\. Select either a Standard or a Spatial Table _(Image 2)_, per the descriptions below.
 
@@ -34,11 +34,11 @@ You cannot convert from one type to another and will have to either recreate you
 Any existing tables created before installing Cinchy Platform v4.19.0 are standard tables.
 {% endhint %}
 
-![Image 2: Step 2, select either a Standard or Spatial Table](<../../../.gitbook/assets/image (387).png>)
+![Image 2: Step 2, select either a Standard or Spatial Table](<../../../.gitbook/assets/image (241).png>)
 
 3\. Select **From Scratch** _(Image 3)_.
 
-![Image 3: Step 3, Select "From Scratch"](<../../../.gitbook/assets/image (300).png>)
+![Image 3: Step 3, Select "From Scratch"](<../../../.gitbook/assets/image (618).png>)
 
 4\. A new page will open with the **Table Info** tab (Image 4). Input the following information:
 
@@ -47,11 +47,11 @@ Any existing tables created before installing Cinchy Platform v4.19.0 are standa
 * **Domain:** This is a mandatory field. Select the domain that this table will reside under. If you are have administrative privileges, you can also create new domains from this screen.
 * **Description:** You can give your table a description, which will be displayed on the homepage.
 
-![Image 4: Step 4, Adding table info.](<../../../.gitbook/assets/image (247).png>)
+![Image 4: Step 4, Adding table info.](<../../../.gitbook/assets/image (187).png>)
 
 5\. When you are finished with the **Info** page, select **Columns** from the left-hand navigation bar (Image 5). [See here ](columns.md)for additional information about column types.
 
-![Image 5: Step 5, Selecting the Columns tab](<../../../.gitbook/assets/image (317).png>)
+![Image 5: Step 5, Selecting the Columns tab](<../../../.gitbook/assets/image (264).png>)
 
 6\. A new page will open with the **Columns** tab _(Image 6)_. Every table in Cinchy must have at least one column. Input the following information:
 
@@ -86,17 +86,17 @@ Currently there is no functionality tied directly to Data Security Classificatio
 You may have further mandatory or optional data to input depending on your selected Data Type.
 {% endhint %}
 
-![Image 6: Step 6, defining your column ](<../../../.gitbook/assets/image (196).png>)
+![Image 6: Step 6, defining your column ](<../../../.gitbook/assets/image (11).png>)
 
 7\. Click on **Design Controls > Entitlements** in the left navigation pane to set your permissions _(Image 7)._ You may set these as granular as you choose. You may also set permissions on a [view by view basis.](./#default-view) [See here for more about data controls and entitlements.](data-controls/data-entitlements-and-access-controls.md)
 
-![Image 7: Step 7, setting your permissions](<../../../.gitbook/assets/image (487).png>)
+![Image 7: Step 7, setting your permissions](<../../../.gitbook/assets/image (675).png>)
 
 8\. Click **Save** to finalize your table.
 
 9\. You may return to change the structure of the existing table (i.e. Rename columns, add new columns, change data type) by clicking on the **Design Table** button on the left-hand navigation _(Image 8)._
 
-![Image 8: Step 9, changing an existing table structure](<../../../.gitbook/assets/image (149).png>)
+![Image 8: Step 9, changing an existing table structure](<../../../.gitbook/assets/image (53).png>)
 
 ## 2. Creating a Table by Importing a CSV <a href="#import-a-csv" id="import-a-csv"></a>
 
@@ -104,7 +104,7 @@ You may have further mandatory or optional data to input depending on your selec
 
 1. Navigate to the Cinchy homepage. In the upper left-hand corner, click on **Create** to get started _(Image 9)._
 
-![Image 9: Step 1, Getting Started](<../../../.gitbook/assets/image (364).png>)
+![Image 9: Step 1, Getting Started](<../../../.gitbook/assets/image (311).png>)
 
 2\. Select either a Standard or a Spatial Table _(Image 10)_, per the descriptions below.
 
@@ -119,11 +119,11 @@ You cannot convert from one type to another and will have to either recreate you
 Any existing tables created before installing Cinchy Platform v4.19.0 are standard tables.
 {% endhint %}
 
-![Image 10: Step 2, select either a Standard or Spatial Table](<../../../.gitbook/assets/image (387).png>)
+![Image 10: Step 2, select either a Standard or Spatial Table](<../../../.gitbook/assets/image (241).png>)
 
 3\. Select **Import a CSV** _(Image 11)_.
 
-![Image 11: Step 3, Select "Import a CSV"](<../../../.gitbook/assets/image (300).png>)
+![Image 11: Step 3, Select "Import a CSV"](<../../../.gitbook/assets/image (618).png>)
 
 4\. Enter the following information_:_
 
@@ -142,7 +142,7 @@ The column names in your .csv file must not conflict with[ System Columns.](colu
 
 6\. To update these settings, navigate to the **Design Table** tab on the left navigation bar _(Image 12)_.
 
-![Image 12: Step 6, Design Table tab](<../../../.gitbook/assets/image (524).png>)
+![Image 12: Step 6, Design Table tab](<../../../.gitbook/assets/image (105).png>)
 
 ## 3. Table Views <a href="#default-view" id="default-view"></a>
 
@@ -150,15 +150,15 @@ The column names in your .csv file must not conflict with[ System Columns.](colu
 
 1. When you first create a table, a default view called A**ll Data** will be created for you, which you can find on the left navigation bar under **Manage Data** _(Image 13)._
 
-![Image 13: Step 1: The All Data view](<../../../.gitbook/assets/image (369).png>)
+![Image 13: Step 1: The All Data view](<../../../.gitbook/assets/image (223).png>)
 
 2\. You can create additional views by clicking on **"+Create View"** (_Image 14)._
 
-![Image 14: Step 2, Select "Create View"](<../../../.gitbook/assets/image (544).png>)
+![Image 14: Step 2, Select "Create View"](<../../../.gitbook/assets/image (125).png>)
 
 3\. You may chose to create a view **From Scratch** or by **Copying an Existing** view _(Image 15)._
 
-![Image 15: Step 3, Creating a View](<../../../.gitbook/assets/image (681).png>)
+![Image 15: Step 3, Creating a View](<../../../.gitbook/assets/image (586).png>)
 
 ### From Scratch: <a href="#bookmarks-and-marketplace" id="bookmarks-and-marketplace"></a>
 
@@ -166,29 +166,29 @@ The column names in your .csv file must not conflict with[ System Columns.](colu
 2. The **Columns tab** will open. Create a **Name** for your View _(Image 16)._
 3. If you'd like this to become the default view, toggle the default setting to **On** _(Image 16)._
 
-![Image 16: Steps 2,3](<../../../.gitbook/assets/image (255).png>)
+![Image 16: Steps 2,3](<../../../.gitbook/assets/image (195).png>)
 
 4\. Select the column(s) that you want to be visible in this view _(Image 17)._ You may rearrange the column order using drag and drop.
 
-![Image 17: Step 4, Selecting Columns](<../../../.gitbook/assets/image (9).png>)
+![Image 17: Step 4, Selecting Columns](<../../../.gitbook/assets/image (510).png>)
 
 5\. Click on the **Sort tab** in the left navigation bar _(Image 18)._
 
-![Image 18: Step 5, Sorting](<../../../.gitbook/assets/image (606).png>)
+![Image 18: Step 5, Sorting](<../../../.gitbook/assets/image (325).png>)
 
 6\. Use this screen to select which columns you'd like to sort your data by, and in which order. You may rearrange the columns using drag and drop _(Image 19)._
 
-![Image 19: Step 6, Sorting your view](<../../../.gitbook/assets/image (483).png>)
+![Image 19: Step 6, Sorting your view](<../../../.gitbook/assets/image (671).png>)
 
 7\. Click on the **Filter tab** in the left navigation bar. Here, you may use [query language](../../../cql/the-basics-of-cql/) to focus your view _(Image 20)._
 
-![Image 20: Step 7, Using the Filter tab](<../../../.gitbook/assets/image (448).png>)
+![Image 20: Step 7, Using the Filter tab](<../../../.gitbook/assets/image (166).png>)
 
 &#x20;
 
 8\. Click on the **Permission tab** in the left navigation bar. Here, you may set permissions for who can use this view. By default, it is set to All Users _(Image 21)._
 
-![Image 21: Step 8, setting permissions.](<../../../.gitbook/assets/image (89).png>)
+![Image 21: Step 8, setting permissions.](<../../../.gitbook/assets/image (404).png>)
 
 9\. Select **Save** to finalize your view.
 
@@ -197,13 +197,13 @@ The column names in your .csv file must not conflict with[ System Columns.](colu
 1. Select **"From Existing".**
 2. Select which view you would like to copy _(Image 22)._
 
-![Image 22: Step 2, Importing a view](<../../../.gitbook/assets/image (303).png>)
+![Image 22: Step 2, Importing a view](<../../../.gitbook/assets/image (621).png>)
 
 ### Updating a View
 
 1. To update any view, including the Add Data view, click on the **pencil icon** next to the view's name under Manage Data _(Image 23)._
 
-![Image 23: Step 1, Updating a View](<../../../.gitbook/assets/image (225).png>)
+![Image 23: Step 1, Updating a View](<../../../.gitbook/assets/image (40).png>)
 
 ## 4. Bookmarks and the Homepage <a href="#bookmarks-and-marketplace" id="bookmarks-and-marketplace"></a>
 

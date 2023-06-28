@@ -24,7 +24,7 @@ description: >-
 
 Grafana, and its paired application [Prometheus](https://prometheus.io/) (which consumes metrics from the running components in your environment) is the recommended visualization application for Cinchy v5 on Kubernetes.&#x20;
 
-![Image 1: An example visualization from Grafana](<../../../.gitbook/assets/image (278).png>)
+![Image 1: An example visualization from Grafana](<../../../.gitbook/assets/image (596).png>)
 
 ## 2. Getting Started with Grafana
 
@@ -47,21 +47,21 @@ There are some saved dashboards that come out of the box with your Cinchy deploy
 
 1. Navigate to the **left navigation** pane, select the **Dashboards icon > Manage** _(Image 2)._
 
-![Image 2: Accessing your Grafana Dashboards](<../../../.gitbook/assets/image (484).png>)
+![Image 2: Accessing your Grafana Dashboards](<../../../.gitbook/assets/image (670).png>)
 
 2\. You will see a list of all of the Dashboards available to you _(Image 3)_. Clicking on any of them will take you to a full metrics view _(Image 4)._
 
-![Image 3: Step 2, Viewing all dashboards](<../../../.gitbook/assets/image (391).png>)
+![Image 3: Step 2, Viewing all dashboards](<../../../.gitbook/assets/image (245).png>)
 
-![Image 4: Step 3, an example visualization](<../../../.gitbook/assets/image (28).png>)
+![Image 4: Step 3, an example visualization](<../../../.gitbook/assets/image (529).png>)
 
 3\. You can favourite any of your commonly used or most important dashboards by clicking on the star _(Image 5)._
 
-![Image 5: Step 3, favouriting a dashboard](<../../../.gitbook/assets/image (340).png>)
+![Image 5: Step 3, favouriting a dashboard](<../../../.gitbook/assets/image (287).png>)
 
 4\. Once you have favourited a dashboard, you can easily find it by navigating to the **left navigation** pane, select the **Dashboards icon > Home.** This will open the Dashboards Home. You can see both your favourite and your recent dashboards in this view _(Image 6)_
 
-![Image 6: Step 4, favourite and recent dashboards](<../../../.gitbook/assets/image (384).png>)
+![Image 6: Step 4, favourite and recent dashboards](<../../../.gitbook/assets/image (238).png>)
 
 ## 3. Recommended Dashboards
 
@@ -71,7 +71,7 @@ Your Cinchy v5 deployment comes with some out-of-the-box dashboards premade for 
 
 **Purpose:** This dashboard provides a general overview of your entire cluster including all of your environments and pods _(Image 7)._
 
-![Image 7: Kubernetes/Compute Resources/Cluster dashboard](<../../../.gitbook/assets/image (577).png>)
+![Image 7: Kubernetes/Compute Resources/Cluster dashboard](<../../../.gitbook/assets/image (483).png>)
 
 **Metrics:**
 
@@ -92,9 +92,9 @@ The following are some example metrics that you could expect to see from this da
 
 **Purpose:** This dashboard is useful for looking at environment specific details _(Image 8)_. You can use the **namespace drop down menu** to select which environment you want to visualize _(Image 9)_. This can be particularly helpful during load  testing. You are also able to drill down to a specific workload by clicking  on its name.
 
-![Image 8: The Kubernetes/Compute Resources/Namespace (Workloads) dashboard](<../../../.gitbook/assets/image (574).png>)
+![Image 8: The Kubernetes/Compute Resources/Namespace (Workloads) dashboard](<../../../.gitbook/assets/image (480).png>)
 
-![Image 9: Use the namespace drop down menu to select which environment you want to view details for](<../../../.gitbook/assets/image (361).png>)
+![Image 9: Use the namespace drop down menu to select which environment you want to view details for](<../../../.gitbook/assets/image (308).png>)
 
 **Metrics:**
 
@@ -128,7 +128,7 @@ Your notifications channel refers to who will be receiving your alert. To set on
 
 1. Click on the Alert icon on the left navigation tab _(Image 10)_, and locate **"Notifications Channel"**
 
-![Image 10: The Alert icon](<../../../.gitbook/assets/image (62).png>)
+![Image 10: The Alert icon](<../../../.gitbook/assets/image (377).png>)
 
 2\.  Click the **"Add a Channel"** button
 
@@ -140,7 +140,7 @@ Your notifications channel refers to who will be receiving your alert. To set on
 
 **Addresses:** Input all the email addresses you want to be notified of this alert, separated by a comma
 
-![Image 11: Setting up your Notification Channel](<../../../.gitbook/assets/image (251).png>)
+![Image 11: Setting up your Notification Channel](<../../../.gitbook/assets/image (191).png>)
 
 4\. Click **Test** to send out a test email, if desired.
 
@@ -154,7 +154,7 @@ The following details how to set up alerts on your dashboards. You can also set 
 2. Click on the **dashboard name > Edit**
 3. Click on the **Alert tab** _(Image 12)_.
 
-![Image 12: The alert tab](<../../../.gitbook/assets/image (580).png>)
+![Image 12: The alert tab](<../../../.gitbook/assets/image (486).png>)
 
 4\. Input the following parameters to set up your alert _(Image 13):_
 
@@ -170,7 +170,7 @@ The following details how to set up alerts on your dashboards. You can also set 
 Click on an image to enlarge it.
 {% endhint %}
 
-![Image 13: Your alert parameters](<../../../.gitbook/assets/image (542).png>)
+![Image 13: Your alert parameters](<../../../.gitbook/assets/image (123).png>)
 
 ## 5. Recommended Alerts
 
@@ -192,13 +192,13 @@ avg by (node_name) (100 - ((avg by (cpu,node_name) (irate(node_cpu_seconds_total
 100 - ((avg by (cpu,node_name) (irate(node_cpu_seconds_total{mode="idle"}[1m]))) * 100)
 ```
 
-<figure><img src="../../../.gitbook/assets/image (274).png" alt=""><figcaption><p>Image 14: CPU Usage Dashboard Query</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (592).png" alt=""><figcaption><p>Image 14: CPU Usage Dashboard Query</p></figcaption></figure>
 
 #### Alert:
 
 Set up your alert. This example uses a threshold limit of 75 _(Image 15)._
 
-<figure><img src="../../../.gitbook/assets/image (360).png" alt=""><figcaption><p>Image 15: CPU Threshold Alert</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (307).png" alt=""><figcaption><p>Image 15: CPU Threshold Alert</p></figcaption></figure>
 
 ### 5.2 Memory Usage
 
@@ -212,13 +212,13 @@ You can use the following example queries to set up a dashboard that will captur
 ((node_memory_MemTotal_bytes-node_memory_MemAvailable_bytes) / (node_memory_MemTotal_bytes))*100
 ```
 
-<figure><img src="../../../.gitbook/assets/image (341).png" alt=""><figcaption><p>Image 16: Memory Usage Query</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (288).png" alt=""><figcaption><p>Image 16: Memory Usage Query</p></figcaption></figure>
 
 #### Alert:
 
 Set up your alert. This example uses a threshold limit of 85 _(Image 17)._
 
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption><p>Image 17: Memory Usage Alert</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (363).png" alt=""><figcaption><p>Image 17: Memory Usage Alert</p></figcaption></figure>
 
 ### 5.3 Disk Usage
 
@@ -232,13 +232,13 @@ You can use the following example queries to set up a dashboard that will captur
 (sum((node_filesystem_size_bytes))by(node_name) - sum((node_filesystem_free_bytes))by(node_name)) *100/(sum((node_filesystem_avail_bytes))by(node_name)+(sum((node_filesystem_size_bytes))by(node_name) - sum((node_filesystem_free_bytes))by(node_name)))
 ```
 
-<figure><img src="../../../.gitbook/assets/image (493).png" alt=""><figcaption><p>Image 18: Disk Usage Query</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (679).png" alt=""><figcaption><p>Image 18: Disk Usage Query</p></figcaption></figure>
 
 #### Alert:
 
 Set up your alert. This example uses a threshold limit of 80 _(Image 17)._
 
-<figure><img src="../../../.gitbook/assets/image (290).png" alt=""><figcaption><p><em>Image 17: Disk Usage Alert</em></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (608).png" alt=""><figcaption><p><em>Image 17: Disk Usage Alert</em></p></figcaption></figure>
 
 ### 5.4 Iowait
 
@@ -252,13 +252,13 @@ You can use the following example queries to set up a dashboard that will captur
 (sum(irate(node_cpu_seconds_total{mode="iowait"}[1m]))by(node_name) * 100 / 4)
 ```
 
-<figure><img src="../../../.gitbook/assets/image (581).png" alt=""><figcaption><p><em>Image 18: Iowait Query</em></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (487).png" alt=""><figcaption><p><em>Image 18: Iowait Query</em></p></figcaption></figure>
 
 #### Alert:
 
 Set up your alert. This example uses a threshold limit of 60 _(Image 19)._
 
-<figure><img src="../../../.gitbook/assets/image (635).png" alt=""><figcaption><p><em>Image 19: Iowait Alert</em></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (354).png" alt=""><figcaption><p><em>Image 19: Iowait Alert</em></p></figcaption></figure>
 
 ## 6. Updating your Grafana Password
 

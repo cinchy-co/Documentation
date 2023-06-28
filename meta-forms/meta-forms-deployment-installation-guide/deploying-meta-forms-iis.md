@@ -19,19 +19,19 @@ Ensure that you download the latest version.
 1. Create a ‘Cinchy Applets’ folder if it does not exist (eg. _**C:/Cinchy Applets**_) and check in the App Experience code.
 2. If you have multiple instances, create a folder that corresponds to the name of your Cinchy instance (eg. _**C:/CinchyApplets/DXdemo**_) and place the extracted AApp Experience folder here.
 
-<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (407).png" alt=""><figcaption></figcaption></figure>
 
 3. Open your IIS Manager.&#x20;
 4. Navigate to IIS Connections.&#x20;
 5. Right Click the Cinchy Server name.
 
-<figure><img src="../../.gitbook/assets/image (378).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption></figcaption></figure>
 
 6. Expand Sites such that “Default Web Site” is visible.
 7. Navigate to the site containing your Cinchy application and select “Add Virtual Directory”.
 8. Name the Alias of this directory “dx”.
 
-<figure><img src="../../.gitbook/assets/image (385).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption></figcaption></figure>
 
 9. Input the path to _Cinchy Applets_ directory in the Physical Path field.
 10. Right click on the _meta-forms_ folder under the _dx_ virtual directory and click _Convert to Application_.
@@ -40,7 +40,7 @@ Ensure that you download the latest version.
 
 1\. Locate "\assets\config.json" and input your Cinchy domain as specified below.
 
-<figure><img src="../../.gitbook/assets/image (351).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (298).png" alt=""><figcaption></figcaption></figure>
 
 **Additional Changes**&#x20;
 
@@ -87,7 +87,7 @@ Once you have installed the experience, your environment will be populated with 
 * Get Form Sections Metadata query
 * Get Form Fields Metadata
 
-<figure><img src="../../.gitbook/assets/image (276).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (594).png" alt=""><figcaption></figcaption></figure>
 
 **Forms Table:** This table houses all of the existing forms in your environment. Adding an entry to this table, will add a form to the complete list of forms. The table is used to link form fields and form sections to one specific form, and it connects to the table which contains all of the form responses/data.
 

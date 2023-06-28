@@ -122,7 +122,7 @@ END
 
 The following example shows how to use API Saved Queries _(Image 2.)_
 
-![Image 2: Using API Saved Queries](<../../.gitbook/assets/image (27).png>)
+![Image 2: Using API Saved Queries](<../../.gitbook/assets/image (528).png>)
 
 {% hint style="info" %}
 In the above image, **"%40"** is the URL encoded version of **"@". I**f you are passing them in as parameters you will need to include the %40 in front of your parameter name.
@@ -144,33 +144,33 @@ The following instructions detail how to allow anonymous access to your saved qu
 Clicking on inline images in Gitbook will open a larger version.
 {% endhint %}
 
-![Image 3: The Entitlements Table](<../../.gitbook/assets/image (420).png>)
+![Image 3: The Entitlements Table](<../../.gitbook/assets/image (138).png>)
 
 4\. Design your query _(Image 4)_. For more information on creating new saved queries, [click here](../../guides-for-using-cinchy/builder-guides/saved-queries.md#2.-creating-a-saved-query).
 
-![Image 4: Design your Query](<../../.gitbook/assets/image (11).png>)
+![Image 4: Design your Query](<../../.gitbook/assets/image (512).png>)
 
 5\. Once you have written your query, navigate to **Design Query > Info**, on the left navigation bar.
 
 6\. Change your **API Result Format** to **JSON** _(Image 5)_.
 
-![Image 5: Change your API Result Format to JSON](<../../.gitbook/assets/image (215).png>)
+![Image 5: Change your API Result Format to JSON](<../../.gitbook/assets/image (30).png>)
 
 7\. Navigate to **Design Controls** from the left navigation bar.
 
 8\. To ensure that anonymous users have the correct permission needed to execute the query that generates the API response, add the **"Anonymous"** user to the users permission group uiunder **"Who can execute this query?"** _(Image 6)._
 
-![Image 6: Ensuring the anonymous user has access](<../../.gitbook/assets/image (6).png>)
+![Image 6: Ensuring the anonymous user has access](<../../.gitbook/assets/image (507).png>)
 
 9\. Navigate to **"Execute Query"** from the left navigation bar.
 
 10\. Copy your **REST API endpoint URL** _(Image 7)._
 
-![Image 7: Copy your REST API endpoint URL](<../../.gitbook/assets/image (526).png>)
+![Image 7: Copy your REST API endpoint URL](<../../.gitbook/assets/image (107).png>)
 
 11\. To confirm that anonymous access has been successfully set up, paste the URL into an **incognito/private browser** _(Image 8)._
 
-![Image 8: Testing your API](<../../.gitbook/assets/image (491).png>)
+![Image 8: Testing your API](<../../.gitbook/assets/image (678).png>)
 
 ### 3.1 Troubleshooting
 

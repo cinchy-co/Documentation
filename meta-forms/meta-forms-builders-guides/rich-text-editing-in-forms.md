@@ -28,7 +28,7 @@ You can enable rich text editing on your Form text columns through the Design Ta
 * **Save text as HTML:** If you need the data saved from the rich text editor to be in HTML format, check this box.
 * **Max Characters:** The rich text editor saves data in Cinchy as structured data (or HTML), which is much more verbose than your actual text. You will need to increase this number much higher than you expect (e.g. 10,000 characters).
 
-<figure><img src="../../.gitbook/assets/image (310).png" alt=""><figcaption><p>Image 1: Enabling the Rich Text Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (628).png" alt=""><figcaption><p>Image 1: Enabling the Rich Text Editor</p></figcaption></figure>
 
 ## 3. Using the Rich Text Editor
 
@@ -36,7 +36,7 @@ Once you have enabled rich text editing on your text column for your form, you c
 
 You will see all the formatting options available to you in the editor toolbar _(Image 2)._ A form field that does not have rich text enabled appears like the "Plaintext" section below.
 
-<figure><img src="../../.gitbook/assets/Text Editor.png" alt=""><figcaption><p>Image 2: The editing toolbar</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Text Editor (1).png" alt=""><figcaption><p>Image 2: The editing toolbar</p></figcaption></figure>
 
 {% hint style="info" %}
 Note: If you have an understanding of HTML, you can edit the data directly in the table cell and it will automatically reflect in your form. Be mindful that if you write invalid HTML, you will potentially see unexpected results in the Rich Text Editor. You can always revert changes using the [collaboration log.](../../guides-for-using-cinchy/user-guides/data-management.md)

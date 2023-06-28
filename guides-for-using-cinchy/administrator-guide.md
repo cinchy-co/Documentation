@@ -51,7 +51,7 @@ A Cinchy platform admin has the ability to manage and transfer their builder lic
 
 1. As an Administrator, navigate to Users table _(Image 1)._
 
-<figure><img src="../.gitbook/assets/image (508).png" alt=""><figcaption><p>Image 1: The Users Table</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (89).png" alt=""><figcaption><p>Image 1: The Users Table</p></figcaption></figure>
 
 2. Navigate to the row pertaining to the user that you want to manage.
 3. To remove Builder access, uncheck the following columns _(Image 2)_:
@@ -61,7 +61,7 @@ A Cinchy platform admin has the ability to manage and transfer their builder lic
    1. **Can Design Tables**
    2. **Can Design Queries**
 
-<figure><img src="../.gitbook/assets/image (516).png" alt=""><figcaption><p>Image 2: Managing Access</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (97).png" alt=""><figcaption><p>Image 2: Managing Access</p></figcaption></figure>
 
 {% hint style="warning" %}
 Ensure that you are not surpassing your Builder license limits when managing access.

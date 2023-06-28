@@ -191,4 +191,4 @@ kubectl describe deployment connections-app -n <namespace>
 
 4. The output should look like the following:
 
-<figure><img src="../../../.gitbook/assets/image (618).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (337).png" alt=""><figcaption></figcaption></figure>

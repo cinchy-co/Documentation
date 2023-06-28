@@ -4,7 +4,7 @@
 
 When syncing a Data Source, you may have the option to add in additional configuration sections, such as an Auth Request, under the "Add a Section" drop down tab in the Connection Experience _(Image 1)._
 
-<figure><img src="../../../.gitbook/assets/image (97).png" alt=""><figcaption><p>Image 1: Other Configuration Settings Available </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (412).png" alt=""><figcaption><p>Image 1: Other Configuration Settings Available </p></figcaption></figure>
 
 1. To add in an Auth Request, fill in the following parameters _(Image 2):_
 

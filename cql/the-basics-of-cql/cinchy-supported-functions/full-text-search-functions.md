@@ -47,7 +47,7 @@ WHERE CONTAINS([Title], @SearchWord)
 
 #### Example Results
 
-<figure><img src="../../../.gitbook/assets/image (140).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 ## 2. CONTAINS Modifiers
 
@@ -83,7 +83,7 @@ WHERE CONTAINS([Title], '"over*"')
 
 #### Example Results
 
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (540).png" alt=""><figcaption></figcaption></figure>
 
 ### 2.2 Generation Term
 
@@ -117,7 +117,7 @@ WHERE CONTAINS([Summary], 'FORMSOF(INFLECTIONAL, "gave")')
 
 #### Example Results (Inflectional)
 
-<figure><img src="../../../.gitbook/assets/image (193).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 #### General Syntax (Thesaurus)
 
@@ -175,7 +175,7 @@ WHERE CONTAINS([summary], 'NEAR((first, page), 2)')
 
 #### Example Results
 
-<figure><img src="../../../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>
 
 ### 2.4 Boolean Operators
 
@@ -219,7 +219,7 @@ WHERE CONTAINS([summary], @SearchWord)
 
 #### Example 2 (OR) Results
 
-<figure><img src="../../../.gitbook/assets/image (513).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
 
 #### Example 3 (AND NOT) Syntax
 
@@ -235,7 +235,7 @@ WHERE CONTAINS([summary], @SearchWord)
 
 #### Example 3 (AND NOT) Results
 
-<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (536).png" alt=""><figcaption></figcaption></figure>
 
 ### 2.5 NEAR
 
@@ -265,7 +265,7 @@ WHERE CONTAINS([title], @SearchWord)
 
 #### Example Results
 
-<figure><img src="../../../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 ## 3. FREETEXT
 

@@ -19,17 +19,17 @@ Using Powershell, you must now install the Data Experience you have exported out
 
 1. Open File Explorer and navigate to your exported folder _(Image 1)._
 
-![Image 1: Step 1](<../../../.gitbook/assets/image (204).png>)
+![Image 1: Step 1](<../../../.gitbook/assets/image (19).png>)
 
 2\. In the **folder path URL** for the exported data experience type in **powershell** to launch Powershell for that path.
 
 3\. Hit **Enter** on your keyboard _(Image 2)._
 
-![Image 2: Step 3](<../../../.gitbook/assets/image (191).png>)
+![Image 2: Step 3](<../../../.gitbook/assets/image (6).png>)
 
 4\. In the Powershell window, type **cin** and hit **Tab** on your keyboard. Type **install** _(Image 3)._
 
-![Image 3: Step 4](<../../../.gitbook/assets/image (323).png>)
+![Image 3: Step 4](<../../../.gitbook/assets/image (270).png>)
 
 5\. Enter the install parameters into the Powershell window:
 
@@ -45,30 +45,30 @@ Sample _(Image 4):_\
 `` -c "C:\Cinchy CLI v4.0.2" ` ``\
 `` -d "C:\CLI Output Logs" ` ``
 
-![Image 4: Step 5](<../../../.gitbook/assets/image (87).png>)
+![Image 4: Step 5](<../../../.gitbook/assets/image (402).png>)
 
 6\. Hit **Enter** on your keyboard to run the install command. Once the Data Experience has been installed you will get a message in Powershell that the install was completed _(Image 5)._
 
-![Image 5: Step 6](<../../../.gitbook/assets/image (322).png>)
+![Image 5: Step 6](<../../../.gitbook/assets/image (269).png>)
 
 ## 2. Validate Install
 
 1. Ensure that the **Models Table** is populated in the target environment with the model that was installed _(Image 6)._
 
-![Image 6: Step 1](<../../../.gitbook/assets/image (403).png>)
+![Image 6: Step 1](<../../../.gitbook/assets/image (257).png>)
 
 2\. Ensure that the **Currency Exchange Rate** table exists in the target environment with the new column names _(Image 7)._
 
-![Image 7: Step 2](<../../../.gitbook/assets/image (590).png>)
+![Image 7: Step 2](<../../../.gitbook/assets/image (496).png>)
 
 3\. Ensure that the **Currency Converter** query exists in the target environment with the new column names and labels _(Image 8)._
 
-![Image 8: Step 3](<../../../.gitbook/assets/image (685).png>)
+![Image 8: Step 3](<../../../.gitbook/assets/image (590).png>)
 
 4\. Ensure that the **Data Experience Definitions** table has not changed, unless you have added or removed column details within this table _(Image 9)._
 
-![Image 9: Step 4](<../../../.gitbook/assets/image (189).png>)
+![Image 9: Step 4](<../../../.gitbook/assets/image (4).png>)
 
 5\. Ensure that the **Data Experience Releases** table in the target environment is populated with the new release version number from the install (e.g. 2.0.0) _(Image 10)._
 
-![Image 10: Step 5](<../../../.gitbook/assets/image (54).png>)
+![Image 10: Step 5](<../../../.gitbook/assets/image (369).png>)

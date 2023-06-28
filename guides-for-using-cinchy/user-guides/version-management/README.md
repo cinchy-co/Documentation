@@ -12,7 +12,7 @@ Cinchy natively and automatically manages data versioning in the platform throug
 
 Cinchy maintains a version history of all changes to every data element stored in Cinchy. The version history is queryable in Cinchy to accelerate analysis, and can also be viewed through the [Collaboration Log](../data-management.md#6.-collaboration-log), which tracks changes made by users, systems, or external applications _(Image 1)._ When required, you can easily revert data to previous states using the [**Recycle Bin** ](https://platform.docs.cinchy.com/guides-for-using-cinchy/user-guides/data-management#recycle-bin)**or the Revert** button.
 
-<figure><img src="../../../.gitbook/assets/image (410).png" alt=""><figcaption><p>Image 1: The Collaboration Log</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (128).png" alt=""><figcaption><p>Image 1: The Collaboration Log</p></figcaption></figure>
 
 ## 2. Schema Version Management
 
@@ -24,9 +24,9 @@ Your schema/data model version can also be managed when you are using **multiple
 
 To export a table (**i.e. your data model)**, navigate to the **Design Table > Export** button _(Image 2)._ You can then **import your data model** into any other environment using the [model loader ](https://platform.docs.cinchy.com/api-guide/api-overview#2.2-apps-modelloader)_(Image 3)._
 
-<figure><img src="../../../.gitbook/assets/image (283).png" alt=""><figcaption><p>Image 2: Exporting a data model </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (601).png" alt=""><figcaption><p>Image 2: Exporting a data model </p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (499).png" alt=""><figcaption><p>Image 3: Importing a data model</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (681).png" alt=""><figcaption><p>Image 3: Importing a data model</p></figcaption></figure>
 
 This functionality is achieved through the **use and synchronization of GUIDs.** Each data element in Cinchy (table, column, etc.) will have a matching GUID, which stays consistent even across multiple environments. That means that changes made in your source environment will automatically and accurately be applied once promoted to your higher environment.&#x20;
 
@@ -36,7 +36,7 @@ This functionality is achieved through the **use and synchronization of GUIDs.**
 
 You can find the GUID for your object by navigating to the applicable System Table. Ex: **Column GUIDs** can be found in the **Columns table** _(Image 4)._
 
-<figure><img src="../../../.gitbook/assets/image (122).png" alt=""><figcaption><p>Image 4: GUIDs</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (437).png" alt=""><figcaption><p>Image 4: GUIDs</p></figcaption></figure>
 
 ## 3. Creating Data Packages
 

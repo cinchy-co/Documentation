@@ -82,11 +82,11 @@ We highly recommend you[ update the password as soon as possible.](https://opens
 
 2\. Navigate to the **Stack Management** tab in the left navigation menu _(Image 1)._
 
-![Image 1: Select Stack Management](<../../../../.gitbook/assets/image (306).png>)
+![Image 1: Select Stack Management](<../../../../.gitbook/assets/image (624).png>)
 
 3\. From the left navigation, click on **Index Patterns** _(Image 2)_.
 
-![Image 2: Select Index Patterns](<../../../../.gitbook/assets/image (241).png>)
+![Image 2: Select Index Patterns](<../../../../.gitbook/assets/image (181).png>)
 
 4\. Click on the **Create Index Pattern** button.
 
@@ -96,22 +96,22 @@ We highly recommend you[ update the password as soon as possible.](https://opens
 You can use the asterisk (\*) to match multiple sources.
 {% endhint %}
 
-![Image 3: Define your sources](<../../../../.gitbook/assets/image (654).png>)
+![Image 3: Define your sources](<../../../../.gitbook/assets/image (559).png>)
 
 6\. Configure your index pattern settings _(Image 4)._
 
 * Time field: Select a primary time field to use with the global time filter
 * Custom index pattern ID: By default, Opensearch gives a unique identifier to each index pattern. You can use this field to optional override the default ID with a custom one.
 
-![Image 4: Configure your index pattern settings](<../../../../.gitbook/assets/image (76).png>)
+![Image 4: Configure your index pattern settings](<../../../../.gitbook/assets/image (391).png>)
 
 7\. Once created, you can review your Index Patterns from the **Index Patterns** page _(Image 5)._
 
-![Image 5: Review your Index Patterns](<../../../../.gitbook/assets/image (457).png>)
+![Image 5: Review your Index Patterns](<../../../../.gitbook/assets/image (644).png>)
 
 8\. Click on your Index Pattern to review your fields _(Image 6)._
 
-![Image 6: Reviewing your Index Pattern fields](<../../../../.gitbook/assets/image (525).png>)
+![Image 6: Reviewing your Index Pattern fields](<../../../../.gitbook/assets/image (106).png>)
 
 ### 2.3 Create a Visualization
 
@@ -119,19 +119,19 @@ You can easily pull out any data from your index sources and view them in a vari
 
 1. From the left navigation pane, click **Visualize** _(Image 7)._
 
-![Image 7: Click Visualize](<../../../../.gitbook/assets/image (367).png>)
+![Image 7: Click Visualize](<../../../../.gitbook/assets/image (221).png>)
 
 2\. If you have any Visualizations, they will appear on this page. To create a new one, click the **Create Visualization** button _(Image 8)._
 
-![Image 8: Click Create New](<../../../../.gitbook/assets/image (77).png>)
+![Image 8: Click Create New](<../../../../.gitbook/assets/image (392).png>)
 
 3\. Select your visualization type from the populated list _(Image 9)._
 
-![Image 9: Select your Visualization type](<../../../../.gitbook/assets/image (345).png>)
+![Image 9: Select your Visualization type](<../../../../.gitbook/assets/image (292).png>)
 
 4\. Choose your source _(Image 10)_. If the source you want to pull data from isn't listed, you will need to [set it up as an index first.](./#2.1-setting-up-an-index)
 
-![Image 10: Select your Source](<../../../../.gitbook/assets/image (230).png>)
+![Image 10: Select your Source](<../../../../.gitbook/assets/image (212).png>)
 
 5\. Configure the data parameters that appear in the right hand pane of the Create screen. These options will vary depending on what type of visualization you choose in step 3. The following example uses a pie chart visualization _(Image 11):_
 
@@ -149,21 +149,21 @@ You can easily pull out any data from your index sources and view them in a vari
 * Options
   * The variables in the options tab can be used to configure the UI of the visualization itself.
 
-<figure><img src="../../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Image 11: Creating your Visualization</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>Image 11: Creating your Visualization</p></figcaption></figure>
 
 6\. There are a few ways to further focus your visualization:
 
 * [Use DQL](https://opensearch.org/docs/1.2/dashboards/dql/) to search your index data _(Image 12)._ You can also save any queries you write for easy access by clicking on the save icon.
 
-<figure><img src="../../../../.gitbook/assets/image (611).png" alt=""><figcaption><p>Image 12: Use a query on your Visualization</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (330).png" alt=""><figcaption><p>Image 12: Use a query on your Visualization</p></figcaption></figure>
 
 * Add a filter on any of your fields _(Image 13)._
 
-<figure><img src="../../../../.gitbook/assets/image (153).png" alt=""><figcaption><p>Image 13: Add a filter on any of your fields</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Image 13: Add a filter on any of your fields</p></figcaption></figure>
 
 * Update your date filter _(Image 14)._
 
-<figure><img src="../../../../.gitbook/assets/image (342).png" alt=""><figcaption><p>Image 14: Update your date filter</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (289).png" alt=""><figcaption><p>Image 14: Update your date filter</p></figcaption></figure>
 
 7\. Click save when finished with your visualization.
 
@@ -177,23 +177,23 @@ You can also create new visualizations from the Dashboard screen.
 
 1. From the left navigation pane, click on **Dashboards** _(Image 15)._
 
-![Image 15: Click Dashboards](<../../../../.gitbook/assets/image (53).png>)
+![Image 15: Click Dashboards](<../../../../.gitbook/assets/image (368).png>)
 
 2\. If you have any Dashboards, they will appear on this page. To create a new one, click the **Create Dashboard** button _(Image 16)._
 
-![Image 16: Click Create Dashboard](<../../../../.gitbook/assets/image (180).png>)
+![Image 16: Click Create Dashboard](<../../../../.gitbook/assets/image (84).png>)
 
 3\. The **"Editing New Dashboard"** screen will appear. Click on **Add an Existing** object _(Image 17)._
 
-![Image 17: Click Add An Existing](<../../../../.gitbook/assets/image (307).png>)
+![Image 17: Click Add An Existing](<../../../../.gitbook/assets/image (625).png>)
 
 4\. Select any of the visualizations you created and it will automatically add to your Dashboard _(Image 18)._ Repeat this step for as many visualizations as you'd like to appear.
 
-![Image 18: Add as many visualizations as you'd like](<../../../../.gitbook/assets/image (505).png>)
+![Image 18: Add as many visualizations as you'd like](<../../../../.gitbook/assets/image (684).png>)
 
 5\. Click **Save** to finish _(Image 19)._
 
-![Image 19: Click Save.](<../../../../.gitbook/assets/image (210).png>)
+![Image 19: Click Save.](<../../../../.gitbook/assets/image (25).png>)
 
 ## 3. Updating your Opensearch Password
 

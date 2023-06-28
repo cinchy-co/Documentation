@@ -34,25 +34,25 @@ Cinchy’s Dataware platform features a Universal Data Browser that allows users
 
 Data on the network is protected by cellular-level access controls, data-driven entitlements, and superior data governance. This means that users can only view, edit, or operationalize data that has been granted access to from the data owner _(Image 1)._
 
-![Image 1: Cellular level access](<../../.gitbook/assets/image (41).png>)
+![Image 1: Cellular level access](<../../.gitbook/assets/image (542).png>)
 
 ### **Track Version History for Full Lifecycle of Data**
 
 All data is automatically version-controlled and can easily be reverted to previous states with the proper permissions. On all data tables, you can see changes made by users, systems, or external applications through Data Synchronization or by using a Collaboration Log _(Image 2)._
 
-![Image 2: Collaboration Log](<../../.gitbook/assets/image (148).png>)
+![Image 2: Collaboration Log](<../../.gitbook/assets/image (52).png>)
 
 ### **Access Saved Queries on the Data Network**
 
 Users can easily access and run saved queries that are available to them through the Data Marketplace. All queries respect Universal Access Controls meaning you will only see the data that you have access to _(Image 3)._
 
-<figure><img src="../../.gitbook/assets/image (348).png" alt=""><figcaption><p><em>Image 3: Executing a Saved Query</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (295).png" alt=""><figcaption><p><em>Image 3: Executing a Saved Query</em></p></figcaption></figure>
 
 ### **Bookmark and Manage Data in a Secure Marketplace**
 
 Users can also access all accessible tables, queries, and applets through the Cinchy Marketplace. Here you can also order tiles and bookmark favourites _(Image 4)._
 
-![Image 4: Accessing everything via a secure marketplace](<../../.gitbook/assets/image (63).png>)
+![Image 4: Accessing everything via a secure marketplace](<../../.gitbook/assets/image (378).png>)
 
 ### **Access Data through Rich Application Experiences**
 
@@ -60,4 +60,4 @@ Users can also experience their data through custom application experiences that
 
 Here is an example Experience _(Image 5):_
 
-![Imagee 5: An example experience](<../../.gitbook/assets/image (194).png>)
+![Imagee 5: An example experience](<../../.gitbook/assets/image (9).png>)

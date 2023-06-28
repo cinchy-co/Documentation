@@ -35,7 +35,7 @@ Create your data experience (DX) in a virtual data network.
 | Domain            | <p>Sandbox (if the domain does not exist, create it)<br></p><p>To create a domain on the fly:</p><ol><li>Enter domain name in Domain field</li><li>Hit enter on keyboard</li><li>On the Confirm Domain window, click Yes</li></ol> |
 | Description       | This table is a test table for building and deploying a data experience for currency conversion                                                                                                                                    |
 
-![Image 1: Creating your Table](<../../../.gitbook/assets/image (630).png>)
+![Image 1: Creating your Table](<../../../.gitbook/assets/image (349).png>)
 
 6\. Click **Columns** in the left hand navigation to create the columns for the table
 
@@ -58,7 +58,7 @@ Create your data experience (DX) in a virtual data network.
 | CAD        | USD        | 0.71 |
 | USD        | CAD        | 1.40 |
 
-![Image 2: Filling in your table](<../../../.gitbook/assets/image (60).png>)
+![Image 2: Filling in your table](<../../../.gitbook/assets/image (375).png>)
 
 ## 3. Create the Query
 
@@ -73,7 +73,7 @@ Create a simple query that pulls information from the **Currency Exchange Rate t
 You will find the Currency Exchange Rate table in the “Sandbox” domain. To expand the “Sandbox” domain, click on the gray arrow (or double click)
 {% endhint %}
 
-![Image 3: Creating your query](<../../../.gitbook/assets/image (311).png>)
+![Image 3: Creating your query](<../../../.gitbook/assets/image (629).png>)
 
 4\. In the **“SELECT”** line drag and drop the **“Rate”** column and enter in the following _(Image 4):_\
 `SELECT [Rate] * @Amount AS 'Converted Amount'`
@@ -82,7 +82,7 @@ You will find the Currency Exchange Rate table in the “Sandbox” domain. To e
 You will find the Rate column by expanding the Currency Exchange Rate table, similarly to expanding the “Sandbox” domain
 {% endhint %}
 
-![Image 4: Creating your query, cont.](<../../../.gitbook/assets/image (359).png>)
+![Image 4: Creating your query, cont.](<../../../.gitbook/assets/image (306).png>)
 
 5\. Enter in the following for the WHERE clause _(Image 5):_
 
@@ -90,11 +90,11 @@ You will find the Rate column by expanding the Currency Exchange Rate table, sim
 `AND [Currency 1] = @Currency_1` \
 `AND [Currency 2] = @Currency_2`
 
-![Image 5: Creating your query, cont.](<../../../.gitbook/assets/image (565).png>)
+![Image 5: Creating your query, cont.](<../../../.gitbook/assets/image (471).png>)
 
 6\. Click the Execute (or play) icon to run the query _(Image 6):_
 
-![Image 6: Creating your query, cont.](<../../../.gitbook/assets/image (40).png>)
+![Image 6: Creating your query, cont.](<../../../.gitbook/assets/image (541).png>)
 
 7\. Test the query by entering in the following and clicking the submit button _(Image 7):_
 
@@ -102,7 +102,7 @@ You will find the Rate column by expanding the Currency Exchange Rate table, sim
 `@Currency_1: CAD`\
 `@Currency_2: USD`
 
-![Image 7: Testing your query](<../../../.gitbook/assets/image (61).png>)
+![Image 7: Testing your query](<../../../.gitbook/assets/image (376).png>)
 
 8\. Save the Query by clicking on the Info tab (Left Navigation)\
 9\. Enter in the following details for the query _(Image 8):_
@@ -116,8 +116,8 @@ You will find the Rate column by expanding the Currency Exchange Rate table, sim
 | API Result Format | JSON                                                                                             |
 | Description       | This query is a test query for building and deploying a data experience for currency conversion  |
 
-![Image 8: Adding in info about your query](<../../../.gitbook/assets/image (298).png>)
+![Image 8: Adding in info about your query](<../../../.gitbook/assets/image (616).png>)
 
 10\. Click the Save button _(Image 9)._
 
-![Image 9: Saving your query](<../../../.gitbook/assets/image (56).png>)
+![Image 9: Saving your query](<../../../.gitbook/assets/image (371).png>)

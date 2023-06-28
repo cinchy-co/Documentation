@@ -73,7 +73,7 @@ This example shows you how to set up a polling event source using the Connection
 
 ### 2.1 Schema
 
-<figure><img src="../../../.gitbook/assets/image (206).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 Our column parameters are set as follows:
 
@@ -85,4 +85,4 @@ Our column parameters are set as follows:
 | ADDRESS     | Text      |
 | SALARY      | Number    |
 
-<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (527).png" alt=""><figcaption></figcaption></figure>

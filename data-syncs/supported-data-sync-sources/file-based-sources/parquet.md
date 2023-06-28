@@ -28,7 +28,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 | Version    | **Mandatory.** This is a pre-populated field containing a version number for your data sync. You can override it if you wish.                                 | 1.0.0                                                 |
 | Parameters | **Optional.** Review our documentation on [Parameters here ](../../building-data-syncs/advanced-settings/parameters.md)for more information about this field. | Since we are doing a local upload, we use "@Filepath" |
 
-<figure><img src="../../../.gitbook/assets/image (111).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (426).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
 ## 3. Source Tab
 

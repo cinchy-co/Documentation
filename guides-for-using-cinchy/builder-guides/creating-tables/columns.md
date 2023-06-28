@@ -141,7 +141,7 @@ Requires all values in the column to be unique. Adding a new record or modifying
 If you need uniqueness across multiple columns instead (ex. First Name does not need to be unique, but First Name + Last Name needs to be unique), you can create an index in Design Table, add those columns and set the index to unique. If it needs to be more complicated, you can also create a calculated column and set that column to unique.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (388).png>)
+![](<../../../.gitbook/assets/image (242).png>)
 
 #### Multi-Select
 
@@ -199,7 +199,7 @@ There are several Date column type display format options available in Cinchy:
 * DD-MMM-YY (e.g. 31-Oct-16)
 * Custom Format
 
-![](<../../../.gitbook/assets/image (235).png>)
+![](<../../../.gitbook/assets/image (175).png>)
 
 {% hint style="info" %}
 Please Note: the "Default Value" field is not mandatory and should be left blank (best practice). However, if populated you will not be able to clear the default date value provided to a "blank" data (no date). You will only be able to overwrite it with another date value.
@@ -225,13 +225,13 @@ _These are equivalent to computed columns in SQL._
 
 When creating a calculated column, you will notice the option to have it cached or not, located under Advanced Settings. This was an option introduced in version 4.0 of the platform.
 
-![](<../../../.gitbook/assets/image (598).png>)
+![](<../../../.gitbook/assets/image (317).png>)
 
 A **cached calculated column** stores your data for fast retrieval and querying. Calculated columns are defaulted to cached. This is an actual column in your table that is based on a defined CQL formula. This column will recalculate when data is changed **in the same row.**&#x20;
 
 In the below example, the **Label** column is a calculated column that connects various name columns together. You can see that _"Connect your data"_ appears in each label. If you then wanted to change the name in row one from _"Connect your data"_ to _"Connect **all** your data"_, only that specific row would recalculate automatically to update the label. To update any other row (within this table or another) with a calculated column that references that data, you would need to manually make changes to each in order to prompt a recalculation.
 
-![](<../../../.gitbook/assets/image (503).png>)
+![](<../../../.gitbook/assets/image (682).png>)
 
 The other option is to uncheck the cached button, and to have a **live calculated column** instead. A live column runs the query in real time, on the fly: it is essentially a stored formula that is only executed when you read or query the record, and is executed each time you do so.
 
@@ -247,7 +247,7 @@ You can create a choice column (single or multi-select) in Cinchy. In this scena
 
 If you created a spatial table, you will have access to the geography and geometry column types. These columns also have the option to be indexed via Index in the advanced settings on the column itself.
 
-![Check off Index to create an index on a geospatial column](<../../../.gitbook/assets/image (376).png>)
+![Check off Index to create an index on a geospatial column](<../../../.gitbook/assets/image (230).png>)
 
 ### 4.1 Geometry
 
@@ -269,6 +269,6 @@ Hierarchy columns are simply link columns referencing the current table. For exa
 
 **Example 2:** _Builder Guides_ is the **parent page.** It has five **sub-pages**: _Best Practices, Creating Tables, Saved Queries, Integration Guides, and CInchy DXD Utility._ In this example, we also have another level of hierarchy, wherein _Best Practices_ is also a **parent page,** and _Multilingual Support_ is its **sub-page.**
 
-![](<../../../.gitbook/assets/image (277).png>)
+![](<../../../.gitbook/assets/image (595).png>)
 
 Another common use of Hierarchy columns are to show Manager/Employee relationships

@@ -57,7 +57,7 @@ You have the option to add a destination filter to your data sync. Please review
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../.gitbook/assets/image (338).png" alt=""><figcaption><p>Image 1: Define your Destination</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (285).png" alt=""><figcaption><p>Image 1: Define your Destination</p></figcaption></figure>
 
 ## 3. Next Steps
 
@@ -69,7 +69,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 ## Appendix A - API Specifications
 
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (408).png" alt=""><figcaption></figcaption></figure>
 
 ### **Retry Configuration**
 
@@ -91,7 +91,7 @@ To set up a retry configuration:
 
 3\. Input your Max Attempts. The maximum number of retries allowed is 10.
 
-<figure><img src="../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (451).png" alt=""><figcaption></figcaption></figure>
 
 4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.&#x20;
 
@@ -113,9 +113,9 @@ Note that the Regex value should be entered as a regular expression. The Regex e
 **For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".&#x20;
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (117).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (432).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (411).png" alt=""><figcaption></figcaption></figure>
 
 ### REST API Source
 

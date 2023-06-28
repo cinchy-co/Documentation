@@ -29,13 +29,13 @@ To add a photo to your profile, complete the following _(Image 1):_
 3. From the settings page click on the **my photo image**
 4. Locate and upload your photo
 
-![Image 1: Uploading your photo](<../../../.gitbook/assets/image (217).png>)
+![Image 1: Uploading your photo](<../../../.gitbook/assets/image (32).png>)
 
 ### 1.2 My Profile <a href="#my-profile" id="my-profile"></a>
 
 From the settings page in the My Profile section you are able to update the **language, region, and time zone** _(Image 2)._
 
-![Image 2: My Profile](<../../../.gitbook/assets/image (380).png>)
+![Image 2: My Profile](<../../../.gitbook/assets/image (234).png>)
 
 ### 1.3 My Password <a href="#my-password" id="my-password"></a>
 

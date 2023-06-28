@@ -24,7 +24,7 @@ FROM [Cinchy].[Tables]
 WHERE [Domain] = 'Cinchy'
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (408).png" alt=""><figcaption><p>Image 1: Using a Scalar-Valued UDF in CQL</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (262).png" alt=""><figcaption><p>Image 1: Using a Scalar-Valued UDF in CQL</p></figcaption></figure>
 
 {% hint style="info" %}
 Scalar-valued functions have to be invoked with a parameter, even if the definition of the function does not require a parameter. You can pass a string:
@@ -42,7 +42,7 @@ Depending on how intensive or live you want the calculation to be, choose whethe
 
 Simply add your UDF to the calculated column _(Image 2)._
 
-<figure><img src="../../../../.gitbook/assets/image (295).png" alt=""><figcaption><p>Image 2: Using a Scalar-Valued UDF for Calculations</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (613).png" alt=""><figcaption><p>Image 2: Using a Scalar-Valued UDF for Calculations</p></figcaption></figure>
 
 ### 3.2 As a Trigger
 

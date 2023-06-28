@@ -21,7 +21,7 @@ If you are having issues with your script, we suggest pasting it into [https://j
 
 User Defined Functions (UDFs) are registered in the **Cinchy User Defined Functions** table _(Image 1)._
 
-<figure><img src="../../../../.gitbook/assets/image (473).png" alt=""><figcaption><p>Image 1: UDFs Table</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (660).png" alt=""><figcaption><p>Image 1: UDFs Table</p></figcaption></figure>
 
 | Column Name | Description                                                                                                                                                                                                                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

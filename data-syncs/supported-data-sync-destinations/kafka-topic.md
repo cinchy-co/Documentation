@@ -56,7 +56,7 @@ The names you specify in your "Target Column" value will turn into attributes in
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (418).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
 
 ## 4. Next Steps
 

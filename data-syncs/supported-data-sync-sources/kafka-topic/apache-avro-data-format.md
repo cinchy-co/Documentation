@@ -23,7 +23,7 @@ For more about AVRO and Kafka, [read the documentation here. ](https://www.confl
 
 To set up the Apache AVRO connection to a Kafka Schema Registry, you will need to configure your Listener Configs table with the below specified attributes.
 
-<figure><img src="../../../.gitbook/assets/image (671).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (576).png" alt=""><figcaption></figcaption></figure>
 
 ### Listener Config Attributes
 

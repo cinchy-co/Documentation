@@ -14,7 +14,7 @@ It follows an **SP Initiated SSO pattern** where the SP will Redirect to the IdP
 
 Below is a diagram outlining the flow when a non-authenticated user attempt to access a Cinchy resource _(Image 1)._
 
-![Image 1: Non-authenticated user access attempt ](<../../../../../.gitbook/assets/image (202).png>)
+![Image 1: Non-authenticated user access attempt ](<../../../../../.gitbook/assets/image (17).png>)
 
 
 

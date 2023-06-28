@@ -48,11 +48,11 @@ You are able to add as many attributes into your Row Filter as needed. For examp
 
 1. When viewing a table, click on **Data Controls > Entitlements** from the left navigation menu _(Image 1)._
 
-![Image 1: Step 1, Entitlements](<../../../../.gitbook/assets/image (45).png>)
+![Image 1: Step 1, Entitlements](<../../../../.gitbook/assets/image (360).png>)
 
 2\. Currently both the table creator and anyone in the `Cinchy Administrators` group has access to perform any action on any objects. You can give granular entitlements at a Group or a  User level, for both viewing and editing access _(Image 2)._
 
-![Image 2: Step 2, An example of Entitlements](<../../../../.gitbook/assets/image (563).png>)
+![Image 2: Step 2, An example of Entitlements](<../../../../.gitbook/assets/image (469).png>)
 
 3\. In the above scenario, John Smith is part of the **Developers group**. He is able to view all columns via the entitlement to the **Developers group**, and he is able to edit both the First Name and Last Name column through different entitlements.
 
@@ -68,13 +68,13 @@ Approving this entitlement enables users to see and search for the table in the 
 
 Approving this entitlement enables users to export data from the table via the Manage Data screen _(Image 3)._
 
-![Image 3: Step 2.2 Bulk Export](<../../../../.gitbook/assets/image (444).png>)
+![Image 3: Step 2.2 Bulk Export](<../../../../.gitbook/assets/image (162).png>)
 
 ### 3.3 Direct Query
 
 Approving this entitlement enables users to query the data from the table directly in the Query Builder _(Image 4)._
 
-![Image 4: Step 2.3 Direct Queries](<../../../../.gitbook/assets/image (558).png>)
+![Image 4: Step 2.3 Direct Queries](<../../../../.gitbook/assets/image (464).png>)
 
 ### 3.4 Design Table
 
@@ -180,7 +180,7 @@ Most of these examples will be with the editable row filter so it is easy to see
 
 _(Image 5)_
 
-![Image 5: Sample Data](<../../../../.gitbook/assets/image (226).png>)
+![Image 5: Sample Data](<../../../../.gitbook/assets/image (41).png>)
 
 #### Simple Example
 
@@ -189,7 +189,7 @@ With the following entitlements _(Image 6):_
 * Edit Specific Columns: Age
 * Editable Row Filter: \[Age] > 30
 
-![Image 6: Simple Example](<../../../../.gitbook/assets/image (85).png>)
+![Image 6: Simple Example](<../../../../.gitbook/assets/image (400).png>)
 
 #### Example with Viewable Data
 
@@ -198,7 +198,7 @@ _(Image 7)_
 * View Specific Columns: First Name, Last Name
 * Viewable Row Filter: `[End Date] IS NULL OR [End Date] > GetDate()`
 
-![Image 7: Example with Viewable Data](<../../../../.gitbook/assets/image (510).png>)
+![Image 7: Example with Viewable Data](<../../../../.gitbook/assets/image (91).png>)
 
 #### Layer On Another Entitlement
 
@@ -209,13 +209,13 @@ _(Image 8)_
 * Viewable Row Filter: \[First Name] = 'John'
 * Editable Row Filter: \[First Name] = 'John'
 
-![Image 8: Layer on Another Entitlement](<../../../../.gitbook/assets/image (393).png>)
+![Image 8: Layer on Another Entitlement](<../../../../.gitbook/assets/image (247).png>)
 
 #### Example for Current User
 
 _(Image 9)_
 
-![Image 9: Example for current user](<../../../../.gitbook/assets/image (411).png>)
+![Image 9: Example for current user](<../../../../.gitbook/assets/image (129).png>)
 
 **For the All Users group:**
 
@@ -225,7 +225,7 @@ _(Image 10)_
 * Edit Selected Columns: First Name, Last Name
 * Editable Row Filter: `[User Account].[Cinchy Id] = CurrentUserId()`
 
-![Image 10: For the All Users Group](<../../../../.gitbook/assets/image (362).png>)
+![Image 10: For the All Users Group](<../../../../.gitbook/assets/image (309).png>)
 
 To allow a user to edit certain fields of their own data, you will need an association from a user to the `[Cinchy].[Users]` table. You can then use the following function to allow edit for that user, where `[...]` is the chain of link columns to get to the Users table.
 

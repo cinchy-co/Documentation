@@ -22,7 +22,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 | Version    | **Mandatory.** This is a pre-populated field containing a version number for your data sync. You can override it if you wish.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 1.0.0         |
 | Parameters | <p><strong>Optional.</strong> Review our <a href="../building-data-syncs/advanced-settings/parameters.md">documentation on Parameters here</a> for more information about this field.<br><br>Cinchy v5.6 added support for the <a href="../../cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md"><strong>URL_ESCAPE</strong> and <strong>JSON_ESCAPE</strong> functions</a> to be used in REST API data syncs <strong>anywhere a "parameter" could be utilized (Ex: Endpoint URL, Post Sync Script, etc.)</strong>. These functions escape parameter values to be safe inside of a URL or JSON document respectively.</p> |               |
 
-<figure><img src="../../.gitbook/assets/image (212).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
 ## 3. Source Tab
 
@@ -79,7 +79,7 @@ You can learn more about these sections in [Appendix A - Other Sections.](rest-a
 {% endtab %}
 {% endtabs %}
 
-<figure><img src="../../.gitbook/assets/image (454).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (172).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
 ## 4. Next Steps
 
@@ -104,7 +104,7 @@ You can add in Request Headers by [reviewing the documentation here.](../buildin
 
 You are able to use this section to add body content.
 
-<figure><img src="../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (410).png" alt=""><figcaption></figcaption></figure>
 
 ### Pagination
 
@@ -122,7 +122,7 @@ To set up a retry specification:
 
 1. Under the REST API source tab, select **API Specification > Retry Configuration**
 
-<figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (409).png" alt=""><figcaption></figcaption></figure>
 
 2\. Select your Delay Strategy.&#x20;
 
@@ -132,7 +132,7 @@ To set up a retry specification:
 
 3\. Input your Max Attempts. The maximum number of retries allowed is 10.
 
-<figure><img src="../../.gitbook/assets/image (124).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (439).png" alt=""><figcaption></figcaption></figure>
 
 4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.&#x20;
 
@@ -154,6 +154,6 @@ Note that the Regex value should be entered as a regular expression. The Regex e
 **For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".&#x20;
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (165).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (459).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (646).png" alt=""><figcaption></figcaption></figure>

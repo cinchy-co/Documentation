@@ -51,7 +51,7 @@ Once you have installed the experience, your environment will be populated with 
 * Get Form Sections Metadata query
 * Get Form Fields Metadata
 
-<figure><img src="../../.gitbook/assets/image (276).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (594).png" alt=""><figcaption></figcaption></figure>
 
 **Forms Table:** This table houses all of the existing forms in your environment. Adding an entry to this table, will add a form to the complete list of forms. The table is used to link form fields and form sections to one specific form, and it connects to the table which contains all of the form responses/data.
 

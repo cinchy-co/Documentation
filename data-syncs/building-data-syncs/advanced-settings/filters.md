@@ -12,7 +12,7 @@ When syncing a Data Source, you may have the option to add in additional configu
 Note that if your source only has one of the listed options, it will appear by default instead of in a drop-down.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (332).png" alt=""><figcaption><p><em>Image 1: Adding a Filter</em></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (279).png" alt=""><figcaption><p><em>Image 1: Adding a Filter</em></p></figcaption></figure>
 
 A filter on your source is optional. It relies on a source specific syntax for filtering out records from your source target. The filter can reference execution parameters.
 
@@ -34,11 +34,11 @@ There can only be one \<Filter>  for each source. To specify more than one condi
 
 **Example 1:** Using a filter to sync only source records with \[net worth] > 10000 _(Image 2)._
 
-<figure><img src="../../../.gitbook/assets/image (496).png" alt=""><figcaption><p>mage 2: Source Filter Example 1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (635).png" alt=""><figcaption><p>mage 2: Source Filter Example 1</p></figcaption></figure>
 
 **Example 2:** Using a filter to sync only source records with a status like "Complete" _(Image 3)._
 
-<figure><img src="../../../.gitbook/assets/image (227).png" alt=""><figcaption><p>Image 3: Source Filter Example 2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (209).png" alt=""><figcaption><p>Image 3: Source Filter Example 2</p></figcaption></figure>
 
 ## Target Filters
 
@@ -59,12 +59,12 @@ There can only be one \<Filter>  for each target. To specify more than one condi
 
 **Example 1:** Filtering only target records where the Assignee is Null _(Image 4)._
 
-<figure><img src="../../../.gitbook/assets/image (125).png" alt=""><figcaption><p>Image 4: Target Filter Example 1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (440).png" alt=""><figcaption><p>Image 4: Target Filter Example 1</p></figcaption></figure>
 
 **Example 2:** Filtering only target records where the Override ID is not Null _(Image 5)._
 
-<figure><img src="../../../.gitbook/assets/image (273).png" alt=""><figcaption><p>Image 5: Target Filter Example 2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (220).png" alt=""><figcaption><p>Image 5: Target Filter Example 2</p></figcaption></figure>
 
 **Example 3:** Filtering only target records from a specific source _(Image 6)._
 
-<figure><img src="../../../.gitbook/assets/image (271).png" alt=""><figcaption><p>Image 6: Target Filter Example 3</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (218).png" alt=""><figcaption><p>Image 6: Target Filter Example 3</p></figcaption></figure>

@@ -6,7 +6,7 @@ description: This page provides an overview of Data Compression.
 
 If you need to manage space within your database, you can set a data compression policy. Currently we allow you to permanently delete versions in the collaboration log. Be aware that the current version of compression is a LOSSY process (data will be permanently deleted). Take that into consideration when configuring a policy.
 
-![](<../../../../.gitbook/assets/image (613).png>)
+![](<../../../../.gitbook/assets/image (332).png>)
 
 {% hint style="info" %}
 We recommend you keep more versions rather than less versions. You can think of the above as keep any versions newer than 180 days and keeping the most recent 50 versions. So as long as a version satisfies one of the two keep conditions, we keep it. Using the example above:

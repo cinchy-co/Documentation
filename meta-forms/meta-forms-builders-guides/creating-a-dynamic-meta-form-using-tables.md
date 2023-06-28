@@ -96,4 +96,4 @@ Your form can both pull information from an existing table and push information 
 * **Application URL:** Add in the URL to your form here.
 * **Users and Groups:** Add in which users/groups can access your form in these columns.
 
-<figure><img src="../../.gitbook/assets/image (266).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (206).png" alt=""><figcaption></figcaption></figure>
