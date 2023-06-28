@@ -1,18 +1,18 @@
-# Calculated Column Examples
+# Calculated column examples
 
 ## Examples
 
-_Examples 1 and 2_ are shown first within the experience as well as their XML equivalent.
+_Examples 1 and 2_ show calculated columns within the Connections UI and their relevant XML.
 
-_Example 3_ demonstrates the use of Javascript in Calculated Columns.
+_Example 3_ demonstrates the use of JavaScript in Calculated Columns.
 
 ### Example 1: XML
 
-The value of this column for each record is whatever the value is of the lob parameter.&#x20;
+The value of this column for each record is whatever the value is of the lob parameter.
 
 <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-XML equivalent of the above example_:_
+#### XML equivalent 
 
 ```xml
 <Parameters>
@@ -26,16 +26,16 @@ XML equivalent of the above example_:_
 ```
 
 {% hint style="warning" %}
-The CONCAT function supports more than 2 parameters, and any literal values must be enclosed in single quotes (e.g. 'abc')
+The CONCAT function supports more than 2 parameters, and you must enclose any literal values in single quotes ( 'abc')
 {% endhint %}
 
 ### Example 2: XML
 
-The values of two columns are concatenating together.&#x20;
+The values of two columns are concatenating together.
 
 <figure><img src="../../../.gitbook/assets/image (267).png" alt=""><figcaption></figcaption></figure>
 
-XML equivalent of the above example:
+#### XML equivalent 
 
 ```xml
 <Parameters>
@@ -49,7 +49,7 @@ XML equivalent of the above example:
 ```
 
 {% hint style="warning" %}
-The CONCAT function supports more than 2 parameters, and any literal values must be enclosed in single quotes (e.g. 'abc')
+The CONCAT function supports more than 2 parameters, and you must enclose any literal values in single quotes ( 'abc')
 {% endhint %}
 
 ### Example 3: JavaScript
@@ -120,11 +120,11 @@ The max length of data in the column.
 
 **`isMandatory`**
 
-Boolean value determining if the field is a mandatory column to create a row entry.
+Boolean value that determines if the field is a mandatory column to create a row entry.
 
 **`validateData`**
 
-Boolean value determining whether or not to validate the data before inserting. Valid data means to fit all the constraints of the column (dataType, maxLength, isMandatory, inputFormat). If the data is not valid and validateData is true, then the entry will not be synced into the table. Also, Execution Errors Table is updated with appropriate Error Type (Invalid Format Exception, Max Length Violation, Mandatory Rule Violation, Input Format Exception)
+Boolean value determining whether to validate the data before inserting. Valid data means to fit all the constraints of the column (dataType, maxLength, isMandatory, inputFormat). If the data isn't valid and `validateData` is true, then the entry won't sync into the table. The Execution Errors Table also updates with the appropriate Error Type (Invalid Format Exception, Max Length Violation, Mandatory Rule Violation, Input Format Exception)
 
 **`description`**
 
@@ -132,4 +132,4 @@ Description of the column.
 
 **`trimWhitespace`**
 
-Boolean value determining whether or not to trim white space.
+Boolean value that determines whether to trim white space.

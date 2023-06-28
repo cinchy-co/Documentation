@@ -4,7 +4,7 @@
 
 Filters can be used in your source and target configurations to define specific subsets of data that you want to use in your syncs.
 
-## 1. Source Filters
+## Source Filters
 
 When syncing a Data Source, you may have the option to add in additional configuration sections, such as a Filter, under the "Add a Section" drop down tab in the Connection Experience _(Image 1)._
 
@@ -30,7 +30,7 @@ This is only available if using a table, not a query. For queries, include the f
 There can only be one \<Filter>  for each source. To specify more than one condition, use AND/OR to allow logical combination of multiple expressions.
 {% endhint %}
 
-## **Conditional Filters**
+## Conditional Filters
 
 **For REST API, SOAP 1.2, Kafka Topic, Platform Event, and Parquet sources**, there is a **"Conditional" option for source filters** in the Connections UI.&#x20;
 
@@ -51,9 +51,9 @@ For example, the below condition would only bring in records where the **source 
 
 <figure><img src="../../../.gitbook/assets/image (657).png" alt=""><figcaption><p>Image 2: Conditional Example</p></figcaption></figure>
 
-## 2. Source Filter Examples:
+## Source Filter Examples
 
-**Example 1:** Using a filter to sync only source records with \[net worth] > 10000 _(Image 3)._
+### Example 1: Use a filter to sync only source records with \[net worth] > 10000 _(Image 3)._
 
 <figure><img src="../../../.gitbook/assets/image (445).png" alt=""><figcaption><p>Image 3: Source Filter Example 1</p></figcaption></figure>
 
@@ -78,7 +78,7 @@ There can only be one \<Filter>  for each target. To specify more than one condi
 
 ## Filter Examples
 
-**Example 1:** Filtering only target records where the Assignee is Null _(Image 5)._
+### Example 1: Filter only target records where the Assignee is Null _(Image 5)._
 
 <figure><img src="../../../.gitbook/assets/image (432).png" alt=""><figcaption><p>Image 5: Target Filter Example 1</p></figcaption></figure>
 
