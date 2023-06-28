@@ -259,26 +259,26 @@ The below XML shows a blank data sync for a Delimited File source to a Cinchy Ta
 </BatchDataSyncConfig>
 ```
 
-#### Filled XML Example
+#### Filled XML example
 
-The below filled XML example matches the Connections UI configuration we made in step 3.1. You can review the parameters used in the table below.
+The below filled XML example matches the Connections UI configuration made in **Use the Connections UI**. You can review the parameters used in the table below.
 
 | Parameter                      | Description                                                                                                                                                                                                                      | Example                                                                       |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | Name                           | The name of your data sync.                                                                                                                                                                                                      | Contact Import                                                                |
 | Parameter                      | Since this is a local file upload, we also need to set a **Parameter**. This value will be referenced in the **"path"** value of the **Load Metadata** box                                                                       | Parameter                                                                     |
 | Source                         | Defines whether your source is Local (PATH), S3, or Azure.                                                                                                                                                                       | PATH                                                                          |
-| Path                           | Since this is a local upload, this is the path to your source file. In this case, it is the value that was set for the "Parameter" value, preceded by the '@' sign.                                                              | @Parameter                                                                    |
-| Delimiter                      | The type of delimiter on your source file.                                                                                                                                                                                       | Since our file is a CSV, the delimiter is a comma, and we uses the ',' value. |
+| Path                           | Since this is a local upload, this is the path to your source file. In this case, it's the value that was set for the "Parameter" value, preceded by the '@' sign.                                                              | @Parameter                                                                    |
+| Delimiter                      | The delimiter type on your source file.                                                                                                                                                                                       | Since our file is a CSV, the delimiter is a comma, and we uses the ',' value. |
 | Text Qualifier                 | A text qualifier is a character used to distinguish the point at which the contents of a text field should begin and end.                                                                                                        | "\&quote;                                                                     |
 | Header Rows to Ignore          | The number of records from the top of the file to ignore before the data starts (includes column header).                                                                                                                        | 1                                                                             |
-| Column Name                    | The name(s) of the source columns that you wish to sync. Note that in this example we have selected more columns than we will map, in order to show how Connections ignores unmapped data.                                       | <p>"First Name"<br>"Last Name"<br>"Email Address:<br>"Title"<br>"Company"</p> |
+| Column Name                    | The name(s) of the source columns that you wish to sync. In this example there are more selected  columns than mapped to show how Connections ignores unmapped data.                                       | <p>"First Name"<br>"Last Name"<br>"Email Address:<br>"Title"<br>"Company"</p> |
 | Column Data Type               | The data type that corresponds to our selected source columns.                                                                                                                                                                   | "Text"                                                                        |
 | Domain                         | The domain of your Cinchy Target table.                                                                                                                                                                                          | Sandbox                                                                       |
 | Table                          | The name of your Cinchy Target table.                                                                                                                                                                                            | People                                                                        |
 | Column Mapping Source Column   | The name(s) of the source columns that you are syncing.                                                                                                                                                                          | <p>"Company"<br>"Title"<br>"First Name"</p>                                   |
 | Column Mapping Target Column   | The name(s) of the target column as it maps to the specified source column.                                                                                                                                                      | <p>"Company"<br>"Title"<br>"Name"</p>                                         |
-| Sync Key Column Reference Name | The SyncKey is used as a unique key reference when syncing the data from the data source into the Cinchy table. It is used to match data between the source and the target. This allows for updates to occur on changed records. | "Name"                                                                        |
+| Sync Key Column Reference Name | The SyncKey is used as a unique key reference when syncing the data from the data source into the Cinchy table. Use it to match data between the source and the target. This allows for updates to occur on changed records. | "Name"                                                                        |
 | New Record Behaviour Type      | This defines what will happen when new records are found in the source.                                                                                                                                                          | INSERT                                                                        |
 | Dropped Record Behaviour Type  | This defines what will happen when dropped records are found in the source.                                                                                                                                                      | DELETE                                                                        |
 | Changed Record Behaviour Type  | This defines what will happen when changed records are found in the source.                                                                                                                                                      | UPDATE                                                                        |
@@ -322,7 +322,7 @@ The below filled XML example matches the Connections UI configuration we made in
 <figure><img src="../../.gitbook/assets/image (444).png" alt=""><figcaption><p>Image 20: Data Sync Configurations table</p></figcaption></figure>
 
 2. In a new row, paste the **Data Sync XML** into the **Config XML** column _(Image 21)_.
-3. Define your group permissions in the applicable columns. In our example, we have given All Users the Admin Access*.*
+3. Define your group permissions in the applicable columns. In this example, we have given all Users the Admin Access*.*
 
 {% hint style="info" %}
 The Name and Config Version columns will be auto populated as they values are coming from the Config XML.
@@ -363,7 +363,7 @@ To encrypt a password using Powershell, complete the following:
 1. Launch Powershell and navigate to the Cinchy CLI directory (note, you can always type powershell in the windows explore path for the Cinchy CLI directory)
 2. Enter the following into Powershell `.\Cinchy.CLI.exe encrypt -t "password"`
 3. Hit enter to execute the command
-4. Copy the password (e.g. notepad, Visual Studio Code, word etc.) so you have it accessible at batch execution time
+4. Copy the password  so it's accessible at batch execution time
 
 {% hint style="info" %}
 Please note, you will need to replace "password" with your specific password.
@@ -377,6 +377,6 @@ The Execution Log table is a system table in Cinchy that logs the outputs of all
 
 ### 4.3 Execution Errors
 
-The Execution Errors table is a system table in Cinchy that logs any errors that may occur in a data sync _(Image 24)_. Any data sync errors will also be logged in the temp directory outlined in the data sync execution command (e.g. `-d "C:\Cinchy\temp"`)
+The Execution Errors table is a system table in Cinchy that logs any errors that may occur in a data sync _(Image 24)_. Any data sync errors log to the temp directory outlined in the data sync execution command (e.g. `-d "C:\Cinchy\temp"`)
 
 <figure><img src="../../.gitbook/assets/image (197).png" alt=""><figcaption><p>Image 24: Execution Errors</p></figcaption></figure>
