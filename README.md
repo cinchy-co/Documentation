@@ -8,9 +8,9 @@ description: This page provides a brief overview of Data Collaboration
 **You are currently browsing the Cinchy v5.7 platform documentation.** For documentation pertaining to other versions of the platform, please navigate to the relevant space(s) via the drop down menu in the upper left of the page.
 {% endhint %}
 
-## What’s the purpose of Dataware and Data Collaboration?
+## What’s the purpose of Data Collaboration?
 
-Dataware is the emergence of a common group of technologies that solve data related problems across many business use cases. One of the most exciting new categories within this group is Data Collaboration.
+Data collaboration is the emergence of a common group of technologies that solve data related problems across many business use cases. One of the most exciting new categories within this group is Data Collaboration.
 
 Data Collaboration solves the costly, time-consuming, and ineffective integration processes born from silo-ing your data in a traditional app-centric environment. Instead of your data serving your applications, data collaboration refocuses and pivots to a model where your data is at the forefront and is being served by your apps _(Image 1)._
 

@@ -1,17 +1,17 @@
-# Installation & Maintenance
+# Installation & maintenance
 
-## 1. **Installation & Maintenance**
+## Installation & Maintenance
 
-In order to use Cinchy Data Sync, there are some environmental configurations that will need to be set up. The following section contains the pre-requisites and server size required for setting up both a batch data sync and a real-time data sync.&#x20;
+To use Cinchy Data Sync, there are some environmental configurations that will need to be set up. The following section contains the pre-requisites and server size required for setting up both a batch data sync and a real-time data sync.&#x20;
 
-## **2. Prerequisites**
+## Prerequisites
 
-Review the hardware, software, and server sizing prerequisites [here.](broken-reference)
+Review the hardware, software, and server sizing prerequisites [here.](\prerequisites)
 
-## 3. Data Sync Installation Instructions
+## Data Sync installation instructions
 
 Review the below documentation for installation instructions:
 
-* Installing [Connections](broken-reference)
-* Installing the [Worker/Listener](broken-reference)
-* Installing the [CLI and the Maintenance CLI](broken-reference)
+* Installing [Connections](\installing-connections)
+* Installing the [Worker/Listener](\installing-the-worker-listener)
+* Installing the [CLI and the Maintenance CLI](\installing-the-cli-and-the-maintenance-cli)

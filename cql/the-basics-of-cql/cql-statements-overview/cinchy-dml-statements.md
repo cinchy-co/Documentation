@@ -87,7 +87,7 @@ FOR JSON PATH, INCLUDE_NULL_VALUES)
 
 ## INSERT <a href="#insert" id="insert"></a>
 
-Use an `INSERT` statement to add new rows to a table or view. You can also include a `SELECT` statement to identify that another table or view contains the data for the new row or rows.
+Use an **INSERT** statement to add new rows to a table or view. You can also include a **SELECT** statement to identify that another table or view contains the data for the new row or rows.
 
 {% hint style="info" %}
 The table name requires the domain prefix.
@@ -107,7 +107,7 @@ VALUES (@firstname, @lastname, @address, @jobtitle)
 
 ## UPDATE <a href="#update" id="update"></a>
 
-Use the `UPDATE` statement to change the data in a table. The `UPDATE` statement modifies zero or more rows of a table, depending on how many rows meet the search condition specified in the `WHERE` clause. You can also use an `UPDATE` statement to specify the values to be updated in a single row. To do this, specify the constants, host variables, expressions, `DEFAULT`, or `NULL`. Specify `NULL` to remove a value from a row's column (without removing the row).
+Use the **UPDATE** statement to change the data in a table. The **UPDATE** statement modifies zero or more rows of a table, depending on how many rows meet the search condition specified in the **WHERE** clause. You can also use an `UPDATE` statement to specify the values to be updated in a single row. To do this, specify the constants, host variables, expressions, **DEFAULT**, or **NULL**. Specify **NULL** to remove a value from a row's column (without removing the row).
 
 {% hint style="info" %}
 The table name requires the domain prefix.
@@ -131,7 +131,7 @@ WHERE [Customer_ID] = 1;
 
 ## DELETE <a href="#delete" id="delete"></a>
 
-Use the `DELETE` statement to remove entire rows from a table. The number of rows deleted depends on how many rows satisfy the search condition specified in the `WHERE` statement.
+Use the **DELETE** statement to remove entire rows from a table. The number of rows deleted depends on how many rows match the search condition specified in the **WHERE** statement.
 
 {% hint style="info" %}
 The table name requires the domain prefix.
@@ -151,7 +151,7 @@ DELETE FROM [Revenue].[Customers] WHERE [CustomerName] = 'Alfreds Futterkiste';
 
 ## IF <a href="#if" id="if"></a>
 
-Use the IF statement to execute a condition. If the condition is satisfied, then the Boolean expressions returns `TRUE` value. The optional `ELSE` keyword introduces another statement that executes when the `IF` condition is not satisfied and returns `FALSE` value.
+Use the IF statement to execute a condition. If the condition is satisfied, then the Boolean expressions returns **TRUE** value. The optional **ELSE** keyword introduces another statement that executes when the **IF** condition isn't satisfied and returns **FALSE** value.
 
 ### Syntax
 
@@ -167,7 +167,7 @@ IF 500<1000 THEN 'YES' ELSE 'NO'
 
 ## DECLARE <a href="#declare-variable" id="declare-variable"></a>
 
-Use the `DECLARE` statement to declare a variable.
+Use the **DECLARE** statement to declare a variable.
 
 ### Syntax
 

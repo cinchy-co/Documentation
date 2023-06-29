@@ -1,73 +1,73 @@
-# Common Design Patterns
+# Common design patterns
 
-## 1. Overview
+## Overview
 
-We have outlined some common design patterns below. You can use this non-exhaustive list as a jumping off point for desigining your own data syncs.
+This page outlines some common design patterns. You can use this basic list as a starting point to design your own data syncs.
 
-## 2. Syncing Changes vs. Syncing Full Datasets
+## Syncing changes vs. syncing full datasets
 
-When creating data sync, you need to know if you are synchronizing the full data set or simply a subset of the data.
+When creating data sync, you need to know if you are synchronizing the full data set or just a subset of the data.
 
-### **2.1 Full Data Synchronization**
+### Full data synchronization
 
 Set `<DroppedRecordBehaviour type="DELETE" />` so that any records that are no longer in the source are deleted in the target.
 
-### **2.2 Partial Data Synchronization**
+### Partial data synchronization
 
-Set `<DroppedRecordBehaviour type="IGNORE" />` otherwise, it will delete any records that are not in your partial recordset. You are unable to delete any records during partial data synchronization.
+Set `<DroppedRecordBehaviour type="IGNORE" />` otherwise, it will delete any records that aren't in your partial recordset. You are unable to delete any records during partial data synchronization.
 
-### **2.3 Partitioning your Data Synchronization**
+### Partitioning your data synchronization
 
 You can create a full data synchronization on a partial dataset by filtering the source and target. For example, if you want to sync transactions from one system to another but there are a lot of transactions, you can run a data sync where you filter by`<Filter>[Transaction Date] > 100000 </Filter>` In both the source and the target. This way, you can sync a smaller dataset while still being able to perform deletions and ensuring a full synchronization of that partition of the data.
 
-## 3. Syncing Linked Data
+## Syncing linked data
 
-When syncing data that is linked to other data the order of the data sync is important. The data sync should be ordered as to what data is linked to first.&#x20;
+When syncing data that's linked to other data the order of the data sync is important. You should order the sync to the data is linked to first.
 
-For example, if you have customers and invoices and the invoices are linked to each customer, then the customer data should be synced first. Therefore, when the invoices are synced they will be linked to the appropriate customer as the customer data is already in the target.&#x20;
+For example, if you have customers and invoices and the invoices link to each customer, then sync the customer data first. Therefore, when the invoices sync, they will link to the appropriate customer as the customer data is already in the target.
 
-## 4. Populating Reference Data
+## Populating reference data
 
-To create a reference data set, for example, a country code, based on a set of shipping labels then the data should first be run against the Country Codes table before the shipping labels are synced to the label's table. &#x20;
+To create a reference data set (such as a country code) based on a set of shipping labels then you should first run the data against the Country Codes table before the shipping labels sync to the labels table.
 
-In this scenario a `supressDuplicateError=”false”` should be set up when running the data against the Country Codes table, this is because duplicates are expected which are not ‘error’s’ and therefore, this must be identified.&#x20;
+In this scenario a `supressDuplicateError=”false”` should be set up when running the data against the Country Codes table as duplicates are expected, which aren't ‘error’s’ and must be identified.
 
-## 5. Creating a Reference Master Data Set
+## Creating a reference master data set
 
-Sometimes different reference data values can mean the same thing, but different systems use different codes. In Cinchy’s country code example under ‘Populating Reference Data’;&#x20;
+Sometimes different reference data values can mean the same thing, but different systems use different codes. In Cinchy’s country code example under ‘Populating Reference Data’:
 
-* System A uses the full country name (ex. Canada, United States),&#x20;
-* System B uses the 2 letter ISO code (ex. CA, US), and&#x20;
-* System C uses the 3 letter ISO code (ex. CAN, USA).&#x20;
+- System A uses the full country name (ex. Canada, United States),
+- System B uses the 2 letter ISO code (ex. CA, US), and
+- System C uses the 3 letter ISO code (ex. CAN, USA).
 
-All three of these systems can sync into one shipping label table, with a link to Country, but depending on the system, we use a different link column reference. The same column mapping will look slightly different in each data sync to the Shipping Labels table.&#x20;
+All three of these systems can sync into one shipping label table, with a link to Country, but depending on the system, we use a different link column reference. The same column mapping will look slightly different in each data sync to the Shipping Labels table.
 
-Note that you can change the display column in the Shipping Labels table to switch between the columns if you decide on a different code as the golden standard, without having to modify your data sync configurations.
+You can change the display column in the Shipping Labels table to switch between the columns if you decide on a different code as the golden standard, without having to modify your data sync configurations.
 
-#### System A Config
+#### System A config
 
 ```markup
 <ColumnMapping sourceColumn="Country" targetColumn="Country" linkColumn="ISO 3166 Name" />
 ```
 
-#### System B Config
+#### System B config
 
 ```markup
 <ColumnMapping sourceColumn="ShippingCountry" targetColumn="Country" linkColumn="ISO 3166-2 Letter Code" />
 ```
 
-#### System C Config
+#### System C config
 
 ```markup
 <ColumnMapping sourceColumn="Country" targetColumn="Country" linkColumn="ISO 3166-3 Letter Code" />
 ```
 
-## 6. Multiple Sources - Separate Records
+## Multiple sources - separate records
 
-When syncing from different sources into the same data set, the source of the data will need to be added as a column, this is to avoid overwriting records from other sources. This column will be added to your sync key as well. For contacts you might have:
+If you sync from different sources into the same data set, you need to add the source of the data as a column to avoid overwriting records from other sources. This column will also be added to your sync key. For contacts you might have:
 
 ```markup
-<CalculatedColumn name="Source System" formula="CONCAT('','Salesforce')" dataType="Text" /> 
+<CalculatedColumn name="Source System" formula="CONCAT('','Salesforce')" dataType="Text" />
 ...
 <SyncKey>
             <SyncKeyColumnReference name:"Source System" />
@@ -75,7 +75,7 @@ When syncing from different sources into the same data set, the source of the da
 </SyncKey>
 ```
 
-Once all your data from various systems in Cinchy, you can master that dataset and sync the master record back into any source systems where you wish to do so. These syncs would simply filter the source by where the \[Master Record] column is set to true, and sync on the unique identifier without the source system. We would also likely only want to update records already in the source, rather than deleting unmastered data or adding all records from other systems.
+Once all your data from various systems in Cinchy, you can master that dataset and sync the master record back into any source systems. These syncs would filter the source by where the [Master Record] column is set to true, and sync on the unique identifier without the source system. You would also only want to update records already in the source, rather than deleting unmastered data or adding all records from other systems.
 
 ```markup
 <SyncKey>
@@ -86,13 +86,13 @@ Once all your data from various systems in Cinchy, you can master that dataset a
 <DroppedRecordBehaviour type="IGNORE"/>
 ```
 
-## **7. Multiple sources - Enriching Fields**&#x20;
+## Multiple sources - enriching fields
 
-To use different sources to enrich different fields on the same record, the dropped record behaviour should be set to ignore, and the columns should be updated based on a sync key on the record.&#x20;
+To use different sources to enrich different fields on the same record,you should set the dropped record behaviour to ignore, and update the columns based on a sync key on the record.
 
-Depending on the source system, it may or may not be allowed to create new records; Usually, internal systems, for example, customer invoices should be able to create new customer records.&#x20;
+The ability to create new records depends on the source system. Internal systems, such as customer invoices, should be able to create new customer records.
 
-However, external data sources, for example, published company size or industry report will only add noise to your table when new records are attempted to be inserted**.**
+External data sources, such as a published industry report, will only add noise to your table when you attempt to insert new records.
 
 ```markup
 <SyncKey>
@@ -103,13 +103,13 @@ However, external data sources, for example, published company size or industry 
 <DroppedRecordBehaviour type="IGNORE"/>
 ```
 
-## **8. Post Processing**&#x20;
+## Post processing
 
-Post sync scripts can be added to a data sync configuration. This would allow you to run post-processing after the data sync has been completed.&#x20;
+You can add post sync scripts to a data sync configuration that run after the data sync has been completed.
 
-&#x20;For example, you can run a query to update the assignee on a lead after the leads data sync runs.
+For example, you can run a query to update the assignee on a lead after the leads data sync runs.
 
-This way more complex logic is created, for example, only updating where the assignee is empty, except in the case it is a high-value lead, it will be reassigned to the most senior person on each team (based on another table in the instance that has the seniority and team of each sales director).
+For example, a query that only updates where the assignee is empty, except for a high-value lead, where it's reassigned to the most senior person on each team (based on another table in the instance that has the seniority and team of each sales director).
 
 ```markup
 <CinchyTableTarget model="" domain="Revenue" table="Leads" suppressDuplicateErrors="true" >
@@ -121,56 +121,56 @@ This way more complex logic is created, for example, only updating where the ass
 </CinchyTableTarget>
 ```
 
-## **9. No Unique Identifier**&#x20;
+## No unique identifier
 
-If you have a file source (i.e. delimited, csv or excel) and you want to sync data into Cinchy that does not have a sync key, you can add a calculated column for the row number of that record.
+If you have a file source (delimited, csv or excel) and you want to sync data into Cinchy that doesn't have a sync key, you can add a calculated column for the row number of that record.
 
 ```markup
 <CalculatedColumn name="RowNumber" formula="row_number()" dataType="Number" /
 ```
 
-You will also want to add a calculated column for the file name (and ensure that it is unique) to be able to re-run the data sync if any failures occur.
+You will also want to add a unique calculated column for the file name to be able to re-run the data sync if any failures occur.
 
-## **10. Bi-Directional Sync** &#x20;
+## **Bi-directional sync**
 
-To run a bi-directional sync, you need to identify a source system unique identifier. You will then need to run the following four data syncs for bidirectional syncing.&#x20;
+To run a bi-directional sync, you need to identify a source system unique identifier and run the following four data syncs for bidirectional syncing.
 
-Note that if one of the systems cannot create new records, we can omit the data sync configuration where we are creating new records in the other system.
+If one of the systems can't create new records, you can omit the data sync configuration where you create new records in the other system.
 
-### **10.1 Sync from External Source into Cinchy (New Records)**
+### 1. Sync from external source into Cinchy (new records)
 
-First, we run a data sync from the source into Cinchy filtering the source by records where the Cinchy ID (a custom field we create in the source) is empty. We insert these records into Cinchy and make sure to populate the source unique identifier column in Cinchy.
+Run a data sync from the source into Cinchy filtering the source by records where the Cinchy ID (a custom field you create in the source) is empty. Insert these records into Cinchy and make sure to populate the source unique identifier column in Cinchy.
 
-### **10.2 Sync from Cinchy into External Source (New Records)**
+### 2. Sync from Cinchy into external source (new records)
 
-We can do the opposite as well by syncing data from Cinchy to the external source by inserting any records where a source unique identifier is empty.
+You can also sync data from Cinchy to the external source by inserting any records where a source unique identifier is empty.
 
-### 10.3 Sync from External Source into Cinchy (Existing Records)
+### 3. Sync from external Source into Cinchy (existing records)
 
-Now that all records exist in both the external system and Cinchy, we can sync data based on the target system's unique ID, in this case, we are syncing data from the external source into Cinchy, based on the Cinchy ID. We filter out records where Cinchy ID is null here to avoid errors (those will be picked up the next time the new records sync runs).
+Now that all records exist in both the external system and Cinchy, you can sync data based on the target system's unique ID. iIn this case, you are syncing data from the external source into Cinchy based on the Cinchy ID. Filter out records where Cinchy ID is null here to avoid errors; the sync will pick up the new records the next time the sync runs.
 
-### 10.4 Sync from Cinchy into External Source (Existing Records)
+### 4. Sync from Cinchy into external source (existing records)
 
-Likewise, we can sync any data changes from Cinchy into the external source using the external unique identifier as the sync key, filtering out records in Cinchy where the external identifier is empty.
+You can sync any data changes from Cinchy into the external source using the external unique identifier as the sync key, filtering out records in Cinchy where the external identifier is empty.
 
-## **11. Caching Query Data**
+## Caching query data
 
-In order to run intensive summary queries on the platform, data sync must be created to cache the data in a cinchy table. To do so simply sync the results of your Cinchy query into a Cinchy table with the same schema, and schedule the CLI to run as often as you would like your cache to expire. You can point other queries or reports to the query from this table, rather than the complex query itself.
+To run intensive summary queries on the platform, you must create a data sync to cache the data in a Cinchy table. To do so, sync the results of your Cinchy query into a Cinchy table with the same schema. You can then schedule the CLI to run as often as you would like your cache to expire. You can point other queries or reports to the query from this table, rather than the complex query itself.
 
-## 12. Configuration Changes
+## Configuration changes
 
-### 12.1 Adding Fields
+### Adding fields
 
-To add more fields to sync, ensure that the columns are in the target system first. You can then swap in the new data sync configuration whenever and it will get picked up for future execution.
+To add more fields to sync, make sure that the columns are in the target system first. You can then swap in the new data sync configuration whenever and it will get picked up for future execution.
 
-### 12.2 Removing Fields
+### Removing fields
 
-To remove fields from a data sync, swap out your data sync configuration. You can optionally delete the field in the source and/or target system afterwards.
+To remove fields from a data sync, swap out your data sync configuration. You can optionally delete the field in the source or target system afterward.
 
-### 12.3 Changing Column Mapping
+### Changing column mapping
 
-If there are no fields being added or deleted, simply swap out your sync configuration. To add or remove fields, follow the guidelines above of when to swap in the config versus making the data model changes (add columns first, swap out config, validate config, delete unneeded columns).
+If you aren't adding or deleting fields, swap out your sync configuration. To add or remove fields, follow the guidelines above for when to swap in the config versus making the data model changes (add columns first, swap out config, validate config, delete unneeded columns).
 
-### 12.4 Changing Sync Key
+### Changing sync key
 
-Simply swap out your data sync configuration if you are changing the sync key. It is a good idea to check if your new sync key is unique in both your source and target. The CLI worker will sync using the first record it found in the source to the first record it finds in the target. Checking for duplicate sync keys will allow you to understand whether any unexpected behaviour will occur.\
+If you want to change the sync key, swap out your data sync configuration. It's a good idea to check if your new sync key is unique in both your source and target. The CLI worker will sync using the first record it finds in the source to the first record it finds in the target. Checking for duplicate sync keys will allow you to understand whether any unexpected behaviour will occur.\

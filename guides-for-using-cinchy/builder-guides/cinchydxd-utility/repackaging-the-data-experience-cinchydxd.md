@@ -47,26 +47,26 @@ If you have added or removed any of the following while updating your DX, you wi
 
 ## 3. Re-Run CinchyDXD Export
 
-Using Powershell you will now export the Data Experience you have defined within Cinchy.
+Using PowerShell you will now export the Data Experience you have defined within Cinchy.
 
-1. Launch Powershell and navigate to your **CinchyDXD** folder
+1. Launch PowerShell and navigate to your **CinchyDXD** folder
 
 {% hint style="success" %}
-You can launch Powershell right from your file explorer window in the CinchyDXD file, saving you an extra step of navigating to the CinchyDXD folder manually in Powershell.
+You can launch PowerShell right from your file explorer window in the CinchyDXD file, saving you an extra step of navigating to the CinchyDXD folder manually in PowerShell.
 {% endhint %}
 
-2\. In the Powershell window type in **cin** and hit tab on your keyboard\
-3\. In the Powershell command line next to .\CinchyDXD.ps1 type in **export**\
+2\. In the PowerShell window type in **cin** and hit tab on your keyboard\
+3\. In the PowerShell command line next to .\CinchyDXD.ps1 type in **export**\
 4\. Hit Enter on your keyboard
 
 {% hint style="info" %}
-If you do not remember the mandatory parameters, you can click the enter on your keyboard after typing in .\CinchyDXD.ps1 export, Powershell will provide you with the required and optional components to export the data experience.
+If you do not remember the mandatory parameters, you can click the enter on your keyboard after typing in .\CinchyDXD.ps1 export, PowerShell will provide you with the required and optional components to export the data experience.
 {% endhint %}
 
 5\. You must now enter your mandatory export parameters.
 
 {% hint style="info" %}
-The parameters executed in Powershell can exist on one line in powershell, however for legibility (below) the parameters have been put on separate lines.  If you are putting your parameters on separate lines you will be required to have backticks quote \`  for the parameters to execute
+The parameters executed in PowerShell can exist on one line in PowerShell, however for legibility (below) the parameters have been put on separate lines.  If you are putting your parameters on separate lines you will be required to have backticks quote \`  for the parameters to execute
 {% endhint %}
 
 {% hint style="warning" %}
@@ -86,13 +86,13 @@ Sample:\
 `` -o "C:\CinchyDXD_Output" ` ``\
 
 
-6\. Enter the export parameters into the Powershell window _(Image 1)._
+6\. Enter the export parameters into the PowerShell window _(Image 1)._
 
 ![Image 1: Step 6](<../../../.gitbook/assets/image (147).png>)
 
 7\. Hit Enter on your keyboard to run the export command
 
-Powershell will begin to process the export. Once the export is complete, Powershell will provide you with an export complete message _(Image 2)._
+PowerShell will begin to process the export. Once the export is complete, PowerShell will provide you with an export complete message _(Image 2)._
 
 ![Image 2: Step 7](<../../../.gitbook/assets/image (381).png>)
 

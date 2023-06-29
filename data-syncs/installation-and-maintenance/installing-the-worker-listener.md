@@ -1,57 +1,57 @@
 # Installing the Worker/Listener
 
-## 1. Overview
+## Overview
 
 The Worker and Listener are important components for using Real-Time Data syncs. At a high level, the Worker/Listener follows this process:
 
-* Once the Listener is successfully subscribed, it waits for events from streaming source.
-* The Listener receives a message from a streaming source and pushes it to SQL Server Broker.
-* The Worker then picks up message from SQL Server Broker.
-* The Worker fetches the matching record from the target based on the sync key.
-* If there are changes detected, the Worker pushes them to the target system. Successes and failures are logged in the worker's log file.
+- Once the Listener is successfully subscribed, it waits for events from streaming source.
+- The Listener receives a message from a streaming source and pushes it to SQL Server Broker.
+- The Worker then picks up message from SQL Server Broker.
+- The Worker fetches the matching record from the target based on the sync key.
+- If there are changes detected, the Worker pushes them to the target system. Successes and failures are logged in the worker's log file.
 
 {% hint style="warning" %}
 **In a Kubernetes deployment of the Cinchy Platform**, the Worker/Listener is automatically installed. The below steps refer only to an IIS deployment of the Cinchy Platform.
 {% endhint %}
 
 {% hint style="warning" %}
-**Before proceeding, ensure that you have read the** [**Prerequisites**](broken-reference) **section.**
+**Before proceeding, make sure that you have read the** [**Prerequisites**](broken-reference) **section.**
 {% endhint %}
 
-## 2. Prerequisites
+## Prerequisites
 
-* Windows Server 2012+
-  * .NET Core 3.1 Hosting Bundle (click [here ](https://dotnet.microsoft.com/download/dotnet-core/2.1)to download)
-* SQL Server 2012+
-  * Service Broker enabled
-* Cinchy Platform
+- Windows Server 2012+
+  - [.NET Core 3.1 Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- SQL Server 2012+
+  - Service Broker enabled
+- Cinchy Platform
 
-## **3. SQL Service Broker Setup**
+## SQL Service Broker setup
 
 1. On a Windows Server machine, launch an instance of PowerShell as Administrator.
 2. Set up the SQL Service Broker by executing the following command:
 
-```
+```sql
 ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE;
 ```
 
-## 4. Downloading the Resources
+## Downloading the resources
 
 1. Navigate to the[ Cinchy Releases table.](https://cinchy.net/Tables/1477?rowHeight=Expanded)
 
-### 4.1 Event Listener
+### Event listener
 
 1. Download the latest **Cinchy Event Listener.zip** file from the **Release Artifacts** column.
 2. Extract the .zip to the folder to \<your event listener folder>
-3. Execute the **create-cinchy-event-listener-windows-service.ps1** PowerShell script that is located in the installation directory. Pass in filePath parameter _-filePath \<Your Listener/Worker Path>_ to the **agent.exe file.**
+3. Execute the **create-cinchy-event-listener-windows-service.ps1** PowerShell script located in the installation directory. Pass in filePath parameter _-filePath \<Your Listener/Worker Path>_ to the **agent.exe file.**
 
-### 4.2 Worker
+### Worker
 
 1. Download the latest **Cinchy Connections.zip** file from the **Release Artifacts** column.
-2. Extract the content of the **Cinchy Worker** folder to C:\\\<your cli worker folder>
-3. Execute **create-cinchy-cli-worker-windows-service.ps1** PowerShell script that is located in the installation directory. Pass in filePath parameter _filePath = path_ to the **Cinchy.CLI.exe file.**
+2. Extract the content of the **Cinchy Worker** folder to C:\\\<your CLI worker folder>
+3. Execute **create-cinchy-cli-worker-windows-service.ps1** PowerShell script located in the installation directory. Pass in filePath parameter _filePath = path_ to the **Cinchy.CLI.exe file.**
 
-## 5. Event Listener Deployment
+## Event listener deployment
 
 1. Navigate to the _appSettings.json_ in your Event Listener directory and make the following configurations:
 
@@ -74,11 +74,11 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
 | --------- | ---------------------------------------------------------------------------- |
 | SqlServer | Fill in the connection string to the SQL server hosting the Cinchy database. |
 
-2\. To start the service, open the **Run box (Windows + R) > services.msc**
+2. To start the service, open the **Run box (Windows + R) > services.msc**
 
-3\. In the list of services, find the **Cinchy Event Listener** service. Right click on the service and click **Start.**
+3. In the list of services, find the **Cinchy Event Listener** service. Right-click on the service and click **Start.**
 
-## 6. Worker Deployment
+## Worker deployment
 
 1. Navigate to the _appSettings.json_ in your Worker directory and make the following configurations:
 
