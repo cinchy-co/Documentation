@@ -36,9 +36,9 @@ The following tables provide the data type(s) that a **Cinchy Data Type** transl
 
 ## Create Table <a href="#create-table" id="create-table"></a>
 
-The CREATE TABLE statement is used to create a new table in a database.
+The **CREATE TABLE** statement is used to create a new table in a database.
 
-The column parameters specify the names of the columns of the table.The datatype parameter specifies the type of data the column can hold (e.g. varchar, char, int, date, etc.).
+The column parameters specify the names of the columns of the table.The datatype parameter specifies the data type the column can hold (such as varchar, char, int, date).
 
 **Syntax**
 
@@ -63,9 +63,9 @@ CREATE TABLE [HR].[Employees] (
 
 ## Alter Table <a href="#alter-table" id="alter-table"></a>
 
-The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+The **ALTER TABLE** statement is used to add, delete, or modify columns in an existing table.
 
-The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+The **ALTER TABLE** statement is also used to add and drop various constraints on an existing table.
 
 **Syntax**
 
@@ -83,7 +83,7 @@ ADD [Email] VARCHAR(255)
 
 ## Drop Table <a href="#drop-table" id="drop-table"></a>
 
-The DROP TABLE statement is used to drop an existing table in a database.
+The **DROP TABL**E statement is used to drop an existing table in a database.
 
 **Syntax**
 
@@ -101,9 +101,9 @@ DROP TABLE [HR].[Employees]
 
 In SQL, a view is a virtual table based on the result-set of an SQL statement.
 
-A view contains rows and columns, taken from fields of an original table and presents them with a different structure and organization. For example, this is useful when only some columns of a table may be relevant to a user, so they don't have to see information from other columns that may be irrelevant to them.
+A view has rows and columns, taken from fields of an original table and presents them with a different structure and organization. This is useful when only some columns of a table may be relevant to a user, so they don't have to see information from other columns that may be irrelevant to them.
 
-SQL functions and the WHERE statement can be added to a view to present the data as if the data was coming from one single table.
+SQL functions and the **WHERE** statement can be added to a view to present the data as if the data was coming from one single table.
 
 **Syntax**
 
@@ -125,7 +125,7 @@ WHERE [Q1] BETWEEN 0 AND 6
 
 ## Alter View <a href="#alter-view" id="alter-view"></a>
 
-Modifies a previously created view. This includes an indexed view. ALTER VIEW does not affect dependent stored procedures or triggers and does not change permissions.
+Modifies a previously created view, including indexed views. **ALTER VIEW** doesn't affect dependent stored procedures or triggers and doesn't change permissions.
 
 **Syntax**
 
@@ -146,7 +146,7 @@ WHERE [Q1] BETWEEN 0 AND 6
 
 ## Drop View <a href="#drop-view" id="drop-view"></a>
 
-A view is deleted with the DROP VIEW command.
+Use the **DROP VIEW** command to delete a view.
 
 **Syntax**
 
@@ -162,7 +162,7 @@ DROP VIEW [Wealth].[Detractors]
 
 ## Create Index <a href="#create-index" id="create-index"></a>
 
-The CREATE INDEX statement is used to create[ indexes](../../../guides-for-using-cinchy/builder-guides/creating-tables/indexing-and-partitioning.md) in tables.
+The **CREATE INDEX** statement is used to create[ indexes](../../../guides-for-using-cinchy/builder-guides/creating-tables/indexing-and-partitioning.md) in tables.
 
 **Syntax**
 
@@ -180,7 +180,7 @@ ON [HR].[Employees] ([LastName])
 
 ## Drop Index <a href="#drop-index" id="drop-index"></a>
 
-The DROP INDEX statement is used to delete an index on a table.
+The **DROP INDEX** statement is used to delete an index on a table.
 
 **Syntax**
 
