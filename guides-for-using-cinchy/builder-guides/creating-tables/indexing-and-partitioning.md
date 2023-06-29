@@ -35,7 +35,7 @@ In this example, we have a table with employee names _(Image 1)_. We want to sea
 
 2\. Click **Indexes** _(Image 2)_.
 
-![Image 2: Select Indexes from the list](<../../../.gitbook/assets/image (7).png>)
+![Image 2: Select Indexes from the list](<../../../.gitbook/assets/image (7) (1).png>)
 
 3\. Select **"Click Here to Add"** and fill out the following information for a new index. Click save when done _(Image 3)_:
 

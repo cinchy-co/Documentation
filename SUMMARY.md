@@ -110,6 +110,7 @@
       * [Setting up Alerts](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/opensearch-dashboards/setting-up-alerts.md)
     * [Monitoring via ArgoCD](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/monitoring-via-argocd.md)
   * [Maintenance](guides-for-using-cinchy/additional-guides/maintenance.md)
+  * [Cinchy Secrets Manager](guides-for-using-cinchy/additional-guides/cinchy-secrets-manager.md)
   * [GraphQL (Beta)](guides-for-using-cinchy/additional-guides/graphql-beta.md)
   * [System Properties](guides-for-using-cinchy/additional-guides/system-properties.md)
   * [Enable Data At Rest Encryption](guides-for-using-cinchy/additional-guides/enable-data-at-rest-encryption.md)
