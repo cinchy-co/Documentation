@@ -343,8 +343,8 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 <table><thead><tr><th width="199.33333333333331">Parameter</th><th width="241">Description</th><th>Example</th></tr></thead><tbody><tr><td>-s (server)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The full path to the Cinchy server without the protocol (e.g. cinchy.co/Cinchy).</td><td>"pilot.cinchy.co/Training/Cinchy/"</td></tr><tr><td>-u (userid)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The user id to login to Cinchy that has execution access to the data sync.</td><td>"admin"</td></tr><tr><td>-p (password)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The password of the above User ID parameter. This can optionally be encrypted. For a walkthrough on how to use the CLI to encrypt the password, refer to the Appendix section. </td><td>"DESuEGqfffsamx55yl256hjuPYxa4ncc+5+bLkoVIFpgs0Lq6hkcU="</td></tr><tr><td>-f (feed)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The name of the Data Sync Configuration as defined in Cinchy</td><td>"Contact Import"</td></tr></tbody></table>
 
-5. Launch Powershell and navigate to the Cinchy CLI directory.
-6. Enter and execute the following into Powershell:
+5. Launch PowerShell and navigate to the Cinchy CLI directory.
+6. Enter and execute the following into PowerShell:
 
 ```
 .\Cinchy.CLI.exe syncdata -s "pilot.cinchy.co/Training/Cinchy/" -u "admin" -p "DESuEGqmx55yl2PYxa4ncc+5+bLkoVIFpgs0Lq6hkcU=" -f "Contact Import"
@@ -358,10 +358,10 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 ### 4.1 Password Encryption
 
-To encrypt a password using Powershell, complete the following:
+To encrypt a password using PowerShell, complete the following:
 
-1. Launch Powershell and navigate to the Cinchy CLI directory (note, you can always type powershell in the windows explore path for the Cinchy CLI directory)
-2. Enter the following into Powershell `.\Cinchy.CLI.exe encrypt -t "password"`
+1. Launch PowerShell and navigate to the Cinchy CLI directory (note, you can always type `PowerShell` in the windows explore path for the Cinchy CLI directory)
+2. Enter the following into PowerShell `.\Cinchy.CLI.exe encrypt -t "password"`
 3. Hit enter to execute the command
 4. Copy the password  so it's accessible at batch execution time
 

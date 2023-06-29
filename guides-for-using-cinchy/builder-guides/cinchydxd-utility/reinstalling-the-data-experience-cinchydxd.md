@@ -15,26 +15,26 @@ description: >-
 
 ## 1. Re-Run CinchyDXD Install&#x20;
 
-Using Powershell, you must now install the Data Experience you have exported out of Cinchy.
+Using PowerShell, you must now install the Data Experience you have exported out of Cinchy.
 
 1. Open File Explorer and navigate to your exported folder _(Image 1)._
 
 ![Image 1: Step 1](<../../../.gitbook/assets/image (50).png>)
 
-2\. In the **folder path URL** for the exported data experience type in **powershell** to launch Powershell for that path.
+2\. In the **folder path URL** for the exported data experience type in **PowerShell** to launch PowerShell for that path.
 
 3\. Hit **Enter** on your keyboard _(Image 2)._
 
 ![Image 2: Step 3](<../../../.gitbook/assets/image (37).png>)
 
-4\. In the Powershell window, type **cin** and hit **Tab** on your keyboard. Type **install** _(Image 3)._
+4\. In the PowerShell window, type **cin** and hit **Tab** on your keyboard. Type **install** _(Image 3)._
 
 ![Image 3: Step 4](<../../../.gitbook/assets/image (630).png>)
 
-5\. Enter the install parameters into the Powershell window:
+5\. Enter the install parameters into the PowerShell window:
 
 {% hint style="info" %}
-The parameters executed in Powershell can exist on one line in powershell, however for legibility (below) the parameters have been put on separate lines. If you are putting your parameters on separate lines you will be required to have backticks quote \`  for the parameters to execute
+The parameters executed in PowerShell can exist on one line in PowerShell, however for legibility (below) the parameters have been put on separate lines. If you are putting your parameters on separate lines you will be required to have backticks quote \`  for the parameters to execute
 {% endhint %}
 
 Sample _(Image 4):_\
@@ -47,7 +47,7 @@ Sample _(Image 4):_\
 
 ![Image 4: Step 5](<../../../.gitbook/assets/image (19).png>)
 
-6\. Hit **Enter** on your keyboard to run the install command. Once the Data Experience has been installed you will get a message in Powershell that the install was completed _(Image 5)._
+6\. Hit **Enter** on your keyboard to run the install command. Once the Data Experience has been installed you will get a message in PowerShell that the install was completed _(Image 5)._
 
 ![Image 5: Step 6](<../../../.gitbook/assets/image (629).png>)
 

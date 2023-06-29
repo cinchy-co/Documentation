@@ -20,31 +20,31 @@ The install of a Data Experience is executed in a different environment than tha
 
 Below are the details that will be required for the installation environment:
 
-* Source: \<cinchy target url>
-* UserID: \<target user id>
-* Password: \<target password>
+- Source: \<cinchy target url>
+- UserID: \<target user id>
+- Password: \<target password>
 
 ## 2. Install the Data Experience&#x20;
 
-Using Powershell you will now install the Data Experience you have exported out of Cinchy.
+Using PowerShell you will now install the Data Experience you have exported out of Cinchy.
 
 1\. Open the **File Explorer** and navigate to your DX exported folder _(Image 1)._
 
 ![Image 1: Step 1](<../../../.gitbook/assets/image (340).png>)
 
-2\. In the folder path URL for the exported data experience type in **powershell** to launch Powershell for that path _(Image 2)._
+2\. In the folder path URL for the exported data experience type in **PowerShell** to launch PowerShell for that path _(Image 2)._
 
 ![Image 2: Step 2](<../../../.gitbook/assets/image (440).png>)
 
-3\. Hit **Enter** on your keyboard, the powershell window will appear _(Image 3)._
+3\. Hit **Enter** on your keyboard, the PowerShell window will appear _(Image 3)._
 
 ![Image 3: Step 3](<../../../.gitbook/assets/image (615).png>)
 
-4\. In the Powershell window, type in **cin** and hit **tab** on your keyboard _(Image 4)._
+4\. In the PowerShell window, type in **cin** and hit **tab** on your keyboard _(Image 4)._
 
 ![Image 4: Step 4](<../../../.gitbook/assets/image (590).png>)
 
-5\. In the Powershell command line, type **install** _(Image 5)._
+5\. In the PowerShell command line, type **install** _(Image 5)._
 
 ![Image 5: Step 5](<../../../.gitbook/assets/image (377).png>)
 
@@ -52,12 +52,12 @@ Using Powershell you will now install the Data Experience you have exported out 
 
 ![Image 6: Step 6](<../../../.gitbook/assets/image (720).png>)
 
-The Powershell window will provide you with the required and optional components to install the DX.
+The PowerShell window will provide you with the required and optional components to install the DX.
 
 7\. You must now set up your mandatory install parameters
 
 {% hint style="info" %}
-The parameters executed in Powershell can exist on one line in powershell, however for legibility (below) the parameters have been put on separate lines.  If you are putting your parameters on separate lines you will be required to have backticks quote \`  for the parameters to execute
+The parameters executed in PowerShell can exist on one line in PowerShell, however for legibility (below) the parameters have been put on separate lines. If you are putting your parameters on separate lines you will be required to have backticks quote \` for the parameters to execute
 {% endhint %}
 
 Sample:\
@@ -69,14 +69,14 @@ Sample:\
 `` -d "C:\CLI Output Logs" ` ``
 
 {% hint style="info" %}
-Be sure that the user(s) and group(s) required to install a DX are existing in your target environment.  If they are not, Powershell will generate an error message when you attempt to install the DX.
+Be sure that the user(s) and group(s) required to install a DX are existing in your target environment. If they are not, PowerShell will generate an error message when you attempt to install the DX.
 {% endhint %}
 
-8\. Enter the install parameters into the Powershell window _(Image 7)._
+8\. Enter the install parameters into the PowerShell window _(Image 7)._
 
 ![Image 7: Step 8](<../../../.gitbook/assets/image (251).png>)
 
-9\. Hit **Enter** on your keyboard to run the install command. Once the Data Experience has been installed you will get a message in Powershell that the install was completed _(Image 8)._
+9\. Hit **Enter** on your keyboard to run the install command. Once the Data Experience has been installed you will get a message in PowerShell that the install was completed _(Image 8)._
 
 ![Image 8: Step 9](<../../../.gitbook/assets/image (555).png>)
 

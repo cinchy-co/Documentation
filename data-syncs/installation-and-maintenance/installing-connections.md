@@ -1,8 +1,8 @@
-# Installing Connections
+# Install Connections (IIS)
 
-## 1. Overview <a href="#setup" id="setup"></a>
+## Overview <a href="#setup" id="setup"></a>
 
-The Connections Experience is designed to facilitate the creation of data syncs through an easy to use Cinchy UI. Once installed, you can access Connections directly through your Cinchy platform using the applet _(Image 1)._
+The Connections Experience facilitates the creation of data syncs through an easy to use Cinchy UI. Once installed, you can access Connections directly through your Cinchy platform using the applet _(Image 1)._
 
 <figure><img src="../../.gitbook/assets/image (562).png" alt=""><figcaption><p>Image 1: The Connections Applet</p></figcaption></figure>
 
@@ -10,30 +10,30 @@ The Connections Experience is designed to facilitate the creation of data syncs 
 **In a Kubernetes deployment of the Cinchy Platform,** Connections is automatically installed. The below steps refer only to an IIS deployment of the Cinchy Platform.
 {% endhint %}
 
-{% hint style="warning" %}
-**Before proceeding, ensure that you have read the** [**Prerequisites**](broken-reference) **section.**
-{% endhint %}
-
-## 2. Downloading the Resources <a href="#setup" id="setup"></a>
+## Download the resources <a href="#setup" id="setup"></a>
 
 1. Navigate to the[ Cinchy Releases table ](https://cinchy.net/Tables/1477?rowHeight=Expanded)and download the latest **Cinchy Connections.zip** file from the **Release Artifacts** column.
 
 {% hint style="info" %}
-The Connections.zip file contains: Worker.zip, WebApi.zip, and CLI.zip.
-{% endhint %}
+**Connections.zip** has the following files:
 
-2\. Extract the **WebApi.zip** to the folder where you want to host the applet.
+- Worker.zip
+- WebApi.zip
+- CLI.zip.
+  {% endhint %}
+
+1. Extract the **WebApi.zip** to the folder where you want to host the applet.
 
 {% hint style="info" %}
 We suggest to create the following path and extract it there: _C:\Connections\\_
 {% endhint %}
 
-## **3. Deploying Connections**
+## Deploy Connections
 
 1. On a Windows Server machine, launch an instance of PowerShell as the Administrator.
 2. Run the below commands to create the IIS application pool and set its properties.
 
-```
+```pwsh
 Import-Module WebAdministration
 
 $applicationPoolNameConnections="Cinchy Connections"
@@ -54,14 +54,14 @@ Set-ItemProperty "IIS:\AppPools\$applicationPoolNameConnections" -Name ProcessMo
 ```
 
 {% hint style="warning" %}
-_**Steps 4 and 5 are only needed if you deployed your Cinchy instance along a base path.**_
+Steps 4 and 5 are only needed if you deployed your Cinchy instance along a base path.
 {% endhint %}
 
-4. Within the Cinchy platform, navigate to the **\[Cinchy].\[Integrated Clients]** table _(Image 2)._
+4. Within the Cinchy platform, navigate to the **[Cinchy].[Integrated Clients]** table _(Image 2)._
 
 <figure><img src="../../.gitbook/assets/image (452).png" alt=""><figcaption><p>Image 2: Integrated Clients table</p></figcaption></figure>
 
-4. Navigate to the row where the **Client ID** column is **"cinchy\_connections\_experience"** _(Image 3)._
+4. Navigate to the row where the **Client ID** column is **"cinchy_connections_experience"** _(Image 3)._
 
 <figure><img src="../../.gitbook/assets/image (559).png" alt=""><figcaption><p>Image 3: Navigate to the row where the Client ID column is " cinchy_connections_experience"</p></figcaption></figure>
 
@@ -98,10 +98,12 @@ _**Steps 4 and 5 are only needed if you deployed your Cinchy instance along a ba
 | **“useHttps”**               | Should be true if your Cinchy platform is hosted on a secure environment             |
 | **“server”**                 | Your private Cinchy URL without “http://” or “https://”                              |
 
-7. Create the IIS Application by running the following command in an instance of Powershell:
+7. Create the IIS Application by running the following command in an instance of PowerShell:
 
 {% code overflow="wrap" %}
+
 ```
 New-WebApplication -Name connections -Site 'Default Web Site' -PhysicalPath C:\Connections -ApplicationPool 'Cinchy Connections'
 ```
+
 {% endcode %}
