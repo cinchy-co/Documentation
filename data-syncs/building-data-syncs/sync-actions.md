@@ -1,6 +1,6 @@
 # Sync Actions
 
-## 1. Overview
+## Overview
 
 When configuring a data sync you must set your sync behaviour. You have two options for this: **Full File or Delta.**
 
@@ -8,15 +8,15 @@ When configuring a data sync you must set your sync behaviour. You have two opti
 
 **Delta syncs** skip the reconciliation process. In batch syncs, it simply grabs records from the source and inserts it into the destination. In real-time syncs, it may act differently depending on the event type. For example, when using the Cinchy Event Broker/CDC with an insert event, a delta sync will insert the data into the destination, an update event will update, etc.
 
-Delta syncs also have the option to provide an **"Action Type Column"** for REST API destinations. This reads the value of the source record from a specified column. If the value is "INSERT", then it inserts the record, "UPDATE", then it updates, "DELETE", then it deletes
+Delta syncs also have the option to provide an **"Action Type Column"** for REST API destinations. This reads the value of the source record from a specified column. If the value is **INSERT**, then it inserts the record, **UPDATE**, then it updates, **DELETE**, then it deletes.
 
-## 2. Full File Sync
+## Full File Sync
 
 When using the Full File synchronization strategy there are four distinct sections that must be configured: the Sync Key and the Sync Record Behaviours, which include actions for New, Dropped, and Changed records. _(Image 1)._
 
 <figure><img src="../../.gitbook/assets/image (690).png" alt=""><figcaption><p>Image 1: Full File Syncs</p></figcaption></figure>
 
-### 2.1 Sync Key
+### Sync Key
 
 **The Sync Key** is used as a unique key reference when syncing the data from the data source into your destination. It is used to match up the data between the source and the target, which allows for updates to occur on changed records.
 
