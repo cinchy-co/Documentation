@@ -90,7 +90,7 @@ WHERE CONTAINS([Title], '"over*"')
 A generation term modifier searches for all the different tenses and conjugations of a verb or both the singular and plural forms of a noun (an **inflectional** search) or for synonymous forms of a specific word (a **thesaurus** search).
 
 {% hint style="warning" %}
-In order to return the synonymous forms, you must have a Thesaurus file configured. [Find more information here.](https://docs.microsoft.com/en-us/sql/relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search?view=sql-server-ver16)
+To return the synonymous forms, you must have a Thesaurus file configured. [Find more information here.](https://docs.microsoft.com/en-us/sql/relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search?view=sql-server-ver16)
 {% endhint %}
 
 #### General Syntax (Inflectional)

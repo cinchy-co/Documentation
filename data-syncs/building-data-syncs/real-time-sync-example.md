@@ -137,7 +137,7 @@ Full load processing means that the entire amount of data is imported iterativel
 1.  Set the following parameters _(Image 10):_
 
 | Parameter                 | Description                                                                                                                                                                                                                     | Example |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
 | Sync Key Column Reference | The SyncKey is used as a unique key reference when syncing the data from the data source into the Cinchy table. It's used to match data between the source and the target. This allows for updates to occur on changed records. | Name    |
 | New Record Behaviour      | This defines the action taken when a new record is found in the sync source. This can be either Insert or Ignore.                                                                                                               | Insert  |
 | Dropped Record Behaviour  | <p>This defines the action taken when a dropped record is found in the sync source.</p><p>This can be either Delete, Ignore, or Expire.</p>                                                                                     | Delete  |
