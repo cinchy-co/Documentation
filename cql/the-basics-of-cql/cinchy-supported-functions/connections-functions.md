@@ -40,7 +40,7 @@ The following example shows how you would use JSON\_ESCAPE in your REST API Requ
 
 In this example we have an API and want to add a value (@Parameter) that contains double quotes -- this could break the JSON structure, so we need to wrap the parameter with JSON\_ESCAPE().
 
-<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Image 2: Example 2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (28) (1).png" alt=""><figcaption><p>Image 2: Example 2</p></figcaption></figure>
 
 ## URL\_ESCAPE
 

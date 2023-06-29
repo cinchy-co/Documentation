@@ -21,7 +21,7 @@ The following formulas are currently supported by Connections.
 * **FILENAME(\<some-path>, \<some-regex>):** The FILENAME formula takes in two variables. The first is a reference to the first parameter **(i.e. a file path)**, and the second is a regular expression that includes a match group. The first match group's value is what gets assigned to the variable. The FILENAME function applies the regex only to the name of the file (**excluding** the directory structure).
 * **FILEPATH(\<some-path>, \<some-regex>)**: Similar to FILENAME, the FILEPATH formula takes in two variables. The first is a reference to the first parameter **(i.e. a file path)**, and the second is a regular expression that includes a match group. The first match group's value is what gets assigned to the variable. The FILEPATH function executes the regex against the full file path (**including** the directory structure).
 * **GUID()**: The GUID formula uses a random GUID for that variable's value. It's used when you want to generate a unique identifier to be used during the context the sync and can be useful, for example, as a way to track if changes were made from a particular sync that ran.
-* **GETSECRET('domain', 'secretname')**: The GETSECRET formula can be used to call a secret from the Cinchy Secrets Table. This secret can then be used in any Connection String, or within a REST Header, Body, or URL for both REST sources and destinations.
+* **GETSECRETVALUE('domain', 'secretname')**: The GETSECRETVALUE formula can be used to call a secret from the [Cinchy Secrets Table](../../../guides-for-using-cinchy/additional-guides/cinchy-secrets-manager.md). This secret can then be used anywhere variables are supported where you may need to insert sensitive information, such as a connection string, Access Key ID, or within a REST URL, Body, or Header.
 * **ENV(\<place-environment-variable-here>):** The ENV formula uses an environment variable available in the connections/worker pods as the value of the variable. An example use case for this would be a situation where the URLs used in a REST API sync is different across environments -- instead of manually updating the syncs with the various URLs, you can use this formula to automatically calculated it from your pod configuration files. To use the ENV() formula you will need to do some back-end configuration; please review Appendix A for more details.
 
 {% hint style="danger" %}
@@ -48,13 +48,17 @@ _Example 4:_ The ENV formula uses an environment variable available in the conne
 
 <figure><img src="../../../.gitbook/assets/image (676).png" alt=""><figcaption><p>Image 5: Example 4</p></figcaption></figure>
 
-_Example 5:_ The GETSECRET formula _(Image 6)_ is input as a Variable for a REST Source and is used to call a secret from the Cinchy Secrets Table.
+_Example 5:_ The **GETSECRETVALUE** formula _(Image 6)_ is input as a variable for a REST Source and is used to call a secret from the [Cinchy Secrets Table.](../../../guides-for-using-cinchy/additional-guides/cinchy-secrets-manager.md)
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Image 6: Example 5</p></figcaption></figure>
+<div data-full-width="true">
+
+<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Image 6: Example 5</p></figcaption></figure>
+
+</div>
 
 This secret can then be used in the REST Header _(Image 7)._
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Image 7: Example 5</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Image 7: Example 5</p></figcaption></figure>
 
 #### Example XMLs
 
