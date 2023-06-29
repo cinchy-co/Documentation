@@ -75,7 +75,7 @@ You can use the following sources in real-time syncs:
 * **REST API (Event Triggered)**
 * **Salesforce Platform Event**
 
-### 2.1 Execution Flow
+### Execution flow
 
 At a high level, running a real-time data sync operation performs these steps _(Image 2):_
 

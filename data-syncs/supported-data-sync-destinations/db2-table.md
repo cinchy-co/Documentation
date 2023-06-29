@@ -4,7 +4,9 @@
 
 [DB2](https://www.ibm.com/products/db2) (Formerly _Db2_ for LUW) is a relational database that delivers advanced data management and analytics capabilities for transactional workloads.&#x20;
 
-Prior to setting up your data sync destination, [ensure that you've configured your Source.](../supported-data-sync-sources/)
+{% hint style="info" %}
+Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)
+{% endhint %}
 
 {% hint style="success" %}
 The DB2 Table destination supports batch and real-time syncs.

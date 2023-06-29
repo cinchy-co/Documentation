@@ -12,7 +12,9 @@ Those events are organized and stored in **topics.** These topics are then parti
 
 Event streaming thus ensures a continuous flow and interpretation of data so that the right information is at the right place, at the right time [for your key use cases](https://kafka.apache.org/powered-by).
 
-Before setting up your data sync destination, [ensure that you've configured your Source.](../supported-data-sync-sources/)
+{% hint style="info" %}
+Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)
+{% endhint %}
 
 {% hint style="success" %}
 The Kafka Topic destination supports batch and real-time syncs.
