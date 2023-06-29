@@ -231,6 +231,8 @@ Example:
 
 ### 2.10 /api/v1.0/secrets-manager
 
+**/api/v1.0/secrets-manager/secret?secretName=\&domain=**
+
 | Description                                                          |
 | -------------------------------------------------------------------- |
 | This API will return a secret from the Cinchy Secrets Manager table. |
@@ -245,9 +247,9 @@ Example:
 
 | Parameter      | Description                                                                         |
 | -------------- | ----------------------------------------------------------------------------------- |
-| \<base-url>    | Your Cinchy base URL                                                                |
+| \<base-url>    | Your Cinchy base URL.                                                               |
 | \<secret-name> | The name of the secret you want to call, as it appears in the Cinchy Secrets table. |
-| \<domain-name> | The domain where your Secrets table resides                                         |
+| \<domain-name> | The domain where your secret resides.                                               |
 
 **Blank Example:**
 
