@@ -26,7 +26,7 @@ It uses the user's entitlements for viewable tables and linked columns.
 
 When you click on a node, you will see its description in the top right hand corner. You can click the Open button to navigate to the table _(Image 2)._
 
-![Image 2: A closer look at the Network Map](<../../../../.gitbook/assets/image (2).png>)
+![Image 2: A closer look at the Network Map](<../../../../.gitbook/assets/image (2) (1).png>)
 
 You will find the Network Map data experience on the Homepage _(Image 3)._
 

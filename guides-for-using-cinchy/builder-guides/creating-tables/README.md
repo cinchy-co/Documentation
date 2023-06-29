@@ -166,7 +166,7 @@ The column names in your .csv file must not conflict with[ System Columns.](colu
 2. The **Columns tab** will open. Create a **Name** for your View _(Image 16)._
 3. If you'd like this to become the default view, toggle the default setting to **On** _(Image 16)._
 
-![Image 16: Steps 2,3](<../../../.gitbook/assets/image (4).png>)
+![Image 16: Steps 2,3](<../../../.gitbook/assets/image (4) (1).png>)
 
 4\. Select the column(s) that you want to be visible in this view _(Image 17)._ You may rearrange the column order using drag and drop.
 

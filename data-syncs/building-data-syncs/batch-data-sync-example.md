@@ -57,7 +57,9 @@ To create the People table used in this example, you can use the below is the XM
 
 6. Select **Columns** in the left hand navigation to create the columns for the table.
 
+
 7. Select the **"Click Here to Add"** button and add the following columns:
+
 
 | Column Details | Values                                            |
 | -------------- | ------------------------------------------------- |

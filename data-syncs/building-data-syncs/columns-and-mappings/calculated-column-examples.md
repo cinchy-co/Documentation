@@ -10,7 +10,7 @@ _Example 3_ demonstrates the use of JavaScript in Calculated Columns.
 
 The value of this column for each record is whatever the value is of the lob parameter.
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### XML equivalent 
 

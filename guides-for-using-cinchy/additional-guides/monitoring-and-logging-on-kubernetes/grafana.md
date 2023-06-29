@@ -140,7 +140,7 @@ Your notifications channel refers to who will be receiving your alert. To set on
 
 **Addresses:** Input all the email addresses you want to be notified of this alert, separated by a comma
 
-![Image 11: Setting up your Notification Channel](../../../.gitbook/assets/image.png)
+![Image 11: Setting up your Notification Channel](<../../../.gitbook/assets/image (122).png>)
 
 4\. Click **Test** to send out a test email, if desired.
 

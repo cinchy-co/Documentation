@@ -11,7 +11,7 @@ This example will take you through the creation and execution of a real-time dat
 {% hint style="success" %}
 You can review our documentation on Cinchy Table Sources[ here.](https://cli.docs.cinchy.com/builder-guide/configuring-a-data-sync/supported-data-sources/delimited-file)\
 \
-You can review our documentation on Cinchy Table destinations here.
+You can review our documentation on Cinchy Table destinations [here.](../supported-data-sync-destinations/)
 {% endhint %}
 
 ## Sample files and code

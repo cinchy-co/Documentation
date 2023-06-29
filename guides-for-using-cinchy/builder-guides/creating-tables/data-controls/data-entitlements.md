@@ -189,7 +189,7 @@ With the following entitlements _(Image 6):_
 * Edit Specific Columns: Age
 * Editable Row Filter: \[Age] > 30
 
-![Image 6: Simple Example](<../../../../.gitbook/assets/image (14).png>)
+![Image 6: Simple Example](<../../../../.gitbook/assets/image (14) (1).png>)
 
 #### Example with Viewable Data
 

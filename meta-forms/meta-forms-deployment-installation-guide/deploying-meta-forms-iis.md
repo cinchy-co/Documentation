@@ -19,7 +19,7 @@ Ensure that you download the latest version.
 1. Create a ‘Cinchy Applets’ folder if it does not exist (eg. _**C:/Cinchy Applets**_) and check in the App Experience code.
 2. If you have multiple instances, create a folder that corresponds to the name of your Cinchy instance (eg. _**C:/CinchyApplets/DXdemo**_) and place the extracted AApp Experience folder here.
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Open your IIS Manager.&#x20;
 4. Navigate to IIS Connections.&#x20;

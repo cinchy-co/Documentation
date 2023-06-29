@@ -33,7 +33,7 @@ There may be times when you want to temporarily disable your Kubernetes pods in 
 
 2\. Click on the main application (i.e. **development-cinchy**) _(Image 8)._
 
-![Image 8: Navigate to your main app](<../../../.gitbook/assets/image (22).png>)
+![Image 8: Navigate to your main app](<../../../.gitbook/assets/image (22) (1).png>)
 
 3\. Navigate to **Summary > Sync Policy**. Click on **Enable Auto-Sync > OK** _(Image 9)._
 

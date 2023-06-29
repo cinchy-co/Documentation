@@ -26,6 +26,7 @@ The following is a list of common API endpoints. These follow the format of \<ba
 * [/identity/connect/token](./#2.7)
 * [/api/getstsauthorityuri](./#2.8-api-getstsauthorityuri)
 * [/api/jobs](./#2.10-api-jobs)
+* [/api/v1.0/secrets-manager](./#2.10-api-v1.0-secrets-manager)
 
 ### **2.1 **_**/admin/index**_
 
@@ -228,7 +229,49 @@ Example:
 | --------------------------------------- |
 | This will return your IDP URL endpoint. |
 
-### **2.10 /**api/jobs
+### 2.10 /api/v1.0/secrets-manager
+
+**/api/v1.0/secrets-manager/secret?secretName=\&domain=**
+
+| Description                                                          |
+| -------------------------------------------------------------------- |
+| This API will return a secret from the Cinchy Secrets Manager table. |
+
+**Header Parameters:**
+
+| Name          | Data Type | Description                                                                                                                                                                                                                                                                                                       |
+| ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authorization | string    | <p>Optional.<br><br>Bearer &#x3C;access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
+
+#### Body Parameters
+
+| Parameter      | Description                                                                         |
+| -------------- | ----------------------------------------------------------------------------------- |
+| \<base-url>    | Your Cinchy base URL.                                                               |
+| \<secret-name> | The name of the secret you want to call, as it appears in the Cinchy Secrets table. |
+| \<domain-name> | The domain where your secret resides.                                               |
+
+**Blank Example:**
+
+```
+<base-url>/api/v1.0/secrets-manager/secret?secretName=<secret-name>&domain=<domain-name>
+```
+
+**Populated Example:**&#x20;
+
+```
+Cinchy.net/api/v1.0/secrets-manager/secret?secretName=<ExampleSecret>&domain=<Sandbox>
+```
+
+The API will return an object in the below format:
+
+```
+{
+    "secretValue": "password123"
+}
+```
+
+### **2.11 /**api/jobs
 
 **POST: https://\<Connections-URL>/api/jobs**
 
