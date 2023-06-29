@@ -1,6 +1,6 @@
 # DB2 Table
 
-## 1. Overview
+## Overview
 
 [DB2](https://www.ibm.com/products/db2) (Formerly _Db2_ for LUW) is a relational database that delivers advanced data management and analytics capabilities for transactional workloads.&#x20;
 
@@ -10,7 +10,7 @@ Prior to setting up your data sync destination, [ensure that you've configured y
 The DB2 Table destination supports batch and real-time syncs.
 {% endhint %}
 
-## 2. Destination Tab
+## Destination tab
 
 The following table outlines the mandatory and optional parameters you will find on the Destination tab _(Image 1)._
 
@@ -18,7 +18,7 @@ The following table outlines the mandatory and optional parameters you will find
 {% tab title="Destination Details" %}
 The following parameters will help to define your data sync destination and how it functions.
 
-<table><thead><tr><th>Parameter</th><th width="289.66666666666663">Description</th><th>Example</th></tr></thead><tbody><tr><td>Destination</td><td><strong>Mandatory.</strong> Select your destination from the drop down menu.</td><td>DB2 Table</td></tr><tr><td>Connection String</td><td><strong>Mandatory.</strong>  The encrypted Connection String used to connect to your DB2 database. <strong>The Connections UI will automatically encrypt this value for you.</strong></td><td>You can find an example <a href="https://www.connectionstrings.com/ibm-db2/">Connection String here.</a></td></tr><tr><td>Table</td><td><strong>Mandatory.</strong> The name of the DB2 table that you want to sync your data to, including the schema</td><td>dbo.employees</td></tr><tr><td>ID Column</td><td>The name of the identity column that exists in the destination (or a single column that is guaranteed to be unique and automatically populated for every new record) </td><td></td></tr><tr><td>ID Column Data Type</td><td>The data type of the above ID Column. </td><td></td></tr><tr><td>Test Connection</td><td><p>You can use the "Test Connection" button to ensure that your credentials are properly configured to access your destination.</p><p> </p><p>If configured correctly, a "Connection Successful" pop-up will appear.</p><p></p><p>If configured incorrectly, a "Connection Failed" pop-up will appear along with a link to the applicable error logs to help you troubleshoot.</p></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Parameter</th><th width="289.66666666666663">Description</th><th>Example</th></tr></thead><tbody><tr><td>Destination</td><td><strong>Mandatory.</strong> Select your destination from the drop down menu.</td><td>DB2 Table</td></tr><tr><td>Connection String</td><td><strong>Mandatory.</strong>  The encrypted Connection String used to connect to your DB2 database. <strong>The Connections UI will automatically encrypt this value for you.</strong></td><td>You can find an example <a href="https://www.connectionstrings.com/ibm-db2/">Connection String here.</a></td></tr><tr><td>Table</td><td><strong>Mandatory.</strong> The name of the DB2 table that you want to sync your data to, including the schema</td><td>dbo.employees</td></tr><tr><td>ID Column</td><td>The name of the identity column that exists in the destination (or a single column that's guaranteed to be unique and automatically populated for every new record) </td><td></td></tr><tr><td>ID Column Data Type</td><td>The data type of the ID Column. </td><td></td></tr><tr><td>Test Connection</td><td><p>You can use the "Test Connection" button to ensure that your credentials are properly configured to access your destination.</p><p> </p><p>If configured correctly, a "Connection Successful" pop-up will appear.</p><p></p><p>If configured incorrectly, a "Connection Failed" pop-up will appear along with a link to the applicable error logs to help you troubleshoot.</p></td><td></td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Column Mapping" %}
@@ -41,7 +41,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 </div>
 
-## 4. Next Steps
+## Next steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
