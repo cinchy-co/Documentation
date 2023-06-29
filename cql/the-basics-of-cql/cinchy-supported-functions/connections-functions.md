@@ -84,6 +84,12 @@ Or
 STRING_ESCAPE(@COLUMN('yourcolumn'))
 ```
 
+Or, when used inside of a post sync script or the sync body:
+
+```sql
+STRING_ESCAPE("@yourparameter")
+```
+
 #### Example
 
 ```

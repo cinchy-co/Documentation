@@ -254,13 +254,13 @@
   * [SOAP 1.2 Web Service](data-syncs/supported-data-sync-destinations/soap-1.2-web-service.md)
 * [Supported Real-Time Sync Stream Sources](data-syncs/supported-real-time-sync-stream-sources/README.md)
   * [The Listener Configuration Table](data-syncs/supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
-  * [Cinchy Event Broker/CDC](data-syncs/supported-data-sync-sources/cinchy-event-broker-cdc/README.md)
-  * [Kafka Topic](data-syncs/supported-data-sync-sources/kafka-topic/README.md)
-  * [MongoDB Event](data-syncs/supported-data-sync-sources/mongo-event.md)
-  * [Polling Event](data-syncs/supported-data-sync-sources/polling-event/README.md)
-  * [REST API (Cinchy Event Triggered)](data-syncs/supported-data-sync-sources/rest-api-cinchy-event-triggered.md)
-  * [Salesforce Platform Event](data-syncs/supported-data-sync-sources/salesforce-platform-event.md)
-  * [Salesforce Push Topic](data-syncs/supported-data-sync-sources/salesforce-push-topic.md)
+  *
+  *
+  *
+  *
+  *
+  *
+  *
 
 ## Other Resources
 
