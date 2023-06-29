@@ -50,11 +50,11 @@ _Example 4:_ The ENV formula uses an environment variable available in the conne
 
 _Example 5:_ The GETSECRET formula _(Image 6)_ is input as a Variable for a REST Source and is used to call a secret from the Cinchy Secrets Table.
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Image 6: Example 5</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Image 6: Example 5</p></figcaption></figure>
 
 This secret can then be used in the REST Header _(Image 7)._
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Image 7: Example 5</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Image 7: Example 5</p></figcaption></figure>
 
 #### Example XMLs
 

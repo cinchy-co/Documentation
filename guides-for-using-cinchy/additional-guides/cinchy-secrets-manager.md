@@ -33,7 +33,7 @@ To create a secret in Cinchy:
 | Read Groups   | A list of User Groups who have read access to your secret. User Groups in this column will be able to call the secret via API. |                                                                                |
 | Write Groups  | A list of User Groups who have write access to configure your secret.                                                          |                                                                                |
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
 
 ## Calling a Secret via API
 
@@ -72,13 +72,13 @@ To use a Secret within Connections:
 
 <div data-full-width="true">
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Image 2: Configure your Variable</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Image 2: Configure your Variable</p></figcaption></figure>
 
 </div>
 
 3. Use your defined Variable within **any connection string** or **within a REST URL, Body, or Header** _(Image 3)._
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Image 3: Use your Variable in a REST Header</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Image 3: Use your Variable in a REST Header</p></figcaption></figure>
 
 ## Using a Secret in the Listener Config
 
@@ -91,7 +91,7 @@ To call a secret in the LIstener:
 
 <div data-full-width="true">
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Image 4: Configure your Variable</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Image 4: Configure your Variable</p></figcaption></figure>
 
 </div>
 
@@ -106,15 +106,15 @@ To call a secret in the LIstener:
     "parameters": [
         {
             "name": "mySecret"
-            "formula": "GETSECRET('','name')"
+            "formula": "GETSECRET('domain','name')"
         }
     ]
 }
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Image 5: Listener Config Parameters Column</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Image 5: Listener Config Parameters Column</p></figcaption></figure>
 
 6. You are able to use your secret in the **Topic or Connection Attributes column** of your sync _(Image 6)_, for example:
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Image 6: Listener Config Connection Attributes</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Image 6: Listener Config Connection Attributes</p></figcaption></figure>
