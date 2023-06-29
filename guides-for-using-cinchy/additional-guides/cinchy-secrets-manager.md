@@ -33,7 +33,7 @@ To create a secret in Cinchy:
 | Read Groups   | A list of User Groups who have read access to your secret. User Groups in this column will be able to call the secret via API. |                                                                                |
 | Write Groups  | A list of User Groups who have write access to configure your secret.                                                          |                                                                                |
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
 
 ## Calling a secret via API
 
@@ -70,11 +70,11 @@ To use a Secret within Connections:
 1. When configuring your sync, navigate to the **Info Tab > Variables.**
 2. Use the **GETSECRETVALUE formula**, [described here](../../data-syncs/building-data-syncs/advanced-settings/variables.md#2.-supported-formulas), to configure your secret _(Image 2)._
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Image 2: Configure your Variable</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Image 2: Configure your Variable</p></figcaption></figure>
 
 3. Use your defined Variable anywhere aa regular variable can be used, such as **within a REST Header** _(Image 3)._
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Image 3: Use your Variable in a REST Header</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Image 3: Use your Variable in a REST Header</p></figcaption></figure>
 
 ## Using a Secret in the Listener Config
 
@@ -85,7 +85,7 @@ To call a secret in the Listener:
 1. When configuring your sync, navigate to the **Info Tab > Variables.**
 2. Use the **GETSECRETVALUE formula**, [described here](../../data-syncs/building-data-syncs/advanced-settings/variables.md#2.-supported-formulas), to configure your secret _(Image 4)._
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Image 4: Configure your Variable</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Image 4: Configure your Variable</p></figcaption></figure>
 
 3. Navigate the the **\[Cinchy].\[Listener Config]** table in your Cinchy platform.
 4. Navigate to the row pertaining to the data sync you want to configure.
@@ -105,7 +105,7 @@ To call a secret in the Listener:
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Image 5: Listener Config Parameters Column</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Image 5: Listener Config Parameters Column</p></figcaption></figure>
 
 6. You are able to use your secret in the **Topic or Connection Attributes column** of your sync _(Image 6)_, for example:
 

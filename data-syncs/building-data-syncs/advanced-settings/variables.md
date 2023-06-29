@@ -52,13 +52,13 @@ _Example 5:_ The **GETSECRETVALUE** formula _(Image 6)_ is input as a variable f
 
 <div data-full-width="true">
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Image 6: Example 5</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Image 6: Example 5</p></figcaption></figure>
 
 </div>
 
 This secret can then be used in the REST Header _(Image 7)._
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Image 7: Example 5</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Image 7: Example 5</p></figcaption></figure>
 
 #### Example XMLs
 
