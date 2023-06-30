@@ -255,13 +255,6 @@
   * [SOAP 1.2 Web Service](data-syncs/supported-data-sync-destinations/soap-1.2-web-service.md)
 * [Supported Real-Time Sync Stream Sources](data-syncs/supported-real-time-sync-stream-sources/README.md)
   * [The Listener Configuration Table](data-syncs/supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
-  *
-  *
-  *
-  *
-  *
-  *
-  *
 
 ## Other Resources
 
