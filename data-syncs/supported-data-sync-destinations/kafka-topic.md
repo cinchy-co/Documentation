@@ -12,7 +12,9 @@ Those events are organized and stored in **topics.** These topics are then parti
 
 Event streaming thus ensures a continuous flow and interpretation of data so that the right information is at the right place, at the right time [for your key use cases](https://kafka.apache.org/powered-by).
 
-Before setting up your data sync destination, [ensure that you've configured your Source.](../supported-data-sync-sources/)
+{% hint style="info" %}
+Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)
+{% endhint %}
 
 {% hint style="success" %}
 The Kafka Topic destination supports batch and real-time syncs.
@@ -24,21 +26,7 @@ The following table outlines the mandatory and optional parameters you will find
 
 {% tabs %}
 {% tab title="Destination Details" %}
-The following parameters will help to define your data sync destination
-
-* Define your[ Sync Behaviour](../building-data-syncs/sync-actions.md).
-* Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* Define your [Permissions](../building-data-syncs/#2.-create-a-data-sync-configuration).
-* If you are running a real-time sync, [set up your Listener Config](../supported-real-time-sync-stream-sources/) and enable it to begin your sync.
-* If you are running a batch sync, click Jobs > Start a Job to begin your sync.
-
-&#x20;and how it functions.
-
-* Define your[ Sync Behaviour](../building-data-syncs/sync-actions.md).
-* Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* Define your [Permissions](../building-data-syncs/#2.-create-a-data-sync-configuration).
-* If you are running a real-time sync, [set up your Listener Config](../supported-real-time-sync-stream-sources/) and enable it to begin your sync.
-* If you are running a batch sync, click Jobs > Start a Job to begin your sync.
+The following parameters will help to define your data sync destination and how it functions.
 
 | Parameter         | Description                                                                                                                                                                                     | Example                          |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|

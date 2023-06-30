@@ -1,16 +1,18 @@
 # Dynamics
 
-## 1. Overview
+## Overview
 
 [Microsoft Dynamics 365 ](https://dynamics.microsoft.com/en-us/)functions as an interconnected CRM, ERP, and productivity suite that integrates processes, data, and business logic.
 
-Prior to setting up your data sync destination, [ensure that you've configured your Source.](../supported-data-sync-sources/)
+{% hint style="info" %}
+Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)
+{% endhint %}
 
 {% hint style="success" %}
 The Dynamics destination supports batch and real-time syncs.
 {% endhint %}
 
-## 2. Destination Tab
+## Destination tab
 
 The following table outlines the mandatory and optional parameters you will find on the Destination tab _(Image 1)._
 

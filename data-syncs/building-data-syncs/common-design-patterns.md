@@ -173,4 +173,4 @@ If you aren't adding or deleting fields, swap out your sync configuration. To ad
 
 ### Changing sync key
 
-If you want to change the sync key, swap out your data sync configuration. It's a good idea to check if your new sync key is unique in both your source and target. The CLI worker will sync using the first record it finds in the source to the first record it finds in the target. Checking for duplicate sync keys will allow you to understand whether any unexpected behaviour will occur.\
+If you want to change the sync key, swap out your data sync configuration. It's a good idea to check if your new sync key is unique in both your source and target. The CLI worker will sync using the first record it finds in the source to the first record it finds in the target. Checking for duplicate sync keys will allow you to understand whether any unexpected behaviour will occur.

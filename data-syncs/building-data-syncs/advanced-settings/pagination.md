@@ -6,7 +6,7 @@ When syncing a Data Source, you may have the option to add in extra configuratio
 
 <figure><img src="../../../.gitbook/assets/image (765).png" alt=""><figcaption><p><em>Image 1: Adding a Pagination Block</em></p></figcaption></figure>
 
-There are two types of pagination available _(Image 2):_
+Cinchy has two types of pagination available _(Image 2):_
 
 - **Cursor:** The cursor is a key parameter in this type of pagination. You receive a variable named `Cursor` along with the response. It's a pointer that points at a particular item that you must send with a request. The server then uses the cursor to seek the other set of items. Cinchy recommends using cursor-based pagination when dealing with a real-time data set.
 - **Offset:** Offset-based pagination is for parameters with a specific limit (the number of results) and offset (the number of records you need to skip). Cinchy recommends using offset-based pagination for static data.
