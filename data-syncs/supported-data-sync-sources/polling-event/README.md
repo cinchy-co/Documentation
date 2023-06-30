@@ -48,6 +48,32 @@ Note that If there is more than one listener associated with your data sync, you
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
 | **Auto Offset Reset** | <p><strong>Earliest, Latest or None.</strong> <br><br>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br></p><p><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed. This is the typical configuration.<br><br><strong>None</strong> will not read start reading any events.<br><br>You are able to switch between Auto Offset Reset types after your initial configuration through the process outlined <a href="../../error-logging-and-troubleshooting.md">here.</a></p> | None    |
 
+#### Optional AppSettings Configurations
+
+* **DataPollingConcurrencyIndex**: This property allows only a certain number of threads to run queries against the source database, which works to reduce the load against the database.&#x20;
+  * The default number of threads is set to 12.&#x20;
+  * To configure this property, navigate to your **appSettings.json** deployment file **>  "DataPollingConcurrencyIndex": \<numberOfThreads>**
+* **QueueWriteConcurrencyIndex**: This property allows only a certain number of threads to be concurrently sending messages to the queue. This works to provide a more consistent batching by the worker and reduce your batching errors. run queries against the source database, which works to reduce the load against the database.&#x20;
+  * The default number of threads is set to 12.&#x20;
+  * To configure this property, navigate to your **appSettings.json** deployment file **>  "QueueWriteConcurrencyIndex": \<numberOfThreads>.**&#x20;
+  * Note that this index is shared across all listener configs, meaning that if it is set to 1 only one listener config will be pushing the messages to the queue at a single moment in time.
+
+```json
+// App Settings JSON Example
+// Example of the configurable propeties: DataPollingConcurrencyIndex (set to "1" and QueueWriteConcurrencyIndex (set to "1")
+"AppSettings": {
+    "GetNewListenerConfigsInterval": "",
+    "StateFileWriteDelaySeconds": "",
+    "KafkaClientConfig": {
+      "BootstrapServers": ""
+    },
+    "KafkaRealtimeDatasyncTopic": "",
+    "KafkaJobCancellationTopic": "",
+    "DataPollingConcurrencyIndex":  1,
+    "QueueWriteConcurrencyIndex":  1
+  }
+```
+
 #### Topic JSON
 
 The below table can be used to help create your Topic JSON needed to set up a real-time sync.
@@ -82,7 +108,7 @@ AND 1=1
 INNER JOIN [Table1] ts ON ts.[Id] = t.[Id]
 WHERE ts.[Id] > 0
 ORDER BY Id
-</code></pre></td></tr><tr><td>CursorAlias</td><td><strong>Mandatory.</strong> This is the alias for a subquery result table. It is used in 'JoinClause', and can be used in 'Columns' if we want to return values from a subquery table.</td><td>Example: <strong>"t"</strong></td></tr><tr><td>JoinClause</td><td><strong>Mandatory.</strong> Our result table to which we join the subquery result, plus the condition of the join.</td><td>Example: <strong>[Table1] ts ON ts.[Id] = t.[Id]</strong></td></tr><tr><td>FilterCondition</td><td>All filtering options used in any 'WHERE' conditions.</td><td>Example: "<strong>ts.[Id] > 0"</strong></td></tr><tr><td>OrderByClause</td><td><strong>Mandatory.</strong> This is the column(s) that we want to order our final result by.</td><td>Example: "<strong>Id"</strong></td></tr><tr><td>Columns</td><td><strong>Mandatory</strong>. A list of columns that we want to show in the final result.</td><td>Example: "<strong>ts.[Id]" "ts.[name]"</strong></td></tr><tr><td>Delay</td><td><strong>Mandatory.</strong> This represents the delay, in second, between data sync cycles once it no longer finds any new data.</td><td>Example: <strong>10</strong></td></tr><tr><td>messageKeyExpresssion</td><td>Optional, but recommended to mitigate data loss. <a href="./#appendix-a"><strong>See Appendix A</strong></a> for more information on this parameter.</td><td>id</td></tr></tbody></table>
+</code></pre></td></tr><tr><td>CursorAlias</td><td><strong>Mandatory.</strong> This is the alias for a subquery result table. It is used in 'JoinClause', and can be used in 'Columns' if we want to return values from a subquery table.</td><td>Example: <strong>"t"</strong></td></tr><tr><td>JoinClause</td><td><strong>Mandatory.</strong> Our result table to which we join the subquery result, plus the condition of the join.</td><td>Example: <strong>[Table1] ts ON ts.[Id] = t.[Id]</strong></td></tr><tr><td>FilterCondition</td><td>All filtering options used in any 'WHERE' conditions.</td><td>Example: "<strong>ts.[Id] > 0"</strong></td></tr><tr><td>OrderByClause</td><td><strong>Mandatory.</strong> This is the column(s) that we want to order our final result by.</td><td>Example: "<strong>Id"</strong></td></tr><tr><td>Columns</td><td><strong>Mandatory</strong>. A list of columns that we want to show in the final result.</td><td>Example: "<strong>ts.[Id]" "ts.[name]"</strong></td></tr><tr><td>Delay</td><td><strong>Mandatory.</strong> This represents the delay, in second, between data sync cycles once it no longer finds any new data.</td><td>Example: <strong>10</strong></td></tr><tr><td>messageKeyExpresssion</td><td>Optional, but recommended to mitigate data loss. <a href="./#appendix-a"><strong>See Appendix A</strong></a> for more information on this parameter.</td><td>id</td></tr><tr><td>CursorConfiguration.CursorColumnDataType</td><td><strong>Mandatory.</strong> This property works in tandem with an update that ensures that the database query always moves the offset, regardless of if the query returned the records or not—this helps to ensure that the performance of the source database is not being weighed down by constantly running heavy queries on a wide range of records when the queries returned no data. This value of this mandatory property must match the column type of the source database system for proper casting of parameters.</td><td>int</td></tr><tr><td>CursorConfiguration.Distinct</td><td><strong>Mandatory.</strong> This property is a true/false Boolean type that, when set to true, applies a distinct clause on your query to avoid any duplicate records.</td><td>true</td></tr></tbody></table>
 
 **Example Topic JSON**
 
@@ -95,6 +121,8 @@ ORDER BY Id
     "FilterCondition": "Name IS NOT NULL",
     "Columns": [
       "Id", "Name"
+            "Distinct": "true"
+            "CursorColumnDataType" : "int"
     ]
   },
   "ReturnDataConfiguration": {
