@@ -12,12 +12,3 @@ jobs:
           files: '["meta-forms/","cinchy-glossary.md"]'
           fail_on_error: true
           reporter: github-check
-  broken_link_checker_job:
-    runs-on: ubuntu-latest
-    name: Check for broken links
-    steps:
-    - name: Check for broken links
-      id: link-report
-      uses: elliotforbes/broken-link-checker@1.0.2
-      with:
-        url: 'https://platform.docs.cinchy.com/'
