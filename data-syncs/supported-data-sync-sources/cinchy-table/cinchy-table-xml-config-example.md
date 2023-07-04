@@ -2,7 +2,7 @@
 
 ## Overview
 
-**This page** highlights a few example XML configs that you can review when setting up your own Cinchy Table data source.
+This page has example XML configs that you can review when setting up your own Cinchy Table data source.
 
 You can review the source only example or the full example that shows both source and destination.
 

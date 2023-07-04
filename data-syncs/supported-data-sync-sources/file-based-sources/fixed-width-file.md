@@ -1,6 +1,6 @@
-# Fixed Width File
+# Fixed width file
 
-## 1. Overview
+## Overview
 
 Fixed width text files are special cases of text files where the format is specified by column widths, pad character and left/right alignment. Column widths are measured in units of characters. For example, if you have data in a text file where the first column **always** has exactly 10 characters, and the second column has exactly 5, the third has exactly 12 (and so on), this would be categorized as a fixed width text file.
 
@@ -23,7 +23,7 @@ The Fixed Width File source supports **batch syncs.**
 The Fixed Width File source does not support Geometry, Geography, or Binary data types.
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -37,7 +37,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../../.gitbook/assets/image (700).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab.
 
@@ -66,7 +66,7 @@ There are other options available for the Schema section if you click on **Show 
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  If your data type was chosen as "text", you can choose whether to **trim the whitespace** _(that is, spaces and other non-printing characters)._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.**  If your data type was chosen as "text", you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
