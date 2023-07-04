@@ -1,6 +1,6 @@
 # Upgrading Cinchy Versions
 
-## 1. Overview
+## Overview
 
 The sub-pages in this section will refer you to upgrade guides for each Cinchy version. Ensure that you select either **IIS Upgrades or Kubernetes Upgrades** depending on your deployment type.
 

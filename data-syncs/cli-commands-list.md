@@ -1,6 +1,6 @@
 # CLI Commands List
 
-## 1. Overview
+## Overview
 
 This page provides a list of the commands you can use in tandem with Cinchy's Command LIne Interface (CLI).
 

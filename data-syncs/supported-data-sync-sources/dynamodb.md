@@ -1,6 +1,6 @@
 # DynamoDB
 
-## 1. Overview
+## Overview
 
 [Amazon DynamoDB](https://aws.amazon.com/dynamodb/?trk=d1003b1b-ffc2-4fbd-9ce6-e70c668663bc\&sc\_channel=ps\&s\_kwcid=AL!4422!3!536393505298!e!!g!!dynamodb\&ef\_id=Cj0KCQjwteOaBhDuARIsADBqRehoQ4LyBjuhkAYGKfx15DT4NXjMrNVjbVFUYbYb\_5uQOrcctpV9A-8aAihsEALw\_wcB:G:s\&s\_kwcid=AL!4422!3!536393505298!e!!g!!dynamodb) is a managed NoSQL database service that is offered by Amazon as part of the AWS portfolio.
 
@@ -10,7 +10,7 @@
 The DynamoDB source supports batch syncs.
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -24,7 +24,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../.gitbook/assets/image (384).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -75,7 +75,7 @@ You have the option to add a source filter to your data sync. Please review the 
 
 <figure><img src="../../.gitbook/assets/image (360).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)

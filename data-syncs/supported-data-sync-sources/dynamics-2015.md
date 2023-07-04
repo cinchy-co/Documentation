@@ -1,6 +1,6 @@
 # Dynamics 2015
 
-## 1. Overview
+## Overview
 
 Dynamics 2015 is a legacy CRM predecessor to Microsoft Dynamics 365. Mainstream end of life support finished in [January 2020](https://learn.microsoft.com/en-us/lifecycle/products/dynamics-crm-2015), with extended end of life support finishing in January 2025.
 
@@ -10,7 +10,7 @@ Dynamics 2015 is a legacy CRM predecessor to Microsoft Dynamics 365. Mainstream 
 The Dynamics 2015 source supports batch syncs.
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -24,7 +24,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../.gitbook/assets/image (692).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -73,7 +73,7 @@ You have the option to add a source filter to your data sync. Please review the 
 {% endtab %}
 {% endtabs %}
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)

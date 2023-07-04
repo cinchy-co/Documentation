@@ -28,7 +28,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../../.gitbook/assets/image (295).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 

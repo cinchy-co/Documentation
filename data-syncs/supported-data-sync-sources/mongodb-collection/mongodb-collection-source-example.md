@@ -1,6 +1,6 @@
-# MongoDB Collection Source Example
+# MongoDB collection source example
 
-## 1. Example Data
+## Example data
 
 The following is an example of data we want to sync out of MongoDB.
 
@@ -24,7 +24,7 @@ test> db.Articles.find()
 ]
 ```
 
-## 2. XML Example
+## XML example
 
 This example XML uses the following values:
 
@@ -39,7 +39,7 @@ This example XML uses the following values:
 }"
 </code></pre></td></tr><tr><td>Column Name</td><td>The name(s) of your source column(s)</td><td>"id"<br>"name"<br>"price"<br>"colour"<br>"size"<br>"stock"<br>"$" (<em>This is used to retrieve the full document.)</em><br>"Details" <em>(This is imported both as set of fields (flattened from the projection) and as a JSON.)</em></td></tr><tr><td>dataType</td><td>The data type of your source column</td><td>"Text"<br>"Text"<br>"Number"<br>"Text"<br>"Text"<br>"Number"<br>"Text"<br>"Text"</td></tr><tr><td>isMandatory</td><td>Whether the column is mandatory or not</td><td>"false"</td></tr><tr><td>validateData</td><td>Whether the column data needs to be validated or not</td><td>"false"</td></tr></tbody></table>
 
-### 1.1 XML Example
+### XML example
 
 ```xml
 <BatchDataSyncConfig name=""MongoDB Data Source Example"" version=""1.0.0""

@@ -4,7 +4,7 @@ description: This page is your first stop when considering a deployment of Cinch
 
 # Deployment Planning Overview and Checklist
 
-## 1. Overview
+## Overview
 
 There are various things to consider before deploying Cinchy v5.
 

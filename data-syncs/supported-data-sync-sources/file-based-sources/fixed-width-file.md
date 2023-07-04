@@ -85,7 +85,7 @@ You have the option to add a source filter to your data sync. Please review the 
 {% endtab %}
 {% endtabs %}
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../../supported-data-sync-destinations/)
 * Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)

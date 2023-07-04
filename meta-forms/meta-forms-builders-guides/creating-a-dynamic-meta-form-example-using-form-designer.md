@@ -1,6 +1,6 @@
 # Creating a Dynamic Meta-Form Example (Using Form Designer)
 
-## 1. Overview
+## Overview
 
 This page outlines how to create a form using the form designer, a simple alternative for making your forms.
 

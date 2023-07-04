@@ -7,7 +7,7 @@ description: >-
 
 # Data Entitlements
 
-## 1. Overview
+## Overview
 
 Data Entitlements define who has access to do what on your Cinchy platform. These access controls are universally set at a cellular level, meaning that you can configure user access in the way that best supports your use case.
 

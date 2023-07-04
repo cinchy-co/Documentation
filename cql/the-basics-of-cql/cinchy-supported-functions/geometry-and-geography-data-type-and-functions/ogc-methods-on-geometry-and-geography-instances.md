@@ -1482,7 +1482,7 @@ SELECT @g.STOverlaps(@h);
 ## **STPointFromText (Geometry)**&#x20;
 
 {% hint style="warning" %}
-Only available in SQLServer implementations.
+Only available in SQL Server implementations.
 {% endhint %}
 
 Augmented with any `Z` (elevation) and `M` (measure) values carried by the instance, `STPointFromText()` returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.
@@ -1625,7 +1625,7 @@ SELECT @g.STPointOnSurface().ToString();
 ## STPolyFromText (Geometry)
 
 {% hint style="warning" %}
-Only available in SQLServer implementations.
+Only available in SQL Server implementations.
 {% endhint %}
 
 Augmented with any `Z` (elevation) and `M` (measure) values carried by the instance, `STPolyFromText()`returns a geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation.

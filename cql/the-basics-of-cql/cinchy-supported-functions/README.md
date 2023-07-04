@@ -1,6 +1,6 @@
 # Cinchy Supported Functions
 
-## 1. Overview
+## Overview
 
 Cinchy Supported Functions covers the following topics:
 

@@ -12,7 +12,7 @@ description: This page outlines how to use saved queries with APIs.
 | [#2.-example](api-saved-queries.md#2.-example "mention")                   |
 | [#3.-anonymous-access](api-saved-queries.md#3.-anonymous-access "mention") |
 
-## 1. Overview
+## Overview
 
 Cinchy queries are automatically available as REST APIs to allow for external application integration.
 

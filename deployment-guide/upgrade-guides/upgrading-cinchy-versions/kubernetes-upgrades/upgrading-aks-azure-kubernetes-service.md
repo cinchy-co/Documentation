@@ -6,7 +6,7 @@ description: >-
 
 # Upgrading AKS (Azure Kubernetes Service)
 
-## 1. Overview
+## Overview
 
 **AKS (Azure Kubernetes Service)** is a managed K8 service used when deploying Cinchy v5 over Azure. Once you have deployed your v5 instance of Cinchy, you may want to upgrade your AKS to a newer version. You can do so with the below guide.
 

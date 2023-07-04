@@ -1,6 +1,6 @@
 # Date and Time Types and Functions
 
-## 1. Overview
+## Overview
 
 Perform operations on a date and time input values and return string, numeric, or date and time values.
 

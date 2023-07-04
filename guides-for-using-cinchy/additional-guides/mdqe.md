@@ -6,7 +6,7 @@ description: >-
 
 # MDQE
 
-## 1. Overview
+## Overview
 
 MDQE, which stands for **Metadata Quality Exceptions**, can send out notifications based on a set of rules and the “exceptions” that break them. This powerful tool can be used to send notifications for exceptions such as:
 

@@ -1,6 +1,6 @@
 # LDAP
 
-## 1. Overview
+## Overview
 
 [LDAP](https://www.techtarget.com/searchmobilecomputing/definition/LDAP) **(Lightweight Directory Access Protocol)** is a mature, flexible, and well supported standards-based mechanism software protocol for enabling anyone to locate data whether on the public internet or on a corporate intranet.
 
@@ -14,7 +14,7 @@ Common uses of LDAP include when:
 The LDAP source supports batch syncs.
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -28,7 +28,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../.gitbook/assets/image (716).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -79,7 +79,7 @@ You have the option to add a source filter to your data sync. Please review the 
 
 <figure><img src="../../.gitbook/assets/image (711).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)

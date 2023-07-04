@@ -1,6 +1,6 @@
 # Connections Functions
 
-## 1. Overview <a href="#overview" id="overview"></a>
+## Overview <a href="#overview" id="overview"></a>
 
 The set of functions listed in this page are for use in [Cinchy's Connections Experience](https://cli.docs.cinchy.com/) when configuring data syncs.
 

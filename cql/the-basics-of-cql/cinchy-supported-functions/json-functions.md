@@ -1,6 +1,6 @@
 # JSON Functions
 
-## 1. Overview
+## Overview
 
 This page details the available JSON functions in Cinchy.The JSON functions covered in this section are:
 

@@ -1,6 +1,6 @@
 # Creating a Dynamic Meta-Form (Using Tables)
 
-## 1. Overview
+## Overview
 
 In this example, we will create a form that pulls specific information from a customer contacts table that a user is looking for.
 

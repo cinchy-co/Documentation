@@ -4,7 +4,7 @@ description: This page outlines some best practices for versioning.
 
 # Versioning Best Practices
 
-## 1. Overview
+## Overview
 
 This page details a few best practices concerning **version history** in Cinchy. These recommendations are important because they can help:
 

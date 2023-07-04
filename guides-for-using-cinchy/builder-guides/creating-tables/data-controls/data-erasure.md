@@ -4,7 +4,7 @@ description: This page provides an overview on data erasure.
 
 # Data Erasure
 
-## 1. Overview
+## Overview
 
 Data erasure allows you to permanently delete data in Cinchy. As the data owner, you can set an erasure policy on your table if you need to delete data for compliance reasons _(Image 1)._
 

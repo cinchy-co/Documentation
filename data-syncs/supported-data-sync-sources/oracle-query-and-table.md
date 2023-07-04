@@ -1,6 +1,6 @@
 # Oracle (Query and Table)
 
-## 1. Overview
+## Overview
 
 [Oracle Database](https://docs.oracle.com/cd/B13789\_01/server.101/b10743/intro.htm) is a relational database management system, commonly used for running online transaction processing, data warehousing and mixed database workloads. The system is built around a relational database framework in which data objects may be directly accessed by users (or an application front end) through structured query language (SQL).
 
@@ -8,7 +8,7 @@
 The Oracle Query and Table sources support batch syncs.
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -22,7 +22,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../.gitbook/assets/image (541).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -77,7 +77,7 @@ You have the option to add a source filter to your data sync. Please review the 
 
 </div>
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)

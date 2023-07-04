@@ -12,7 +12,7 @@ description: This page will describe how to attach files to your Cinchy table ro
 | [#2.-how-to-attach-a-file](attaching-files.md#2.-how-to-attach-a-file "mention")           |
 | [#3.-deleting-an-attached-file](attaching-files.md#3.-deleting-an-attached-file "mention") |
 
-## 1. Overview
+## Overview
 
 You are able to attach files and images to any row in a Cinchy table by creating a linked column that is linked to the **'Files'** system table of your platform.
 

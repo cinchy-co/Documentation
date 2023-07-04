@@ -1,6 +1,6 @@
 # Logical Functions
 
-## 1. Overview
+## Overview
 
 The logical functions covered in this section are:
 

@@ -1,6 +1,6 @@
 # REST API (Cinchy Event Triggered)
 
-## 1. Overview
+## Overview
 
 Data changes in Cinchy (CDC) can be used to trigger a data sync from a REST API data source to a specified target. The attributes of the CDC Event are available to use as parameters within the REST API Data Source Definition to narrow the scope of the request, e.g. a lookup.&#x20;
 

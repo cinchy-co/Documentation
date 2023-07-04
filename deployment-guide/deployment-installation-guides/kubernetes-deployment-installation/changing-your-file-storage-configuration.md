@@ -6,7 +6,7 @@ description: >-
 
 # Changing your File Storage Configuration
 
-## 1. Overview
+## Overview
 
 In Cinchy v5.2, we implemented the ability to free up database space by using **S3 compatible or Azure Blob Storage** for file storage. This configuration is set in the **deployment.json** of a Kubernetes installation, or the **appsettings.json** of an IIS installation.
 

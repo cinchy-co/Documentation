@@ -46,7 +46,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 <figure><img src="../../.gitbook/assets/image (344).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
 
-## 4. Next Steps
+## Next steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.

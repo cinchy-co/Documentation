@@ -1,6 +1,6 @@
 # MongoDB Collection (Cinchy Event Triggered)
 
-## 1. Overview
+## Overview
 
 Data changes in Cinchy (CDC) can be used to trigger a data sync from a MongoDB data source to a specified target. The attributes of the CDC Event are available to use as parameters within the  Data Source Definition to narrow the scope of the request, e.g. a lookup.
 
@@ -10,7 +10,7 @@ The MongoDB Collection (Cinchy Event Triggered) Source supports real-time syncs.
 
 ### 1.1 Considerations
 
-Please review the following considerations prior to setting up your MongoDB Collection data sync source:
+Please review the following considerations before you set up your MongoDB Collection data sync source:
 
 * We currently only support SCRAM authentication (Mongo 4.0+).
 * Syncs are column based. This means that **you must flatten the MongoDB source document** prior to sync by using a projection _(See section 2: Projection (JSON Object))_.

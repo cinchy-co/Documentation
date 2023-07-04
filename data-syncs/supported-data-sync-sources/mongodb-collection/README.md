@@ -1,12 +1,12 @@
-# MongoDB Collection
+# MongoDB collection
 
-## 1. Overview
+## Overview
 
 [MongoDB](https://www.mongodb.com/what-is-mongodb/features) is a scalable, flexible NoSQL document database platform known for its horizontal scaling and load balancing capabilities, which has given application developers an unprecedented level of flexibility and scalability.
 
-### 1.1 Considerations
+### Considerations
 
-Please review the following considerations prior to setting up your MongoDB Collection data sync source:
+Please review the following considerations before you set up your MongoDB Collection data sync source:
 
 * We currently only support SCRAM authentication (Mongo 4.0+).
 * Syncs are column based. This means that **you must flatten the MongoDB source document** prior to sync by using a projection _(See section 2: Projection (JSON Object))_.
@@ -33,7 +33,7 @@ Please review the following considerations prior to setting up your MongoDB Coll
 The MongoDB Collection source supports batch syncs. (To enable real-time syncs with MongoDB, use the MongoDB Collection (Cinchy Event Triggered) or Mongo Event source instead.)
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -47,7 +47,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../../.gitbook/assets/image (299).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -137,7 +137,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 <figure><img src="../../../.gitbook/assets/image (694).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../../supported-data-sync-destinations/)
 * Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
@@ -146,7 +146,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 ## Appendix A
 
-### Data Types
+### Data types
 
 The MongoDB Collection Data Source obtains BSON documents from MongoDB. BSON, short for Binary JSON, is a binary-encoded serialization of JSON-like documents. Like JSON, BSON sup­ports the em­bed­ding of doc­u­ments and ar­rays&#x20;
 
@@ -176,7 +176,7 @@ The following table shows how MongoDB data types are translated in Cinchy.
 | -              | Geography   | Unsupported |
 | -              | Geometry    | Unsupported |
 
-### **Retry Configuration**
+### Retry configuration
 
 A retry configuration will automatically retry HTTP Requests on failure based on a defined set of conditions. This capability provides a mechanism to recover from transient errors such as network disruptions or temporary service outages.
 
