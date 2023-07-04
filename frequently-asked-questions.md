@@ -9,7 +9,7 @@ description: >-
 ## Table of Contents
 
 |                                                                                                                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [#can-i-get-a-record-count-from-a-delimited-file-before-running-the-cli](frequently-asked-questions.md#can-i-get-a-record-count-from-a-delimited-file-before-running-the-cli "mention")                                                               |
 | [#can-i-restore-my-deleted-data](frequently-asked-questions.md#can-i-restore-my-deleted-data "mention")                                                                                                                                               |
 | [#can-i-send-multiple-comma-delimited-values-to-a-query-parameter-i.e.-234-233-365-to-be-used-in-where](frequently-asked-questions.md#can-i-send-multiple-comma-delimited-values-to-a-query-parameter-i.e.-234-233-365-to-be-used-in-where "mention") |
@@ -155,7 +155,8 @@ You can also add the "Modified By" and "Modified" columns into the current view/
 
 ## How do I create a Cinchy user with a set password?
 
-One Time&#x20;setup:
+One Time
+&#x20;setup:
 
 1. Open the Users table
 2. For the password of this user, copy the admin user's password and paste it into the Password field of **"defaultuser".**
@@ -179,7 +180,8 @@ You write the query for the records for which you want the change history, inclu
 
 You can add an **ORDER BY \[Version] (either ASC or DESC)**
 
-Then you change the query return type to "Query Results (Including Version History)"
+Then you change the query return type to "Query Results (Including Version History
+)"
 
 The following query will show when the Cinchy instances were upgraded.
 
@@ -203,7 +205,8 @@ FROM [Domain].[Table Name] T
 WHERE T.[Deleted] IS NULL AND ...
 ```
 
-In this example it would set \[Multi-Link Field Name] to values with \[Cinchy Id] 1, 2, and 3.&#x20;The version after each Cinchy Id should be 1.
+In this example it would set \[Multi-Link Field Name] to values with \[Cinchy Id] 1, 2, and 3.
+&#x20;The version after each Cinchy Id should be 1.
 
 {% hint style="info" %}
 You must provide the full list of multi-select values. If your field was '1,2' and you update it with '3,1' it will end up as '3', not '1,2,3'.
@@ -260,7 +263,8 @@ For each table, export and import the data via the UI.
 <Schema>
 ```
 
-Then map the calculated source column to the target.&#x20;The order of the columns in the source is important. If your source is a file, put the calculated columns at the end in the source, after all the actual columns in the file.
+Then map the calculated source column to the target.
+&#x20;The order of the columns in the source is important. If your source is a file, put the calculated columns at the end in the source, after all the actual columns in the file.
 
 ## How do I parse a pipe delimited file using the CLI?
 
@@ -351,7 +355,8 @@ WHERE [Deleted] IS NULL AND [Table]='HR.Employees'
 
 ## I cannot find the column I want to link to even though the column is present in the table
 
-In this example it would set \[Multi-Link Field Name] to values with \[Cinchy Id] 1, 2, and 3.&#x20;The version after each Cinchy Id should be 1."
+In this example it would set \[Multi-Link Field Name] to values with \[Cinchy Id] 1, 2, and 3.
+&#x20;The version after each Cinchy Id should be 1."
 
 Columns do not "Allow Linking" by default. Check the properties of the column in the original table and make sure that in “Show Advanced” the “Allow Linking” checkmark box is selected. If you do not have Design Table access to that table, you will need to ask someone who does to do it.
 
@@ -415,7 +420,7 @@ DECLARE @nbdays AS INT;
 SELECT @nbdays;
 ```
 
-The query works without the DECLARE statement. When the DECLARE statement is present, the input variable is ignored, and needs to be SET. In order to still get the variable from the input, a second variable is needed.
+The query works without the DECLARE statement. When the DECLARE statement is present, the input variable is ignored, and needs to be SET. To still get the variable from the input, a second variable is needed.
 
 ```javascript
 DECLARE @nbdays AS INT;

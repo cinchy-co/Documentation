@@ -30,3 +30,5 @@ exceptions:
   - Cinchy
   - Cinchy Table
   - Kafka Topic
+  - Cinchy Event Broker
+  - SuccessFactors

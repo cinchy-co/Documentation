@@ -35,7 +35,7 @@ The MongoDB Collection source supports batch syncs. (To enable real-time syncs w
 
 ## Info tab
 
-You can review the parameters that can be found in the info tab below _(Image 1)._
+You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
 
@@ -70,7 +70,7 @@ The following parameters will help to define your data sync source and how it fu
 
 
 
-There are other options available for the Schema section if you click on **Show Advanced.**
+Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -92,7 +92,7 @@ Note that you can have more than one String Replacement
 {% endtab %}
 {% endtabs %}
 
-#### Example Query
+#### Query example
 
 ```sql
 // query: where "Price" is less than 10
@@ -109,7 +109,7 @@ blog> db.Articles.find({ "Price": { "$lt": 10 } })
 ]
 ```
 
-#### Example Projection
+#### Projection example
 
 ```json
 // Flatten the document
@@ -150,7 +150,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 The MongoDB Collection Data Source obtains BSON documents from MongoDB. BSON, short for Binary JSON, is a binary-encoded serialization of JSON-like documents. Like JSON, BSON sup­ports the em­bed­ding of doc­u­ments and ar­rays&#x20;
 
-with­in other documents and arrays. BSON also con­tains extensions that allow representation of data types that are not part of the JSON spec. For ex­ample BSON makes a distinction between Int32 and Int64.
+with­in other documents and arrays. BSON also has extensions that allow representation of data types that are not part of the JSON spec. For ex­ample, BSON makes a distinction between `Int32` and `Int64`.
 
 The following table shows how MongoDB data types are translated in Cinchy.
 
@@ -212,7 +212,7 @@ Each Retry Condition contains **one or more "Attribute Match" sections**. This d
 If there are multiple "Attribute Match" blocks within a Retry Condition, **all have to match for the retry condition to evaluate to true.**
 
 {% hint style="warning" %}
-Note that the Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of "5\[0-9]\[0-9]".\
+The Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of "5\[0-9]\[0-9]".\
 \
 **For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".&#x20;
 {% endhint %}

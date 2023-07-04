@@ -6,7 +6,7 @@ The MongoDB Event stream source works similar to Cinchy's Change Data Capture fu
 
 ### Limitations
 
-In order to use change streams in MongoDB, there are a few requirements your environment must meet.
+To use change streams in MongoDB, there are a few requirements your environment must meet.
 
 * The database must be in a [replica set](https://docs.mongodb.com/manual/replication/) or [sharded cluster](https://docs.mongodb.com/manual/sharding/).
 * The database must use the [WiredTiger](https://docs.mongodb.com/manual/core/wiredtiger/#storage-wiredtiger) storage engine.
@@ -18,7 +18,7 @@ The MongoDB Event source supports real-time syncs.
 
 ## Info tab
 
-You can review the parameters that can be found in the info tab below _(Image 1)._
+You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
 
@@ -105,7 +105,7 @@ The below table can be used to help create your Connection Attributes JSON neede
 
 
 
-There are other options available for the Schema section if you click on **Show Advanced.**
+Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |

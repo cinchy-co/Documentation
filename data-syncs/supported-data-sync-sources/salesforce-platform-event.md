@@ -12,7 +12,7 @@ The Salesforce Platform Event source supports real-time syncs.
 
 ## Info tab
 
-You can review the parameters that can be found in the info tab below _(Image 1)._
+You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
 
@@ -96,7 +96,7 @@ The below table can be used to help create your Connection Attributes JSON neede
 
 
 
-There are other options available for the Schema section if you click on **Show Advanced.**
+Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |

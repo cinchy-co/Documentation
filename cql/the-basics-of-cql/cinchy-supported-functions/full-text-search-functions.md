@@ -4,7 +4,7 @@
 
 Full Text Searching can provide robust search capabilities on columns that have a Full Text Index. You are able to use the predicates **CONTAINS** and **FREETEXT** for this purpose.
 
-In order to perform a Full Text Search, [each column in your query will need a Full Text Index.](https://platform.docs.cinchy.com/guides-for-using-cinchy/builder-guides/creating-tables/indexing-and-partitioning#2.-full-text-indexing)
+To perform a Full Text Search, [each column in your query will need a Full Text Index.](https://platform.docs.cinchy.com/guides-for-using-cinchy/builder-guides/creating-tables/indexing-and-partitioning#2.-full-text-indexing)
 
 {% hint style="warning" %}
 Full Text Searching is currently **only available** for those using SQL Server 2016 or up.
@@ -276,7 +276,7 @@ At a high level, this commands finds matches based on separating the string into
 The difference between FREETEXT and CONTAINS is that it searches for the values that match the **meaning of a phrase** and not just exact words. It is therefore a better option if you are **searching phrases**, in lieu of individual words.
 
 {% hint style="warning" %}
-In order to use FREETEXT, you must have a Thesaurus file configured. [Find more information here.](https://docs.microsoft.com/en-us/sql/relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search?view=sql-server-ver16)
+To use FREETEXT, you must have a Thesaurus file configured. [Find more information here.](https://docs.microsoft.com/en-us/sql/relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search?view=sql-server-ver16)
 {% endhint %}
 
 #### General Syntax

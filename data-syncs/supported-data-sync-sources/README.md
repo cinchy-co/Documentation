@@ -1,4 +1,4 @@
-# Supported Data Sync Sources
+# Supported data sync sources
 
 ### Cinchy Event Broker
 
@@ -18,7 +18,7 @@
 [cinchy-query](cinchy-query/)
 {% endcontent-ref %}
 
-### Binary File
+### Binary file
 
 A binary file is a computer file that is **not a text file**, and whose content is in a binary format consisting of a series of sequential bytes, each of which is eight bits in length.
 
@@ -42,7 +42,7 @@ Some benefits of using binary files include:
 [copper.md](copper.md)
 {% endcontent-ref %}
 
-### Delimited File
+### Delimited file
 
 {% content-ref url="file-based-sources/delimited-file.md" %}
 [delimited-file.md](file-based-sources/delimited-file.md)
@@ -78,7 +78,7 @@ Dynamics 2015 is a legacy CRM predecessor to Microsoft Dynamics 365. Mainstream 
 [excel.md](file-based-sources/excel.md)
 {% endcontent-ref %}
 
-### Fixed Width File
+### Fixed width file
 
 A **fixed width file** is a file that has a specific format which allows for the saving of information in an organized fashion. The data is arranged in rows and columns, with one entry per row. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
 
@@ -121,7 +121,7 @@ Common uses of LDAP include when:
 [ldap.md](ldap.md)
 {% endcontent-ref %}
 
-### MongoDB Collection
+### MongoDB collection
 
 [MongoDB](https://www.mongodb.com/what-is-mongodb/features) is a scalable, flexible NoSQL document database platform known for its horizontal scaling and load balancing capabilities, which has given application developers an unprecedented level of flexibility and scalability.
 
@@ -129,7 +129,7 @@ Common uses of LDAP include when:
 [mongodb-collection](mongodb-collection/)
 {% endcontent-ref %}
 
-### MongoDB Collection (Cinchy Event Triggered)
+### MongoDB collection (CDC triggered)
 
 [MongoDB](https://www.mongodb.com/what-is-mongodb/features) is a scalable, flexible NoSQL document database platform known for its horizontal scaling and load balancing capabilities, which has given application developers an unprecedented level of flexibility and scalability. Data changes in Cinchy (CDC) can be used to trigger a data sync from a MongoDB data source to a specified target. The attributes of the CDC Event are available to use as parameters within the  Data Source Definition to narrow the scope of the request, e.g. a lookup.&#x20;
 
@@ -137,13 +137,13 @@ Common uses of LDAP include when:
 [mongodb-collection-cinchy-event-triggered.md](mongodb-collection-cinchy-event-triggered.md)
 {% endcontent-ref %}
 
-### MS SQL Server Query and Table&#x20;
+### MS SQL Server (query and table)
 
 {% content-ref url="ms-sql-server-query-and-table.md" %}
 [ms-sql-server-query-and-table.md](ms-sql-server-query-and-table.md)
 {% endcontent-ref %}
 
-### ODBC Query
+### ODBC query
 
 Open Database Connectivity ([ODBC](https://learn.microsoft.com/en-us/sql/odbc/reference/what-is-odbc?view=sql-server-ver16)) is a standard API for accessing database management systems (DBMS).
 
@@ -153,7 +153,7 @@ ODBC is the database portion of the Microsoft Windows Open Services Architecture
 [dynamodb.md](dynamodb.md)
 {% endcontent-ref %}
 
-### Oracle Query and Table
+### Oracle (query and table)
 
 [Oracle Database](https://docs.oracle.com/cd/B13789\_01/server.101/b10743/intro.htm) is a relational database management system, commonly used for running online transaction processing, data warehousing and mixed database workloads. The system is built around a relational database framework in which data objects may be directly accessed by users (or an application front end) through structured query language (SQL).
 
@@ -169,7 +169,7 @@ ODBC is the database portion of the Microsoft Windows Open Services Architecture
 [parquet.md](file-based-sources/parquet.md)
 {% endcontent-ref %}
 
-### Polling Event
+### Polling event
 
 {% content-ref url="polling-event/" %}
 [polling-event](polling-event/)
@@ -185,7 +185,7 @@ REST APIs work by fielding **requests for a resource** and **returning all relev
 [rest-api.md](rest-api.md)
 {% endcontent-ref %}
 
-### Salesforce Object (Bulk API)
+### Salesforce object (bulk API)
 
 [Salesforce](https://www.salesforce.com/ca/products/what-is-salesforce/) is a cloud-based CRM software designed for service, marketing, and sales.
 
@@ -198,7 +198,7 @@ Salesforce objects are database tables that permit you to store data that is spe
 [salesforce-object-bulk-api.md](salesforce-object-bulk-api.md)
 {% endcontent-ref %}
 
-### Salesforce Platform Event
+### Salesforce platform event
 
 [Salesforce](https://www.salesforce.com/ca/products/what-is-salesforce/) is a cloud-based CRM software designed for service, marketing, and sales.
 
@@ -208,7 +208,7 @@ Salesforce Platform Events are secure and scalable messages that contain data. P
 [salesforce-platform-event.md](salesforce-platform-event.md)
 {% endcontent-ref %}
 
-### Salesforce Push Topic
+### Salesforce push topic
 
 [Salesforce](https://www.salesforce.com/ca/products/what-is-salesforce/) is a cloud-based CRM software designed for service, marketing, and sales.
 
@@ -235,7 +235,7 @@ Snowflake enables data storage, processing, and analytic solutions.
 [snowflake](snowflake/)
 {% endcontent-ref %}
 
-### SOAP 1.2 Web Service
+### SOAP 1.2 web service
 
 SOAP (Simple Object Access Protocol) is an XML-based protocol for accessing web services over HTTP.
 

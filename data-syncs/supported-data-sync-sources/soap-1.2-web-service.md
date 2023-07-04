@@ -12,7 +12,7 @@ The SOAP 1.2 Web Service source supports batch syncs.
 
 ## Info tab
 
-You can review the parameters that can be found in the info tab below _(Image 1)._
+You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
 
@@ -75,7 +75,7 @@ The following parameters will help to define your data sync source and how it fu
 
 
 
-There are other options available for the Schema section if you click on **Show Advanced.**
+Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |

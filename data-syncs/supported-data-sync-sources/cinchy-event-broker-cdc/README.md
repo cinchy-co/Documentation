@@ -14,7 +14,7 @@ Remember to set up your Listener Config if you are creating a real-time sync.
 
 ## Info tab
 
-You can review the parameters that can be found in the info tab below _(Image 1)._
+You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
 
@@ -80,7 +80,7 @@ You do not need to provide Connections Attributes when using the Cinchy CDC Stre
 
 
 
-There are other options available for the Schema section if you click on **Show Advanced.**
+Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|

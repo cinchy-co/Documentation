@@ -1,20 +1,20 @@
-# MongoDB Collection (Cinchy Event Triggered)
+# MongoDB Collection (CDC Triggered)
 
 ## Overview
 
-Data changes in Cinchy (CDC) can be used to trigger a data sync from a MongoDB data source to a specified target. The attributes of the CDC Event are available to use as parameters within the  Data Source Definition to narrow the scope of the request, e.g. a lookup.
+Data changes in the Cinchy Event Broker (CDC) can be used to trigger a data sync from a MongoDB data source to a specified target. The attributes of the CDC Event are available to use as parameters within the  Data Source Definition to narrow the scope of the request, e.g. a lookup.
 
 {% hint style="success" %}
 The MongoDB Collection (Cinchy Event Triggered) Source supports real-time syncs.
 {% endhint %}
 
-### 1.1 Considerations
+### Considerations
 
 Please review the following considerations before you set up your MongoDB Collection data sync source:
 
 * We currently only support SCRAM authentication (Mongo 4.0+).
 * Syncs are column based. This means that **you must flatten the MongoDB source document** prior to sync by using a projection _(See section 2: Projection (JSON Object))_.
-* The column names used in the source must match elements on the root object, with the exception of **"$"** which can be used to retrieve the full document.
+* The column names used in the source must match elements on the root object, except for **"$"** which can be used to retrieve the full document.
 * By default, MongoDB batch size is 101.
 * By default, bulk operations size is 5000.
 * Due to a conversion of doubles to decimals that occurs during the sync process, minor data losses may occur.
@@ -33,7 +33,7 @@ Please review the following considerations before you set up your MongoDB Collec
   * **Array** is supported, but converted to **JSON**
   * **Timestamp** is supported, but converted to **64-bit integers**
 
-## 2. Defining the Connection
+## Connection definitions
 
 The following sections in the Source configuration of the Connections experience can reference attributes of the CDC Event as parameters:
 
@@ -81,9 +81,9 @@ The following set of parameters will be available on every event even if they're
 * **@Modified**
 * **@Deleted**
 
-## 3. Info Tab
+## Info tab
 
-You can review the parameters that can be found in the info tab below _(Image 1)._
+You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
 
@@ -95,7 +95,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../.gitbook/assets/image (675).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 4. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -118,7 +118,7 @@ The following parameters will help to define your data sync source and how it fu
 
 
 
-There are other options available for the Schema section if you click on **Show Advanced.**
+Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -140,7 +140,7 @@ Note that you can have more than one String Replacement
 {% endtab %}
 {% endtabs %}
 
-#### Example Query
+#### Query example
 
 ```sql
 // query: where "Price" is less than 10
@@ -157,7 +157,7 @@ blog> db.Articles.find({ "Price": { "$lt": 10 } })
 ]
 ```
 
-#### Example Projection
+#### Projection example
 
 ```json
 // Flatten the document
@@ -185,7 +185,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 <figure><img src="../../.gitbook/assets/image (311).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
-## 5. Next Steps
+## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
@@ -194,7 +194,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 ## Appendix A
 
-### Data Types
+### Data types
 
 The MongoDB Collection Data Source obtains BSON documents from MongoDB. BSON, short for Binary JSON, is a binary-encoded serialization of JSON-like documents. Like JSON, BSON sup­ports the em­bed­ding of doc­u­ments and ar­rays&#x20;
 
@@ -226,7 +226,7 @@ The following table shows how MongoDB data types are translated in Cinchy.
 
 ### Listener Config
 
-In order to configure a MongoDB Collection (Cinchy Event Triggered) connection, **a listener must be configured via the Listener Config table with an Event Connector Type of Cinchy CDC.**
+To configure a MongoDB Collection (Cinchy Event Triggered) connection, **a listener must be configured via the Listener Config table with an Event Connector Type of Cinchy CDC.**
 
 **Review the** [**Cinchy Event Broker/CDC Listener Configuration values here**](cinchy-event-broker-cdc/)**, and then navigate to** [**the Listener Config table** ](../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)**to input a new row.**
 
