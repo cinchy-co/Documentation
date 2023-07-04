@@ -118,7 +118,7 @@ You can choose to add in a **Transformation > String Replacement** by inputting 
 
 | Parameter   | Description                                                                                                                           | Example |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement, i.e. the string that will be searched and replaced. |         |
+| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
 | Replacement | What you want to replace your pattern with.                                                                                           |         |
 
 {% hint style="info" %}

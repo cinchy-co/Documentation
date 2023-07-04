@@ -1,6 +1,6 @@
 # Parquet
 
-## 1. Overview
+## Overview
 
 Apache Parquet is a file format designed to support fast data processing for complex data, with several notable characteristics:
 
@@ -16,7 +16,7 @@ Apache Parquet is a file format designed to support fast data processing for com
 The Parquet source supports **batch syncs.**
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -30,7 +30,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../../.gitbook/assets/image (294).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab.
 
@@ -65,7 +65,7 @@ You can choose to add in a **Transformation > String Replacement** by inputting 
 
 | Parameter   | Description                                                                                                                           | Example |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement, i.e. the string that will be searched and replaced. |         |
+| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
 | Replacement | What you want to replace your pattern with.                                                                                           |         |
 
 {% hint style="info" %}
@@ -78,7 +78,7 @@ You have the option to add a source filter to your data sync. Please review the 
 {% endtab %}
 {% endtabs %}
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../../supported-data-sync-destinations/)
 * Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
