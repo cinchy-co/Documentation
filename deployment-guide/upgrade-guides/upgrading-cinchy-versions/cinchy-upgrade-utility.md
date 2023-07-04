@@ -4,7 +4,7 @@ description: This page details information on the Cinchy Upgrade Utility.
 
 # Cinchy Upgrade Utility
 
-## 1. Overview
+## Overview
 
 The Cinchy Upgrade Utility was first introduced in v5.2 in order to facilitate a mandatory INT to BigInt upgrade. This tool has continued to be used in subsequent releases as an easy way to deploy necessary changes to your Cinchy platform.
 

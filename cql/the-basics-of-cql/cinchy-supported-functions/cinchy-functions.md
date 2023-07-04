@@ -1,6 +1,6 @@
 # Cinchy Functions
 
-## 1. Overview
+## Overview
 
 The Cinchy functions covered in this section are:
 

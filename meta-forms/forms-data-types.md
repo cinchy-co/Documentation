@@ -1,6 +1,6 @@
 # Forms Data Types
 
-## 1. Overview
+## Overview
 
 There are various data types you can select from when setting up your Form Fields. This page will guide you through the different options available to use.
 

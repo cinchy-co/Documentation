@@ -1,12 +1,12 @@
 # Cinchy Event Broker/CDC XML Config Example
 
-## 1. **Overview**
+## Overview
 
-**This page** highlights a few example XML configs that you can review when setting up your own Cinchy Event Broker/CDC data source.
+This page highlights a few example XML configs that you can review when setting up your own Cinchy Event Broker/CDC data source.
 
 You can review the source only example, the full example that shows both source and destination, and the listener config example.
 
-## 2. Source Only Example
+## Source example
 
 The below example shows what the source parameters would look like in XML.
 
@@ -21,7 +21,7 @@ The below example shows what the source parameters would look like in XML.
     </CinchyEventBrokerDataSource>
 ```
 
-## 3. Full Example
+## Full example
 
 **Example Use Case:** You want to set up a **real-time sync** between two Cinchy tables so that any time specific data is added, updated, or deleted from Table A it gets propagated to Table B. As long as you enable change notifications on your Cinchy table, you can do so by setting up a data sync and listener config with your source as the Cinchy Event Broker/CDC.
 
@@ -50,7 +50,7 @@ The below example shows what the source parameters would look like in XML.
 </BatchDataSyncConfig>
 ```
 
-## 4. Listener Config Example
+## Listener config example
 
 The following is the Cinchy CDC listener config Topic and Connection Attributes as it would be set for the above real time sync example to work.
 

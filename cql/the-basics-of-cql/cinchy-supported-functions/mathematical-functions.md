@@ -1,6 +1,6 @@
 # Mathematical Functions
 
-## 1. Overview
+## Overview
 
 Mathematical functions perform calculations based on input values provided as parameters to the functions, and return numeric values.
 

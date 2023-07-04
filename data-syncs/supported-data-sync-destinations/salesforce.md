@@ -1,16 +1,18 @@
 # Salesforce
 
-## 1. Overview
+## Overview
 
 Salesforce is a cloud-based CRM software designed for service, marketing, and sales.
 
-Prior to setting up your data sync destination, [ensure that you've configured your Source.](../supported-data-sync-sources/)
+{% hint style="info" %}
+Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)
+{% endhint %}
 
 {% hint style="success" %}
 The Salesforce destination supports batch and real-time syncs.
 {% endhint %}
 
-## 2. Destination Tab
+## Destination tab
 
 The following table outlines the mandatory and optional parameters you will find on the Destination tab _(Image 1)._
 
@@ -45,7 +47,7 @@ If configured incorrectly, a "Connection Failed" pop-up will appear along with a
 
 </div>
 
-## 4. Next Steps
+## Next steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.

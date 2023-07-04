@@ -1,6 +1,6 @@
 # Kubernetes Upgrades
 
-## 1. Overview
+## Overview
 
 The pages under this section can be used to help guide you through an upgrade of your Cinchy instance.
 

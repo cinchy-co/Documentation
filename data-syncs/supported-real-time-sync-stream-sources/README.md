@@ -1,6 +1,6 @@
 # Supported Real-Time Sync Stream Sources
 
-## 1. Overview
+## Overview
 
 Sync Stream Sources are an integral part of the real-time sync experience in Connections, and must be configured prior to executing your data sync.
 

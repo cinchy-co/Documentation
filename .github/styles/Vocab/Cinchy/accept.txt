@@ -1,3 +1,4 @@
 Cinchy
 endhint
 [Cc]onfig
+timesheet(s)

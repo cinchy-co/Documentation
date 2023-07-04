@@ -1,6 +1,6 @@
 # Table and Column GUIDs
 
-## 1. Overview
+## Overview
 
 A GUID is a globally unique identifier, formatted as a 128-bit text string, that represents a unique identification. Both Cinchy Tables and Columns have a GUID.
 

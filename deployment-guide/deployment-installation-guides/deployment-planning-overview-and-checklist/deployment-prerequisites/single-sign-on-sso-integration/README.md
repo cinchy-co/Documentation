@@ -6,7 +6,7 @@ description: >-
 
 # Single Sign-On (SSO) Integration
 
-## 1. Overview
+## Overview
 
 Cinchy supports integration with any **Identity Provider that issues SAML tokens** (e.g. Active Directory Federation Services) for authenticating users.
 

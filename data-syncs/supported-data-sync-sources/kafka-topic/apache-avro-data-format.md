@@ -1,4 +1,4 @@
-# Apache AVRO Data Format
+# Apache AVRO data format
 
 ## Introduction
 

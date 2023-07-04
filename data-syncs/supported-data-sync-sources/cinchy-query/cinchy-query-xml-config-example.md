@@ -1,12 +1,12 @@
-# Cinchy Query XML Config Example
+# Cinchy query XML config example
 
-## 1. **Overview**
+## Overview
 
-**This page** highlights a few example XML configs that you can review when setting up your own Cinchy Query data source.
+This page has example XML configs that you can review when setting up your own Cinchy Query data source.
 
 You can review the source only example or the full example that shows both source and destination.
 
-## 2. Source Only Example
+## Source example
 
 The below example shows what the source parameters would look like in XML.
 
@@ -23,7 +23,7 @@ The below example shows what the source parameters would look like in XML.
     </CinchyQueryDataSource>
 ```
 
-## 3. Full Example
+## Full example
 
 **Example Use Case:** You want to set up batch sync between a **Cinchy Query** and a **Cinchy Table**. You query polls for any unapproved timesheets, out of office requests, or sick hours and, if found, adds them to an "Open Approval Tasks" table.&#x20;
 

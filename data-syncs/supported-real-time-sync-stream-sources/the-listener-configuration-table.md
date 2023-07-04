@@ -1,6 +1,6 @@
 # The Listener Configuration Table
 
-## 1. Overview
+## Overview
 
 You are able to set up your stream source configurations for real-time syncs via the Connections UI, and you can find that information on the relative [Data Sync Source page.](../supported-data-sync-sources/)
 

@@ -54,7 +54,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 </div>
 
-## 4. Next Steps
+## Next steps
 
 * Define your [Sync Actions.](../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.

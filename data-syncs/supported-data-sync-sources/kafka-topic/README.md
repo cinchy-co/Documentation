@@ -1,6 +1,6 @@
 # Kafka Topic
 
-## 1. Overview
+## Overview
 
 [Apache Kafka ](https://kafka.apache.org/intro)is an end-to-end **event streaming platform** that:
 
@@ -18,7 +18,7 @@ Event streaming thus ensures a continuous flow and interpretation of data so tha
 The Kafka Topic source supports real-time syncs.
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -32,7 +32,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../../.gitbook/assets/image (721).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -48,7 +48,7 @@ To set up a real-time sync, you must configure your Listener values. You can do 
 
 Note that If there is more than one listener associated with your data sync, you will need to configure the addition listeners via [the Listener Configuration table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
 
-#### Reset Behaviour
+#### Reset behaviour
 
 <table><thead><tr><th width="265.66666666666663">Parameter</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td><strong>Auto Offset Reset</strong></td><td><p><strong>Earliest, Latest or None.</strong> <br><br>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br></p><p><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed. This is the typical configuration.<br><br><strong>None</strong> will not read start reading any events.<br><br>You are able to switch between Auto Offset Reset types after your initial configuration through the process outlined <a href="../../error-logging-and-troubleshooting.md">here.</a></p></td><td>None</td></tr></tbody></table>
 
@@ -70,7 +70,7 @@ The below table can be used to help create your Topic JSON needed to set up a re
 }
 ```
 
-#### Connection Attributes
+#### Connection attributes
 
 The below table can be used to help create your Connection Attributes JSON needed to set up a real-time sync.
 
@@ -121,14 +121,14 @@ There are other options available for the Schema section if you click on **Show 
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  If your data type was chosen as "text", you can choose whether to **trim the whitespac**e _(that is, spaces and other non-printing characters)._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.**  If your data type was chosen as "text", you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
 | Parameter   | Description                                                                                                                           | Example |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement, i.e. the string that will be searched and replaced. |         |
+| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
 | Replacement | What you want to replace your pattern with.                                                                                           |         |
 
 {% hint style="info" %}
@@ -147,7 +147,7 @@ You have the option to add a source filter to your data sync. Please review the 
 
 </div>
 
-## 4. Next Steps
+## Next Steps
 
 * Configure your [Destination](../../supported-data-sync-destinations/)
 * Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)

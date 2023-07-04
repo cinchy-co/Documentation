@@ -1,6 +1,6 @@
 # Personal Access Tokens
 
-## 1. Overview
+## Overview
 
 You now have the option to use personal access tokens (PATs) in Cinchy, which are alternatives to using passwords for authentication. Similar to [Cinchy Bearer Tokens](https://platform.docs.cinchy.com/api-guide/api-overview/api-authentication#post-bearer-token-request), you can use a Cinchy PAT to call the Cinchy API as your current user, meaning your associated access controls will be honoured as well. Cinchy PATs, however, have an expiration date of up to 1 year. A single user can have up to 5 PATs active at one time.\
 \

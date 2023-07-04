@@ -6,7 +6,7 @@ description: >-
 
 # Upgrading AWS EKS Kubernetes Version
 
-## 1. Overview
+## Overview
 
 This page will guide you through how to update your AWS EKS Kubernetes version for your Cinchy v5 platform.
 

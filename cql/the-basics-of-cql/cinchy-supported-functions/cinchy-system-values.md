@@ -1,6 +1,6 @@
 # Cinchy System Values
 
-## 1. Overview
+## Overview
 
 The Cinchy system values covered in this section:
 

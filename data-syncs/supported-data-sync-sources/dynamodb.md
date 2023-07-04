@@ -1,6 +1,6 @@
 # DynamoDB
 
-## 1. Overview
+## Overview
 
 [Amazon DynamoDB](https://aws.amazon.com/dynamodb/?trk=d1003b1b-ffc2-4fbd-9ce6-e70c668663bc\&sc\_channel=ps\&s\_kwcid=AL!4422!3!536393505298!e!!g!!dynamodb\&ef\_id=Cj0KCQjwteOaBhDuARIsADBqRehoQ4LyBjuhkAYGKfx15DT4NXjMrNVjbVFUYbYb\_5uQOrcctpV9A-8aAihsEALw\_wcB:G:s\&s\_kwcid=AL!4422!3!536393505298!e!!g!!dynamodb) is a managed NoSQL database service that is offered by Amazon as part of the AWS portfolio.
 
@@ -10,7 +10,7 @@
 The DynamoDB source supports batch syncs.
 {% endhint %}
 
-## 2. Info Tab
+## Info tab
 
 You can review the parameters that can be found in the info tab below _(Image 1)._
 
@@ -24,7 +24,7 @@ You can review the parameters that can be found in the info tab below _(Image 1)
 
 <figure><img src="../../.gitbook/assets/image (384).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -53,14 +53,14 @@ There are other options available for the Schema section if you click on **Show 
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  If your data type was chosen as "text", you can choose whether to **trim the whitespac**e _(that is, spaces and other non-printing characters)._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.**  If your data type was chosen as "text", you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
 | Parameter   | Description                                                                                                                           | Example |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement, i.e. the string that will be searched and replaced. |         |
+| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
 | Replacement | What you want to replace your pattern with.                                                                                           |         |
 
 {% hint style="info" %}
@@ -75,7 +75,7 @@ You have the option to add a source filter to your data sync. Please review the 
 
 <figure><img src="../../.gitbook/assets/image (360).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)

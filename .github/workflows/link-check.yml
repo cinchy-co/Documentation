@@ -1,5 +1,7 @@
-name: Broken link check
-on: [push]
+name: Broken link check (Daily)
+on:
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   broken_link_checker_job:

@@ -1,6 +1,6 @@
 # Getting Started with Data Syncs
 
-## 1. Overview
+## Overview
 
 #### What are Data Syncs?&#x20;
 

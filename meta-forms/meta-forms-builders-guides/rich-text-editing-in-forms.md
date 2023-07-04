@@ -4,7 +4,7 @@ description: This page describes Cinchy's rich text editor functionality.
 
 # Rich Text Editing in Forms
 
-## 1. Overview
+## Overview
 
 {% hint style="success" %}
 Rich Text Editing was introduced to the Cinchy platform in version 5.4.

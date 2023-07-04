@@ -1,6 +1,6 @@
-# Kafka Topic Example Config
+# Kafka Topic example config
 
-## 1. Overview
+## Overview
 
 In this example, we are syncing **from a Kafka Topic** source **to a Cinchy Table** target.
 
@@ -11,11 +11,11 @@ We want to sync the following data from Kafka and map it to the appropriate colu
 | $.employeeId | Employee Id   |
 | $.name       | Name          |
 
-## 2. UI Example
+## UI Example
 
 This is what the Connections UI will look like with the aforementioned example parameters and data.
 
-### 2.1 Source Tab
+### Source tab
 
 Your source tab should be set to **"Kafka Topic"** and have the following information _(Image 1):_
 
@@ -38,7 +38,7 @@ Tip: Click on an image in this document to enlarge it.
 
 <figure><img src="../../../.gitbook/assets/image (268).png" alt=""><figcaption><p>Image 1: Inserting your source data</p></figcaption></figure>
 
-### 2.2 Destination Tab
+### Destination tab
 
 Your destination tab should be set to **"Cinchy Table"**, and have the following information _(Image 2):_
 
@@ -60,7 +60,7 @@ Your destination tab should be set to **"Cinchy Table"**, and have the following
 
 <figure><img src="../../../.gitbook/assets/image (571).png" alt=""><figcaption><p>Image 2: Inserting your destination data</p></figcaption></figure>
 
-### 2.3 Sync Behaviour
+### Sync behaviour
 
 Under the Sync Behaviour tab, we want to use the following parameters:
 
@@ -70,7 +70,7 @@ Under the Sync Behaviour tab, we want to use the following parameters:
 * **Dropped Record Behaviour:** Delete
 * **Change Record Behavior:** Update
 
-## 3. XML Example
+## XML example
 
 The following code is what the XML for our example connection would look like:
 

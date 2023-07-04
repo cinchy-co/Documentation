@@ -1,6 +1,6 @@
 # Conversion Functions
 
-## 1. Overview
+## Overview
 
 These functions support data type casting and conversion. Conversion functions convert an expression of one data type to another data type. The conversion functions covered in this section are:
 

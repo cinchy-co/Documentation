@@ -1,6 +1,6 @@
 # String Functions
 
-## 1. Overview
+## Overview
 
 The string functions covered in this section perform operations on a string (char or varchar) input value and return a string or numeric value.
 
