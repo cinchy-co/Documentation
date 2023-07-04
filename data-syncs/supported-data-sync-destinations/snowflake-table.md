@@ -1,18 +1,19 @@
-# Snowflake Table
+# Snowflake table
 
-## 1. Overview
+## Overview
 
 t provides a single platform for data warehousing, data lakes, data engineering, data science, data application development, and secure sharing and consumption of real-time/shared data.
 
 Snowflake enables data storage, processing, and analytic solutions.
 
-Prior to setting up your data sync destination, [ensure that you've configured your Source.](../supported-data-sync-sources/)
-
+{% hint style="info" %}
+Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)
+{% endhint %}
 {% hint style="success" %}
 The Snowflake Table destination supports batch and real-time syncs.
 {% endhint %}
 
-### 1.1 How Connections Loads Data into Snowflake
+### How Connections loads data into Snowflake
 
 **For batch syncs of 10 records or less,** single Insert/Update/Delete statements are executed to perform operations against the target Snowflake table.
 
@@ -32,11 +33,11 @@ The bulk operation process consists of:
 **Real time sync volume size** is based on a dynamic batch size up to configurable threshold.
 {% endhint %}
 
-## 2. Considerations
+## Considerations
 
 * The temporary table generated in the bulk flow process for high volume scenarios transforms all columns of data type **Number** to be of type **NUMBER(38, 18)**. This may cause precision loss if the number scale in the target table is higher
 
-## 2. Destination Tab
+## Destination tab
 
 The following table outlines the mandatory and optional parameters you will find on the Destination tab _(Image 1)._
 
@@ -53,7 +54,7 @@ The following parameters will help to define your data sync destination and how 
 When specifying the Target Column in the Column Mappings section, **all names are case-sensitive.**
 
 | Parameter     | Description                                                              | Example |
-| ------------- | ------------------------------------------------------------------------ | ------- |
+|---------------|--------------------------------------------------------------------------|---------|
 | Source Column | **Mandatory.** The name of your column as it appears in the source.      | Name    |
 | Target Column | **Mandatory.** The name of your column as it appears in the destination. | Name    |
 {% endtab %}
@@ -69,7 +70,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 </div>
 
-## 4. Next Steps
+## Next steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.

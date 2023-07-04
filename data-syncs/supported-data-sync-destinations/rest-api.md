@@ -1,6 +1,6 @@
 # REST API
 
-## 1. Overview
+## Overview
 
 A REST API is an application programming interface that conforms to the constraints of REST (representational state transfer) architectural style and allows for interaction with RESTful web services.
 
@@ -8,7 +8,9 @@ REST APIs work by fielding **requests for a resource** and **returning all relev
 
 Cinchy v5.5 added support for the [**URL\_ESCAPE** and **JSON\_ESCAPE**](../../cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md) functions to be used in REST API data syncs **anywhere a "parameter" could be utilized (Ex: Endpoint URL, Post Sync Script, etc.)**. These functions escape parameter values to be safe inside of a URL or JSON document respectively.
 
-Prior to setting up your data sync destination, [ensure that you've configured your Source.](../supported-data-sync-sources/)
+{% hint style="info" %}
+Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)
+{% endhint %}
 
 {% hint style="success" %}
 The REST API destination supports batch and real-time syncs.
@@ -59,7 +61,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 <figure><img src="../../.gitbook/assets/image (272).png" alt=""><figcaption><p>Image 1: Define your Destination</p></figcaption></figure>
 
-## 3. Next Steps
+## Next Steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
@@ -71,7 +73,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 <figure><img src="../../.gitbook/assets/image (394).png" alt=""><figcaption></figcaption></figure>
 
-### **Retry Configuration**
+### Retry Configuration
 
 Cinchy v5.5 introduced the Retry Configuration for REST API targets. This will automatically retry HTTP Requests on failure based on a defined set of conditions. A single retry configuration is defined for the REST API target, and applies to all requests configured in the Insert, Update, and Delete specifications. This capability provides a mechanism to recover from transient errors such as network disruptions or temporary service outages.
 
@@ -83,17 +85,17 @@ To set up a retry configuration:
 
 1. Under the REST API destination tab, select **API Specification > Retry Configuration**
 
-2\. Select your Delay Strategy.&#x20;
+2. Select your Delay Strategy.
 
 * **Linear Backoff:** Defines a delay of approximately n seconds where n = current retry attempt.
-* **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.&#x20;
+* **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
   * _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
 
 3\. Input your Max Attempts. The maximum number of retries allowed is 10.
 
 <figure><img src="../../.gitbook/assets/image (441).png" alt=""><figcaption></figcaption></figure>
 
-4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.&#x20;
+4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.
 
 {% hint style="info" %}
 Retry conditions are only evaluated if the response code is not 2xx Success.
@@ -108,20 +110,20 @@ Each Retry Condition contains **one or more "Attribute Match" sections**. This d
 If there are multiple "Attribute Match" blocks within a Retry Condition, **all have to match for the retry condition to evaluate to true.**
 
 {% hint style="warning" %}
-Note that the Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of "5\[0-9]\[0-9]".\
+The Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of "5\[0-9]\[0-9]".
 \
-**For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".&#x20;
+**For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (423).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (399).png" alt=""><figcaption></figcaption></figure>
 
-### REST API Source
+### REST API source
 
 This section has the same parameters as the usual REST API Source and you can r[eview that documentation here.](../supported-data-sync-sources/rest-api.md)
 
-### **Insert Specification**
+### **Insert specification**
 
 Select either:
 
@@ -130,7 +132,7 @@ Select either:
   * HTTP Method: GET, POST, PUT, PATCH, DELETE
   * Endpoint URL: Refers to where this request will be made to and inserted.
 
-### **Update Specification**
+### **Update specification**
 
 Select either:
 
@@ -139,7 +141,7 @@ Select either:
   * HTTP Method: GET, POST, PUT, PATCH, DELETE
   * Endpoint URL: Refers to where this request will be made to and updated.
 
-### **Delete Specification**
+### **Delete specification**
 
 Select either:
 

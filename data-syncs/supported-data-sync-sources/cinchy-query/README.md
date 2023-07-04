@@ -1,28 +1,28 @@
-# Cinchy Query
+# Cinchy query
 
-## 1. Overview
+## Overview
 
-Cinchy queries are commonly used data sync sources that leverage the platform's Saved Query functionality. For more on creating Saved Queries,[ please review the documentation here.](../../../guides-for-using-cinchy/builder-guides/saved-queries.md)
+Cinchy queries are commonly used data sync sources that leverage the platform's Saved Query functionality. For more on creating Saved Queries,[ see the Saved queries page](../../../guides-for-using-cinchy/builder-guides/saved-queries.md).
 
 **Example Use Case:** You want to set up batch sync between a **Cinchy Query** and a **Cinchy Table**. You query polls for any unapproved timesheets, out of office requests, or sick hours and, if found, adds them to an "Open Approval Tasks" table.&#x20;
 
 
 
-## 2. Info Tab
+## Info tab
 
-You can review the parameters that can be found in the info tab below _(Image 1)._
+You can review the parameters in the info tab below _(Image 1)._
 
 #### Values
 
 | Parameter   | Description                                                                                                                                                                                      | Example             |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------- |
+|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | Title       | **Mandatory.** Input a name for your data sync                                                                                                                                                   | Open Approval Tasks |
 | Variables   | **Optional.** Review our documentation on [Variables here ](../../building-data-syncs/advanced-settings/variables.md)for more information about this field.                                      |                     |
-| Permissions | Data syncs are role based access systems where you can give specific groups read, write, execute, and/or all of the above with admin access. **Inputting at least an Admin Group is mandatory.** |                     |
+| Permissions | Data syncs are role based access systems where you can give specific groups read, write, or execute permissions. **Inputting at least an Admin Group is mandatory.** |                     |
 
 <figure><img src="../../../.gitbook/assets/image (699).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
-## 3. Source Tab
+## Source tab
 
 The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
 
@@ -37,7 +37,7 @@ The following parameters will help to define your data sync source and how it fu
 **The** [**Schema**](../../building-data-syncs/columns-and-mappings/#2.-schema-columns) **section** is where you define which source columns you want to sync in your connection. You can repeat the values for multiple columns.
 
 | Parameter   | Description                                                                                                   | Example         |
-| ----------- | ------------------------------------------------------------------------------------------------------------- | --------------- |
+|-------------|---------------------------------------------------------------------------------------------------------------|-----------------|
 | Name        | **Mandatory.** The name of your column as it appears in the source query.                                     | Owner Cinchy ID |
 | Alias       | **Optional.** You may choose to use an alias on your column so that it has a different name in the data sync. |                 |
 | Data Type   | **Mandatory.** The data type of the column values.                                                            | Text            |
@@ -45,20 +45,20 @@ The following parameters will help to define your data sync source and how it fu
 
 
 
-There are other options available for the Schema section if you click on **Show Advanced.**
+Select **Show Advanced**  for more options for the Schema section. 
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | If your data type was chosen as "text", you can choose whether to **trim the whitespac**e _(that is, spaces and other non-printing characters)._                                                                                                                                                                                                                                                                                                                                      |         |
+| Trim Whitespace | If your data type was chosen as "text", you can choose whether to **trim the whitespace** _(that is, spaces and other non-printing characters)._                                                                                                                                                                                                                                                                                                                                      |         |
 | Max Length      | **Optional.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution. Log).                                                                                                                                                                                                                                     |         |
 {% endtab %}
 {% endtabs %}
 
 <figure><img src="../../../.gitbook/assets/image (335).png" alt=""><figcaption><p>Image 2: Define your Source</p></figcaption></figure>
 
-## 4. Next Steps
+## Next steps
 
 * Configure your [Destination](../../supported-data-sync-destinations/)
 * Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)

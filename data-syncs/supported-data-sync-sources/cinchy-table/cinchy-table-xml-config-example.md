@@ -1,12 +1,12 @@
-# Cinchy Table XML Config Example
+# Cinchy Table XML config example
 
-## 1. **Overview**
+## Overview
 
 **This page** highlights a few example XML configs that you can review when setting up your own Cinchy Table data source.
 
 You can review the source only example or the full example that shows both source and destination.
 
-## 2. Source Only Example
+## Source example
 
 The below example shows what the source parameters would look like in XML.
 
@@ -20,7 +20,7 @@ The below example shows what the source parameters would look like in XML.
     </CinchyTableDataSource>
 ```
 
-## 3. Full Example
+## Full example
 
 **Example Use Case:** You want to set up a **batch sync,** that you can run when needed, between a Cinchy Table and a MongoDB Collection. This sync will push out Client Name and Customer Number information.
 

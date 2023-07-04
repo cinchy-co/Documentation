@@ -1,18 +1,20 @@
-# SOAP 1.2 Web Service
+# SOAP 1.2 web service
 
-## 1. Overview
+## Overview
 
 SOAP (Simple Object Access Protocol) is an XML-based protocol for accessing web services over HTTP.
 
 SOAP allows applications running on different operating systems to communicate using different technologies and programming languages. You can use SOAP APIs to create, retrieve, update or delete records, such as passwords, accounts, leads, and custom objects, from a server.
 
-Prior to setting up your data sync destination, [ensure that you've configured your Source.](../supported-data-sync-sources/)
+{% hint style="info" %}
+Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)
+{% endhint %}
 
 {% hint style="success" %}
 The SOAP 1.2 Web Service destination supports batch and real-time syncs.
 {% endhint %}
 
-## 2. Destination Tab
+##  Destination tab
 
 The following table outlines the mandatory and optional parameters you will find on the Destination tab _(Image 1)._
 
@@ -29,7 +31,7 @@ The following parameters will help to define your data sync destination and how 
 When specifying the Target Column in the Column Mappings section, **all names are case-sensitive.**
 
 | Parameter     | Description                                                              | Example |
-| ------------- | ------------------------------------------------------------------------ | ------- |
+|---------------|--------------------------------------------------------------------------|---------|
 | Source Column | **Mandatory.** The name of your column as it appears in the source.      | Name    |
 | Target Column | **Mandatory.** The name of your column as it appears in the destination. | Name    |
 {% endtab %}
@@ -40,10 +42,10 @@ The API Specification section will default with a mandatory Insert Specification
 **Insert Specification**\
 When specifying the Target Column in the Column Mappings section, **all names are case-sensitive.**
 
-| Parameter                                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Example                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Endpoint URL                                                                                           | **Mandatory.** The URL for the the [SOAP 1.2 Web Service API endpoint](https://www.ibm.com/docs/en/wsr-and-r/8.5.6?topic=mswsd-retrieving-addresses-from-soap-11-soap-12-endpoints)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | [https://www.dataaccess.com/webservicesserver/NumberConversion.wso](https://www.dataaccess.com/webservicesserver/NumberConversion.wso) |
-| Has [Mtom Response](https://www.ibm.com/docs/en/integration-bus/10.0?topic=services-what-is-soap-mtom) | This is required to be true if the SOAP API response contains an attachment outside of the SOAP response message. [See this diagram for more information.](https://images.app.goo.gl/E82L6mYrJxCxXwhKA)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                                                                                        |
+| Parameter                                                                                              | Description                                                                                                                                                                                             | Example                                                                                                                                |
+|--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Endpoint URL                                                                                           | **Mandatory.** The URL for the [SOAP 1.2 Web Service API endpoint](https://www.ibm.com/docs/en/wsr-and-r/8.5.6?topic=mswsd-retrieving-addresses-from-soap-11-soap-12-endpoints)                     | [https://www.dataaccess.com/webservicesserver/NumberConversion.wso](https://www.dataaccess.com/webservicesserver/NumberConversion.wso) |
+| Has [Mtom Response](https://www.ibm.com/docs/en/integration-bus/10.0?topic=services-what-is-soap-mtom) | This is required to be true if the SOAP API response contains an attachment outside of the SOAP response message. [See this diagram for more information.](https://images.app.goo.gl/E82L6mYrJxCxXwhKA) |                                                                                                                                        |
 | Envelope Namespace                                                                                     | <p>The namespace prefix to use for the SOAP request elements.<br><br>This value will default to "soapenv" as associated with the following schema: <a href="https://schemas.xmlsoap.org/soap/envelope/">https://schemas.xmlsoap.org/soap/envelope/</a><br><br>You can append the default value, if you wish. For example, setting the value to "foo" would result in the soap request being prefixed with the "foo" namespace. </p><p></p><pre><code>&#x3C;foo:Envelope xmlns:foo="...">
 	&#x3C;foo:Body>
 		[Request XML]
@@ -91,7 +93,7 @@ You can add in Request Headers by [reviewing the documentation here.](../buildin
 You may choose to specify variables to extract from your SOAP response.
 
 | Parameter        | Description                                   | Example                                                                         |
-| ---------------- | --------------------------------------------- | ------------------------------------------------------------------------------- |
+|------------------|-----------------------------------------------|---------------------------------------------------------------------------------|
 | Name             | The name of the variable you wish to extract. | Value                                                                           |
 | Path in Response | The path to the above variable.               | soapenv:Envelope/soapenv:Body/m:NumberToWordsResponse/m:NumberToWordsResult\[1] |
 
@@ -107,7 +109,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 <figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
 
-## 4. Next Steps
+## Next steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md) Note that if you are doing a Full-File sync, the **API Specification > SOAP 1.2 Source section should be filled in.**
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
