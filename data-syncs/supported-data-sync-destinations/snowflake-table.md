@@ -13,7 +13,7 @@ Before you set up your data sync destination, [make sure to configure your Sourc
 The Snowflake Table destination supports batch and real-time syncs.
 {% endhint %}
 
-### How Connections loads data into Snowflake
+### Loading data into Snowflake
 
 **For batch syncs of 10 records or less,** single Insert/Update/Delete statements are executed to perform operations against the target Snowflake table.
 

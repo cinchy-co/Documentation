@@ -50,7 +50,7 @@ If a source column (of any type) is syncing into a Cinchy Target Table[ link col
 - **If just Validated is checked** on a column, then all rows are synced.
   {% endhint %}
 
-- If your data type was chosen as "text", you can choose whether to **trim the whitespace**.
+- For Text data types, you can choose whether to **trim the whitespace**.
 
 To add in a **Transformation > String Replacement**  enter the following:
 
