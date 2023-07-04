@@ -16,7 +16,7 @@ Before you set up your data sync destination, [make sure to configure your Sourc
 The REST API destination supports batch and real-time syncs.
 {% endhint %}
 
-## 2. Destination Tab
+## Destination tab
 
 The following table outlines the mandatory and optional parameters you will find on the Destination tab _(Image 1)._
 
@@ -61,7 +61,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 <figure><img src="../../.gitbook/assets/image (272).png" alt=""><figcaption><p>Image 1: Define your Destination</p></figcaption></figure>
 
-## Next Steps
+## Next steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
@@ -73,7 +73,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 <figure><img src="../../.gitbook/assets/image (394).png" alt=""><figcaption></figcaption></figure>
 
-### Retry Configuration
+### Retry configuration
 
 Cinchy v5.5 introduced the Retry Configuration for REST API targets. This will automatically retry HTTP Requests on failure based on a defined set of conditions. A single retry configuration is defined for the REST API target, and applies to all requests configured in the Insert, Update, and Delete specifications. This capability provides a mechanism to recover from transient errors such as network disruptions or temporary service outages.
 
@@ -91,11 +91,11 @@ To set up a retry configuration:
 * **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
   * _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
 
-3\. Input your Max Attempts. The maximum number of retries allowed is 10.
+3. Input your Max Attempts. The maximum number of retries allowed is 10.
 
 <figure><img src="../../.gitbook/assets/image (441).png" alt=""><figcaption></figcaption></figure>
 
-4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.
+4. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.
 
 {% hint style="info" %}
 Retry conditions are only evaluated if the response code is not 2xx Success.

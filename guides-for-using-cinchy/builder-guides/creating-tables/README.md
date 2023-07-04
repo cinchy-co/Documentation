@@ -128,7 +128,7 @@ Any existing tables created before installing Cinchy Platform v4.19.0 are standa
 4\. Enter the following information_:_
 
 * Domain: Select the domain that you table will reside under. If you are have administrative privileges, you can also create new domains from this screen.
-* File: In order to create the table, you must upload a .csv file.
+* File: To create the table, you must upload a .csv file.
 
 {% hint style="warning" %}
 The column names in your .csv file must not conflict with[ System Columns.](columns.md#1.-system-columns)

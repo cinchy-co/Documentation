@@ -2,9 +2,9 @@
 
 ## Overview
 
-Data changes in Cinchy (CDC) can be used to trigger a data sync from a REST API data source to a specified target. The attributes of the CDC Event are available to use as parameters within the REST API Data Source Definition to narrow the scope of the request, e.g. a lookup.&#x20;
+Data changes in Cinchy (CDC) can be used to trigger a data sync from a REST API data source to a specified target. The attributes of the CDC Event are available to use as parameters within the REST API Data Source Definition to narrow the scope of the request, e.g. a lookup.
 
-**Example Use Case:** Let's assume an organization wants to use the Dun & Bradstreet API for enriching company information, e.g. # of Employees, Address, etc. When a company record is added or modified in a table called Companies inside of Cinchy, a D\&B API should be triggered with the Company Name (a mandatory field on the Companies table) passed in as a parameter, and the Company record should be enriched with the company information from the API response.&#x20;
+**Example Use Case:** An organization wants to use the Dun & Bradstreet API for enriching company information, such as the number of employees or their addresses. When a company record is added or modified in a table called Companies inside of Cinchy, a D\&B API should be triggered with the Company Name (a mandatory field on the Companies table) passed in as a parameter, and the Company record should be enriched with the company information from the API response.
 
 ## 2. Defining the Connection
 
@@ -39,7 +39,7 @@ Parameters use the column name or alias as defined in the CDC Event's Listener C
 </code></pre>
 
 {% hint style="danger" %}
-Parameter names are case sensitive when used in the Connection configuration. Parameter matching is performed using literal string replacements. Names should not contain spaces (spaces are automatically removed), and should have differing prefixes.&#x20;
+Parameter names are case sensitive when used in the Connection configuration. Parameter matching is performed using literal string replacements. Names should not contain spaces (spaces are automatically removed), and should have differing prefixes.
 {% endhint %}
 
 The following set of parameters will be available on every event even if they're not present in the listener config
@@ -54,7 +54,7 @@ The following set of parameters will be available on every event even if they're
 
 ## 3. Listener Config
 
-In order to configure a REST API (Cinchy Event Triggered) connection, a listener must be configured. If configuring using the Listener Config table, you would select the Event Connector Type of Cinchy CDC.
+To configure a REST API (Cinchy Event Triggered) connection, a listener must be configured. If configuring using the Listener Config table, you would select the Event Connector Type of Cinchy CDC.
 
 Otherwise, you can set up your listener configuration for your data sync through the Connections UI, keeping the following constraints in mind:
 

@@ -61,7 +61,7 @@ You are able to search and open tables from this view using the search bar on th
 You can see what the network looked like in the past by clicking and dragging the pink circle along the timeline at the bottom.
 
 {% hint style="info" %}
-You can learn more about you Network Map [here.](../additional-guides/application-experiences/network-map/)
+You can learn more about the Network Map [here.](../additional-guides/application-experiences/network-map/)
 {% endhint %}
 
 ### 4.1 Network Map Extra Parameters

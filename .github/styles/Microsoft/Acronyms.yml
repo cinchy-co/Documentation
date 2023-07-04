@@ -28,6 +28,7 @@ exceptions:
   - HTTP
   - HTTPS
   - IDE
+  - IIS
   - JAR
   - JSON
   - JSX

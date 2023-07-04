@@ -17,7 +17,7 @@ description: >-
 
 ## Introduction
 
-Cinchy 2.0 has added the feature to encrypt data at rest. This means that you can encrypt data in the database such that users with access to view data in the database will see ciphertext in those columns. However, all users with authorized access to the data via Cinchy will see the data as plain text.In order to use this feature, your database administrator will be need to create a database master key (see below for instructions).
+Cinchy 2.0 has added the feature to encrypt data at rest. This means that you can encrypt data in the database such that users with access to view data in the database will see ciphertext in those columns. However, all users with authorized access to the data via Cinchy will see the data as plain text.To use this feature, your database administrator will be need to create a database master key (see below for instructions).
 
 ## 1. Create Master Key in Database <a href="#create-master-key-in-database" id="create-master-key-in-database"></a>
 

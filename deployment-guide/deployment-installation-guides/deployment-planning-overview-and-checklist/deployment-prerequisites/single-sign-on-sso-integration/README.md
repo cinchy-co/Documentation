@@ -207,7 +207,7 @@ The Identity Provider configuration must include the following claims in additio
 * Last Name
 * Email
 
-In order to enable automatic group assignment for newly created users (which is applicable if you plan on using AD Groups), then you must also include an attribute that captures the groups that this user is a member of (e.g. **memberOf** field in AD)
+To enable automatic group assignment for newly created users (which is applicable if you plan on using AD Groups), then you must also include an attribute that captures the groups that this user is a member of (e.g. **memberOf** field in AD)
 
 ### 5.2 Configuration Setup
 

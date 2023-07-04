@@ -26,7 +26,7 @@ The Worker and Listener are important components for using Real-Time Data syncs.
   - Service Broker enabled
 - Cinchy Platform
 
-## SQL Service Broker setup
+## SQL service broker setup
 
 1. On a Windows Server machine, launch an instance of PowerShell as Administrator.
 2. Set up the SQL Service Broker by executing the following command:
@@ -62,7 +62,7 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
 | URL       | Cinchy Web URL (ex. https://cinchy.net/Cinchy)      |
 | Password  | The password for the user eventlistener@cinchy.com. |
 
-#### App Settings
+#### AppSettings
 
 | Parameter                     | Value                                                                                                             |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------- |
