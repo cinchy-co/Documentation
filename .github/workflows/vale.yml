@@ -11,4 +11,5 @@ jobs:
         with:
           files: '["meta-forms/","cinchy-glossary.md"]'
           fail_on_error: true
+          filter_mode: file
           reporter: github-check

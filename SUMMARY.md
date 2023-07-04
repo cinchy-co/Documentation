@@ -16,13 +16,13 @@
 
 ***
 
-* [Getting Help](getting-help.md)
-* [Cinchy Glossary](cinchy-glossary.md)
-* [Frequently Asked Questions](frequently-asked-questions.md)
+* [Get help](getting-help.md)
+* [Cinchy glossary](cinchy-glossary.md)
+* [Frequently asked questions](frequently-asked-questions.md)
 
 ## Deployment Guide
 
-* [Deployment installation guides](deployment-guide/deployment-installation-guides/README.md)
+* [Deployment Installation Guide](deployment-guide/deployment-installation-guides/README.md)
   * [Deployment planning](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/README.md)
     * [Deployment architecture](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview/README.md)
       * [Kubernetes architecture](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview/kubernetes-deployment-architecture.md)
@@ -39,7 +39,7 @@
     * [Use Self-Signed SSL Certs (Kubernetes)](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)
     * [Deploy the CLI (Kubernetes)](https://app.gitbook.com/o/-LDtM6UlhGoQ91uwM5SF/s/-M9TgaGdQpt0ZS9aqe1c/connections-installation-guide/v5-connections-and-cli-installation-guide#3.-running-the-cli)
   * [IIS deployment installation](deployment-guide/deployment-installation-guides/iis-deployment-platform-installation.md)
-* [Upgrade Guides](deployment-guide/upgrade-guides/README.md)
+* [Upgrade Guide](deployment-guide/upgrade-guides/README.md)
   * [Upgrade Cinchy versions](deployment-guide/upgrade-guides/upgrading-cinchy-versions/README.md)
     * [Cinchy Upgrade Utility](deployment-guide/upgrade-guides/upgrading-cinchy-versions/cinchy-upgrade-utility.md)
     * [Kubernetes upgrades](deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/README.md)
@@ -65,7 +65,7 @@
 
 ## Guides for Using Cinchy
 
-* [User guides](guides-for-using-cinchy/user-guides/README.md)
+* [User Guide](guides-for-using-cinchy/user-guides/README.md)
   * [Data Browser overview](guides-for-using-cinchy/user-guides/overview-of-the-data-browser.md)
   * [The Admin panel](guides-for-using-cinchy/user-guides/the-admin-panel.md)
   * [User preferences](guides-for-using-cinchy/user-guides/user-preferences/README.md)
@@ -76,7 +76,7 @@
   * [Version management](guides-for-using-cinchy/user-guides/version-management/README.md)
     * [Versioning best practices](guides-for-using-cinchy/user-guides/version-management/versioning-best-practices.md)
   * [Commentary](guides-for-using-cinchy/user-guides/commentary.md)
-* [Builder guides](guides-for-using-cinchy/builder-guides/README.md)
+* [Builder Guide](guides-for-using-cinchy/builder-guides/README.md)
   * [Best practices](guides-for-using-cinchy/builder-guides/best-practices.md)
   * [Create tables](guides-for-using-cinchy/builder-guides/creating-tables/README.md)
     * [Attach files](guides-for-using-cinchy/builder-guides/creating-tables/attaching-files.md)
@@ -163,12 +163,12 @@
 
 ## Meta Forms
 
-* [Introduction to Meta-Forms](meta-forms/introduction-to-meta-forms.md)
+* [Introduction](meta-forms/introduction-to-meta-forms.md)
 * [Meta-Forms Deployment Installation Guide](meta-forms/meta-forms-deployment-installation-guide/README.md)
   * [Deploy Meta-Forms (Kubernetes)](meta-forms/meta-forms-deployment-installation-guide/deploying-meta-forms-kubernetes.md)
   * [Deploy Meta-Forms (IIS)](meta-forms/meta-forms-deployment-installation-guide/deploying-meta-forms-iis.md)
 * [Forms data types](meta-forms/forms-data-types.md)
-* [Meta-Forms builder guides](meta-forms/meta-forms-builders-guides/README.md)
+* [Meta-Forms Builder Guide](meta-forms/meta-forms-builders-guides/README.md)
   * [Create a dynamic meta-form with tables](meta-forms/meta-forms-builders-guides/creating-a-dynamic-meta-form-using-tables.md)
   * [Create a dynamic meta-form example with Form Designer](meta-forms/meta-forms-builders-guides/creating-a-dynamic-meta-form-example-using-form-designer.md)
   * [Add links to a form](meta-forms/meta-forms-builders-guides/adding-links-to-a-form.md)
@@ -182,7 +182,7 @@
   * [Install Connections](data-syncs/installation-and-maintenance/installing-connections.md)
   * [Install the Worker/Listener](data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
   * [Install the CLI and the Maintenance CLI](data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
-* [Build Data Syncs](data-syncs/building-data-syncs/README.md)
+* [Build data syncs](data-syncs/building-data-syncs/README.md)
   * [Data Sync types](data-syncs/building-data-syncs/types-of-data-syncs.md)
   * [Common design patterns](data-syncs/building-data-syncs/common-design-patterns.md)
   * [Sync actions](data-syncs/building-data-syncs/sync-actions.md)
@@ -200,7 +200,7 @@
   * [Schedule a data sync](data-syncs/building-data-syncs/scheduling-a-data-sync.md)
   * [Connection functions](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cinchy-supported-functions/connections-functions)
 * [CLI Commands List](data-syncs/cli-commands-list.md)
-* [Error Logging and troubleshooting](data-syncs/error-logging-and-troubleshooting.md)
+* [Error logging and troubleshooting](data-syncs/error-logging-and-troubleshooting.md)
 * [Supported data sync sources](data-syncs/supported-data-sync-sources/README.md)
   * [Cinchy Event Broker/CDC](data-syncs/supported-data-sync-sources/cinchy-event-broker-cdc/README.md)
     * [Cinchy Event Broker/CDC XML config example](data-syncs/supported-data-sync-sources/cinchy-event-broker-cdc/cinchy-event-broker-cdc-xml-config-example.md)
