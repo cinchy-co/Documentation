@@ -30,7 +30,7 @@ Before you can harness the power of Cinchy's Data Sync capabilities, you will ne
 * [Event Worker/Listener](broken-reference)
 
 {% hint style="warning" %}
-In a Kubernetes deployment of the Cinchy Platform, the above installations are bundled in, there is no manual install required.
+A Kubernetes deployment of the Cinchy Platform includes the Connections and Event Worker/Listener.
 {% endhint %}
 
 Once installed, ensure that you have access to the following Cinchy Tables on your platform:
@@ -51,7 +51,7 @@ Cinchy has two types of data syncs available: Batch and Real-Time.
 Creating a Batch data sync vs. real-time data sync are similar processes. The main difference is that real-time data sync has some additional steps in the setup and doesn't need to be manually executed, where a Batch data sync **does** need to be manually executed.
 
 {% hint style="warning" %}
-Not every Connector will support both types of sync. This will be noted in the Overview section of the Connector's page.
+Not every Connector will support both types of sync. See the specific data source and destination pages for more information.
 {% endhint %}
 
 #### Connections options
@@ -72,16 +72,16 @@ To set up a data sync, you can use the Connections UI or manually input a Data S
 
 ### Set up a listener config (real-time syncs)
 
-If you are setting up a real-time sync, you will need to first set up your listener configuration. This is done in the Listener Config table.
+If you are setting up a real-time sync, you will need to set up your listener configuration in the Listener Config table.
 
-For instructions on subscribing to your event stream, [review the documentation here.](supported-real-time-sync-stream-sources/)
+For instructions about subscribing to your event stream, [see the supported real-time sync stream sources page](supported-real-time-sync-stream-sources/)
 
 ### Test and run
 
-Once the data sync config is created and added to the table in Cinchy, you can test your data sync:
+After you create and add the data sync config to the table in Cinchy, you can test your data sync:
 
-* For batch syncs: run your job in the Connections UI.
-* For real-time syncs: You can test by making changes in the source system and seeing if the target updates.
+* **For batch syncs:** run your job in the Connections UI.
+* **For real-time syncs:** You can test by making changes in the source system and seeing if the target updates.
 
 ## Schedule a data sync
 

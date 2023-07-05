@@ -4,5 +4,7 @@ endhint
 [Cc]onfig
 CLI
 API(s)
+Grafana
+OAuth
 {% endtab %}
 (\*\*(.*)?.(zip|exe)+\*\*)

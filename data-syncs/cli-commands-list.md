@@ -27,7 +27,7 @@ Prior to attempting to use any of the below commands, [ensure that you have inst
 * **-b, --batchsize:** (Default: 5000) The number of rows to sync per batch (within a partition) when executing inserts/updates.
 * **-z, --retrievalbatchsize:** (Default: 5000) The max number of rows to retrieve in a single batch from Cinchy when downloading data.
 * **-v, --param-values:** Job parameter values defined as one or more name value pairs delimited by a colon. For example,` -v name1:value1 name2:value2`.
-* **--file:** Works exactly as `-v` but it is for parameters that are files.
+* **--file:** Works exactly as `-v` but it's for parameters that are files.
 * **--help:** Displays the help screen with the options.
 * **-w, --writetofile**: Write the data from Cinchy to disk, required for large data sets exceeding 2GB.
 

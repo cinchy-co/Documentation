@@ -20,7 +20,7 @@
 * [Cinchy glossary](cinchy-glossary.md)
 * [Frequently asked questions](frequently-asked-questions.md)
 
-## Deployment Guide
+## Deployment guide
 
 * [Deployment Installation Guide](deployment-guide/deployment-installation-guides/README.md)
   * [Deployment planning](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/README.md)
@@ -106,7 +106,7 @@
 * [Additional guides](guides-for-using-cinchy/additional-guides/README.md)
   * [Monitor and Log on Kubernetes](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/README.md)
     * [Grafana](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/grafana.md)
-    * [Opensearch dashboards](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/opensearch-dashboards/README.md)
+    * [OpenSearch dashboards](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/opensearch-dashboards/README.md)
       * [Set up Alerts](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/opensearch-dashboards/setting-up-alerts.md)
     * [Monitor via ArgoCD](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/monitoring-via-argocd.md)
   * [Maintenance](guides-for-using-cinchy/additional-guides/maintenance.md)
@@ -183,7 +183,7 @@
   * [Install the Worker/Listener](data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
   * [Install the CLI and the Maintenance CLI](data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
 * [Build data syncs](data-syncs/building-data-syncs/README.md)
-  * [Data Sync types](data-syncs/building-data-syncs/types-of-data-syncs.md)
+  * [Data sync types](data-syncs/building-data-syncs/types-of-data-syncs.md)
   * [Common design patterns](data-syncs/building-data-syncs/common-design-patterns.md)
   * [Sync actions](data-syncs/building-data-syncs/sync-actions.md)
   * [Columns and mappings](data-syncs/building-data-syncs/columns-and-mappings/README.md)

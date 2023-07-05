@@ -4,43 +4,35 @@ description: >-
   Federation Services (ADFS) to enable Single Sign-On (SSO).
 ---
 
-# Configuring ADFS
+# Configure ADFS
 
-## Table of Contents
-
-| Table of Contents                                                                   |
-| ----------------------------------------------------------------------------------- |
-| [#1.-adfs-configuration](configuring-adfs.md#1.-adfs-configuration "mention")       |
-| [#2.-claim-issuance-policy](configuring-adfs.md#2.-claim-issuance-policy "mention") |
-| [#3.-cinchy-configuration](configuring-adfs.md#3.-cinchy-configuration "mention")   |
-
-## 1. ADFS Configuration
+## ADFS Configuration
 
 1. On your ADFS Server, Open **AD FS Management.**
 
-2\. Right-click on **Relying Party Trusts** and select **Add Relying Party Trust** to launch the **Add Relying Party Trust Wizard** _(Image 1)._
+2. Right-click on **Relying Party Trusts** and select **Add Relying Party Trust** to launch the **Add Relying Party Trust Wizard** _(Image 1)._
 
 ![Image 1: Add Relying Party Trust Wizard](<../../../../../.gitbook/assets/image (586).png>)
 
-3\. In the ADFS Wizard, select **Claims Aware > Start > Select Data Source**
+3. In the ADFS Wizard, select **Claims Aware > Start > Select Data Source**.
 
-4\. Select **Enter Data About the Relying Part Manually > Next**
+4. Select **Enter Data About the Relying Part Manually > Next**.
 
-5\. Under **Specify Display Name**, enter a Display Name of your choice
+5. Under **Specify Display Name**, enter a Display Name of your choice.
 
-6\. Under **Configure Certificates**, do not choose any certificates
+6. Under **Configure Certificates**, do not select any certificates.
 
-7\. Under **Configure UR**L, Select **Enable support for the SAML 2.0 SSO Web SSO protocol**.
+7. Under **Configure URL**, select **Enable support for the SAML 2.0 SSO Web SSO protocol**.
 
-8\. Enter your **login URL** in the following format:
+8. Enter your **login URL** in the following format:
 
 ```
 https://<cinchy-sso-URL>/Saml2/Acs
 ```
 
-9\. Under **Configure Identifiers**, choose an Identifier
+9. Under **Configure Identifiers**, choose an Identifier
 
-10\. Select **Nex**t until the process finishes.
+10. Select **Next** until the process finishes.
 
 ## 2. Claim Issuance Policy
 
@@ -53,11 +45,11 @@ https://<cinchy-sso-URL>/Saml2/Acs
 
 ![Image 2: Add Transform Claim Rule Wizard](<../../../../../.gitbook/assets/image (495).png>)
 
-&#x20; 4\. Click **Finish**.
+4\. Click **Finish**.
 
-&#x20; 5\. Click on **Edit Rule.**
+5\. Click on **Edit Rule.**
 
-&#x20; 6\. Click on **View Rule Language** and copy out the Claim URLs for the claims defined. This information will be needed in a later step to configure your Cinchy **appsettings.json**. This will look something like this:
+6\. Click on **View Rule Language** and copy out the Claim URLs for the claims defined. This information will be needed in a later step to configure your Cinchy **appsettings.json**. This will look something like this:
 
 ```
 c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
@@ -72,11 +64,11 @@ c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccou
            param = c.Value);
 ```
 
-&#x20; 7\. Click **OK** to save the rule.
+7\. Click **OK** to save the rule.
 
-&#x20; 8\. Right-click on **Relying Party Trust** > **Properties**.
+8\. Right-click on **Relying Party Trust** > **Properties**.
 
-&#x20; 9\. Go to the **Advanced** tab and set the secure hash algorithm to **SHA-256** _(Image 3)._
+9\. Go to the **Advanced** tab and set the secure hash algorithm to **SHA-256** _(Image 3)._
 
 ![Image 3: Set the secure hash algorithm to SHA-256](<../../../../../.gitbook/assets/image (583).png>)
 
@@ -88,7 +80,7 @@ Everything below is case sensitive and must match whatever is specified in your 
 
 1. Open `https://<your.AD.server>/FederationMetadata/2007-06/FederationMetadata.xml` in a browser and save the XML file in the cinchysso folder.
 2. Open **IIS Manager** and create an HTTPS binding on the Cinchy site (if necessary).
-3. Go to sso site and bind HTTPS with it. Make sure to use the same port as the login URL above if specified.
+3. Go to SSO site and bind HTTPS with it. Make sure to use the same port as the login URL above if specified.
 
 ### **Cinchy appsettings.json**
 

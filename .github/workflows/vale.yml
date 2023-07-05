@@ -1,5 +1,5 @@
 name: Vale test
-on: [pull_request]
+on: [push,pull_request]
 
 jobs:
   vale:
@@ -11,5 +11,5 @@ jobs:
         with:
           files: '["meta-forms/","cinchy-glossary.md"]'
           fail_on_error: true
-          filter_mode: file
+          filter_mode: nofilter
           reporter: github-check
