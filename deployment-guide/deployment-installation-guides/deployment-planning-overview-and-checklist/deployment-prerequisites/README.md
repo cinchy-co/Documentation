@@ -82,8 +82,8 @@ You will need to access and download the Cinchy artifacts before deployment.
 To access the Kubernetes artifacts:
 
 1. Access the [**Cinchy Releases**](https://cinchy.net/Cinchy/Tables/1477) table. Please contact [Cinchy Support](../../../../getting-help.md) if you don't have the access credentials necessary.
-2. Navigate to the release you wish to deploy
-3. Download the .zip file(s) listed under the **Kubernetes Artifacts** column
+2. Navigate to the release you wish to deploy.
+3. Download the .zip file(s) listed under the **Kubernetes Artifacts** column.
 4. Check the contents of each of the directories into their [respective repository.](./#undefined)
 
 {% hint style="warning" %}
@@ -107,7 +107,11 @@ The deployment template has two options available:
 
 #### Existing resource group
 
-If you prefer an **existing resource group**, you must provision the following before the deployment: - The resource group. - A VNet within the resource group. - A single subnet. It's important that the address range be enough for all executing processes within the cluster, such as a CIDR ending with /22 to provide a range of 1024 IPs.
+If you prefer an **existing resource group**, you must provision the following before the deployment:
+
+- The resource group.
+- A VNet within the resource group.
+- A single subnet. It's important that the address range be enough for all executing processes within the cluster, such as a CIDR ending with /22 to provide a range of 1024 IPs.
 
 #### New resource group
 
@@ -142,9 +146,8 @@ The template has two options available:
 - The limit of the **Running On-Demand All Standard** vCPUs must offer enough availability for the required number of vCPUs (minimum of 24).
 - An **IAM user account** to connect to AWS which has the necessary privileges to create resources in any existing VPC and the ability to create a VPC (if required).
 - You must import the SSL certificate into AWS Certificate Manager (or a new certificate can be requested via AWS Certificate Manager).
-- You must import the SSL certificate  [into AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html), or a new certificate can be requested via [AWS Certificate Manager.](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html)
+- You must import the SSL certificate [into AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html), or a new certificate can be requested via [AWS Certificate Manager.](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html)
 - If you are importing it, you will need the PEM-encoded certificate body and private key. You can find this, you can get the PEM file from your chosen domain provider (GoDaddy, Google, etc.) [Read more on this here.](https://aws.amazon.com/blogs/security/how-to-import-pfx-formatted-certificates-into-aws-certificate-manager-using-openssl/)
-
 
 ## IIS deployment prerequisites
 

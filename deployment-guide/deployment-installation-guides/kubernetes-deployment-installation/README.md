@@ -28,7 +28,7 @@ These prerequisites apply whether you are installing on Azure or on AWS.
   - **cinchy.kubernetes:**: Contains cluster and application component deployment manifests.
   - **cinchy.devops.automations:**: Contains the single configuration file and binary utility that maintains the contents of the above three repositories.
 - Download the artifacts for the four Git repositories. [See here for information on accessing these.](../deployment-planning-overview-and-checklist/deployment-prerequisites/#1.6-access-to-cinchy-artifacts) Check the contents of each of the directories into the respective repository.
-- You must have a service account with read/write permissions to the git respositories created above.
+- You must have a service account with read/write permissions to the git repositories created above.
 - Install the following tools on the deployment machine:
   - [Terraform](https://www.terraform.io/)
     - For an introduction to Terraform + AWS,[ see this Get started Guide.](https://learn.hashicorp.com/collections/terraform/aws-get-started?utm_source=terraform_io_download)
@@ -70,7 +70,11 @@ The deployment template has two options available:
 
 #### Existing resource group
 
-If you prefer an **existing resource group**, you must provision the following before the deployment: - The resource group. - A VNet within the resource group. - A single subnet. It's important that the address range be enough for all executing processes within the cluster, such as a CIDR ending with /22 to provide a range of 1024 IPs.
+If you prefer an **existing resource group**, you must provision the following before the deployment:
+
+- The resource group.
+- A VNet within the resource group.
+- A single subnet. It's important that the address range be enough for all executing processes within the cluster, such as a CIDR ending with /22 to provide a range of 1024 IPs.
 
 #### New resource group
 
@@ -153,9 +157,10 @@ dotnet Cinchy.DevOps.Automations.dll "deployment.json"
 2. If the file created in [**"Configuring the Deployment.json" step 2**](./#3.1-configure-deployment.json) has a name other than "deployment.json", the reference in the command will will need to be replaced with the correct name of the file.
 
 3. The console output should have the following message:
- ```bash
+
+```bash
 Completed successfully
- ```
+```
 
 ## Terraform deployment
 
@@ -302,6 +307,7 @@ dotnet Cinchy.DevOps.Automations.dll "deployment.json"
 2. If the file [created in section 3](./#3.-initial-configuration) has a name other than "deployment.json", the reference in the command will will need to be replaced with the correct name of the file.
 
 3. The console output should terminate with the following message:
+
 ```bash
 Completed successfully
 ```
