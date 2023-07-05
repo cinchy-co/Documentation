@@ -45,6 +45,7 @@ exceptions:
   - RAM
   - REPL
   - RSA
+  - SAML
   - SOAP
   - SCM
   - SCSS

@@ -6,5 +6,6 @@ CLI
 API(s)
 Grafana
 OAuth
+[Ss]ubnet
 {% endtab %}
 (\*\*(.*)?.(zip|exe)+\*\*)

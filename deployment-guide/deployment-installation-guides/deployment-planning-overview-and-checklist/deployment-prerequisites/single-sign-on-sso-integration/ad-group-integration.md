@@ -14,7 +14,7 @@ This section defines how to manage Groups.
 
 Cinchy Groups are containers that have **Users** and other **Groups** within them as members. Use Groups to provision access controls throughout the platform. Cinchy Groups enable **centralized administration for access controls**.
 
-Groups are defined in the **"Groups"** table within the Cinchy domain. By default this table can only be managed by members of the Cinchy Administrators group. Each group has the following attributes:
+Groups are defined in the **Groups** table within the Cinchy domain. By default, only members of the Cinchy Administrators group can manage this table Each group has the following attributes:
 
 | Attribute        | Definition                                                                                                                                                                                                                                                                                           |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,15 +49,15 @@ The sync operation performs the following high-level steps:
 
 ### Dependencies
 
-1. The Cinchy CLI Model must be installed in your instance of Cinchy. [See here](../../../../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md) for more details.
+1. You must install the Cinchy CLI Model in your instance of Cinchy. [See the CLI installation page](../../../../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md) for more details.
 2. An instance of the Cinchy CLI must be available to execute the sync.
-3. A task scheduler is required to perform the sync on a regular basis (e.g. Autosys).
+3. You must have a task scheduler to perform the sync on a regular basis (For example, AutoSys).
 
 ### Configuration steps
 
 #### Create a saved Query to retrieve AD Groups from Cinchy
 
-1. Create a **new query** within Cinchy with the below CQL to fetch all AD Groups from the Groups table. The domain & name assigned to the query will be referenced in the subsequent step.
+1. Create a **new query** within Cinchy with the below CQL to fetch all AD Groups from the Groups table. The domain and name assigned to the query will be referenced in the next step.
 
 {% code title="SavedQuery" %}
 
@@ -73,7 +73,7 @@ AND [Deleted] IS NULL
 #### Create the sync config
 
 1. Copy the below XML into a text editor of your choice and update the attributes listed in the table below the XML to align to your environment specific settings.
-2. Once complete, create an entry with the config in your **Data Sync Configurations** table (part of the Cinchy CLI model).
+2. Create an entry with the config in your **Data Sync Configurations** table (part of the Cinchy CLI model).
 
 {% code title="ConfigXML" %}
 
@@ -108,14 +108,14 @@ AND [Deleted] IS NULL
 
 | XML Tag                  | Attribute   | Content                                                                                                                                                                         |
 | ------------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LDAPDataSource           | ldapserver  | <p>The LDAP server URL</p><p>(e.g. LDAP:\\activedirectoryserver.domain.com)</p>                                                                                                 |
-| LDAPDataSource           | username    | <p>The encrypted username to authenticate with the AD server</p><p>(generated using the CLI's encrypt command - </p><p>dotnet Cinchy.CLI.dll encrypt -t "Domain/username").</p> |
-| LDAPDataSource           | password    | <p>The encrypted password to authenticate with the AD server</p><p>(generated using the CLI's encrypt command -</p><p>dotnet Cinchy.CLI.dll encrypt -t "password").</p>         |
+| LDAPDataSource           | ldapserver  | <p>The LDAP server URL</p><p>**LDAP:\\activedirectoryserver.domain.com**</p>                                                                                                 |
+| LDAPDataSource           | username    | <p>The encrypted username to authenticate with the AD server</p><p>(generated using the CLI's encrypt command) </p><p>`dotnet Cinchy.CLI.dll encrypt -t "Domain/username"`</p> |
+| LDAPDataSource           | password    | <p>The encrypted password to authenticate with the AD server</p><p>(generated using the CLI's encrypt command) </p><p>`dotnet Cinchy.CLI.dll encrypt -t "password"`.</p>         |
 | LDAPDataSource -> Filter | Domain Name | The domain of the Saved Query that retrieves AD Groups                                                                                                                          |
 | LDAPDataSource -> Filter | Query Name  | The name of the Saved Query that retrieves AD Groups                                                                                                                            |
 
 {% hint style="info" %}
-If the `userPrincipalName` attribute in Active Directory doesn't match what you expect to have as the Username in the Cinchy Users table (e.g. if the SAML token as part of your SSO integration returns a different ID), then you must replace`userPrincipalName`in the XML config with the expected attribute.
+If the `userPrincipalName` attribute in Active Directory doesn't match what you expect to have as the Username in the Cinchy Users table (For example, if the SAML token as part of your SSO integration returns a different ID), then you must replace`userPrincipalName`in the XML config with the expected attribute.
 
 The `userPrincipalName` appears twice in the XML, once in the LDAPDataSource Columns and once in the CinchyTableTarget ColumnMappings.
 {% endhint %}
@@ -126,7 +126,7 @@ The `userPrincipalName` appears twice in the XML, once in the LDAPDataSource Col
 2. Update the command parameters (described in the table below) with your environment specific settings.
 3. Execution of this command can be scheduled at your desired frequency using your scheduler of choice.
 
-```
+```bash
 dotnet Cinchy.CLI.dll syncdata -s cinchyAppServer -u username -p "encryptedPassword" -m "Model" -f "AD_GROUP_SYNC" -d "TempDirectory"
 ```
 
@@ -150,7 +150,7 @@ The user account credentials provided in above CLI syncdata command must have Vi
 - **-b, --batchsize:** (Default: 5000) The number of rows to sync per batch (within a partition) when executing inserts/updates.
 - **-z, --retrievalbatchsize:** (Default: 5000) The max number of rows to retrieve in a single batch from Cinchy when downloading data.
 - **-v, --param-values:** Job parameter values defined as one or more name value pairs delimited by a colon (i.e. -v name1:value1 name2:value2).
-- **--file:** Works exactly as -v but it is for parameters that are files.
+- **--file:** Works exactly as -v but it's for parameters that are files.
 - **--help:** Displays the help screen with the options.
 - **-w, --writetofile**: Write the data from Cinchy to disk, required for large data sets exceeding 2GB.
 
@@ -168,7 +168,7 @@ If you are syncing someone with a lot of ADFS groups, the server may reject the 
 
 In your **CinchySSO app settings**, you will also need to increase the max size of the request, as follows:
 
-```
+```json
 "AppSettings": {
   ...
   "MaxRequestHeadersTotalSize": {max size in bytes},
