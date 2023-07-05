@@ -1,10 +1,10 @@
-# Fixed width file
+# Fixed-width file
 
 ## Overview
 
-Fixed width text files are special cases of text files where the format is specified by column widths, pad character and left/right alignment. Column widths are measured in units of characters. For example, if you have data in a text file where the first column **always** has exactly 10 characters, and the second column has exactly 5, the third has exactly 12 (and so on), this would be categorized as a fixed width text file.
+Fixed-width text files are special cases of text files where the format is specified by column widths, pad character and left/right alignment. Column widths are measured in units of characters. For example, if you have data in a text file where the first column **always** has exactly 10 characters, and the second column has exactly 5, the third has exactly 12, this would be categorized as a fixed-width text file.
 
-If a text file follows the rules below it is a fixed width text file:
+If a text file follows the rules below it is a fixed-width text file:
 
 * Each row (paragraph) contains one complete record of information.
 * Each row contains one or many pieces of data (also referred to as columns or fields).
@@ -13,14 +13,14 @@ If a text file follows the rules below it is a fixed width text file:
 * Each piece of data can be left or right aligned, meaning the pad characters can occur on either side.
 * Each column must consistently use the same number of characters, same pad character and same alignment (left/right).
 
-**Example Use Case:** You have a fixed width file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
+**Example Use Case:** You have a fixed-width file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
 
 {% hint style="success" %}
-The Fixed Width File source supports **batch syncs.**
+The fixed-width file source supports **batch syncs.**
 {% endhint %}
 
 {% hint style="danger" %}
-The Fixed Width File source does not support Geometry, Geography, or Binary data types.
+The fixed-width file source does not support Geometry, Geography, or Binary data types.
 {% endhint %}
 
 ## Info tab

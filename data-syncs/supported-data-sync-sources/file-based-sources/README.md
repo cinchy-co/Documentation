@@ -1,8 +1,8 @@
-# File based sources
+# File-based sources
 
 ## Overview
 
-Cinchy supports the following file based sources:
+Cinchy supports the following file-based sources:
 
 {% content-ref url="binary-file.md" %}
 [binary-file.md](binary-file.md)
