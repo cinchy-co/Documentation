@@ -1,4 +1,13 @@
+timesheet(s)
 Cinchy
 endhint
 [Cc]onfig
-timesheet(s)
+CLI
+API(s)
+Grafana
+OAuth
+kubectl
+[Ss]ubnet
+Istio
+{% endtab %}
+(\*\*(.*)?.(zip|exe)+\*\*)

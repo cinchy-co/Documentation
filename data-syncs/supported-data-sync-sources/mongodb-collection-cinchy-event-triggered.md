@@ -1,4 +1,4 @@
-# MongoDB Collection (CDC Triggered)
+# MongoDB Collection (Cinchy event)
 
 ## Overview
 

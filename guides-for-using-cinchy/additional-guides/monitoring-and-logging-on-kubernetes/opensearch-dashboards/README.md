@@ -1,4 +1,4 @@
-# Opensearch Dashboards
+# OpenSearch Dashboards
 
 ## Table of Contents
 
@@ -6,27 +6,27 @@
 | ------------------------------------------------------------------------------------------------------------ |
 | [#1.-opensearch-dashboards-overview](./#1.-opensearch-dashboards-overview "mention")                         |
 | [#2.-getting-started-with-opensearch-dashboards](./#2.-getting-started-with-opensearch-dashboards "mention") |
-| [3. Updating your Opensearch Password](./#3.-updating-your-opensearch-password)                              |
+| [3. Updating your OpenSearch Password](./#3.-updating-your-opensearch-password)                              |
 
-## 1. Opensearch Dashboards Overview
+## 1. OpenSearch Dashboards Overview
 
-When deploying Cinchy v5 on Kubernetes, we recommend using **Opensearch Dashboards** for your logging. Opensearch is a community-driven fork of Elasticsearch created by Amazon, and it captures and indexes all of your logs into a single, easily accessible **dashboard location.** These logs can be queried, searched, and filtered, and Correlation IDs mean that they can also be traced across various components. These logging components take advantage of persistent storage.
+When deploying Cinchy v5 on Kubernetes, we recommend using **OpenSearch Dashboards** for your logging. OpenSearch is a community-driven fork of Elasticsearch created by Amazon, and it captures and indexes all of your logs into a single, easily accessible **dashboard location.** These logs can be queried, searched, and filtered, and Correlation IDs mean that they can also be traced across various components. These logging components take advantage of persistent storage.
 
-Review some of the Opensearch documentation here:
+Review some of the OpenSearch documentation here:
 
-* [Introducing Opensearch](https://aws.amazon.com/blogs/opensource/introducing-opensearch/)
-* [General Opensearch Documentation](https://opensearch.org/docs/latest/)
+* [Introducing OpenSearch](https://aws.amazon.com/blogs/opensource/introducing-opensearch/)
+* [General OpenSearch Documentation](https://opensearch.org/docs/latest/)
 * [Using DQL (Dashboards Query Language)](https://opensearch.org/docs/latest/dashboards/dql/)
 * [Troubleshooting and Common Errors](https://opensearch.org/docs/latest/troubleshoot/index/)
 * [Alerts](https://opensearch.org/docs/1.0/monitoring-plugins/alerting/monitors)
   * [Anomaly Detection](https://opensearch.org/docs/2.0/monitoring-plugins/ad/index/)
 
-## 2. Getting Started with Opensearch Dashboards
+## 2. Getting Started with OpenSearch Dashboards
 
 The below sections will guide you through setting up your first Index, Visualization, Dashboard, and Alert.
 
 {% hint style="success" %}
-Opensearch comes with sample data that you can use to get a feel of the various capabilities. You will find this on the main page upon logging in.
+OpenSearch comes with sample data that you can use to get a feel of the various capabilities. You will find this on the main page upon logging in.
 {% endhint %}
 
 ### 2.1 Defining your Log Level
@@ -62,7 +62,7 @@ patch: |-
 
 ### 2.1.1 Common Log Search Patterns
 
-The following are some common search patterns when looking through your Opensearch Logs.
+The following are some common search patterns when looking through your OpenSearch Logs.
 
 * **If an HTTP request to Cinchy Web/IDP fails,** check the page's requests and the relevant response headers to find the "x-correlation-id" header. That header value can be used to search and find all logs associated with the HTTP request.
 * **When debugging batch syncs,** filter the "ExecutionId" field in the logs for your batch sync execution ID to narrow down your search.
@@ -70,9 +70,9 @@ The following are some common search patterns when looking through your Opensear
 
 ### 2.2 Setting up an Index
 
-The first step to utilizing the power of Opensearch Dashboards is to set up an index to pull data from your sources. An Index Pattern identifies which indices you want to explore. An index pattern can point to a specific index, for example, your log data from yesterday, or all indices that contain your log data.
+The first step to utilizing the power of OpenSearch Dashboards is to set up an index to pull data from your sources. An Index Pattern identifies which indices you want to explore. An index pattern can point to a specific index, for example, your log data from yesterday, or all indices that contain your log data.
 
-1. Login to Opensearch. You would have configured the access point during your [deployment installation](../../../../deployment-guide/deployment-installation-guides/); traditionally it will be found at **\<baseurl>/dashboard.**
+1. Login to OpenSearch. You would have configured the access point during your [deployment installation](../../../../deployment-guide/deployment-installation-guides/); traditionally it will be found at **\<baseurl>/dashboard.**
 
 {% hint style="info" %}
 If this is your first time logging in, the username and password will be set to **admin/admin.**
@@ -90,7 +90,7 @@ We highly recommend you[ update the password as soon as possible.](https://opens
 
 4\. Click on the **Create Index Pattern** button.
 
-5\. To set up your index pattern, you must define the source. Opensearch will list the sources available to you on the screen below. Input your desired source(s) in the text box _(Image 3)._
+5\. To set up your index pattern, you must define the source. OpenSearch will list the sources available to you on the screen below. Input your desired source(s) in the text box _(Image 3)._
 
 {% hint style="info" %}
 You can use the asterisk (\*) to match multiple sources.
@@ -101,7 +101,7 @@ You can use the asterisk (\*) to match multiple sources.
 6\. Configure your index pattern settings _(Image 4)._
 
 * Time field: Select a primary time field to use with the global time filter
-* Custom index pattern ID: By default, Opensearch gives a unique identifier to each index pattern. You can use this field to optional override the default ID with a custom one.
+* Custom index pattern ID: By default, OpenSearch gives a unique identifier to each index pattern. You can use this field to optional override the default ID with a custom one.
 
 ![Image 4: Configure your index pattern settings](<../../../../.gitbook/assets/image (284).png>)
 
@@ -195,13 +195,13 @@ You can also create new visualizations from the Dashboard screen.
 
 ![Image 19: Click Save.](<../../../../.gitbook/assets/image (56).png>)
 
-## 3. Updating your Opensearch Password
+## 3. Updating your OpenSearch Password
 
 {% hint style="info" %}
 This capability was added in Cinchy v5.4.
 {% endhint %}
 
-Your Opensearch password can be updated in your **deployment.json** file (you may have renamed this during your original deployment).
+Your OpenSearch password can be updated in your **deployment.json** file (you may have renamed this during your original deployment).
 
 1. Navigate to **"cluster\_component\_config" > "opensearch".**
 2. There are two users that you can configure the passwords for: _Admin_ and _Kibana Server. Kibana Server_ is used for communication between the opensearch dashboard and the opensearch server. The default password for both is set to **"password"**;. To update this, you will need to use a machine with docker available.&#x20;

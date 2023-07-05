@@ -13,5 +13,5 @@ Cinchy v5 on Kubernetes offers and recommends a robust set of open-source tools 
 Click on the respective tool below to learn more about it:
 
 * [Grafana](grafana.md)
-* [Opensearch](opensearch-dashboards/)
+* [OpenSearch](opensearch-dashboards/)
 * [ArgoCD](monitoring-via-argocd.md)

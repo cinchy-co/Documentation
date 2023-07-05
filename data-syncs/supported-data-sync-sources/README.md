@@ -66,7 +66,7 @@ Dynamics 2015 is a legacy CRM predecessor to Microsoft Dynamics 365. Mainstream 
 
 ### DynamoDB
 
-[Amazon DynamoDB](https://aws.amazon.com/dynamodb/?trk=d1003b1b-ffc2-4fbd-9ce6-e70c668663bc\&sc\_channel=ps\&s\_kwcid=AL!4422!3!536393505298!e!!g!!dynamodb\&ef\_id=Cj0KCQjwteOaBhDuARIsADBqRehoQ4LyBjuhkAYGKfx15DT4NXjMrNVjbVFUYbYb\_5uQOrcctpV9A-8aAihsEALw\_wcB:G:s\&s\_kwcid=AL!4422!3!536393505298!e!!g!!dynamodb) is a managed NoSQL database service that is offered by Amazon as part of the AWS portfolio.
+[Amazon DynamoDB](https://aws.amazon.com/dynamodb/?trk=d1003b1b-ffc2-4fbd-9ce6-e70c668663bc\&sc\_channel=ps\&s\_kwcid=AL!4422!3!536393505298!e!!g!!dynamodb\&ef\_id=Cj0KCQjwteOaBhDuARIsADBqRehoQ4LyBjuhkAYGKfx15DT4NXjMrNVjbVFUYbYb\_5uQOrcctpV9A-8aAihsEALw\_wcB:G:s\&s\_kwcid=AL!4422!3!536393505298!e!!g!!dynamodb) is a managed NoSQL database service that's offered by Amazon as part of the AWS portfolio.
 
 {% content-ref url="dynamodb.md" %}
 [dynamodb.md](dynamodb.md)
@@ -78,11 +78,11 @@ Dynamics 2015 is a legacy CRM predecessor to Microsoft Dynamics 365. Mainstream 
 [excel.md](file-based-sources/excel.md)
 {% endcontent-ref %}
 
-### Fixed width file
+### Fixed-width file
 
-A **fixed width file** is a file that has a specific format which allows for the saving of information in an organized fashion. The data is arranged in rows and columns, with one entry per row. Each column has a fixed width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
+A **fixed-width file** is a file that has a specific format which allows for the saving of information in an organized fashion. The data is arranged in rows and columns, with one entry per row. Each column has a fixed-width, specified in characters, which determines the maximum amount of data it can contain. No delimiters are used to separate the fields in the file.
 
-Advantages of using a fixed width file include:
+Advantages of using a fixed-width file include:
 
 * It is a very **compact** representation of your data
 * It is fast to parse because every field is in the same place in every line
@@ -189,10 +189,10 @@ REST APIs work by fielding **requests for a resource** and **returning all relev
 
 [Salesforce](https://www.salesforce.com/ca/products/what-is-salesforce/) is a cloud-based CRM software designed for service, marketing, and sales.
 
-Salesforce objects are database tables that permit you to store data that is specific to an organization. Salesforce objects are of two types:
+Salesforce objects are database tables that permit you to store data that's specific to an organization. Salesforce objects are of two types:
 
 * Standard Objects: Standard objects are the kind of objects that are provided by salesforce.com such as users, contracts, reports, dashboards, etc.&#x20;
-* Custom Objects: Custom objects are those objects that are created by users. They supply information that is unique and essential to their organization. They are the heart of any application and provide a structure for sharing data.
+* Custom Objects: Custom objects are those objects that are created by users. They supply information that's unique and essential to their organization. They are the heart of any application and provide a structure for sharing data.
 
 {% content-ref url="salesforce-object-bulk-api.md" %}
 [salesforce-object-bulk-api.md](salesforce-object-bulk-api.md)
@@ -239,7 +239,7 @@ Snowflake enables data storage, processing, and analytic solutions.
 
 SOAP (Simple Object Access Protocol) is an XML-based protocol for accessing web services over HTTP.
 
-SOAP allows applications running on different operating systems to communicate using different technologies and programming languages. You can use SOAP APIs to create, retrieve, update or delete records, such as passwords, accounts, leads, and custom objects, from a server.
+SOAP can communicate between different operating systems using different technologies and programming languages. You can use SOAP APIs to create, retrieve, update or delete records, such as passwords, accounts, leads, and custom objects, from a server.
 
 {% content-ref url="soap-1.2-web-service.md" %}
 [soap-1.2-web-service.md](soap-1.2-web-service.md)

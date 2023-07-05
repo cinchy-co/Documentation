@@ -2,7 +2,7 @@
 
 ## 1. Monitoring and Alerting
 
-Opensearch comes with the ability to set up alerts based on any number of monitors. You can then push these alerts via email, should you desire.
+OpenSearch comes with the ability to set up alerts based on any number of monitors. You can then push these alerts via email, should you desire.
 
 {% hint style="success" %}
 Prior to setting up a monitor or alert, ensure that you have [added your data source as an index pattern](setting-up-alerts.md#2.1-setting-up-an-index).
@@ -19,7 +19,7 @@ Definitions:
 
 ### 1.1 Create your Destination
 
-Your destination will be where you want your alerts to be pushed to. Opensearch supports various options, however this guide will focus on email.
+Your destination will be where you want your alerts to be pushed to. OpenSearch supports various options, however this guide will focus on email.
 
 1. From the left navigation pane, click **Alerting** _(Image 1)._
 

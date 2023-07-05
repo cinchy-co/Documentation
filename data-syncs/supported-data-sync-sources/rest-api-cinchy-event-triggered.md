@@ -1,4 +1,4 @@
-# REST API (Cinchy Event Triggered)
+# REST API (Cinchy event)
 
 ## Overview
 
@@ -6,7 +6,7 @@ Data changes in Cinchy (CDC) can be used to trigger a data sync from a REST API 
 
 **Example Use Case:** An organization wants to use the Dun & Bradstreet API for enriching company information, such as the number of employees or their addresses. When a company record is added or modified in a table called Companies inside of Cinchy, a D\&B API should be triggered with the Company Name (a mandatory field on the Companies table) passed in as a parameter, and the Company record should be enriched with the company information from the API response.
 
-## 2. Defining the Connection
+## Defining the Connection
 
 {% hint style="success" %}
 The options available to the REST API (Cinchy Event Triggered) connector are identical to the REST API source connector which can be found [here](broken-reference).

@@ -40,7 +40,7 @@ To set up a real-time sync, you must configure your Listener values. You can do 
 
 Note that If there is more than one listener associated with your data sync, you will need to configure the addition listeners via [the Listener Configuration table.](../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
 
-#### Reset Behaviour
+#### Reset behaviour
 
 <table><thead><tr><th width="265.66666666666663">Parameter</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td><strong>Auto Offset Reset</strong></td><td><p><strong>Earliest, Latest or None.</strong> <br><br>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br></p><p><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed. This is the typical configuration.<br><br><strong>None</strong> will not read start reading any events.<br><br>You are able to switch between Auto Offset Reset types after your initial configuration through the process outlined <a href="../error-logging-and-troubleshooting.md">here.</a></p></td><td>None</td></tr></tbody></table>
 
@@ -57,7 +57,7 @@ The below table can be used to help create your Topic JSON needed to set up a re
 <strong>}
 </strong></code></pre>
 
-#### Connection Attributes
+#### Connection attributes
 
 The below table can be used to help create your Connection Attributes JSON needed to set up a real-time sync.
 

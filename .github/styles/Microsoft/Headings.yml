@@ -7,6 +7,7 @@ match: $sentence
 indicators:
   - ':'
 exceptions:
+  - ArgoCD
   - Azure
   - CLI
   - Code
@@ -19,6 +20,7 @@ exceptions:
   - macOS
   - Marketplace
   - MongoDB
+  - OpenSearch
   - REPL
   - Studio
   - TypeScript
@@ -32,3 +34,4 @@ exceptions:
   - Kafka Topic
   - Cinchy Event Broker
   - SuccessFactors
+  - Azure Key Vault

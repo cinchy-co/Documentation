@@ -2,9 +2,9 @@
 
 * [Data Collaboration Overview](README.md)
 
-## Release Notes
+## Release notes
 
-* [Release Notes](release-notes/release-notes/README.md)
+* [Release notes](release-notes/release-notes/README.md)
   * [5.0 Release Notes](release-notes/release-notes/5.0-release-notes.md)
   * [5.1 Release Notes](release-notes/release-notes/5.1-release-notes.md)
   * [5.2 Release Notes](release-notes/release-notes/5.2-release-notes.md)
@@ -20,7 +20,7 @@
 * [Cinchy glossary](cinchy-glossary.md)
 * [Frequently asked questions](frequently-asked-questions.md)
 
-## Deployment Guide
+## Deployment guide
 
 * [Deployment Installation Guide](deployment-guide/deployment-installation-guides/README.md)
   * [Deployment planning](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/README.md)
@@ -63,7 +63,7 @@
       * [v5.6 (IIS)](deployment-guide/upgrade-guides/upgrading-cinchy-versions/iis-upgrades/v5.6-iis.md)
   * [Upgrading from v4 to v5](deployment-guide/upgrade-guides/upgrading-from-v4-to-v5.md)
 
-## Guides for Using Cinchy
+## Guides for using Cinchy
 
 * [User Guide](guides-for-using-cinchy/user-guides/README.md)
   * [Data Browser overview](guides-for-using-cinchy/user-guides/overview-of-the-data-browser.md)
@@ -106,7 +106,7 @@
 * [Additional guides](guides-for-using-cinchy/additional-guides/README.md)
   * [Monitor and Log on Kubernetes](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/README.md)
     * [Grafana](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/grafana.md)
-    * [Opensearch dashboards](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/opensearch-dashboards/README.md)
+    * [OpenSearch dashboards](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/opensearch-dashboards/README.md)
       * [Set up Alerts](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/opensearch-dashboards/setting-up-alerts.md)
     * [Monitor via ArgoCD](guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/monitoring-via-argocd.md)
   * [Maintenance](guides-for-using-cinchy/additional-guides/maintenance.md)
@@ -161,7 +161,7 @@
     * [Connections functions](cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md)
     * [JSON functions](cql/the-basics-of-cql/cinchy-supported-functions/json-functions.md)
 
-## Meta Forms
+## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)
 * [Meta-Forms Deployment Installation Guide](meta-forms/meta-forms-deployment-installation-guide/README.md)
@@ -174,7 +174,7 @@
   * [Add links to a form](meta-forms/meta-forms-builders-guides/adding-links-to-a-form.md)
   * [Rich text editing in forms](meta-forms/meta-forms-builders-guides/rich-text-editing-in-forms.md)
 
-## Data Syncs
+## Data syncs
 
 * [Get started with data syncs](data-syncs/getting-started-with-data-syncs.md)
 * [Installation & maintenance](data-syncs/installation-and-maintenance/README.md)
@@ -183,7 +183,7 @@
   * [Install the Worker/Listener](data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
   * [Install the CLI and the Maintenance CLI](data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
 * [Build data syncs](data-syncs/building-data-syncs/README.md)
-  * [Data Sync types](data-syncs/building-data-syncs/types-of-data-syncs.md)
+  * [Data sync types](data-syncs/building-data-syncs/types-of-data-syncs.md)
   * [Common design patterns](data-syncs/building-data-syncs/common-design-patterns.md)
   * [Sync actions](data-syncs/building-data-syncs/sync-actions.md)
   * [Columns and mappings](data-syncs/building-data-syncs/columns-and-mappings/README.md)
@@ -199,7 +199,7 @@
   * [Real-time sync example](data-syncs/building-data-syncs/real-time-sync-example.md)
   * [Schedule a data sync](data-syncs/building-data-syncs/scheduling-a-data-sync.md)
   * [Connection functions](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cinchy-supported-functions/connections-functions)
-* [CLI Commands List](data-syncs/cli-commands-list.md)
+* [CLI commands list](data-syncs/cli-commands-list.md)
 * [Error logging and troubleshooting](data-syncs/error-logging-and-troubleshooting.md)
 * [Supported data sync sources](data-syncs/supported-data-sync-sources/README.md)
   * [Cinchy Event Broker/CDC](data-syncs/supported-data-sync-sources/cinchy-event-broker-cdc/README.md)
@@ -213,7 +213,7 @@
   * [Dynamics 2015](data-syncs/supported-data-sync-sources/dynamics-2015.md)
   * [Dynamics](data-syncs/supported-data-sync-sources/dynamics.md)
   * [DynamoDB](data-syncs/supported-data-sync-sources/dynamodb.md)
-  * [File based sources](data-syncs/supported-data-sync-sources/file-based-sources/README.md)
+  * [File-based sources](data-syncs/supported-data-sync-sources/file-based-sources/README.md)
     * [Binary file](data-syncs/supported-data-sync-sources/file-based-sources/binary-file.md)
     * [Delimited file](data-syncs/supported-data-sync-sources/file-based-sources/delimited-file.md)
     * [Excel](data-syncs/supported-data-sync-sources/file-based-sources/excel.md)
@@ -226,14 +226,14 @@
   * [MongoDB collection](data-syncs/supported-data-sync-sources/mongodb-collection/README.md)
     * [MongoDB collection source example](data-syncs/supported-data-sync-sources/mongodb-collection/mongodb-collection-source-example.md)
   * [Mongo event](data-syncs/supported-data-sync-sources/mongo-event.md)
-  * [MongoDB collection (Cinchy Event)](data-syncs/supported-data-sync-sources/mongodb-collection-cinchy-event-triggered.md)
+  * [MongoDB collection (Cinchy event)](data-syncs/supported-data-sync-sources/mongodb-collection-cinchy-event-triggered.md)
   * [MS SQL Server (query and table)](data-syncs/supported-data-sync-sources/ms-sql-server-query-and-table.md)
   * [ODBC Query](data-syncs/supported-data-sync-sources/odbc-query.md)
   * [Oracle (query and table)](data-syncs/supported-data-sync-sources/oracle-query-and-table.md)
   * [Polling event](data-syncs/supported-data-sync-sources/polling-event/README.md)
     * [Polling event example config](data-syncs/supported-data-sync-sources/polling-event/polling-event-example-config.md)
   * [REST API](data-syncs/supported-data-sync-sources/rest-api.md)
-  * [REST API (Cinchy Event)](data-syncs/supported-data-sync-sources/rest-api-cinchy-event-triggered.md)
+  * [REST API (Cinchy event)](data-syncs/supported-data-sync-sources/rest-api-cinchy-event-triggered.md)
   * [SAP SuccessFactors](data-syncs/supported-data-sync-sources/sap-successfactors.md)
   * [Salesforce Object (Bulk API)](data-syncs/supported-data-sync-sources/salesforce-object-bulk-api.md)
   * [Salesforce platform event](data-syncs/supported-data-sync-sources/salesforce-platform-event.md)

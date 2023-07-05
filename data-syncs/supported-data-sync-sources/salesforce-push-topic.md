@@ -17,7 +17,7 @@ You can use Push Topic events to:
 The Salesforce Push Topic source supports real-time syncs.
 {% endhint %}
 
-## 1.1 Real-Time Sync Scenarios
+## Real-time sync scenarios
 
 You can use a Push Topic already configured in Salesforce, or have Cinchy Event Listener create the Push Topic for you.
 
@@ -25,13 +25,13 @@ You can use a Push Topic already configured in Salesforce, or have Cinchy Event 
 
 Cinchy will compare the JSON with the properties on the push topic in Salesforce by name. If the attributes match, the listener will start listening on the push topic.
 
-#### Scenario 2: Push Topic already exists in Salesforce and the configuration does not match.
+#### Scenario 2: Push Topic already exists in Salesforce and the configuration doesn't match.
 
-Cinchy will compare the JSON with the properties on the push topic in Salesforce by name. If any of the attributes do not match, Cinchy will sync the push topic from Salesforce into Cinchy and disable the listener.
+Cinchy will compare the JSON with the properties on the push topic in Salesforce by name. If any of the attributes don't match, Cinchy will sync the push topic from Salesforce into Cinchy and disable the listener.
 
-#### Scenario 3: Push Topic does not exist in Salesforce.
+#### Scenario 3: Push Topic doesn't exist in Salesforce.
 
-If the Push Topic name does not exist in Salesforce, Cinchy will attempt to create the Push Topic. If it is successful, it will sync in the Id from Salesforce and start listening on the push topic.&#x20;
+If the Push Topic name doesn't exist in Salesforce, Cinchy will attempt to create the Push Topic. If it's successful, it will sync in the Id from Salesforce and start listening on the push topic.&#x20;
 
 ## Info tab
 
