@@ -199,7 +199,7 @@
   * [Real-time sync example](data-syncs/building-data-syncs/real-time-sync-example.md)
   * [Schedule a data sync](data-syncs/building-data-syncs/scheduling-a-data-sync.md)
   * [Connection functions](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cinchy-supported-functions/connections-functions)
-* [CLI Commands List](data-syncs/cli-commands-list.md)
+* [CLI commands list](data-syncs/cli-commands-list.md)
 * [Error logging and troubleshooting](data-syncs/error-logging-and-troubleshooting.md)
 * [Supported data sync sources](data-syncs/supported-data-sync-sources/README.md)
   * [Cinchy Event Broker/CDC](data-syncs/supported-data-sync-sources/cinchy-event-broker-cdc/README.md)
