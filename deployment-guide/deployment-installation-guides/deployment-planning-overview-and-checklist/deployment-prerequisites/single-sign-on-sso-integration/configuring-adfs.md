@@ -30,7 +30,7 @@ description: >-
 https://<cinchy-sso-URL>/Saml2/Acs
 ```
 
-9. Under **Configure Identifiers**, choose an Identifier
+9. Under **Configure Identifiers**, choose an Identifier.
 
 10. Select **Next** until the process finishes.
 
@@ -41,7 +41,7 @@ https://<cinchy-sso-URL>/Saml2/Acs
 3. Add your **Claim Rule Name**
 4. Under **Attribute Store**, choose **Active Directory**. Map the **LDAP attribute** to the following outgoing claim types:
 
-<table data-header-hidden><thead><tr><th>LDAP Attribute</th><th width="249.33333333333331">Outgoing Claim Type</th><th>Comments</th></tr></thead><tbody><tr><td>LDAP Attribute</td><td>Outgoing Claim Type</td><td>Comments</td></tr><tr><td>User-Principal-Name</td><td>Name ID</td><td></td></tr><tr><td>SAM-Account-Name</td><td>sub</td><td><code>sub</code>will need to be typed manually, make sure it does not autocomplete to something else like subject.</td></tr><tr><td>Given-Name</td><td>Given Name</td><td>Necessary for Automatic User Creation</td></tr><tr><td>Surname</td><td>Surname</td><td>Necessary for Automatic User Creation</td></tr><tr><td>E-Mail-Address</td><td>E-Mail Address</td><td>Necessary for Automatic User Creation</td></tr><tr><td>Is-Member-Of-DL</td><td>Role</td><td>Necessary for Automatic User Creation</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th>LDAP Attribute</th><th width="249.33333333333331">Outgoing Claim Type</th><th>Comments</th></tr></thead><tbody><tr><td>LDAP Attribute</td><td>Outgoing Claim Type</td><td>Comments</td></tr><tr><td>User-Principal-Name</td><td>Name ID</td><td></td></tr><tr><td>SAM-Account-Name</td><td>sub</td><td><code>sub</code>will need to be typed manually, make sure it doesn't autocomplete to something else like subject.</td></tr><tr><td>Given-Name</td><td>Given Name</td><td>Necessary for Automatic User Creation</td></tr><tr><td>Surname</td><td>Surname</td><td>Necessary for Automatic User Creation</td></tr><tr><td>E-Mail-Address</td><td>E-Mail Address</td><td>Necessary for Automatic User Creation</td></tr><tr><td>Is-Member-Of-DL</td><td>Role</td><td>Necessary for Automatic User Creation</td></tr></tbody></table>
 
 ![Image 2: Add Transform Claim Rule Wizard](<../../../../../.gitbook/assets/image (495).png>)
 
