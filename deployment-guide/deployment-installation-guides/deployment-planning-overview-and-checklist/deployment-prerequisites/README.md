@@ -64,7 +64,7 @@ Starting in Cinchy v5.4, you will have the option between Alpine or Debian based
 
 ### Create your repositories
 
-You must create the following four Git repositories. You can use any source control platform that supports Git, such as [**Gitlab**](https://about.gitlab.com/)**,** [**Azure DevOps**](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)**,** or [**Github**](https://github.com/).
+You must create the following four Git repositories. You can use any source control platform that supports Git, such as [**Gitlab**](https://about.gitlab.com/)**,** [**Azure DevOps**](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)**,** or [**GitHub**](https://github.com/).
 
 - **cinchy.terraform:** Contains all Terraform configurations.
 - **cinchy.argocd:** Contains all ArgoCD configurations.
@@ -121,7 +121,7 @@ If you are deploying Cinchy v5 on AWS, you require the following:
 
 ### Terraform requirements:
 
-- An S3 bucket that will contain the terraform state.
+- [An S3 bucket](https://platform.docs.cinchy.com/deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview#3.3-object-storage-requirements) that will contain the terraform state.
 - Install the [AWS CLI](https://aws.amazon.com/cli/) on the deployment machine. It must be set to the correct profile/login
 
 The template has two options available:
@@ -142,6 +142,9 @@ The template has two options available:
 - The limit of the **Running On-Demand All Standard** vCPUs must offer enough availability for the required number of vCPUs (minimum of 24).
 - An **IAM user account** to connect to AWS which has the necessary privileges to create resources in any existing VPC and the ability to create a VPC (if required).
 - You must import the SSL certificate into AWS Certificate Manager (or a new certificate can be requested via AWS Certificate Manager).
+- You must import the SSL certificate  [into AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html), or a new certificate can be requested via [AWS Certificate Manager.](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html)
+- If you are importing it, you will need the PEM-encoded certificate body and private key. You can find this, you can get the PEM file from your chosen domain provider (GoDaddy, Google, etc.) [Read more on this here.](https://aws.amazon.com/blogs/security/how-to-import-pfx-formatted-certificates-into-aws-certificate-manager-using-openssl/)
+
 
 ## IIS deployment prerequisites
 

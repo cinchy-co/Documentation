@@ -6,6 +6,8 @@ CLI
 API(s)
 Grafana
 OAuth
+kubectl
 [Ss]ubnet
+Istio
 {% endtab %}
 (\*\*(.*)?.(zip|exe)+\*\*)

@@ -58,7 +58,7 @@ Starting in Cinchy v5.4, you will have the option between Alpine or Debian based
   - **"5.x.x-debian" - Debian**
     {% endhint %}
 
-- [ ] Access the [deployment repositories](deployment-prerequisites/#6.-access-to-cinchy-artifacts) and copy them into your own repository (Github or similar).
+- [ ] Access the [deployment repositories](deployment-prerequisites/#6.-access-to-cinchy-artifacts) and copy them into your own repository (GitHub or similar).
 
 ### IIS checklist
 
