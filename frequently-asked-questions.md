@@ -131,7 +131,7 @@ Cinchy logs will contain all exceptions thrown by the Cinchy Web application. Th
 
 CinchySSO logs will contain **IDP errors.**
 
-**In Version 5:** Errors and Logs can be found through the [Opensearch Dashboard.](https://opensearch.org/docs/latest/dashboards/index/)
+**In Version 5:** Errors and Logs can be found through the [OpenSearch Dashboard.](https://opensearch.org/docs/latest/dashboards/index/)
 
 ## How can I enter a new line into a field in Manage Data?
 

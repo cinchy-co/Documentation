@@ -27,9 +27,9 @@ The main differences between a Kubernetes based deployment and an IIS deployment
 
 * Kubernetes offers the ability to elastically scale.
 * IIS limits certain components to running single instances.
-* As all caching is in memory in an IIS deployment, in the event that multiple instances are stood up for redundancy there is point to point communication between them (http requests on the server IPs) required to maintain the cache.
+* As all caching is in memory in an IIS deployment, in the event that multiple instances are stood up for redundancy there is point to point communication between them (HTTP requests on the server IPs) required to maintain the cache.
 * Performance is better on Kubernetes because of Kafka/Redis
-* Prometheus/Grafana and Opensearch are not available in an IIS deployment
+* Prometheus/Grafana and OpenSearch are not available in an IIS deployment
 * The Maintenance CLI runs as a cronjob in Kubernetes while this needs to be orchestrated using a scheduler for an IIS deployment.
 * Upgrades are simpler with the container images on Kubernetes.
 

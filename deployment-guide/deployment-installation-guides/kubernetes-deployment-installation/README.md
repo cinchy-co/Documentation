@@ -61,9 +61,9 @@ Starting in Cinchy v5.4, you will have the option between Alpine or Debian based
   * **"5.x.x-debian" - Debian**
 {% endhint %}
 
-* You will need a single domain for accessing ArgoCD, Grafana, Opensearch Dashboard, and any deployed Cinchy instances. There are two routing options for accessing these applications - path based or subdomains. See below for an example with multiple cinchy instances:
+* You will need a single domain for accessing ArgoCD, Grafana, OpenSearch Dashboard, and any deployed Cinchy instances. There are two routing options for accessing these applications - path based or subdomains. See below for an example with multiple cinchy instances:
 
-<table><thead><tr><th width="153.43148487423616">Application</th><th width="150">Path Based Routing</th><th>Subdomain Based Routing</th></tr></thead><tbody><tr><td>Cinchy 1 (Dev)</td><td>domain.com/dev</td><td>dev.mydomain.com</td></tr><tr><td>Cinchy 2 (QA)</td><td>domain.com/qa</td><td>qa.mydomain.com</td></tr><tr><td>Cinchy 3 (UAT)</td><td>domain.com/uat</td><td>uat.mydomain.com</td></tr><tr><td>ArgoCD</td><td>domain.com/argocd</td><td>cluster.mydomain.com/argocd</td></tr><tr><td>Grafana</td><td>domain.com/grafana</td><td>cluster.mydomain.com/grafana</td></tr><tr><td>Opensearch</td><td>domain.com/dashboard</td><td>cluster.mydomain.com/dashboard</td></tr></tbody></table>
+<table><thead><tr><th width="153.43148487423616">Application</th><th width="150">Path Based Routing</th><th>Subdomain Based Routing</th></tr></thead><tbody><tr><td>Cinchy 1 (Dev)</td><td>domain.com/dev</td><td>dev.mydomain.com</td></tr><tr><td>Cinchy 2 (QA)</td><td>domain.com/qa</td><td>qa.mydomain.com</td></tr><tr><td>Cinchy 3 (UAT)</td><td>domain.com/uat</td><td>uat.mydomain.com</td></tr><tr><td>ArgoCD</td><td>domain.com/argocd</td><td>cluster.mydomain.com/argocd</td></tr><tr><td>Grafana</td><td>domain.com/grafana</td><td>cluster.mydomain.com/grafana</td></tr><tr><td>OpenSearch</td><td>domain.com/dashboard</td><td>cluster.mydomain.com/dashboard</td></tr></tbody></table>
 
 * You will need an **SSL certificate** for the cluster. This should be a wildcard certificate if you will use subdomain based routing. [You can also use Self-Signed SSL.](using-self-signed-ssl-certs-kubernetes-deployments.md)
 
@@ -390,18 +390,18 @@ bash deploy_cluster_components.sh
 kubectl get svc -n istio-system
 ```
 
-2\. DNS entries must be created using the External IP for any subdomains / primary domains that will be used, including Opensearch, Grafana, and ArgoCD.
+2\. DNS entries must be created using the External IP for any subdomains / primary domains that will be used, including OpenSearch, Grafana, and ArgoCD.
 
-### 8.3 Accessing Opensearch
+### 8.3 Accessing OpenSearch
 
-The default path to access Opensearch, unless you have configured it otherwise in your deployment.json, is **\<baseurl>/dashboard**
+The default path to access OpenSearch, unless you have configured it otherwise in your deployment.json, is **\<baseurl>/dashboard**
 
 {% hint style="info" %}
-The default credentials for accessing Opensearch are **admin/admin. We recommend that you change these credentials the first time you log in to Opensearch.**
+The default credentials for accessing OpenSearch are **admin/admin. We recommend that you change these credentials the first time you log in to OpenSearch.**
 
 **To change the default credentials for Cinchy v5.4+**, [follow the documentation here.](https://platform.docs.cinchy.com/guides-for-using-cinchy/additional-guides/monitoring-and-logging-on-kubernetes/opensearch-dashboards#3.-updating-your-opensearch-password)
 
-To change the default credentials and/or add new users for all **other deployments**, follow [this documentation](https://opensearch.org/docs/1.2/security-plugin/access-control/users-roles/#create-users) or navigate to Settings > Internal Roles in Opensearch.”
+To change the default credentials and/or add new users for all **other deployments**, follow [this documentation](https://opensearch.org/docs/1.2/security-plugin/access-control/users-roles/#create-users) or navigate to Settings > Internal Roles in OpenSearch.”
 {% endhint %}
 
 ### 8.4 Accessing Grafana
