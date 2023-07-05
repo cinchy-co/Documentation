@@ -2,9 +2,9 @@
 
 * [Data Collaboration Overview](README.md)
 
-## Release Notes
+## Release notes
 
-* [Release Notes](release-notes/release-notes/README.md)
+* [Release notes](release-notes/release-notes/README.md)
   * [5.0 Release Notes](release-notes/release-notes/5.0-release-notes.md)
   * [5.1 Release Notes](release-notes/release-notes/5.1-release-notes.md)
   * [5.2 Release Notes](release-notes/release-notes/5.2-release-notes.md)
@@ -63,7 +63,7 @@
       * [v5.6 (IIS)](deployment-guide/upgrade-guides/upgrading-cinchy-versions/iis-upgrades/v5.6-iis.md)
   * [Upgrading from v4 to v5](deployment-guide/upgrade-guides/upgrading-from-v4-to-v5.md)
 
-## Guides for Using Cinchy
+## Guides for using Cinchy
 
 * [User Guide](guides-for-using-cinchy/user-guides/README.md)
   * [Data Browser overview](guides-for-using-cinchy/user-guides/overview-of-the-data-browser.md)
@@ -161,7 +161,7 @@
     * [Connections functions](cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md)
     * [JSON functions](cql/the-basics-of-cql/cinchy-supported-functions/json-functions.md)
 
-## Meta Forms
+## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)
 * [Meta-Forms Deployment Installation Guide](meta-forms/meta-forms-deployment-installation-guide/README.md)
@@ -174,7 +174,7 @@
   * [Add links to a form](meta-forms/meta-forms-builders-guides/adding-links-to-a-form.md)
   * [Rich text editing in forms](meta-forms/meta-forms-builders-guides/rich-text-editing-in-forms.md)
 
-## Data Syncs
+## Data syncs
 
 * [Get started with data syncs](data-syncs/getting-started-with-data-syncs.md)
 * [Installation & maintenance](data-syncs/installation-and-maintenance/README.md)
