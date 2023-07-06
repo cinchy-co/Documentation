@@ -1,25 +1,17 @@
 ---
-description: 'This page outlines Step 4 of Deploying CinchyDXD: Updating the Data Experience'
+description: "This page outlines Step 4 of Deploying CinchyDXD: Updating the Data Experience"
 ---
 
-# Updating the Data Experience (CinchyDXD)
-
-## Table of Contents
-
-| Table of Contents                                                                         |
-| ----------------------------------------------------------------------------------------- |
-| [#introduction](updating-the-data-experience-cinchydxd.md#introduction "mention")         |
-| [#1.-table-updates](updating-the-data-experience-cinchydxd.md#1.-table-updates "mention") |
-| [#2.-query-updates](updating-the-data-experience-cinchydxd.md#2.-query-updates "mention") |
+# Update the data experience (CinchyDXD)
 
 ## Introduction
 
-There are a few updates that are required in the Data Experience that has been created in your source environment. You don't want to have to repeat the updates in both the source and target environments. The upcoming section will show how to update the data experience in the source environment so that you can then re-package and reinstall in the target environment.
+The Data Experience has required updates you must create in your source environment. You don't want to have to repeat the updates in both the source and target environments. The upcoming section will show how to update the data experience in the source environment so that you can then re-package and reinstall in the target environment.
 
-## 1. Table Updates
+## Table updates
 
 1. Log back into your source environment using the following:\
-   **URL: \<cinchy source url>** \
+   **URL: \<Cinchy source url>** \
    **User ID: \<source user id>**\
    **Password: \<source password>**
 2. Make the following changes to the **Currency Exchange Rate** table:
@@ -31,20 +23,20 @@ There are a few updates that are required in the Data Experience that has been c
 
 3\. Save your changes before leaving the table.
 
-## 2. Query Updates
+## Query updates
 
 1. Update the **Currency Converter** query to reflect column name changes that were made in the Table Updates section above _(Image 1)._
 
 ![Image 1: Step 1](<../../../.gitbook/assets/image (456).png>)
 
 {% hint style="success" %}
-Be sure to update the @Currency\_1 and @Currency\_2 labels to better reflect the input fields
+Be sure to update the @Currency_1 and @Currency_2 labels to better reflect the input fields
 {% endhint %}
 
-2\. Test the query to validate that it is still functioning _(Image 2 and 3)._
+2. Test the query to validate that it's still functioning _(Image 2 and 3)._
 
 ![Image 2: Step 2](<../../../.gitbook/assets/image (705).png>)
 
 ![Image 3: Step 2](<../../../.gitbook/assets/image (241).png>)
 
-3\. Save your query.
+3. Save your query.

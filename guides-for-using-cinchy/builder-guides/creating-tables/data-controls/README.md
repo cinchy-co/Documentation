@@ -1,7 +1,7 @@
-# Data Controls
-
+# Data controls
+<!-- vale off -->
 {% embed url="https://cinchy.tv/all-content/1536" %}
-
+<!-- vale on -->
 You can find the Data Controls menu on the left-hand navigation bar of a table.
 
 ![](<../../../../.gitbook/assets/image (34).png>)
