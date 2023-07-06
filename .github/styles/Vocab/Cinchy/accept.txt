@@ -1,5 +1,4 @@
 timesheet(s)
-Cinchy
 endhint
 [Cc]onfig
 CLI
@@ -12,4 +11,4 @@ kubectl
 Istio
 endcode 
 endtab 
-(\*\*(.*)?.(zip|exe)+\*\*)
+Kibana

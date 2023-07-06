@@ -2,21 +2,11 @@
 description: This page outlines the Network Map (Previously called My Data Network
 ---
 
-# Network Map
+## Network Map
 
-## Table of Contents
+Cinchy comes out of the box with a system applet called **Network Map** _(Image 1)_, which is a visualization of your data on the platform and how everything interconnects.
 
-|                                                                            |
-| -------------------------------------------------------------------------- |
-| [#1.-network-map](./#1.-network-map "mention")                             |
-| [#2.-custom-network-visualizer](./#2.-custom-network-visualizer "mention") |
-| [#3.-example-network](./#3.-example-network "mention")                     |
-
-## 1. Network Map
-
-Cinchy comes out of the box with a system applet called "Network Map" _(Image 1)_, which is a visualization of your data on the platform and how everything interconnects.
-
-My Data Network is another way to view and navigate the data you have access to within Cinchy.
+**My Data Network** is another way to view and navigate the data you have access to within Cinchy.
 
 Each node represents a table you have access to within Cinchy, and each edge is one link between two tables. The size of the table is determined by the number of links referencing that table. The timeline on the bottom allows you to check out your data network at a point in the past and look at the evolution of your network.
 
@@ -32,23 +22,23 @@ You will find the Network Map data experience on the Homepage _(Image 3)._
 
 ![Image 3: The Network Map widget](<../../../../.gitbook/assets/image (734).png>)
 
-## 2. Custom Network Visualizer
+## Custom network visualizer
 
 You can also set up a custom network visualizer as follows:
 
-### 2.1 Nodes
+### Nodes
 
 The nodes query defines the nodes in the network _(Image 4 and 5)._
 
 | Parameter   | Description                                                                                                                                       |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id          | Id for the node. This will be used by the edges to define the relationships.                                                                      |
-| title       | This is the text that is displayed when hovering on a node.                                                                                       |
-| label       | The label that is shown below the node.                                                                                                           |
+| title       | This is the text that's displayed when hovering on a node.                                                                                       |
+| label       | The label shown below the node.                                                                                                           |
 | value       | The visual size of the node relative to other nodes.                                                                                              |
-| mass        | The gravitational pull of a node. Unless you really want to customize the visualizer, it is recommended to keep this the same value as the value. |
+| mass        | The gravitational pull of a node. Unless you really want to customize the visualizer, it's recommended to keep this the same value as the value. |
 | group       | Optionally you can associate a node with a group.                                                                                                 |
-| color       | Optional hex code for the color of a node. The node will take the color of the group if a color is not specified for the node.                    |
+| color       | Optional hex code for the color of a node. The node will take the color of the group if a color isn't specified for the node.                    |
 | description | The description shows up in the top right hand corner when you click a node.                                                                      |
 | nodeURL     | Page to display when you click the open button next to the description.                                                                           |
 
@@ -56,7 +46,7 @@ The nodes query defines the nodes in the network _(Image 4 and 5)._
 
 ![Image 5: Adding your nodes](<../../../../.gitbook/assets/image (620).png>)
 
-### 2.2 Edges
+### Edges
 
 The edges query defines the relationships between the nodes _(Image 6)._
 
@@ -71,7 +61,7 @@ The edges query defines the relationships between the nodes _(Image 6)._
 
 ![Image 6: Node edges](<../../../../.gitbook/assets/image (533).png>)
 
-### 2.3 Node Groups
+###  Node groups
 
 Node groups are an optional query you can provide to group your nodes _(Image 7 and 8)._
 
@@ -82,27 +72,27 @@ Node groups are an optional query you can provide to group your nodes _(Image 7 
 
 ![Image 7: Node groups](<../../../../.gitbook/assets/image (64).png>)
 
-![Image 8: Not all nodes need to be in a sub network](<../../../../.gitbook/assets/image (291).png>)
+![Image 8: Not all nodes must be in a sub network](<../../../../.gitbook/assets/image (291).png>)
 
-### 2.4 Timeline
+### Timeline
 
-If no start or end date is specified, the data network is just shown as is. If there's a start or end date, the other CQLs need to have a **@date parameter** and that will be used to render the data network at a point in time.
+If no start or end date is specified, the data network is just shown as is. If there's a start or end date, the other CQL queries must have a **@date parameter** and that will be used to render the data network at a point in time.
 
-You can use **@date** between **\[Modified] and \[Replaced]** with a version history query to see data at a point in time. You can also simply use **@date > \[Created]** if it's an additive system.
+You can use **@date** between **\[Modified] and \[Replaced]** with a version history query to see data at a specific time. You can also simply use **@date > \[Created]** if it's an additive system.
 
-#### Timeline Start Date
+#### Timeline start date
 
-This CQL should return a date value as 'startDate'.&#x20;
+This CQL should return a date value as `startDate`.&#x20;
 
-#### Timeline End Date
+#### Timeline end date
 
-This CQL should return a date value as 'endDate'.
+This CQL should return a date value as `endDate`.
 
-### 2.5 Slicers
+### Slicers
 
-To use slicers, you need to define the slicers in the **\[Slicers]** column and add the additional attributes to the nodes query.
+To use slicers, you must define the slicers in the **Slicers** column and add the additional attributes to the nodes query.
 
-```
+```json
 [
     {
         "attribute": "slice1",
@@ -121,47 +111,47 @@ Attribute is the column name from the nodes query, **displayName** is what shows
 
 ![Image 10: Slicers](<../../../../.gitbook/assets/image (540).png>)
 
-### 2.6 System Tables
+### System tables
 
-All the information above is entered into the `[Cinchy].[Networks]` table. To access the network, go to
+All the information above is entered into the `[Cinchy].[Networks]` table. To access the network, go to:
 
 `<Cinchy URL>/Cinchy/apps/datanetworkvisualizer?network=<NAME>`
 
-Alternatively you can go to My Data Network and then add `?network=<NAME>` to the end of it.
+Alternatively you can go to **My Data Network** and then add `?network=<NAME>` to the end of it.
 
-It is highly recommended to add a new applet for each custom data network visualizer for ease of access.
+It's highly recommended to add a new applet for each custom data network visualizer for ease of access.
 
-### 2.7 Optional URL Parameters
+### Optional URL parameters
 
 Cinchy version 5.2 added the ability to include new parameters on the URL path for your network visualizer to focus your node view. You can now add **Target Node, Depth Level, and Max Depth Level** Parameters, if you choose.
 
 Example: \<base url>/apps/datanetworkvisualizer?**targetNode=\&maxDepth=\&depthLevel=**
 
-* **Target Node:** Using the Target Node parameter defines which of your nodes will be the central node from which all connections branch from.
-  * Target Node uses the **TableID number,** which you can find in the URL of any table.
-  * Example: \<base url>/apps/datanetworkvisualizer?**targetNode=8** will show **TableID 8** as the central node
-* **Max Depths:** This parameter defines how many levels of network hierarchy you want to display.
-  * Example: \<base url>/apps/datanetworkvisualizer?**maxDepth=2** will only show you two levels of connections.
-* **Depth Level:** Depth Level is a UI parameter that will highlight/focus on a certain depth of connections.
-  * Example: \<base url>/apps/datanetworkvisualizer?**DepthLevel=1** will highlight all first level network connections, while the rest will appear muted.
+- **Target Node:** Using the Target Node parameter defines which of your nodes will be the central node from which all connections branch from.
+  - Target Node uses the **TableID number,** which you can find in the URL of any table.
+  - Example: \<base url>/apps/datanetworkvisualizer?**targetNode=8** will show **TableID 8** as the central node
+- **Max Depths:** This parameter defines how many levels of network hierarchy you want to display.
+  - Example: \<base url>/apps/datanetworkvisualizer?**maxDepth=2** will only show you two levels of connections.
+- **Depth Level:** Depth Level is a UI parameter that will highlight/focus on a certain depth of connections.
+  - Example: \<base url>/apps/datanetworkvisualizer?**DepthLevel=1** will highlight all first level network connections, while the rest will appear muted.
 
 The below example visualizer uses the following URL: \<base url>/apps/datanetworkvisualizer?**targetNode=8\&maxDepth=2\&depthLevel=1**
 
-* It shows **Table ID 8** ("Groups") as the central node.
-* It only displays the **Max Depth of 2** connections from the central node.
-* It highlights the nodes that have a **Depth Level of 1** from the central node.
+- It shows **Table ID 8** ("Groups") as the central node.
+- It only displays the **Max Depth of 2** connections from the central node.
+- It highlights the nodes that have a **Depth Level of 1** from the central node.
 
 <figure><img src="../../../../.gitbook/assets/image (577).png" alt=""><figcaption></figcaption></figure>
 
-## 3. Example Network
+## Example network
 
 The following is an example of a network map _(Image 11)._
 
 ![Image 11: An example network](<../../../../.gitbook/assets/image (21).png>)
 
-For ease of testing, save the following as saved queries and then in the Networks table simply add `exec [Domain].[Saved Query Name]` as the CQLs.
+For ease of testing, save the following as saved queries and then in the Networks table, add `exec [Domain].[Saved Query Name]` as the CQL queries.
 
-### Node Groups CQL
+### Node groups CQL
 
 ```sql
 -- Sample Data
