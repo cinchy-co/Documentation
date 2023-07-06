@@ -14,11 +14,9 @@ The Terraform scripts and instructions provided enable deployment on Azure and A
 
 ## Deployment prerequisites
 
-The following lists are required prerequisites for installing Cinchy v5 on Kubernetes.
+To install Cinchy v5 on Kubernetes, you need to follow the requirements below. Some requirements depend on whether you deploy on Azure or on AWS.
 
-Note that some prerequisites will depend on whether you are deploying on Azure or on AWS.
-
-### All Platforms
+### All platforms
 
 These prerequisites apply whether you are installing on Azure or on AWS.
 
@@ -115,7 +113,7 @@ The template has two options available:
 {% hint style="success" %}
 **Tips for Success:**
 
-- Ensure that your **region** is configured the same across your SSL Certificate, your Terraform bucket, and your deployment.json in the next step of this guide.
+- Ensure you have the same **region** configuration across your SSL Certificate, your Terraform bucket, and your **deployment.json** in the next step of this guide.
   {% endhint %}
 
 ## Initial configuration
@@ -125,7 +123,7 @@ The following steps detail the instructions for setting up the initial configura
 ### Configure the deployment.json file
 
 1. Navigate to your **cinchy.devops.automations repository** where you will see an **aws.json and azure.json.**
-2. Depending on the cloud platform that you are deploying to, select the appropriate file and copy it into a new file named **deployment.json (or \<cluster name>.json)** within the same directory.
+2. Depending on platform that you are deploying to, select the appropriate file and copy it into a new file named **deployment.json (or \<cluster name>.json)** within the same directory.
 3. This file will contain the configuration for the infrastructure resources and the Cinchy instances to deploy. Each property within the configuration file has comments in-line describing its purpose along with instructions on how to populate it.
 4. Follow the guidance within the file to configure the properties.
 5. Commit and push your changes.
@@ -134,11 +132,11 @@ The following steps detail the instructions for setting up the initial configura
 **Tips for Success:**
 
 - You can return to this step at any point in the deployment process if you need to update your configurations. Simply rerun through the guide sequentially after making any changes.
-- The **deployment.json** will ask for your **repo username and password**, but ArgoCD may have errors when retrieving your credentials in certain situations (ex: if using GitHub).\
+- The **deployment.json** will ask for your **repo username and password**, but ArgoCD may have errors when retrieving your credentials in certain situations (ex: if using GitHub).
    \
-   You can verify if your credentials have been picked up or not by navigating to the **ArgoCD Settings** once you have deployed Argo in step 7 of this guide.\
+   To verify if your credentials are working, navigate to the **ArgoCD Settings** after you have deployed Argo in this guide.
    \
-   To avoid errors, we recommend using a [Personal Access Token instead.](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+   To avoid errors, Cinchy recommends using a [Personal Access Token instead.](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
       [Find more information here.](https://argo-cd.readthedocs.io/en/release-1.8/user-guide/private-repositories/)
 
@@ -168,19 +166,19 @@ The following steps detail how to deploy Terraform.
 
 #### Cinchy.terraform repository structure - AWS
 
-If deploying on AWS: Within the Terraform > AWS directory, a new folder named **eks_cluster** is created. Nested within that is a subdirectory with the same name as the newly created cluster.
+If deploying on AWS: Within the Terraform > AWS directory, a new folder named **eks_cluster** is created. Nested within that's a subdirectory with the same name as the newly created cluster.
 
 To perform terraform operations, **the cluster directory must be the working directory during execution. This applies to everything within step 4 of this guide.**
 
 #### Cinchy.terraform repository structure - Azure
 
-If deploying on Azure: Within the Terraform > Azure directory, a new folder named **aks_cluster** is created. Nested within that is a subdirectory with the same name as the newly created cluster.
+If deploying on Azure: Within the Terraform > Azure directory, a new folder named **aks_cluster** is created. Nested within that's a subdirectory with the same name as the newly created cluster.
 
 To perform terraform operations, **the cluster directory must be the working directory during execution.**
 
 ### Cloud provider authentication
 
-1. Launch a shell/terminal with the working directory set to the cluster directory within the cinchy.terraform repo.
+1. Launch a shell/terminal with the working directory set to the cluster directory within the **cinchy.terraform** repository.
 
 2. **If you are using AWS,** run the following commands to authenticate the session:
 
@@ -190,7 +188,7 @@ export AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY=YOUR_ACCESS_KEY
 ```
 
-3. **If using Azure,** run the following command and follow the on screen instructions to authenticate the session:
+3. For Azure, run the following command and follow the on screen instructions to authenticate the session:
 
 ```bash
 az login
@@ -206,7 +204,7 @@ bash create.sh
 
 2. Type **yes** when prompted to apply the terraform changes.
 
-The resource creation process can take approx. 15-20 minutes. At the end of the execution there will be a section with the following header
+The resource creation process can take about 15 to 20 minutes. At the end of the execution there will be a section with the following header
 
 #### Output variables
 
@@ -214,7 +212,7 @@ If deploying on AWS, this section will contain 2 values: **Aurora RDS Server Hos
 
 If deploying on Azure, this section will contain a single value: **Azure SQL Database Password**
 
-These variable values are required to update the connection string within the deployment.json file (or equivalent) in the cinchy.devops.automations repository.
+These variable values are required to update the connection string within the deployment.json file (or equivalent) in the **cinchy.devops.automations** repository.
 
 ### Retrieve the SSH keys
 
@@ -228,7 +226,7 @@ SSH keys **should be saved** for future reference if a connection needs to be es
 
 1. The SSH key to connect to the Kubernetes nodes is maintained within the terraform state and can be retrieved by executing the following command:
 
-```
+```bash
 terraform output -raw private_key
 ```
 
@@ -243,10 +241,10 @@ The following section pertains to updating the Deployment.json file.
 ### Update the database connection string
 
 1. Navigate to the **deployment.json (**[**created in step 3.1**](./#3.1-configure-the-deployment.json)**) > cinchy_instance_configs section.**
-2. Each object within represents an instance that will be deployed on the cluster. Each instance configuration contains a `database_connection_string` property. This has placeholders for the **host name and password** that must be updated using output variables from the previous section.
+2. Each object within represents an instance that will be deployed on the cluster. Each instance configuration has a `database_connection_string` property. This has placeholders for the **host name and password** that must be updated using output variables from the previous section.
 
 {% hint style="warning" %}
-**Note** that in the case of an Azure deployment, the host name isn't available as part of the terraform output and instead must be sourced from the Azure Portal.
+For Azure deployments, the host name isn't available as part of the terraform output and instead must be sourced from the Azure Portal.
 {% endhint %}
 
 ### Create the IAM user for S3 (AWS)
@@ -306,7 +304,7 @@ dotnet Cinchy.DevOps.Automations.dll "deployment.json"
 
 2. If the file [created in section 3](./#3.-initial-configuration) has a name other than "deployment.json", the reference in the command will will need to be replaced with the correct name of the file.
 
-3. The console output should terminate with the following message:
+3. The console output should end with the following message:
 
 ```bash
 Completed successfully
@@ -349,14 +347,14 @@ kubectl config get-contexts
 
 ## Deploy and access ArgoCD
 
-In this step, we will deploy and access ArgoCD.
+In this step, you will deploy and access ArgoCD.
 
 ### Deploy ArgoCD
 
 1. Launch a shell/terminal with the working directory set to **the root of the cinchy.argocd** repository.
 2. Execute the following command to deploy ArgoCD:
 
-```
+```bash
 bash deploy_argocd.sh
 ```
 
@@ -370,12 +368,13 @@ bash deploy_argocd.sh
 1. Launch a new shell/terminal with the working directory set to the root of the cinchy.argocd repository.
 2. Execute the following command to access ArgoCD:
 
-<pre><code><strong>bash access_argocd.sh
-</strong></code></pre>
+```bash
+bash access_argocd.sh
+```
 
 This script creates a port forward using kubectl to enable ArgoCD to be accessed at **http://localhost:9090**
 
-The credentials for ArgoCD's portal are output at the start of the access_argocd's script execution in Base64. [The Base64 value must be decoded](https://www.base64decode.org/) to get the login credentials to use for the **http://localhost:9090** endpoint.
+The credentials for ArgoCD's portal are output at the start of the `access_argocd` script execution in Base64. [The Base64 value must be decoded](https://www.base64decode.org/) to get the login credentials to use for the **http://localhost:9090** endpoint.
 
 ## Deploy cluster components
 
@@ -427,7 +426,7 @@ To change the default credentials and/or add new users for all **other deploymen
 The default path to access Grafana, unless you have configured it otherwise in your deployment.json, is **\<baseurl>/grafana**
 
 {% hint style="info" %}
-The default username is **admin**. The default password for accessing Grafana can be found by doing a search of "adminPassword" within the following path: **cinchy.kubernetes/cluster_components/metrics/kube-prometheus-stack/values.yaml**
+The default username is **admin**. The default password for accessing Grafana can be found by doing a search of `adminPassword` within the following path: **cinchy.kubernetes/cluster_components/metrics/kube-prometheus-stack/values.yaml**
 
 **We recommend that you change these credentials the first time you access Grafana. You can do so through the admin profile once logged in.**
 {% endhint %}
