@@ -88,8 +88,8 @@ To export data from a table, complete the following:
 
 Cinchy has the ability to have data change approvals turned on (configured by builders) when data is added or removed from a table view. A change approval process can be put into place for the addition or removal of specific data. If you have been identified as an "Approval" of data you will have the ability to:
 
-* approve a cell of data&#x20;
-* approve a row of data&#x20;
+* approve a cell of data
+* approve a row of data
 * reject a row of data
 
 To approve or reject a cell/row of data, complete the following:
@@ -148,7 +148,7 @@ To restore data from the recycle bin:
 
 3\. Right-click and select **Restore Row.**
 
-The restored row will now be visible in your table. &#x20;
+The restored row will now be visible in your table. 
 
 {% hint style="info" %}
 If Change Approvals are turned on, that row will need to be approved.

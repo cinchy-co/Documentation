@@ -82,7 +82,7 @@ You can use **@date** between **\[Modified] and \[Replaced]** with a version his
 
 #### Timeline start date
 
-This CQL should return a date value as `startDate`.&#x20;
+This CQL should return a date value as `startDate`.
 
 #### Timeline end date
 

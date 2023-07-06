@@ -21,8 +21,8 @@ Ensure that you download the latest version.
 
 <figure><img src="../../.gitbook/assets/image (29) (1).png" alt=""><figcaption></figcaption></figure>
 
-3. Open your IIS Manager.&#x20;
-4. Navigate to IIS Connections.&#x20;
+3. Open your IIS Manager.
+4. Navigate to IIS Connections.
 5. Right Click the Cinchy Server name.
 
 <figure><img src="../../.gitbook/assets/image (593).png" alt=""><figcaption></figcaption></figure>
@@ -36,18 +36,18 @@ Ensure that you download the latest version.
 9. Input the path to _Cinchy Applets_ directory in the Physical Path field.
 10. Right click on the _meta-forms_ folder under the _dx_ virtual directory and click _Convert to Application_.
 
-**Update Configurations**&#x20;
+**Update Configurations**
 
 1\. Locate "\assets\config.json" and input your Cinchy domain as specified below.
 
 <figure><img src="../../.gitbook/assets/image (565).png" alt=""><figcaption></figcaption></figure>
 
-**Additional Changes**&#x20;
+**Additional Changes**
 
 _If you have not deployed Cinchy at the root of your domain on IIS, then you will need to also complete the steps below._
 
-1. Specify the path to your 'meta-forms' application as instructed below.&#x20;
-2. &#x20;Locate the _"C:\CinchyApplets\\\<Cinchy Environment>\Meta-Forms-App-Experience\index.html"_ file and update the base href to the path to your edit-form application on IIS and save.
+1. Specify the path to your 'meta-forms' application as instructed below.
+2. Locate the _"C:\CinchyApplets\\\<Cinchy Environment>\Meta-Forms-App-Experience\index.html"_ file and update the base href to the path to your edit-form application on IIS and save.
 
 ## 4. Deployment the Data Experience
 
@@ -78,7 +78,7 @@ _If you have not deployed Cinchy at the root of your domain on IIS, then you wil
 
 ## 5. Confirm your Installation
 
-Once you have installed the experience, your environment will be populated with these tables and queries:&#x20;
+Once you have installed the experience, your environment will be populated with these tables and queries:
 
 * Forms table
 * Forms Sections table
@@ -97,6 +97,6 @@ Once you have installed the experience, your environment will be populated with 
 
 **Get Form MetaData Query:** This query will return the metadata of your form, using the form ID present in the Forms table. The results will show such data as whether a form field is mandatory or not, the choices present for each question, the column names and types present in the table containing your form data, the form fields and sections, the JSON data, and more.
 
-**Get Form Sections Query:** This query uses the form ID, present in the Forms table, to return all of the form sections present within the form.&#x20;
+**Get Form Sections Query:** This query uses the form ID, present in the Forms table, to return all of the form sections present within the form.
 
-For any users who want to access forms/want forms to execute properly, they need to have access to all of the following tables and queries. These include the three tables and two queries shown above, as well as the Tables, Table Columns, and Domains tables within that user's specific environment.&#x20;
+For any users who want to access forms/want forms to execute properly, they need to have access to all of the following tables and queries. These include the three tables and two queries shown above, as well as the Tables, Table Columns, and Domains tables within that user's specific environment.

@@ -12,7 +12,7 @@ These functions support data type casting and conversion. Conversion functions c
 This function is used with CONVERT to convert an expression of one data type to another.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -34,7 +34,7 @@ Any valid expression
 The target data type.
 
 `length`\
-An optional integer that specifies the length of the target data type, for data types that allow a user specified length.&#x20;
+An optional integer that specifies the length of the target data type, for data types that allow a user specified length.
 
 #### **Return Types**
 
@@ -51,7 +51,7 @@ SELECT CAST(1.5 AS int)
 This function is used with CAST to convert an expression of one data type to another.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -73,10 +73,10 @@ Any valid expression
 The target data type.
 
 `length`\
-An optional integer that specifies the length of the target data type, for data types that allow a user specified length.&#x20;
+An optional integer that specifies the length of the target data type, for data types that allow a user specified length.
 
 `style`\
-An optional integer expression that specifies how the CONVERT function will translate _expression_. For a style value of NULL, NULL is returned. _data\_type_ determines the range.&#x20;
+An optional integer expression that specifies how the CONVERT function will translate _expression_. For a style value of NULL, NULL is returned. _data\_type_ determines the range.
 
 #### **Converting datetime to character:**
 

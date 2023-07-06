@@ -78,7 +78,7 @@ Subtag from the Languages table. User's preferences will be used if not specifie
 
 ## 2. System Tables <a href="#system-tables" id="system-tables"></a>
 
-There are 3 tables in Cinchy to provide language support.&#x20;
+There are 3 tables in Cinchy to provide language support.
 
 1. \[Cinchy].\[Literal Groups]
 2. \[Cinchy].\[Literals]

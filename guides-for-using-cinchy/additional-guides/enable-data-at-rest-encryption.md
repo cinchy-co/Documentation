@@ -38,7 +38,7 @@ The password should adhere to your organization's password policy.
 
 ## 2. Backup Master Key <a href="#backup-master-key" id="backup-master-key"></a>
 
-After you have created your master key you can create a backup file of that key in case any data corruption occurs in future.&#x20;
+After you have created your master key you can create a backup file of that key in case any data corruption occurs in future.
 
 You will need the password you used to create your master key to complete this operation.
 

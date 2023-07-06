@@ -8,7 +8,7 @@
 * **Stores** these events durably and reliably for as long as you want.
 * **Processes and reacts** to the event streams in real-time and retrospectively.
 
-Those events are organized and stored in **topics.** These topics are then partitioned over buckets located on different Kafka brokers.&#x20;
+Those events are organized and stored in **topics.** These topics are then partitioned over buckets located on different Kafka brokers.
 
 Event streaming thus ensures a continuous flow and interpretation of data so that the right information is at the right place, at the right time [for your key use cases](https://kafka.apache.org/powered-by).
 

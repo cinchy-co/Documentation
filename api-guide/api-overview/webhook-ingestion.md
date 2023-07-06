@@ -52,9 +52,9 @@ description: >-
 
 1. **Key:** This can be any string (we recommend that you treat this like a password and make it random and unguessable).
 2. **Run As:** Insert the user who will be running this query here. This should be the same user to whom you gave permissions in _Step 2a._
-3. **Saved Query:** Select the saved query that you created in _Step 2._&#x20;
-4. **Forward Payload as Parameter:** This column will depend on the manner in which you would like to ingest the webhook payload.&#x20;
-   * If you are configuring individual parameters in the webhook payload (for example: @name, @url, etc.), you may leave this column blank.&#x20;
+3. **Saved Query:** Select the saved query that you created in _Step 2._
+4. **Forward Payload as Parameter:** This column will depend on the manner in which you would like to ingest the webhook payload.
+   * If you are configuring individual parameters in the webhook payload (for example: @name, @url, etc.), you may leave this column blank.
    * If you are not configuring individual parameters, as an alternative you can ingest the entire payload under one parameter and specify it in this field. In the below image, we have defined it as “JSON”. This means that the full payload (which happens to be a JSON file in this case) will be parameterized as @JSON and then inserted into a table column named JSON.
 
 ![Image 3: Configuring your Table (Step 3)](<../../.gitbook/assets/image (604).png>)

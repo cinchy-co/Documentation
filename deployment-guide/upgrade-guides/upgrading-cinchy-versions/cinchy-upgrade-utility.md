@@ -117,16 +117,16 @@ Note: You must deploy whichever version of the platform you ran the upgrade util
 
 7\. If it was turned off in step 1, turn your Cinchy platform back on.
 
-&#x20;      1\. In a Kubernetes deployment, [you can do so via Argo CD](../../deployment-installation-guides/kubernetes-deployment-installation/disabling-your-kubernetes-applications.md#2.-re-enabling-your-applications)
+      1\. In a Kubernetes deployment, [you can do so via Argo CD](../../deployment-installation-guides/kubernetes-deployment-installation/disabling-your-kubernetes-applications.md#2.-re-enabling-your-applications)
 
-&#x20;      2\. In an IIS deployment:
+      2\. In an IIS deployment:
 
-&#x20;           1\. Open your Windows Services Panel.
+           1\. Open your Windows Services Panel.
 
-&#x20;           2\. Select **IIS Admin Service.**
+           2\. Select **IIS Admin Service.**
 
-&#x20;           3\. Start the service.
+           3\. Start the service.
 
-&#x20;           4\. Right-click **IIS Admin Service** and select **Properties.**
+           4\. Right-click **IIS Admin Service** and select **Properties.**
 
-&#x20;           5\. Change **'Start Up Type'** to '**Enabled'.**
+           5\. Change **'Start Up Type'** to '**Enabled'.**

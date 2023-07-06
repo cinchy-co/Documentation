@@ -2,7 +2,7 @@
 
 ## Overview
 
-Cinchy Tables are commonly used data sync sources.&#x20;
+Cinchy Tables are commonly used data sync sources.
 
 **Example Use Case:** You want to set up batch sync between a Cinchy Table and HubSpot to sync important sales analytics information. You can do so by using the Cinchy Table as your source, and a REST API as your target.
 

@@ -21,7 +21,7 @@ You can access your Saved Query directly by either CinchyID or the domain and na
 
 `<baseurl>/Query/Execute?queryId=<cinchyid>`
 
-&#x20;`<baseurl>/Query/Execute/<domain>/<saved query name>`
+`<baseurl>/Query/Execute/<domain>/<saved query name>`
 
 You can find this information in the **Saved Queries table.**
 

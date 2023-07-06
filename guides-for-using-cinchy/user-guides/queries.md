@@ -20,7 +20,7 @@ description: Queries are requests for information within Cinchy.
 
 ## 2. Executing Queries
 
-Cinchy Users can execute pre-built queries based on their access.&#x20;
+Cinchy Users can execute pre-built queries based on their access.
 
 You can find a list of saved queries on your network by navigating to the **Saved Queries table** _(Image 1)._ You can then **search the Cinchy homepage** for the saved query to execute it.
 

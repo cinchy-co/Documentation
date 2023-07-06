@@ -8,7 +8,7 @@ description: >-
 
 ## 1. Download the CinchyDXD Utility
 
-The CinchyDXD utility is used to take all of the components (e.g. tables, queries, views, formatting rules, UDF’s etc…) of a DX and package them up so they can be moved from one environment to another. &#x20;
+The CinchyDXD utility is used to take all of the components (e.g. tables, queries, views, formatting rules, UDF’s etc…) of a DX and package them up so they can be moved from one environment to another. 
 
 {% hint style="danger" %}
 **Remember that a**ll objects need to be created in one source environment (ex: DEV). From there, DXD will be used to push them into others (ex: SIT, UAT, Production).
@@ -39,7 +39,7 @@ The CinchyDXD utility is only upwards compatible with Cinchy version 4.6+
 
 This folder will then hold all of your deployment packages.
 
-7\. Launch a PowerShell console window&#x20;
+7\. Launch a PowerShell console window
 
 8\. From the console, navigate to the CinchyDXD directory _(Image 2 and 3)._
 
@@ -55,7 +55,7 @@ From within your file explorer window (folder: Cinchy DXD v.X) type “PowerShel
 
 There is a one-time PowerShell setup that is required when using CinchyDXD.
 
-1. From your PowerShell window type **cin**&#x20;
+1. From your PowerShell window type **cin**
 2. Hit Tab on your keyboard _(Image 4)._
 
 ![Image 4: Setting up](<../../../.gitbook/assets/image (289).png>)
@@ -64,7 +64,7 @@ There is a one-time PowerShell setup that is required when using CinchyDXD.
 
 ![Image 5: Setting up, cont.](<../../../.gitbook/assets/image (310).png>)
 
-**You will get an error message** (above) that _CinchyDXD.ps1 cannot be loaded because the running script is disabled._ &#x20;
+**You will get an error message** (above) that _CinchyDXD.ps1 cannot be loaded because the running script is disabled._ 
 
 To resolve this error:
 
@@ -88,7 +88,7 @@ To resolve this error:
 
 10\. Navigate back to your PowerShell window for the _CinchDXD v.X window_
 
-11\. From your PowerShell window type **cin**&#x20;
+11\. From your PowerShell window type **cin**
 
 12\. Hit **Tab** and then **Enter** on your keyboard _(Image 9)._
 
@@ -108,7 +108,7 @@ The Data Experience is defined and packed in what will be referred to moving for
 
 1. **Data Experience Definition Table**: Where the data experience is defined (e.g. tables, queries, views, formatting rules, UDF’s etc.)
 2. **Data Experience Reference Data Table:** Where we define any data that needs to move with the Data Experience for the experience to work (e.g. lookup values, static values that may need to exist in tables - it typically would not be the physical data itself)
-3. **Data Experience Releases Table:** Once a Data Experience is exported, an entry is created in this table for the export containing:&#x20;
+3. **Data Experience Releases Table:** Once a Data Experience is exported, an entry is created in this table for the export containing:
    - **Version Number**
    - **Release Binary** is the location where you can archive/backup your release history in Cinchy\
      Please Note: if you have your own release management system, you do have the option to opt out of archiving the releases in Cinchy and check the release into your own source control
@@ -183,7 +183,7 @@ This table set up will be similar to how you would set up a CLI.
 | Sync Key                   | Required (need definition)                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Expiration Timestamp Field | If Dropped Records is set to “Expire” then a timestamp column is required                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-Based on the configuration set up in this table, Cinchy will export the data and create CSV and CLI files.&#x20;
+Based on the configuration set up in this table, Cinchy will export the data and create CSV and CLI files.
 
 Please note in this example we don't have Reference Data as part of our Data Experience.
 
@@ -231,7 +231,7 @@ Please ensure that you are using the sample below as a sample. You will be requi
 - the URL for the source environment
 - the User ID for the user who is performing the export
 - the Password for the user who is performing the export
-- your folder path for where CLI is stored&#x20;
+- your folder path for where CLI is stored
 - your folder path for where the CLI output files are written to
 - the GUID for the Data Experience that is generated in the Data Experience Definition table
 - your own version naming convention
@@ -239,7 +239,7 @@ Please ensure that you are using the sample below as a sample. You will be requi
   {% endhint %}
 
 Sample:\
-&#x20;`` .\CinchyDXD.ps1 export ` ``\
+`` .\CinchyDXD.ps1 export ` ``\
 `` -s "<cinchy source url>" ` ``\
 `` -u "<source user id>" ` ``\
 `` -p "<source passsword>" ` ``\

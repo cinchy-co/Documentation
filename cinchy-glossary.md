@@ -54,7 +54,7 @@ CinchyDXD is a downloadable utility used to move Data Experiences (DX) from one 
 
 #### Cinchy ID
 
-Cinchy ID is a unique identifier assigned automatically to all records within a normal table. The Cinchy ID is associated with the record permanently and is never reassigned even if the record is deleted.&#x20;
+Cinchy ID is a unique identifier assigned automatically to all records within a normal table. The Cinchy ID is associated with the record permanently and is never reassigned even if the record is deleted.
 
 #### Cinchy Query Language (CQL)
 

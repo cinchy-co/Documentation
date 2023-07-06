@@ -77,7 +77,7 @@ Your monitor is a job that runs on a defined schedule and queries OpenSearch ind
 
 * **Monitor Name**
 * **Monitor Type** (This example uses **Per Bucket**)
-  * Whereas query-level monitors run your specified query and then check whether the query’s results triggers any alerts, bucket-level monitors let you select fields to create buckets and categorize your results into those buckets.&#x20;
+  * Whereas query-level monitors run your specified query and then check whether the query’s results triggers any alerts, bucket-level monitors let you select fields to create buckets and categorize your results into those buckets.
   * The alerting plugin runs each bucket’s unique results against a script you define later, so you have finer control over which results should trigger alerts. Each of those buckets can trigger an alert, but query-level monitors can only trigger one alert at a time.
 * **Monitor Defining Method:** the way you want to define your query and triggers. (This example uses **Visual Editor**)
   * Visual definition works well for monitors that you can define as “some value is above or below some threshold for some amount of time.”

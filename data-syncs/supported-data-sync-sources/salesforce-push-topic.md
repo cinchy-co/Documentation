@@ -4,13 +4,13 @@
 
 [Salesforce](https://www.salesforce.com/ca/products/what-is-salesforce/) is a cloud-based CRM software designed for service, marketing, and sales.
 
-Push Topic events provide a secure and scalable way to receive notifications for changes to Salesforce data that match a SOQL (Salesforce Object Query Language) query you define.&#x20;
+Push Topic events provide a secure and scalable way to receive notifications for changes to Salesforce data that match a SOQL (Salesforce Object Query Language) query you define.
 
 You can use Push Topic events to:
 
-* Receive notifications of Salesforce record changes, including create, update, delete, and undelete operations.&#x20;
-* Capture changes for the fields and records that match a SOQL query.&#x20;
-* Receive change notifications for only the records a user has access to based on sharing rules.&#x20;
+* Receive notifications of Salesforce record changes, including create, update, delete, and undelete operations.
+* Capture changes for the fields and records that match a SOQL query.
+* Receive change notifications for only the records a user has access to based on sharing rules.
 * Limit the stream of events to only those events that match a subscription filter
 
 {% hint style="success" %}
@@ -31,7 +31,7 @@ Cinchy will compare the JSON with the properties on the push topic in Salesforce
 
 #### Scenario 3: Push Topic doesn't exist in Salesforce.
 
-If the Push Topic name doesn't exist in Salesforce, Cinchy will attempt to create the Push Topic. If it's successful, it will sync in the Id from Salesforce and start listening on the push topic.&#x20;
+If the Push Topic name doesn't exist in Salesforce, Cinchy will attempt to create the Push Topic. If it's successful, it will sync in the Id from Salesforce and start listening on the push topic.
 
 ## Info tab
 

@@ -121,7 +121,7 @@ We are requesting the following information:
 
 <figure><img src="../../.gitbook/assets/image (357).png" alt=""><figcaption></figcaption></figure>
 
-### Example 3: Using a Data Filter&#x20;
+### Example 3: Using a Data Filter
 
 This example uses a filter to return a specific subset of data. In this example, we are returning all results from the **Videos** table in the **CinchyTV** domain that contains our search term **"Apps"** in the **Title** field/column.
 

@@ -8,7 +8,7 @@ description: >-
 
 ## Introduction
 
-After you have made any applicable changes to your DX it is time to re-export the package out of your source environment.&#x20;
+After you have made any applicable changes to your DX it is time to re-export the package out of your source environment.
 
 ## 1. Update the Data Experience Table
 

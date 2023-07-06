@@ -257,7 +257,7 @@ Example:
 <base-url>/api/v1.0/secrets-manager/secret?secretName=<secret-name>&domain=<domain-name>
 ```
 
-**Populated Example:**&#x20;
+**Populated Example:**
 
 ```
 Cinchy.net/api/v1.0/secrets-manager/secret?secretName=<ExampleSecret>&domain=<Sandbox>

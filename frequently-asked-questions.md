@@ -64,7 +64,7 @@ There is currently no way for you to find out how many records will be inserted/
 
 ## Can I restore my deleted data?
 
-If the record is still in the table, but has been overwritten by mistake, access your **Collaboration Log** for the row, and restore back to the correct version. &#x20;
+If the record is still in the table, but has been overwritten by mistake, access your **Collaboration Log** for the row, and restore back to the correct version. 
 
 If your row has been deleted by mistake, access your **Recycling Bin,** locate the row and restore it.
 
@@ -74,9 +74,9 @@ The only way to truly delete data on the platform is through [Data Erasure](guid
 
 For example: 4,10,15 to be used in WHERE \[Id] IN (@param)
 
-This can be done by using parameters in **{}**, such as **{0},{1}**,...&#x20;
+This can be done by using parameters in **{}**, such as **{0},{1}**,...
 
-These will be replaced with the exact text when running the query.&#x20;
+These will be replaced with the exact text when running the query.
 
 For example: ​ **SELECT \* FROM \[HR].\[Employees] WHERE \[Deleted] IS NULL AND \[Employee ID] IN ({0})** _(Image 1)._
 
@@ -156,7 +156,7 @@ You can also add the "Modified By" and "Modified" columns into the current view/
 ## How do I create a Cinchy user with a set password?
 
 One Time
-&#x20;setup:
+setup:
 
 1. Open the Users table
 2. For the password of this user, copy the admin user's password and paste it into the Password field of **"defaultuser".**
@@ -206,7 +206,7 @@ WHERE T.[Deleted] IS NULL AND ...
 ```
 
 In this example it would set \[Multi-Link Field Name] to values with \[Cinchy Id] 1, 2, and 3.
-&#x20;The version after each Cinchy Id should be 1.
+The version after each Cinchy Id should be 1.
 
 {% hint style="info" %}
 You must provide the full list of multi-select values. If your field was '1,2' and you update it with '3,1' it will end up as '3', not '1,2,3'.
@@ -264,7 +264,7 @@ For each table, export and import the data via the UI.
 ```
 
 Then map the calculated source column to the target.
-&#x20;The order of the columns in the source is important. If your source is a file, put the calculated columns at the end in the source, after all the actual columns in the file.
+The order of the columns in the source is important. If your source is a file, put the calculated columns at the end in the source, after all the actual columns in the file.
 
 ## How do I parse a pipe delimited file using the CLI?
 
@@ -290,7 +290,7 @@ The pattern contains a regular expression:
 
 ^ - anchor for the beginning of the string
 
-0 - the string to replace&#x20;
+0 - the string to replace
 
 \* - quantifier to be applied to 0 or more occurrences
 
@@ -309,7 +309,7 @@ If you just have a group of tables, see the instructions below. If you have tabl
 
 Table only instructions:
 
-&#x20;1\. Create a dummy Data Experience and add all your tables from your domain to it _(Image 2)._
+1\. Create a dummy Data Experience and add all your tables from your domain to it _(Image 2)._
 
 ![Image 2: How to clone a domain](<.gitbook/assets/image (80).png>)
 
@@ -356,7 +356,7 @@ WHERE [Deleted] IS NULL AND [Table]='HR.Employees'
 ## I cannot find the column I want to link to even though the column is present in the table
 
 In this example it would set \[Multi-Link Field Name] to values with \[Cinchy Id] 1, 2, and 3.
-&#x20;The version after each Cinchy Id should be 1."
+The version after each Cinchy Id should be 1."
 
 Columns do not "Allow Linking" by default. Check the properties of the column in the original table and make sure that in “Show Advanced” the “Allow Linking” checkmark box is selected. If you do not have Design Table access to that table, you will need to ask someone who does to do it.
 

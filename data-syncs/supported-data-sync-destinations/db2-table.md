@@ -2,7 +2,7 @@
 
 ## Overview
 
-[DB2](https://www.ibm.com/products/db2) (Formerly _Db2_ for LUW) is a relational database that delivers advanced data management and analytics capabilities for transactional workloads.&#x20;
+[DB2](https://www.ibm.com/products/db2) (Formerly _Db2_ for LUW) is a relational database that delivers advanced data management and analytics capabilities for transactional workloads.
 
 {% hint style="info" %}
 Before you set up your data sync destination, [make sure to configure your Source.](../supported-data-sync-sources/)

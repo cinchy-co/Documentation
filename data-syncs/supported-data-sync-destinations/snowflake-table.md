@@ -23,7 +23,7 @@ The bulk operation process consists of:
 
 1. Generating a CSV containing a batch of records
 2. Creating a temporary table in Snowflake
-3. Copying the generated CSV into the temp table&#x20;
+3. Copying the generated CSV into the temp table
 4. If needed, **performing Insert operations** against the **target** Snowflake table using the temp table
 5. If needed, **performing Update operations** against the **target** Snowflake table using the temp table
 6. If needed, **performing Delete operations** against the **target** Snowflake table using the temp table

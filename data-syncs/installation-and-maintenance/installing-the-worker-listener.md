@@ -103,5 +103,5 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
 | SqlServer | Fill in the connection string to the SQL server hosting the Cinchy database. |
 
 2. To start the service, open the **Run box** on your machine **(Windows + R) >** type in **services.msc**
-3. In the list of services, find the **Cinchy Worker**.&#x20;
+3. In the list of services, find the **Cinchy Worker**.
 4. Right click on the service and click **Start.**

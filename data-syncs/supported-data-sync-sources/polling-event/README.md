@@ -50,12 +50,12 @@ Note that If there is more than one listener associated with your data sync, you
 
 #### Optional AppSettings configurations
 
-* **DataPollingConcurrencyIndex**: This property allows only a certain number of threads to run queries against the source database, which works to reduce the load against the database.&#x20;
-  * The default number of threads is set to 12.&#x20;
+* **DataPollingConcurrencyIndex**: This property allows only a certain number of threads to run queries against the source database, which works to reduce the load against the database.
+  * The default number of threads is set to 12.
   * To configure this property, navigate to your **appSettings.json** deployment file **>  "DataPollingConcurrencyIndex": \<numberOfThreads>**
-* **QueueWriteConcurrencyIndex**: This property allows only a certain number of threads to be concurrently sending messages to the queue. This works to provide a more consistent batching by the worker and reduce your batching errors. run queries against the source database, which works to reduce the load against the database.&#x20;
-  * The default number of threads is set to 12.&#x20;
-  * To configure this property, navigate to your **appSettings.json** deployment file **>  "QueueWriteConcurrencyIndex": \<numberOfThreads>.**&#x20;
+* **QueueWriteConcurrencyIndex**: This property allows only a certain number of threads to be concurrently sending messages to the queue. This works to provide a more consistent batching by the worker and reduce your batching errors. run queries against the source database, which works to reduce the load against the database.
+  * The default number of threads is set to 12.
+  * To configure this property, navigate to your **appSettings.json** deployment file **>  "QueueWriteConcurrencyIndex": \<numberOfThreads>.**
   * Note that this index is shared across all listener configs, meaning that if it is set to 1 only one listener config will be pushing the messages to the queue at a single moment in time.
 
 ```json

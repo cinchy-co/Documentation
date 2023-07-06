@@ -28,7 +28,7 @@ To export a table (**i.e. your data model)**, navigate to the **Design Table > E
 
 <figure><img src="../../../.gitbook/assets/image (204).png" alt=""><figcaption><p>Image 3: Importing a data model</p></figcaption></figure>
 
-This functionality is achieved through the **use and synchronization of GUIDs.** Each data element in Cinchy (table, column, etc.) will have a matching GUID, which stays consistent even across multiple environments. That means that changes made in your source environment will automatically and accurately be applied once promoted to your higher environment.&#x20;
+This functionality is achieved through the **use and synchronization of GUIDs.** Each data element in Cinchy (table, column, etc.) will have a matching GUID, which stays consistent even across multiple environments. That means that changes made in your source environment will automatically and accurately be applied once promoted to your higher environment.
 
 {% hint style="info" %}
 **A GUID **_**(globally unique identifier)**_** is a 128-bit text string that represents an identification (ID).**

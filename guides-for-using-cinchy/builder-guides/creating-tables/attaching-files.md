@@ -25,7 +25,7 @@ Cinchy supports the attaching of any file type.
 ## 2. How to Attach a File
 
 1. Navigate to the table where you want to attach your file.
-2. &#x20;Click **Design Table > Columns**
+2. Click **Design Table > Columns**
 3. Add a new column with the following parameters _(Image 1)_:
    1. **Column Name:** We recommend you name this something easy to recognize, like _"Images and Files"_
    2. **Data Type:** Link

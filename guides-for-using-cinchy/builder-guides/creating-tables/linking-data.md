@@ -17,13 +17,13 @@ description: >-
 
 ## 1. About Linking
 
-Linking is done by the Cinchy ID, which is unique. When you create a link column, you select a column to link to. This is simply a decision on which field to show from the linked record. You should pick a unique field to link on to avoid confusion if possible.&#x20;
+Linking is done by the Cinchy ID, which is unique. When you create a link column, you select a column to link to. This is simply a decision on which field to show from the linked record. You should pick a unique field to link on to avoid confusion if possible.
 
 Once a record is created, its Cinchy ID never changes. This means that modifying the row of data in the linked table will not change the relationship in your table to that row. This also means that if you did not use a unique column, even though the UI looks the same, you are actually linking to different rows.‌
 
 ## 2. Choosing a Linked Column <a href="#choosing-linked-column" id="choosing-linked-column"></a>
 
-‌In general, you should only use unique columns as the linked column. This needs to be balanced with readability in other tables.&#x20;
+‌In general, you should only use unique columns as the linked column. This needs to be balanced with readability in other tables.
 
 For example, **Full Name** might not be unique to every employee, but it is a lot more readable and understandable than Employee ID. In other cases, it makes sense to link via an ID and simply add a display column to show relevant information.‌
 
@@ -33,7 +33,7 @@ For example, **Full Name** might not be unique to every employee, but it is a lo
 
 ### 2.2 Allow Display in Linked View <a href="#allow-display-in-linked-view" id="allow-display-in-linked-view"></a>
 
-‌If this option is unchecked, it prevents users from showing this column in another table.&#x20;
+‌If this option is unchecked, it prevents users from showing this column in another table.
 
 For example, if you have an ID card # within an employees table, you may not want to display it to the rest of the company because it simply would not be relevant when they are linking to employees and want to see additional information (such as department, title, location). Arguably, a lot of these columns are also taken care of by access controls (since most people will not have access to view that column).‌
 

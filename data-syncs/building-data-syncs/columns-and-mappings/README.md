@@ -237,7 +237,7 @@ Description of the column.
 
 **`inputFormat`**
 
-Date fields support the inputFormat which adheres to the c# .net DateTime.ParseExact format. See [here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) for reference.&#x20;
+Date fields support the inputFormat which adheres to the c# .net DateTime.ParseExact format. See [here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) for reference.
 
 {% hint style="info" %}
 `inputFormat` attribute is useful when source file need some format changes in the input data

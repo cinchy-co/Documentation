@@ -9,7 +9,7 @@ Cinchy Supported Functions covers the following topics:
 * [​Cinchy User Defined Functions](cinchy-user-defined-functions-udfs/)​
 * Scalar Functions
 
-**Cinchy Functions** and **Cinchy User Defined Functions (UDFs)** are used in conjunction with Cinchy [DML](../cql-statements-overview/cinchy-dml-statements.md) and [DDL](../cql-statements-overview/cinchy-ddl-statements.md) statements.&#x20;
+**Cinchy Functions** and **Cinchy User Defined Functions (UDFs)** are used in conjunction with Cinchy [DML](../cql-statements-overview/cinchy-dml-statements.md) and [DDL](../cql-statements-overview/cinchy-ddl-statements.md) statements.
 
 **Cinchy System Values** are specific to the Cinchy platform, similar to Cinchy Functions.
 

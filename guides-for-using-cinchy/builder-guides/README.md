@@ -21,7 +21,7 @@ The “Cinchy Builder” has access to perform the following capabilities:
 * Create and Deliver an unlimited number of Customer Use Cases within Cinchy
 * A builder can be part of the[ Administrators group](../administrator-guide.md)
 
-The **“End-Users”** of the Cinchy platform are those that use the functionalities created by the **“Cinchy Builders”** to their business objectives.&#x20;
+The **“End-Users”** of the Cinchy platform are those that use the functionalities created by the **“Cinchy Builders”** to their business objectives.
 
 {% hint style="info" %}
 All Builders are also End-Users, but not all End-Users are Builders.
@@ -69,7 +69,7 @@ Use the universal Data Browser to view, change, analyze, and otherwise interact 
 
 ### **Build**
 
-#### **Create and share queries**&#x20;
+#### **Create and share queries**
 
 Cinchy’s Dataware platform features an intuitive Drag and Drop Query Builder that allows Builders to create using the Cinchy Query Language ([CQL](https://cinchy.gitbook.io/cql/)), a proprietary language specific to Cinchy. All queries can be easily saved and shared, and query results automatically generate a full no-code API.
 
@@ -85,4 +85,4 @@ For even more flexibility, connect your Data Network to third-party Data Visuali
 
 The more you use Dataware the more it’s capable of doing.
 
-Any new data you add to the network will work in conjunction with any previously existing data, instantly and easily. This means you can re-use data in new ways, with no time-consuming integration efforts. Teams can collaborate directly in real-time, allowing it to act as a central data hub while simplifying integration. Unlike traditional data architecture projects, which grow more complicated as they involve more data sources, dataware delivers solutions faster and faster as more data is added to it.&#x20;
+Any new data you add to the network will work in conjunction with any previously existing data, instantly and easily. This means you can re-use data in new ways, with no time-consuming integration efforts. Teams can collaborate directly in real-time, allowing it to act as a central data hub while simplifying integration. Unlike traditional data architecture projects, which grow more complicated as they involve more data sources, dataware delivers solutions faster and faster as more data is added to it.

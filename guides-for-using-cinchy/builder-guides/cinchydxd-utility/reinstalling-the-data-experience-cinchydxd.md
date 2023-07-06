@@ -13,7 +13,7 @@ description: >-
 | [#1.-re-run-cinchydxd-install](reinstalling-the-data-experience-cinchydxd.md#1.-re-run-cinchydxd-install "mention") |
 | [#2.-validate-install](reinstalling-the-data-experience-cinchydxd.md#2.-validate-install "mention")                 |
 
-## 1. Re-Run CinchyDXD Install&#x20;
+## 1. Re-Run CinchyDXD Install
 
 Using PowerShell, you must now install the Data Experience you have exported out of Cinchy.
 
@@ -38,7 +38,7 @@ The parameters executed in PowerShell can exist on one line in PowerShell, howev
 {% endhint %}
 
 Sample _(Image 4):_\
-&#x20;`.\CinchyDXD.ps1 install` \
+`.\CinchyDXD.ps1 install` \
 `` -s "<taget Cinchy url>" ` ``\
 `` -u "<target user id>" ` ``\
 `` -p "<target password>" ` ``\

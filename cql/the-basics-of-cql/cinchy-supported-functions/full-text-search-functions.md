@@ -131,7 +131,7 @@ WHERE CONTAINS([column], 'FORMSOF(THESAURUS, "")')
 
 #### Example Syntax (Thesaurus)
 
-In this example, we want to return all results where the data in the Summary column matches the meaning of our search term.&#x20;
+In this example, we want to return all results where the data in the Summary column matches the meaning of our search term.
 
 _I.E. "install" might return results with "deploy", "configure", "set", etc._
 
@@ -269,7 +269,7 @@ WHERE CONTAINS([title], @SearchWord)
 
 ## FREETEXT
 
-The FREETEXT command provides the ability to search for a matched term based on the meaning of the terms as opposed to the exact character string.&#x20;
+The FREETEXT command provides the ability to search for a matched term based on the meaning of the terms as opposed to the exact character string.
 
 At a high level, this commands finds matches based on separating the string into individual words, determining inflectional versions of the word and using a thesaurus to expand or replace the term to improve the search.
 
@@ -291,7 +291,7 @@ WHERE FREETEXT([summary], @SearchWord);
 
 #### Example Syntax
 
-In this example, we want to return all results where the data in the Summary column matches the meaning of our search phrase.&#x20;
+In this example, we want to return all results where the data in the Summary column matches the meaning of our search phrase.
 
 I.E. "installation guide" might return results with "deployment instructions", "set up guide", etc.
 
