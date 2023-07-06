@@ -12,7 +12,7 @@ Those events are organized and durably stored in **topics.** These topics are th
 
 Event streaming thus ensures a continuous flow and interpretation of data so that the right information is at the right place, at the right time [for your key use cases](https://kafka.apache.org/powered-by).
 
-**Example Use Case:** You currently use Kafka to store the metrics for user logins, but being stuck in the Kafka silo means that you can't easily use this data across a range of business use cases or teams. You can use a batch sync in order to liberate your data into Cinchy.
+**Example Use Case:** You currently use Kafka to store the metrics for user logins, but being stuck in the Kafka silo means that you can't easily use this data across a range of business use cases or teams. You can use a batch sync to liberate your data into Cinchy.
 
 {% hint style="success" %}
 The Kafka Topic source supports real-time syncs.

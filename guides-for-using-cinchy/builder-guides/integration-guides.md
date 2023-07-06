@@ -192,7 +192,7 @@ In this example we also changed the name from Query1 to Product Roadmap and have
 Cinchy exposes a Tableau Web Data Connector that provides access to Cinchy Saved Queries as data sources in Tableau. Tableau versions 2019.2+ are supported.
 
 {% hint style="info" %}
-&#x20;An active internet connection is required in order to use the Web Data Connector.
+&#x20;An active internet connection is required to use the Web Data Connector.
 {% endhint %}
 
 ### 3.1 Prerequisites

@@ -32,7 +32,7 @@ Setting a user as an Admin does not supersede/change their role as an end-user v
 To view and manage who has administrator access, you will use the [system table](builder-guides/creating-tables/system-tables.md) **"Groups".**
 
 {% hint style="info" %}
-Note that you must have the correct entitlements set in order to view or access the **"Groups"** table. If you are part of the **"Administrators"** group already, then you can view all system tables by default.
+Note that you must have the correct entitlements set to view or access the **"Groups"** table. If you are part of the **"Administrators"** group already, then you can view all system tables by default.
 {% endhint %}
 
 ### 3.1 As a Non-Builder

@@ -97,6 +97,6 @@ Once you have installed the experience, your environment will be populated with 
 
 **Get Form MetaData Query:** This query will return the metadata of your form, using the form ID present in the Forms table. The results will show such data as whether a form field is mandatory or not, the choices present for each question, the column names and types present in the table containing your form data, the form fields and sections, the JSON data, and more.
 
-**Get Form Sections Query:** This query uses the form ID, present in the Forms table, in order to return all of the form sections present within the form.&#x20;
+**Get Form Sections Query:** This query uses the form ID, present in the Forms table, to return all of the form sections present within the form.&#x20;
 
 For any users who want to access forms/want forms to execute properly, they need to have access to all of the following tables and queries. These include the three tables and two queries shown above, as well as the Tables, Table Columns, and Domains tables within that user's specific environment.&#x20;

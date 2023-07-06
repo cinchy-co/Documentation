@@ -6,7 +6,7 @@ description: This page details information on the Cinchy Upgrade Utility.
 
 ## Overview
 
-The Cinchy Upgrade Utility was first introduced in v5.2 in order to facilitate a mandatory INT to BigInt upgrade. This tool has continued to be used in subsequent releases as an easy way to deploy necessary changes to your Cinchy platform.
+The Cinchy Upgrade Utility was first introduced in v5.2 to facilitate a mandatory INT to BigInt upgrade. This tool has continued to be used in subsequent releases as an easy way to deploy necessary changes to your Cinchy platform.
 
 ## 2. Considerations
 
@@ -33,7 +33,7 @@ The Cinchy Upgrade Utility was first introduced in v5.2 in order to facilitate a
 
 ## Overview
 
-Cinchy v5.2 introduced the update **from INT to BigInt** data types in order to increase the number of possible Cinchy IDs that can be generated. This in turn allows the creation of more records within one table, so that you can create and manage larger data sets.
+Cinchy v5.2 introduced the update **from INT to BigInt** data types to increase the number of possible Cinchy IDs that can be generated. This in turn allows the creation of more records within one table, so that you can create and manage larger data sets.
 
 **Previous Limit:** 2,147,483,647 (2^31-1) Cinchy IDs per table
 
@@ -54,7 +54,7 @@ Cinchy v5.2 introduced the update **from INT to BigInt** data types in order to 
 
 ## **Overview**
 
-To upgrade to Cinchy version 5.5, you must run the Upgrade Utility in order to fix a row-breaking issue that could be triggered on cells with over 4000 characters, where you are unable to update any column in your record.
+To upgrade to Cinchy version 5.5, you must run the Upgrade Utility to fix a row-breaking issue that could be triggered on cells with over 4000 characters, where you are unable to update any column in your record.
 
 <mark style="color:red;">**This upgrade is REQUIRED**</mark> when upgrading to Cinchy v5.5.
 

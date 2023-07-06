@@ -83,9 +83,9 @@ md C:\CinchyErrors
 
 ### App Settings
 
-1\. Under **AppSettings** section, update the values outlined in the table.
+1. Under **AppSettings** section, update the values outlined in the table.
 
-2\. Wherever you see **\<base url>** in the value, replace this with the actual protocol (HTTP or HTTPS) and the domain name (or IP address) you plan to use.
+2. Wherever you see **\<base url>** in the value, replace this with the actual protocol (HTTP or HTTPS) and the domain name (or IP address) you plan to use.
 
 Ex:. if you're using HTTPS with the domain app.cinchy.co, then **\<base url>** should be replaced with **https://app.cinchy.co**
 
@@ -244,7 +244,7 @@ Example:
 ## Create the IIS applications
 
 1. Open an administrator instance of PowerShell
-2. Execute the below commands to create the IIS applications and enable anonymous authentication. (This is required in order to allow authentication to be handled by the application)
+2. Execute the below commands to create the IIS applications and enable anonymous authentication. (This is required to allow authentication to be handled by the application)
 
 ```
 New-WebApplication -Name Cinchy -Site 'Default Web Site' -PhysicalPath C:\Cinchy -ApplicationPool CinchyWeb

@@ -4,7 +4,7 @@
 
 Dynamics 2015 is a legacy CRM predecessor to Microsoft Dynamics 365. Mainstream end of life support finished in [January 2020](https://learn.microsoft.com/en-us/lifecycle/products/dynamics-crm-2015), with extended end of life support finishing in January 2025.
 
-**Example Use Case:** You have customer information currently sitting in the Dynamics 2015 CRM software. You want to sync this data into Cinchy through a batch sync in order to liberate your data from the silo.
+**Example Use Case:** You have customer information currently sitting in the Dynamics 2015 CRM software. You want to sync this data into Cinchy through a batch sync to liberate your data from the silo.
 
 {% hint style="success" %}
 The Dynamics 2015 source supports batch syncs.

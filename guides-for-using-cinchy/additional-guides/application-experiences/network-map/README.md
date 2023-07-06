@@ -133,7 +133,7 @@ It is highly recommended to add a new applet for each custom data network visual
 
 ### 2.7 Optional URL Parameters
 
-Cinchy version 5.2 added the ability to include new parameters on the URL path for your network visualizer in order to focus your node view. You can now add **Target Node, Depth Level, and Max Depth Level** Parameters, if you choose.
+Cinchy version 5.2 added the ability to include new parameters on the URL path for your network visualizer to focus your node view. You can now add **Target Node, Depth Level, and Max Depth Level** Parameters, if you choose.
 
 Example: \<base url>/apps/datanetworkvisualizer?**targetNode=\&maxDepth=\&depthLevel=**
 

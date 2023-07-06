@@ -24,7 +24,7 @@ In this example, we are using a form to pull information about contacts from spe
 * **Display Name:** You may enter an alternative display name if you wish
 * **Brand:** Select a branding colour. In this example we have selected **light green.**
 * **Is Accordion:** Select whether you want your form to appear in accordion format or not.
-* **Lookup Label:** This option will designate how you pull information from your assigned table. We have designated the **Contacts.People.Name** column from the Contacts table, in order to pull information based on a contact name.
+* **Lookup Label:** This option will designate how you pull information from your assigned table. We have designated the **Contacts.People.Name** column from the Contacts table, to pull information based on a contact name.
 * **Owner Groups:** Select which groups have ownership of the form. In this example we have used the **Product Success** group.
 * **User Groups:** Select which user groups have access to the form. In this example we have used the **Product Success** group.
 * **Bookmarked Users:** If you want this form to appear in your **"My Forms"** view on the Forms table, enter it here.

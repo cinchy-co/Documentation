@@ -229,7 +229,7 @@ When creating a calculated column, you will notice the option to have it cached 
 
 A **cached calculated column** stores your data for fast retrieval and querying. Calculated columns are defaulted to cached. This is an actual column in your table that is based on a defined CQL formula. This column will recalculate when data is changed **in the same row.**&#x20;
 
-In the below example, the **Label** column is a calculated column that connects various name columns together. You can see that _"Connect your data"_ appears in each label. If you then wanted to change the name in row one from _"Connect your data"_ to _"Connect **all** your data"_, only that specific row would recalculate automatically to update the label. To update any other row (within this table or another) with a calculated column that references that data, you would need to manually make changes to each in order to prompt a recalculation.
+In the below example, the **Label** column is a calculated column that connects various name columns together. You can see that _"Connect your data"_ appears in each label. If you then wanted to change the name in row one from _"Connect your data"_ to _"Connect **all** your data"_, only that specific row would recalculate automatically to update the label. To update any other row (within this table or another) with a calculated column that references that data, you would need to manually make changes to each to prompt a recalculation.
 
 ![](<../../../.gitbook/assets/image (205).png>)
 
