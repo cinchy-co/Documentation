@@ -5,7 +5,7 @@
 To install Cinchy Meta-Forms you will need:
 
 * **A deployed Cinchy platform.** Note that these instructions are specific to an IIS deployment; for instructions relevant to an Kubernetes deployment [please see here.](broken-reference)
-* **The Cinchy CLI.** [Please see here](https://cli.docs.cinchy.com/connections-installation-guide/v5-connections-and-cli-installation-guide#3.-running-the-cli) if you do not have this running.
+* **The Cinchy CLI.** [Please see here](https://cli.docs.cinchy.com/connections-installation-guide/v5-connections-and-cli-installation-guide#3.-running-the-cli) if you don't have this running.
 * Ensure that the IIS extension **"URL Rewrite"** is installed on the server hosting IIS. The extension is available here: [https://www.iis.net/downloads/microsoft/url-rewrite](https://www.iis.net/downloads/microsoft/url-rewrite)
 
 ## 2. Download the Resources

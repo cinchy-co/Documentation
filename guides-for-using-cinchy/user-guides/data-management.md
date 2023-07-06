@@ -32,7 +32,7 @@ Users are only able to insert or delete rows based on their access. If you have 
 
 Importing data allows you to add new rows of data into a table. If you wish to perform a sync instead please [refer to the CLI](../../data-syncs/cli-commands-list.md). Importing data acts as a smart copy-and-paste of new data into an existing table.
 
-Importing the first row of your CSV as a header row will match the headers to the column names within your table. Any columns that cannot be matched will be ignored as well as any columns you do not have edit permissions for.
+Importing the first row of your CSV as a header row will match the headers to the column names within your table. Any columns that cannot be matched will be ignored as well as any columns you don't have edit permissions for.
 
 Users can import data from a CSV file to an existing table in Cinchy. Importing data into a Cinchy table only adds records to the table. This type of importing of data does not update or append existing records
 

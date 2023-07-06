@@ -261,7 +261,7 @@ CQL: Yes/No
 
 #### Remarks
 
-If the spatial reference IDs (SRIDs) of the geometry instances do not match, `STContains()` always returns null.
+If the spatial reference IDs (SRIDs) of the geometry instances don't match, `STContains()` always returns null.
 
 #### Geometry Example
 
@@ -324,7 +324,7 @@ CQL: Yes/No
 
 #### Remarks
 
-If the spatial reference IDs (SRIDs) of the geometry instances do not match, this method always returns null.
+If the spatial reference IDs (SRIDs) of the geometry instances don't match, this method always returns null.
 
 Both conditions must be true for two geometry instances to cross:
 
@@ -401,7 +401,7 @@ CQL: geometry
 
 #### Remarks
 
-Returns null if the spatial reference IDs (SRIDs) of the geometry instances do not match.&#x20;
+Returns null if the spatial reference IDs (SRIDs) of the geometry instances don't match.&#x20;
 
 #### Geometry Example
 
@@ -438,7 +438,7 @@ CQL: Yes/No
 
 If the intersection of the two geometry instances point sets are empty, they are disjoint.&#x20;
 
-Returns null if the spatial reference IDs (SRIDs) of the geometry instances do not match.
+Returns null if the spatial reference IDs (SRIDs) of the geometry instances don't match.
 
 #### Geometry Example
 
@@ -473,7 +473,7 @@ CQL: Number
 
 #### Remarks
 
-`STDistance()` always returns null if the spatial reference IDs (SRIDs) of the geometry/geography instances do not match.
+`STDistance()` always returns null if the spatial reference IDs (SRIDs) of the geometry/geography instances don't match.
 
 #### Geometry Example
 
@@ -574,7 +574,7 @@ CQL: Yes/No
 
 #### Remarks
 
-Returns null if the spatial reference IDs (SRIDs) of the geometry instances do not match.
+Returns null if the spatial reference IDs (SRIDs) of the geometry instances don't match.
 
 #### Geometry Example
 
@@ -875,7 +875,7 @@ CQL: geometry/geography
 
 #### Remarks
 
-If the spatial reference IDs (SRIDs) of the geometry/geography instances do not match, `STIntersection()` always returns null.&#x20;
+If the spatial reference IDs (SRIDs) of the geometry/geography instances don't match, `STIntersection()` always returns null.&#x20;
 
 The result may contain circular arc segments only if the input instances contain them.
 
@@ -924,7 +924,7 @@ CQL: Yes/No
 
 #### Remarks
 
-Returns null if the spatial reference IDs (SRIDs) of the geometry/geography instances do not match.
+Returns null if the spatial reference IDs (SRIDs) of the geometry/geography instances don't match.
 
 #### Geometry Example
 
@@ -1463,7 +1463,7 @@ CQL: Yes/No
 
 If the points where the geometry instances intersect are not in the same dimension, `STOverlaps()` always returns 0.
 
-If the spatial reference IDs (SRIDs) of the geometry instances do not match, `STOverlaps()` returns null.
+If the spatial reference IDs (SRIDs) of the geometry instances don't match, `STOverlaps()` returns null.
 
 Two geometry instances overlap if the region representing their intersection has the same dimension as the instances do and the region does not equal either instance.
 
@@ -1686,7 +1686,7 @@ CQL: Yes/No
 
 #### Remarks
 
-If the spatial reference IDs (SRIDs) of the geometry instances do not match, method returns null.
+If the spatial reference IDs (SRIDs) of the geometry instances don't match, method returns null.
 
 If matrix is not well-formed, an `ArgumentException`will be thrown.
 
@@ -1751,7 +1751,7 @@ CQL: geometry/geography
 
 #### Remarks
 
-If the spatial reference IDs (SRIDs) of the geometry instances do not match, method returns null.&#x20;
+If the spatial reference IDs (SRIDs) of the geometry instances don't match, method returns null.&#x20;
 
 Result may contain circular arc segments (only if the input instances contain circular arc segments).
 
@@ -1788,9 +1788,9 @@ CQL: Yes/No
 
 #### Remarks
 
-If two geometry instances point sets intersect, they are touching but their interiors do not intersect.
+If two geometry instances point sets intersect, they are touching but their interiors don't intersect.
 
-If the spatial reference IDs (SRIDs) of the geometry instances do not match, method returns null.&#x20;
+If the spatial reference IDs (SRIDs) of the geometry instances don't match, method returns null.&#x20;
 
 #### Example
 
@@ -1825,7 +1825,7 @@ CQL: geometry
 
 #### Remarks
 
-If the spatial reference IDs (SRIDs) of the geometry instances do not match, method returns null.&#x20;
+If the spatial reference IDs (SRIDs) of the geometry instances don't match, method returns null.&#x20;
 
 Result may contain circular arc segments (only if the input instances contain circular arc segments).
 
@@ -1864,7 +1864,7 @@ CQL: Yes/No
 
 The `STWithin` command is case-sensitive.
 
-If the spatial reference IDs (SRIDs) of the geometry instances do not match, method returns null.
+If the spatial reference IDs (SRIDs) of the geometry instances don't match, method returns null.
 
 #### Example
 

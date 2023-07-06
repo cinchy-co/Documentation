@@ -185,7 +185,7 @@ This table set up will be similar to how you would set up a CLI.
 
 Based on the configuration set up in this table, Cinchy will export the data and create CSV and CLI files.&#x20;
 
-Please note in this example we do not have Reference Data as part of our Data Experience.
+Please note in this example we don't have Reference Data as part of our Data Experience.
 
 ## 4. Export the Data Experience
 

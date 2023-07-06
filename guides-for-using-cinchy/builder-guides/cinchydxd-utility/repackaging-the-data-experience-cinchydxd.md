@@ -60,7 +60,7 @@ You can launch PowerShell right from your file explorer window in the CinchyDXD 
 4\. Hit Enter on your keyboard
 
 {% hint style="info" %}
-If you do not remember the mandatory parameters, you can click the enter on your keyboard after typing in .\CinchyDXD.ps1 export, PowerShell will provide you with the required and optional components to export the data experience.
+If you don't remember the mandatory parameters, you can click the enter on your keyboard after typing in .\CinchyDXD.ps1 export, PowerShell will provide you with the required and optional components to export the data experience.
 {% endhint %}
 
 5\. You must now enter your mandatory export parameters.

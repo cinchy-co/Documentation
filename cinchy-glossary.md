@@ -183,4 +183,4 @@ A Saved Query is merely a query that has been saved in order to be reused. These
 
 #### Real Time Sync
 
-[A Real-Time Sync](data-syncs/building-data-syncs/types-of-data-syncs.md#2.-real-time-data-sync) is one of the two types of Data Syncs that you can perform using Cinchy. In real-time syncs, the Cinchy Listener picks up changes in the source **immediately as they occur.** These syncs do not need to be manually triggered or scheduled using an external scheduler. Setting up a real-time sync does require an extra step of defining a listener configuration in order to execute properly.
+[A Real-Time Sync](data-syncs/building-data-syncs/types-of-data-syncs.md#2.-real-time-data-sync) is one of the two types of Data Syncs that you can perform using Cinchy. In real-time syncs, the Cinchy Listener picks up changes in the source **immediately as they occur.** These syncs don't need to be manually triggered or scheduled using an external scheduler. Setting up a real-time sync does require an extra step of defining a listener configuration in order to execute properly.

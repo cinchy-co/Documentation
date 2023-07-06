@@ -87,7 +87,7 @@ md C:\CinchyErrors
 
 2\. Wherever you see **\<base url>** in the value, replace this with the actual protocol (HTTP or HTTPS) and the domain name (or IP address) you plan to use.
 
-Ex:. if you're using https with the domain app.cinchy.co, then **\<base url>** should be replaced with **https://app.cinchy.co**
+Ex:. if you're using HTTPS with the domain app.cinchy.co, then **\<base url>** should be replaced with **https://app.cinchy.co**
 
 | Key                           | Value                                                                                                                                                                                                                   |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

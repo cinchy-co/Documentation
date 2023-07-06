@@ -148,7 +148,7 @@ WHERE CONTAINS([Summary], 'FORMSOF(THESAURUS, "install")')
 A _proximity term_ will return words or phrases that are near to each other. You can also specify the maximum number of non-search terms that separate the first and last search terms.
 
 {% hint style="info" %}
-**Note** that proximity terms in Cinchy do not adhere to the specified order written in the query. You will receive results of both "term 1+term 2" as well as "term 2+term 1".
+**Note** that proximity terms in Cinchy don't adhere to the specified order written in the query. You will receive results of both "term 1+term 2" as well as "term 2+term 1".
 {% endhint %}
 
 #### General Syntax

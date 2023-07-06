@@ -169,7 +169,7 @@ See [Linking Data ](linking-data.md)to get more context and tips.
 
 #### Encrypt
 
-If [Data At Rest Encryption](../../additional-guides/enable-data-at-rest-encryption.md) is enabled, you will see the option of Encrypt for columns. If this is checked, the column will be encrypted within the database. This is useful for hiding sensitive information so that people with access to the database directly do not see these fields.
+If [Data At Rest Encryption](../../additional-guides/enable-data-at-rest-encryption.md) is enabled, you will see the option of Encrypt for columns. If this is checked, the column will be encrypted within the database. This is useful for hiding sensitive information so that people with access to the database directly don't see these fields.
 
 There is no difference in user experience within the Cinchy platform. The data is displayed in plain text on the UI or via the query APIs.
 

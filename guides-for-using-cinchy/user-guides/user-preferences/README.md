@@ -39,7 +39,7 @@ From the settings page in the My Profile section you are able to update the **la
 
 ### 1.3 My Password <a href="#my-password" id="my-password"></a>
 
-If you do not see the password option in my profile, you must be logging on to Cinchy using Single Sign-On and will not need to update your password within Cinchy.​
+If you don't see the password option in my profile, you must be logging on to Cinchy using Single Sign-On and will not need to update your password within Cinchy.​
 
 To change your password, complete the following:
 
