@@ -32,7 +32,7 @@ The following formulas are currently supported by Connections.
 * **ENV(\<place-environment-variable-here>):** The ENV formula uses an environment variable available in the connections/worker pods as the value of the variable. 
 
 {% hint style="danger" %}
-We do not recommend using the ENV formula for credentials.
+We don't recommend using the ENV formula for credentials.
 {% endhint %}
 
 ## Examples

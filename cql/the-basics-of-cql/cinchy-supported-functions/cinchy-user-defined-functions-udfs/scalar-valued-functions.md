@@ -52,6 +52,6 @@ To use the UDF to trigger an action (such as creating a row in another table), i
 
 Watch out for the following scenarios:
 
-* Do not trigger when you do not have all the necessary fields.
+* Do not trigger when you don't have all the necessary fields.
 * Do not trigger when non-relevant data on the row changes.
   * Make sure to appropriately insert and/or update in another table.

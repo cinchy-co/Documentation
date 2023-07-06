@@ -114,7 +114,7 @@ The syncdata command will use the folder, indicated after the -d parameter in th
 The SourceErrors and TargetErrors CSV files will have the following three (3) columns:
 
 * **Row** - this column identifies the row number of the rejected record. **Please note,** only data rows are counted, if the source is a file with a number of header rows, this number needs to be added to the row number to get the actual row in the source that is causing the failure.
-* **Rejected** - will be either a Yes or No. If the field is Yes, this indicates that full record has been skipped. If the field is No, valid fields are inserted/updated and fields with validation errors are not inserted / updated
+* **Rejected** - will be either a Yes or No. If the field is Yes, this indicates that full record has been skipped. If the field is No, valid fields are inserted/updated and fields with validation errors aren't inserted / updated
 * **Errors** - this column contains a list of fields causing validation errors or an error affecting the whole record, like “Malformed Row”
 
 #### Sync Error log
@@ -131,7 +131,7 @@ The SyncErrors file also has three (3) columns:
 
 | Error                    | Description                                                                                                                                                                 |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Duplicate Key            | The sync key values are not unique & duplicated records are rejected                                                                                                        |
+| Duplicate Key            | The sync key values aren't unique & duplicated records are rejected                                                                                                        |
 | Malformed Row            | The row could not be parsed based on the source schema. For example the record may not have the number of columns mentioned in the source section of the CLI configuration. |
 | Invalid Format Exception | Check the value for this column, there may be a mismatched data type (e.g.inserting a non-digit character in a number column)                                               |
 | Max Length Violation     | The text you are trying to insert or update a target field with is too long                                                                                                 |

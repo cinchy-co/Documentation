@@ -11,4 +11,11 @@ kubectl
 Istio
 endcode 
 endtab 
+[Uu]nencrypted
+[Ss]erilog
 Kibana
+[Gg]eospatial
+\b[Nn]amespaces?\b
+GraphQL
+[Cc]iphertext
+CinchyDXD

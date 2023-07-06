@@ -18,8 +18,8 @@ Cinchy.Maintenance.CLI.exe maintenance -s "cinchyBaseURL" -u username -p "encryp
 
 | Parameter | Value                                                                                                                                                                             |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| -s        | Server, i.e. Cinchy Base URL (ex. cinchy.com/Cinchy/)                                                                                                                             |
-| -u        | Username, this will need to be an account that is part of the Cinchy Administrators group                                                                                         |
-| -p        | Encrypted password (you can encrypt your password by using `Cinchy.CLI.exe encrypt -t "plaintextpassword"`                                                                        |
-| -t        | Set a maintenance time window in minutes. Maintenance tasks will stop executing after the allotted time frame. This allows you to run this during an allotted maintenance window. |
-| -h        | This flag must be added if you are accessing Cinchy over **https.**                                                                                                               |
+| -s        | Server, Cinchy Base URL (ex. `cinchy.com/Cinchy/`)                                                                                                                             |
+| -u        | Username, this will need to be an account that's part of the Cinchy Administrators group                                                                                         |
+| -p        | Encrypted password (you can encrypt your password by using `Cinchy.CLI.exe encrypt -t "plaintextpassword"`)                                                                        |
+| -t        | Set a maintenance time window in minutes. Maintenance tasks will stop executing after the allotted time. Run this during an allotted maintenance window. |
+| -h        | You must add this flag if you are accessing Cinchy over HTTPS.                                                                                                               |

@@ -11,7 +11,7 @@ Before you set up a monitor or alert, ensure that you have [added your data sour
 Definitions:
 
 | Monitor     | A job that runs on a defined schedule and queries OpenSearch indices. The results of these queries are then used as input for one or more _triggers_. |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Trigger     | Conditions that, if met, generate _alerts_.                                                                                                           |
 | Alert       | An event associated with a trigger. When an alert is created, the trigger performs _actions_, which can include sending a notification.               |
 | Action      | The information that you want the monitor to send out after being triggered. Actions have a _destination_, a message subject, and a message body.     |
@@ -19,7 +19,7 @@ Definitions:
 
 ### Create your destination
 
-Your destination will be where you want your alerts to be pushed to. OpenSearch supports various options, however this guide will focus on email.
+Your destination will be where you want your alerts to be pushed to. OpenSearch supports various options, but this guide focuses on email.
 
 1. From the left navigation pane, click **Alerting** _(Image 1)._
 
@@ -46,7 +46,7 @@ Your destination will be where you want your alerts to be pushed to. OpenSearch 
 * **Encryption**
 
 {% hint style="danger" %}
-Ensure that you[ authenticate the Sender](setting-up-alerts.md#3.2-authenticate-your-sender), else your alert will not work. 
+Ensure that you[ authenticate the Sender](setting-up-alerts.md#3.2-authenticate-your-sender), or your alert won't work. 
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/image (610).png" alt=""><figcaption><p>Image 4: Configure your Sender</p></figcaption></figure>
@@ -59,11 +59,14 @@ Ensure that you[ authenticate the Sender](setting-up-alerts.md#3.2-authenticate-
 
 ### Authenticate your sender
 
-You will need to authenticate your sender for emails to come through. Please contact cinchy Customer Support to help you with this step.
+You will need to authenticate your sender for emails to come through. Please contact Cinchy Customer Support to help you with this step.
+
+<!-- vale off -->
 
 * **Via email:** support@cinchy.com
 * **Via phone:** 1-888-792-6051
 * **Through the support portal**: [Support Portal](http://support.cinchy.com/)
+<!-- vale on -->
 
 ### Create your monitor
 
@@ -135,15 +138,14 @@ You can also use **keyword filters** to drill down into a more specific subset o
 ## Example alerts
 
 * [Monitor Cluster Metrics](https://opensearch.org/docs/1.3/monitoring-plugins/alerting/monitors/#create-cluster-metrics-monitor)
-* [Endpoint Monitoring with Blackbox Exporter](https://github.com/prometheus/blackbox\_exporter)
 
 ### Alerting on Stream Errors
 
-In this example, we are pushing an alert based on errors. We will monitor our Connections stream for any instance of 'error', and push out an alert when our trigger threshold is hit.
+This example pushes an alert based on errors. We will monitor our Connections stream for any instance of 'error', and push out an alert when our trigger threshold is hit.
 
 1. First we create our [Monitor](setting-up-alerts.md#3.3-create-your-monitor) by defining the following _(Image 14):_
 
-* **Index:** In this example we are looking specifically at Connections.
+* **Index:** This example looks at Connections.
 * **Time Field**
 * **Time Range:** Define how far back you want to monitor
 * **Data Filter:** We want to monitor specifically whenever the **Stream** field of our index is **stderr** (standard error).
@@ -166,13 +168,13 @@ The trigger threshold will be visible on your monitoring graph as a red line.
 
 ### Alerting on Kubernetes restarts
 
-In this example, we are pushing an alert based on the kubectl.kubernetes.io/restartedAt annotation, which updates whenever your pod restarts. We will monitor this annotation across our entire product-mssql instance, and push out an alert when our trigger threshold is hit.
+This example pushes an alert based on the kubectl.kubernetes.io/restartedAt annotation, which updates whenever your pod restarts. We will monitor this annotation across our entire product-mssql instance, and push out an alert when our trigger threshold is hit.
 
 1. First we create our [Monitor](setting-up-alerts.md#3.3-create-your-monitor) by defining the following _(Image 17):_
 
-* **Index:** In this example we are looking at our entire product-mssql instance.
+* **Index:** This example looks at the entire product-mssql instance.
 * **Time Field**
-* **Query:** This example is using the total count of the kubectl.kubernetes.io/restartedAt annotattion
+* **Query:** This example is using the total count of the kubectl.kubernetes.io/restartedAt annotation.
 * **Time Range:** Define how far back you want to monitor. This example goes back 30 days.
 
 <figure><img src="../../../../.gitbook/assets/image (538).png" alt=""><figcaption><p>Image 17: Define your Query and Data Source</p></figcaption></figure>
@@ -193,13 +195,13 @@ The trigger threshold will be visible on your monitoring graph as a red line.
 
 ### Alerting on status codes
 
-In this example, we are pushing an alert based on status codes. We will monitor our entire instance for 400 status codes and push out an alert when our trigger threshold is hit.
+This example pushes an alert based on status codes. We will monitor our entire instance for 400 status codes and push out an alert when our trigger threshold is hit.
 
 1. First we create our [Monitor](setting-up-alerts.md#3.3-create-your-monitor) by defining the following _(Image 20):_
 
-* **Index:** In this example we are looking across out entire product-mssql-1 instance.
+* **Index:** This example looks across the entire product-mssql-1 instance.
 * **Time Field**
-* **Time Range:** Define how far back you want to monitor. In this example we are looking at the past day.
+* **Time Range:** Define how far back you want to monitor. The time range for this example is the past day.
 * **Data Filter:** We want to monitor specifically whenever the **Status Code** is **400 (bad request).**
 
 <figure><img src="../../../../.gitbook/assets/image (359).png" alt=""><figcaption><p>Image 20: Define your Query and Data Source</p></figcaption></figure>
@@ -208,7 +210,7 @@ This is how our example monitor will appear (note that there are no instances of
 
 <figure><img src="../../../../.gitbook/assets/image (70).png" alt=""><figcaption><p>Image 21: Example Monitor</p></figcaption></figure>
 
-2. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is at least one 400 status code across out instance _(Image 22)._ Input the following:
+1. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to the defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is at least one 400 status code across out instance _(Image 22)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**

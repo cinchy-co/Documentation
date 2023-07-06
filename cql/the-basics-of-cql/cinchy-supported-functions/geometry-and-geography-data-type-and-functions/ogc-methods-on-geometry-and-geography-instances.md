@@ -1461,7 +1461,7 @@ CQL: Yes/No
 
 #### Remarks
 
-If the points where the geometry instances intersect are not in the same dimension, `STOverlaps()` always returns 0.
+If the points where the geometry instances intersect aren't in the same dimension, `STOverlaps()` always returns 0.
 
 If the spatial reference IDs (SRIDs) of the geometry instances don't match, `STOverlaps()` returns null.
 

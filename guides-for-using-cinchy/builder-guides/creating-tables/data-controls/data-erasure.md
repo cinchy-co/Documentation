@@ -2,7 +2,7 @@
 description: This page provides an overview on data erasure.
 ---
 
-# Data Erasure
+# Data erasure
 
 ## Overview
 
@@ -16,6 +16,6 @@ Once data is erased, any links pointing to erased data will look like this _(Ima
 
 ![Image 2: Data Erasure](<../../../../.gitbook/assets/image (626).png>)
 
-## 2. Change Approval Enabled Tables
+## Change approval enabled tables
 
-The time is counted based on the record's modified time stamp, not the deleted time stamp. This means for change approval records it is the time when the pending delete request was approved and moved to the Recycle Bin, not when the delete request was made.
+The time is counted based on the record's modified time stamp, not the deleted time stamp. This means for change approval records it's the time when the pending delete request was approved and moved to the Recycle Bin, not when the delete request was made.

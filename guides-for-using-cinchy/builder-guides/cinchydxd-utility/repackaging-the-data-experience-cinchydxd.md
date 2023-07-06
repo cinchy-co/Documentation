@@ -4,48 +4,48 @@ description: >-
   Experience
 ---
 
-# Repackaging the Data Experience (CinchyDXD)
+# Repackage the data experience (CinchyDXD)
 
 ## Introduction
 
-After you have made any applicable changes to your DX it is time to re-export the package out of your source environment.
+After you have made any applicable changes to your DX, you must re-export the package out of your source environment.
 
-## 1. Update the Data Experience Table
+## 1. Update the data experience table
 
 If you have added or removed any of the following while updating your DX, you will need to update the **Data Experience Definition** table:
 
-* Name
-* Tables
-* Integrated Clients
-* Data Sync Configurations
-* Reference Data
-* User Defined Functions
-* Models
-* Groups
-* System Colours
-* Saved Queries
-* Applets
-* Literal Groups
-* Builders
-* Builder Groups
-* Sync GUID
+- Name
+- Tables
+- Integrated Clients
+- Data Sync Configurations
+- Reference Data
+- User Defined Functions
+- Models
+- Groups
+- System Colours
+- Saved Queries
+- Applets
+- Literal Groups
+- Builders
+- Builder Groups
+- Sync GUID
 
-## 2. Update Reference Data Table
+## 2. Update reference data table
 
 If you have added or removed any of the following while updating your DX, you will need to update the **Data Experience Reference Data** table:
 
-* Name
-* Ordinal
-* Filter
-* New Records
-* Changed Records
-* Dropped Records
-* Table
-* Sync Key
-* Expiration Timestamp Field
-* Sync GUID
+- Name
+- Ordinal
+- Filter
+- New Records
+- Changed Records
+- Dropped Records
+- Table
+- Sync Key
+- Expiration Timestamp Field
+- Sync GUID
 
-## 3. Re-Run CinchyDXD Export
+## 3. Re-run CinchyDXD export
 
 Using PowerShell you will now export the Data Experience you have defined within Cinchy.
 
@@ -55,7 +55,7 @@ Using PowerShell you will now export the Data Experience you have defined within
 You can launch PowerShell right from your file explorer window in the CinchyDXD file, saving you an extra step of navigating to the CinchyDXD folder manually in PowerShell.
 {% endhint %}
 
-2\. In the PowerShell window type in **cin** and hit tab on your keyboard\
+2\. In the PowerShell window type in `cin` and hit tab on your keyboard\
 3\. In the PowerShell command line next to .\CinchyDXD.ps1 type in **export**\
 4\. Hit Enter on your keyboard
 
@@ -66,7 +66,7 @@ If you don't remember the mandatory parameters, you can click the enter on your 
 5\. You must now enter your mandatory export parameters.
 
 {% hint style="info" %}
-The parameters executed in PowerShell can exist on one line in PowerShell, however for legibility (below) the parameters have been put on separate lines.  If you are putting your parameters on separate lines you will be required to have backticks quote \`  for the parameters to execute
+The parameters executed in PowerShell can exist on one line in PowerShell, but for legibility (below) the parameters are on separate lines. If you are putting your parameters on separate lines you will be required to have backticks quote \` for the parameters to execute
 {% endhint %}
 
 {% hint style="warning" %}
@@ -85,12 +85,11 @@ Sample:\
 `` -v "2.0.0" ` ``\
 `` -o "C:\CinchyDXD_Output" ` ``\
 
-
-6\. Enter the export parameters into the PowerShell window _(Image 1)._
+6. Enter the export parameters into the PowerShell window _(Image 1)._
 
 ![Image 1: Step 6](<../../../.gitbook/assets/image (147).png>)
 
-7\. Hit Enter on your keyboard to run the export command
+7. Hit Enter on your keyboard to run the export command
 
 PowerShell will begin to process the export. Once the export is complete, PowerShell will provide you with an export complete message _(Image 2)._
 
@@ -102,10 +101,10 @@ PowerShell will begin to process the export. Once the export is complete, PowerS
 
 ![Image 3: Step 1](<../../../.gitbook/assets/image (55).png>)
 
-2\. Ensure that the **Data Experience Release** table is populated in the source environment _(Image 4)._
+2. Ensure that the **Data Experience Release** table is populated in the source environment _(Image 4)._
 
 ![Image 4: Step 2](<../../../.gitbook/assets/image (217).png>)
 
-3\. Ensure that the **Data Experience Release Artifacts** table is populated in the source environment _(Image 5)._
+3. Ensure that the **Data Experience Release Artifacts** table is populated in the source environment _(Image 5)._
 
 ![Image 5: Step 3](<../../../.gitbook/assets/image (328).png>)

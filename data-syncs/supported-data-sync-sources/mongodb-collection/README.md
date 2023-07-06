@@ -14,7 +14,7 @@ Please review the following considerations before you set up your MongoDB Collec
 * By default, MongoDB batch size is 101.
 * By default, bulk operations size is 5000.
 * Due to a conversion of doubles to decimals that occurs during the sync process, minor data losses may occur.
-* The following data types are not supported:
+* The following data types aren't supported:
   * **Binary Data**
   * **Regular Expression**
   * **DBPointer**
@@ -150,7 +150,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 The MongoDB Collection Data Source obtains BSON documents from MongoDB. BSON, short for Binary JSON, is a binary-encoded serialization of JSON-like documents. Like JSON, BSON sup­ports the em­bed­ding of doc­u­ments and ar­rays
 
-with­in other documents and arrays. BSON also has extensions that allow representation of data types that are not part of the JSON spec. For ex­ample, BSON makes a distinction between `Int32` and `Int64`.
+with­in other documents and arrays. BSON also has extensions that allow representation of data types that aren't part of the JSON spec. For ex­ample, BSON makes a distinction between `Int32` and `Int64`.
 
 The following table shows how MongoDB data types are translated in Cinchy.
 

@@ -289,7 +289,7 @@ The API will return an object in the below format:
 **Body Parameters**
 
 {% hint style="warning" %}
-Note that the parameter names **"files"** and **"options"** are both case sensitive and must use lowercase in your JSON. The contents of the parameters themselves are not case sensitive.
+Note that the parameter names **"files"** and **"options"** are both case sensitive and must use lowercase in your JSON. The contents of the parameters themselves aren't case sensitive.
 {% endhint %}
 
 | Name    | Data Type | Description                                                                                                          |

@@ -182,7 +182,7 @@ Change the Authentication Method of the existing user to **Single Sign-On**.
 When a user is configured for SSO, they can select **Login with Single Sign-On** on the login page, which directs logins through the Identity Provider's authentication flow.
 
 {% hint style="warning" %}
-If a user successfully authenticates with the Identity Provider but hasn't been set up in the Users table, then they will see the following error message - " **You are not a registered user in Cinchy. Please contact your Cinchy administrator."** To avoid the manual step to add new users, you can consider enabling automatic user creation.
+If a user successfully authenticates with the Identity Provider but hasn't been set up in the Users table, then they will see the following error message - " **You aren't a registered user in Cinchy. Please contact your Cinchy administrator."** To avoid the manual step to add new users, you can consider enabling automatic user creation.
 {% endhint %}
 
 ## Automatic user creation - IIS deployments

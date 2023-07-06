@@ -2,9 +2,9 @@
 description: This page guides you through the Cinchy Data Experience Deployment Utility.
 ---
 
-# CinchyDXD Utility
+# CinchyDXD utility
 
-## **1. Introduction to Cinchy DXD**
+## Introduction to CinchyDXD
 
 CinchyDXD is a downloadable utility used to move Data Experiences (DX) from one environment to another. This includes any and all objects and components that have been built for, or are required in, support of the Data Experience.
 
@@ -22,7 +22,7 @@ All objects need to be created in one source environment (ex: DEV). From there, 
 * The example DX is a simple Currency Converter DX that consists of
   * One (1) table
   * One (1) query
-* This example does not include the following:
+* This example doesn't include the following:
   * NO applets
   * NO integrated clients
   * NO Data Sync Configurations
@@ -35,7 +35,7 @@ All objects need to be created in one source environment (ex: DEV). From there, 
 
 Future iterations of this document will add to this example's complexity level.
 
-## 2. Overview of Steps
+## Steps
 
 The general steps to deploying the CinchyDXD Utility are as follows:
 

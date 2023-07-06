@@ -66,7 +66,7 @@ Now, instead of connecting apps to gain access to data through costly point-to-p
 
 **Collaborative Autonomy** is thus the principle underpinning **Collaborative Intelligence, the entire basis of Dataware and Cinchy.**
 
-Individuals are not homogenized, as in consensus-driven processes, nor equalized through quantitative data processing, as in collective intelligence. Consensus is not required. Problem resolution is achieved through _systematic convergence toward coherent results._ Collaborative intelligence relies on the principle of collaborative autonomy to overcome “the consensus barrier” and succeed where other methods have failed.
+Individuals aren't homogenized, as in consensus-driven processes, nor equalized through quantitative data processing, as in collective intelligence. Consensus is not required. Problem resolution is achieved through _systematic convergence toward coherent results._ Collaborative intelligence relies on the principle of collaborative autonomy to overcome “the consensus barrier” and succeed where other methods have failed.
 
 ## Universal access controls, automated governance
 

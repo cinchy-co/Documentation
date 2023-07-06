@@ -6,7 +6,7 @@ description: This page outlines the Cinchy Secrets Manager, added to the platfor
 
 ## Overview
 
-The Cinchy platform comes with an out-of-the-box way to store secrets — **the Cinchy Secrets Table.** Adhering to Cinchy’s Universal Access Controls, you can utilize this table as a key vault (such as Azure Key Vault or AWS Secrets Manager) to store sensitive data only accesible to the users or user groups that you give access to.
+The Cinchy platform comes with an out-of-the-box way to store secrets: the Cinchy Secrets Table. Adhering to Cinchy’s Universal Access Controls, you can use this table as a key vault (such as Azure Key Vault or AWS Secrets Manager) to store sensitive data only accessible to the users or user groups that you give access to.
 
 You can use secrets stored in this table when configuring data syncs:
 
@@ -14,13 +14,13 @@ You can use secrets stored in this table when configuring data syncs:
 * Within a REST Header, URL, or Body;
 * In the Listener Configuration;
 
-Additionally, we have implemented a new [API endpoint](broken-reference) for the retrieval of your secrets.
+Cinchy has also implemented a new [API endpoint](broken-reference) for the retrieval of your secrets.
 
 ## Configuring a secret
 
 To create a secret in Cinchy:
 
-1. Navigate to the **\[Cinchy].\[Secrets]** table on your platform (Image 1).
+1. Navigate to the **[Cinchy].[Secrets]** table on your platform (Image 1).
 2. Input the following values for your secret:
 
 | Value         | Description                                                                                                                    | Example                                                                        |
@@ -37,7 +37,7 @@ To create a secret in Cinchy:
 
 ## Calling a secret via API
 
-We have implemented a new [API endpoint](broken-reference) for the retrieval of your secrets. Using the below endpoint, fill in your \<base-url>, \<secret-name>, and the \<domain-name> to retrieve the referenced secret.
+Cinchy has implemented a new [API endpoint](broken-reference) for the retrieval of your secrets. Using the below endpoint, fill in your \<base-url>, \<secret-name>, and the \<domain-name> to retrieve the referenced secret.
 
 This endpoint works with Cinchy’s [Personal Access Token](../user-guides/user-preferences/personal-access-tokens.md) capability, as well as Access Tokens retrieved from your IDP.
 

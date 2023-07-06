@@ -10,20 +10,20 @@ ArgoCD is implemented as a Kubernetes controller which continuously monitors run
 
 You can use ArgoCD's dashboard _(Image 1)_ to visually monitor your namespaces and pods, and to quickly visualize deployment issues. It can easily show you what your cluster or pods are doing, and if they are healthy.
 
-![Image 1: An example ArgoCD Dashboard](<../../../.gitbook/assets/image (127).png>)
+![Image 1: An example ArgoCD dashboard](<../../../.gitbook/assets/image (127).png>)
 
-## Getting Started with ArgoCD
+## Get started with ArgoCD
 
 ArgoCD has a robust set of documentation that can help you to get started with the application. We recommend the following two pages:
 
 * [A General Overview](https://argo-cd.readthedocs.io/en/stable/)
 * [ArgoCD Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)
 
-## Your ArgoCD Dashboard
+## ArgoCD dashboard
 
-Your ArgoCD dashboard contains a lot of important information about how your Cinchy instance is behaving.
+Your ArgoCD dashboard has a lot of important information about how your Cinchy instance is behaving.
 
-### Application Tiles View
+### Application tiles view
 
 The application tiles view is the default view when logging into ArgoCD. You can also access it through the grid widget in the upper right hand corner of the screen.
 
@@ -46,7 +46,7 @@ You can also click the **star button** on any application title to favourite the
 
 ![Image 2: A pod in ArgoCD](<../../../.gitbook/assets/image (542).png>)
 
-### Pie Chart View
+### Pie chart view
 
 The pie chart view _(Image 3)_ shows an easy visualization of the health of your applications. Access this view by clicking on the pie chart widget located in the upper right hand corner of the screen.
 
@@ -84,21 +84,21 @@ You can filter your view so that it only shows certain data. You can find the va
 
 ![Image 10: Namespace view](<../../../.gitbook/assets/image (594).png>)
 
-## Detailed View
+## Detailed view
 
 To bring up a more detailed view of your applications, click on the application tile. This view will show you all components, their health and their sync status _(Image 11)._ You can use the top navigational buttons perform actions such as syncing, rolling back, or refreshing.
 
-This view can be particularly useful for load testing, since you can see each individual pod spinning up and down.
+This view can be useful for load testing, since you can see each individual pod spinning up and down.
 
 ![Image 11: Detailed view](<../../../.gitbook/assets/image (513).png>)
 
-### Health and Sync Status
+### Health and sync status
 
-Quickly view the status of your apps by looking at the health and sync status along the top of the page _(Image 12)._
+View the status of your apps by looking at the health and sync status along the top of the page _(Image 12)._
 
 ![Image 12: Health and Sync Status](<../../../.gitbook/assets/image (218).png>)
 
-### 5.2 Summary Information
+### Summary information
 
 Clicking on any individual pod or component tile in this view will bring up its information, including a **Summary**, a list of **Events**, your **Manifest**, and **Parameters** _(Image 13)._
 
@@ -108,14 +108,14 @@ You can also use this screen to edit or delete applications.
 
 ![Image 13: Individual information](<../../../.gitbook/assets/image (254).png>)
 
-### 5.3 Sync Policies
+### Sync policies
 
 From the detailed tile summary you can also set your sync policies, such as automation, resource pruning, and self healing _(Image 14)._
 
 ![Image 14: Sync Policy](<../../../.gitbook/assets/image (11).png>)
 
-### 5.4 Logs
+### Logs
 
-You can click on the "Logs" tab in your detailed summary page to view the applicable logs for your selected pod _(Image 15)._ You can filter, follow, snooze, copy, or download any logs.
+You can click on the **Logs** tab in your detailed summary page to view the applicable logs for your selected pod _(Image 15)._ You can filter, follow, snooze, copy, or download any logs.
 
 ![Image 15: Logs](<../../../.gitbook/assets/image (106).png>)

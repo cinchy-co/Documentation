@@ -1,6 +1,6 @@
-# Custom Results in the Network Map
+# Custom results in the Network Map
 
-**Focus the results of your Network Map to show only the data that you really want to see** with our new URL parameters.
+**Focus the results of your Network Map to show only the data that you want to see** with our new URL parameters.
 
 {% hint style="info" %}
 This feature was added in version 5.20 of the Cinchy platform.

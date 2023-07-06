@@ -358,7 +358,7 @@ WHERE [Deleted] IS NULL AND [Table]='HR.Employees'
 In this example it would set \[Multi-Link Field Name] to values with \[Cinchy Id] 1, 2, and 3.
 The version after each Cinchy Id should be 1."
 
-Columns do not "Allow Linking" by default. Check the properties of the column in the original table and make sure that in “Show Advanced” the “Allow Linking” checkmark box is selected. If you do not have Design Table access to that table, you will need to ask someone who does to do it.
+Columns don't "Allow Linking" by default. Check the properties of the column in the original table and make sure that in “Show Advanced” the “Allow Linking” checkmark box is selected. If you do not have Design Table access to that table, you will need to ask someone who does to do it.
 
 ## I have access to a table but I cannot see any rows
 
@@ -428,7 +428,7 @@ SET @nbdays = @inputDays;
 SELECT @nbdays;
 ```
 
-## Null values are not updating correctly in Salesforce using the data sync
+## Null values aren't updating correctly in Salesforce using the data sync
 
 When performing a data sync with a Salesforce target, you need to replace nulls with '#N/A' in the source. You can use ISNULL(\[Column],'#N/A') in the source query. The following is a link to the Salesforce documentation related to this topic:
 
