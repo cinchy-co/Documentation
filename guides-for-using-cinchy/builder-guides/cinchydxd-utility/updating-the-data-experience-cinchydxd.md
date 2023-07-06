@@ -14,7 +14,7 @@ description: 'This page outlines Step 4 of Deploying CinchyDXD: Updating the Dat
 
 ## Introduction
 
-There are a few updates that are required in the Data Experience that has been created in your source environment. You do not want to have to repeat the updates in both the source and target environments. The upcoming section will show how to update the data experience in the source environment so that you can then re-package and reinstall in the target environment.
+There are a few updates that are required in the Data Experience that has been created in your source environment. You don't want to have to repeat the updates in both the source and target environments. The upcoming section will show how to update the data experience in the source environment so that you can then re-package and reinstall in the target environment.
 
 ## 1. Table Updates
 

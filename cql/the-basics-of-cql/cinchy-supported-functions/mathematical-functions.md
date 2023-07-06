@@ -10,7 +10,7 @@ The mathematical functions covered in this section are:
 
 ## ABS
 
-&#x20;A mathematical function that returns the absolute (positive) value of the specified numeric expression. (`ABS` changes negative values to positive values. `ABS` has no effect on zero or positive values.)
+A mathematical function that returns the absolute (positive) value of the specified numeric expression. (`ABS` changes negative values to positive values. `ABS` has no effect on zero or positive values.)
 
 #### Syntax
 
@@ -74,7 +74,7 @@ ASIN ( float_expression )
 
 #### Arguments
 
-&#x20;`float_expression`\
+`float_expression`\
 An expression of either type **float** or of a type that can implicitly convert to float. Only a value ranging from -1.00 to 1.00 is valid. Values outside this range return NULL and ASIN will report a domain error.
 
 #### Return Types
@@ -316,7 +316,7 @@ SELECT FLOOR(1.2), FLOOR(-1.2), FLOOR(0)
 Returns the natural logarithm of the specified **float** expression in SQL Server.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -473,7 +473,7 @@ SELECT @x + ' to the power of ' + @y + ' is: ' + CONVERT(VARCHAR, POWER(@x,@y))
 Returns radians when a numeric expression, in degrees, is entered.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -506,7 +506,7 @@ SELECT @degrees + ' degrees in radians is: ' + CONVERT(VARCHAR, RADIANS(@degrees
 ## RAND  <a href="#rand-transact-sql" id="rand-transact-sql"></a>
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 

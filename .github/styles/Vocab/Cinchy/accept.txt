@@ -1,5 +1,4 @@
 timesheet(s)
-Cinchy
 endhint
 [Cc]onfig
 CLI
@@ -7,7 +6,9 @@ API(s)
 Grafana
 OAuth
 kubectl
+[Vv]CPU(s)
 [Ss]ubnet
 Istio
-{% endtab %}
-(\*\*(.*)?.(zip|exe)+\*\*)
+endcode 
+endtab 
+Kibana

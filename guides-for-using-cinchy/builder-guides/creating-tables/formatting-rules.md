@@ -29,7 +29,7 @@ Table in which to apply the conditional formatting.
 
 ### 1.5 Highlight Columns
 
-Columns to apply the conditional formatting rules to. You do not need to include any row condition columns within the highlight columns.
+Columns to apply the conditional formatting rules to. You don't need to include any row condition columns within the highlight columns.
 
 ## 2. Example
 

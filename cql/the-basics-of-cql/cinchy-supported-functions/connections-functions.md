@@ -24,7 +24,7 @@ JSON_ESCAPE(@Parameter)
 
 | Argument  | Description                                                                                                       |
 | --------- | ----------------------------------------------------------------------------------------------------------------- |
-| Parameter | The parameter value that you want to escape in order to be safe to use inside a JSON document without breaking it |
+| Parameter | The parameter value that you want to escape to be safe to use inside a JSON document without breaking it |
 
 #### Example 1
 

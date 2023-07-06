@@ -10,7 +10,7 @@ To perform a Full Text Search, [each column in your query will need a Full Text 
 Full Text Searching is currently **only available** for those using SQL Server 2016 or up.
 {% endhint %}
 
-## 1. CONTAINS
+## CONTAINS
 
 CONTAINS is a predicate used in the WHERE clause of a CQL SELECT statement to perform full-text search on full-text indexed columns containing character-based data types.
 
@@ -49,17 +49,17 @@ WHERE CONTAINS([Title], @SearchWord)
 
 <figure><img src="../../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
 
-## 2. CONTAINS Modifiers
+## CONTAINS Modifiers
 
 There are many modifiers you can add to your CONTAINS full text search query to receive more specific results.
 
-### 2.1 Prefix Term
+### Prefix Term
 
 Using a prefix term modifier will return results with your specified prefix. For example, the prefix **'over'** could return overview, overture, overruled, etc.
 
 To use a prefix term, wrap your term in single, then double quotes and put an asterix at the end: _'"example\*"'_
 
-#### **General Syntax:**
+#### General Syntax
 
 ```sql
 DECLARE @SearchWord VARCHAR(30)
@@ -69,7 +69,7 @@ FROM [domain].[table]
 WHERE CONTAINS([column], '"*"')
 ```
 
-#### **Example Syntax**
+#### Example Syntax
 
 In this example, we have modified our search so that we receive all results where the any word in the **Title** column contains the prefix **'over'.**
 
@@ -81,11 +81,11 @@ FROM [Product].[Cinchy Wiki Documentation]
 WHERE CONTAINS([Title], '"over*"')
 ```
 
-#### Example Results
+#### Example results
 
 <figure><img src="../../../.gitbook/assets/image (520).png" alt=""><figcaption></figcaption></figure>
 
-### 2.2 Generation Term
+### Generation Term
 
 A generation term modifier searches for all the different tenses and conjugations of a verb or both the singular and plural forms of a noun (an **inflectional** search) or for synonymous forms of a specific word (a **thesaurus** search).
 
@@ -131,7 +131,7 @@ WHERE CONTAINS([column], 'FORMSOF(THESAURUS, "")')
 
 #### Example Syntax (Thesaurus)
 
-In this example, we want to return all results where the data in the Summary column matches the meaning of our search term.&#x20;
+In this example, we want to return all results where the data in the Summary column matches the meaning of our search term.
 
 _I.E. "install" might return results with "deploy", "configure", "set", etc._
 
@@ -143,12 +143,12 @@ FROM [Product].[Cinchy Wiki Documentation]
 WHERE CONTAINS([Summary], 'FORMSOF(THESAURUS, "install")') 
 ```
 
-### 2.3 Proximity Term
+### Proximity Term
 
 A _proximity term_ will return words or phrases that are near to each other. You can also specify the maximum number of non-search terms that separate the first and last search terms.
 
 {% hint style="info" %}
-**Note** that proximity terms in Cinchy do not adhere to the specified order written in the query. You will receive results of both "term 1+term 2" as well as "term 2+term 1".
+**Note** that proximity terms in Cinchy don't adhere to the specified order written in the query. You will receive results of both "term 1+term 2" as well as "term 2+term 1".
 {% endhint %}
 
 #### General Syntax
@@ -177,7 +177,7 @@ WHERE CONTAINS([summary], 'NEAR((first, page), 2)')
 
 <figure><img src="../../../.gitbook/assets/image (526).png" alt=""><figcaption></figcaption></figure>
 
-### 2.4 Boolean Operators
+### Boolean Operators
 
 With CONTAINS, you can use **AND, OR, and AND NOT** to specify your results.
 
@@ -237,7 +237,7 @@ WHERE CONTAINS([summary], @SearchWord)
 
 <figure><img src="../../../.gitbook/assets/image (516).png" alt=""><figcaption></figcaption></figure>
 
-### 2.5 NEAR
+### NEAR
 
 You can use this modifier to return results with terms that appear near each other (i.e. within the same data cell).
 
@@ -267,9 +267,9 @@ WHERE CONTAINS([title], @SearchWord)
 
 <figure><img src="../../../.gitbook/assets/image (743).png" alt=""><figcaption></figcaption></figure>
 
-## 3. FREETEXT
+## FREETEXT
 
-The FREETEXT command provides the ability to search for a matched term based on the meaning of the terms as opposed to the exact character string.&#x20;
+The FREETEXT command provides the ability to search for a matched term based on the meaning of the terms as opposed to the exact character string.
 
 At a high level, this commands finds matches based on separating the string into individual words, determining inflectional versions of the word and using a thesaurus to expand or replace the term to improve the search.
 
@@ -291,7 +291,7 @@ WHERE FREETEXT([summary], @SearchWord);
 
 #### Example Syntax
 
-In this example, we want to return all results where the data in the Summary column matches the meaning of our search phrase.&#x20;
+In this example, we want to return all results where the data in the Summary column matches the meaning of our search phrase.
 
 I.E. "installation guide" might return results with "deployment instructions", "set up guide", etc.
 

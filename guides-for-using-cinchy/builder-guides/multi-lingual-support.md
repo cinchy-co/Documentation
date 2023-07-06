@@ -74,11 +74,11 @@ Subtag from the Languages table. User's preferences will be used if not specifie
 * If the translation exists in the language and region specified, it will be returned.
 * If the translation exists in the language but not the specified region, it will still be translated and returned.
 * If the GUID exists but it is not available in the specified language, the default text in the Literals table will return.
-* If the GUID does not exist or you do not have permission to it, it will return the GUID back as the translation.
+* If the GUID does not exist or you don't have permission to it, it will return the GUID back as the translation.
 
 ## 2. System Tables <a href="#system-tables" id="system-tables"></a>
 
-There are 3 tables in Cinchy to provide language support.&#x20;
+There are 3 tables in Cinchy to provide language support.
 
 1. \[Cinchy].\[Literal Groups]
 2. \[Cinchy].\[Literals]

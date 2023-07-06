@@ -8,7 +8,7 @@ description: This page contains various Integration Guides
 
 There are various methods you can use to establish a connection between Cinchy and Microsoft Excel, such as using **Basic Auth, Personal Access Tokens, or Bearer Tokens.**
 
-Review each section below for further details.&#x20;
+Review each section below for further details.
 
 ### 1.1 Prerequisites
 
@@ -16,7 +16,7 @@ Excel connects to queries within Cinchy, therefore prior to using any of the con
 
 The structure of the URL endpoint is _\<your Cinchy instance URL>/API/\<the name of your query>._ You might optionally have querystring parameters at the end as well.
 
-For example: `http://your.cinchy.instance.domain/API/YourQueryDomain/API Test`&#x20;
+For example: `http://your.cinchy.instance.domain/API/YourQueryDomain/API Test`
 
 {% hint style="warning" %}
 Note that for **Basic Authentication** with a result format of CSV we will use a slightly different URL endpoint.\
@@ -44,17 +44,17 @@ Example:
 
 <figure><img src="../../.gitbook/assets/image (558).png" alt=""><figcaption><p>Image 2: Add the query as your source</p></figcaption></figure>
 
-3. Once you've entered that text either **click the check mark to the left of the input box** or **click away** and it will automatically attempt to run the expression.&#x20;
-4. The data may return in HTML format initially and not be what you're expecting. To correct this:&#x20;
+3. Once you've entered that text either **click the check mark to the left of the input box** or **click away** and it will automatically attempt to run the expression.
+4. The data may return in HTML format initially and not be what you're expecting. To correct this:
    1. Click the **Data Source Settings.**
-   2. Select **Basic** and enter the credentials for a Cinchy User Account that has access to run this query.&#x20;
-   3. Click **OK.**&#x20;
+   2. Select **Basic** and enter the credentials for a Cinchy User Account that has access to run this query.
+   3. Click **OK.**
    4. Within the Edit Permissions dialogue, click **OK**.
    5. Within the **Data Source Settings dialogue**, click **Close.**
    6. Click **Refresh Preview.**
    7. Click **Close & Load** and your dataset will be displayed in the Excel worksheet.
 
-### &#x20;1.3 Using a Personal Access Token
+### 1.3 Using a Personal Access Token
 
 1. If needed, [follow the documentation here](../user-guides/user-preferences/personal-access-tokens.md) to **generate a new Personal Access Token (PAT).**
 2. Launch Excel and navigate to **Data > From Web.**
@@ -92,7 +92,7 @@ Example:
 
 There are various methods you can use to establish a connection between Cinchy and Power BI, such as using **Basic Auth, Personal Access Tokens, or Bearer Tokens.**
 
-Review each section below for further details.&#x20;
+Review each section below for further details.
 
 ### 2.1 Prerequisites
 
@@ -100,7 +100,7 @@ Power BI connects to queries within Cinchy, therefore prior to using any of the 
 
 The structure of the URL endpoint is _\<your Cinchy instance URL>/API/\<the name of your query>._ You might optionally have querystring parameters at the end as well.
 
-For example: `http://your.cinchy.instance.domain/API/YourQueryDomain/API Test`&#x20;
+For example: `http://your.cinchy.instance.domain/API/YourQueryDomain/API Test`
 
 {% hint style="warning" %}
 Note that for **Basic Authentication** with a result format of CSV we will use a slightly different URL endpoint.\
@@ -192,7 +192,7 @@ In this example we also changed the name from Query1 to Product Roadmap and have
 Cinchy exposes a Tableau Web Data Connector that provides access to Cinchy Saved Queries as data sources in Tableau. Tableau versions 2019.2+ are supported.
 
 {% hint style="info" %}
-&#x20;An active internet connection is required in order to use the Web Data Connector.
+An active internet connection is required to use the Web Data Connector.
 {% endhint %}
 
 ### 3.1 Prerequisites

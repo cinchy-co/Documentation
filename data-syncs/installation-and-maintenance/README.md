@@ -2,7 +2,7 @@
 
 ## Installation & Maintenance
 
-To use Cinchy Data Sync, there are some environmental configurations that will need to be set up. The following section contains the pre-requisites and server size required for setting up both a batch data sync and a real-time data sync.&#x20;
+To use Cinchy Data Sync, there are some environmental configurations that will need to be set up. The following section contains the pre-requisites and server size required for setting up both a batch data sync and a real-time data sync.
 
 ## Prerequisites
 

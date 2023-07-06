@@ -32,7 +32,7 @@ In this example, a **Contacts Form (Example Test)** form will be created to pull
 * **Table:** This will be the table that you want to push/pull information to/from. In this example, we are pulling information from the **Contacts.People** table.
 * **Name:** The name of your form. In this example we have called it **Contacts Form (Example Test)**
 * **Display Name:** Enter a display name for your form. In this example we have called it **Contacts Form (Example Test)**
-* **Lookup Label:** This option will designate how you pull information from your assigned table. We have designated the **Contacts.People.Name** column from the Contacts table, in order to pull information based on a contact name.
+* **Lookup Label:** This option will designate how you pull information from your assigned table. We have designated the **Contacts.People.Name** column from the Contacts table, to pull information based on a contact name.
 * **Is Accordion:** Select this checkbox if you want the form to open in accordion format or not.
 * **Brand:** Select a branding colour for this form.
 

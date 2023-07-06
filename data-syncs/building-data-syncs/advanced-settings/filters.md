@@ -24,7 +24,7 @@ A filter on your source is optional. It relies on a source specific syntax for f
 | Cinchy     | For Cinchy syntax is the CQL where clause (without the where expression)                                                    |
 | SqlServer  | For SqlServer the syntax is the T-SQL where clause (without the where expression)                                           |
 
-This is only available if using a table, not a query. For queries, include the filter in the query itself.&#x20;
+This is only available if using a table, not a query. For queries, include the filter in the query itself.
 
 {% hint style="warning" %}
 There can only be one \<Filter>  for each source. To specify more than one condition, use AND/OR to allow logical combination of multiple expressions.
@@ -32,7 +32,7 @@ There can only be one \<Filter>  for each source. To specify more than one condi
 
 ## Conditional filters
 
-**For REST API, SOAP 1.2, Kafka Topic, Platform Event, and Parquet sources**, there is a **"Conditional" option for source filters** in the Connections UI.&#x20;
+**For REST API, SOAP 1.2, Kafka Topic, Platform Event, and Parquet sources**, there is a **"Conditional" option for source filters** in the Connections UI.
 
 Once selected you will be able to define the conditions upon which data is pulled into your source via the filter. After data is pulled from the source, new conditional UI filters down the set of returned records to ones that match the defined conditions.
 

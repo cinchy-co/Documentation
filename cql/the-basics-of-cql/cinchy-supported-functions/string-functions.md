@@ -27,7 +27,7 @@ SELECT ASCII('A') SELECT ASCII(1)
 This function converts an **int** between 0 to 255 to a character value. Outside of this range, the CHAR function will return a NULL value.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -42,9 +42,9 @@ CHAR (integer_expression) return_type char(1)
 
 #### Arguments <a href="#arguments" id="arguments"></a>
 
-_`integer_expression`_&#x20;
+_`integer_expression`_
 
-An integer from 0 through 255.&#x20;
+An integer from 0 through 255.
 
 #### Return Types <a href="#return-types" id="return-types"></a>
 
@@ -62,7 +62,7 @@ SELECT CHAR(100)
 This function searches for one character expression inside another character string. If found, the function will return the starting position of the first expression.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -92,7 +92,7 @@ If CHARINDEX does not find _expressionToFind_ within _expressionString_, CHARIND
 
 Returning the starting position of an expression‌
 
-&#x20;This example searches for `a` in the string value.
+This example searches for `a` in the string value.
 
 ```sql
 SELECT CHARINDEX('a', 'this is a beautiful day');
@@ -121,7 +121,7 @@ CONCAT ( string1, string2 [, stringN ]
 #### Arguments <a href="#arguments-2" id="arguments-2"></a>
 
 _`string`_\
-A string to concatenate to the other strings.&#x20;
+A string to concatenate to the other strings.
 
 #### Return Types <a href="#return-types-1" id="return-types-1"></a>
 
@@ -139,7 +139,7 @@ SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;
 This function returns an integer value measuring the difference between the SOUNDEX () values of two different character expressions.strings.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -154,7 +154,7 @@ DIFFERENCE ( string , string )
 
 #### Arguments <a href="#arguments-3" id="arguments-3"></a>
 
-_`string`_&#x20;
+_`string`_
 
 An alphanumeric expression of character data. _string_ can be a constant, variable, or column.‌
 
@@ -173,7 +173,7 @@ SELECT SOUNDEX('day'), SOUNDEX('monday'), DIFFERENCE('day', 'monday');
 Returns a value formatted with the specified format. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -188,15 +188,15 @@ FORMAT ( value, format )
 
 #### Arguments <a href="#arguments-4" id="arguments-4"></a>
 
-_`value`_&#x20;
+_`value`_
 
 Expression of a supported data type to format. For a list of valid types, see the table in the following Remarks section.‌
 
-_`format`_&#x20;
+_`format`_
 
 **nvarchar** format pattern.‌
 
-The _format_ argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)").&#x20;
+The _format_ argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)").
 
 #### Return Types <a href="#return-types-3" id="return-types-3"></a>
 
@@ -257,13 +257,13 @@ LEFT ( string , integer )
 
 #### Arguments <a href="#arguments-5" id="arguments-5"></a>
 
-_`string`_&#x20;
+_`string`_
 
 Is an expression of character or binary data. It can be of any data type, except **text** or **ntext**, that can be implicitly converted to **varchar** or **nvarchar**. Otherwise, use the CAST function to explicitly convert _string_.‌
 
 _`integer`_
 
-Is a positive integer that specifies how many characters of the _string_ will be returned.&#x20;
+Is a positive integer that specifies how many characters of the _string_ will be returned.
 
 #### Return Types <a href="#return-types-4" id="return-types-4"></a>
 
@@ -282,7 +282,7 @@ SELECT LEFT('abcdefghi, 2) FROM domain.table
 Returns the number of characters of the specified string expression, excluding trailing spaces.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -297,7 +297,7 @@ LEN ( string )
 
 #### Arguments <a href="#arguments-6" id="arguments-6"></a>
 
-_`string`_&#x20;
+_`string`_
 
 Is the string expression.‌
 
@@ -325,7 +325,7 @@ LOWER ( string )
 
 #### Arguments <a href="#arguments-7" id="arguments-7"></a>
 
-_`string`_&#x20;
+_`string`_
 
 Is an expression of character or binary data.
 
@@ -353,7 +353,7 @@ LTRIM ( string )
 
 #### Arguments <a href="#arguments-8" id="arguments-8"></a>
 
-_`string`_&#x20;
+_`string`_
 
 Is an expression of character or binary data.‌
 
@@ -374,7 +374,7 @@ SELECT LTRIM(' Remove trailing spaces.')
 Returns the starting position of the first occurrence of a pattern in a specified expression.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -389,11 +389,11 @@ PATINDEX ( '%pattern%' , expression )
 
 #### Arguments <a href="#arguments-10" id="arguments-10"></a>
 
-_`pattern`_&#x20;
+_`pattern`_
 
 Is a character expression that contains the sequence to be found. Wildcard characters can be used; however, the % character must come before and follow _pattern._
 
-_`expression`_&#x20;
+_`expression`_
 
 Is an expression, typically a column that is searched for the specified pattern. _expression_ is of the string data type category.‌
 
@@ -421,15 +421,15 @@ REPLACE ( string , string_toBeReplaced , string_replacedBy )
 
 #### Arguments <a href="#arguments-12" id="arguments-12"></a>
 
-_`string`_&#x20;
+_`string`_
 
 Is the string expression to be searched.‌
 
-_`string_toBeReplaced`_&#x20;
+_`string_toBeReplaced`_
 
-Is the string to be found in the _string_.&#x20;
+Is the string to be found in the _string_.
 
-_`string_replacedBy`_&#x20;
+_`string_replacedBy`_
 
 Is the replacement string.
 
@@ -458,9 +458,9 @@ REVERSE ( string )
 
 #### Arguments <a href="#arguments-14" id="arguments-14"></a>
 
-_`string`_&#x20;
+_`string`_
 
-It is an expression of a string or binary data type.&#x20;
+It is an expression of a string or binary data type.
 
 #### Return Types <a href="#return-types-13" id="return-types-13"></a>
 
@@ -486,13 +486,13 @@ RIGHT ( string , integer )
 
 #### Arguments <a href="#arguments-15" id="arguments-15"></a>
 
-_`string`_&#x20;
+_`string`_
 
 Is an expression of character or binary data. ‌
 
-_`integer`_&#x20;
+_`integer`_
 
-Is a positive integer that specifies how many characters of _string_ will be returned.&#x20;
+Is a positive integer that specifies how many characters of _string_ will be returned.
 
 #### Return Types <a href="#return-types-14" id="return-types-14"></a>
 
@@ -520,7 +520,7 @@ RTRIM ( string )
 
 #### Arguments <a href="#arguments-16" id="arguments-16"></a>
 
-_`string`_&#x20;
+_`string`_
 
 Is an expression of character data. ‌
 
@@ -541,7 +541,7 @@ SELECT RTRIM('Removes trailing spaces. ');
 Returns a four-character (SOUNDEX) code to evaluate the similarity of two strings.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -556,7 +556,7 @@ SOUNDEX ( string )
 
 #### Arguments <a href="#arguments-17" id="arguments-17"></a>
 
-_`string`_&#x20;
+_`string`_
 
 Is an alphanumeric expression of character data. SOUNDEX converts an alphanumeric string to a four-character code that is based on how the string sounds when spoken.
 
@@ -577,7 +577,7 @@ SELECT SOUNDEX ('Raul'), SOUNDEX ('Rahul');
 Returns a string of repeated spaces.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -594,7 +594,7 @@ SPACE ( integer_expression )
 
 _`integer_expression`_
 
-Is a positive integer that indicates the number of spaces.&#x20;
+Is a positive integer that indicates the number of spaces.
 
 #### Return Types <a href="#return-types-17" id="return-types-17"></a>
 
@@ -613,7 +613,7 @@ SELECT 'John' + ',' + SPACE(2) + 'Doe'
 Returns character data converted from numeric data. The character data is right-justified, with a specified length and decimal precision.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -628,15 +628,15 @@ STR ( float_expression [ , length [ , decimal ] ] )
 
 #### Arguments <a href="#arguments-19" id="arguments-19"></a>
 
-_`float_expression`_&#x20;
+_`float_expression`_
 
 Is an expression of approximate numeric (**float**) data type with a decimal point.‌
 
-_`length`_&#x20;
+_`length`_
 
 Is the total length. This includes decimal point, sign, digits, and spaces. The default is 10.‌
 
-_`decimal`_&#x20;
+_`decimal`_
 
 Is the number of places to the right of the decimal point. _decimal_ must be less than or equal to 16. If _decimal_ is more than 16 then the result is truncated to sixteen places to the right of the decimal point.‌
 
@@ -658,7 +658,7 @@ GO
 The STUFF function inserts a string into another string. It deletes a specified length of characters in the first string at the start position and then inserts the second string into the first string at the start position.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -673,21 +673,21 @@ STUFF ( string , start , length , replaceWith )
 
 #### Arguments <a href="#arguments-23" id="arguments-23"></a>
 
-_`string`_&#x20;
+_`string`_
 
-Is an expression of character data.&#x20;
+Is an expression of character data.
 
-_`start`_&#x20;
+_`start`_
 
-Is an integer value that specifies the location to start deletion and insertion.&#x20;
+Is an integer value that specifies the location to start deletion and insertion.
 
-_`length`_&#x20;
+_`length`_
 
-Is an integer that specifies the number of characters to delete.&#x20;
+Is an integer that specifies the number of characters to delete.
 
 _`replaceWith`_
 
-Is an expression of character data.&#x20;
+Is an expression of character data.
 
 #### Return Types <a href="#return-types-22" id="return-types-22"></a>
 
@@ -714,17 +714,17 @@ SUBSTRING ( expression , start , length )
 
 #### Arguments <a href="#arguments-24" id="arguments-24"></a>
 
-_`expression`_&#x20;
+_`expression`_
 
 Is a **character**, **binary**, **text**, **ntext**, or **image** expression.‌
 
-_`start`_&#x20;
+_`start`_
 
-Is an integer or **bigint** expression that specifies where the returned characters start.&#x20;
+Is an integer or **bigint** expression that specifies where the returned characters start.
 
-_`length`_&#x20;
+_`length`_
 
-Is a positive integer or **bigint** expression that specifies how many characters of the _expression_ will be returned.&#x20;
+Is a positive integer or **bigint** expression that specifies how many characters of the _expression_ will be returned.
 
 #### Return Types <a href="#return-types-23" id="return-types-23"></a>
 
@@ -732,7 +732,7 @@ Returns character data if _expression_ is one of the supported character data ty
 
 **Example**‌
 
-The following example shows how to return only a part of a character string.&#x20;
+The following example shows how to return only a part of a character string.
 
 ```sql
 SELECT SUBSTRING('Rahul', 1, 1) AS FirstCharOfName
@@ -750,9 +750,9 @@ UPPER ( string )
 
 #### Arguments <a href="#arguments-28" id="arguments-28"></a>
 
-_`string`_&#x20;
+_`string`_
 
-Is an expression of character data.&#x20;
+Is an expression of character data.
 
 #### Return Types <a href="#return-types-27" id="return-types-27"></a>
 

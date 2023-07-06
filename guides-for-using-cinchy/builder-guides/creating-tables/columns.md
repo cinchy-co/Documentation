@@ -17,7 +17,7 @@ description: This page guides you through the various column types available on 
 
 ## 1. System Columns
 
-Cinchy contains system columns used to perform various functionality. These columns cannot be modified directly by a user.&#x20;
+Cinchy contains system columns used to perform various functionality. These columns cannot be modified directly by a user.
 
 {% hint style="warning" %}
 You cannot create a new column with the same name as a system column.
@@ -25,7 +25,7 @@ You cannot create a new column with the same name as a system column.
 
 ### 1.1 Cinchy Id
 
-Cinchy Id is a unique identifier assigned automatically to all records within a normal table. The Cinchy Id is associated with the record permanently and is never reassigned even if the record is deleted.&#x20;
+Cinchy Id is a unique identifier assigned automatically to all records within a normal table. The Cinchy Id is associated with the record permanently and is never reassigned even if the record is deleted.
 
 ### 1.2 Version & Draft Version
 
@@ -71,7 +71,7 @@ The last user to either modify the record (`Draft Version` != 0) or approve the 
 
 ### 1.6 Deleted By & Deleted
 
-If a record is deleted, it will show up in the Recycle Bin.&#x20;
+If a record is deleted, it will show up in the Recycle Bin.
 
 #### Without Change Approvals Enabled
 
@@ -158,7 +158,7 @@ See [Linking Data](broken-reference) to get more context on how they are used.
 {% hint style="info" %}
 You want to pick identifying columns for linking, such as IDs or Name. Generally you want to use unique columns, but in some cases it is a better user experience to pick an almost unique field for readability.
 
-I.e. Full name may not be unique, but it is much easier to understand than Employee ID.&#x20;
+I.e. Full name may not be unique, but it is much easier to understand than Employee ID.
 {% endhint %}
 
 #### Allow Display in Linked Views
@@ -169,7 +169,7 @@ See [Linking Data ](linking-data.md)to get more context and tips.
 
 #### Encrypt
 
-If [Data At Rest Encryption](../../additional-guides/enable-data-at-rest-encryption.md) is enabled, you will see the option of Encrypt for columns. If this is checked, the column will be encrypted within the database. This is useful for hiding sensitive information so that people with access to the database directly do not see these fields.
+If [Data At Rest Encryption](../../additional-guides/enable-data-at-rest-encryption.md) is enabled, you will see the option of Encrypt for columns. If this is checked, the column will be encrypted within the database. This is useful for hiding sensitive information so that people with access to the database directly don't see these fields.
 
 There is no difference in user experience within the Cinchy platform. The data is displayed in plain text on the UI or via the query APIs.
 
@@ -227,9 +227,9 @@ When creating a calculated column, you will notice the option to have it cached 
 
 ![](<../../../.gitbook/assets/image (304).png>)
 
-A **cached calculated column** stores your data for fast retrieval and querying. Calculated columns are defaulted to cached. This is an actual column in your table that is based on a defined CQL formula. This column will recalculate when data is changed **in the same row.**&#x20;
+A **cached calculated column** stores your data for fast retrieval and querying. Calculated columns are defaulted to cached. This is an actual column in your table that is based on a defined CQL formula. This column will recalculate when data is changed **in the same row.**
 
-In the below example, the **Label** column is a calculated column that connects various name columns together. You can see that _"Connect your data"_ appears in each label. If you then wanted to change the name in row one from _"Connect your data"_ to _"Connect **all** your data"_, only that specific row would recalculate automatically to update the label. To update any other row (within this table or another) with a calculated column that references that data, you would need to manually make changes to each in order to prompt a recalculation.
+In the below example, the **Label** column is a calculated column that connects various name columns together. You can see that _"Connect your data"_ appears in each label. If you then wanted to change the name in row one from _"Connect your data"_ to _"Connect **all** your data"_, only that specific row would recalculate automatically to update the label. To update any other row (within this table or another) with a calculated column that references that data, you would need to manually make changes to each to prompt a recalculation.
 
 ![](<../../../.gitbook/assets/image (205).png>)
 

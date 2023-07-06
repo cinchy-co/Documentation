@@ -19,7 +19,7 @@ You have the ability to display and edit these table and column GUIDs within the
 **Column GUIDs** must be unique to the table.
 
 1. Table GUIDs can be found under **Design Table > Info > GUID** _(Image 1)._
-2. &#x20;Click on the pencil icon to edit the GUID.
+2. Click on the pencil icon to edit the GUID.
 
 {% hint style="warning" %}
 GUIDs must adhere to Cinchy's supported format.
@@ -28,7 +28,7 @@ GUIDs must adhere to Cinchy's supported format.
 * Displayed in five groups, separated by hyphens.
 * The groups take the form of 8-4-4-4-12 characters, for a total of 36 characters (32 hexadecimal characters and 4 hyphens).
 
-**Example: 123e4567-e89b-12d3-a456-426614174000**&#x20;
+**Example: 123e4567-e89b-12d3-a456-426614174000**
 {% endhint %}
 
 {% hint style="danger" %}
@@ -48,7 +48,7 @@ GUIDs must adhere to Cinchy's supported format.
 * Displayed in five groups, separated by hyphens.
 * The groups take the form of 8-4-4-4-12 characters, for a total of 36 characters (32 hexadecimal characters and 4 hyphens).
 
-**Example: 123e4567-e89b-12d3-a456-426614174000**&#x20;
+**Example: 123e4567-e89b-12d3-a456-426614174000**
 {% endhint %}
 
 {% hint style="danger" %}

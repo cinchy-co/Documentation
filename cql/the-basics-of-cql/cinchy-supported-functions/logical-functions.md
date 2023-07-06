@@ -12,7 +12,7 @@ The logical functions covered in this section are:
 The CHOOSE function returns an item at the specified index from a list of values in Cinchy.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -99,7 +99,7 @@ ORDER BY
 IFF returns one of two values which is depending on if the Boolean expression evaluates TRUE or FALSE in the Cinchy.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.&#x20;
+This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -112,7 +112,7 @@ You can review the full list of in-progress function translations[ here](../cql-
 IIF ( condition, true_value, false_value )
 ```
 
-#### Arguments&#x20;
+#### Arguments
 
 _`boolean_expression`_\
 A valid Boolean expression.
@@ -131,7 +131,7 @@ Returns the data type with the highest precedence from the types in _`true_value
 
 #### Remarks
 
-IIF is a second version of writing a CASE expression. It evaluates the Boolean expression which was passed as the first argument and then returns either TRUE or FALSE based on the result of the evaluation. The_`true_value`_is returned if the Boolean expression is TRUE, and the_`false_value`_is returned if the Boolean expression is FALSE or unknown.&#x20;
+IIF is a second version of writing a CASE expression. It evaluates the Boolean expression which was passed as the first argument and then returns either TRUE or FALSE based on the result of the evaluation. The_`true_value`_is returned if the Boolean expression is TRUE, and the_`false_value`_is returned if the Boolean expression is FALSE or unknown.
 
 #### Example
 

@@ -15,13 +15,13 @@ description: This page outlines the indexing and partitioning options on your ta
 
 ## 1. Indexing
 
-Indexing is used to improve query performance on frequently searched columns within large data sets. Without an index, Cinchy begins a data search with the first row of a table and then follows through the entire table sequentially to find all relevant rows. The larger the table(s), the slower the search.&#x20;
+Indexing is used to improve query performance on frequently searched columns within large data sets. Without an index, Cinchy begins a data search with the first row of a table and then follows through the entire table sequentially to find all relevant rows. The larger the table(s), the slower the search.
 
-If the table you are searching for has an index for its column(s), however, Cinchy is able to search much quicker.&#x20;
+If the table you are searching for has an index for its column(s), however, Cinchy is able to search much quicker.
 
 In the below example, we will set up a query for a **Full Name** field. When you create an index for that field, an indexed version of your table is created that is sorted sequentially/alphabetically.
 
-When you run your query on this index, that table will be searched using a binary search.&#x20;
+When you run your query on this index, that table will be searched using a binary search.
 
 A binary search will not start from the top record. It will check the _middle_ record with your search criteria for a match. If a match it not found, it will check whether the found value is larger or smaller than the desired value. If smaller, it reruns the data check with the top half of the data, finding the median record. If larger, it reruns the data check with the bottom half of the data, finding the median record. It will repeat until your data is found.
 
@@ -93,8 +93,8 @@ When using a Columnar Index, you won't be able to add any new columns to your ta
 
 Partitioning data in a table is essentially organizing and dividing it into units that can then be spread across more than one file in a database. The benefits of this are:
 
-* Improved efficiency of accessing and transferring data while maintaining its integrity.&#x20;
-* Maintenance operations can be performed on one or more partitions more efficiently.&#x20;
+* Improved efficiency of accessing and transferring data while maintaining its integrity.
+* Maintenance operations can be performed on one or more partitions more efficiently.
 * Query performance is improved based on the types of queries most frequently run.
 
 When creating a partition in Cinchy, you use the values of a specified column to map the rows of a table into partitions.

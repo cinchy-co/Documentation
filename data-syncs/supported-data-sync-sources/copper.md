@@ -4,7 +4,7 @@
 
 [Copper](https://www.copper.com/) is a **Customer Relationship Management (CRM)** software. Copper is a tool focused on automation and simplicity, most known for its Google Workspace integration.
 
-**Example Use Case:** You have customer information currently sitting in the Copper CRM software. You want to sync this data into Cinchy through a batch sync in order to liberate your data from the silo.
+**Example Use Case:** You have customer information currently sitting in the Copper CRM software. You want to sync this data into Cinchy through a batch sync to liberate your data from the silo.
 
 {% hint style="success" %}
 The Copper source supports batch syncs.

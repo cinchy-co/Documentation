@@ -24,7 +24,7 @@ description: This page guides you through creating table in Cinchy.
 2\. Select either a Standard or a Spatial Table _(Image 2)_, per the descriptions below.
 
 * **Spatial Table:** A spatial table allows you to create geography and geometry column types, as well as geospatial indexes. You will not be able to create partitions on a spatial table.
-* **Standard Table:** You cannot create geography or geometry columns in a standard table.&#x20;
+* **Standard Table:** You cannot create geography or geometry columns in a standard table.
 
 {% hint style="info" %}
 You cannot convert from one type to another and will have to either recreate your table or link to another table with geospatial columns.
@@ -109,7 +109,7 @@ You may have further mandatory or optional data to input depending on your selec
 2\. Select either a Standard or a Spatial Table _(Image 10)_, per the descriptions below.
 
 * **Spatial Table:** A spatial table allows you to create geography and geometry column types, as well as geospatial indexes. You will not be able to create partitions on a spatial table.
-* **Standard Table:** You cannot create geography or geometry columns in a standard table.&#x20;
+* **Standard Table:** You cannot create geography or geometry columns in a standard table.
 
 {% hint style="info" %}
 You cannot convert from one type to another and will have to either recreate your table or link to another table with geospatial columns.
@@ -184,7 +184,7 @@ The column names in your .csv file must not conflict with[ System Columns.](colu
 
 ![Image 20: Step 7, Using the Filter tab](<../../../.gitbook/assets/image (388).png>)
 
-&#x20;
+
 
 8\. Click on the **Permission tab** in the left navigation bar. Here, you may set permissions for who can use this view. By default, it is set to All Users _(Image 21)._
 

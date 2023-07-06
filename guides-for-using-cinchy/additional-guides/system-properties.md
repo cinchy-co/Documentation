@@ -34,12 +34,12 @@ The Default of the Systems Properties table is set up as follows _(Image 1)_:
 ![Image 1: Default Set Up](<../../.gitbook/assets/image (482).png>)
 
 {% hint style="info" %}
-Please note that this table is case sensitive.&#x20;
+Please note that this table is case sensitive.
 {% endhint %}
 
 ## 2. Configuring the Table Values
 
-The System Properties requirements can be changed by an admin user simply by editing the 'Value' columns where applicable:&#x20;
+The System Properties requirements can be changed by an admin user simply by editing the 'Value' columns where applicable:
 
 ### Default Time Zone
 
@@ -67,7 +67,7 @@ This property specifies how many days until a password expires. This defaults to
 
 ### Password Attempts Allowed
 
-This property specifies how many bad password attempts a user can make before they are locked out of the system. The default is 3 but this can be set to be more or less attempts by changing the number in the 'Value' column.&#x20;
+This property specifies how many bad password attempts a user can make before they are locked out of the system. The default is 3 but this can be set to be more or less attempts by changing the number in the 'Value' column.
 
 ### System Lockout Duration (minutes)
 

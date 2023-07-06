@@ -69,11 +69,11 @@ Steps 4 and 5 are only needed if you deployed your Cinchy instance along a base 
 
 <figure><img src="../../.gitbook/assets/image (437).png" alt=""><figcaption><p>Image 4: Update Permitted Redirects</p></figcaption></figure>
 
-5. Within the Cinchy platform, navigate to the **\[Cinchy].\[Applets]** table _(Image 5)._&#x20;
+5. Within the Cinchy platform, navigate to the **\[Cinchy].\[Applets]** table _(Image 5)._
 
 <figure><img src="../../.gitbook/assets/image (646).png" alt=""><figcaption><p>Image 5: The Applets table</p></figcaption></figure>
 
-5. Navigate to the row where the Name column is **"Connections"** _(Image 6)._&#x20;
+5. Navigate to the row where the Name column is **"Connections"** _(Image 6)._
 
 <figure><img src="../../.gitbook/assets/image (505).png" alt=""><figcaption><p>Image 6: Navigate to the row where the Name column is "Connections" </p></figcaption></figure>
 

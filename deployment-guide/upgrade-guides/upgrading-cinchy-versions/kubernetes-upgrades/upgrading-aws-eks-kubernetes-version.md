@@ -40,7 +40,7 @@ bash create.sh
 
 7. Verify the changes are as expected and then accept.
 
-This process will first upgrade the managed master node version and then the worker nodes. During the upgrade process, existing pods get migrated to new worker nodes and all pods will get migrated to new upgraded worker nodes automatically.&#x20;
+This process will first upgrade the managed master node version and then the worker nodes. During the upgrade process, existing pods get migrated to new worker nodes and all pods will get migrated to new upgraded worker nodes automatically.
 
 The below two commands can be used to verify that all pods are being migrated to new worker nodes.
 

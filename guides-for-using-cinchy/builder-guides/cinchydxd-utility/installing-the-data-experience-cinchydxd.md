@@ -24,7 +24,7 @@ Below are the details that will be required for the installation environment:
 - UserID: \<target user id>
 - Password: \<target password>
 
-## 2. Install the Data Experience&#x20;
+## 2. Install the Data Experience
 
 Using PowerShell you will now install the Data Experience you have exported out of Cinchy.
 
@@ -61,7 +61,7 @@ The parameters executed in PowerShell can exist on one line in PowerShell, howev
 {% endhint %}
 
 Sample:\
-&#x20;`` .\CinchyDXD.ps1 install` ``\
+`` .\CinchyDXD.ps1 install` ``\
 `` -s "<target Cinchy url>" ` ``\
 `` -u "<target user id>" ` ``\
 `` -p "<target password>" ` ``\

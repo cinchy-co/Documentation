@@ -25,6 +25,6 @@ WHERE [Name] != Marc
 
 * **When writing an update statement,** run it more than once. If it results in an update each time, return to your query and troubleshoot.
   * This is especially relevant anywhere the statement can be run repeatedly, such as in APIs or Post Sync Scripts.
-* **In data syncs,** ensure that your data types are matched properly.&#x20;
+* **In data syncs,** ensure that your data types are matched properly.
   * For example, if the source is text and the target is data, even if the values are the same, it will update and create unnecessary version history.
 * **When performing a data sync**, run it more than once. If it creates an update each time, return to your configuration and troubleshoot.

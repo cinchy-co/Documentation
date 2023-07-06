@@ -1,11 +1,11 @@
-# Setting up Alerts
+# Set up alerts
 
-## 1. Monitoring and Alerting
+## Monitoring and alerting
 
-OpenSearch comes with the ability to set up alerts based on any number of monitors. You can then push these alerts via email, should you desire.
+OpenSearch comes with the ability to set up alerts based on any number of monitors. You can then push these alerts via email, should you desire. 
 
 {% hint style="success" %}
-Prior to setting up a monitor or alert, ensure that you have [added your data source as an index pattern](setting-up-alerts.md#2.1-setting-up-an-index).
+Before you set up a monitor or alert, ensure that you have [added your data source as an index pattern](setting-up-alerts.md#2.1-setting-up-an-index).
 {% endhint %}
 
 Definitions:
@@ -17,7 +17,7 @@ Definitions:
 | Action      | The information that you want the monitor to send out after being triggered. Actions have a _destination_, a message subject, and a message body.     |
 | Destination | A reusable location for an action. Supported locations are Amazon Chime, Email, Slack, or custom webhook.                                             |
 
-### 1.1 Create your Destination
+### Create your destination
 
 Your destination will be where you want your alerts to be pushed to. OpenSearch supports various options, however this guide will focus on email.
 
@@ -25,19 +25,19 @@ Your destination will be where you want your alerts to be pushed to. OpenSearch 
 
 <figure><img src="../../../../.gitbook/assets/image (361).png" alt=""><figcaption><p>Image 1: Click on Alerting</p></figcaption></figure>
 
-2\. Click on the **Destinations Tab > Add Destination**
+2. Click on the **Destinations Tab > Add Destination**
 
-3\. Add a **name** to label your destination and select **Email** as type _(Image 2)_
+3. Add a **name** to label your destination and select **Email** as type _(Image 2)_
 
 <figure><img src="../../../../.gitbook/assets/image (352).png" alt=""><figcaption><p>Image 2: Update your destination</p></figcaption></figure>
 
-4\. You will need to assign a Sender. This is the email address that the alert will send from when you specify this specific destination. To add a new Sender, click **Manage Senders** _(Image 3)._
+4. You will need to assign a Sender. This is the email address that the alert will send from when you specify this specific destination. To add a new Sender, click **Manage Senders** _(Image 3)._
 
 <figure><img src="../../../../.gitbook/assets/image (367).png" alt=""><figcaption><p>Image 3: Manage your Senders</p></figcaption></figure>
 
-5\. Click **Add Sender**
+5. Click **Add Sender**
 
-6\. Add in the following information _(Image 4):_
+6. Add in the following information _(Image 4):_
 
 * **Sender Name**
 * **Email Address**
@@ -46,26 +46,26 @@ Your destination will be where you want your alerts to be pushed to. OpenSearch 
 * **Encryption**
 
 {% hint style="danger" %}
-Ensure that you[ authenticate the Sender](setting-up-alerts.md#3.2-authenticate-your-sender), else your alert will not work.
+Ensure that you[ authenticate the Sender](setting-up-alerts.md#3.2-authenticate-your-sender), else your alert will not work. 
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/image (610).png" alt=""><figcaption><p>Image 4: Configure your Sender</p></figcaption></figure>
 
-7\. You will need to assign your **Recipients.** This is the email address(es) that will receive the alert when you specify this specific destination. To add a new Recipient, you can either type their email(s) into the box, or click **Manage Senders to create an email group** _(Image 5)._
+1. You will need to assign your **Recipients.** This is the email address(es) that will receive the alert when you specify this specific destination. To add a new Recipient, you can either type their email(s) into the box, or click **Manage Senders to create an email group** _(Image 5)._
 
 <figure><img src="../../../../.gitbook/assets/image (518).png" alt=""><figcaption><p>Image 5: Configure your Recipients</p></figcaption></figure>
 
-8\. Click **Update** to finalize your Destination.
+8. Click **Update** to finish your Destination.
 
-### 1.2 Authenticate your Sender
+### Authenticate your sender
 
-You will need to authenticate your sender to allow emails to come through. Please contact Cinchy Customer Support to help you with this step.
+You will need to authenticate your sender for emails to come through. Please contact cinchy Customer Support to help you with this step.
 
 * **Via email:** support@cinchy.com
 * **Via phone:** 1-888-792-6051
 * **Through the support portal**: [Support Portal](http://support.cinchy.com/)
 
-### 1.3 Create your Monitor
+### Create your monitor
 
 Your monitor is a job that runs on a defined schedule and queries OpenSearch indices. The results of these queries are then used as input for one or more _**triggers**_**.**
 
@@ -73,11 +73,11 @@ Your monitor is a job that runs on a defined schedule and queries OpenSearch ind
 
 <figure><img src="../../../../.gitbook/assets/image (232).png" alt=""><figcaption><p>Image 6: Create your Monitor</p></figcaption></figure>
 
-2\. Under **Monitor Details**, add in the following information _(Image 7)._
+2. Under **Monitor Details**, add in the following information _(Image 7)._
 
 * **Monitor Name**
 * **Monitor Type** (This example uses **Per Bucket**)
-  * Whereas query-level monitors run your specified query and then check whether the query’s results triggers any alerts, bucket-level monitors let you select fields to create buckets and categorize your results into those buckets.&#x20;
+  * Whereas query-level monitors run your specified query and then check whether the query’s results triggers any alerts, bucket-level monitors let you select fields to create buckets and categorize your results into those buckets.
   * The alerting plugin runs each bucket’s unique results against a script you define later, so you have finer control over which results should trigger alerts. Each of those buckets can trigger an alert, but query-level monitors can only trigger one alert at a time.
 * **Monitor Defining Method:** the way you want to define your query and triggers. (This example uses **Visual Editor**)
   * Visual definition works well for monitors that you can define as “some value is above or below some threshold for some amount of time.”
@@ -86,20 +86,20 @@ Your monitor is a job that runs on a defined schedule and queries OpenSearch ind
 
 <figure><img src="../../../../.gitbook/assets/image (745).png" alt=""><figcaption><p>Image 7: Define your Monitor details</p></figcaption></figure>
 
-3\. Under **Data Source** add in the following information _(Image 8):_
+3. Under **Data Source** add in the following information _(Image 8):_
 
 * **Index:** Define the index you want to use as a source for this monitor
 * **Time Field:** Select the time field that will be used for the x-axis of your monitor
 
 <figure><img src="../../../../.gitbook/assets/image (83).png" alt=""><figcaption><p>Image 8: Configure your Data Source</p></figcaption></figure>
 
-4\. The **Query** section will appear differently depending on the **Monitor Defining Method** selected in step 2 _(Image 9)_. This example is using the visual editor.
+4. The **Query** section will appear differently depending on the **Monitor Defining Method** selected in step 2 _(Image 9)_. This example is using the visual editor.
 
 To define a monitor visually, select an aggregation (for example, `count()` or `average()`), a data filter if you want to monitor a subset of your source index, and a group-by field if you want to include an aggregation field in your query. At least one group-by field is required if you’re defining a bucket-level monitor. Visual definition works well for most monitors.
 
 <figure><img src="../../../../.gitbook/assets/image (222).png" alt=""><figcaption><p>Image 9: Define your Query</p></figcaption></figure>
 
-### 1.4 Add a Trigger
+### Add a trigger
 
 A trigger is a condition that, if met, will generate an alert.
 
@@ -107,17 +107,17 @@ A trigger is a condition that, if met, will generate an alert.
 
 <figure><img src="../../../../.gitbook/assets/image (225).png" alt=""><figcaption><p>Image 10: Add a Trigger</p></figcaption></figure>
 
-2\. Under **New Trigger**, define your trigger name and severity level (with 1 being the highest) _(Image 11)._
+2. Under **New Trigger**, define your trigger name and severity level (with 1 being the highest) _(Image 11)._
 
 <figure><img src="../../../../.gitbook/assets/image (616).png" alt=""><figcaption><p>Image 11: Define your Trigger.</p></figcaption></figure>
 
-3\. Under **Trigger Conditions**, you will specify the thresholds for the query metrics you set up previously _(Image 12)._ In the below example, our trigger will be met if our **COUNT threshold goes ABOVE 10000.**
+3. Under **Trigger Conditions**, you will specify the thresholds for the query metrics you set up previously _(Image 12)._ In the below example, our trigger will be met if our **COUNT threshold goes ABOVE 10000.**
 
 You can also use **keyword filters** to drill down into a more specific subset of data from your data source.
 
 <figure><img src="../../../../.gitbook/assets/image (379).png" alt=""><figcaption><p>Image 12: Trigger Conditions</p></figcaption></figure>
 
-4\. In the **Action** section you will define what happens if the trigger condition is met _(Image 13)._ Enter the following information to set up your **Action:**
+4. In the **Action** section you will define what happens if the trigger condition is met _(Image 13)._ Enter the following information to set up your **Action:**
 
 * **Action Name**
 * [**Destination** ](setting-up-alerts.md#3.1-create-your-destination)
@@ -128,16 +128,16 @@ You can also use **keyword filters** to drill down into a more specific subset o
 
 <figure><img src="../../../../.gitbook/assets/image (287).png" alt=""><figcaption><p>Image 13: Define your Actions</p></figcaption></figure>
 
-5\. Click **Send Test Message**, if you want to test that the alert functions correctly.
+5. Click **Send Test Message**, if you want to test that the alert functions correctly.
 
-6\. Click **Save.**
+6. Click **Save.**
 
-## Example Alerts
+## Example alerts
 
 * [Monitor Cluster Metrics](https://opensearch.org/docs/1.3/monitoring-plugins/alerting/monitors/#create-cluster-metrics-monitor)
 * [Endpoint Monitoring with Blackbox Exporter](https://github.com/prometheus/blackbox\_exporter)
 
-### 1. Alerting on Stream Errors
+### Alerting on Stream Errors
 
 In this example, we are pushing an alert based on errors. We will monitor our Connections stream for any instance of 'error', and push out an alert when our trigger threshold is hit.
 
@@ -154,7 +154,7 @@ This is how our example monitor will appear; it shows when in the last 15 days o
 
 <figure><img src="../../../../.gitbook/assets/image (517).png" alt=""><figcaption><p>Image 15: Example monitor</p></figcaption></figure>
 
-2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is more than one stderr in our Connections stream _(Image 16)._ Input the following:
+2. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is more than one stderr in our Connections stream _(Image 16)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**
@@ -164,7 +164,7 @@ The trigger threshold will be visible on your monitoring graph as a red line.
 
 <figure><img src="../../../../.gitbook/assets/image (277).png" alt=""><figcaption><p>Image 16: Example Trigger</p></figcaption></figure>
 
-### 2. Alerting on Kubernetes Restarts
+### Alerting on Kubernetes restarts
 
 In this example, we are pushing an alert based on the kubectl.kubernetes.io/restartedAt annotation, which updates whenever your pod restarts. We will monitor this annotation across our entire product-mssql instance, and push out an alert when our trigger threshold is hit.
 
@@ -191,7 +191,7 @@ The trigger threshold will be visible on your monitoring graph as a red line.
 
 <figure><img src="../../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Image 19: Trigger Conditions</p></figcaption></figure>
 
-### 3. Alerting on Status Codes
+### Alerting on status codes
 
 In this example, we are pushing an alert based on status codes. We will monitor our entire instance for 400 status codes and push out an alert when our trigger threshold is hit.
 
@@ -208,7 +208,7 @@ This is how our example monitor will appear (note that there are no instances of
 
 <figure><img src="../../../../.gitbook/assets/image (70).png" alt=""><figcaption><p>Image 21: Example Monitor</p></figcaption></figure>
 
-2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is at least one 400 status code across out instance _(Image 22)._ Input the following:
+2. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is at least one 400 status code across out instance _(Image 22)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**

@@ -148,7 +148,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 ### Data types
 
-The MongoDB Collection Data Source obtains BSON documents from MongoDB. BSON, short for Binary JSON, is a binary-encoded serialization of JSON-like documents. Like JSON, BSON sup­ports the em­bed­ding of doc­u­ments and ar­rays&#x20;
+The MongoDB Collection Data Source obtains BSON documents from MongoDB. BSON, short for Binary JSON, is a binary-encoded serialization of JSON-like documents. Like JSON, BSON sup­ports the em­bed­ding of doc­u­ments and ar­rays
 
 with­in other documents and arrays. BSON also has extensions that allow representation of data types that are not part of the JSON spec. For ex­ample, BSON makes a distinction between `Int32` and `Int64`.
 
@@ -187,17 +187,17 @@ A retry configuration will automatically retry HTTP Requests on failure based on
 To set up a retry specification:
 
 1. Select "Add Retry Configuration" from the Source tab.
-2. Select your Delay Strategy.&#x20;
+2. Select your Delay Strategy.
 
 * **Linear Backoff:** Defines a delay of approximately n seconds where n = current retry attempt.
-* **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.&#x20;
+* **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
   * _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
 
 3\. Input your Max Attempts. The maximum number of retries allowed is 10.
 
 <figure><img src="../../../.gitbook/assets/image (431).png" alt=""><figcaption></figcaption></figure>
 
-4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.&#x20;
+4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.
 
 {% hint style="info" %}
 Retry conditions are only evaluated if the response code is not 2xx Success.
@@ -214,7 +214,7 @@ If there are multiple "Attribute Match" blocks within a Retry Condition, **all h
 {% hint style="warning" %}
 The Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of "5\[0-9]\[0-9]".\
 \
-**For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".&#x20;
+**For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image (750).png" alt=""><figcaption></figcaption></figure>

@@ -34,7 +34,7 @@ SELECT my\_scalar('a') FROM \[Cinchy].\[Tables] WHERE \[Deleted] IS NULL AND \[C
 
 ## Use a Scalar-Valued UDF in a Calculated Column
 
-Once you confirm that the UDF returns the expected result though a query, a calculated column can be include. &#x20;
+Once you confirm that the UDF returns the expected result though a query, a calculated column can be include. 
 
 ### Calculations
 

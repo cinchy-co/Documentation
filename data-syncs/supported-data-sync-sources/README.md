@@ -99,7 +99,7 @@ Advantages of using a fixed-width file include:
 * **Stores** these events durably and reliably for as long as you want.
 * **Processes and reacts** to the event streams in real-time and retrospectively.
 
-Those events are organized and durably stored in **topics.** These topics are then partitioned over a number of buckets located on different Kafka brokers.&#x20;
+Those events are organized and durably stored in **topics.** These topics are then partitioned over a number of buckets located on different Kafka brokers.
 
 Event streaming thus ensures a continuous flow and interpretation of data so that the right information is at the right place, at the right time [for your key use cases.](https://kafka.apache.org/powered-by)
 
@@ -131,7 +131,7 @@ Common uses of LDAP include when:
 
 ### MongoDB collection (CDC triggered)
 
-[MongoDB](https://www.mongodb.com/what-is-mongodb/features) is a scalable, flexible NoSQL document database platform known for its horizontal scaling and load balancing capabilities, which has given application developers an unprecedented level of flexibility and scalability. Data changes in Cinchy (CDC) can be used to trigger a data sync from a MongoDB data source to a specified target. The attributes of the CDC Event are available to use as parameters within the  Data Source Definition to narrow the scope of the request, e.g. a lookup.&#x20;
+[MongoDB](https://www.mongodb.com/what-is-mongodb/features) is a scalable, flexible NoSQL document database platform known for its horizontal scaling and load balancing capabilities, which has given application developers an unprecedented level of flexibility and scalability. Data changes in Cinchy (CDC) can be used to trigger a data sync from a MongoDB data source to a specified target. The attributes of the CDC Event are available to use as parameters within the  Data Source Definition to narrow the scope of the request, e.g. a lookup.
 
 {% content-ref url="mongodb-collection-cinchy-event-triggered.md" %}
 [mongodb-collection-cinchy-event-triggered.md](mongodb-collection-cinchy-event-triggered.md)
@@ -191,7 +191,7 @@ REST APIs work by fielding **requests for a resource** and **returning all relev
 
 Salesforce objects are database tables that permit you to store data that's specific to an organization. Salesforce objects are of two types:
 
-* Standard Objects: Standard objects are the kind of objects that are provided by salesforce.com such as users, contracts, reports, dashboards, etc.&#x20;
+* Standard Objects: Standard objects are the kind of objects that are provided by salesforce.com such as users, contracts, reports, dashboards, etc.
 * Custom Objects: Custom objects are those objects that are created by users. They supply information that's unique and essential to their organization. They are the heart of any application and provide a structure for sharing data.
 
 {% content-ref url="salesforce-object-bulk-api.md" %}
@@ -212,13 +212,13 @@ Salesforce Platform Events are secure and scalable messages that contain data. P
 
 [Salesforce](https://www.salesforce.com/ca/products/what-is-salesforce/) is a cloud-based CRM software designed for service, marketing, and sales.
 
-Push Topic events provide a secure and scalable way to receive notifications for changes to Salesforce data that match a SOQL query you define.&#x20;
+Push Topic events provide a secure and scalable way to receive notifications for changes to Salesforce data that match a SOQL query you define.
 
 You can use PushTopic events to:
 
-* Receive notifications of Salesforce record changes, including create, update, delete, and undelete operations.&#x20;
-* Capture changes for the fields and records that match a SOQL query.&#x20;
-* Receive change notifications for only the records a user has access to based on sharing rules.&#x20;
+* Receive notifications of Salesforce record changes, including create, update, delete, and undelete operations.
+* Capture changes for the fields and records that match a SOQL query.
+* Receive change notifications for only the records a user has access to based on sharing rules.
 * Limit the stream of events to only those events that match a subscription filter.
 
 {% content-ref url="salesforce-push-topic.md" %}

@@ -54,7 +54,7 @@ CinchyDXD is a downloadable utility used to move Data Experiences (DX) from one 
 
 #### Cinchy ID
 
-Cinchy ID is a unique identifier assigned automatically to all records within a normal table. The Cinchy ID is associated with the record permanently and is never reassigned even if the record is deleted.&#x20;
+Cinchy ID is a unique identifier assigned automatically to all records within a normal table. The Cinchy ID is associated with the record permanently and is never reassigned even if the record is deleted.
 
 #### Cinchy Query Language (CQL)
 
@@ -88,7 +88,7 @@ Cinchy End-Users are able to:
 
 #### Connections Experience
 
-The Connections Experience is an integral part of Cinchy's [Data Collaboration](cinchy-glossary.md#data-collaboration) offerings. Serving as the front-end UI for performing[ Data Syncs](cinchy-glossary.md#data-synchronizations), the Connections Experience can be accessed natively in your Cinchy browser in order to create, configure, and manage the data being synced in and out of the platform. The user friendly interface makes synchronizing your data across a range of apps and softwares easy.
+The Connections Experience is an integral part of Cinchy's [Data Collaboration](cinchy-glossary.md#data-collaboration) offerings. Serving as the front-end UI for performing[ Data Syncs](cinchy-glossary.md#data-synchronizations), the Connections Experience can be accessed natively in your Cinchy browser to create, configure, and manage the data being synced in and out of the platform. The user friendly interface makes synchronizing your data across a range of apps and softwares easy.
 
 ## D
 
@@ -177,10 +177,10 @@ It uses your [Entitlements](cinchy-glossary.md#entitlements) for viewable tables
 
 Queries are the fundamental calculations that allow data to be pushed, pulled, and manipulated across a range of Cinchy features. A query can be used to call data, change data, delete data, or whatever functionality your use case requires. Cinchy comes out of the box with a native Query Builder and works with our proprietary [Cinchy Query Language.](cinchy-glossary.md#cinchy-query-language-cql)
 
-A Saved Query is merely a query that has been saved in order to be reused. These can be accessed via the Saved Queries table in Cinchy, and you have access to view or run them based on your [entitlements.](cinchy-glossary.md#entitlements)
+A Saved Query is merely a query that has been saved for reuse. These can be accessed via the Saved Queries table in Cinchy, and you have access to view or run them based on your [entitlements.](cinchy-glossary.md#entitlements)
 
 ## R
 
 #### Real Time Sync
 
-[A Real-Time Sync](data-syncs/building-data-syncs/types-of-data-syncs.md#2.-real-time-data-sync) is one of the two types of Data Syncs that you can perform using Cinchy. In real-time syncs, the Cinchy Listener picks up changes in the source **immediately as they occur.** These syncs do not need to be manually triggered or scheduled using an external scheduler. Setting up a real-time sync does require an extra step of defining a listener configuration in order to execute properly.
+[A Real-Time Sync](data-syncs/building-data-syncs/types-of-data-syncs.md#2.-real-time-data-sync) is one of the two types of Data Syncs that you can perform using Cinchy. In real-time syncs, the Cinchy Listener picks up changes in the source **immediately as they occur.** These syncs don't need to be manually triggered or scheduled using an external scheduler. Setting up a real-time sync does require an extra step of defining a listener configuration to execute properly.

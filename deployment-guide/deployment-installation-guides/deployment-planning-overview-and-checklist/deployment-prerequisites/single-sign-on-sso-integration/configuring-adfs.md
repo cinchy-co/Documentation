@@ -20,7 +20,7 @@ description: >-
 
 5. Under **Specify Display Name**, enter a Display Name of your choice.
 
-6. Under **Configure Certificates**, do not select any certificates.
+6. Under **Configure Certificates**, don't select any certificates.
 
 7. Under **Configure URL**, select **Enable support for the SAML 2.0 SSO Web SSO protocol**.
 

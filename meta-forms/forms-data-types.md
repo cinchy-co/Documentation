@@ -61,7 +61,7 @@ To enable an ImageUrl data format type on your form:
 
 Enable dynamic content in your Forms with iFrames — a new Data Format Type used to render content within the display of a record. Instead of taking the value of your table column and outputting it in a form field (text input, date field, non-editable text), we’re outputting an iFrame and setting its source attribute to be the value you have in your column
 
-An inline frame (iframe) is a HTML element that loads another HTML page within the document. It essentially puts another webpage within the parent page. They are commonly used for advertisements, embedded videos, web analytics and interactive content.&#x20;
+An inline frame (iframe) is a HTML element that loads another HTML page within the document. It essentially puts another webpage within the parent page. They are commonly used for advertisements, embedded videos, web analytics and interactive content.
 
 The below example shows an interactive AI chat box embedded into the Form.
 

@@ -68,7 +68,7 @@ Parameters use the column name or alias as defined in the CDC Event Listener Con
 </code></pre>
 
 {% hint style="danger" %}
-Parameter names are case sensitive when used in the Connection configuration. Parameter matching is performed using literal string replacements. Names should not contain spaces (spaces are automatically removed), and should have differing prefixes.&#x20;
+Parameter names are case sensitive when used in the Connection configuration. Parameter matching is performed using literal string replacements. Names should not contain spaces (spaces are automatically removed), and should have differing prefixes.
 {% endhint %}
 
 The following set of parameters will be available on every event even if they're not present in the listener config
@@ -196,7 +196,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 ### Data types
 
-The MongoDB Collection Data Source obtains BSON documents from MongoDB. BSON, short for Binary JSON, is a binary-encoded serialization of JSON-like documents. Like JSON, BSON sup­ports the em­bed­ding of doc­u­ments and ar­rays&#x20;
+The MongoDB Collection Data Source obtains BSON documents from MongoDB. BSON, short for Binary JSON, is a binary-encoded serialization of JSON-like documents. Like JSON, BSON sup­ports the em­bed­ding of doc­u­ments and ar­rays
 
 with­in other documents and arrays. BSON also con­tains extensions that allow representation of data types that are not part of the JSON spec. For ex­ample BSON makes a distinction between Int32 and Int64.
 

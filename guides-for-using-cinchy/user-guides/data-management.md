@@ -32,7 +32,7 @@ Users are only able to insert or delete rows based on their access. If you have 
 
 Importing data allows you to add new rows of data into a table. If you wish to perform a sync instead please [refer to the CLI](../../data-syncs/cli-commands-list.md). Importing data acts as a smart copy-and-paste of new data into an existing table.
 
-Importing the first row of your CSV as a header row will match the headers to the column names within your table. Any columns that cannot be matched will be ignored as well as any columns you do not have edit permissions for.
+Importing the first row of your CSV as a header row will match the headers to the column names within your table. Any columns that cannot be matched will be ignored as well as any columns you don't have edit permissions for.
 
 Users can import data from a CSV file to an existing table in Cinchy. Importing data into a Cinchy table only adds records to the table. This type of importing of data does not update or append existing records
 
@@ -88,8 +88,8 @@ To export data from a table, complete the following:
 
 Cinchy has the ability to have data change approvals turned on (configured by builders) when data is added or removed from a table view. A change approval process can be put into place for the addition or removal of specific data. If you have been identified as an "Approval" of data you will have the ability to:
 
-* approve a cell of data&#x20;
-* approve a row of data&#x20;
+* approve a cell of data
+* approve a row of data
 * reject a row of data
 
 To approve or reject a cell/row of data, complete the following:
@@ -148,7 +148,7 @@ To restore data from the recycle bin:
 
 3\. Right-click and select **Restore Row.**
 
-The restored row will now be visible in your table. &#x20;
+The restored row will now be visible in your table. 
 
 {% hint style="info" %}
 If Change Approvals are turned on, that row will need to be approved.

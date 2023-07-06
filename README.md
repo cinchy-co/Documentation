@@ -14,7 +14,7 @@ Data collaboration is the emergence of a common group of technologies that solve
 
 Data Collaboration solves the costly, time-consuming, and ineffective integration processes born from silo-ing your data in a traditional app-centric environment. Instead of your data serving your applications, data collaboration refocuses and pivots to a model where your data is at the forefront and is being served by your apps _(Image 1)._
 
-&#x20;
+
 
 <figure><img src=".gitbook/assets/image (366).png" alt=""><figcaption><p>Image 1: Apps serve your data</p></figcaption></figure>
 
@@ -60,9 +60,9 @@ Now, instead of connecting apps to gain access to data through costly point-to-p
 
 ## Not just connected, but autonomous.
 
-​Simply putting pipes between data silos, and centralizing a few housekeeping tasks, is not data collaboration. What that's actually doing is leading you down a path of managing endless copies. True data collaboration not only connects your data but upgrades it as part of an interconnected**,** autonomous network.&#x20;
+​Simply putting pipes between data silos, and centralizing a few housekeeping tasks, is not data collaboration. What that's actually doing is leading you down a path of managing endless copies. True data collaboration not only connects your data but upgrades it as part of an interconnected**,** autonomous network.
 
-**Autonomous data** exists independently of any application. It is self-controlled, self-protected, and self-describing. This creates a number of benefits compared to traditional app-dependent data, including the ability to simplify cross-application usage and reporting. And when **you use autonomous data in an interconnected network,** wherein individual contributors maintain their roles and priorities as they apply their unique skills and leadership autonomy in a problem solving process, you get: **Collaborative Autonomy.**&#x20;
+**Autonomous data** exists independently of any application. It is self-controlled, self-protected, and self-describing. This creates a number of benefits compared to traditional app-dependent data, including the ability to simplify cross-application usage and reporting. And when **you use autonomous data in an interconnected network,** wherein individual contributors maintain their roles and priorities as they apply their unique skills and leadership autonomy in a problem solving process, you get: **Collaborative Autonomy.**
 
 **Collaborative Autonomy** is thus the principle underpinning **Collaborative Intelligence, the entire basis of Dataware and Cinchy.**
 
@@ -78,7 +78,7 @@ Compare this with designing and maintaining controls within thousands of apps an
 
 ![Image 7: Dataware ensures consistency](<.gitbook/assets/image (376).png>)
 
-## Game Changer: Network Effects for IT delivery&#x20;
+## Game Changer: Network Effects for IT delivery
 
 **Dataware is a game changer for IT delivery:** it produces network effects, where each new solution actually speeds up delivery times and reduces costs
 
@@ -88,6 +88,6 @@ It's the same with **dataware.** The more you connect your data, the harder and 
 
 And it's also your time machine - you can have applications based on different points in time of your data, and it's all done through network-based design.
 
-Now that you know how efficient and secure things can be there is no going back.&#x20;
+Now that you know how efficient and secure things can be there is no going back.
 
-**Let's build the connected future, together.**&#x20;
+**Let's build the connected future, together.**

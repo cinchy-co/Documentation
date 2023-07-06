@@ -14,7 +14,7 @@ description: >-
 
 Before proceeding for the AKS version upgrade, ensure that you have enough IP address space, as this process will need to start new nodes and pods.
 
-You will need **more than 1024 IP addresses in total** when you have single Cinchy instance/environment.&#x20;
+You will need **more than 1024 IP addresses in total** when you have single Cinchy instance/environment.
 
 If you have limited IP address space, you can upgrade the master node and then the worker node pools **one by one**.
 
@@ -41,7 +41,7 @@ az aks get-upgrades --resource-group <myresourcegroup> --name <myaksclustername>
 dotnet Cinchy.DevOps.Automations.dll deployment-azure.json
 ```
 
-7\. Within your **cinchy.terraform/azure/aks\_cluster/** directory, run `bash create.sh` and accept the change.&#x20;
+7\. Within your **cinchy.terraform/azure/aks\_cluster/** directory, run `bash create.sh` and accept the change.
 
 8\. AKS has three node pools, one node pool per availability zone. Terraform will now start the upgrade of the master node and the zone1 node pool.
 

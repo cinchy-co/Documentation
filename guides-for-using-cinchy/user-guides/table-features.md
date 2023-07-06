@@ -59,7 +59,7 @@ Users can add, remove or rearrange the columns in a view based on how they need 
 ![Image 3: Display Columns](<../../.gitbook/assets/image (129).png>)
 
 {% hint style="warning" %}
-Display Columns **do not persist.** When you move away from the View, any modifications will be lost.
+Display Columns **don't persist.** When you move away from the View, any modifications will be lost.
 {% endhint %}
 
 ## 4. Sorting <a href="#sorting" id="sorting"></a>
@@ -73,7 +73,7 @@ Sorting can also be done by clicking on the Sorting button and selecting the col
 ![Image 5: Sorting via the Sort button](<../../.gitbook/assets/image (527).png>)
 
 {% hint style="warning" %}
-Sorting Columns **do not persist,** when you move away from the View any modifications will be lost.
+Sorting Columns **don't persist,** when you move away from the View any modifications will be lost.
 {% endhint %}
 
 ## 5. Scrolling

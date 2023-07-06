@@ -19,7 +19,7 @@ All objects need to be created in one source environment (ex: DEV). From there, 
 {% endhint %}
 
 * **Target Environment** is the environment in which the DX will be installed
-* The example DX is a simple Currency Converter DX that consists of&#x20;
+* The example DX is a simple Currency Converter DX that consists of
   * One (1) table
   * One (1) query
 * This example does not include the following:

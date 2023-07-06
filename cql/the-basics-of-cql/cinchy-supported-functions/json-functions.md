@@ -2,7 +2,7 @@
 
 ## Overview
 
-This page details the available JSON functions in Cinchy.The JSON functions covered in this section are:
+This page details the available JSON functions in Cinchy. The JSON functions covered in this section are:
 
 * [​ISJSON​](json-functions.md#isjson)
 * [​JSON\_VALUE ​](json-functions.md#json\_value)
@@ -10,7 +10,7 @@ This page details the available JSON functions in Cinchy.The JSON functions cove
 * [​JSON\_MODIFY​](json-functions.md#json\_modify)
 
 {% hint style="warning" %}
-These functions are not currently available in Postgres deployments.
+These functions aren't currently available in PostGres deployments.
 {% endhint %}
 
 ## ISJSON <a href="#isjson" id="isjson"></a>
@@ -32,7 +32,7 @@ ISJSON ( expression )
 | Return Value | Description                                                |
 | ------------ | ---------------------------------------------------------- |
 | 1            | Returned if the input is a valid JSON object or array.     |
-| 0            | Returned if the input is not a valid JSON object of array. |
+| 0            | Returned if the input isn't a valid JSON object of array. |
 | Null         | Returned if the expression is null.                        |
 
 #### Example 1

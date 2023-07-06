@@ -66,7 +66,7 @@ You can learn more about the Network Map [here.](../additional-guides/applicatio
 
 ### 4.1 Network Map Extra Parameters
 
-In Cinchy v5.2 we added the ability to include new parameters on the URL path for your network visualizer in order to focus your node view. You can now add **Target Node, Depth Level, and Max Depth Level** Parameters, if you choose.
+In Cinchy v5.2 we added the ability to include new parameters on the URL path for your network visualizer to focus your node view. You can now add **Target Node, Depth Level, and Max Depth Level** Parameters, if you choose.
 
 Example: \<base url>/apps/datanetworkvisualizer?**targetNode=\&maxDepth=\&depthLevel=**
 

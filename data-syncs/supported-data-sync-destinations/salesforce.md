@@ -33,7 +33,7 @@ The following parameters will help to define your data sync destination and how 
 {% endtab %}
 
 {% tab title="Filter" %}
-You have the option to add a destination filter to your data sync. Please review the documentation here for more information on [destination filters.](../building-data-syncs/advanced-settings/filters.md#target-filters)You can use the "Test Connection" button to ensure that your credentials are properly configured to access your destination.&#x20;
+You have the option to add a destination filter to your data sync. Please review the documentation here for more information on [destination filters.](../building-data-syncs/advanced-settings/filters.md#target-filters)You can use the "Test Connection" button to ensure that your credentials are properly configured to access your destination.
 
 If configured correctly, a "Connection Successful" pop-up will appear.
 

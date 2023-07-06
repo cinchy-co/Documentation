@@ -1,10 +1,10 @@
 # Custom Node Results
 
-## **Custom Results in the Network Map**
+## Custom results in the Network Map
 
 **Focus the results of your Network Map to show only the data that you really want to see** with our new URL parameters.
 
-You can now add **Target Node, Depth Level, and Max Depth Level** Parameters, if you choose.
+You can now add **Target Node, Depth Level, and Max Depth Level** Parameters.
 
 Example: \<base url>/apps/datanetworkvisualizer?**targetNode=\&maxDepth=\&depthLevel=**
 

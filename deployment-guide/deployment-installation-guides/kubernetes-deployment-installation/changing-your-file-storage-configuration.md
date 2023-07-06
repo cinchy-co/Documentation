@@ -48,15 +48,15 @@ In v5.2, Cinchy implemented the ability to free up database space by using **S3 
         },
 </code></pre>
 
-3. To utilize **Blob Storage or S3**, update each line with your own parameters.
+3. To use **Blob Storage or S3**, update each line with your own parameters.
 
-4. To utilize **Local storage**, leave each line blank with the exception of the **Connections\_Storage\_Type,** which should be set to Local:
+4. To use **Local storage**, leave each line blank except for the **Connections\_Storage\_Type,** which you should set to Local:
 
 ```json
           "connections_storage_type": "Local",
 ```
 
-5\. Run the deployment script by using the following command in the root directory of your **devops.automations repo:**
+5\. Run the deployment script by using the following command in the root directory of your **devops.automations** repository:
 
 ```bash
 dotnet Cinchy.DevOps.Automations.dll "deployment.json"
@@ -66,9 +66,9 @@ dotnet Cinchy.DevOps.Automations.dll "deployment.json"
 
 ## IIS file storage
 
-1. If you are using an IIS deployment, you will change your file storage config in the **Cinchy Web appsettings file.**
+1. If you are using an IIS deployment, you will change your file storage config in the **Cinchy Web AppSettings file.**
 
-2. Locate the **StorageType** section of the file and set it to either **"Local", "AzureBlobStorage" or "S3".**
+2. Locate the **StorageType** section of the file and set it to either **Local, AzureBlobStorage**, or **S3**.
 
 {% code overflow="wrap" %}
 ```json
@@ -79,7 +79,7 @@ dotnet Cinchy.DevOps.Automations.dll "deployment.json"
 ```
 {% endcode %}
 
-3. If you selected **"AzureBlobStorage",** fill out the following lines in the same file:
+3. If you selected **AzureBlobStorage**, fill out the following lines in the same file:
 
 ```json
   "AzureBlobStorageSettings": {
@@ -89,7 +89,7 @@ dotnet Cinchy.DevOps.Automations.dll "deployment.json"
   },
 ```
 
-4. If your selected **"S3"**, fill out the following lines in the same file:
+4. If you selected **S3**, fill out the following lines in the same file:
 
 ```json
   "S3Settings": {

@@ -60,7 +60,7 @@ Starting in Cinchy v5.4, you will have the option between Alpine or Debian based
 - When installing or upgrading your platform, you can use the following Docker image tags for the **listener, worker, and connections:**
   - **"5.x.x" - Alpine**
   - **"5.x.x-debian" - Debian**
-    {% endhint %}
+{% endhint %}
 
 ### Create your repositories
 
@@ -130,7 +130,7 @@ If you are deploying Cinchy v5 on AWS, you require the following:
 
 The template has two options available:
 
-- Use an existing VPC
+- Use an existing VPC.
 - Create a new one.
 
 #### Existing VPC
@@ -201,11 +201,11 @@ Cinchy Platform 5.4+ uses .NET Core 6.0.
 
 Clustering considerations are applicable to both the Web and Database tiers in the Cinchy deployment architecture.
 
-The web tier can be clustered by introducing a load balancer and scaling web server instances horizontally. Each node within Cinchy uses an in-memory cache of metadata information, and expiration of cached elements is triggered upon data changes that would impact that metadata. Data changes processed by one node wouldn't immediately be known to other nodes without establishing connectivity between them. The nodes must be able to communicate over either HTTP or HTTPS through an IP based binding on the IIS server that allows the broadcast of cache expiration messages. The port used for this communication is different from the standard port that's used by the application when a domain name is involved. Often for customers this means that a firewall port must be opened on these servers.
+The web tier can be clustered by introducing a load balancer and scaling web server instances horizontally. Each node within Cinchy uses an in-memory cache of metadata information, and expiration of cached elements is triggered upon data changes that would impact that metadata. Data changes processed by one node wouldn't be known to other nodes without establishing connectivity between them. The nodes must be able to communicate over either HTTP or HTTPS through an IP based binding on the IIS server that allows the broadcast of cache expiration messages. The port used for this communication is different from the standard port that's used by the application when a domain name is involved. Often for customers this means that a firewall port must be opened on these servers.
 
 The database tier relies on standard MS SQL Server failover clustering capabilities.
 
-### Scaling Considerations
+### Scaling Cconsiderations
 
 The web application oversees all interactions with Cinchy be it through the UI or connectivity from an application. It interprets/routes incoming requests, handles serialization/deserialization of data, data validation, enforcement of access controls, and the query engine to transform Cinchy queries into the physical representation for the database. The memory footprint for the application is low, as caching is limited to metadata, but CPU use grows with request volume and complexity(For example, insert/update operations are more complex than select operations). As the user population grows or request volume increases, there may be a need to add nodes.
 
@@ -213,4 +213,4 @@ The database tier relies on a persistence platform that scales vertically. As th
 
 ### Backups
 
-Outside of log files there is no other data generated & stored on the web servers by the application, which means backups are generally centered around the database. Since the underlying persistence platform is a MS SQL Server, this relies on standard procedures for this platform.
+Outside of log files there is no other data generated & stored on the web servers by the application, which means backups are centered around the database. Since the underlying persistence platform is a MS SQL Server, this relies on standard procedures for this platform.

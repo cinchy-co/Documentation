@@ -28,7 +28,7 @@ If you wish to restore a row that has been deleted, you can do so through the fo
 If you wish to restore a column that has been deleted or changed (such as a name change), you can do so through the following steps:
 
 {% hint style="warning" %}
-Note: You need **insert access** on the **Table table** in order to complete these steps.
+Note: You need **insert access** on the **Table table** to complete these steps.
 {% endhint %}
 
 {% hint style="info" %}
@@ -46,7 +46,7 @@ This method will revert the entire table, including any changes made after the c
 If you wish to restore a table that has been deleted, you can do so through the following steps:
 
 {% hint style="warning" %}
-Note: You need **insert access** on the **Tables table** in order to complete these steps.
+Note: You need **insert access** on the **Tables table** to complete these steps.
 {% endhint %}
 
 1. Navigate to the **\[Cinchy].\[Tables]** table.
