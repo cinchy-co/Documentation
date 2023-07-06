@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This section of Cinchy's documentation will guide you through the deployment process for Cinchy version 5: from planning all the way through to installation and upgrades.
+This section guides you through the deployment process for Cinchy version 5: from planning all the way through to installation and upgrades.
 
 * If you are looking to deploy Cinchy v5, please start here and read through all the sub-pages: [Deployment Planning Overview and Checklist](deployment-planning-overview-and-checklist/)
   * Once you have familiarized yourself with the above documentation, you may move on to either of the below guides, depending on your preference:

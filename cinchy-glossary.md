@@ -79,7 +79,7 @@ Cinchy ID is a unique identifier assigned automatically to all records within a 
 
 Cinchy End-Users are able to:
 
-* Create and save personal queries. Unlike traditional saved queries made by builders, _**personal**_ saved queries cannot be shared and are not auto-exposed as APIs.
+* Create and save personal queries. Unlike traditional saved queries made by builders, _**personal**_ saved queries cannot be shared and aren't auto-exposed as APIs.
 * Use Tables, Saved Queries, and Experiences created by [“Builders"](guides-for-using-cinchy/builder-guides/#what-is-a-builder)
 * Track version history for the full lifecycle of data
 * Bookmark and manage data

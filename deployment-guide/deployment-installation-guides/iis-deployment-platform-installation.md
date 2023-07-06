@@ -149,7 +149,7 @@ Example:
 
 Under the **"ExternalIdentityClaimSection"** section you'll see the following values.
 
-These values are used for SAML SSO. **If you are not using SSO, keep these values as blank**
+These values are used for SAML SSO. **If you aren't using SSO, keep these values as blank**
 
 <table><thead><tr><th width="546">Key</th><th>Value</th></tr></thead><tbody><tr><td>ExternalIdentityClaim > FirstName > ExternalClaimName</td><td></td></tr><tr><td>ExternalIdentityClaim > LastName > ExternalClaimName</td><td></td></tr><tr><td>ExternalIdentityClaim > Email > ExternalClaimName</td><td></td></tr><tr><td>ExternalIdentityClaim -> MemberOf -> ExternalClaimName</td><td></td></tr></tbody></table>
 
@@ -264,7 +264,7 @@ To enable HTTPS, the server certificate must be loaded and the standard IIS conf
    2. You will be prompted to change your password the first time you log in.
 
 {% hint style="info" %}
-To avoid users from having to access the application at a url that contains /Cinchy, you can use a downloadable IIS extension called URL Rewrite to remap requests hitting the \<base url> to \<base url>/Cinchy. The extension is available [here](https://www.iis.net/downloads/microsoft/url-rewrite).
+To avoid users from having to access the application at a URL that contains /Cinchy, you can use a downloadable IIS extension called URL Rewrite to remap requests hitting the \<base url> to \<base url>/Cinchy. The extension is available [here](https://www.iis.net/downloads/microsoft/url-rewrite).
 {% endhint %}
 
 ## Next steps

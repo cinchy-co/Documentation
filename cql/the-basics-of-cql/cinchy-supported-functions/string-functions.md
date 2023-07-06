@@ -566,7 +566,7 @@ varchar‌
 
 #### Example <a href="#examples-16" id="examples-16"></a>
 
-The following example shows the standard `SOUNDEX` values are returned for all consonants. Returning the `SOUNDEX` for `Raul` and `Rahul` returns the same SOUNDEX result because all vowels, the letter `y`, doubled letters, and the letter `h`, are not included.
+The following example shows the standard `SOUNDEX` values are returned for all consonants. Returning the `SOUNDEX` for `Raul` and `Rahul` returns the same SOUNDEX result because all vowels, the letter `y`, doubled letters, and the letter `h`, aren't included.
 
 ```sql
 SELECT SOUNDEX ('Raul'), SOUNDEX ('Rahul');

@@ -69,7 +69,7 @@ Sample:\
 `` -d "C:\CLI Output Logs" ` ``
 
 {% hint style="info" %}
-Be sure that the user(s) and group(s) required to install a DX are existing in your target environment. If they are not, PowerShell will generate an error message when you attempt to install the DX.
+Be sure that the user(s) and group(s) required to install a DX are existing in your target environment. If they aren't, PowerShell will generate an error message when you attempt to install the DX.
 {% endhint %}
 
 8\. Enter the install parameters into the PowerShell window _(Image 7)._

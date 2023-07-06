@@ -1,6 +1,6 @@
 # Advanced Settings
 
-The pages listed under this section are not required for most data syncs, but they can help you create more robust use cases when applied correctly.
+The pages listed under this section aren't required for most data syncs, but they can help you create more robust use cases when applied correctly.
 
 {% content-ref url="filters.md" %}
 [filters.md](filters.md)

@@ -51,11 +51,11 @@ The minimum password length is 8 characters. The length will always default to 8
 
 ### Password Requires Symbols
 
-This property specifies whether symbols are required in a user's password. The 'Value' 0 means symbols are not required and 1 means they are required.
+This property specifies whether symbols are required in a user's password. The 'Value' 0 means symbols aren't required and 1 means they are required.
 
 ### Password Requires Numbers
 
-This property specifies whether numbers are required in a user's password. The 'Value' 0 means numbers are not required and 1 means they are required.
+This property specifies whether numbers are required in a user's password. The 'Value' 0 means numbers aren't required and 1 means they are required.
 
 {% hint style="info" %}
 For a new password policy to take effect, you can set all user's **Password Expiration Timestamp** to yesterday. They will need to change their password the next time they attempt to log in.

@@ -90,7 +90,7 @@ A deleted record will have `Deleted By` and `Deleted` filled in, with the timezo
 
 ### 2.1 Name
 
-Each column must have a unique name. They must also not conflict with system columns (even if you are not using Change Approvals on the table).
+Each column must have a unique name. They must also not conflict with system columns (even if you aren't using Change Approvals on the table).
 
 ### 2.2 Data Security Classification
 

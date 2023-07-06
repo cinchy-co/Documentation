@@ -428,7 +428,7 @@ SET @nbdays = @inputDays;
 SELECT @nbdays;
 ```
 
-## Null values are not updating correctly in Salesforce using the data sync
+## Null values aren't updating correctly in Salesforce using the data sync
 
 When performing a data sync with a Salesforce target, you need to replace nulls with '#N/A' in the source. You can use ISNULL(\[Column],'#N/A') in the source query. The following is a link to the Salesforce documentation related to this topic:
 

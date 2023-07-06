@@ -18,7 +18,7 @@ To upgrade from v4+ to v5+ on IIS, [review the documentation here.](upgrading-ci
 
 ## 3. Compatibility Issues Between Databases/Versions
 
-If you choose to upgrade to Cinchy v5 on PostgreSQL, please review the following features that are not currently available in that deployment.
+If you choose to upgrade to Cinchy v5 on PostgreSQL, please review the following features that aren't currently available in that deployment.
 
 These may be implemented in future versions of the platform.
 
