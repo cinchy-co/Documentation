@@ -10,7 +10,7 @@ This section guides you through the deployment process for Cinchy version 5: fro
     * [IIS Deployment Installation](iis-deployment-platform-installation.md)
 * If you are a customer currently on v4 and want to upgrade to v5, start here: [Upgrading from v4 to v5](../upgrade-guides/upgrading-from-v4-to-v5.md)
 
-If you have any questions about the processes outlined in this section, please reach out to our Support team:
+If you have any questions about the processes outlined in this section, please reach out to the Cinchy Support team:
 
 * **Via email:** support@cinchy.com
 * **Via phone:** 1-888-792-6051

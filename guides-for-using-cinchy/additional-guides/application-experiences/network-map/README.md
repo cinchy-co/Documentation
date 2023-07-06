@@ -105,7 +105,7 @@ To use slicers, you must define the slicers in the **Slicers** column and add th
 ]
 ```
 
-Attribute is the column name from the nodes query, **displayName** is what shows up in the visualizer _(Image 9 and 10)._
+Attribute is the column name from the nodes query, `displayName` is what shows up in the visualizer _(Image 9 and 10)._
 
 ![Image 9: Slicers](<../../../../.gitbook/assets/image (742).png>)
 

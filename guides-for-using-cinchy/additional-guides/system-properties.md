@@ -4,17 +4,9 @@ description: >-
   table.
 ---
 
-# System Properties
+# System properties
 
-System Properties is a table within Cinchy for managing system properties, such as default time zones, system lockout durations, password expirations, password properties, password attempts allowed etc.
-
-## Table of Contents
-
-| Table of Contents                                                                                  |
-| -------------------------------------------------------------------------------------------------- |
-| [#1.-set-up](system-properties.md#1.-set-up "mention")                                             |
-| [#2.-configuring-the-table-values](system-properties.md#2.-configuring-the-table-values "mention") |
-| [#3.-forbidden-passwords](system-properties.md#3.-forbidden-passwords "mention")                   |
+System Properties is a table within Cinchy for managing system properties, such as default time zones, system lockout durations, password expiration, password properties, password attempts allowed etc.
 
 ## 1. Set up
 
@@ -37,39 +29,39 @@ The Default of the Systems Properties table is set up as follows _(Image 1)_:
 Please note that this table is case sensitive.
 {% endhint %}
 
-## 2. Configuring the Table Values
+## Configure the table values
 
 The System Properties requirements can be changed by an admin user simply by editing the 'Value' columns where applicable:
 
-### Default Time Zone
+### Default time zone
 
-Users can set their own time zones in their user profile. If a user does not set one up, the system default time zone will take effect. If this property does not exist or is invalid, the default time zone will default to UTC.
+Users can set their own time zones in their user profile. If a user doesn't set one up, the system default time zone will take effect. If this property doesn't exist or is invalid, the default time zone will default to UTC.
 
-### Minimum Password Length
+### Minimum password length
 
-The minimum password length is 8 characters. The length will always default to 8 if an invalid value is provided, or if you attempt to set it to less than 8. This number can be changed (i.e. made higher than 8) in the 'Value' column to require users to have longer passwords.
+The minimum password length is 8 characters. The length will always default to 8 if an invalid value is provided, or if you attempt to set it to less than 8. This number can be changed (made higher than 8) in the **Value** column to require users to have longer passwords.
 
-### Password Requires Symbols
+### Password requires symbols
 
-This property specifies whether symbols are required in a user's password. The 'Value' 0 means symbols aren't required and 1 means they are required.
+This property specifies whether symbols are required in a user's password. The 'Value' 0 means symbols aren't required and 1 means they're required.
 
-### Password Requires Numbers
+### Password requires numbers
 
-This property specifies whether numbers are required in a user's password. The 'Value' 0 means numbers aren't required and 1 means they are required.
+This property specifies whether numbers are required in a user's password. The 'Value' 0 means numbers aren't required and 1 means they're required.
 
 {% hint style="info" %}
 For a new password policy to take effect, you can set all user's **Password Expiration Timestamp** to yesterday. They will need to change their password the next time they attempt to log in.
 {% endhint %}
 
-### Password Expiration (Days)
+### Password expiration (days)
 
 This property specifies how many days until a password expires. This defaults to 90 but can be set to be shorter or longer by changing the number in the 'Value' column.
 
-### Password Attempts Allowed
+### Password attempts allowed
 
-This property specifies how many bad password attempts a user can make before they are locked out of the system. The default is 3 but this can be set to be more or less attempts by changing the number in the 'Value' column.
+This property specifies how many bad password attempts a user can make before they're locked out of the system. The default is 3 but this can be set to be more or less attempts by changing the number in the 'Value' column.
 
-### System Lockout Duration (minutes)
+### System lockout duration (minutes)
 
 This property specifies how long a user is locked out of the system once they've run out of bad password attempts. The default is 15 minutes but this can be set to be shorter or longer by changing the number in the 'Value' column.
 
@@ -77,16 +69,16 @@ This property specifies how long a user is locked out of the system once they've
 Note that an administrator can also go into the 'Users' table to manually unlock a user by clearing the Locked Timestamp.
 {% endhint %}
 
-### Maintenance Enabled
+### Maintenance enabled
 
-This is a property, defaulted to 0, that is simply responsible for showing this warning when a data owner is setting up [Data Erasure](broken-reference) or [Data Compression](broken-reference) on a table _(Image 2)_. It is the administrator's responsibility to set up a scheduled maintenance job for performing compression and erasure, and then to change the property to 1 so that the warning no longer appears.
+This property, defaulted to 0, shows this warning when a data owner is setting up [Data Erasure](broken-reference) or [Data Compression](broken-reference) on a table _(Image 2)_. It's the administrator's responsibility to set up a scheduled maintenance job for performing compression and erasure, and then to change the property to 1 so that the warning no longer appears.
 
 ![Image 2: Data Compression](<../../.gitbook/assets/image (216).png>)
 
-## 3. Forbidden Passwords
+## Forbidden passwords
 
-There is a Cinchy table called Forbidden Passwords. This table comes with a prepopulated list of passwords from [https://www.ncsc.gov.uk/static-assets/documents/PwnedPasswordsTop100k.txt](https://www.ncsc.gov.uk/static-assets/documents/PwnedPasswordsTop100k.txt)
+Cinchy has a table called Forbidden Passwords. This table comes with a pre-populated list of passwords from [https://www.ncsc.gov.uk/static-assets/documents/PwnedPasswordsTop100k.txt](https://www.ncsc.gov.uk/static-assets/documents/PwnedPasswordsTop100k.txt)
 
-You can add more blocked passwords to this list as well, and users will not be able to set their password to it (this can be used to add your company's name, or to import other blocked password lists). The check against the list is case insensitive.
+You can add more blocked passwords to this list as well, and users won't be able to set their password to it (this can be used to add your company's name, or to import other blocked password lists). The check against the list is case insensitive.
 
 Like other password policies, this check occurs when your password changes, so to enforce this you will need to set all passwords to be expired.
