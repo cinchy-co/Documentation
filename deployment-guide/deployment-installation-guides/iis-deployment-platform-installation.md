@@ -15,7 +15,7 @@ Cinchy version 5 on IIS comes bundled with common components such as Connections
 
 **Ensure that you review the** [**prerequisites listed here**](deployment-planning-overview-and-checklist/deployment-prerequisites/#2.-iis-deployment-prerequisites) prior to performing an IIS Deployment, including downloading all necessary artifacts from the [Cinchy Releases Table.](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded)
 
-Please contact [Cinchy Support](../../getting-help.md) if you do not have the credentials required to access the artifacts table.
+Please contact [Cinchy Support](../../getting-help.md) if you don't have the credentials required to access the artifacts table.
 
 ## Create a Database
 

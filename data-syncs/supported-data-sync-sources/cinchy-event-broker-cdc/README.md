@@ -61,7 +61,7 @@ If you are creating a CDC listener config for a **Cinchy Event Triggered REST AP
 
 #### Connection Attributes
 
-You do not need to provide Connections Attributes when using the Cinchy CDC Stream Source. However if you inputting your configuration via the Listener Config table, rather than through the Connections UI, you cannot leave the field blank. Instead, insert the below text into the column:
+You don't need to provide Connections Attributes when using the Cinchy CDC Stream Source. However if you inputting your configuration via the Listener Config table, rather than through the Connections UI, you cannot leave the field blank. Instead, insert the below text into the column:
 
 ```
 {}

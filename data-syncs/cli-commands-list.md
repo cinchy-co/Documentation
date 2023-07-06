@@ -44,11 +44,11 @@ Prior to attempting to use any of the below commands, [ensure that you have inst
 * **-d, --domain:** <mark style="color:orange;">**Required.**</mark> The domain where your saved query resides.
 * **-n, --name: Required.** The name of your saved query.
 * **-o, --outputpath.** <mark style="color:orange;">**Required.**</mark> The full path for the target output file.
-* **-l, --delimiter.** The delimiter to used in the output. This can be either COMMA, PIPE, or TAB. This defaults to COMMA  if you do not set the parameter.
+* **-l, --delimiter.** The delimiter to used in the output. This can be either COMMA, PIPE, or TAB. This defaults to COMMA  if you don't set the parameter.
 * **-i, --includeheaders.** A flag to include headers in the output file.
-* **-e, --encoding.** The encoding to use for the output file, either ASCII, UTF8, or UTF16. This defaults to UTF16 if you do not set the parameter.
-* **-t, --commandtimeout.** The wait time in seconds before terminating the query execution. This defaults to 30 seconds if you do not set the parameter.
-* **-g, --progressbatchsize.** When downloading data, this is the number of MB after which progress should be logged. Setting this to 0 prevents any progress messages to the console. This defaults to 10 if you do not set the parameter.
+* **-e, --encoding.** The encoding to use for the output file, either ASCII, UTF8, or UTF16. This defaults to UTF16 if you don't set the parameter.
+* **-t, --commandtimeout.** The wait time in seconds before terminating the query execution. This defaults to 30 seconds if you don't set the parameter.
+* **-g, --progressbatchsize.** When downloading data, this is the number of MB after which progress should be logged. Setting this to 0 prevents any progress messages to the console. This defaults to 10 if you don't set the parameter.
 * **-r, --overwriteoutput.** A flag indicating whether to overwrite the output file contents if it already exists.
 * **-q, --donotescape.** Setting this flag prevents text values from being escaped using quotes. This should only be used if you are certain the delimiter will not appear in your data, otherwise output may be invalid.
 * **-v, --param-values.** Query parameter values defined as one or more name value pairs delimited by a colon (`-v name1:value1 name2:value2`)
