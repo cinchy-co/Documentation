@@ -21,3 +21,8 @@ GraphQL
 CinchyDXD
 [Cc]olumnstore 
 [Rr]owstore
+Tableau
+GUID(s)
+[Ss]ubtag
+endswagger
+SDKs
