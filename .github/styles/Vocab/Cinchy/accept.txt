@@ -19,3 +19,5 @@ Kibana
 GraphQL
 [Cc]iphertext
 CinchyDXD
+[Cc]olumnstore 
+[Rr]owstore
