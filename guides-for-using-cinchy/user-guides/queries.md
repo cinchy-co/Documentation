@@ -4,21 +4,11 @@ description: Queries are requests for information within Cinchy.
 
 # Queries
 
-## Table of Contents
-
-| Table of Contents                                                                            |
-| -------------------------------------------------------------------------------------------- |
-| [#1.-creating-queries](queries.md#1.-creating-queries "mention")                             |
-| [#2.-executing-queries](queries.md#2.-executing-queries "mention")                           |
-| [#generate-pivot-tables](queries.md#generate-pivot-tables "mention")                         |
-| [#generate-charts](queries.md#generate-charts "mention")                                     |
-| [#5.-building-shared-visualizations](queries.md#5.-building-shared-visualizations "mention") |
-
-## 1. Creating Queries
+## Create queries
 
 [Cinchy Builders](../builder-guides/) and Users have the capability to create ad-hoc queries, however only Cinchy Users can create saved queries. For more information on how to create queries, see [creating a saved query.](https://platform.docs.cinchy.com/guides-for-using-cinchy/builder-guides/saved-queries#2.-creating-a-saved-query)
 
-## 2. Executing Queries
+## Execute queries
 
 Cinchy Users can execute pre-built queries based on their access.
 

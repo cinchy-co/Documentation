@@ -6,15 +6,15 @@ description: >-
 
 # Version Management
 
-## 1. Data Version Management
+## Data version management
 
 Cinchy natively and automatically manages data versioning in the platform through the ‘always-on’ version tracking, collaboration logging, and recycle bin features (data restore).
 
-Cinchy maintains a version history of all changes to every data element stored in Cinchy. The version history is queryable in Cinchy to accelerate analysis, and can also be viewed through the [Collaboration Log](../data-management.md#6.-collaboration-log), which tracks changes made by users, systems, or external applications _(Image 1)._ When required, you can easily revert data to previous states using the [**Recycle Bin** ](https://platform.docs.cinchy.com/guides-for-using-cinchy/user-guides/data-management#recycle-bin)**or the Revert** button.
+Cinchy maintains a version history of all changes to every data element stored in Cinchy. You can query the version history in Cinchy to speed up analysis, and can also be viewed through the [Collaboration Log](../data-management.md#6.-collaboration-log), which tracks changes made by users, systems, or external applications _(Image 1)._ When required, you can easily revert data to previous states using the [**Recycle Bin** ](https://platform.docs.cinchy.com/guides-for-using-cinchy/user-guides/data-management#recycle-bin)**or the Revert** button.
 
 <figure><img src="../../../.gitbook/assets/image (623).png" alt=""><figcaption><p>Image 1: The Collaboration Log</p></figcaption></figure>
 
-## 2. Schema Version Management
+## Schema version management
 
 {% hint style="info" %}
 This section refers to data schemas/models, **not** data values themselves.
@@ -22,7 +22,7 @@ This section refers to data schemas/models, **not** data values themselves.
 
 Your schema/data model version can also be managed when you are using **multiple environments.** For example, if you have a DEV environment and make a change to a table design (ex: changing a column name), you can export and deploy your data model to a PROD environment and Cinchy will intelligently consolidate and merge the schema changes to adhere to the latest version.
 
-To export a table (**i.e. your data model)**, navigate to the **Design Table > Export** button _(Image 2)._ You can then **import your data model** into any other environment using the [model loader ](https://platform.docs.cinchy.com/api-guide/api-overview#2.2-apps-modelloader)_(Image 3)._
+To export a table (like your data model), navigate to the **Design Table > Export** button _(Image 2)._ You can then **import your data model** into any other environment using the [model loader ](https://platform.docs.cinchy.com/api-guide/api-overview#2.2-apps-modelloader)_(Image 3)._
 
 <figure><img src="../../../.gitbook/assets/image (220).png" alt=""><figcaption><p>Image 2: Exporting a data model </p></figcaption></figure>
 

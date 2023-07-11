@@ -4,23 +4,13 @@ description: >-
   browser: the homepage, the login page, and the data network.
 ---
 
-# Overview of the Data Browser
-
-## Table of Contents​
-
-|                                                                               |
-| ----------------------------------------------------------------------------- |
-| [#my-network](overview-of-the-data-browser.md#my-network "mention")           |
-| [#searching](overview-of-the-data-browser.md#searching "mention")             |
-| [#my-bookmarks](overview-of-the-data-browser.md#my-bookmarks "mention")       |
-| [#my-data-network](overview-of-the-data-browser.md#my-data-network "mention") |
-| [#5.-the-logo](overview-of-the-data-browser.md#5.-the-logo "mention")         |
+# Data Browser
 
 {% hint style="info" %}
 Cinchy officially supports Google Chrome and Mozilla Firefox browsers for accessing the data browser.
 {% endhint %}
 
-## 1. Homepage <a href="#my-network" id="my-network"></a>
+## Homepage <a href="#my-network" id="my-network"></a>
 
 Once you log in to Cinchy, you'll be on the Homepage _(Image 1)_. From here, you can navigate to a variety of tables, queries, and applets you have access to.
 
@@ -28,7 +18,7 @@ You can return to this page at any time by clicking the Cinchy logo in the top l
 
 ![Image 1: The Cinchy Homepage](<../../.gitbook/assets/image (563).png>)
 
-## 2. Searching <a href="#searching" id="searching"></a>
+## Searching <a href="#searching" id="searching"></a>
 
 ‌All objects you have access to in your Marketplace (including bookmarks) are searchable and can be filtered by typing the partial or full name of the object you are searching for in the search bar _(Image 2)._
 
@@ -36,7 +26,7 @@ You can return to this page at any time by clicking the Cinchy logo in the top l
 
 You can also search by object type by clicking on either Tables, Queries, or Experiences in the toolbar.
 
-## 3. Bookmarks <a href="#my-bookmarks" id="my-bookmarks"></a>
+## Bookmarks <a href="#my-bookmarks" id="my-bookmarks"></a>
 
 **‌**You can bookmark your most often used objects and rearrange them to your liking within your bookmarks.
 
@@ -44,13 +34,13 @@ To bookmark an object, select the star. The star will be yellow when bookmarked,
 
 ![Image 3: Bookmarking](<../../.gitbook/assets/image (611).png>)
 
-The object will pop into your “Bookmark” section.To rearrange your bookmarks simply drag and drop the object into the desired order.
+The object will pop into your “Bookmark” section. To rearrange your bookmark, drag and drop the object into the desired order.
 
-## 4. Network Map <a href="#my-data-network" id="my-data-network"></a>
+## Network Map <a href="#my-data-network" id="my-data-network"></a>
 
-You "Network Map" shows a visualization of all tables in Cinchy you have access to and how they are all connected _(Image 4)._
+You "Network Map" shows a visualization of all tables in Cinchy you have access to and how they're all connected _(Image 4)._
 
-Each of the coloured circles represents an object in Cinchy. The lines between them demonstrate the links between them.
+Each of the coloured circles represents an object in Cinchy. The lines between them show the links between them.
 
 ![Image 4: Cinchy Network Map](<../../.gitbook/assets/image (532).png>)
 
@@ -64,9 +54,9 @@ You can see what the network looked like in the past by clicking and dragging th
 You can learn more about the Network Map [here.](../additional-guides/application-experiences/network-map/)
 {% endhint %}
 
-### 4.1 Network Map Extra Parameters
+### Network Map extra parameters
 
-In Cinchy v5.2 we added the ability to include new parameters on the URL path for your network visualizer to focus your node view. You can now add **Target Node, Depth Level, and Max Depth Level** Parameters, if you choose.
+Cinchy v5.2 added the ability to include new parameters on the URL path for your network visualizer to focus your node view. You can now add **Target Node, Depth Level, and Max Depth Level** parameters.
 
 Example: \<base url>/apps/datanetworkvisualizer?**targetNode=\&maxDepth=\&depthLevel=**
 
@@ -88,9 +78,9 @@ The below example visualizer uses the following URL _(Image 6)_: \<base url>/app
 
 
 
-## 5. The Logo
+## Logo
 
-You can upload a custom logo to appear on your platform login screen and homepage. You will need to have adamin access to do so.
+You can upload a custom logo to appear on your platform login screen and homepage. You will need to have admin access to do so.
 
 #### Examples without a logo uploaded (Images 7&8)
 
@@ -100,7 +90,7 @@ You can upload a custom logo to appear on your platform login screen and homepag
 
 <img src="../../.gitbook/assets/image (358).png" alt="" data-size="original">![](<../../.gitbook/assets/image (666).png>)
 
-### 5.1 Uploading a Logo:
+### Upload a logo
 
 1. Navigate to **\<base url>/admin/index**
 2. Scroll to the bottom of the admin panel and navigate to the **“Upload Logo”** button _(Image 11)._
@@ -109,11 +99,11 @@ You can upload a custom logo to appear on your platform login screen and homepag
 
 3\. Upload your logo
 
-### 5.2 Removing a Logo
+### Remove a Logo
 
 1. Once uploaded, your logo is stored in the **System Properties** table_._
 2. Navigate to the table and find the row with **Name: Logo** _(Image 12)_
 
 ![Image 12: Find the Logo row in the System Properties table](<../../.gitbook/assets/image (553).png>)
 
-3\. **Delete** the Logo row to remove the logo.
+3. **Delete** the Logo row to remove the logo.

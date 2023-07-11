@@ -4,23 +4,13 @@ description: This page outlines your user preferences.
 
 # User Preferences
 
-## Table of Contents
-
-| Table of Contents                        |
-| ---------------------------------------- |
-| [#my-photo](./#my-photo "mention")       |
-| [#my-profile](./#my-profile "mention")   |
-| [#my-password](./#my-password "mention") |
-
-## 1. User Preferences
-
 Your Cinchy Profile has three (3) components that can be changed from user preferences:
 
-* ​My Photo​
-* ​My Profile​
-* ​My Password​
+- ​My Photo​
+- ​My Profile​
+- ​My Password​
 
-### 1.1 My Photo <a href="#my-photo" id="my-photo"></a>
+### My Photo <a href="#my-photo" id="my-photo"></a>
 
 To add a photo to your profile, complete the following _(Image 1):_
 
@@ -31,15 +21,15 @@ To add a photo to your profile, complete the following _(Image 1):_
 
 ![Image 1: Uploading your photo](<../../../.gitbook/assets/image (63).png>)
 
-### 1.2 My Profile <a href="#my-profile" id="my-profile"></a>
+### My Profile <a href="#my-profile" id="my-profile"></a>
 
-From the settings page in the My Profile section you are able to update the **language, region, and time zone** _(Image 2)._
+From the settings page in the **My Profile** section you are able to update the **language, region, and time zone** _(Image 2)._
 
 ![Image 2: My Profile](<../../../.gitbook/assets/image (595).png>)
 
-### 1.3 My Password <a href="#my-password" id="my-password"></a>
+### My Password <a href="#my-password" id="my-password"></a>
 
-If you don't see the password option in my profile, you must be logging on to Cinchy using Single Sign-On and will not need to update your password within Cinchy.​
+If you don't see the password option in my profile, you must be logging on to Cinchy using Single Sign-On and won't need to update your password within Cinchy.​
 
 To change your password, complete the following:
 

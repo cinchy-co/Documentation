@@ -6,19 +6,9 @@ description: >-
 
 # Commentary
 
-## Table of Contents <a href="#entering-comments" id="entering-comments"></a>
+## Enter comments <a href="#entering-comments" id="entering-comments"></a>
 
-| Table of Contents                                                       |
-| ----------------------------------------------------------------------- |
-| [#entering-comments-1](commentary.md#entering-comments-1 "mention")     |
-| [#editing-comments](commentary.md#editing-comments "mention")           |
-| [#deleting-comments](commentary.md#deleting-comments "mention")         |
-| [#archiving-comments](commentary.md#archiving-comments "mention")       |
-| [#system-table-comments](commentary.md#system-table-comments "mention") |
-
-## 1. Entering Comments <a href="#entering-comments" id="entering-comments"></a>
-
-Anyone who can view or edit a cell can comment on it. Any data that is read-only does not allow comments to be entered.
+Anyone who can view or edit a cell can comment on it. Any data that's read-only doesn't allow comments to be entered.
 
 To add a comment:
 
@@ -29,7 +19,7 @@ To add a comment:
 
 ![Image 1: Commenting](<../../.gitbook/assets/image (8).png>)
 
-## 2. Editing Comments <a href="#editing-comments" id="editing-comments"></a>
+## Edit comments <a href="#editing-comments" id="editing-comments"></a>
 
 Comments can be modified only by only the individual(s) that have created the comment(s).To edit a comment, complete the following:
 
@@ -40,7 +30,7 @@ Comments can be modified only by only the individual(s) that have created the co
 
 ![Image 2: Editing Comments](<../../.gitbook/assets/image (273).png>)
 
-## 3. Deleting Comments <a href="#deleting-comments" id="deleting-comments"></a>
+## Delete comments <a href="#deleting-comments" id="deleting-comments"></a>
 
 Comments can be deleted only by the individual(s) who has created the comment(s).To delete a comment, complete the following:
 
@@ -49,11 +39,11 @@ Comments can be deleted only by the individual(s) who has created the comment(s)
 
 ![Image 3: Deleting Comments](<../../.gitbook/assets/image (665).png>)
 
-## 4. Archiving Comments <a href="#archiving-comments" id="archiving-comments"></a>
+## Archive comments <a href="#archiving-comments" id="archiving-comments"></a>
 
-* A User can archive his own comment **regardless** of approve permissions
-* A User with the **Approve All** permission has the ability to archive any cell comments.
-* A User with the **Approve Select Cell** permission has the ability to archive comments on that specific cell
+- A User can archive his own comment **regardless** of approve permissions
+- A User with the **Approve All** permission can archive any cell comments.
+- A User with the **Approve Select Cell** permission can archive comments on that specific cell
 
 To archive all comments in a cell:
 
@@ -66,6 +56,6 @@ To archive all comments in a cell:
 You can also archive just one comment in a comment string by clicking the **archive icon** for the specific comment you wish to archive in the thread.
 {% endhint %}
 
-## 5. System Table: Comments <a href="#system-table-comments" id="system-table-comments"></a>
+## System Table comments <a href="#system-table-comments" id="system-table-comments"></a>
 
 Comments are stored in the **\[Cinchy].\[Comments]** table.

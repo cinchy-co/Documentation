@@ -176,7 +176,7 @@ _These are equivalent to `VARCHAR(n)` data type in SQL._
 
 ###  Number
 
-You can choose from 3 display formats for number - regular, currency, and percentage. You can also decide how many decimal places to display (0 by default). Note that these are both display settings, and will not affect how the number is stored.
+You can choose from 3 display formats for number - regular, currency, and percentage. You can also decide how many decimal places to display (0 by default). Note that these are both display settings, and won't affect how the number is stored.
 
 _These are equivalent to `FLOAT(53)` data type in SQL (default, 8-byte field)._
 
