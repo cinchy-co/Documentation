@@ -2,19 +2,19 @@
 description: This page outlines how to restore tables, columns, and rows in Cinchy
 ---
 
-# Restoring Tables, Columns, and Rows
+# Restoring tables, columns, and rows
 
 ## Overview
 
-This page documents the method of resstoring deleted taables, columns, and rows in your Cinchy table.
+This page documents the method of restoring deleted tables, columns, and rows in your Cinchy table.
 
 {% hint style="success" %}
 Remember that you can always **revert a changed or deleted record** to a previous state using the[ Collaboration Log.](https://platform.docs.cinchy.com/guides-for-using-cinchy/user-guides/data-management#6.-collaboration-log)
 {% endhint %}
 
-## 1. Restoring a Deleted Row
+## Restore a deleted row
 
-If you wish to restore a row that has been deleted, you can do so through the following steps:
+To restore a row that has been deleted:
 
 1. In the table where you want to restore the row, navigate to the **Recycle Bin.**
 2. Locate the deleted row.
@@ -23,9 +23,9 @@ If you wish to restore a row that has been deleted, you can do so through the fo
 
 <figure><img src="../../../.gitbook/assets/image (165).png" alt=""><figcaption><p>Image 1: Restoring a Row</p></figcaption></figure>
 
-## 2. Restoring a Deleted or Changed Column
+## Restore a deleted or changed column
 
-If you wish to restore a column that has been deleted or changed (such as a name change), you can do so through the following steps:
+To restore a column that has been deleted or changed:
 
 {% hint style="warning" %}
 Note: You need **insert access** on the **Table table** to complete these steps.
@@ -41,9 +41,9 @@ This method will revert the entire table, including any changes made after the c
 
 <figure><img src="../../../.gitbook/assets/image (644).png" alt=""><figcaption><p>Image 2: Restoring a Column</p></figcaption></figure>
 
-## 3. Restoring a Deleted Table
+## Restore a deleted table
 
-If you wish to restore a table that has been deleted, you can do so through the following steps:
+To restore a table that has been deleted:
 
 {% hint style="warning" %}
 Note: You need **insert access** on the **Tables table** to complete these steps.
