@@ -22,7 +22,7 @@ You have the ability to display and edit these table and column GUIDs within the
 2. Click on the pencil icon to edit the GUID.
 
 {% hint style="warning" %}
-GUIDs must adhere to Cinchy's supported format.
+GUIDs must adhere to supported formats for Cinchy.
 
 * 32 hexadecimal (base-16) digits.
 * Displayed in five groups, separated by hyphens.
@@ -42,7 +42,7 @@ Warning: Changing the value may have damaging effects, proceed with caution.
 4\. Click on the pencil icon to edit the GUID.
 
 {% hint style="warning" %}
-GUIDs must adhere to Cinchy's supported format.
+GUIDs must adhere to supported formats for Cinchy.
 
 * 32 hexadecimal (base-16) digits.
 * Displayed in five groups, separated by hyphens.

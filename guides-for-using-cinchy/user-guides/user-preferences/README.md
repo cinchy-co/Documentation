@@ -2,7 +2,7 @@
 description: This page outlines your user preferences.
 ---
 
-# User Preferences
+# User preferences
 
 Your Cinchy Profile has three (3) components that can be changed from user preferences:
 
@@ -29,7 +29,7 @@ From the settings page in the **My Profile** section you are able to update the 
 
 ### My Password <a href="#my-password" id="my-password"></a>
 
-If you don't see the password option in my profile, you must be logging on to Cinchy using Single Sign-On and won't need to update your password within Cinchy.​
+If you don't see the password option in **My Profile**, you must be logging on to Cinchy using Single Sign-On and won't need to update your password within Cinchy.​
 
 To change your password, complete the following:
 
@@ -38,5 +38,5 @@ To change your password, complete the following:
 3. In the **Confirm New Password** field, re-enter in your new password
 
 {% hint style="info" %}
-Your Cinchy password must conform to whatever [minimum requirements are set by your administrator.](../../additional-guides/system-properties.md#minimum-password-length)
+Your Cinchy password must conform to the [requirements set by your administrator.](../../additional-guides/system-properties.md#minimum-password-length)
 {% endhint %}

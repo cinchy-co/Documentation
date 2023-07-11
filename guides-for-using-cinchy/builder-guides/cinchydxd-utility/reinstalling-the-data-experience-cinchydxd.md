@@ -6,7 +6,7 @@ description: >-
 
 # Reinstall the data experience (CinchyDXD)
 
-## Re-Run CinchyDXD install
+## Re-run CinchyDXD install
 
 Using PowerShell, you must now install the Data Experience you have exported out of Cinchy.
 

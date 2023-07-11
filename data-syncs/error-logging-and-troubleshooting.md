@@ -17,7 +17,7 @@ You are able to switch between Auto Offset Reset types after your initial config
 
 1. Navigate to the **Listener Config table.**
 2. Re-configure the Auto Offset Reset value to whatever you want.
-3. Set the **"Status"** column of the Listener Config to **"Disabled".**
+3. Set the **"Status"** column of the Listener Config to **Disabled**
 4. Navigate to the **Event Listener State table.**
 5. Find the column that pertains to your data sync's Listener Config and delete it.
 6. Navigate back to the **Listener Config table.**
@@ -32,7 +32,7 @@ If there are messages that have been queued **after a listener config is turned 
 3. Delete the above row.
 4. Navigate to the **Listener Config table** on your Cinchy platform.
 5. Navigate to the row containing the data sync configuration you want to configure.
-6. Set the **"Auto Offset Reset"** column to **"Latest".** This ensures that when you turn your listener back on it will start listening from the latest messages and skip the queued ones.
+6. Set the **"Auto Offset Reset"** column to **Latest**. This ensures that when you turn your listener back on it will start listening from the latest messages and skip the queued ones.
 
 ## Error logging
 
@@ -103,7 +103,7 @@ switch ($LASTEXITCODE) {
 
 ### Logs
 
-The syncdata command will use the folder, indicated after the -d parameter in the command line, to create and store temporary files. If the data sync is successful, all the temporary files are automatically purged. However, if there is an error the following CSV files will exist:
+The `syncdata` command will use the folder, indicated after the -d parameter in the command line, to create and store temporary files. If the data sync is successful, all the temporary files are automatically purged. However, if there is an error the following CSV files will exist:
 
 * ExecutionLogID\_SourceErrors.csv
 * ExecutionLogID\_SyncErrors.csv
@@ -113,7 +113,7 @@ The syncdata command will use the folder, indicated after the -d parameter in th
 
 The SourceErrors and TargetErrors CSV files will have the following three (3) columns:
 
-* **Row** - this column identifies the row number of the rejected record. **Please note,** only data rows are counted, if the source is a file with a number of header rows, this number needs to be added to the row number to get the actual row in the source that is causing the failure.
+* **Row** - this column identifies the row number of the rejected record. **Please note,** only data rows are counted, if the source is a file with a number of header rows, this number needs to be added to the row number to get the actual row in the source that's causing the failure.
 * **Rejected** - will be either a Yes or No. If the field is Yes, this indicates that full record has been skipped. If the field is No, valid fields are inserted/updated and fields with validation errors aren't inserted / updated
 * **Errors** - this column contains a list of fields causing validation errors or an error affecting the whole record, like “Malformed Row”
 
@@ -132,7 +132,7 @@ The SyncErrors file also has three (3) columns:
 | Error                    | Description                                                                                                                                                                 |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Duplicate Key            | The sync key values aren't unique & duplicated records are rejected                                                                                                        |
-| Malformed Row            | The row could not be parsed based on the source schema. For example the record may not have the number of columns mentioned in the source section of the CLI configuration. |
+| Malformed Row            | The row couldn't be parsed based on the source schema. For example the record may not have the number of columns mentioned in the source section of the CLI configuration. |
 | Invalid Format Exception | Check the value for this column, there may be a mismatched data type (e.g.inserting a non-digit character in a number column)                                               |
 | Max Length Violation     | The text you are trying to insert or update a target field with is too long                                                                                                 |
 | Mandatory Rule Violation | No (or incorrect) value provided for a mandatory column                                                                                                                     |
@@ -146,5 +146,5 @@ Records may fail to insert, update or get deleted due to sync errors, these come
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Value must be a number                            | Check the value for this column, there may be a mismatched data type, like trying to insert an non-digit character in a Number column |
 | Value must be a valid date                        | No (or incorrect) value provided for a mandatory column                                                                               |
-| Value must be Yes or No                           | The value passed was not a Boolean                                                                                                       |
-| Value must be selected from the available options | The value from the source does not correspond to the values in the Cinchy Target choice column                                        |
+| Value must be Yes or No                           | The value passed wasn't a Boolean                                                                                                       |
+| Value must be selected from the available options | The value from the source doesn't correspond to the values in the Cinchy Target choice column                                        |

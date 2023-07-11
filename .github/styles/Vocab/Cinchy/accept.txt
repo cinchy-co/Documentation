@@ -26,3 +26,6 @@ GUID(s)
 [Ss]ubtag
 endswagger
 SDKs
+NChar
+NText
+Healthcheck

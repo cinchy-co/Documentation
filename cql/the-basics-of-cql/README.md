@@ -8,7 +8,7 @@ description: >-
 
 ### Introduction <a href="#1.-introduction" id="1.-introduction"></a>
 
-**Cinchy Query Language (CQL)** is a query language unique to dataware that's used to retrieve and manage/modify data and metadata from tables in your network. While data can reside across many tables, a query can isolate it to a single output, making the possibilities of CQL endlessly powerful.
+**Cinchy Query Language (CQL)** is a query language unique to Cinchy that's used to retrieve and manage/modify data and metadata from tables in your network. While data can reside across many tables, a query can isolate it to a single output, making the possibilities of CQL endlessly powerful.
 
 For example, you can use CQL in the following ways:
 
@@ -52,16 +52,16 @@ WHERE [Deleted] IS NULL
 ```
 
 - When writing queries, use single notation marks to denote string/text data. For example, if you want to specify the Sandbox domain, you would use **\[Domain] = 'Sandbox'**
-- When trying to query using a **"does not equal"** syntax, use **!=**. For example, the following denotes to only return results where the **\[Domain] does not equal 'Sandbox'**
+- When trying to query using a **not equal"** syntax, use **!=**. For example, the following denotes to only return results where the **\[Domain] isn't equal 'Sandbox'**
 
 ```sql
 [Domain] != 'Sandbox'
 ```
 
-- If you want to query data from a table where certain rows are still in draft/Create Request format,  use the syntax of **Draft(\[Column Name])** to see the draft changes. Make sure to also include **\[Column Name]** as well to include non-draft rows.
+- If you want to query data from a table where certain rows are still in draft/Create Request format, use the syntax of **Draft(\[Column Name])** to see the draft changes. Make sure to also include **\[Column Name]** as well to include non-draft rows.
 - The default **ORDER BY** function will always set **ascending** unless specified.
 - When using a Boolean query, **1** = true, and **0** = false.
-- Cinchy labels version history differently in other SQL systems. For example, most SQL systems use the following convention: "version 1.2.4". Cinchy follows these conventions but splits them up. The two **ORDER BY** options, **Version** and **Draft Data**. are the version numbers. Version is the first number, and Draft Data is the second number in the sequence. For Example: `\[Version]: 2` and `\[Draft Data]: 5` means the overall version of the policy is 2.5
+- Cinchy labels version history differently in other SQL systems. For example, most SQL systems use the following convention: *version 1.2.4*. Cinchy follows these conventions but splits them up. The two **ORDER BY** options, **Version** and **Draft Data**. are the version numbers. Version is the first number, and Draft Data is the second number in the sequence. For Example: `\[Version]: 2` and `\[Draft Data]: 5` means the version of the policy is 2.5
 - If there is an error in your CQL code, an error message will appear in your Query Results in the query builder indicating the column and row your error location.
 - When using an **INSERT INTO** clause, the order of the columns input must match the same order as in the **VALUES** section.
 - Putting a **\*** symbol after a **SELECT** statement in the Query Builder will return a series of system columns attached to each table entry.
@@ -81,14 +81,14 @@ VALUES (@FirstName, @LastName, @EmployeeID, (RESOLVELINK(@Manager, â€˜Full Nameâ
 
 You can specify what your results return as in the Query Builder
 
-| Query Return Results                                                                    | Description                                                                                                                                                                                                                                                                                   |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Query Result (Approved Data Only) (\*This is the default when creating a new query)** | This is the default return type, it returns a table from a select query with only approved data for Maker/Checker-enabled tables, or all data for tables without Maker/Checker-enabled. Use this to query approved data, rather than drafts. For example, external APIS.|
-| **Query Result (Including Draft Data)**                                                 | This return type returns a table from a select query with only draft data for Maker/Checker-enabled tables. Use this return type when looking to display results of records that are pending approval**.**                                                                                    |
-| **Query Result (Including Version History)**                                            | This return type returns a table from a select query with historical data for all tables, as seen in the Collaboration Log of any record. This data includes all changes that happened to all records within the scope of the select query.                                                   |
-| **Number of Rows Affected**                                                             | This return type returns a single string response with the number of rows affected if the last statement in the query is an INSERT, UPDATE, or DELETE statement.                                                                                                                              |
-| **Execute DDL Script**                                                                  | Use this return type when your query has DDL commands that make schema changes such as CREATE\|ALTER\|DROP TABLE, CREATE\|ALTER\|DROP VIEW, or CREATE\|DROP INDEX.                                                                                                                  |
-| **Single Value (First Column of First Row)**                                            | This return type returns a result of 1 row x 1 column, irrespective of the underlying result set.                                                                                                                                                                                             |
+| Query Return Results                                                                    | Description                                                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Query Result (Approved Data Only) (\*This is the default when creating a new query)** | This is the default return type, it returns a table from a select query with only approved data for Maker/Checker-enabled tables, or all data for tables without Maker/Checker-enabled. Use this to query approved data, rather than drafts. For example, external APIS. |
+| **Query Result (Including Draft Data)**                                                 | This return type returns a table from a select query with only draft data for Maker/Checker-enabled tables. Use this return type when looking to display results of records that are pending approval**.**                                                               |
+| **Query Result (Including Version History)**                                            | This return type returns a table from a select query with historical data for all tables, as seen in the Collaboration Log of any record. This data includes all changes that happened to all records within the scope of the select query.                              |
+| **Number of Rows Affected**                                                             | This return type returns a single string response with the number of rows affected if the last statement in the query is an INSERT, UPDATE, or DELETE statement.                                                                                                         |
+| **Execute DDL Script**                                                                  | Use this return type when your query has DDL commands that make schema changes such as CREATE\|ALTER\|DROP TABLE, CREATE\|ALTER\|DROP VIEW, or CREATE\|DROP INDEX.                                                                                                       |
+| **Single Value (First Column of First Row)**                                            | This return type returns a result of 1 row x 1 column, irrespective of the underlying result set.                                                                                                                                                                        |
 
 ### Data return types <a href="#3.-data-return-types" id="3.-data-return-types"></a>
 

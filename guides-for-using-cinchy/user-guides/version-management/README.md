@@ -38,7 +38,7 @@ You can find the GUID for your object by navigating to the applicable System Tab
 
 <figure><img src="../../../.gitbook/assets/image (524).png" alt=""><figcaption><p>Image 4: GUIDs</p></figcaption></figure>
 
-## 3. Creating Data Packages
+## Create data packages
 
 While you are able to manually export/import data models across environments, you may want to **package up** multiple objects (tables, queries, reference data, etc.) and push that all together between environments. This method still adheres to schema version control and management.
 

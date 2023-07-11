@@ -18,7 +18,7 @@ See [Authentication](../../../api-guide/api-overview/api-authentication.md) for 
 **Note:** You can have up to 5 active (non-expired) tokens at a time. Once you reach that threshold, the “Generate New Token” button won't work.
 {% endhint %}
 
-3\. Input the following information about your PAT and click **Generate:**
+3. Input the following information about your PAT and click **Generate:**
 
 1. **Token Name**
 2. **Description**
@@ -26,7 +26,7 @@ See [Authentication](../../../api-guide/api-overview/api-authentication.md) for 
 
 <figure><img src="../../../.gitbook/assets/image (290).png" alt=""><figcaption></figcaption></figure>
 
-4\. Once generated, make sure to copy down the PAT somewhere secure. You won't be able to view the PAT again once you navigate away from this screen.
+4. Once generated, make sure to copy down the PAT somewhere secure. You won't be able to view the PAT again once you navigate away from this screen.
 
 <figure><img src="../../../.gitbook/assets/image (240).png" alt=""><figcaption></figcaption></figure>
 
