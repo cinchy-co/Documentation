@@ -1,4 +1,4 @@
-# Meta-Forms Deployment Installation Guide
+# Meta-Forms deployment installation guide
 
 ## Overview
 
