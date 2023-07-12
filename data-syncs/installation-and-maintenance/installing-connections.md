@@ -33,7 +33,7 @@ We suggest to create the following path and extract it there: _C:\Connections\\_
 1. On a Windows Server machine, launch an instance of PowerShell as the Administrator.
 2. Run the below commands to create the IIS application pool and set its properties.
 
-```pwsh
+```bash
 Import-Module WebAdministration
 
 $applicationPoolNameConnections="Cinchy Connections"
@@ -61,7 +61,7 @@ Steps 4 and 5 are only needed if you deployed your Cinchy instance along a base 
 
 <figure><img src="../../.gitbook/assets/image (452).png" alt=""><figcaption><p>Image 2: Integrated Clients table</p></figcaption></figure>
 
-4. Navigate to the row where the **Client ID** column is **"cinchy_connections_experience"** _(Image 3)._
+4. Navigate to the row where the **Client ID** column is `cinchy_connections_experience` _(Image 3)._
 
 <figure><img src="../../.gitbook/assets/image (559).png" alt=""><figcaption><p>Image 3: Navigate to the row where the Client ID column is " cinchy_connections_experience"</p></figcaption></figure>
 
@@ -83,27 +83,27 @@ Steps 4 and 5 are only needed if you deployed your Cinchy instance along a base 
 
 5. Navigate to _C:\Connections\appsettings.json_ and update the below properties to match your environment:
 
-| Parameter            | Description                                                                                                                                                                                                                             |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **URL**              | This is the private URL of your Cinchy environment.                                                                                                                                                                                     |
-| **TempDirectory**    | This should be a path pointing to an existing folder that will hold all of your log and error files.                                                                                                                                    |
-| StorageType          | Select either Local, S3, or AzureBlobStorage.                                                                                                                                                                                           |
-| **BasePathOverride** | (Optional) Connections should be hosted on "/connections". If it's hosted on another URL path, this property must be populated with the relative path ( "/dev-aurora-2/connections" or "/" if deployed to the root) |
+| Parameter            | Description                                                                                                                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **URL**              | This is the private URL of your Cinchy environment.                                                                                                                                                                 |
+| **TempDirectory**    | This should be a path pointing to an existing folder that will hold all of your log and error files.                                                                                                                |
+| StorageType          | Select either Local, S3, or AzureBlobStorage.                                                                                                                                                                       |
+| **BasePathOverride** | (Optional) Connections should be hosted on _/connections_. If it's hosted on another URL path, this property must be populated with the relative path ( _/dev-aurora-2/connections_ or _/_ if deployed to the root) |
 
 1. Navigate to _C:\Connections\ClientApp\dist\assets\config.json_ update the below properties to match your environment:
-
-| Parameter                    | Description                                                                          |
-| ---------------------------- | ------------------------------------------------------------------------------------ |
-| **authority**                | Your public CinchySSO URL in lowercase (ex: \<base-url>/cinchysso)                   |
-| **cinchyRootUrl**            | Your public Cinchy URL (ex: \<base-url>/Cinchy)                                      |
-| **redirectUrl**              | The applet’s public URL (ex: \<base-url>/connections)                                |
-| **silentRefreshRedirectUri** | The applet’s public URL plus the silent refresh path.                                |
-| **model**                    | The model where your data sync configs are. Keep this as “Cinchy” if you don’t know. |
-| **domain**                   | The model where your data sync configs are. Keep this as “Cinchy” if you don’t know. |
-| **useHttps**                 | Should be true if your Cinchy platform is hosted on a secure environment             |
-| **server**                   | Your private Cinchy URL without “http://” or “https://”                              |
-
-7. Create the IIS Application by running the following command in an instance of PowerShell:
+   <!-- vale off -->
+   | Parameter                    | Description                                                                          |
+   | ---------------------------- | ------------------------------------------------------------------------------------ |
+   | **authority**                | Your public CinchySSO URL in lowercase (ex: \<base-url>/cinchysso)                   |
+   | **cinchyRootUrl**            | Your public Cinchy URL (ex: \<base-url>/Cinchy)                                      |
+   | **redirectUrl**              | The applet’s public URL (ex: \<base-url>/connections)                                |
+   | **silentRefreshRedirectUri** | The applet’s public URL plus the silent refresh path.                                |
+   | **model**                    | The model where your data sync configs are. Keep this as “Cinchy” if you don’t know. |
+   | **domain**                   | The model where your data sync configs are. Keep this as “Cinchy” if you don’t know. |
+   | **useHttps**                 | Should be true if your Cinchy platform is hosted on a secure environment             |
+   | **server**                   | Your private Cinchy URL without “http://” or “https://”                              |
+   <!-- vale on -->
+2. Create the IIS Application by running the following command in an instance of PowerShell:
 
 {% code overflow="wrap" %}
 

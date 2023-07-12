@@ -16,10 +16,10 @@ The Connections.zip file contains: Worker.zip, WebApi.zip, and CLI.zip.
 
 2. Extract the **CLI.zip**.
 
-3. Run the **Cinchy.CLI.exe** to deploy the CLI.
+3. Run the **Cinchy\.CLI.exe** to deploy the CLI.
 
 ## Deploy the Maintenance CLI
 
 1. Navigate to the[ Cinchy Releases table ](https://cinchy.net/Tables/1477?rowHeight=Expanded)and download the latest **Maintenance CLI.zip** file from the **Release Artifacts** column.
 2. Extract the **Maintenance CLI.zip**
-3. Run the **Cinchy.Maintenance.CLI.exe** to deploy the Maintenance CLI.
+3. Run the **Cinchy\.Maintenance\.CLI.exe** to deploy the Maintenance CLI.

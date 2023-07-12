@@ -4,73 +4,84 @@ description: This page gives an overview of APIs.
 
 # API Overview
 
-## **1.** Introduction
+## Introduction
 
-There are various APIs available and supported by Cinchy, each performing important functions for your use cases.
+Cinchy has various available APIs, each performing important functions for your use cases.
 
 For example, using the [MyQuery](./#2.7-api-mydomain-myquery) API will allow you to turn any Saved Query on your platform into a REST API.
 
-Many of the APIs listed on this page can utilize **Bearer Tokens** or **Personal Access Tokens** to authenticate. Please review the [API Authentication](api-authentication.md) page for further information.
+Many of the APIs listed on this page can use **Bearer Tokens** or **Personal Access Tokens** to authenticate. Please review the [API Authentication](api-authentication.md) page for further information.
 
-## 2. **Master** List of Endpoints
+## List of endpoints
 
 The following is a list of common API endpoints. These follow the format of \<baseurl>/endpoint
 
-* [/admin/index](./#2.1-admin-index)
-* [/apps/modelloader](./#2.2-apps-modelloader)
-* [/healthcheck](./#2.3-healthcheck)
-* [/metaforms/healthcheck](./#2.4-metaforms-healthcheck)
-* [/cache/clear](./#2.4-cache-clear)
-* [/API/ExecuteCQL](./#2.5-api-executecql)
-* [/API/MyDomain/MyQuery](./#2.6-api-mydomain-myquery)
-* [/identity/connect/token](./#2.7)
-* [/api/getstsauthorityuri](./#2.8-api-getstsauthorityuri)
-* [/api/jobs](./#2.10-api-jobs)
-* [/api/v1.0/secrets-manager](./#2.10-api-v1.0-secrets-manager)
+- [/admin/index](./#2.1-admin-index)
+- [/apps/modelloader](./#2.2-apps-modelloader)
+- [/healthcheck](./#2.3-healthcheck)
+- [/metaforms/healthcheck](./#2.4-metaforms-healthcheck)
+- [/cache/clear](./#2.4-cache-clear)
+- [/API/ExecuteCQL](./#2.5-api-executecql)
+- [/API/MyDomain/MyQuery](./#2.6-api-mydomain-myquery)
+- [/identity/connect/token](./#2.7)
+- [/api/getstsauthorityuri](./#2.8-api-getstsauthorityuri)
+- [/api/jobs](./#2.10-api-jobs)
+- [/api/v1.0/secrets-manager](./#2.10-api-v1.0-secrets-manager)
 
-### **2.1 **_**/admin/index**_
+### /admin/index
 
 | Description                                                             |
 | ----------------------------------------------------------------------- |
 | This endpoint will bring you to a page with your logs and health check. |
 
-### **2.2 **_**/apps/modelloader**_
+### /apps/modelloader
 
 | Description                               |
 | ----------------------------------------- |
 | This endpoint will open the model loader. |
 
-### 2.3 _/healthcheck_
+### _/healthcheck_
 
 | Description                                                             |
 | ----------------------------------------------------------------------- |
 | This endpoint will bring you to a page with your platform health check. |
 
-### **2.4** /metaforms/healthcheck
+### /metaforms/healthcheck
 
 | Description                                                               |
 | ------------------------------------------------------------------------- |
 | This endpoint will bring you to a page with your Meta-Forms health check. |
 
-### **2.5 **_**/cache/clear**_
+### /cache/clear
 
 | Description                                         |
 | --------------------------------------------------- |
 | This endpoint will delete your platform cache data. |
 
-### 2.6 [_**/API/ExecuteCQL**_](executecql.md)
+## [_**/API/ExecuteCQL**_](executecql.md)
 
-[**POST: https://\<Cinchy Web URL>/API/ExecuteCQL**](executecql.md)
+### [**POST: Https://\<Cinchy Web URL>/API/ExecuteCQL**](executecql.md)
 
 <table><thead><tr><th width="150">Description</th></tr></thead><tbody><tr><td>You can execute CQL directly without creating a Saved Query using the below endpoint:</td></tr></tbody></table>
 
-**Query Parameters:**
+#### Query Parameters
 
+| Name           | Data Type | Description                                                                                                                                                                                              |
+| -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CompressJSON   | Boolean   | Default is true. Add this parameter and set to false if you want the JSON that's returned to be expanded rather than having the schema being returned separately.                                        |
+| ResultFormat   | string    | XMLJSONCSVTSVPSVPROTOBUF                                                                                                                                                                                 |
+| Type           | string    | QUERY - Query (Approved Data Only) DRAFT_QUERY - Query (Include Draft Changes) SCALAR - Scalar NONQUERY - Non Query, such as an insert or delete VERSION_HISTORY_QUERY - Query (Include Version History) |
+| ConnectionId   | string    | ​                                                                                                                                                                                                        |
+| TransactionId  | string    | When one or more requests share the same TransactionId, they're considered to be within the scope of a single transaction.                                                                               |
+| Query          | string    | The CQL query statement to execute                                                                                                                                                                       |
+| Parameters     | Boolean   | See below on format for the parameters.                                                                                                                                                                  |
+| SchemaOnly     | integer   | Defaults to false.                                                                                                                                                                                       |
+| StartRow       | integer   | When implementing pagination, specify a starting offset. Combine with RowCount to set the size of the data window.                                                                                       |
+| RowCount       | integer   | When implementing pagination, specify the number of rows to retrieve for the current page. Combine with StartRow to set the paging position.                                                             |
+| CommandTimeout | string    | Use this parameter to override the default timeout (30s) for long running queries. In seconds.                                                                                                           |
+| UserId         | string    | ID of a user with authorization to run the saved query.                                                                                                                                                  |
 
-
-<table><thead><tr><th width="187.33333333333331">Name</th><th width="170">Data Type</th><th>Description</th></tr></thead><tbody><tr><td>CompressJSON</td><td>boolean</td><td>Default is true. Add this parameter and set to false if you want the JSON that is returned to be expanded rather than having the schema being returned separately.</td></tr><tr><td>ResultFormat</td><td>string</td><td>XML<br>JSON<br>CSV<br>TSV<br>PSV<br>PROTOBUF</td></tr><tr><td>Type</td><td>string</td><td>QUERY <br><em>- Query (Approved Data Only)</em> <br>DRAFT_QUERY <br><em>- Query (Include Draft Changes)</em> <br>SCALAR <br><em>- Scalar</em> <br>NONQUERY <br><em>- Non Query, such as an insert or delete</em> <br>VERSION_HISTORY_QUERY <br><em>- Query (Include Version History)</em></td></tr><tr><td>ConnectionId</td><td>string</td><td>​</td></tr><tr><td>TransactionId</td><td>string</td><td>When one or more requests share the same TransactionId, they are considered to be within the scope of a single transaction.</td></tr><tr><td>Query</td><td>string</td><td>The CQL query statement to execute</td></tr><tr><td>Parameters</td><td>boolean</td><td>See below on format for the parameters.</td></tr><tr><td>SchemaOnly</td><td>integer</td><td>Defaults to false.</td></tr><tr><td>StartRow</td><td>integer</td><td>When implementing pagination, specify a starting offset. Combine with <code>RowCount</code> to set the size of the data window.</td></tr><tr><td>RowCount</td><td>integer</td><td>When implementing pagination, specify the number of rows to retrieve for the current page. Combine with <code>StartRow</code> to set the paging position.</td></tr><tr><td>CommandTimeout</td><td>string</td><td>Use this parameter to override the default timeout (30s) for long running queries. In seconds.</td></tr><tr><td>UserId</td><td>string</td><td>ID of a user with authorization to run the saved query.</td></tr></tbody></table>
-
-**Header Parameters:**
+#### Header Parameters
 
 | Name          | Data Type | Description                                                                                                                                                                                                                                                                                      |
 | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -78,42 +89,46 @@ The following is a list of common API endpoints. These follow the format of \<ba
 
 #### Responses:
 
-* <mark style="color:green;">200 (OK)</mark>
+- <mark style="color:green;">200 (OK)</mark>
 
 ### Parameters <a href="#parameters" id="parameters"></a>
 
-To pass in parameters in your executeCQL, you will need to pass in sets of parameters in the following format. So if you have one parameter then you would pass in 3 query parameters beginning with `Parameters[0].` , and if you have a second parameter you would include an additional 3 query parameters beginning with `Parameters[1].` .
+To pass in parameters in your executeCQL, you will need to pass in sets of parameters in the following format. If you have one parameter then you would pass in 3 query parameters beginning with `Parameters[0].` , and if you have a second parameter you would include an additional 3 query parameters beginning with `Parameters[1].` .
 
 | Query String Parameter Name       | Content                                                                                                      |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Parameters\[n].ParameterName      | <p>Name of the parameter that is in your query, including the '@'.<br>Ex. <code>@name</code></p>             |
+| Parameters\[n].ParameterName      | <p>Name of the parameter that's in your query, including the '@'.<br>Ex. <code>@name</code></p>              |
 | Parameters\[n].XmlSerializedValue | <p>XML Serialized version of the value of that parameter.<br>Ex. <code>&#x26;quot;test&#x26;quot;</code></p> |
 | Parameters\[n].ValueType          | <p>Datatype of the value.<br>Ex. <code>System.String</code></p>                                              |
 
-### **2.7** [_**/API/MyDomain/MyQuery**_](api-saved-queries.md#how-to-use-the-access-token-to-call-cinchy-apis)
+## [_**/API/MyDomain/MyQuery**_](api-saved-queries.md#how-to-use-the-access-token-to-call-cinchy-apis)
 
-**GET: https://\<Cinchy Web URL>/API/MyDomain/MyQuery**
+### GET: Https://\<Cinchy Web URL>/API/MyDomain/MyQuery
 
-| Description                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| To access any Cinchy Saved Query API, pass the access token, received from either the Bearer Token Request or created as a PAT, in the Authorization header, prefixed by "Bearer". |
+| Description                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| To access any Cinchy Saved Query API, pass the access token, received from either the Bearer Token Request or created as a PAT, in the Authorization header, prefixed by **Bearer**. |
 
-**Query Parameters**
+#### Query Parameters
 
-<table><thead><tr><th width="276.3333333333333">Name</th><th>Data Type</th><th>Description</th></tr></thead><tbody><tr><td>WrapSingleRecordInArray</td><td>boolean</td><td>Default is true. Add this parameter and set to false if you want single record results returned as an object instead of within an array.</td></tr><tr><td>@param</td><td>string</td><td>If you have parameters in your query, you pass them indirectly as query parameters.</td></tr><tr><td>CompressJSON</td><td>boolean</td><td>Default is true. Add this parameter and set to false if you want the JSON that is returned to be expanded rather than having the schema being returned separately.</td></tr></tbody></table>
+| Name                    | Data Type | Description                                                                                                                                                       |
+| ----------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| WrapSingleRecordInArray | Boolean   | Default is true. Add this parameter and set to false if you want single record results returned as an object instead of within an array.                          |
+| @param                  | string    | If you have parameters in your query, you pass them indirectly as query parameters.                                                                               |
+| CompressJSON            | Boolean   | Default is true. Add this parameter and set to false if you want the JSON that's returned to be expanded rather than having the schema being returned separately. |
 
-**Header Parameters**
+#### Header Parameters
 
 | Name          | Data Type | Description                                                                                                                                                                                                                                                                                      |
 | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Authorization | string    | <p>Bearer &#x3C;access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
 
-**Responses**
+#### Responses
 
 <mark style="color:green;">**200:**</mark>** The request has successfully returned the record set.**
 
 ```
-< HTTP/2 200 
+< HTTP/2 200
 < cache-control: private, s-maxage=0
 < content-type: application/json; charset=utf-8
 < server: Microsoft-IIS/10.0
@@ -126,7 +141,7 @@ To pass in parameters in your executeCQL, you will need to pass in sets of param
 
 ```
 
-<mark style="color:orange;">**400:**</mark>** The request could not be understood, the client is sending a request with incomplete data, poorly constructed data or invalid data.**
+<mark style="color:orange;">**400:**</mark>** The request couldn't be understood, the client is sending a request with incomplete data, poorly constructed data or invalid data.**
 
 Optional Validation Logic: To validate query business / control conditional logic failure can be added at the beginning of the API which can intentionally generate a 400 error code (using RAISERROR) and stopping (using RETURN) the API. If there is no RETURN the errors will accumulate and will be provided at the end of running the API.
 
@@ -175,33 +190,37 @@ END
 
 ```
 
-### 2.8 [_**/identity/connect/token**_](api-authentication.md)
+## [_**/identity/connect/token**_](api-authentication.md)
 
-**POST: https://\<Cinchy SSO URL>/identity/connect/token**
+### POST: Https://\<Cinchy SSO URL>/identity/connect/token
 
 | Definition                                                                            |
 | ------------------------------------------------------------------------------------- |
 | The Post Request will return an access token which can be used to access Cinchy APIs. |
 
-**Header Parameters**
+#### Header parameters
 
 | Name         | Data Type | Description                       |
 | ------------ | --------- | --------------------------------- |
 | Content-type | string    | application/x-www-form-urlencoded |
 
-**Body Parameters**
+#### Body parameters
 
-| Name           | Data Type | Description                                                                                           |
-| -------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| Token          | string    | You can pass in your base64 encoded SAML token instead of your Cinchy username and password           |
-| Client\_id     | string    | Client Id value from Integrated Clients table                                                         |
-| Client\_secret | string    | Guid value from Integrated Clients table                                                              |
-| Username       | string    | Username of Cinchy user                                                                               |
-| Password       | string    | Password for Cinchy user in plain text                                                                |
-| Grant\_Type    | string    | Set as "password" for username/password authentication. Set as "saml2" for saml token authentication. |
-| Scope          | string    | Set as "js\_api"                                                                                      |
+<!-- vale off -->
 
-**Responses**
+| Name          | Data Type | Description                                                                                           |
+| ------------- | --------- | ----------------------------------------------------------------------------------------------------- |
+| Token         | string    | You can pass in your base64 encoded SAML token instead of your Cinchy username and password           |
+| Client_id     | string    | Client Id value from Integrated Clients table                                                         |
+| Client_secret | string    | GUID value from Integrated Clients table                                                              |
+| Username      | string    | Username of Cinchy user                                                                               |
+| Password      | string    | Password for Cinchy user in plain text                                                                |
+| Grant_Type    | string    | Set as "password" for username/password authentication. Set as "saml2" for SAML token authentication. |
+| Scope         | string    | Set as `js_api`                                                                                       |
+
+<!-- vale on -->
+
+#### Responses
 
 <mark style="color:green;">**200:**</mark>** The request is successful**
 
@@ -223,27 +242,27 @@ Example:
 }
 ```
 
-### 2.9 /api/getstsauthorityuri
+## /api/getstsauthorityuri
 
 | Description                             |
 | --------------------------------------- |
 | This will return your IDP URL endpoint. |
 
-### 2.10 /api/v1.0/secrets-manager
+## /api/v1.0/secrets-manager
 
-**/api/v1.0/secrets-manager/secret?secretName=\&domain=**
+## /api/v1.0/secrets-manager/secret?secretName=\&domain=
 
 | Description                                                          |
 | -------------------------------------------------------------------- |
 | This API will return a secret from the Cinchy Secrets Manager table. |
 
-**Header Parameters:**
+### Header parameters
 
 | Name          | Data Type | Description                                                                                                                                                                                                                                                                                                       |
 | ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Authorization | string    | <p>Optional.<br><br>Bearer &#x3C;access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
 
-#### Body Parameters
+#### Body parameters
 
 | Parameter      | Description                                                                         |
 | -------------- | ----------------------------------------------------------------------------------- |
@@ -251,13 +270,13 @@ Example:
 | \<secret-name> | The name of the secret you want to call, as it appears in the Cinchy Secrets table. |
 | \<domain-name> | The domain where your secret resides.                                               |
 
-**Blank Example:**
+#### Blank example
 
 ```
 <base-url>/api/v1.0/secrets-manager/secret?secretName=<secret-name>&domain=<domain-name>
 ```
 
-**Populated Example:**
+#### Populated example
 
 ```
 Cinchy.net/api/v1.0/secrets-manager/secret?secretName=<ExampleSecret>&domain=<Sandbox>
@@ -271,22 +290,22 @@ The API will return an object in the below format:
 }
 ```
 
-### **2.11 /**api/jobs
+## /api/jobs
 
-**POST: https://\<Connections-URL>/api/jobs**
+### POST: Https://\<Connections-URL>/api/jobs
 
 | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- |
 | This endpoint can be used to trigger a batch data sync job that has been configured in Cinchy. |
 
-**Request Header Parameters**
+#### Request Header parameters
 
 | Name          | Data Type | Description                                                                                                                                                                          |
 | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Authorization | string    | <p>Bearer &#x3C;access_token><br><br>Note that this endpoint does not support Personal Access Tokens.<br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
+| Authorization | string    | <p>Bearer &#x3C;access_token><br><br>Note that this endpoint doesn't support Personal Access Tokens.<br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
 | Content-Type  | String    | multipart/form-data                                                                                                                                                                  |
 
-**Body Parameters**
+#### Body parameters
 
 {% hint style="warning" %}
 Note that the parameter names **"files"** and **"options"** are both case sensitive and must use lowercase in your JSON. The contents of the parameters themselves aren't case sensitive.
@@ -297,7 +316,7 @@ Note that the parameter names **"files"** and **"options"** are both case sensit
 | files   | binary    | The URL to any file(s) needed to be uploaded to be used in place of a parameter in the data sync                     |
 | options | string    | A JSON string of the data sync options. [See here](./#options-json-structure) for the structure of this JSON string. |
 
-#### **Options - JSON Structure**
+#### Options - JSON structure
 
 ```json
  {
@@ -319,7 +338,7 @@ Note that the parameter names **"files"** and **"options"** are both case sensit
    }
 ```
 
-#### Endpoint Example
+#### Endpoint example
 
 ```
 curl --request POST \
@@ -340,7 +359,7 @@ curl --request POST \
 }
 ```
 
-<mark style="color:orange;">**400:**</mark>** The request could not be completed.**
+<mark style="color:orange;">**400:**</mark>** The request couldn't be completed.**
 
 ```
 {
