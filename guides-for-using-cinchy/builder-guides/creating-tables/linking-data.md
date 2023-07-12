@@ -11,7 +11,7 @@ description: >-
 
 Linking is done by the Cinchy ID, which is unique. When you create a link column, you select a column to link to. This is simply a decision on which field to show from the linked record. You should pick a unique field to link on to avoid confusion if possible.
 
-Once a record is created, its Cinchy ID never changes. This means that modifying the row of data in the linked table won't change the relationship in your table to that row. This also means that if you did not use a unique column, even though the UI looks the same, you are actually linking to different rows.‌
+Once a record is created, its Cinchy ID never changes. This means that modifying the row of data in the linked table won't change the relationship in your table to that row. This also means that if you didn't use a unique column, even though the UI looks the same, you are actually linking to different rows.‌
 
 ## Choose a linked column <a href="#choosing-linked-column" id="choosing-linked-column"></a>
 

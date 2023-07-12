@@ -26,3 +26,12 @@ GUID(s)
 [Ss]ubtag
 endswagger
 SDKs
+NChar
+NText
+Healthcheck
+Homepage
+Sandboxed
+[Mm]iddleware
+Avro
+[Tt]ooltip
+[Ss]ubproject

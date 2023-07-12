@@ -2,13 +2,13 @@
 
 ## Overview
 
-Becoming comfortable with the Cinchy terms and verbiage is an essential step to broaden your understanding of the platform and Data Collaboration as a whole. We have created this handy guide featuring to help you better understand the words and phrases you may see appear throughout this wiki space.
+Becoming comfortable with the Cinchy terms and verbiage is an essential step to broaden your understanding of the platform and Data Collaboration as a whole. We've created this handy guide featuring to help you better understand the words and phrases you may see appear throughout this wiki space.
 
 ## B
 
 #### Batch Sync
 
-A Batch Sync is one of the two types of Data Syncs that you can perform using Cinchy. [Batch syncs work](data-syncs/building-data-syncs/types-of-data-syncs.md) by processing a group or a ‘batch’ of data all together rather than each piece of data individually. When the data sync is triggered  it will compare the contents of the source to the target. The Cinchy Worker will decide if data needs to be added, deleted or updated. Batch sync can either be run as a one-time data load operation, or it can be scheduled to run periodically using an external Enterprise Scheduler
+A Batch Sync is one of the two types of Data Syncs that you can perform using Cinchy. [Batch syncs work](data-syncs/building-data-syncs/types-of-data-syncs.md) by processing a group or a ‘batch’ of data all together rather than each piece of data individually. When the data sync is triggered it will compare the contents of the source to the target. The Cinchy Worker will decide if data needs to be added, deleted or updated. Batch sync can either be run as a one-time data load operation, or it can be scheduled to run periodically using an external Enterprise Scheduler
 
 ## C
 
@@ -18,14 +18,14 @@ The [Cinchy Administrator](guides-for-using-cinchy/administrator-guide.md) is a 
 
 A Builder Admin can:
 
-* Modify **all** table data (including system tables), **all** schema, and **all** data controls
-  * This includes setting up and configuring users, assigning them to groups, and assigning which users have builder access
-* View **all** tables (including system tables) and queries in the platform
+- Modify **all** table data (including system tables), **all** schema, and **all** data controls
+  - This includes setting up and configuring users, assigning them to groups, and assigning which users have builder access
+- View **all** tables (including system tables) and queries in the platform
 
 A Non-Builder Admin can:
 
-* View **all** tables (including system tables) and queries in the platform
-* Modify data controls for tables
+- View **all** tables (including system tables) and queries in the platform
+- Modify data controls for tables
 
 #### Cinchy Builder
 
@@ -33,16 +33,16 @@ A Non-Builder Admin can:
 
 The “Cinchy Builder” has access to perform the following capabilities:
 
-* Change Table Schema (use Cinchy’s “Design Table” functionality)
-* Grant access (use Cinchy’s “Design Controls” functionality)
-* Edit Cinchy Data in Cinchy System Tables
-* Create, Save, and Share Cinchy Queries
-* Perform ad hoc Cinchy Queries on the Cinchy data network
-* Import/export packaged business capabilities (i.e. deployment packages)
-* Build Cinchy Experiences
-* Perform integration with Cinchy (e.g. Cinchy Command Line Interface \[CLI] operations)
-* Create and Deliver an unlimited number of Customer Use Cases within Cinchy
-* A builder can be part of the[ Administrators group](guides-for-using-cinchy/administrator-guide.md)
+- Change Table Schema (use Cinchy’s “Design Table” functionality)
+- Grant access (use Cinchy’s “Design Controls” functionality)
+- Edit Cinchy Data in Cinchy System Tables
+- Create, Save, and Share Cinchy Queries
+- Perform specific Cinchy Queries on the Cinchy data network
+- Import/export packaged business capabilities (such as deployment packages)
+- Build Cinchy Experiences
+- Perform integration with Cinchy (Cinchy Command Line Interface \[CLI] operations)
+- Create and Deliver an unlimited number of Customer Use Cases within Cinchy
+- A builder can be part of the[ Administrators group](guides-for-using-cinchy/administrator-guide.md)
 
 #### Cinchy CLI
 
@@ -62,9 +62,9 @@ Cinchy ID is a unique identifier assigned automatically to all records within a 
 
 **Cinchy Query Language can be used in many ways, including but not limited to:**
 
-* ​Building queries through the query editor that can return, insert, delete, and otherwise manage your data.
-* ​Creating, altering or dropping views for tables​
-* ​Creating, altering or dropping indexes​
+- ​Building queries through the query editor that can return, insert, delete, and otherwise manage your data.
+- ​Creating, altering or dropping views for tables​
+- ​Creating, altering or dropping indexes​
 
 #### Cinchy Upgrade Utility
 
@@ -72,29 +72,25 @@ Cinchy ID is a unique identifier assigned automatically to all records within a 
 
 #### Cinchy End-User
 
-[The **“End-Users”**](guides-for-using-cinchy/user-guides/) of the Cinchy platform are those that apply the functionalities created by the **“Cinchy Builders”** to their business objectives. This can be employees, customers, partners, or systems. There are two types of end-user: direct and indirect.
+[The **“End-Users”**](guides-for-using-cinchy/user-guides/) of the Cinchy platform are those that apply the functionalities created by the **“Cinchy Builders”** to their business objectives. This can be employees, customers, partners, or systems. Cinchy has two types of end-user: direct and indirect.
 
-* **Direct Users** log into Cinchy via the data browser
-* **Indirect Users** (also commonly referred to as "external users") view/edit data via a third-party application/page that connects to Cinchy via API
+- **Direct Users** log into Cinchy via the data browser
+- **Indirect Users** (also commonly referred to as "external users") view/edit data via a third-party application/page that connects to Cinchy via API
 
 Cinchy End-Users are able to:
 
-* Create and save personal queries. Unlike traditional saved queries made by builders, _**personal**_ saved queries cannot be shared and aren't auto-exposed as APIs.
-* Use Tables, Saved Queries, and Experiences created by [“Builders"](guides-for-using-cinchy/builder-guides/#what-is-a-builder)
-* Track version history for the full lifecycle of data
-* Bookmark and manage data
-* Access data through application experiences
-* An end-user can be part of the [Administrators group](guides-for-using-cinchy/administrator-guide.md)
+- Create and save personal queries. Unlike traditional saved queries made by builders, _**personal**_ saved queries can't be shared and aren't auto exposed as APIs.
+- Use Tables, Saved Queries, and Experiences created by [“Builders"](guides-for-using-cinchy/builder-guides/#what-is-a-builder)
+- Track version history for the full lifecycle of data
+- Bookmark and manage data
+- Access data through application experiences
+- An end-user can be part of the [Administrators group](guides-for-using-cinchy/administrator-guide.md)
 
 #### Connections Experience
 
-The Connections Experience is an integral part of Cinchy's [Data Collaboration](cinchy-glossary.md#data-collaboration) offerings. Serving as the front-end UI for performing[ Data Syncs](cinchy-glossary.md#data-synchronizations), the Connections Experience can be accessed natively in your Cinchy browser to create, configure, and manage the data being synced in and out of the platform. The user friendly interface makes synchronizing your data across a range of apps and softwares easy.
+The Connections Experience is an integral part of Cinchy [Data Collaboration](cinchy-glossary.md#data-collaboration). Serving as the front-end UI for performing[ Data Syncs](cinchy-glossary.md#data-synchronizations), the Connections Experience can be accessed natively in your Cinchy browser to create, configure, and manage the data being synced in and out of the platform. The user friendly interface makes synchronizing your data across a range of apps easy.
 
 ## D
-
-#### Dataware
-
-Dataware is the emergence of a common group of technologies that solve data related problems across many business use cases. One of the most exciting categories in this group is [Data Collaboration.](cinchy-glossary.md#data-collaboration)
 
 #### Data Browser
 
@@ -120,13 +116,13 @@ Data Synchronizations ("Data Syncs") are a powerful and important aspect of the 
 
 #### Entitlements
 
-Entitlements refers to the set of permissions that you are granted for any piece of data. Cinchy allows entitlements to be set at a very granular level, meaning you can give individual users or user groups access to things like:
+Entitlements refers to the set of permissions that you are granted for any piece of data. Cinchy allows entitlements to be set at a granular level, meaning you can give individual users or user groups access to things like:
 
-* Viewing a data sync
-* Running a job
-* Viewing a specific table row or column
-* Editing a specific table cell
-* Etc.
+- Viewing a data sync
+- Running a job
+- Viewing a specific table row or column
+- Editing a specific table cell
+- Etc.
 
 Entitlements can persist across the platform when using features such as link columns or the [Network Map.](cinchy-glossary.md#network-map)
 
@@ -146,26 +142,26 @@ When setting up real-time data syncs, you will need to [configure the Cinchy Lis
 
 MDQE, which stands for [**Metadata Quality Exceptions**](guides-for-using-cinchy/additional-guides/mdqe.md), can send out notifications based on a set of rules and the “exceptions” that break them. This powerful tool can be used to send notifications for exceptions such as:
 
-* Healthchecks returning a critical status
-* Upcoming Project Due Dates/Timelines
-* Client Risk Ratings reaching a high threshold
-* Tracking Ticket Urgency or Status markers
-* Unfulfilled and Pending Tasks/Deliverables
-* Etc.
+- Healthchecks returning a critical status
+- Upcoming Project Due Dates/Timelines
+- Client Risk Ratings reaching a high threshold
+- Tracking Ticket Urgency or Status markers
+- Unfulfilled and Pending Tasks/Deliverables
+- Etc.
 
-In a nutshell, MDQE monitors for specific changes in data, and then pushes out notifications when that change occurs.
+MDQE monitors for specific changes in data, and then pushes out notifications when that change occurs.
 
 #### Meta Forms
 
 [The Meta-Forms experience](meta-forms/introduction-to-meta-forms.md) is a combination of Angular code packaged as an App Experience and a Data Model packaged as a Data Experience that enables users to interact with Cinchy data in a User-Friendly manner.
 
-It lives on top of the data collaboration platform, allowing builders to create forms with custom configurations and users to access this data outside of the tabular view that is native to Cinchy.
+It lives on top of the data collaboration platform, allowing builders to create forms with custom configurations and users to access this data outside of the tabular view that's native to Cinchy.
 
 ## N
 
 #### Network Map
 
-Cinchy comes out of the box with a system applet called ["Network Map"](guides-for-using-cinchy/additional-guides/application-experiences/network-map/), which is a visualization of your data on the platform and how everything interconnects; it's another way to view and navigate the data you have access to within Cinchy.
+Cinchy comes out of the box with a system applet called [Network Map](guides-for-using-cinchy/additional-guides/application-experiences/network-map/), which is a visualization of your data on the platform and how everything interconnects; it's another way to view and navigate the data you have access to within Cinchy.
 
 Each node represents a table you have access to within Cinchy, and each edge is one link between two tables. The size of the table is determined by the number of links referencing that table. The timeline on the bottom allows you to check out your data network at a point in the past and look at the evolution of your network.
 

@@ -1,8 +1,10 @@
-# Adding Links to a Form
+# Add Links to a form
 
-## 1. How to Add a Link to Your Form <a href="#how-to-add-a-link-to-your-form" id="how-to-add-a-link-to-your-form"></a>
+## Add a link to your form <a href="#how-to-add-a-link-to-your-form" id="how-to-add-a-link-to-your-form"></a>
 
-Currently, form links will only populate on existing records. They will not appear on a blank form. This feature is forthcoming.
+Currently, form links will only populate on existing records. They won't appear on a blank form.  
+
+To add a link to your form:
 
 1. Navigate to your source table. In this example we will use the **"Product Content Backlog"** table _(Image 1)_ for our **"Product Content Requests"** form.
 
