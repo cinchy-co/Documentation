@@ -4,44 +4,7 @@ description: >-
   Table of Contents to find specific queries.
 ---
 
-# Frequently Asked Questions
-
-## Table of Contents
-
-|                                                                                                                                                                                                                                                       |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [#can-i-get-a-record-count-from-a-delimited-file-before-running-the-cli](frequently-asked-questions.md#can-i-get-a-record-count-from-a-delimited-file-before-running-the-cli "mention")                                                               |
-| [#can-i-restore-my-deleted-data](frequently-asked-questions.md#can-i-restore-my-deleted-data "mention")                                                                                                                                               |
-| [#can-i-send-multiple-comma-delimited-values-to-a-query-parameter-i.e.-234-233-365-to-be-used-in-where](frequently-asked-questions.md#can-i-send-multiple-comma-delimited-values-to-a-query-parameter-i.e.-234-233-365-to-be-used-in-where "mention") |
-| [#cinchy-dates-are-being-saved-as-a-1900-01-01-when-updating-using-a-variable](frequently-asked-questions.md#cinchy-dates-are-being-saved-as-a-1900-01-01-when-updating-using-a-variable "mention")                                                   |
-| [#does-a-row-filter-restrict-access-for-a-cinchy-administrator](frequently-asked-questions.md#does-a-row-filter-restrict-access-for-a-cinchy-administrator "mention")                                                                                 |
-| [#how-can-i-automatically-check-if-a-cli-data-sync-was-successful-or-failed](frequently-asked-questions.md#how-can-i-automatically-check-if-a-cli-data-sync-was-successful-or-failed "mention")                                                       |
-| [#how-can-i-check-for-platform-errors](frequently-asked-questions.md#how-can-i-check-for-platform-errors "mention")                                                                                                                                   |
-| [#how-can-i-enter-a-new-line-into-a-field-in-manage-data](frequently-asked-questions.md#how-can-i-enter-a-new-line-into-a-field-in-manage-data "mention")                                                                                             |
-| [#how-can-i-prevent-wrong-data-loading-in-from-external-applications](frequently-asked-questions.md#how-can-i-prevent-wrong-data-loading-in-from-external-applications "mention")                                                                     |
-| [#how-can-i-see-who-has-modified-my-data](frequently-asked-questions.md#how-can-i-see-who-has-modified-my-data "mention")                                                                                                                             |
-| [#how-do-i-create-a-cinchy-user-with-a-set-password](frequently-asked-questions.md#how-do-i-create-a-cinchy-user-with-a-set-password "mention")                                                                                                       |
-| [#how-do-i-get-the-change-history-through-cql](frequently-asked-questions.md#how-do-i-get-the-change-history-through-cql "mention")                                                                                                                   |
-| [#how-do-i-insert-update-and-delete-links-in-a-multi-select-field-using-cql](frequently-asked-questions.md#how-do-i-insert-update-and-delete-links-in-a-multi-select-field-using-cql "mention")                                                       |
-| [#how-do-i-know-which-version-of-cinchy-i-am-running](frequently-asked-questions.md#how-do-i-know-which-version-of-cinchy-i-am-running "mention")                                                                                                     |
-| [#how-do-i-map-a-parameters-value-to-one-of-my-target-columns](frequently-asked-questions.md#how-do-i-map-a-parameters-value-to-one-of-my-target-columns "mention")                                                                                   |
-| [#how-do-i-parse-a-pipe-delimited-file-using-the-cli](frequently-asked-questions.md#how-do-i-parse-a-pipe-delimited-file-using-the-cli "mention")                                                                                                     |
-| [#how-do-i-remove-the-leading-0-from-an-incoming-field-using-the-cli](frequently-asked-questions.md#how-do-i-remove-the-leading-0-from-an-incoming-field-using-the-cli "mention")                                                                     |
-| [#how-do-i-clone-a-cinchy-table](frequently-asked-questions.md#how-do-i-clone-a-cinchy-table "mention")                                                                                                                                               |
-| [#how-do-i-clone-a-domain](frequently-asked-questions.md#how-do-i-clone-a-domain "mention")                                                                                                                                                           |
-| [#i-am-unable-to-use-coalesce-with-a-link-column-in-a-calculated-column](frequently-asked-questions.md#i-am-unable-to-use-coalesce-with-a-link-column-in-a-calculated-column "mention")                                                               |
-| [#i-cannot-disable-change-approvals](frequently-asked-questions.md#i-cannot-disable-change-approvals "mention")                                                                                                                                       |
-| [#i-cannot-find-the-cinchy-.-table-access-control-table](frequently-asked-questions.md#i-cannot-find-the-cinchy-.-table-access-control-table "mention")                                                                                               |
-| [#i-cannot-find-the-column-i-want-to-link-to-even-though-the-column-is-present-in-the-table](frequently-asked-questions.md#i-cannot-find-the-column-i-want-to-link-to-even-though-the-column-is-present-in-the-table "mention")                       |
-| [#i-have-access-to-a-table-but-i-cannot-see-any-rows](frequently-asked-questions.md#i-have-access-to-a-table-but-i-cannot-see-any-rows "mention")                                                                                                     |
-| [#is-it-possible-to-correct-replace-a-table-or-columns-guid](frequently-asked-questions.md#is-it-possible-to-correct-replace-a-table-or-columns-guid "mention")                                                                                       |
-| [#my-insert-update-statement-is-making-multiple-changes-instead-of-just-one](frequently-asked-questions.md#my-insert-update-statement-is-making-multiple-changes-instead-of-just-one "mention")                                                       |
-| [#my-query-parameter-is-not-working](frequently-asked-questions.md#my-query-parameter-is-not-working "mention")                                                                                                                                       |
-| [#null-values-are-not-updating-correctly-in-salesforce-using-the-data-sync](frequently-asked-questions.md#null-values-are-not-updating-correctly-in-salesforce-using-the-data-sync "mention")                                                         |
-| [#passing-parameters-to-a-query-called-with-exec](frequently-asked-questions.md#passing-parameters-to-a-query-called-with-exec "mention")                                                                                                             |
-| [#some-of-the-columns-have-been-rearranged-under-the-default-all-data-view](frequently-asked-questions.md#some-of-the-columns-have-been-rearranged-under-the-default-all-data-view "mention")                                                         |
-| [#the-multi-select-option-on-the-link-column-is-disabled](frequently-asked-questions.md#the-multi-select-option-on-the-link-column-is-disabled "mention")                                                                                             |
-| [#what-permissions-are-needed-for-a-user-to-be-able-to-create-and-edit-views](frequently-asked-questions.md#what-permissions-are-needed-for-a-user-to-be-able-to-create-and-edit-views "mention")                                                     |
+# Frequently asked questions
 
 ## Can I get a record count from a delimited file before running the CLI?
 
@@ -60,21 +23,21 @@ else {
 }
 ```
 
-There is currently no way for you to find out how many records will be inserted/updated/deleted if you run a CLI without performing the sync.
+If you run a CLI without performing the sync, there is currently no way for you to find out how many records will be inserted/updated/deleted.
 
 ## Can I restore my deleted data?
 
-If the record is still in the table, but has been overwritten by mistake, access your **Collaboration Log** for the row, and restore back to the correct version. 
+If the record is still in the table, but has been overwritten by mistake, access your **Collaboration Log** for the row, and restore back to the correct version.
 
 If your row has been deleted by mistake, access your **Recycling Bin,** locate the row and restore it.
 
 The only way to truly delete data on the platform is through [Data Erasure](guides-for-using-cinchy/builder-guides/creating-tables/data-controls/data-erasure.md) and [Data Compression.](guides-for-using-cinchy/builder-guides/creating-tables/data-controls/data-compression.md)
 
-## Can I send multiple comma-delimited values to a query parameter? \[i.e. 234,233,365 to be used in WHERE \[Id] IN (@param)]
+## Can I send multiple comma-delimited values to a query parameter? \[234,233,365 to be used in WHERE \[Id] IN (@param)]
 
 For example: 4,10,15 to be used in WHERE \[Id] IN (@param)
 
-This can be done by using parameters in **{}**, such as **{0},{1}**,...
+This can be done by using parameters in **{}**, such as **{0},{1}**.
 
 These will be replaced with the exact text when running the query.
 
@@ -95,13 +58,13 @@ WHERE E.[Deleted] IS NULL AND [Employee ID]=@empid
 
 ## Does a row filter restrict access for a Cinchy administrator?
 
-Currently Cinchy Administrators have access to view/edit/approve all data in the platform. There is no way currently to restrict access for Cinchy administrators.
+Cinchy Administrators have access to view/edit/approve all data in the platform, so there's no way to restrict access for Cinchy administrators.
 
-A workaround is to create a separate "administrators" group which has edit access to all Cinchy system tables, and just leave the "admin" user account or superadmins as "Cinchy administrators."
+A workaround is to create a separate "administrators" group which has edit access to all Cinchy system tables, and just leave the "admin" user account or super admins as "Cinchy administrators."
 
 ## How can I automatically check if a CLI data sync was successful or failed?
 
-You can check if a data sync was successful by its exit code. Below is sample code in Powershell to check for the exit code and what they mean.
+You can check if a data sync was successful by its exit code. Below is sample code in PowerShell to check for the exit code and what they mean.
 
 ```bash
 Invoke-Expression $CLICommand
@@ -143,9 +106,9 @@ The best way to load data from external sources into Cinchy, is by using a [data
 
 You can do the following to preview your changes:
 
-* Create staging tables to validate the data first.
-* Use formatting rules in Cinchy, to highlight data that is not valid.
-* Configure a CLI using a Cinchy Query source to move the data from the staging tables to the permanent tables.
+- Create staging tables to validate the data first.
+- Use formatting rules in Cinchy, to highlight data that's not valid.
+- Configure a CLI using a Cinchy Query source to move the data from the staging tables to the permanent tables.
 
 ## How can I see who has modified my data?
 
@@ -159,24 +122,28 @@ One Time
 setup:
 
 1. Open the Users table
-2. For the password of this user, copy the admin user's password and paste it into the Password field of **"defaultuser".**
-3. Set the Password Expiration Timestamp to today
-4. In an Incognito browser, navigate to the Cinchy website
-5. Sign in as **defaultuser** with the admin user password
-6. Cinchy will ask you to change the password for **defaultuser**, change it to a default password you will give out every time you create an account.
-7. In the original session window, refresh the Users table and remove the Password Expiration Timestamp for **defaultuser**.
+2. For the password of this user, copy the admin user password and paste it into the Password field of the new user.
+3. Set the Password Expiration Timestamp to today.
+4. In an Incognito browser, navigate to the Cinchy website.
+5. Sign in as the new user with the admin user password.
+6. Cinchy will ask you to change the password for the new user, change it to a default password you will give out every time you create an account.
+7. In the original session window, refresh the Users table and remove the Password Expiration Timestamp for the new user.
 
 Each time, for new users:
 
-1. Open the Users table
-2. Create the new user, for example **"sandip"**
-3. For the password of this user, copy the **"defaultuser"** password and paste it into the Password field of **"sandip".**
-4. Set the Password Expiration Timestamp to today
+<!-- vale off -->
+
+1. Open the Users table.
+2. Create the new user, for example **sandip**.
+3. For the password of this user, copy the the new user password and paste it into the Password field of **sandip**.
+4. Set the Password Expiration Timestamp to today.
 5. Give the user their username and friendly password created in step 7 above. They will be asked to change their password on first sign in.
+
+<!-- vale on -->
 
 ## How do I get the change history through CQL?
 
-You write the query for the records for which you want the change history, including system columns like \[Version], \[Created], ... and the columns for which you like to see the changes.
+You write the query for the records for which you want the change history, including system columns like \[Version], \[Created], and the columns for which you like to see the changes.
 
 You can add an **ORDER BY \[Version] (either ASC or DESC)**
 
@@ -185,7 +152,7 @@ Then you change the query return type to "Query Results (Including Version Histo
 
 The following query will show when the Cinchy instances were upgraded.
 
-```javascript
+```sql
 SELECT [Version], [Modified], [Model Version]
 FROM [Cinchy].[Models]
 WHERE [Deleted] IS NULL AND [Name]='Cinchy'
@@ -194,11 +161,11 @@ ORDER BY [Version] DESC
 
 ## How do I insert, update, and delete links in a multi-select field using CQL?
 
-Removing  and updating a multi-select a link, is the same as setting the link field. The field needs to be updated with the list of values.
+Removing and updating a multi-select a link, is the same as setting the link field. The field needs to be updated with the list of values.
 
 The value is a concatenated string of '\[Cinchy Id],\[Version],\[Cinchy Id],\[Version],\[Cinchy Id],\[Version]' from the lookup values
 
-```javascript
+```sql
 UPDATE T
 SET T.[Multi-Link Field Name] = '1,1,2,1,3,1'
 FROM [Domain].[Table Name] T
@@ -220,23 +187,20 @@ Navigate to **\<baseURL>/healthcheck**
 
 The response looks this:
 
-```javascript
-{ 
-  "component": "Cinchy", 
-  "version": "4.14.0.0", 
-  "ipAddress": [ 
-      "172.31.14.171", 
-      "172.19.64.1" 
-  ], 
-  "systemTime": "2020-06-18T19:43:54.1692859Z", 
-  "status": "Green", 
-  "healthChecks": [ 
-    { 
-      "name": "Database Connectivity", 
+```json
+{
+  "component": "Cinchy",
+  "version": "4.14.0.0",
+  "ipAddress": ["172.31.14.171", "172.19.64.1"],
+  "systemTime": "2020-06-18T19:43:54.1692859Z",
+  "status": "Green",
+  "healthChecks": [
+    {
+      "name": "Database Connectivity",
       "description": "Validates that the application can connect to the database",
-      "status": "Green" 
-   } 
- ] 
+      "status": "Green"
+    }
+  ]
 }
 ```
 
@@ -268,7 +232,7 @@ The order of the columns in the source is important. If your source is a file, p
 
 ## How do I parse a pipe delimited file using the CLI?
 
-Set the delimiter to "|".
+Set the delimiter to `|`.
 
 ```javascript
 <DelimitedDataSource delimiter="|" textQualifier="&quot;"  headerRowsToIgnore="2" path="@filePath" encoding="UTF8">
@@ -279,10 +243,10 @@ Set the delimiter to "|".
 This can be done by using Transformations in the sync configuration of a column. Here is an example:
 
 ```javascript
-<Column name="Value 2" dataType="Text" >
-      <Transformations>
-            <StringReplacement pattern="^0*" replacement="" />
-      </Transformations>
+<Column name="Value 2" dataType="Text">
+  <Transformations>
+    <StringReplacement pattern="^0*" replacement="" />
+  </Transformations>
 </Column>
 ```
 
@@ -299,8 +263,8 @@ The pattern contains a regular expression:
 1. Export the Model to XML from the Design Table info tab
 2. Open the exported model in an editor and change the name of the model
 3. Change the name of the table
-4. remove the guids from the table in the model  and save the file
-5. Use the modelloader at `<cinchy base URL>/apps/modelloader` to upload the modified model
+4. remove the guids from the table in the model and save the file
+5. Use the `modelloader` at `<cinchy base URL>/apps/modelloader` to upload the modified model
 6. Export the data from the Manage Data screen of the initial table and import it in the new table
 
 ## How do I clone a domain?
@@ -327,7 +291,7 @@ Please cast the link columns to VARCHAR:
 
 **COALESCE(CAST(\[Person 1] AS VARCHAR(50)),CAST(\[Person 2] AS VARCHAR(50)),\[Member])**
 
-## I cannot disable Change Approvals
+## I can't disable Change Approvals
 
 This is caused by records in Draft status. To retrieve these records, run a query with return type Query Results (Including Draft Data).
 
@@ -343,9 +307,9 @@ After approving these records, you will be able to disable change approval.
 You may have to restore cancelled records, approve them, and delete them so that everything is approved.
 {% endhint %}
 
-## I cannot find the \[Cinchy].\[Table Access Control] table
+## I can't find the \[Cinchy].\[Table Access Control] table
 
-The \[Cinchy].\[Table Access Control] table does not show in the Market Place, but you can query for the data in the table.
+The \[Cinchy].\[Table Access Control] table doesn't show in the Market Place, but you can query for the data in the table.
 
 ```javascript
 SELECT *
@@ -353,43 +317,43 @@ FROM [Cinchy].[Table Access Control]
 WHERE [Deleted] IS NULL AND [Table]='HR.Employees'
 ```
 
-## I cannot find the column I want to link to even though the column is present in the table
+## I can't find the column I want to link to even though the column is present in the table
 
 In this example it would set \[Multi-Link Field Name] to values with \[Cinchy Id] 1, 2, and 3.
 The version after each Cinchy Id should be 1."
 
-Columns don't "Allow Linking" by default. Check the properties of the column in the original table and make sure that in “Show Advanced” the “Allow Linking” checkmark box is selected. If you do not have Design Table access to that table, you will need to ask someone who does to do it.
+Columns don't "Allow Linking" by default. Check the properties of the column in the original table and make sure that in “Show Advanced” the “Allow Linking” checkmark box is selected. If you don't have Design Table access to that table, you will need to ask someone who does to do it.
 
-## I have access to a table but I cannot see any rows
+## I have access to a table but I can't see any rows
 
-There are a couple reasons why you may not be able to see any rows:
+You may not be able to see any rows because of the following reasons:
 
-* View Filter
-* Data access controls
-* Error with the View or Table
+- View Filter
+- Data access controls
+- Error with the View or Table
 
 #### View Filter
 
-Check the All Data view and see if there is data there, if that is the case but a particular view has no rows, there could be a filter on the view. For example, if there is a "Due Soon" or "My Actions" view, it could just be that there are no records assigned to you that require actioning.
+Check the All Data view and see if there is data there, if that's the case but a particular view has no rows, there could be a filter on the view. For example, if there is a "Due Soon" or "My Actions" view, it could just be that there are no records assigned to you that require action.
 
 #### Data Access Controls
 
-Access controls set on the table could cause you to have access to 0 records. Since you are able to set row level filters in Cinchy, it may be the case that the permissions of the table has not changed, but the data has changed such that you no longer have permission or vice versa.
+Access controls set on the table could cause you to have access to 0 records. Since you are able to set row level filters in Cinchy, it may be the case that the permissions of the table hasn't changed, but the data has changed such that you no longer have permission or vice versa.
 
 **Error**
 
-There may be an error on the view. If the bottom of the page does not show 0 records then there may be an error on the page _(Image 3)._
+There may be an error on the view. If the bottom of the page doesn't show 0 records then there may be an error on the page _(Image 3)._
 
 ![Image 3: 0 records](<.gitbook/assets/image (73).png>)
 
 ## Is it possible to correct/replace a table or column's GUID?
 
-It can be done. It is very unlikely that the GUID you want to change to is already allocated, but you  should still check. Filter the \[Cinchy].\[Table Columns] for the new GUID. You should not find it. Then replace it in two places:
+It can be done. It's unlikely that the GUID you want to change to is already allocated, but you should still check. Filter the \[Cinchy].\[Table Columns] for the new GUID. You shouldn't find it. Then replace it in two places:
 
-* the json field in \[Cinchy].\[Tables] - replace it in the column definition
-* the GUID field in \[Cinchy].\[Table Columns]
+- the JSON field in \[Cinchy].\[Tables] - replace it in the column definition
+- the GUID field in \[Cinchy].\[Table Columns]
 
-To replace the table GUID, replace it in the json in \[Cinchy].\[Tables] and in the GUID field in \[Cinchy].\[Tables].
+To replace the table GUID, replace it in the JSON in \[Cinchy].\[Tables] and in the GUID field in \[Cinchy].\[Tables].
 
 When you are done, restart the Cinchy UI. ​
 
@@ -411,7 +375,7 @@ The same applies to UPDATE statements.
 
 If you need to perform inserts and updates in a query and want to return data at the end, another option is to use the "Single value (First Column of First Row)" return type, which will only be able to return a single value.
 
-## My query parameter is not working
+## My query parameter isn't working
 
 When I pass a value to the following query, the result is empty.
 
@@ -432,7 +396,7 @@ SELECT @nbdays;
 
 When performing a data sync with a Salesforce target, you need to replace nulls with '#N/A' in the source. You can use ISNULL(\[Column],'#N/A') in the source query. The following is a link to the Salesforce documentation related to this topic:
 
-[https://help.salesforce.com/articleView?id=000328822\&language=en\_US\&type=1\&mode=1](https://help.salesforce.com/articleView?id=000328822\&language=en\_US\&type=1\&mode=1)
+[https://help.salesforce.com/articleView?id=000328822\&language=en_US\&type=1\&mode=1](https://help.salesforce.com/articleView?id=000328822&language=en_US&type=1&mode=1)
 
 ## Passing Parameters to a query called With Exec
 
@@ -466,4 +430,4 @@ Once link column is added to a table and saved, the multi-select checkbox should
 
 ## What permissions are needed for a user to be able to create and edit views?
 
-The user needs to have "Design Table" permissions granted for the table where he/she will create or edit views and also needs to have the "Can Design Tables" checked in the \[Cinchy].\[Users] table.
+The user needs to have "Design Table" permissions granted for the table where they will create or edit views and also needs to have the "Can Design Tables" checked in the \[Cinchy].\[Users] table.

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Data Collaboration Overview](README.md)
+* [Data collaboration Overview](README.md)
 
 ## Release notes
 

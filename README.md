@@ -1,18 +1,18 @@
 ---
-description: This page provides a brief overview of Data Collaboration
+description: This page provides a brief overview of data collaboration
 ---
 
-# Data Collaboration Overview
+# Data collaboration Overview
 
 {% hint style="info" %}
 **You are currently browsing the Cinchy v5.7 platform documentation.** For documentation pertaining to other versions of the platform, please navigate to the relevant space(s) via the drop down menu in the upper left of the page.
 {% endhint %}
 
-## What’s the purpose of Data Collaboration?
+## What’s the purpose of data collaboration?
 
-Data collaboration is the emergence of a common group of technologies that solve data related problems across many business use cases. One of the most exciting new categories within this group is Data Collaboration.
+Data collaboration is the emergence of a common group of technologies that solve data related problems across many business use cases. One of the most exciting new categories within this group is data collaboration.
 
-Data Collaboration solves the costly, time-consuming, and ineffective integration processes born from silo-ing your data in a traditional app-centric environment. Instead of your data serving your applications, data collaboration refocuses and pivots to a model where your data is at the forefront and is being served by your apps _(Image 1)._
+Data collaboration solves the costly, time-consuming, and ineffective integration processes born from silo-ing your data in a traditional app-centric environment. Instead of your data serving your applications, data collaboration refocuses and pivots to a model where your data is at the forefront and is being served by your apps _(Image 1)._
 
 
 
@@ -22,7 +22,7 @@ Harnessing this power, Cinchy connects unlimited data sources within a networked
 
 ## The root causes of IT delay and frustration
 
-When a new IT project is green-lit, you often pay a hefty fine called the **integration tax** where you're continuously building new integrations between applications, just to reuse data that is already available in your systems.
+When a new IT project is green-lit, you often pay a hefty fine called the **integration tax** where you're continuously building new integrations between applications, just to reuse data that's already available in your systems.
 
 Over time, this never-ending cycle of copying data between fragmented apps gets more complex, resulting in delayed launches, budget overruns, and “shadow IT” projects.
 
@@ -32,7 +32,7 @@ This process of making copies now consumes up to 50% of the resources on large I
 
 _**How can this be fixed?**_
 
-## Data Collaboration: **Using Dataware for accelerated solutions delivery**
+## Data collaboration: **Accelerated solutions delivery**
 
 With data collaboration, you shift your approach from **integration for data sharing**, to **access for data collaboration** _(Image 3)._
 
@@ -40,7 +40,7 @@ With data collaboration, you shift your approach from **integration for data sha
 
 For every app you build where you leverage data collaboration, you’re able to access the network to reuse information for future apps**.** Your IT team will find that previous projects have already connected many of the data sources they need to the network.
 
-Cinchy's data collaboration platform does for application development what the **power grid** does for individual buildings. In the same way that buildings no longer need to generate their own power thanks to the power grid, with a data collaboration platform applications no longer need to manage, integrate, and protect their own data _(Image 4)._
+The Cinchy data collaboration platform does for application development what the **power grid** does for individual buildings. In the same way that buildings no longer need to generate their own power thanks to the power grid, with a data collaboration platform applications no longer need to manage, integrate, and protect their own data _(Image 4)._
 
 
 

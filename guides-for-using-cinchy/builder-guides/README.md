@@ -71,7 +71,7 @@ Use the universal Data Browser to view, change, analyze, and otherwise interact 
 
 #### Create and share queries
 
-Cinchy’s Data Collaboration platform features an intuitive Drag and Drop Query Builder that allows Builders to create using the Cinchy Query Language ([CQL](https://cinchy.gitbook.io/cql/)), a proprietary language specific to Cinchy. All queries can be saved and shared, and query results automatically generate a full no-code API.
+Cinchy’s data collaboration platform features an intuitive Drag and Drop Query Builder that allows Builders to create using the Cinchy Query Language ([CQL](https://cinchy.gitbook.io/cql/)), a proprietary language specific to Cinchy. All queries can be saved and shared, and query results automatically generate a full no-code API.
 
 #### **Consolidate legacy systems, create new solutions**
 
@@ -83,6 +83,6 @@ For even more flexibility, connect your Data Network to third-party Data Visuali
 
 #### Re-use
 
-The more you use Data Collaboration, the more it’s capable of doing.
+The more you use data collaboration, the more it’s capable of doing.
 
-Any new data you add to the network will work in conjunction with any previously existing data instantly. This means you can re-use data in new ways, with no time-consuming integration efforts. Teams can collaborate directly in real-time, allowing it to act as a central data hub while simplifying integration. Unlike traditional data architecture projects, which grow more complicated as they involve more data sources, Data Collaboration delivers solutions faster and faster as more data is added to it.
+Any new data you add to the network will work in conjunction with any previously existing data instantly. This means you can re-use data in new ways, with no time-consuming integration efforts. Teams can collaborate directly in real-time, allowing it to act as a central data hub while simplifying integration. Unlike traditional data architecture projects, which grow more complicated as they involve more data sources, data collaboration delivers solutions faster and faster as more data is added to it.
