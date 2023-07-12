@@ -2,7 +2,7 @@
 
 ## Overview
 
-DDL is used to create a database schema and define constraints.The Cinchy DDL functions covered on this page are:
+DDL is used to create a database schema and define constraints. The Cinchy DDL functions covered on this page are:
 
 * [​Create Table​](cinchy-ddl-statements.md#create-table)
 * [​Alter Table​](cinchy-ddl-statements.md#alter-table)
@@ -38,7 +38,7 @@ The following tables provide the data type(s) that a **Cinchy Data Type** transl
 
 The **CREATE TABLE** statement is used to create a new table in a database.
 
-The column parameters specify the names of the columns of the table.The datatype parameter specifies the data type the column can hold (such as varchar, char, int, date).
+The column parameters specify the names of the columns of the table. The datatype parameter specifies the data type the column can hold (such as varchar, char, int, date).
 
 **Syntax**
 

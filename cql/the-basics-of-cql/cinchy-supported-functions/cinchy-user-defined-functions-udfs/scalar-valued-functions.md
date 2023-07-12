@@ -27,7 +27,7 @@ WHERE [Domain] = 'Cinchy'
 <figure><img src="../../../../.gitbook/assets/image (530).png" alt=""><figcaption><p>Image 1: Using a Scalar-Valued UDF in CQL</p></figcaption></figure>
 
 {% hint style="info" %}
-Scalar-valued functions have to be invoked with a parameter, even if the definition of the function does not require a parameter. You can pass a string:
+Scalar-valued functions have to be invoked with a parameter, even if the definition of the function doesn't require a parameter. You can pass a string:
 
 SELECT my\_scalar('a') FROM \[Cinchy].\[Tables] WHERE \[Deleted] IS NULL AND \[Cinchy Id]=1
 {% endhint %}
@@ -52,6 +52,6 @@ To use the UDF to trigger an action (such as creating a row in another table), i
 
 Watch out for the following scenarios:
 
-* Do not trigger when you don't have all the necessary fields.
-* Do not trigger when non-relevant data on the row changes.
+* Don't trigger when you don't have all the necessary fields.
+* Don't trigger when non-relevant data on the row changes.
   * Make sure to appropriately insert and/or update in another table.

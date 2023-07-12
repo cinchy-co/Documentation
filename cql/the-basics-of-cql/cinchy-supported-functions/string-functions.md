@@ -2,13 +2,13 @@
 
 ## Overview
 
-The string functions covered in this section perform operations on a string (char or varchar) input value and return a string or numeric value.
+The string functions covered in this section perform operations on a string (**char** or **varchar**) input value and return a string or numeric value.
 
 <table data-header-hidden><thead><tr><th width="155"></th><th width="134"></th><th></th><th></th></tr></thead><tbody><tr><td>​</td><td>​</td><td>​</td><td>​</td></tr><tr><td><a href="string-functions.md#ascii-transact-sql">ASCII​</a></td><td><a href="string-functions.md#char-transact-sql">​CHAR​</a></td><td><a href="string-functions.md#charindex-transact-sql">​CHARINDEX​</a></td><td><a href="string-functions.md#concat-transact-sql">​</a><a href="string-functions.md#concat-transact-sql">CONCAT​</a></td></tr><tr><td><a href="string-functions.md#difference-transact-sql">DIFFERENCE​</a></td><td><a href="string-functions.md#format-transact-sql">FORMAT​</a></td><td><a href="string-functions.md#left-transact-sql">LEFT​</a></td><td><a href="string-functions.md#len-transact-sql">​LEN​</a></td></tr><tr><td><a href="string-functions.md#lower-transact-sql">LOWER​</a></td><td><a href="string-functions.md#ltrim-transact-sql">LTRIM​</a></td><td>​<a href="string-functions.md#patindex-transact-sql">PATINDEX​</a></td><td><a href="string-functions.md#replace-transact-sql">REPLACE​</a></td></tr><tr><td>​<a href="string-functions.md#reverse-transact-sql">REVERSE​</a></td><td>​<a href="string-functions.md#right">RIGHT​</a></td><td>​<a href="string-functions.md#rtrim-transact-sql">RTRIM​</a></td><td><a href="string-functions.md#soundex-transact-sql">​SOUNDEX​</a></td></tr><tr><td><a href="string-functions.md#space-transact-sql">​SPACE​</a></td><td><a href="string-functions.md#str-transact-sql">STR​</a></td><td><a href="string-functions.md#string_split-transact-sql">​STUFF​</a></td><td><a href="string-functions.md#substring-transact-sql">SUBSTRING​</a></td></tr><tr><td><a href="string-functions.md#upper">UPPER​</a></td><td>​</td><td>​</td><td>​</td></tr></tbody></table>
 
 ## ASCII <a href="#ascii-transact-sql" id="ascii-transact-sql"></a>
 
-ASCII (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange) returns the ASCII code value of the leftmost character of a character expression.‌
+ASCII (American Standard Code for Information Interchange) returns the ASCII code value of the leftmost character of a character expression.‌
 
 #### Syntax <a href="#syntax" id="syntax"></a>
 
@@ -27,7 +27,7 @@ SELECT ASCII('A') SELECT ASCII(1)
 This function converts an **int** between 0 to 255 to a character value. Outside of this range, the CHAR function will return a NULL value.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -46,7 +46,7 @@ _`integer_expression`_
 
 An integer from 0 through 255.
 
-#### Return Types <a href="#return-types" id="return-types"></a>
+#### Return types <a href="#return-types" id="return-types"></a>
 
 char(1)
 
@@ -62,7 +62,7 @@ SELECT CHAR(100)
 This function searches for one character expression inside another character string. If found, the function will return the starting position of the first expression.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -86,7 +86,7 @@ The string that contains the expression
 _`start_Location`_\
 Start location from where the search will start
 
-If CHARINDEX does not find _expressionToFind_ within _expressionString_, CHARINDEX will return 0.
+If CHARINDEX doesn't find _expressionToFind_ within `expressionString`, CHARINDEX will return 0.
 
 #### **Example 1**
 
@@ -123,7 +123,7 @@ CONCAT ( string1, string2 [, stringN ]
 _`string`_\
 A string to concatenate to the other strings.
 
-#### Return Types <a href="#return-types-1" id="return-types-1"></a>
+#### Return types <a href="#return-types-1" id="return-types-1"></a>
 
 _`string`_\
 A string with all the concatenated strings.
@@ -139,7 +139,7 @@ SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;
 This function returns an integer value measuring the difference between the SOUNDEX () values of two different character expressions.strings.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -158,7 +158,7 @@ _`string`_
 
 An alphanumeric expression of character data. _string_ can be a constant, variable, or column.‌
 
-#### Return Types <a href="#return-types-2" id="return-types-2"></a>
+#### Return types <a href="#return-types-2" id="return-types-2"></a>
 
 int
 
@@ -173,7 +173,7 @@ SELECT SOUNDEX('day'), SOUNDEX('monday'), DIFFERENCE('day', 'monday');
 Returns a value formatted with the specified format. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -196,9 +196,9 @@ _`format`_
 
 **nvarchar** format pattern.‌
 
-The _format_ argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)").
+The _format_ argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, YYYY (DDDD)").
 
-#### Return Types <a href="#return-types-3" id="return-types-3"></a>
+#### Return types <a href="#return-types-3" id="return-types-3"></a>
 
 nvarchar or null‌
 
@@ -237,7 +237,7 @@ SELECT FORMAT( GETDATE(), 'dd/MM/yyyy') AS 'DateTime Format'
 
 #### **Example 2**
 
-FORMAT with numerics
+FORMAT with numeric values.
 
 The following example shows formatting numeric values by specifying a custom format.
 
@@ -265,7 +265,7 @@ _`integer`_
 
 Is a positive integer that specifies how many characters of the _string_ will be returned.
 
-#### Return Types <a href="#return-types-4" id="return-types-4"></a>
+#### Return types <a href="#return-types-4" id="return-types-4"></a>
 
 Returns a **string** ‌
 
@@ -282,7 +282,7 @@ SELECT LEFT('abcdefghi, 2) FROM domain.table
 Returns the number of characters of the specified string expression, excluding trailing spaces.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -301,7 +301,7 @@ _`string`_
 
 Is the string expression.‌
 
-#### Return Types <a href="#return-types-5" id="return-types-5"></a>
+#### Return types <a href="#return-types-5" id="return-types-5"></a>
 
 **bigint** if _expression_ is of the **varchar(max)**, **nvarchar(max)** or **varbinary(max)** data types; otherwise, **int**.‌
 
@@ -329,7 +329,7 @@ _`string`_
 
 Is an expression of character or binary data.
 
-#### Return Types <a href="#return-types-6" id="return-types-6"></a>
+#### Return types <a href="#return-types-6" id="return-types-6"></a>
 
 varchar or nvarchar‌
 
@@ -357,7 +357,7 @@ _`string`_
 
 Is an expression of character or binary data.‌
 
-#### Return Types <a href="#return-types-7" id="return-types-7"></a>
+#### Return types <a href="#return-types-7" id="return-types-7"></a>
 
 varchar or nvarchar‌
 
@@ -374,7 +374,7 @@ SELECT LTRIM(' Remove trailing spaces.')
 Returns the starting position of the first occurrence of a pattern in a specified expression.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -395,9 +395,9 @@ Is a character expression that contains the sequence to be found. Wildcard chara
 
 _`expression`_
 
-Is an expression, typically a column that is searched for the specified pattern. _expression_ is of the string data type category.‌
+Is an expression, typically a column that's searched for the specified pattern. _expression_ is of the string data type category.‌
 
-#### Return Types <a href="#return-types-9" id="return-types-9"></a>
+#### Return types <a href="#return-types-9" id="return-types-9"></a>
 
 **int** or **bigint**
 
@@ -433,7 +433,7 @@ _`string_replacedBy`_
 
 Is the replacement string.
 
-#### Return Types <a href="#return-types-11" id="return-types-11"></a>
+#### Return types <a href="#return-types-11" id="return-types-11"></a>
 
 Returns **nvarchar** if one of the input arguments is of the **nvarchar** data type; otherwise, REPLACE returns **varchar**.‌
 
@@ -460,9 +460,9 @@ REVERSE ( string )
 
 _`string`_
 
-It is an expression of a string or binary data type.
+It's an expression of a string or binary data type.
 
-#### Return Types <a href="#return-types-13" id="return-types-13"></a>
+#### Return types <a href="#return-types-13" id="return-types-13"></a>
 
 varchar or nvarchar‌
 
@@ -494,7 +494,7 @@ _`integer`_
 
 Is a positive integer that specifies how many characters of _string_ will be returned.
 
-#### Return Types <a href="#return-types-14" id="return-types-14"></a>
+#### Return types <a href="#return-types-14" id="return-types-14"></a>
 
 Returns **varchar** when _character\_expression_ is a non-Unicode character data type.‌
 
@@ -524,7 +524,7 @@ _`string`_
 
 Is an expression of character data. ‌
 
-#### Return Types <a href="#return-types-15" id="return-types-15"></a>
+#### Return types <a href="#return-types-15" id="return-types-15"></a>
 
 varchar or nvarchar‌
 
@@ -541,7 +541,7 @@ SELECT RTRIM('Removes trailing spaces. ');
 Returns a four-character (SOUNDEX) code to evaluate the similarity of two strings.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -558,9 +558,9 @@ SOUNDEX ( string )
 
 _`string`_
 
-Is an alphanumeric expression of character data. SOUNDEX converts an alphanumeric string to a four-character code that is based on how the string sounds when spoken.
+Is an alphanumeric expression of character data. SOUNDEX converts an alphanumeric string to a four-character code that's based on how the string sounds when spoken.
 
-#### Return Types <a href="#return-types-16" id="return-types-16"></a>
+#### Return types <a href="#return-types-16" id="return-types-16"></a>
 
 varchar‌
 
@@ -577,7 +577,7 @@ SELECT SOUNDEX ('Raul'), SOUNDEX ('Rahul');
 Returns a string of repeated spaces.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -596,7 +596,7 @@ _`integer_expression`_
 
 Is a positive integer that indicates the number of spaces.
 
-#### Return Types <a href="#return-types-17" id="return-types-17"></a>
+#### Return types <a href="#return-types-17" id="return-types-17"></a>
 
 varchar‌
 
@@ -613,7 +613,7 @@ SELECT 'John' + ',' + SPACE(2) + 'Doe'
 Returns character data converted from numeric data. The character data is right-justified, with a specified length and decimal precision.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -640,13 +640,13 @@ _`decimal`_
 
 Is the number of places to the right of the decimal point. _decimal_ must be less than or equal to 16. If _decimal_ is more than 16 then the result is truncated to sixteen places to the right of the decimal point.‌
 
-#### Return Types <a href="#return-types-18" id="return-types-18"></a>
+#### Return types <a href="#return-types-18" id="return-types-18"></a>
 
 varchar‌
 
 #### Example <a href="#examples-18" id="examples-18"></a>
 
-The following example converts an expression that is made up of five digits and a decimal point to a six-position character string. The fractional part of the number is rounded to one decimal place.
+The following example converts an expression that's made up of five digits and a decimal point to a six-position character string. The fractional part of the number is rounded to one decimal place.
 
 ```sql
 SELECT STR(345.67, 6, 1);
@@ -658,7 +658,7 @@ GO
 The STUFF function inserts a string into another string. It deletes a specified length of characters in the first string at the start position and then inserts the second string into the first string at the start position.‌
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -689,7 +689,7 @@ _`replaceWith`_
 
 Is an expression of character data.
 
-#### Return Types <a href="#return-types-22" id="return-types-22"></a>
+#### Return types <a href="#return-types-22" id="return-types-22"></a>
 
 Returns character data if _string_ is one of the supported character data types. Returns binary data if _string_ is one of the supported binary data types.‌
 
@@ -726,9 +726,9 @@ _`length`_
 
 Is a positive integer or **bigint** expression that specifies how many characters of the _expression_ will be returned.
 
-#### Return Types <a href="#return-types-23" id="return-types-23"></a>
+#### Return types <a href="#return-types-23" id="return-types-23"></a>
 
-Returns character data if _expression_ is one of the supported character data types. Returns binary data if _expression_ is one of the supported **binary** data types. The returned string is the same type as the specified expression with the exceptions shown in the table.S
+Returns character data if _expression_ is one of the supported character data types. Returns binary data if _expression_ is one of the supported **binary** data types. The returned string is the same type as the specified expression with the exceptions shown in the table.
 
 **Example**‌
 
@@ -754,7 +754,7 @@ _`string`_
 
 Is an expression of character data.
 
-#### Return Types <a href="#return-types-27" id="return-types-27"></a>
+#### Return types <a href="#return-types-27" id="return-types-27"></a>
 
 varchar or nvarchar‌
 

@@ -4,13 +4,13 @@
 
 ## Overview
 
-Cinchy User Defined Functions (UDFs) give customers a way to specify and use more particular logic in your solutions than basic CQL. You can use CQL to simplify calculations and orchestrate automations to accommodate your business requirements.
+Cinchy User Defined Functions (UDFs) give customers a way to specify and use more particular logic in your solutions than basic CQL. You can use CQL to simplify calculations and orchestrate automation to accommodate your business requirements.
 
 UDFs are written in JavaScript.
 
 Cinchy UDFs divide into two groups:
 
-- [**Table-Valued Functions**](table-valued-functions.md) - Similar to the SQL construct of table-valued functions, you can `SELECT` or `CROSS JOIN` from a Cinchy UDF as if it is a table.
+- [**Table-Valued Functions**](table-valued-functions.md) - Similar to the SQL construct of table-valued functions, you can `SELECT` or `CROSS JOIN` from a Cinchy UDF as if it's a table.
 - [**Scalar-Valued Functions** ](scalar-valued-functions.md)- Similar to the SQL construct of scalar-valued functions. A Scalar-valued function in Cinchy is used to return a single value of any CQL data type. The function body can execute any JavaScript logic.
 
 Cinchy UDFs run [https://github.com/sebastienros/jint](https://github.com/sebastienros/jint), which uses **ECMAScript 5.1.**
@@ -24,7 +24,7 @@ All UDFs are registered in the **Cinchy User Defined Functions** table _(Image 1
 <figure><img src="../../../../.gitbook/assets/image (107).png" alt=""><figcaption><p>Image 1: UDFs Table</p></figcaption></figure>
 
 {% hint style="warning" %}
-Do not name UDFs the same names as SQL or CQL functions. Doing so may cause your platform to break. For example, don't name your UDF "CONCAT".
+Don't name UDFs the same names as SQL or CQL functions. Doing so may cause your platform to break. For example, don't name your UDF **CONCAT**.
 {% endhint %}
 
 | Column Name | Description                                                                                                                                                          |
@@ -68,14 +68,18 @@ You can use `XMLHttpRequest()` helper to help POST or GET data from an external 
 
 #### Supported methods
 
+<!-- vale off -->
+
 | Method           | Description                                                              |
 | ---------------- | ------------------------------------------------------------------------ |
 | Open             | This creates the `HttpClient()`.                                         |
 | setRequestHeader | This adds the header to the client.                                      |
-| Send             | This uses the client to call `Get()`.                                   |
+| Send             | This uses the client to call `Get()`.                                    |
 | Send (postdata)  | This uses the client to call POST, PUT, etc.                             |
 | Status           | This is attributed to show the status of a client response.              |
 | responseText     | This is attributed to show the response text after the client is called. |
+
+<!-- vale on -->
 
 ```javascript
 var xmlHttp = new helpers.XMLHttpRequest();
@@ -97,7 +101,16 @@ You can execute a Cinchy query or a non query (not expecting a result back) in a
 
 #### Supported methods
 
-<table data-full-width="true"><thead><tr><th>Method</th><th>Description</th></tr></thead><tbody><tr><td>executeNonQuery</td><td>This is used for INSERTS, DELETES, and UPDATES. It returns a Long value.</td></tr><tr><td>executeQuery</td><td>This is used for `SELECT` statement. It returns system.data values.</td></tr><tr><td>executeBatchUpsert</td><td>This performs a batch upsert into Cinchy. It returns int values.</td></tr><tr><td>execute</td><td><p>This returns a <code>queryResult</code> object that contains additional information about your query.<br><br>The final parameter in <code>execute</code> determines whether it is a query or non query.  <br><br><code>true</code> = query</p><p><code>false</code> = non query <br><br>For more information, see the <a href="./#queryresult-examples">queryResult </a>example below.</p></td></tr></tbody></table>
+<!-- vale off -->
+
+| Method             | Description                                                                                                                                                                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| executeNonQuery    | This is used for INSERTS, DELETES, and UPDATES. It returns a Long value.                                                                                                                                                                                     |
+| executeQuery       | This is used for `SELECT` statement. It returns system.data values.                                                                                                                                                                                          |
+| executeBatchUpsert | This performs a batch UPSERT into Cinchy. It returns int values.                                                                                                                                                                                             |
+| execute            | This returns a `queryResult` object that has additional information about your query. The final parameter in execute determines whether it's a query or non query. true = `queryfalse` = non query. For more information, see the queryResult example below. |
+
+<!-- vale on -->
 
 #### Examples
 

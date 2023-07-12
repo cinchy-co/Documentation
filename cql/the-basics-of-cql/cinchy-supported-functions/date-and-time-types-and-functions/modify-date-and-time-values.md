@@ -46,7 +46,7 @@ The part of _date_ to which `DATEADD` adds an **integer** _number_. This table l
 | nanosecond  |
 
 `number`\
-An expression that can resolve to an int that `DATEADD` adds to a _datepart_ of _date_. `DATEADD` accepts user-defined variable values for _number_. `DATEADD` will truncate a specified _number_ value that has a decimal fraction. It will not round the _number_ value in this situation.
+An expression that can resolve to an int that `DATEADD` adds to a _datepart_ of _date_. `DATEADD` accepts user-defined variable values for _number_. `DATEADD` will truncate a specified _number_ value that has a decimal fraction. It won't round the _number_ value in this situation.
 
 `date`\
 An expression that can resolve to one of the following values:
@@ -58,11 +58,11 @@ An expression that can resolve to one of the following values:
 - smalldatetime
 - time
 
-For _date_, `DATEADD` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues.
+For _date_, `DATEADD` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a *datetime*. Use four-digit years to avoid ambiguity issues.
 
 ### Return types
 
-The return value data type for this method is dynamic. The return type depends on the argument supplied for `date`. If the value for `date` is a string literal date, `DATEADD` returns a **datetime** value. If another valid input data type is supplied for `date`, `DATEADD` returns the same data type. `DATEADD` raises an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
+The return value data type for this method is dynamic. The return type depends on the argument supplied for `date`. If the value for `date` is a string literal date, `DATEADD` returns a *datetime* value. If another valid input data type is supplied for `date`, `DATEADD` returns the same data type. `DATEADD` raises an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
 
 #### Example 1
 
@@ -174,7 +174,7 @@ date
 
 #### Remarks
 
-The `EOMONTH` function can remote to SQL Server 2012 (11.x) servers and higher. It cannot be remote to servers with a version lower than SQL Server 2012 (11.x).
+The `EOMONTH` function can remote to SQL Server 2012 (11.x) servers and higher. It can't be remote to servers with a version lower than SQL Server 2012 (11.x).
 
 #### Example 1
 
@@ -196,7 +196,7 @@ SELECT EOMONTH( @date ) AS Result
 
 #### Example 3
 
-EOMONTH with and without the month_to_add parameter
+EOMONTH with and without the *month_to_add* parameter
 
 ```sql
 DECLARE @date DATETIME = GETDATE()
@@ -209,7 +209,7 @@ SELECT
 
 ## SWITCHOFFSET <a href="#switchoffset-transact-sql" id="switchoffset-transact-sql"></a>
 
-The SWITCHOFFSEET function returns a **datetimeoffset** value that is changed from the stored time zone offset to a specified new time zone offset.
+The SWITCHOFFSEET function returns a **datetimeoffset** value that's changed from the stored time zone offset to a specified new time zone offset.
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
@@ -236,7 +236,7 @@ Is a character string in the format \[+|-]TZH:TZM or a signed integer (of minute
 
 #### Remarks
 
-Use SWITCHOFFSET to select a **datetimeoffset** value into a time zone offset that is different from the time zone offset that was originally stored. SWITCHOFFSET does not update the stored _time_zone_ value.
+Use SWITCHOFFSET to select a **datetimeoffset** value into a time zone offset that's different from the time zone offset that was originally stored. SWITCHOFFSET doesn't update the stored *time_zone* value.
 
 SWITCHOFFSET can be used to update a **datetimeoffset** column.
 
@@ -250,7 +250,7 @@ SELECT SWITCHOFFSET(ColDatetimeoffset, '-08:00')
 
 ## TODATETIMEOFFSET <a href="#todatetimeoffset-transact-sql" id="todatetimeoffset-transact-sql"></a>
 
-TODATETIMEOFFSET function returns a **datetimeoffset** value that is translated from a **datetime2** expression.
+TODATETIMEOFFSET function returns a **datetimeoffset** value that's translated from a **datetime2** expression.
 
 {% hint style="warning" %}
 This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
@@ -268,7 +268,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 Is an expression that resolves to a datetime2 value.
 
 `time_zone`\
-Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to -14 (in hours). The expression is interpreted in local time for the specified time_zone.
+Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to —14 (in hours). The expression is interpreted in local time for the specified time_zone.
 
 ### Return Types
 

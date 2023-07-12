@@ -1,4 +1,4 @@
-# Return Date and Time Difference Values
+# Return date and time difference values
 
 ## Overview
 
@@ -27,7 +27,7 @@ DATEDIFF ( datepart , startdate , enddate )
 `datepart`\
 The units in which `DATEDIFF` reports the difference between the _startdate_ and _enddate_. Commonly used _datepart_ units include `month` or `second`.
 
-The _datepart_ value cannot be specified in a variable, nor as a quoted string like `'month'`.
+The _datepart_ value can't be specified in a variable, nor as a quoted string like `'month'`.
 
 The following table lists all the valid _datepart_ values. `DATEDIFF` accepts either the full name of the _datepart_, or any listed abbreviation of the full name.
 
@@ -71,7 +71,7 @@ Use `DATEDIFF` in the `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` and `ORDER 
 
 Specifying `SET DATEFIRST` has no effect on `DATEDIFF`. `DATEDIFF` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
 
-`DATEDIFF` may overflow with a precision of **minute** or higher if the difference between _enddate_ and _startdate_ returns a value that is out of range for **int**.
+`DATEDIFF` may overflow with a precision of **minute** or higher if the difference between _enddate_ and _startdate_ returns a value that's out of range for **int**.
 
 #### Example 1
 
@@ -160,11 +160,11 @@ Signed bigint
 
 Use `DATEDIFF_BIG` in the `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` and `ORDER BY` clauses.
 
-`DATEDIFF_BIG` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF_BIG` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+`DATEDIFF_BIG` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF_BIG` doesn't support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
 
 Specifying `SET DATEFIRST` has no effect on `DATEDIFF_BIG`. `DATEDIFF_BIG` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
 
-`DATEDIFF_BIG` may overflow with a precision of **nanosecond** if the difference between _enddate_ and _startdate_ returns a value that is out of range for **bigint**.
+`DATEDIFF_BIG` may overflow with a precision of **nanosecond** if the difference between _enddate_ and _startdate_ returns a value that's out of range for **BigInt**.
 
 #### Example
 

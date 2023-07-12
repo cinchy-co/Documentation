@@ -35,7 +35,7 @@ The following is a non-exhaustive list of some things to keep in mind while usin
 - All queries built using the Cinchy Query Builder include a **"WHERE \[Deleted] IS NULL"** clause. This prevents any deleted table data from ending up in your query. If you want to include deleted data, you must delete this clause.
 - When querying a table, you must use the **\[Domain].\[Table]** syntax. For example, to query the _Product Content Backlog_ table, you would use **\[Product].\[Product Content Backlog].**
 - When querying a linked column, you must similarly use the **\[Column Name].\[Linked Column Name]** syntax.
-  - For example, the query below pulls from the **\[Product].\[Product Content Backlog]** table, and searches for data from a linked column called **"Requester",** which points to the **Users** table. To return the **\[Full Name]** column from the linked **Users** table, use the **\[Requester].\[Full Name]** syntax.
+  - For example, the query below pulls from the **\[Product].\[Product Content Backlog]** table, and searches for data from a linked column called **Requester**, which points to the **Users** table. To return the **\[Full Name]** column from the linked **Users** table, use the **\[Requester].\[Full Name]** syntax.
 
 ```sql
 SELECT [Requester].[Full Name]
