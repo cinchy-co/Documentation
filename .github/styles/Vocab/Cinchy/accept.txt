@@ -32,3 +32,6 @@ Healthcheck
 Homepage
 Sandboxed
 [Mm]iddleware
+Avro
+[Tt]ooltip
+[Ss]ubproject
