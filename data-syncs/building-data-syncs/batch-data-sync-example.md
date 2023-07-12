@@ -47,19 +47,17 @@ To create the People table used in this example, you can use the below is the XM
 4. Select **From Scratch.**
 5. Create a table with the following properties _(Image 1):_
 
-| Table Details | Values                                                                                                                                      |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Table Name    | People                                                                                                                                      |
-| Icon + Colour | Default                                                                                                                                     |
+| Table Details | Values                                                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Table Name    | People                                                                                                                               |
+| Icon + Colour | Default                                                                                                                              |
 | Domain        | Sandbox _(if this domain doesn't exist, either create it or make sure to update this parameter where required during the data sync)_ |
 
 <figure><img src="../../.gitbook/assets/image (447).png" alt=""><figcaption><p>Image 1: The People table</p></figcaption></figure>
 
 6. Select **Columns** in the left hand navigation to create the columns for the table.
 
-
 7. Select the **"Click Here to Add"** button and add the following columns:
-
 
 | Column Details | Values                                            |
 | -------------- | ------------------------------------------------- |
@@ -125,15 +123,15 @@ This example will walk you through option one.
 
 <figure><img src="../../.gitbook/assets/image (477).png" alt=""><figcaption><p>Image 3: The Connections Experience</p></figcaption></figure>
 
-2. In the **Info** tab, input the name of your data sync. For this example we are using **"Contact Import"** _(Image 4)._
+2. In the **Info** tab, input the name of your data sync. This example uses **"Contact Import"** _(Image 4)._
 
 <figure><img src="../../.gitbook/assets/image (754).png" alt=""><figcaption><p>Image 4: Name your data sync</p></figcaption></figure>
 
-3. Since this is a local file upload, we also need to set a **Parameter**. This value will be referenced in the **"path"** value of the **Load Metadata** box in step 5. For this example, we will set it to **filepath** _(Image 5)._
+3. Since this is a local file upload, we also need to set a **Parameter**. This value will be referenced in the **"path"** value of the **Load Metadata** box in step 5. For this example, we will set it to `filepath` _(Image 5)._
 
 <figure><img src="../../.gitbook/assets/image (492).png" alt=""><figcaption><p>Image 5: Set your Parameter</p></figcaption></figure>
 
-3. Navigate to the **Source** tab. As a reminder, we are using the .CSV file you downloaded at the beginning of this example as our source.
+3. Navigate to the **Source** tab. This example uses the .CSV file you downloaded at the beginning of this example as our source.
 4. Under **Select a Source**, select **Delimited File** _(Image 6)._
 
 <figure><img src="../../.gitbook/assets/image (498).png" alt=""><figcaption><p>Image 6: Select a Source</p></figcaption></figure>
@@ -146,7 +144,7 @@ This example will walk you through option one.
 | Delimiter             | The type of delimiter on your source file.                                                                                | Since our file is a CSV, the delimiter is a comma, and we uses the ',' value. |
 | Text Qualifier        | A text qualifier is a character used to distinguish the point at which the contents of a text field should begin and end. | "\&quot;                                                                      |
 | Header Rows to Ignore | The number of records from the top of the file to ignore before the data starts (includes column header).                 | 1                                                                             |
-| Path                  | The path to your source file (See step 3).        | @filepath                                                                     |
+| Path                  | The path to your source file (See step 3).                                                                                | @filepath                                                                     |
 | Choose File           | This option will appear once you've correctly set your Path value.                                                        | Upload the sample CSV for this example.                                       |
 
 <figure><img src="../../.gitbook/assets/image (491).png" alt=""><figcaption><p>Image 7: Load Metadata</p></figcaption></figure>
@@ -179,22 +177,22 @@ This example will walk you through option one.
 
 <figure><img src="../../.gitbook/assets/image (401).png" alt=""><figcaption><p>Image 13: Column Mapping</p></figcaption></figure>
 
-15. Navigate to the **Sync Actions tab**. There are two options for data syncs: **Full File and Delta.** In this example, select Full File.
+15. Navigate to the **Sync Actions tab**. Sync actions have two options: **Full File and Delta.** In this example, select **Full File**.
 
 {% hint style="info" %}
-Full load processing means that the entire amount of data is imported iteratively the first time a data source is loaded into the data studio. Delta processing, on the other hand, means loading the data incrementally, loading the source data at specific pre-established intervals.
+Full load processing means that the entire amount of data is imported iteratively the first time a data source is loaded into the data studio. Delta processing means loading the data incrementally, loading the source data at specific pre-established intervals.
 
 [Read more about Sync Behaviour types here.](broken-reference)
 {% endhint %}
 
-16. Set the following parameters _(Image 14):_
+1.  Set the following parameters _(Image 14):_
 
-| Parameter                 | Description                                                                                                                                                                                                                      | Example |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Parameter                 | Description                                                                                                                                                                                                            | Example |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Sync Key Column Reference | The SyncKey is a unique key reference when syncing the data from the data source into the Cinchy table. Use this to match data between the source and the target. This allows for updates to occur on changed records. | Name    |
-| New Record Behaviour      | This defines the action taken when a new record is found in the sync source. This can be either Insert or Ignore.                                                                                                            | Insert  |
-| Dropped Record Behaviour  | <p>This defines the action taken when a dropped record is found in the sync source.</p><p>This can be either Delete, Ignore, or Expire.</p>                                                                                  | Delete  |
-| Changed Record Behaviour  | <p>This defines the action taken when a changed record is found in the sync source.</p><p>This can be either Update, Ignore, or Conditional.</p>                                                                             | Update  |
+| New Record Behaviour      | This defines the action taken when a new record is found in the sync source. This can be either Insert or Ignore.                                                                                                      | Insert  |
+| Dropped Record Behaviour  | <p>This defines the action taken when a dropped record is found in the sync source.</p><p>This can be either Delete, Ignore, or Expire.</p>                                                                            | Delete  |
+| Changed Record Behaviour  | <p>This defines the action taken when a changed record is found in the sync source.</p><p>This can be either Update, Ignore, or Conditional.</p>                                                                       | Update  |
 
 <figure><img src="../../.gitbook/assets/image (410).png" alt=""><figcaption><p>Image 14: Sync Behaviour</p></figcaption></figure>
 
@@ -265,25 +263,25 @@ The below XML shows a blank data sync for a Delimited File source to a Cinchy Ta
 
 The below filled XML example matches the Connections UI configuration made in **Use the Connections UI**. You can review the parameters used in the table below.
 
-| Parameter                      | Description                                                                                                                                                                                                                      | Example                                                                       |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Name                           | The name of your data sync.                                                                                                                                                                                                      | Contact Import                                                                |
-| Parameter                      | Since this is a local file upload, we also need to set a **Parameter**. This value will be referenced in the **"path"** value of the **Load Metadata** box                                                                       | Parameter                                                                     |
-| Source                         | Defines whether your source is Local (PATH), S3, or Azure.                                                                                                                                                                       | PATH                                                                          |
-| Path                           | Since this is a local upload, this is the path to your source file. In this case, it's the value that was set for the "Parameter" value, preceded by the '@' sign.                                                              | @Parameter                                                                    |
-| Delimiter                      | The delimiter type on your source file.                                                                                                                                                                                       | Since our file is a CSV, the delimiter is a comma, and we uses the ',' value. |
-| Text Qualifier                 | A text qualifier is a character used to distinguish the point at which the contents of a text field should begin and end.                                                                                                        | "\&quote;                                                                     |
-| Header Rows to Ignore          | The number of records from the top of the file to ignore before the data starts (includes column header).                                                                                                                        | 1                                                                             |
-| Column Name                    | The name(s) of the source columns that you wish to sync. In this example there are more selected  columns than mapped to show how Connections ignores unmapped data.                                       | <p>"First Name"<br>"Last Name"<br>"Email Address:<br>"Title"<br>"Company"</p> |
-| Column Data Type               | The data type that corresponds to our selected source columns.                                                                                                                                                                   | "Text"                                                                        |
-| Domain                         | The domain of your Cinchy Target table.                                                                                                                                                                                          | Sandbox                                                                       |
-| Table                          | The name of your Cinchy Target table.                                                                                                                                                                                            | People                                                                        |
-| Column Mapping Source Column   | The name(s) of the source columns that you are syncing.                                                                                                                                                                          | <p>"Company"<br>"Title"<br>"First Name"</p>                                   |
-| Column Mapping Target Column   | The name(s) of the target column as it maps to the specified source column.                                                                                                                                                      | <p>"Company"<br>"Title"<br>"Name"</p>                                         |
+| Parameter                      | Description                                                                                                                                                                                                                  | Example                                                                       |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Name                           | The name of your data sync.                                                                                                                                                                                                  | Contact Import                                                                |
+| Parameter                      | Since this is a local file upload, we also need to set a **Parameter**. This value will be referenced in the **"path"** value of the **Load Metadata** box                                                                   | Parameter                                                                     |
+| Source                         | Defines whether your source is Local (PATH), S3, or Azure.                                                                                                                                                                   | PATH                                                                          |
+| Path                           | Since this is a local upload, this is the path to your source file. In this case, it's the value that was set for the "Parameter" value, preceded by the '@' sign.                                                           | @Parameter                                                                    |
+| Delimiter                      | The delimiter type on your source file.                                                                                                                                                                                      | Since our file is a CSV, the delimiter is a comma, and we uses the ',' value. |
+| Text Qualifier                 | A text qualifier is a character used to distinguish the point at which the contents of a text field should begin and end.                                                                                                    | "\&quote;                                                                     |
+| Header Rows to Ignore          | The number of records from the top of the file to ignore before the data starts (includes column header).                                                                                                                    | 1                                                                             |
+| Column Name                    | The name(s) of the source columns that you wish to sync. In this example there are more selected columns than mapped to show how Connections ignores unmapped data.                                                          | <p>"First Name"<br>"Last Name"<br>"Email Address:<br>"Title"<br>"Company"</p> |
+| Column Data Type               | The data type that corresponds to our selected source columns.                                                                                                                                                               | "Text"                                                                        |
+| Domain                         | The domain of your Cinchy Target table.                                                                                                                                                                                      | Sandbox                                                                       |
+| Table                          | The name of your Cinchy Target table.                                                                                                                                                                                        | People                                                                        |
+| Column Mapping Source Column   | The name(s) of the source columns that you are syncing.                                                                                                                                                                      | <p>"Company"<br>"Title"<br>"First Name"</p>                                   |
+| Column Mapping Target Column   | The name(s) of the target column as it maps to the specified source column.                                                                                                                                                  | <p>"Company"<br>"Title"<br>"Name"</p>                                         |
 | Sync Key Column Reference Name | The SyncKey is used as a unique key reference when syncing the data from the data source into the Cinchy table. Use it to match data between the source and the target. This allows for updates to occur on changed records. | "Name"                                                                        |
-| New Record Behaviour Type      | This defines what will happen when new records are found in the source.                                                                                                                                                          | INSERT                                                                        |
-| Dropped Record Behaviour Type  | This defines what will happen when dropped records are found in the source.                                                                                                                                                      | DELETE                                                                        |
-| Changed Record Behaviour Type  | This defines what will happen when changed records are found in the source.                                                                                                                                                      | UPDATE                                                                        |
+| New Record Behaviour Type      | This defines what will happen when new records are found in the source.                                                                                                                                                      | INSERT                                                                        |
+| Dropped Record Behaviour Type  | This defines what will happen when dropped records are found in the source.                                                                                                                                                  | DELETE                                                                        |
+| Changed Record Behaviour Type  | This defines what will happen when changed records are found in the source.                                                                                                                                                  | UPDATE                                                                        |
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -324,7 +322,7 @@ The below filled XML example matches the Connections UI configuration made in **
 <figure><img src="../../.gitbook/assets/image (444).png" alt=""><figcaption><p>Image 20: Data Sync Configurations table</p></figcaption></figure>
 
 2. In a new row, paste the **Data Sync XML** into the **Config XML** column _(Image 21)_.
-3. Define your group permissions in the applicable columns. In this example, we have given all Users the Admin Access*.*
+3. Define your group permissions in the applicable columns. This example gives all Users the Admin Access*.*
 
 {% hint style="info" %}
 The Name and Config Version columns will be auto populated as they values are coming from the Config XML.
@@ -342,9 +340,14 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 3. To execute your Data Sync you will use the CLI. If you don't have this downloaded, [refer to the documentation here.](broken-reference)
 4. In this example we will be using the following Data Sync Commands, however, for the full list of commands click [here](https://app.gitbook.com/@cinchy/s/draft-data-sync/~/drafts/-MEYg-7T93WGsJ-TwPLy/builder-guide/data-sync-commands).
-
-<table><thead><tr><th width="199.33333333333331">Parameter</th><th width="241">Description</th><th>Example</th></tr></thead><tbody><tr><td>-s (server)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The full path to the Cinchy server without the protocol (e.g. cinchy.co/Cinchy).</td><td>"pilot.cinchy.co/Training/Cinchy/"</td></tr><tr><td>-u (userid)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The user id to login to Cinchy that has execution access to the data sync.</td><td>"admin"</td></tr><tr><td>-p (password)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The password of the above User ID parameter. This can optionally be encrypted. For a walkthrough on how to use the CLI to encrypt the password, refer to the Appendix section. </td><td>"DESuEGqfffsamx55yl256hjuPYxa4ncc+5+bLkoVIFpgs0Lq6hkcU="</td></tr><tr><td>-f (feed)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The name of the Data Sync Configuration as defined in Cinchy</td><td>"Contact Import"</td></tr></tbody></table>
-
+   <!-- vale off -->
+   | Parameter     | Description                                                                                                                                                                              | Example                                                  |
+   | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+   | -s (server)   | Required. The full path to the Cinchy server without the protocol (cinchy.co/Cinchy).                                                                                                    | "pilot.cinchy.co/Training/Cinchy/"                       |
+   | -u (user id)  | Required. The user id to login to Cinchy that has execution access to the data sync.                                                                                                     | "admin"                                                  |
+   | -p (password) | Required. The password of the above User ID parameter. This can optionally be encrypted. For a walkthrough on how to use the CLI to encrypt the password, refer to the Appendix section. | "DESuEGqfffsamx55yl256hjuPYxa4ncc+5+bLkoVIFpgs0Lq6hkcU=" |
+   | -f (feed)     | Required. The name of the Data Sync Configuration as defined in Cinchy                                                                                                                   | "Contact Import"                                         |
+   <!-- vale off -->
 5. Launch PowerShell and navigate to the Cinchy CLI directory.
 6. Enter and execute the following into PowerShell:
 
@@ -365,7 +368,7 @@ To encrypt a password using PowerShell, complete the following:
 1. Launch PowerShell and navigate to the Cinchy CLI directory (note, you can always type `PowerShell` in the windows explore path for the Cinchy CLI directory)
 2. Enter the following into PowerShell `.\Cinchy.CLI.exe encrypt -t "password"`
 3. Hit enter to execute the command
-4. Copy the password  so it's accessible at batch execution time
+4. Copy the password so it's accessible at batch execution time
 
 {% hint style="info" %}
 Please note, you will need to replace "password" with your specific password.

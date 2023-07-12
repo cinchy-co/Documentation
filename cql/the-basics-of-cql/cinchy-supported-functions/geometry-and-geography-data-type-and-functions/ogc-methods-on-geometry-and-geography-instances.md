@@ -15,9 +15,12 @@ For a full list of in-progress function translations, see [the CQL functions ref
 
 The OGC Methods covered in this section are:
 
+<!-- vale off -->
 <table data-header-hidden><thead><tr><th width="153"></th><th width="126"></th><th width="141"></th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#starea">STArea</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stasbinary">STAsBinary</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stastext">STAsText</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stboundary-geometry">STBoundary</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stbuffer">STBuffer</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stcentroid">STCentroid</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stcontains-geometry">STContains</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stconvexhull-geometry">STConvexHull</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stcrosses-geometry">STCrosses</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stcurvetoline-geometry">STCurveToLine</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stdifference-geometry">STDifference</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stdisjoint-geometry">STDisjoint</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stdistance">STDistance</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stendpoint-geometry">STEndpoint</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stenvelope-geometry">STEnvelope</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stequals-geometry">STEquals</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stexteriorring-geometry">STExteriorRing</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stgeometryn-geometry">STGeometryN</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stgeometrytype-geometry">STGeometryType</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stgeomcollfromtext-geometry">STGeomCollFromText</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stgeomfromtext">STGeomFromText</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stgeomfromwkb">STGeomFromWKB</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stinteriorringn-geometry">STInteriorRingN</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stintersection">STIntersection</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stintersects">STIntersects</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stisclosed-geometry">STIsClosed</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stisempty-geometry">STIsEmpty</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stisring-geometry">STIsRing</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stisring-geometry">STIsSimple</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stisvalid-geometry">STIsValid</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stlength">STLength</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stlinefromtext-geometry">STLineFromText</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stlinefromwkb-geometry">STLineFromWKB</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stmlinefromtext-geometry">STMLineFromText</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stmpointfromtext-geometry">STMPointFromText</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stmpolyfromtext-geometry">STMPolyFromText</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stnumcurves-geometry">STNumCurves</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stnumgeometries-geometry">STNumGeometries</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stnuminteriorring-geometry">STNumInteriorRing</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stnumpoints-geometry">STNumPoints</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stoverlaps-geometry">STOverlaps</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stpointfromtext-geometry">STPointFromText</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stpointfromwkb-geometry">STPointFromWKB</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stpointn-geometry">STPointN</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stpointonsurface-geometry">STPointOnSurface</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stpolyfromtext-geometry">STPolyFromText</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#strelate-geometry">STRelate</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#ststartpoint-geometry">STStartPoint</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stsymdifference-geometry">STSymDifference</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#sttouches-geometry">STTouches</a></td></tr><tr><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stunion-geometry">STUnion</a></td><td><a href="ogc-methods-on-geometry-and-geography-instances.md#stwithin-geometry">STWithin</a></td><td></td><td></td><td></td></tr></tbody></table>
 
 ## STArea
+
+<!-- vale on -->
 
 `STArea()` returns the total surface area of a geometry/geography instance.
 
@@ -33,7 +36,7 @@ CQL: Number
 
 #### Remarks
 
-When the geometry/geography instance contains only zero- and one-dimensional figures, or if it's empty, `STArea()` returns 0.
+When the geometry/geography instance contains only zero and one-dimensional figures, or if it's empty, `STArea()` returns 0.
 
 #### Geometry Example
 
@@ -107,7 +110,7 @@ CQL: Text
 
 OGC type of a geography instance can be determined by invoking [`STGeometryType()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STGeometryType)
 
-The return text will not contain`Z` (elevation) and `M` (measure) values carried by the instance.
+The return text won't contain`Z` (elevation) and `M` (measure) values carried by the instance.
 
 #### Geometry Example
 
@@ -189,9 +192,9 @@ When _distance_ > 0 then either a `Polygon`or `MultiPolygon`instance is returned
 
 Geography:
 
-`STBuffer()` will return a `FullGlobe`instance in certain cases; for example, `STBuffer()` returns a `FullGlobe`instance when the buffer distance is greater than the distance from the equator to the poles. A buffer cannot exceed the full globe.
+`STBuffer()` will return a `FullGlobe`instance in certain cases; for example, `STBuffer()` returns a `FullGlobe`instance when the buffer distance is greater than the distance from the equator to the poles. A buffer can't exceed the full globe.
 
-This method will throw an `ArgumentException`in `FullGlobe`instances where the distance of the buffer exceeds the following limitation: 0.999 \* _π_ \* minorAxis \* minorAxis / majorAxis (\~0.999 \* 1/2 Earth's circumference).
+This method will throw an `ArgumentException`in `FullGlobe`instances where the distance of the buffer exceeds the following limitation: 0.999 \* _π_ \* `minorAxis` \* `minorAxis` / `majorAxis` (\~0.999 \* 1/2 Earth's circumference).
 
 #### Geometry Example
 
@@ -228,7 +231,7 @@ CQL: geometry/geography
 
 #### Remarks
 
-If the geometry/geography instance is not a `Polygon`, `CurvePolygon`, or `MultiPolygon`type`STCentroid()` returns null.
+If the geometry/geography instance isn't a `Polygon`, `CurvePolygon`, or `MultiPolygon`type`STCentroid()` returns null.
 
 #### Geometry Example
 
@@ -242,8 +245,7 @@ SELECT @g.STCentroid().ToString();
 
 ## STContains (Geometry)
 
-`STContains()`returns 1 if a geometry instance completely contains another geometry instance, returns 0 if it does not.
-
+`STContains()`returns 1 if a geometry instance completely contains another geometry instance. Otherwise, returns 0.
 #### Syntax
 
 ```sql
@@ -261,7 +263,7 @@ CQL: Yes/No
 
 #### Remarks
 
-If the spatial reference IDs (SRIDs) of the geometry instances don't match, `STContains()` always returns null.
+If the spatial reference identifiers (SRIDs) of the geometry instances don't match, `STContains()` always returns null.
 
 #### Geometry Example
 
@@ -305,7 +307,7 @@ SELECT @g.STConvexHull().ToString();
 
 ## STCrosses (Geometry)
 
-`STCrosses()` returns 1 if a geometry instance crosses another geometry instance. Returns 0 if it does not.
+`STCrosses()` returns 1 if a geometry instance crosses another geometry instance. Otherwise, returns 0.
 
 #### Syntax
 
@@ -365,7 +367,7 @@ The polygonal approximation that the method returns depends on the geometry inst
 
 - Returns a `LineString` instance for a `CircularString`or `CompoundCurve`instance.
 - Returns a `Polygon`instance for a `CurvePolygon`instance.
-- Returns a copy of the geometry instance if that instance is not a `CircularString`, `CompoundCurve`, or `CurvePolygon`instance.
+- Returns a copy of the geometry instance if that instance isn't a `CircularString`, `CompoundCurve`, or `CurvePolygon`instance.
 
 Any z-coordinate values present in the calling geometry instance are ignored.
 
@@ -382,7 +384,7 @@ In this example, the SELECT statement uses a `LineString` instance to call the `
 
 ## STDifference (Geometry)
 
-`STDifference()` returns an object that represents the point set from one geometry instance that does not lie within another geometry instance.
+`STDifference()` returns an object that represents the point set from one geometry instance that doesn't lie within another geometry instance.
 
 #### Syntax
 
@@ -417,7 +419,7 @@ SELECT @g.STDifference(@h).ToString();
 
 ## STDisjoint (Geometry)
 
-`STDisjoint()`returns 1 if a geometry instance is spatially disjoint from another geometry instance, returns 0 if it is not.
+`STDisjoint()`returns 1 if a geometry instance is spatially disjoint from another geometry instance. Otherwise, returns 0.
 
 #### Syntax
 
@@ -436,7 +438,7 @@ CQL: Yes/No
 
 #### Remarks
 
-If the intersection of the two geometry instances point sets are empty, they are disjoint.
+If the intersection of the two geometry instances point sets are empty, they disjoint.
 
 Returns null if the spatial reference IDs (SRIDs) of the geometry instances don't match.
 
@@ -555,7 +557,7 @@ SELECT @g.STEnvelope().ToString();
 
 ## STEquals (Geometry)
 
-`STEquals()` returns 1 if a geometry instance represents the same point set as another geometry instance, returns 0 if it does not.
+`STEquals()` returns 1 if a geometry instance represents the same point set as another geometry instance. Otherwise, returns 0.
 
 #### Syntax
 
@@ -590,7 +592,7 @@ SELECT @g.STEquals(@h);
 
 ## STExteriorRing (Geometry)
 
-`STExteriorRing()`returns the exterior ring of a geometry instance that is a `Polygon`.
+`STExteriorRing()`returns the exterior ring of a geometry instance that's a `Polygon`.
 
 #### Syntax
 
@@ -600,11 +602,11 @@ SELECT @g.STEquals(@h);
 
 #### Return Types
 
-CQL: geometry 
+CQL: geometry
 
 #### Remarks
 
-Returns null if the geometry instance is not a `Polygon`.
+Returns null if the geometry instance isn't a `Polygon`.
 
 #### Geometry Example
 
@@ -669,7 +671,7 @@ The OGC type names that can be returned by `STGeometryType()` are `Point`, `Line
 
 #### Geometry Example
 
-This example creates a `Polygon` instance and uses `STGeometryType()` to confirm that it is a `Polygon:`
+This example creates a `Polygon` instance and uses `STGeometryType()` to confirm that it's a `Polygon:`
 
 ```sql
 DECLARE @g geometry;
@@ -689,8 +691,8 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 
 #### Arguments
 
-_geometrycollection_tagged_text_\
-An nvarchar(max) expression that is the WKT representation of the geometry instance you wish to return.
+`geometrycollection_tagged_text`
+An nvarchar(max) expression that's the WKT representation of the geometry instance you wish to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry instance you wish to return.
@@ -703,7 +705,7 @@ CQL: geometry
 
 The OGC type of the geometry instance returned by `STGeomCollFromText()` is set to the corresponding WKT input.
 
-Throws an `ArgumentException` if the input is not valid.
+Throws an `ArgumentException` if the input isn't valid.
 
 #### Geometry Example
 
@@ -727,8 +729,8 @@ STGeomFromText ( 'instance_tagged_text' , SRID )
 
 #### Arguments
 
-_inctance_tagged_text_\
-An nvarchar(max) expression that is the WKT representation of the geometry/geography instance you wish to return.
+`instance_tagged_text`
+An nvarchar(max) expression that's the WKT representation of the geometry/geography instance you wish to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry/geography instance you wish to return.
@@ -779,8 +781,8 @@ STGeomFromWKB ( 'WKB_instance' , SRID )
 
 #### Arguments
 
-_WKB_instance_\
-An nvarchar(max) expression that is the WKB representation of the geometry/geography instance to return.
+`WKB_instance`
+An nvarchar(max) expression that's the WKB representation of the geometry/geography instance to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry/geography instance to return.
@@ -840,7 +842,7 @@ CQL: geometry
 
 #### Remarks
 
-Returns null if the geometry instance is not a `Polygon`.
+Returns null if the geometry instance isn't a `Polygon`.
 
 This method will throw an `ArgumentOutOfRangeException`if the expression is larger than the number of rings. The number of rings can be returned using [`STNumInteriorRing()`](https://app.gitbook.com/@cinchy/s/cql/~/drafts/-MT7EiwgHRMJYvTITUSx/functions/geometry-and-geography-data-type-and-functions/ogc-methods-on-geometry-and-geography-instances#STNumInteriorRing).
 
@@ -905,7 +907,7 @@ SELECT @g.STIntersection(@h).ToString();
 
 ## STIntersects
 
-`STIntersects()` returns 1 if a geometry instance intersects another geometry instance. Returns 0 if it does not.
+`STIntersects()` returns 1 if a geometry instance intersects another geometry instance. Otherwise, returns 0.
 
 #### Syntax
 
@@ -956,7 +958,7 @@ END;
 
 ## STIsClosed (Geometry)
 
-`STIsClosed()`returns 1 if the start and end points of the given geometry instance are the same. Returns 1 for `GeometryCollection` types if each contained geometry instance is closed. Returns 0 if the instance is not closed.
+`STIsClosed()`returns 1 if the start and end points of the given geometry instance are the same. Returns 1 for `GeometryCollection` types if each contained geometry instance is closed. Returns 0 if the instance isn't closed.
 
 #### Syntax
 
@@ -986,7 +988,7 @@ SELECT @g.STIsClosed();
 
 ## STIsEmpty (Geometry)
 
-`STIsEmpty()`returns 1 if a geometry instance is empty. Returns 0 if a geometry instance is not empty.
+`STIsEmpty()`returns 1 if a geometry instance is empty. Returns 0 if a geometry instance isn't empty.
 
 #### Syntax
 
@@ -1012,10 +1014,10 @@ SELECT @g.STIsEmpty();
 
 `STIsRing()` returns 1 if a geometry instance fulfills the following requirements:
 
-- It is a `LineString`instance.
-- It is closed (for a geometry to be closed, STIsClosed() needs to return 1 when invoked on the instance).
-- It is simple (for a geometry to be simple, STIsSimple() needs to return 1 when invoked on the instance).
-- Returns 0 if the `LineString`instance does not meet the requirements.
+- It's a `LineString`instance.
+- It's closed (for a geometry to be closed, STIsClosed() needs to return 1 when invoked on the instance).
+- It's simple (for a geometry to be simple, STIsSimple() needs to return 1 when invoked on the instance).
+- Returns 0 if the `LineString`instance doesn't meet the requirements.
 
 #### Syntax
 
@@ -1029,7 +1031,7 @@ CQL: Yes/No
 
 #### Remarks
 
-Returns null if the instance is not a `LineString`.
+Returns null if the instance isn't a `LineString`.
 
 #### Geometry Example
 
@@ -1043,7 +1045,7 @@ SELECT @g.STIsRing();
 
 ## STIsSimple (Geometry)
 
-`STIsSimple()` returns 1 if a geometry instance is simple, as defined by the Open Geospatial Consortium (OGC). Returns 0 if a geometry instance is not simple.
+`STIsSimple()` returns 1 if a geometry instance is simple, as defined by the Open Geospatial Consortium (OGC). Returns 0 if a geometry instance isn't simple.
 
 #### Syntax
 
@@ -1060,7 +1062,7 @@ CQL: Yes/No
 To be simple a geometry instance must meet the requirements:
 
 - Except at the endpoints, each figure of the instance must not intersect itself.
-- No two figures of the instance can intersect each other at a point that is not in both of their boundaries.
+- No two figures of the instance can intersect each other at a point that's not in both of their boundaries.
 
 #### Geometry Example
 
@@ -1074,7 +1076,7 @@ SELECT @g.STIsSimple();
 
 ## STIsValid (Geometry)
 
-`STIsValid()`returns true if a geometry instance is well-formed, based on its Open Geospatial Consortium (OGC) type. Returns false if a geometry instance is not well-formed.
+`STIsValid()`returns true if a geometry instance is well-formed, based on its Open Geospatial Consortium (OGC) type. Returns false if a geometry instance isn't well-formed.
 
 #### Syntax
 
@@ -1156,8 +1158,8 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 #### Arguments
 
-_linestring_tagged_text_\
-An nvarchar(max) expression that is the WKT representation of the geometry `LineString`instance you wish to return.
+`linestring_tagged_text`
+An nvarchar(max) expression that's the WKT representation of the geometry `LineString`instance you wish to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry `LineString` instance you want to return.
@@ -1192,11 +1194,11 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
 
 #### Arguments
 
-_WKB_linestring_\
-A varbinary(max) expression that is the WKB representation of the geometry `LineString`instance to return.
+`WKB_linestring`
+A varbinary(max) expression that's the WKB representation of the geometry `LineString` instance to return.
 
 _SRID_\
-An int expression representing the spatial reference ID (SRID) of the geometry `LineString`instance you want to return.
+An int expression representing the spatial reference ID (SRID) of the geometry `LineString` instance you want to return.
 
 #### Return Types
 
@@ -1228,8 +1230,8 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 
 #### Arguments
 
-_multilinestring_tagged_text_\
-An nvarchar(max) expression that is the WKT representation of the geometry`MultiLineString`instance you wish to return.
+`multilinestring_tagged_text`
+An nvarchar(max) expression that's the WKT representation of the geometry`MultiLineString`instance you wish to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry `MultiLineString` instance you wish to return.
@@ -1264,8 +1266,8 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
 
 #### Arguments
 
-_multipoint_tagged_text_\
-An nvarchar(max) expression that is the WKT representation of the geometry `MultiPoint` instance you wish to return.
+`multipoint_tagged_text`
+An nvarchar(max) expression that's the WKT representation of the geometry `MultiPoint` instance you wish to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry`MultiPoint` instance you wish to return.
@@ -1300,8 +1302,8 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 
 #### Arguments
 
-_multipolygon_tagged_text_\
-An nvarchar(max) expression that is the WKT representation of the geometry `MultiPolygon` instance you wish to return.
+`multipolygon_tagged_text`
+An nvarchar(max) expression that's the WKT representation of the geometry `MultiPolygon` instance you wish to return.
 
 _SRID_\
 Is an int expression representing the spatial reference ID (SRID) of the geometry `MultiPolygon` instance you wish to return.
@@ -1342,9 +1344,9 @@ CQL: geometry
 
 An empty one-dimensional geometry instance returns 0.
 
-Null is returned when the geometry instance is not a one-dimensional instance or is an uninitialized instance.
+Null is returned when the geometry instance isn't a one-dimensional instance or is an uninitialized instance.
 
-One-dimensional spatial data types include `LineString`, `CircularString`, and `CompoundCurve`. `STNumCurves()` works only on simple types; it does not work with geometry collections like `MultiLineString`.
+One-dimensional spatial data types include `LineString`, `CircularString`, and `CompoundCurve`. `STNumCurves()` works only on simple types; it doesn't work with geometry collections like `MultiLineString`.
 
 #### Example
 
@@ -1372,7 +1374,7 @@ CQL: Number
 
 #### Remarks
 
-This method returns 1 if the geometry instance is not a `MultiPoint`, `MultiLineString`, `MultiPolygon`, or `GeometryCollection`instance, and 0 if the geometry instance is empty.
+This method returns 1 if the geometry instance isn't a `MultiPoint`, `MultiLineString`, `MultiPolygon`, or `GeometryCollection`instance, and 0 if the geometry instance is empty.
 
 #### Example
 
@@ -1400,7 +1402,7 @@ CQL: Number
 
 #### Remarks
 
-Returns null if the geometry instance is not a `Polygon`.
+Returns null if the geometry instance isn't a `Polygon`.
 
 #### Example
 
@@ -1442,7 +1444,7 @@ SELECT @g.STNumPoints();
 
 ## STOverlaps (Geometry)
 
-`STOveralps()`returns 1 if a geometry instance overlaps another geometry instance. Returns 0 if it does not.
+`STOveralps()`returns 1 if a geometry instance overlaps another geometry instance. Otherwise, returns 0.
 
 #### Syntax
 
@@ -1465,7 +1467,7 @@ If the points where the geometry instances intersect aren't in the same dimensio
 
 If the spatial reference IDs (SRIDs) of the geometry instances don't match, `STOverlaps()` returns null.
 
-Two geometry instances overlap if the region representing their intersection has the same dimension as the instances do and the region does not equal either instance.
+Two geometry instances overlap if the region representing their intersection has the same dimension as the instances do and the region doesn't equal either instance.
 
 #### Example
 
@@ -1495,8 +1497,8 @@ STPointFromText ( 'point_tagged_text' , SRID )
 
 #### Arguments
 
-_point_tagged_text_\
-An nvarchar(max) expression that is the WKT representation of the geometry `Point` instance you wish to return.
+`point_tagged_text`
+An nvarchar(max) expression that's the WKT representation of the geometry `Point` instance you wish to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry `Point`instance you wish to return.
@@ -1531,8 +1533,8 @@ STPointFromWKB ( 'WKB_point' , SRID )
 
 #### Arguments
 
-_WKB_point_\
-A varbinary(max) expression that is the WKB representation of the geometry `Point` instance you wish to return.
+`WKB_point`
+A varbinary(max) expression that's the WKB representation of the geometry `Point` instance you wish to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry `Point` instance you wish to return.
@@ -1638,8 +1640,8 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 
 #### Arguments
 
-_polygon_tagged_text_\
-An nvarchar(max) expression that is the WKT representation of the geometry `Polygon`instance you wish to return.
+`polygon_tagged_text`
+An nvarchar(max) expression that's the WKT representation of the geometry `Polygon`instance you wish to return.
 
 _SRID_\
 An int expression representing the spatial reference ID (SRID) of the geometry `Polygon` instance you wish to return.
@@ -1677,7 +1679,7 @@ SELECT @g.ToString();
 _other_instance_\
 Another geometry instance to compare against the instance on which `STRelate()` is invoked.
 
-_intersection_pattern_matrix_\
+`intersection_pattern_matrix`
 Is a string of type nchar(9) encoding acceptable values for the DE-9IM pattern matrix device between the two geometry instances.
 
 #### Return Types
@@ -1688,7 +1690,7 @@ CQL: Yes/No
 
 If the spatial reference IDs (SRIDs) of the geometry instances don't match, method returns null.
 
-If matrix is not well-formed, an `ArgumentException`will be thrown.
+If matrix isn't well-formed, an `ArgumentException`will be thrown.
 
 #### Example
 
@@ -1769,7 +1771,7 @@ SELECT @g.STSymDifference(@h).ToString();
 
 ## STTouches (Geometry)
 
-`STTouches()`returns 1 if a geometry instance spatially touches another geometry instance. Returns 0 if it does not.
+`STTouches()`returns 1 if a geometry instance spatially touches another geometry instance. Returns 0 if it doesn't.
 
 #### Syntax
 
@@ -1788,7 +1790,7 @@ CQL: Yes/No
 
 #### Remarks
 
-If two geometry instances point sets intersect, they are touching but their interiors don't intersect.
+If two geometry instances point sets intersect, they're touching but their interiors don't intersect.
 
 If the spatial reference IDs (SRIDs) of the geometry instances don't match, method returns null.
 

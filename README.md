@@ -2,7 +2,7 @@
 description: This page provides a brief overview of data collaboration
 ---
 
-# Data collaboration Overview
+# Data collaboration overview
 
 {% hint style="info" %}
 **You are currently browsing the Cinchy v5.7 platform documentation.** For documentation pertaining to other versions of the platform, please navigate to the relevant space(s) via the drop down menu in the upper left of the page.

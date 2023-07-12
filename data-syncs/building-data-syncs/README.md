@@ -4,16 +4,17 @@
 
 You can use this checklist in conjunction with the documentation below and elsewhere in this space to configure your data syncs in Cinchy.
 
-* [ ] [Install any applicable components](../installation-and-maintenance/)
-* [ ] Determine your [Data Sync Type](types-of-data-syncs.md) and [Design Pattern](common-design-patterns.md)
-* [ ] Define and Configure your [Data Sync Source](../supported-data-sync-sources/)
-* [ ] Define and Configure your [Data Sync Destination](../supported-data-sync-destinations/)
-* [ ] Define and Configure your [Sync Actions](sync-actions.md)
-* [ ] Define and Configure your [Event Stream source](../supported-real-time-sync-stream-sources/) (if running a real-time sync)
+- [ ] [Install any applicable components](../installation-and-maintenance/)
+- [ ] Determine your [Data Sync Type](types-of-data-syncs.md) and [Design Pattern](common-design-patterns.md)
+- [ ] Define and Configure your [Data Sync Source](../supported-data-sync-sources/)
+- [ ] Define and Configure your [Data Sync Destination](../supported-data-sync-destinations/)
+- [ ] Define and Configure your [Sync Actions](sync-actions.md)
+- [ ] Define and Configure your [Event Stream source](../supported-real-time-sync-stream-sources/) (if running a real-time sync)
 
 ## Prerequisites
 
 Before you start, make sure you've installed all the necessary components that you need for your data sync.
+
 ## Overview
 
 When you've decided on the type of data sync you want to use, you're ready to configure it.
@@ -49,11 +50,11 @@ To set up a data sync, you can use the Connections UI or manually input an XML i
 
 <figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption><p>Image 4: The Source Tab</p></figcaption></figure>
 
-[For event based real-time sync sources](../supported-real-time-sync-stream-sources/) (such as the Cinchy Event Broker/CDC, Kafka Topic, MongoDB Event, Polling Event, Salesforces Platform Event, or the Salesforce Push Topic) you will see an addition configuration tab to configure your Listener. Any configuration populated via the UI here will automatically reconcile back to the Listener Config table in your platform. You are able to set the:
+[For event based real-time sync sources](../supported-real-time-sync-stream-sources/) (such as the Cinchy Event Broker/CDC, Kafka Topic, MongoDB Event, Polling Event, Salesforce Platform Event, or the Salesforce Push Topic) you will see an addition configuration tab to configure your Listener. Any configuration populated via the UI here will automatically reconcile back to the Listener Config table in your platform. You are able to set the:
 
-* Topic JSON
-* Connections Attribute(s)
-* Auto Offset Reset
+- Topic JSON
+- Connections Attribute(s)
+- Auto Offset Reset
 
 You can find more information about the Listener Config settings in the relevant [Sync Source](../supported-data-sync-sources/) or [Real-Time Sync Stream Source](../supported-real-time-sync-stream-sources/) page(s).
 
@@ -67,7 +68,7 @@ If there is more than one listener associated with your data sync, you will need
 
 <figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption><p>Image 5: The Destination tab</p></figcaption></figure>
 
-6. **The Sync Actions tab** defines what you want to happen to your data _(Image 6)_. This tab is mandatory. There are two options on this page: Full File Sync and Delta Sync. You can review the differences between them [here.](sync-actions.md)
+6. **The Sync Actions tab** defines what you want to happen to your data _(Image 6)_. This tab is mandatory. You have two options on this page: Full File Sync and Delta Sync. You can review the differences between them [here.](sync-actions.md)
 
 <figure><img src="../../.gitbook/assets/image (713).png" alt=""><figcaption><p>Image 6: Sync Actions</p></figcaption></figure>
 
@@ -77,8 +78,8 @@ If there is more than one listener associated with your data sync, you will need
 
 1.  **The Jobs tab** will appear when you are configuring a **batch data sync** _(Image 8)_. This page starts and track your batch jobs, and shows important info on any job successes or failures. By default, the job will run as the logged-in user (as long as you have authority to run the Job). You have the option to run it as another, non-SSO account if:
 
-    * You have the credentials
-    * The account has access to run the Job
+    - You have the credentials
+    - The account has access to run the Job
 
     You can configure this by clicking on **Advanced > Run Job as a Different User**
 
@@ -89,8 +90,6 @@ If there is more than one listener associated with your data sync, you will need
 1.  **The Execution tab** will appear when you are configuring a **real-time sync** _(Image 9)_. This provides useful information for tracking any errors associated with your real-time sync. You don't need to click **Start a Job** in the UI for real-time syncs; a sync is active when you finish setting up your Listener Config set it to **Enabled**, which you can do through this tab.
 
 <figure><img src="../../.gitbook/assets/image (678).png" alt=""><figcaption><p>Image 9: Execution Errors</p></figcaption></figure>
-
-
 
 ### Use a Config XML
 
@@ -125,10 +124,19 @@ Be sure when you are pasting into the Config XML column that you double click in
 1. Use the CLI to execute your data sync. If you don't have this downloaded, [refer to the CLI installation page](../installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
 2. In this example we will be using the following Data Sync Commands. See the [CLI commands list](../cli-commands-list.md) for more information.
 
-<table><thead><tr><th width="199.33333333333331">Parameter</th><th width="241">Description</th><th>Example</th></tr></thead><tbody><tr><td>-s (server)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The full path to the Cinchy server without the protocol (e.g. cinchy.co/Cinchy).</td><td>"pilot.cinchy.co/Training/Cinchy/"</td></tr><tr><td>-u (userid)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The user id to login to Cinchy that has execution access to the data sync.</td><td>"admin"</td></tr><tr><td>-p (password)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The password of the above User ID parameter. This must be encrypted. For a walkthrough on how to use the CLI to encrypt the password, refer to the Appendix section. </td><td>"DESuEGqfffsamx55yl256hjuPYxa4ncc+5+bLkoVIFpgs0Lq6hkcU="</td></tr><tr><td>-f (feed)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The name of the Data Sync Configuration as defined in Cinchy</td><td>"Data Sync Name"</td></tr></tbody></table>
+<!-- vale off -->
 
-5. Launch Powershell and navigate to the Cinchy CLI directory.
-6. Enter and execute the following into Powershell:
+| Parameter     | Description                                                                                                                                                                    | Example                                                  |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
+| -s (server)   | Required. The full path to the Cinchy server without the protocol (cinchy.co/Cinchy).                                                                                          | "pilot.cinchy.co/Training/Cinchy/"                       |
+| -u (user id)  | Required. The user id to login to Cinchy that has execution access to the data sync.                                                                                           | "admin"                                                  |
+| -p (password) | Required. The password of the above User ID parameter. This must be encrypted. For a walkthrough on how to use the CLI to encrypt the password, refer to the Appendix section. | "DESuEGqfffsamx55yl256hjuPYxa4ncc+5+bLkoVIFpgs0Lq6hkcU=" |
+| -f (feed)     | Required. The name of the Data Sync Configuration as defined in Cinchy                                                                                                         | "Data Sync Name"                                         |
+
+<!-- vale on -->
+
+5. Launch PowerShell and navigate to the Cinchy CLI directory.
+6. Enter and execute the following into PowerShell:
 
 ```
 .\Cinchy.CLI.exe syncdata -s "pilot.cinchy.co/Training/Cinchy/" -u "admin" -p "DESuEGqmx55yl2PYxa4ncc+5+bLkoVIFpgs0Lq6hkcU=" -f "Data Sync Name"
@@ -147,7 +155,7 @@ You must set up a listener configuration when doing a real-time data sync. You w
 
 ## Examples
 
-The following pages provide basic examples of both batch and real-time data syncs. Use these examples as a  reference point for learning more about Cinchy data syncs.
+The following pages provide basic examples of both batch and real-time data syncs. Use these examples as a reference point for learning more about Cinchy data syncs.
 
-* [Batch Data Sync Example](batch-data-sync-example.md)
-* [Real-Time Data Sync Example](real-time-sync-example.md)
+- [Batch Data Sync Example](batch-data-sync-example.md)
+- [Real-Time Data Sync Example](real-time-sync-example.md)

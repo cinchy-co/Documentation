@@ -43,13 +43,13 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
 
 1. Download the latest **Cinchy Event Listener.zip** file from the **Release Artifacts** column.
 2. Extract the .zip to the folder to \<your event listener folder>
-3. Execute the **create-cinchy-event-listener-windows-service.ps1** PowerShell script located in the installation directory. Pass in filePath parameter _-filePath \<Your Listener/Worker Path>_ to the **agent.exe file.**
+3. Execute the `create-cinchy-event-listener-windows-service.ps1` PowerShell script located in the installation directory. Pass in `filePath` parameter _-filePath \<Your Listener/Worker Path>_ to the **agent.exe file.**
 
 ### Worker
 
 1. Download the latest **Cinchy Connections.zip** file from the **Release Artifacts** column.
 2. Extract the content of the **Cinchy Worker** folder to C:\\\<your CLI worker folder>
-3. Execute **create-cinchy-cli-worker-windows-service.ps1** PowerShell script located in the installation directory. Pass in filePath parameter _filePath = path_ to the **Cinchy.CLI.exe file.**
+3. Execute `create-cinchy-cli-worker-windows-service.ps1` PowerShell script located in the installation directory. Pass in `filePath` parameter _filePath = path_ to the **Cinchy\.CLI.exe file.**
 
 ## Event listener deployment
 
@@ -57,10 +57,14 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
 
 #### ClientSettings
 
+<!-- vale off -->
+
 | Parameter | Value                                               |
 | --------- | --------------------------------------------------- |
 | URL       | Cinchy Web URL (ex. https://cinchy.net/Cinchy)      |
 | Password  | The password for the user eventlistener@cinchy.com. |
+
+<!-- vale on -->
 
 #### AppSettings
 
@@ -84,16 +88,20 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
 
 #### ClientSettings
 
+<!-- vale off -->
+
 | Parameter | Value                                             |
 | --------- | ------------------------------------------------- |
 | URL       | Cinchy Web URL (ex. https://cinchy.net/Cinchy)    |
 | Password  | The password for the user connections@cinchy.com. |
 
+<!-- vale on -->
+
 #### AppSettings
 
 | Parameter     | Value                                      |
 | ------------- | ------------------------------------------ |
-| Model         | "Cinchy". This is the model for the CLI.   |
+| Model         | Cinchy. This is the model for the CLI.     |
 | TempDirectory | Temp directory for the CLI to store files. |
 
 #### ConnectionStrings

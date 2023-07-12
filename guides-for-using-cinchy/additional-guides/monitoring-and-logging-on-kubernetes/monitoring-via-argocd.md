@@ -8,7 +8,7 @@ description: This page serves as a general guide to using ArgoCD for monitoring 
 
 ArgoCD is implemented as a Kubernetes controller which continuously monitors running applications and compares the current, live state against the desired target state (as specified in your Git repository).
 
-You can use ArgoCD's dashboard _(Image 1)_ to visually monitor your namespaces and pods, and to quickly visualize deployment issues. It can easily show you what your cluster or pods are doing, and if they are healthy.
+You can use ArgoCD's dashboard _(Image 1)_ to visually monitor your namespaces and pods, and to quickly visualize deployment issues. It can easily show you what your cluster or pods are doing, and if they're healthy.
 
 ![Image 1: An example ArgoCD dashboard](<../../../.gitbook/assets/image (127).png>)
 
