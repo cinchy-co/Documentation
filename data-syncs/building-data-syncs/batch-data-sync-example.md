@@ -221,7 +221,7 @@ Any groups given Admin Access will have the ability to Execute, Write, and Read 
 
 <figure><img src="../../.gitbook/assets/image (435).png" alt=""><figcaption><p>Image 19: Confirming your changes</p></figcaption></figure>
 
-### Use a Data Sync XML
+### Use a data sync XML
 
 Instead of the Connections UI, you can also set up a data sync by uploading a formatted XML into the **Data Sync Configs** table within Cinchy.
 
@@ -315,7 +315,7 @@ The below filled XML example matches the Connections UI configuration made in **
 </BatchDataSyncConfig>
 ```
 
-#### 3.2.3 Using the Data Sync XML
+#### Using the data sync XML
 
 1. Once you have completed your Data Sync XML, navigate to the Data Sync Configurations table in Cinchy _(Image 20)._
 
@@ -359,9 +359,9 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 <figure><img src="../../.gitbook/assets/image (118).png" alt=""><figcaption><p>Image 22: Validate your sync</p></figcaption></figure>
 
-## 4. Appendix
+## Appendix
 
-### 4.1 Password Encryption
+### Password encryption
 
 To encrypt a password using PowerShell, complete the following:
 
@@ -374,14 +374,14 @@ To encrypt a password using PowerShell, complete the following:
 Please note, you will need to replace "password" with your specific password.
 {% endhint %}
 
-### 4.2 Execution Logs
+### Execution Log table
 
 The Execution Log table is a system table in Cinchy that logs the outputs of all data syncs _(Image 23_). You can always review the entries in this table for information on the progression of your syncs.
 
 <figure><img src="../../.gitbook/assets/image (189).png" alt=""><figcaption><p>Image 23: Execution Log</p></figcaption></figure>
 
-### 4.3 Execution Errors
+### Execution Error table
 
-The Execution Errors table is a system table in Cinchy that logs any errors that may occur in a data sync _(Image 24)_. Any data sync errors log to the temp directory outlined in the data sync execution command (e.g. `-d "C:\Cinchy\temp"`)
+The Execution Errors table is a system table in Cinchy that logs any errors that may occur in a data sync _(Image 24)_. Any data sync errors log to the temp directory outlined in the data sync execution command. For example, `-d "C:\Cinchy\temp"`.
 
 <figure><img src="../../.gitbook/assets/image (197).png" alt=""><figcaption><p>Image 24: Execution Errors</p></figcaption></figure>

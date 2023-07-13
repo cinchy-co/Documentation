@@ -2,7 +2,7 @@
 
 ## Overview
 
-Data changes in Cinchy (CDC) can be used to trigger a data sync from a REST API data source to a specified target. The attributes of the CDC Event are available to use as parameters within the REST API Data Source Definition to narrow the scope of the request, e.g. a lookup.
+Data changes in Cinchy (CDC) can be used to trigger a data sync from a REST API data source to a specified target. The attributes of the CDC Event are available to use as parameters within the REST API Data Source Definition to narrow the scope of the request. For example, a lookup.
 
 **Example Use Case:** An organization wants to use the Dun & Bradstreet API for enriching company information, such as the number of employees or their addresses. When a company record is added or modified in a table called Companies inside of Cinchy, a D\&B API should be triggered with the Company Name (a mandatory field on the Companies table) passed in as a parameter, and the Company record should be enriched with the company information from the API response.
 
@@ -21,7 +21,7 @@ The following sections in the Source configuration of the Connections experience
 * **Request Headers -> Header -> Header Value**
 * **API Endpoint URL**
 
-Parameters use the column name or alias as defined in the CDC Event's Listener Config prefixed with an "@", e.g. @CompanyName would be the parameter name for the following Cinchy CDC listener Topic configuration.
+Parameters use the column name or alias as defined in the CDC Event's Listener Config prefixed with an `@`. For example, `@CompanyName` would be the parameter name for the following Cinchy CDC listener Topic configuration.
 
 <pre class="language-json"><code class="lang-json"><strong>{
 </strong>	"tableGuid": "420c1851-31ed-4ada-a71b-31659bca6f92",

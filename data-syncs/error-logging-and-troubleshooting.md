@@ -133,7 +133,7 @@ The SyncErrors file also has three (3) columns:
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Duplicate Key            | The sync key values aren't unique & duplicated records are rejected                                                                                                        |
 | Malformed Row            | The row couldn't be parsed based on the source schema. For example the record may not have the number of columns mentioned in the source section of the CLI configuration. |
-| Invalid Format Exception | Check the value for this column, there may be a mismatched data type (e.g.inserting a non-digit character in a number column)                                               |
+| Invalid Format Exception | Check the value for this column, there may be a mismatched data type (such as inserting a non-digit character in a number column)                                               |
 | Max Length Violation     | The text you are trying to insert or update a target field with is too long                                                                                                 |
 | Mandatory Rule Violation | No (or incorrect) value provided for a mandatory column                                                                                                                     |
 | Unresolved Link          | Check if the values the CLI is trying to insert/update exist in the linked Cinchy table target                                                                              |
