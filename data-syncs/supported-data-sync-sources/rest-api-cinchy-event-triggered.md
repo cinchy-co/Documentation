@@ -41,7 +41,7 @@ Parameters use the column name or alias as defined in the CDC Event's Listener C
 </code></pre>
 
 {% hint style="danger" %}
-Parameter names are case sensitive when used in the Connection configuration. Parameter matching is performed using literal string replacements. Names should not contain spaces (spaces are automatically removed), and should have differing prefixes.
+Parameter names are case sensitive when used in the Connection configuration. Parameter matching is performed using literal string replacements. Names shouldn't contain spaces (spaces are automatically removed), and should have differing prefixes.
 {% endhint %}
 
 The following set of parameters will be available on every event even if they're not present in the listener config
