@@ -20,7 +20,7 @@ To install Cinchy v5 on Kubernetes, you need to follow the requirements below. S
 
 These prerequisites apply whether you are installing on Azure or on AWS.
 
-- You must create the following four Git repositories. You can use any source control platform that supports Git, such as [**Gitlab**](https://about.gitlab.com/)**,** [**Azure DevOps**](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops), and [**GitHub**](https://github.com/).
+- You must create the following four Git repositories. You can use any source control platform that supports Git, such as [GitLab](https://about.gitlab.com/)**,** [**Azure DevOps**](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops), and [**GitHub**](https://github.com/).
   - **cinchy.terraform:**: Contains all Terraform configurations.
   - **cinchy.argocd:**: Contains all ArgoCD configurations.
   - **cinchy.kubernetes:**: Contains cluster and application component deployment manifests.
@@ -34,7 +34,7 @@ These prerequisites apply whether you are installing on Azure or on AWS.
   - [kubectl](https://kubernetes.io/docs/tasks/tools/) (v1.23.0+)
   - [.NET Core 3.1.x](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
   - [Bash](https://www.gnu.org/software/bash/) ([Git Bash](https://www.atlassian.com/git/tutorials/git-bash) may be used on Windows)
-- If you are using Cinchy's docker images, [pull them.](../deployment-planning-overview-and-checklist/deployment-prerequisites/#1.6-docker-images)
+- If you are using Cinchy docker images, [pull them.](../deployment-planning-overview-and-checklist/deployment-prerequisites/#1.6-docker-images)
 
 {% hint style="info" %}
 Starting in Cinchy v5.4, you will have the option between Alpine or Debian based image tags for the listener, worker, and connections. **Using Debian tags will allow a Kubernetes deployment to be able to connect to a DB2 data source, and that option should be selected if you plan on leveraging a DB2 data sync.**
@@ -47,7 +47,15 @@ Starting in Cinchy v5.4, you will have the option between Alpine or Debian based
 
 - You will need a single domain for accessing ArgoCD, Grafana, OpenSearch Dashboard, and any deployed Cinchy instances. You have two routing options for accessing these applications - path based or subdomains. See below for an example with multiple Cinchy instances:
 
-<table><thead><tr><th width="153.43148487423616">Application</th><th width="150">Path Based Routing</th><th>Subdomain Based Routing</th></tr></thead><tbody><tr><td>Cinchy 1 (Dev)</td><td>domain.com/dev</td><td>dev.mydomain.com</td></tr><tr><td>Cinchy 2 (QA)</td><td>domain.com/qa</td><td>qa.mydomain.com</td></tr><tr><td>Cinchy 3 (UAT)</td><td>domain.com/uat</td><td>uat.mydomain.com</td></tr><tr><td>ArgoCD</td><td>domain.com/argocd</td><td>cluster.mydomain.com/argocd</td></tr><tr><td>Grafana</td><td>domain.com/grafana</td><td>cluster.mydomain.com/grafana</td></tr><tr><td>OpenSearch</td><td>domain.com/dashboard</td><td>cluster.mydomain.com/dashboard</td></tr></tbody></table>
+| Application    | Path Based Routing   | Subdomain Based Routing        |
+|----------------|----------------------|--------------------------------|
+| Cinchy 1 (DEV) | domain.com/dev       | dev.mydomain.com               |
+| Cinchy 2 (QA)  | domain.com/qa        | qa.mydomain.com                |
+| Cinchy 3 (UAT) | domain.com/uat       | uat.mydomain.com               |
+| ArgoCD         | domain.com/argocd    | cluster.mydomain.com/argocd    |
+| Grafana        | domain.com/grafana   | cluster.mydomain.com/grafana   |
+| OpenSearch     | domain.com/dashboard | cluster.mydomain.com/dashboard |
+
 
 - You will need an **SSL certificate** for the cluster. This should be a wildcard certificate if you will use subdomain based routing. [You can also use Self-Signed SSL.](using-self-signed-ssl-certs-kubernetes-deployments.md)
 
@@ -71,8 +79,8 @@ The deployment template has two options available:
 If you prefer an **existing resource group**, you must provision the following before the deployment:
 
 - The resource group.
-- A VNet within the resource group.
-- A single subnet. It's important that the address range be enough for all executing processes within the cluster, such as a CIDR ending with /22 to provide a range of 1024 IPs.
+- A virtual network (VNet) within the resource group.
+- A single subnet. It's important that the range be enough for all executing processes within the cluster, such as a CIDR ending with /22 to provide a range of 1024 addresses.
 
 #### New resource group
 
@@ -97,8 +105,8 @@ The template has two options available:
 #### Existing VPC
 
 - If you prefer an **existing VPC**, you must provision the following before the deployment:
-  - The VPC. It's important that the address range be enough for all executing processes within the cluster, such as a CIDR ending with /21 to provide a range of 2048 IPs.
-  - 3 Subnets (one per AZ). It's important that the address range be enough for all executing processes within the cluster, such as a CIDR ending with /23 to provide a range of 512 IPs.
+  - The VPC. It's important that the range be enough for all executing processes within the cluster, such as a CIDR ending with /21 to provide a range of 2048 IP addresses.
+  - 3 Subnets (one per AZ). It's important that the range be enough for all executing processes within the cluster, such as a CIDR ending with /23 to provide a range of 512 IP addresses.
   - If the subnets are **private**, a NAT Gateway is required to enable node group registration with the EKS cluster.
 
 #### New VPC
@@ -132,10 +140,10 @@ The following steps detail the instructions for setting up the initial configura
 **Tips for Success:**
 
 - You can return to this step at any point in the deployment process if you need to update your configurations. Simply rerun through the guide sequentially after making any changes.
-- The **deployment.json** will ask for your **repo username and password**, but ArgoCD may have errors when retrieving your credentials in certain situations (ex: if using GitHub).
-   \
+- The **deployment.json** will ask for your **repository username and password**, but ArgoCD may have errors when retrieving your credentials in certain situations (ex: if using GitHub).
+  \
    To verify if your credentials are working, navigate to the **ArgoCD Settings** after you have deployed Argo in this guide.
-   \
+  \
    To avoid errors, Cinchy recommends using a [Personal Access Token instead.](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
       [Find more information here.](https://argo-cd.readthedocs.io/en/release-1.8/user-guide/private-repositories/)
@@ -152,7 +160,7 @@ This utility updates the configurations in the cinchy.terraform, cinchy.argocd, 
 dotnet Cinchy.DevOps.Automations.dll "deployment.json"
 ```
 
-2. If the file created in [**"Configuring the Deployment.json" step 2**](./#3.1-configure-deployment.json) has a name other than "deployment.json", the reference in the command will will need to be replaced with the correct name of the file.
+2. If the file created in [**"Configuring the Deployment.json" step 2**](./#3.1-configure-deployment.json) has a name other than `deployment.json`, the reference in the command will will need to be replaced with the correct name of the file.
 
 3. The console output should have the following message:
 
@@ -166,13 +174,13 @@ The following steps detail how to deploy Terraform.
 
 #### Cinchy.terraform repository structure - AWS
 
-If deploying on AWS: Within the Terraform > AWS directory, a new folder named **eks_cluster** is created. Nested within that's a subdirectory with the same name as the newly created cluster.
+If deploying on AWS: Within the Terraform > AWS directory, a new folder named `eks_cluster` is created. Nested within that's a subdirectory with the same name as the newly created cluster.
 
 To perform terraform operations, **the cluster directory must be the working directory during execution. This applies to everything within step 4 of this guide.**
 
 #### Cinchy.terraform repository structure - Azure
 
-If deploying on Azure: Within the Terraform > Azure directory, a new folder named **aks_cluster** is created. Nested within that's a subdirectory with the same name as the newly created cluster.
+If deploying on Azure: Within the Terraform > Azure directory, a new folder named `aks_cluster` is created. Nested within that's a subdirectory with the same name as the newly created cluster.
 
 To perform terraform operations, **the cluster directory must be the working directory during execution.**
 
@@ -290,7 +298,7 @@ To create your new secrets:
 5. Leave the other values to their defaults.
 6. Select **Create.**
 
-Once you receive the message that the first secret has been successfully created, you may proceed to create the other secrets. There are a total of **8 secrets to create** as shown in the above list of secret names.
+Once you receive the message that the first secret has been successfully created, you may proceed to create the other secrets. You must **create a total of 8 secrets**, as shown in the above list of secret names.
 
 ### Execute cinchy.devops.automations
 
@@ -302,7 +310,7 @@ This utility updates the configurations in the cinchy.terraform, cinchy.argocd, 
 dotnet Cinchy.DevOps.Automations.dll "deployment.json"
 ```
 
-2. If the file [created in section 3](./#3.-initial-configuration) has a name other than "deployment.json", the reference in the command will will need to be replaced with the correct name of the file.
+2. If the file [created in section 3](./#3.-initial-configuration) has a name other than `deployment.json`, the reference in the command will will need to be replaced with the correct name of the file.
 
 3. The console output should end with the following message:
 
@@ -394,7 +402,7 @@ bash deploy_cluster_components.sh
 {% hint style="success" %}
 **Tips for Success:**
 
-- If your pods are degraded or failed to sync, refresh of resync your components. You can also delete pods and ArgoCD will automatically spin them back up for you.
+- If your pods are degraded or failed to sync, refresh of resynchronize your components. You can also delete pods and ArgoCD will automatically spin them back up for you.
 - Check that ArgoCD is pulling from your git repository by navigating to your Settings
 - If your components are failing upon attempting to pull an image, refer to your deployment.json to check that each component is set to the correct version number.
   {% endhint %}
