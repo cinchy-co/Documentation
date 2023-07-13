@@ -40,7 +40,7 @@ Tip: Click on an image in this document to enlarge it.
 
 ### Destination tab
 
-Your destination tab should be set to **"Cinchy Table"**, and have the following information _(Image 2):_
+Your destination tab should be set to **Cinchy Table**, and have the following information _(Image 2):_
 
 **Domain:** The domain where your destination table resides. This example uses the **"Kafka Sync" domain.**
 

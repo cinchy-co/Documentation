@@ -4,7 +4,7 @@
 
 [Microsoft Dynamics 365 ](https://dynamics.microsoft.com/en-us/)functions as an interconnected CRM, ERP, and productivity suite that integrates processes, data, and business logic.
 
-## Example use case 
+## Example use case
 
 You have customer information currently sitting in the Dynamics CRM software. You want to sync this data into Cinchy through a batch sync to liberate your data from the silo.
 
@@ -34,7 +34,16 @@ The following table outlines the mandatory and optional parameters you will find
 {% tab title="Source Details" %}
 The following parameters will help to define your data sync source and how it functions.
 
-<table><thead><tr><th>Parameter</th><th width="289.66666666666663">Description</th><th>Example</th></tr></thead><tbody><tr><td>Source</td><td><strong>Mandatory.</strong> Select your source from the drop down menu.</td><td>Dynamics</td></tr><tr><td>Entity</td><td><strong>Mandatory.</strong> The name of the entity you want to sync as it appears in your Dynamics CRM.</td><td>Companies</td></tr><tr><td>Service URL</td><td><strong>Mandatory.</strong> The <a href="https://community.dynamics.com/365/b/dynamics-365-education-and-knowledge/posts/get-the-web-api-url-for-a-dynamics-365-organization">Web API URL</a> for your instance.</td><td><a href="https://org.api.crm.dynamics.com/api/data/v9.0/">https://org.api.crm.dynamics.com/api/data/v9.0/</a></td></tr><tr><td>Redirect URL</td><td><strong>Mandatory.</strong> The <a href="https://docs.caseware.com/2020/webapps/31/en/Setup/Environments-and-Configuration/Generate-the-reply-URL-Azure-AD.htm?region=int">Redirect URI </a>from the Azure AD app registration</td><td><a href="https://contoso.com/">https://example.com/</a></td></tr><tr><td>Client ID</td><td><strong>Mandatory.</strong> The encrypted Client ID found in your Azure AD app registration. The Connection UI will automatically encrypt this value for you.</td><td></td></tr><tr><td>Client Secret</td><td><strong>Mandatory.</strong> The encrypted Client Secret found in your Azure AD app registration. The Connection UI will automatically encrypt this value for you.</td><td></td></tr><tr><td>Test Connection</td><td><p>You can use the "Test Connection" button to ensure that your credentials are properly configured to access your source. </p><p></p><p>If configured correctly, a "Connection Successful" pop-up will appear.</p><p></p><p>If configured incorrectly, a "Connection Failed" pop-up will appear along with a link to the applicable error logs to help you troubleshoot.</p></td><td></td></tr></tbody></table>
+| Parameter       | Description                                                                                                                                                                                                                                                                                                                                | Example                                         |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| Source          | Mandatory. Select your source from the drop down menu.                                                                                                                                                                                                                                                                                     | Dynamics                                        |
+| Entity          | Mandatory. The name of the entity you want to sync as it appears in your Dynamics CRM.                                                                                                                                                                                                                                                     | Companies                                       |
+| Service URL     | Mandatory. The Web API URL of your instance.                                                                                                                                                                                                                                                                                              | https://org.api.crm.dynamics.com/api/data/v9.0/ |
+| Redirect URL    | Mandatory. The Redirect URI from the Azure AD app registration                                                                                                                                                                                                                                                                             | https://example.com/                            |
+| Client ID       | Mandatory. The encrypted Client ID found in your Azure AD app registration. The Connection UI will automatically encrypt this value for you.                                                                                                                                                                                               |
+| Client Secret   | Mandatory. The encrypted Client Secret found in your Azure AD app registration. The Connection UI will automatically encrypt this value for you.                                                                                                                                                                                           |
+| Test Connection | You can use the "Test Connection" button to ensure that your credentials are properly configured to access your source. If configured correctly, a "Connection Successful" pop-up will appear. If configured incorrectly, a "Connection Failed" pop-up will appear along with a link to the applicable error logs to help you troubleshoot. |
+
 {% endtab %}
 
 {% tab title="Schema" %}
@@ -47,23 +56,21 @@ The following parameters will help to define your data sync source and how it fu
 | Data Type   | **Mandatory.** The data type of the column values.                                                            | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                             |         |
 
-
-
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
-| Parameter   | Description                                                                                                                           | Example |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Parameter   | Description                                                                       | Example |
+| ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
-| Replacement | What you want to replace your pattern with.                                                                                           |         |
+| Replacement | What you want to replace your pattern with.                                       |         |
 
 {% hint style="info" %}
 Note that you can have more than one String Replacement
@@ -83,7 +90,7 @@ You have the option to add a source filter to your data sync. Please review the 
 
 ## Next steps
 
-* Configure your [Destination](../supported-data-sync-destinations/)
-* Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
-* Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* Click **Jobs > Start a Job** to begin your sync.
+- Configure your [Destination](../supported-data-sync-destinations/)
+- Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
+- Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
+- Click **Jobs > Start a Job** to begin your sync.

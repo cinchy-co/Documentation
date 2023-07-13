@@ -60,7 +60,7 @@ configMapGenerator:
 - self-signed-ssl-root-ca.yaml
 ```
 
-7. Add the below Deployment patchesJson6902 to each of your _**cinchy.kubernetes/environment\_kustomizations/cinchy\_nonprod/ENV\_NAME/PLATFORM\_COMPONENT\_NAME/kustomization.yaml**_ files, except "base".
+7. Add the below Deployment patchesJson6902 to each of your _**cinchy.kubernetes/environment\_kustomizations/cinchy\_nonprod/ENV\_NAME/PLATFORM\_COMPONENT\_NAME/kustomization.yaml**_ files, except `base`.
 
 * Ensure that the **rootCA.crt** file name is matched with ConfigMap data, configMapGenerator files, and the patch subpath.
 

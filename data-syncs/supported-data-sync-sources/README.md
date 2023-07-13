@@ -192,7 +192,7 @@ REST APIs work by fielding **requests for a resource** and **returning all relev
 Salesforce objects are database tables that permit you to store data that's specific to an organization. Salesforce objects are of two types:
 
 * Standard Objects: Standard objects are the kind of objects that are provided by salesforce.com such as users, contracts, reports, dashboards, etc.
-* Custom Objects: Custom objects are those objects that are created by users. They supply information that's unique and essential to their organization. They are the heart of any application and provide a structure for sharing data.
+* Custom Objects: Custom objects are those objects that are created by users. They supply information that's unique and essential to their organization. Custom objects are the heart of any application and provide a structure for sharing data.
 
 {% content-ref url="salesforce-object-bulk-api.md" %}
 [salesforce-object-bulk-api.md](salesforce-object-bulk-api.md)
