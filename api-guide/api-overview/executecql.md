@@ -33,7 +33,7 @@ StartRow and RowCount work with API Saved Queries. When using these parameters w
 
 | Name          | Data Type | Description                                                                                                 |
 | ------------- | --------- | ----------------------------------------------------------------------------------------------------------- |
-| Authorization | string    | <p>Bearer &#x3C;access_token></p><p>See <a href="api-authentication.md">Authentication </a>for details.</p> |
+| Authorization | string    | <p>Bearer <access_token></p><p>See <a href="api-authentication.md">Authentication </a>for details.</p> |
 
 #### Responses:
 

@@ -84,8 +84,8 @@ A **fixed-width file** is a file that has a specific format which allows for the
 
 Advantages of using a fixed-width file include:
 
-* It is a very **compact** representation of your data
-* It is fast to parse because every field is in the same place in every line
+* It's a **compact** representation of your data
+* It's fast to parse because every field is in the same place in every line
 
 {% content-ref url="file-based-sources/fixed-width-file.md" %}
 [fixed-width-file.md](file-based-sources/fixed-width-file.md)
