@@ -71,7 +71,7 @@ PowerShell requires an initial setup when using CinchyDXD.
 **You will get an error message** (above) that `CinchyDXD.ps1 cannot be loaded because the running script is disabled`.
 
 To resolve this error:
-
+ 
 4. From your **start menu**, search for **PowerShell** and select **Run as Administrator** _(Image 6)._
 
 ![Image 6: Run as administrator](<../../../.gitbook/assets/image (226).png>)
