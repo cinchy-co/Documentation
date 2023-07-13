@@ -160,8 +160,8 @@ This example will walk you through option one.
 <figure><img src="../../.gitbook/assets/image (580).png" alt=""><figcaption><p>Image 9: Source Schema</p></figcaption></figure>
 
 10. Navigate to the **Destination tab** and select **Cinchy Table** from the drop down.
-11. In the **Load Metadata** pop-up, input the **Domain** and **Table** name for your destination. This example uses the Sandbox domain and the People table _(Image 10)._
-12. Click **Load.**
+11. In the **Load Metadata** pop-up, input the **Domain** and **Table** name for your destination. This example uses the `Sandbox` domain and the `People` table _(Image 10)._
+12. Select **Load Metadata**.
 
 <figure><img src="../../.gitbook/assets/image (496).png" alt=""><figcaption><p>Image 10: Load Metadata</p></figcaption></figure>
 

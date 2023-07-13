@@ -114,7 +114,7 @@ We don't use the RunQuery functionality in this example.
 <figure><img src="../../.gitbook/assets/image (185).png" alt=""><figcaption><p>Image 6: Define your source schema</p></figcaption></figure>
 
 1. Navigate to the **Destination** tab and select **Cinchy Table** from the drop down _(Image 7)._
-2. In the **Load Metadata** pop-up, input the **Domain** and **Table** name for your destination. This example uses the **Sandbox** domain and the **People** table.
+2. In the **Connection** section, input the **Domain** and **Table** name for your destination. This example uses the **Sandbox** domain and the **People** table.
 3. Click **Load.**
 
 <figure><img src="../../.gitbook/assets/image (323).png" alt=""><figcaption><p>Image 7: Load the Metadata</p></figcaption></figure>
