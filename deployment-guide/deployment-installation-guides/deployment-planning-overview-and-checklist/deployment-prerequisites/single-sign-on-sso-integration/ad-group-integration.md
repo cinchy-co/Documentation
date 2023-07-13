@@ -44,7 +44,7 @@ AD Groups defined in Cinchy have their members synced from AD through a batch pr
 The sync operation performs the following high-level steps:
 
 1. Fetches all Cinchy registered AD Groups using a Saved Query.
-2. Retrieves the usernames of all members for each AD Group. The default attribute for username that is retrieved is **userPrincipalName**, but configurable as part of the sync process.
+2. Retrieves the usernames of all members for each AD Group. The default attribute for username that's retrieved is **userPrincipalName**, but configurable as part of the sync process.
 3. For each AD Group, it loads the users that are both a member in AD and exist in the Cinchy Users table (matched on the Username) into the "Users" attribute of the Cinchy Groups table.
 
 ### Dependencies

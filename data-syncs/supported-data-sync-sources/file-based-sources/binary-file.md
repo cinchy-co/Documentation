@@ -2,7 +2,7 @@
 
 ## Overview
 
-A binary file is a computer file that is **not a text file**, and whose content is in a binary format consisting of a series of sequential bytes, each of which is eight bits in length.
+A binary file is a computer file that's **not a text file**, and whose content is in a binary format consisting of a series of sequential bytes, each of which is eight bits in length.
 
 You can use binary files from a **Local upload, Amazon S3, or Azure Blob Storage** in your data syncs.
 
@@ -10,7 +10,7 @@ Some benefits of using binary files include:
 
 * **Better efficiency via compression**
 * **Better Security** through the ability to create custom encoding standards.
-* **Unmatched Speed,** since the data is stored in a raw format, and is not encoded using any character encoding standards, it is faster to read and store.
+* **Unmatched Speed,** since the data is stored in a raw format, and isn't encoded using any character encoding standards, it's faster to read and store.
 
 ## Example use case 
 

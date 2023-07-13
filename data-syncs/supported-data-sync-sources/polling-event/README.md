@@ -18,11 +18,11 @@ You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
 
-| Parameter   | Description                                                                                                                                                                                       | Example            |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| Title       | **Mandatory.** Input a name for your data sync                                                                                                                                                    | Polling Event Sync |
-| Variables   | **Optional.** Review our documentation on [Variables here ](../../building-data-syncs/advanced-settings/variables.md)for more information about this field.                                       |                    |
-| Permissions | Data syncs are role based access systems where you can give specific groups read, write, execute, and/or all of the above with admin access. **Inputting at least an Admin Group is mandatory.**  |                    |
+| Parameter   | Description                                                                                                                                                                                      | Example            |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ |
+| Title       | **Mandatory.** Input a name for your data sync                                                                                                                                                   | Polling Event Sync |
+| Variables   | **Optional.** Review our documentation on [Variables here ](../../building-data-syncs/advanced-settings/variables.md)for more information about this field.                                      |                    |
+| Permissions | Data syncs are role based access systems where you can give specific groups read, write, execute, and/or all of the above with admin access. **Inputting at least an Admin Group is mandatory.** |                    |
 
 <figure><img src="../../../.gitbook/assets/image (744).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
@@ -50,13 +50,13 @@ Note that If there is more than one listener associated with your data sync, you
 
 #### Optional AppSettings configurations
 
-* **DataPollingConcurrencyIndex**: This property allows only a certain number of threads to run queries against the source database, which works to reduce the load against the database.
-  * The default number of threads is set to 12.
-  * To configure this property, navigate to your **appSettings.json** deployment file **>  "DataPollingConcurrencyIndex": \<numberOfThreads>**
-* **QueueWriteConcurrencyIndex**: This property allows only a certain number of threads to be concurrently sending messages to the queue. This works to provide a more consistent batching by the worker and reduce your batching errors. run queries against the source database, which works to reduce the load against the database.
-  * The default number of threads is set to 12.
-  * To configure this property, navigate to your **appSettings.json** deployment file **>  "QueueWriteConcurrencyIndex": \<numberOfThreads>.**
-  * Note that this index is shared across all listener configs, meaning that if it is set to 1 only one listener config will be pushing the messages to the queue at a single moment in time.
+- **DataPollingConcurrencyIndex**: This property allows only a certain number of threads to run queries against the source database, which works to reduce the load against the database.
+  - The default number of threads is set to 12.
+  - To configure this property, navigate to your **appSettings.json** deployment file **> "DataPollingConcurrencyIndex": \<numberOfThreads>**
+- **QueueWriteConcurrencyIndex**: This property allows only a certain number of threads to be concurrently sending messages to the queue. This works to provide a more consistent batching by the worker and reduce your batching errors. run queries against the source database, which works to reduce the load against the database.
+  - The default number of threads is set to 12.
+  - To configure this property, navigate to your **appSettings.json** deployment file **> "QueueWriteConcurrencyIndex": \<numberOfThreads>.**
+  - Note that this index is shared across all listener configs, meaning that if it is set to 1 only one listener config will be pushing the messages to the queue at a single moment in time.
 
 ```json
 // App Settings JSON Example
@@ -85,7 +85,7 @@ WHERE Id IN (SELECT TOP (100) Id
     WHERE Id > 0 AND Name IS NOT NULL
     ORDER BY Id)
  AND Id > 0 AND Name IS NOT NULL
-</code></pre></td></tr><tr><td>FromClause</td><td><strong>Mandatory.</strong> This must contain at least the table name but can also contain Joined tables as written in SQL language.</td><td>Example: <strong>[Source Table]</strong></td></tr><tr><td>CursorColumn</td><td><strong>Mandatory.</strong> Column name that is used in any 'WHERE' condition(s) and for ordering the result of a query </td><td>Example: <strong>[Id]</strong></td></tr><tr><td>BatchSize</td><td><strong>Mandatory.</strong> Minimum size of a batch of data per query. This can be larger to prevent infinite loops if the CursorColumn is not unique.</td><td>Example: <strong>100</strong></td></tr><tr><td>FilterCondition</td><td>All filtering options used in any 'WHERE' condition(s) of the query</td><td>Example: <strong>"Name IS NOT NULL"</strong></td></tr><tr><td>Columns</td><td><strong>Mandatory.</strong> A list of columns that we want to show in a result.</td><td>Example:<strong>"Id", "Name"</strong></td></tr><tr><td>ReturnDataConfiguration</td><td><p></p><p>The parameters here are used in more complex queries.<br><br><em>In our example, we have 2 related tables, but want to show the contents of one of them based on the 'CursorColumn' from a second table. Since Timestamp values aren't unique, we need to find all combinations of Id, Timestamp that match the filter condition in a subquery, and then join this result with the outer-query to get the final result.</em><br><br>Note that i<em>n "ReturnDataConfiguration", our parameters area of concern is everything outside of first open parenthesis "(" and last closing parenthesis ")", i.e.:</em></p><pre class="language-sql"><code class="lang-sql">FROM
+</code></pre></td></tr><tr><td>FromClause</td><td><strong>Mandatory.</strong> This must contain at least the table name but can also contain Joined tables as written in SQL language.</td><td>Example: <strong>[Source Table]</strong></td></tr><tr><td>CursorColumn</td><td><strong>Mandatory.</strong> Column name that's used in any 'WHERE' condition(s) and for ordering the result of a query </td><td>Example: <strong>[Id]</strong></td></tr><tr><td>BatchSize</td><td><strong>Mandatory.</strong> Minimum size of a batch of data per query. This can be larger to prevent infinite loops if the CursorColumn isn't unique.</td><td>Example: <strong>100</strong></td></tr><tr><td>FilterCondition</td><td>All filtering options used in any 'WHERE' condition(s) of the query</td><td>Example: <strong>Name IS NOT NULL</strong></td></tr><tr><td>Columns</td><td><strong>Mandatory.</strong> A list of columns that we want to show in a result.</td><td>Example:<strong>Id, Name</strong></td></tr><tr><td>ReturnDataConfiguration</td><td><p></p><p>The parameters here are used in more complex queries.<br><br><em>This example has 2 related tables, but want to show the contents of one of them based on the 'CursorColumn' from a second table. Since Timestamp values aren't unique, we need to find all combinations of Id, Timestamp that match the filter condition in a subquery, and then join this result with the outer-query to get the final result.</em><br><br>In<em> `ReturnDataConfiguration`, our parameters area of concern is everything outside of first open parenthesis `(` and last closing parenthesis `)`. For example:</em></p><pre class="language-sql"><code class="lang-sql">FROM
 (
 ...
 ) AS t INNER JOIN [Table1] ts ON ts.[Id] = t.[Id]
@@ -134,7 +134,7 @@ ORDER BY Id
       "ts.[Id]"
       "ts.[Name]",
     ]
-  
+
   },
   "Delay": 10
 }
@@ -152,9 +152,10 @@ The below table can be used to help create your Connection Attributes JSON neede
 ```json
 {
   "databaseType": "TSQL",
-  "connectionString": "Server=;Database=;User ID=cinchy;password=example;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;",
+  "connectionString": "Server=;Database=;User ID=cinchy;password=example;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;"
 }
 ```
+
 {% endtab %}
 
 {% tab title="Schema" %}
@@ -167,23 +168,21 @@ The below table can be used to help create your Connection Attributes JSON neede
 | Data Type   | **Mandatory.** The data type of the column values.                                                            | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                             |         |
 
-
-
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
-| Parameter   | Description                                                                                                                           | Example |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Parameter   | Description                                                                       | Example |
+| ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
-| Replacement | What you want to replace your pattern with.                                                                                           |         |
+| Replacement | What you want to replace your pattern with.                                       |         |
 
 {% hint style="info" %}
 Note that you can have more than one String Replacement
@@ -203,11 +202,11 @@ You have the option to add a source filter to your data sync. Please review the 
 
 ## Next steps
 
-* Configure your [Destination](../../supported-data-sync-destinations/)
-* Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
-* Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* If more than one listener is needed for a real-time sync, configure it/them via [the Listener Config table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
-* To run a real-time sync, enable your Listener from [the Execution tab.](../../building-data-syncs/)
+- Configure your [Destination](../../supported-data-sync-destinations/)
+- Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
+- Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
+- If more than one listener is needed for a real-time sync, configure it/them via [the Listener Config table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
+- To run a real-time sync, enable your Listener from [the Execution tab.](../../building-data-syncs/)
 
 ## Appendix A
 
