@@ -4,13 +4,15 @@
 
 Apache Parquet is a file format designed to support fast data processing for complex data, with several notable characteristics:
 
-**1.** **Columnar:** Unlike row-based formats such as CSV or Avro, Apache Parquet is column-oriented – meaning the values of each table column are stored next to each other, rather than those of each record:
+**1. Columnar:** Unlike row-based formats such as CSV or Avro, Apache Parquet is column-oriented – meaning the values of each table column are stored next to each other, rather than those of each record:
 
 **2. Open-source:** Parquet is free to use and open source under the Apache Hadoop license, and is compatible with most Hadoop data processing frameworks. To quote the [project website](https://parquet.apache.org/), “Apache Parquet is… available to any project… regardless of the choice of data processing framework, data model, or programming language.”
 
 **3. Self-describing:** In addition to data, a Parquet file contains metadata including schema and structure. Each file stores both the data and the standards used for accessing each record – making it easier to decouple services that write, store, and read Parquet files.
 
-**Example Use Case:** You have a parquet file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
+## Example use case 
+
+You have a parquet file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
 
 {% hint style="success" %}
 The Parquet source supports **batch syncs.**

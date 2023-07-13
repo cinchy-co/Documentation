@@ -12,7 +12,9 @@ Some benefits of using binary files include:
 * **Better Security** through the ability to create custom encoding standards.
 * **Unmatched Speed,** since the data is stored in a raw format, and is not encoded using any character encoding standards, it is faster to read and store.
 
-**Example Use Case:** You have a binary file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
+## Example use case 
+
+You have a binary file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
 
 {% hint style="success" %}
 The Binary File source supports batch syncs.

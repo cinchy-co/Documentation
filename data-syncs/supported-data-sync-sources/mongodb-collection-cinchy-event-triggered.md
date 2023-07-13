@@ -230,9 +230,9 @@ To configure a MongoDB Collection (Cinchy Event Triggered) connection, **a liste
 
 When setting up your listener configuration for your data sync, keeping the following constraints in mind:
 
-- **Column names** in the listener config should not contain spaces. If they do, they will be automatically removed. _E.g. a column named Company Name will become the replacement parameter @CompanyName_
+- **Column names** in the listener config should not contain spaces. If they do, they will be automatically removed. For example, a column named **Company Name** will become the replacement parameter **@CompanyName**.
 - The replacement parameter names are **case sensitive.**
-- **Column names** in the listener config should not be prefixes of other column names. _E.g. if you have a column called "Name", you shouldn't have another called "Name2" as the value of @Name2 may end up being replaced by the value of @Name suffixed with a "2"._
+- **Column names** in the listener config shouldn't be prefixes of other column names. For example, if you have a column called **Name**, you shouldn't have another called **Name2** as the value of **@Name2** may end up being replaced by the value of **@Name** suffixed with a `2`._
 
 #### Example Listener Configuration
 

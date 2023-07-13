@@ -4,7 +4,9 @@
 
 The Cinchy Event Broker/CDC (Change Data Capture) source allows you to capture data changes on your table and use these events in your data syncs.
 
-**Example Use Case:** To mitigate the labour and time costs of hosting information in a silo, as well as remove the costly integration tax plaguing your IT teams, you want to connect your legacy systems into Cinchy to take advantage of the platform's sync capabilities. To do so, you want to set up a real-time sync between a Cinchy Table and Salesforce that updates Salesforce any time data is added, updated, or deleted on the Cinchy side. As long as you enable change notifications on your Cinchy table, you can do so by setting up a data sync and listener config with your source as the Cinchy Event Broker/CDC.
+### Use Case
+
+To mitigate the labour and time costs of hosting information in a silo, as well as remove the costly integration tax plaguing your IT teams, you want to connect your legacy systems into Cinchy to take advantage of the platform's sync capabilities. To do so, you want to set up a real-time sync between a Cinchy Table and Salesforce that updates Salesforce any time data is added, updated, or deleted on the Cinchy side. As long as you enable change notifications on your Cinchy table, you can do so by setting up a data sync and listener config with your source as the Cinchy Event Broker/CDC.
 
 {% hint style="success" %}
 The Cinchy Event Broker/CDC supports both batch syncs and real-time syncs (most common).
@@ -40,15 +42,15 @@ Note that If there is more than one listener associated with your data sync, you
 
 If you are creating a CDC listener config for a **Cinchy Event Triggered REST API data source**, pay in mind the following unique constraints:
 
-* **Column names** in the listener config should not contain spaces. If they do, they will be automatically removed. _E.g. a column named First Name will become @FirstName_
+* **Column names** in the listener config shouldn't contain spaces. If they do, they will be automatically removed. For example, a column named **First Name** will become **@FirstName**.
 * The replacement variable names are **case sensitive.**
-* **Column names** in the listener config should not be prefixes of other column names. E_.g. if you have a column called "Name", you shouldn't have another called "Name2" as the value of @Name2 may end up being replaced by the value of @Name suffixed with a "2"._
+* **Column names** in the listener config shouldn't be prefixes of other column names. E_.g. if you have a column called **Name**, you shouldn't have another called "Name2" as the value of @Name2 may end up being replaced by the value of @Name suffixed with a `2`.
 
 #### Reset behaviour
 
 | Parameter             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Example |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| **Auto Offset Reset** | <p><strong>Earliest, Latest or None.</strong> <br><br>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br></p><p><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed. This is the typical configuration.<br><br><strong>None</strong> will not read start reading any events.<br><br>You are able to switch between Auto Offset Reset types after your initial configuration through the process outlined <a href="../../error-logging-and-troubleshooting.md">here.</a></p> | None    |
+| **Auto Offset Reset** | <p><strong>Earliest, Latest or None.</strong> <br><br>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br></p><p><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed. This is the typical configuration.<br><br><strong>None</strong> won't read start reading any events.<br><br>You are able to switch between Auto Offset Reset types after your initial configuration through the process outlined <a href="../../error-logging-and-troubleshooting.md">here.</a></p> | None    |
 
 #### Topic JSON
 
@@ -61,7 +63,7 @@ If you are creating a CDC listener config for a **Cinchy Event Triggered REST AP
 
 #### Connection Attributes
 
-You don't need to provide Connections Attributes when using the Cinchy CDC Stream Source. However if you inputting your configuration via the Listener Config table, rather than through the Connections UI, you cannot leave the field blank. Instead, insert the below text into the column:
+You don't need to provide Connections Attributes when using the Cinchy CDC Stream Source. However if you inputting your configuration via the Listener Config table, rather than through the Connections UI, you can't leave the field blank. Instead, insert the below text into the column:
 
 ```
 {}
@@ -134,7 +136,7 @@ You are able to use any parameters defined in your listener config.
 
 #### Example
 
-In the below example, we have a data sync using the Event Broker/CDC as a source. Our Listener Config has been set with the CinchyID attribute _(Image 4)._
+The example below is a data sync using the Event Broker/CDC as a source. Our Listener Config has been set with the CinchyID attribute _(Image 4)._
 
 <figure><img src="../../../.gitbook/assets/image (314).png" alt=""><figcaption><p>Image 4: Run Query</p></figcaption></figure>
 
@@ -154,7 +156,7 @@ It would appear in the data sync config XML as follows:
 
 Each of your Event Listener message keys a message key. **By default, this key is dictated by the Cinchy ID of the record being changed.**
 
-When the worker processes your Event Listener messages, it does so in batches, and for efficiency and to guarantee order, messages that contain the same key will not be processed in the same batch.
+When the worker processes your Event Listener messages, it does so in batches, and for efficiency and to guarantee order, messages that contain the same key won't be processed in the same batch.
 
 The **messageKeyExpression** property allows you to change the default message key to something else.
 
@@ -181,7 +183,7 @@ The "New" and "Old" parameters are based on updates to single records, not colum
 In the below filter, we only want to sync data where the \[Approval State] of a record is newly 'Approved'. For example, if a record was changed from 'Draft' to 'Approved', the filter would sync the record.
 
 {% hint style="info" %}
-Due to internal logic, newly created records will be tagged as both "New" **and** "Old".
+Due to internal logic, newly created records will be tagged as both **New** and **Old**.
 {% endhint %}
 
 ```
@@ -193,7 +195,7 @@ Due to internal logic, newly created records will be tagged as both "New" **and*
 In the below filter, we only want to sync data where the \[Status] of a record was 'In Progress' but has since been updated to any other \[Status]. For example, if a record was changed from 'In Progress' to 'Done', the filter would sync the record.
 
 {% hint style="info" %}
-Due to internal logic, newly created records will be tagged as both "New" **and** "Old".
+Due to internal logic, newly created records will be tagged as both **New** and **Old**.
 {% endhint %}
 
 ```

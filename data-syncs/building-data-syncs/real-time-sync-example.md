@@ -4,9 +4,10 @@
 
 This example will take you through the creation and execution of a real-time data sync where data will be synced between two Cinchy tables based on real-time changes.
 
-**Use Case:** Your **People table** captures a view of various personnel information. Any time a new hire is added to the table, you want that information to be immediately synced into the **New Employees** table. We can solve this use case using the **Cinchy Change Data Capture (CDC)** function on our tables. This helps you to better keep track of all incoming people within your company.
+## Use case
 
-**Example Use Case:**
+ Your **People table** captures a view of various personnel information. Any time a new hire is added to the table, you want that information to be immediately synced into the **New Employees** table. We can solve this use case using the **Cinchy Change Data Capture (CDC)** function on our tables. This helps you to better keep track of all incoming people within your company.
+
 
 {% hint style="success" %}
 You can review our documentation on Cinchy Table Sources[ here.](https://cli.docs.cinchy.com/builder-guide/configuring-a-data-sync/supported-data-sources/delimited-file)\

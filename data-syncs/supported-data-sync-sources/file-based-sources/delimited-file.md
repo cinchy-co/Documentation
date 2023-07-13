@@ -4,14 +4,16 @@
 
 A delimited file is a sequential file with column delimiters. Each delimited file is a stream of records, which consists of fields that are ordered by column. Each record contains fields for one row. Within each row, individual fields are separated by column delimiters.
 
-**Example Use Case:** You have a delimited file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
+## Example use case 
+
+You have a delimited file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
 
 {% hint style="success" %}
 The Delimited File source supports **batch syncs.**
 {% endhint %}
 
 {% hint style="danger" %}
-The Delimited File source does not support Geometry, Geography, or Binary data types.
+The Delimited File source doesn't support Geometry, Geography, or Binary data types.
 {% endhint %}
 
 ## Info tab

@@ -4,7 +4,9 @@
 
 [Microsoft Dynamics 365 ](https://dynamics.microsoft.com/en-us/)functions as an interconnected CRM, ERP, and productivity suite that integrates processes, data, and business logic.
 
-**Example Use Case:** You have customer information currently sitting in the Dynamics CRM software. You want to sync this data into Cinchy through a batch sync to liberate your data from the silo.
+## Example use case 
+
+You have customer information currently sitting in the Dynamics CRM software. You want to sync this data into Cinchy through a batch sync to liberate your data from the silo.
 
 {% hint style="success" %}
 The Dynamics source supports batch syncs.

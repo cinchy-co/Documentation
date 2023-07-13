@@ -4,7 +4,9 @@
 
 Microsoft Excel is a commonly spreadsheet program for managing and analyzing numerical data. You can use Microsoft Excel as a source for your Data Syncs by following the instructions below.
 
-**Example Use Case:** You have an Excel spreadsheet that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
+## Example use case 
+
+You have an Excel spreadsheet that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
 
 {% hint style="success" %}
 The Excel source supports **batch syncs.**
