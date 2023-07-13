@@ -8,15 +8,15 @@ description: >-
 
 ## Grafana Overview
 
-[Grafana](https://grafana.com/) is an open source analytics and interactive visualization web application. When connected to your Cinchy platform, it provides charts, graphs, and alerting capa ities \_(Image 1
+[Grafana](https://grafana.com/) is an open source analytics and interactive visualization web application. When connected to your Cinchy platform, it provides charts, graphs, and alerting capabilities _(Image 1)_.
 
-Grafana, and its paired application [Prometheus](https://prometheus.io/) (which consumes metrics from the running components in your environment) is the recommended visualization application for Cin v5 on Kubernet
+Grafana, and its paired application [Prometheus](https://prometheus.io/) (which consumes metrics from the running components in your environment) is the recommended visualization application for Cinchy v5 on Kubernetes.
 
 ![Image 1: An example visualization from Grafana](<../../../.gitbook/assets/image (215).png>)
 
-## Getting Started with Grafana
+## Get started with Grafana
 
-Grafana has a robust library of documentation of tutorials designed to help you learn the fundamentals of the application. We have listed a few notable ones below:
+Grafana has a robust library of documentation of tutorials designed to help you learn the fundamentals of the application. We've listed some notable ones below:
 
 {% hint style="info" %}
 When using the default configuration pairing of Grafana and Prometheus, Prometheus is already set up as a data source in your metrics dashboard.
@@ -29,9 +29,9 @@ When using the default configuration pairing of Grafana and Prometheus, Promethe
 - [Creating a Managed Alert](https://grafana.com/tutorials/grafana-fundamentals/?utm_source=grafana_gettingstarted#create-a-grafana-managed-alert)
 - [All Documentation](https://grafana.com/docs/)
 
-### Accessing your Saved Dashboards:
+### Access your saved dashboards
 
-There are some saved dashboards that come out of the box with your Cinchy deployment. These dashboards will provide a great jumping off point for your metrics monitoring, and you can always customize, manage, and add further dashboards at your leisure.
+Cinchy comes with some saved dashboards that come out of the box. These dashboards will provide a great jumping off point for your metrics monitoring, and you can always customize, manage, and add further dashboards at your leisure.
 
 1. Navigate to the **left navigation** pane, select the **Dashboards icon > Manage** _(Image 2)._
 
@@ -45,15 +45,15 @@ There are some saved dashboards that come out of the box with your Cinchy deploy
 
 3\. You can favourite any of your commonly used or most important dashboards by clicking on the star _(Image 5)._
 
-![Image 5: Step 3, favouriting a dashboard](<../../../.gitbook/assets/image (274).png>)
+![Image 5: Step 3, favorite a dashboard](<../../../.gitbook/assets/image (274).png>)
 
-4\. Once you have favourited a dashboard, you can easily find it by navigating to the **left navigation** pane, select the **Dashboards icon > Home.** This will open the Dashboards Home. You can see both your favourite and your recent dashboards in this view _(Image 6)_
+4\. Once you favorite a dashboard, you can easily find it by navigating to the **left navigation** pane, select the **Dashboards icon > Home.** This will open the Dashboards Home. You can see both your favourite and your recent dashboards in this view _(Image 6)_
 
 ![Image 6: Step 4, favourite and recent dashboards](<../../../.gitbook/assets/image (599).png>)
 
 ## Recommended Dashboards
 
-Your Cinchy v5 deployment comes with some out-of-the-box dashboards premade for you. You are able to customize these to suit your specifications. The following are a few notable ones:
+Your Cinchy v5 deployment comes with some out-of-the-box dashboards already made. You are able to customize these to suit your specifications. The following are a few notable ones:
 
 ### Kubernetes/Compute Resources/Cluster
 
@@ -66,8 +66,8 @@ Your Cinchy v5 deployment comes with some out-of-the-box dashboards premade for 
 The following are some example metrics that you could expect to see from this dashboard:
 
 - CPU Usage
-- CPU ota
-- Memory Us
+- CPU OTA
+- Memory Use
 - Memory Requests
 - Current Network Usage
 - Bandwidth (Transmitted and Received)
@@ -107,7 +107,7 @@ Grafana doesn't have the capability to run alerts against queries with template 
 {% endhint %}
 
 {% hint style="success" %}
-To send emails out from Grafana, you need to configure your SMTP. This would have been done in the automation script run during your initial Cinchy v5 deployment. **If you did not input this information at that time**, you must do so before setting up your email alerts.
+To send emails out from Grafana, you need to configure your SMTP. This would have been done in the automation script run during your initial Cinchy v5 deployment. **If you didn't input this information at that time**, you must do so before setting up your email alerts.
 {% endhint %}
 
 ### Set up your notifications channel

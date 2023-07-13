@@ -21,7 +21,7 @@ The extended Methods covered in this section are:
 
 `IsValidDetailed()`returns a message that can help to identify problems with a spatial object that's not valid.
 
-Only the first error is returned, when the object is not valid. When the object is valid, a value of 24400 is returned.
+Only the first error is returned, when the object isn't valid. When the object is valid, a value of 24400 is returned.
 
 ### Syntax
 
@@ -41,17 +41,17 @@ The following table contains possible return values:
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | 24400        | Valid                                                                                                                          |
 | 24401        | Not valid, reason unknown.                                                                                                     |
-| 24402        | Not valid because point {0} is an isolated point, which is not valid in this type of object.                                   |
+| 24402        | Not valid because point {0} is an isolated point, which isn't valid in this type of object.                                   |
 | 24403        | Not valid because some pair of polygon edges overlap.                                                                          |
 | 24404        | Not valid because polygon ring {0} intersects itself or some other ring.                                                       |
 | 24405        | Not valid because some polygon ring intersects itself or some other ring.                                                      |
 | 24406        | Not valid because curve {0} degenerates to a point.                                                                            |
 | 24407        | Not valid because polygon ring {0} collapses to a line at point {1}.                                                           |
-| 24408        | Not valid because polygon ring {0} is not closed.                                                                              |
+| 24408        | Not valid because polygon ring {0} isn't closed.                                                                              |
 | 24409        | Not valid because some portion of polygon ring {0} lies in the interior of a polygon.                                          |
-| 24410        | Not valid because ring {0} is the first ring in a polygon of which it is not the exterior ring.                                |
+| 24410        | Not valid because ring {0} is the first ring in a polygon of which it isn't the exterior ring.                                |
 | 24411        | Not valid because ring {0} lies outside the exterior ring {1} of its polygon.                                                  |
-| 24412        | Not valid because the interior of a polygon with rings {0} and {1} is not connected.                                           |
+| 24412        | Not valid because the interior of a polygon with rings {0} and {1} isn't connected.                                           |
 | 24413        | Not valid because of two overlapping edges in curve {0}.                                                                       |
 | 24414        | Not valid because an edge of curve {0} overlaps an edge of curve {1}.                                                          |
 | 24415        | Not valid some polygon has an invalid ring structure.                                                                          |
@@ -118,13 +118,13 @@ CQL: geometry
 
 This algorithm operates independently on each geometry contained in the instance, for collection types.
 
-Does not modify `Point`instances.
+Doesn't modify `Point`instances.
 
 For `CircularString`instances,`Reduce()` returns a `LineString`, `CircularString`, or `CompoundCurve` instance.
 
 For `CompoundCurve`instances,`Reduce()` returns either a `CompoundCurve`or `LineString`instance.
 
-On `Polygon`instances, the approximation algorithm is applied independently to each ring. If the returned `Polygon`instance is not valid, `Reduce()` will produce a `FormatException.`
+On `Polygon`instances, the approximation algorithm is applied independently to each ring. If the returned `Polygon`instance isn't valid, `Reduce()` will produce a `FormatException.`
 
 When a circular arc segment is found, the approximation algorithm checks whether the arc can be approximated by its chord within half the given tolerance. Chords meeting this criteria have the circular arc replaced in the calculations by the chord. If a chord doesn't meet this criteria, then the circular arc is kept and the approximation algorithm is applied to the remaining segments.
 
@@ -150,7 +150,7 @@ SELECT @g.Reduce(.75).ToString();
 
 ### Arguments
 
-_other_instance_\
+_other_instance_
 Specifies the second geometry instance that the calling geometry instance is trying to determine the shortest distance to.
 
 ### Return types

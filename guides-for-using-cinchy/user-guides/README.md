@@ -28,7 +28,7 @@ Cinchy End-Users are able to:
 
 ### View and manage data through a single UI
 
-Cinchy’s Data Collaboration platform features a Universal Data Browser that allows users to view, change, analyze, and otherwise interact with all data on the network. The Data Browser even enables non-technical business users to manage and update data, build models, and set controls, all through an easy and intuitive UI.
+Cinchy’s data collaboration platform features a Universal Data Browser that allows users to view, change, analyze, and otherwise interact with all data on the network. The Data Browser even enables non-technical business users to manage and update data, build models, and set controls, all through an easy and intuitive UI.
 
 ### Only see the accessible data
 

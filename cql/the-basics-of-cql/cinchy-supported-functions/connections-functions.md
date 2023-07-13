@@ -2,7 +2,7 @@
 
 ## Overview <a href="#overview" id="overview"></a>
 
-The set of functions listed in this page are for use in [Cinchy's Connections Experience](https://cli.docs.cinchy.com/) when configuring data syncs.
+The set of functions listed in this page are for use in the [Cinchy Connections Experience](https://cli.docs.cinchy.com/) when configuring data syncs.
 
 * [​JSON\_ESCAPE​](connections-functions.md#json\_escape)
 * [​URL\_ESCAPE​](connections-functions.md#url\_escape)
@@ -30,7 +30,7 @@ JSON_ESCAPE(@Parameter)
 
 The following example shows how you would use JSON\_ESCAPE in your REST API URL _(Image 1)._
 
-In this example we have an API and want to add a value (@Parameter) that contains double quotes -- this could break the JSON structure, so we need to wrap the parameter with JSON\_ESCAPE().
+This example uses an API and adds a value (@Parameter) that contains double quotes -- this could break the JSON structure, so you need to wrap the parameter with JSON\_ESCAPE().
 
 <figure><img src="../../../.gitbook/assets/image (515).png" alt=""><figcaption><p>Image 1: Example 1</p></figcaption></figure>
 
@@ -38,7 +38,7 @@ In this example we have an API and want to add a value (@Parameter) that contain
 
 The following example shows how you would use JSON\_ESCAPE in your REST API Request Body _(Image 2)._
 
-In this example we have an API and want to add a value (@Parameter) that contains double quotes -- this could break the JSON structure, so we need to wrap the parameter with JSON\_ESCAPE().
+This example uses an API and adds a value (@Parameter) that contains double quotes -- this could break the JSON structure, so you need to wrap the parameter with JSON\_ESCAPE().
 
 <figure><img src="../../../.gitbook/assets/image (28) (1).png" alt=""><figcaption><p>Image 2: Example 2</p></figcaption></figure>
 
@@ -64,7 +64,7 @@ This function is used in Connections to escape parameter values and be safe to u
 
 The following example shows how you would use URL\_ESCAPE in your REST API URL _(Image 3)._
 
-In this example we have an API and want to add a value (@Parameter) that contains the "&" symbol to the URL field. To properly read the URL, we need to wrap the parameter with URL\_ESCAPE(), **which will escape the & to be %26.**
+This example uses an API and adds a value (@Parameter) that contains the "&" symbol to the URL field. To properly read the URL, you need to wrap the parameter with URL\_ESCAPE(), **which will escape the & to be %26.**
 
 <figure><img src="../../../.gitbook/assets/image (529).png" alt=""><figcaption><p>Image 3: Example 1</p></figcaption></figure>
 

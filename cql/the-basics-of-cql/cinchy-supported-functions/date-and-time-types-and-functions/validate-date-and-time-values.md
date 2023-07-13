@@ -36,7 +36,7 @@ int
 
 #### Remarks
 
-`ISDATE` is deterministic only when used with the `CONVERT` function, if the `CONVERT` style parameter is specified, and style is not equal to 0, 100, 9, or 109.
+`ISDATE` is deterministic only when used with the `CONVERT` function, if the `CONVERT` style parameter is specified, and style isn't equal to 0, 100, 9, or 109.
 
 The return value of `ISDATE` depends on the settings set by `SET DATEFORMAT`, `SET LANGUAGE` and Configure the default language Server Configuration Option.
 

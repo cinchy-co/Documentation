@@ -4,12 +4,12 @@
 
 Fixed-width text files are special cases of text files where the format is specified by column widths, pad character and left/right alignment. Column widths are measured in units of characters. For example, if you have data in a text file where the first column **always** has exactly 10 characters, and the second column has exactly 5, the third has exactly 12, this would be categorized as a fixed-width text file.
 
-If a text file follows the rules below it is a fixed-width text file:
+If a text file follows the rules below it's a fixed-width text file:
 
 * Each row (paragraph) contains one complete record of information.
 * Each row contains one or many pieces of data (also referred to as columns or fields).
-* Each data column has a defined width specified as a number of characters that is always the same for all rows.
-* The data within each column is padded with spaces (or any character you specify) if it does not completely use all the characters allotted to it (empty space).
+* Each data column has a defined width specified as a number of characters that's always the same for all rows.
+* The data within each column is padded with spaces (or any character you specify) if it doesn't completely use all the characters allotted to it (empty space).
 * Each piece of data can be left or right aligned, meaning the pad characters can occur on either side.
 * Each column must consistently use the same number of characters, same pad character and same alignment (left/right).
 
@@ -20,7 +20,7 @@ The fixed-width file source supports **batch syncs.**
 {% endhint %}
 
 {% hint style="danger" %}
-The fixed-width file source does not support Geometry, Geography, or Binary data types.
+The fixed-width file source doesn't support Geometry, Geography, or Binary data types.
 {% endhint %}
 
 ## Info tab
@@ -45,7 +45,7 @@ The following table outlines the mandatory and optional parameters you will find
 {% tab title="Source Details" %}
 The following parameters will help to define your data sync source and how it functions.
 
-<table><thead><tr><th>Parameter</th><th width="289.66666666666663">Description</th><th>Example</th></tr></thead><tbody><tr><td>(Sync) Source</td><td><strong>Mandatory.</strong> Select your source from the drop down menu.</td><td>Fixed Width File</td></tr><tr><td>Source</td><td>The location of the source file. Either a <strong>Local upload, Amazon S3, or Azure Blob Storage</strong><br><br>The following authentication methods are supported per source:<br><br><strong>Amazon S3:</strong> Access Key ID/Secret Access Key<br><br><strong>Azure Blob Storage:</strong> Connection String</td><td>Local</td></tr><tr><td>Header Rows to Ignore</td><td><strong>Mandatory.</strong> The number of records from the top of the file to ignore before the data starts (includes column header).</td><td>1</td></tr><tr><td>Footer Rows to Ignore</td><td><strong>Mandatory.</strong> The number of records from the bottom of the file to ignore</td><td>0</td></tr><tr><td>Encoding</td><td><strong>Optional.</strong> The encoding of the file. This default to UTF8, however also supports: <strong>UTF8_BOM, UTF16, ASCII.</strong></td><td></td></tr><tr><td>Path</td><td><strong>Mandatory.</strong> The path to the source file to load. To upload a local file, you must first insert a <strong>Variable</strong> in the <strong>Info tab</strong> of the connection <em>(ex: filepath).</em> Then, you would reference that same value in this location <em>(Ex: @Filepath)</em>. This will then trigger a <strong>File Upload</strong> option to import your file.</td><td>@Filepath</td></tr><tr><td>Test Connection</td><td><p>You can use the "Test Connection" button to ensure that your credentials are properly configured to access your source.</p><p> </p><p>If configured correctly, a "Connection Successful" pop-up will appear.</p><p></p><p>If configured incorrectly, a "Connection Failed" pop-up will appear along with a link to the applicable error logs to help you troubleshoot.</p></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Parameter</th><th width="289.66666666666663">Description</th><th>Example</th></tr></thead><tbody><tr><td>(Sync) Source</td><td><strong>Mandatory.</strong> Select your source from the drop down menu.</td><td>Fixed Width File</td></tr><tr><td>Source</td><td>The location of the source file. Either a <strong>Local upload, Amazon S3, or Azure Blob Storage</strong><br><br>The following authentication methods are supported per source:<br><br><strong>Amazon S3:</strong> Access Key ID/Secret Access Key<br><br><strong>Azure Blob Storage:</strong> Connection String</td><td>Local</td></tr><tr><td>Header Rows to Ignore</td><td><strong>Mandatory.</strong> The number of records from the top of the file to ignore before the data starts (includes column header).</td><td>1</td></tr><tr><td>Footer Rows to Ignore</td><td><strong>Mandatory.</strong> The number of records from the bottom of the file to ignore</td><td>0</td></tr><tr><td>Encoding</td><td><strong>Optional.</strong> The encoding of the file. This default to UTF8, however also supports: <strong>UTF8_BOM, UTF16, ASCII.</strong></td><td></td></tr><tr><td>Path</td><td><strong>Mandatory.</strong> The path to the source file to load. To upload a local file, you must first insert a <strong>Variable</strong> in the <strong>Info tab</strong> of the connection <em>(ex: `filepath`).</em> Then, you would reference that same value in this location <em>(Ex: @Filepath)</em>. This will then trigger a <strong>File Upload</strong> option to import your file.</td><td>@Filepath</td></tr><tr><td>Test Connection</td><td><p>You can use the "Test Connection" button to ensure that your credentials are properly configured to access your source.</p><p> </p><p>If configured correctly, a "Connection Successful" pop-up will appear.</p><p></p><p>If configured incorrectly, a "Connection Failed" pop-up will appear along with a link to the applicable error logs to help you troubleshoot.</p></td><td></td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Schema" %}

@@ -32,12 +32,12 @@ SELECT [Full Name], [Email Address], [Start Date]
 FROM [HR].[Employee]
 ```
 
-## Nested JSONs <a href="#insert" id="insert"></a>
+## Produce a nested JSON <a href="#insert" id="insert"></a>
 
 You can create a query that will produce a nested JSON by wrapping it in an outer `SELECT` statement, such as in the example below.
 
 {% hint style="warning" %}
-Note that you should set the return type to _"Single Value (First Column of First Row)"._
+Note that you should set the return type to **Single Value (First Column of First Row)**.
 {% endhint %}
 
 ### Example

@@ -32,10 +32,10 @@ Fill in the following attributes for a Standard Column _(Image 1)_:
   - **Text**
   - **Date**
   - **Number**
-  - **Bool**
+  - **Boolean**
 
 {% hint style="warning" %}
-If a source column (of any type) is syncing into a Cinchy Target Table[ link column](broken-reference), the source column must be **dataType="Text",**.
+If a source column (of any type) is syncing into a Cinchy Target Table[ link column](broken-reference), the source column must be **dataType="Text"**.
 {% endhint %}
 
 - **Description:** Describe your column
@@ -73,7 +73,7 @@ Fill in the following attributes for a Standard Calculated Column _(Image 2)_:
   - **Text**
   - **Date**
   - **Number**
-  - **Bool**
+  - **Boolean**
 
 {% hint style="warning" %}
 If a Destination column is being **used as a sync key**, its source column must be set to **type=Text,** regardless of its actual type.**
@@ -104,7 +104,7 @@ Fill in the following attributes for a Conditional Calculated Column _(Image 3)_
   - **Text**
   - **Date**
   - **Number**
-  - **Bool**
+  - **Boolean**
 
 {% hint style="warning" %}
 If a Destination column is being **used as a sync key**, its source column has to be set to **type=Text,** regardless of its actual type.
@@ -145,7 +145,7 @@ Fill in the following attributes for a JavaScript Calculated Column _(Image 7)_:
   - **Text**
   - **Date**
   - **Number**
-  - **Bool**
+  - **Boolean**
 
 {% hint style="warning" %}
 If a Destination column is being **used as a sync key**, its source column has to be set to **type=Text,** regardless of its actual type.**
@@ -191,11 +191,11 @@ This XML element defines each column and their data type in the data set :
 
 **`name`**
 
-The user defined name for each column. This is used in [\<ColumnMapping>](https://cinchy.atlassian.net/wiki/spaces/KB/pages/196575278) when you want to indicate the name of the _sourceColumn_.
+The user defined name for each column. This is used in [\<ColumnMapping>](https://cinchy.atlassian.net/wiki/spaces/KB/pages/196575278) when you want to indicate the name of the `sourceColumn`.
 
 **`dataType`**
 
-The data type of each column could be Text, Date, Number, Bool, Geometry, or Geography.
+The data type of each column could be Text, Date, Number, Boolean, Geometry, or Geography.
 
 {% hint style="warning" %}
 If a Destination column is being **used as a sync key**, its source column has to be set to **type=Text, regardless of its actual type.**
@@ -221,11 +221,11 @@ The max length of data in the column.
 
 Boolean value that determines if the field is a mandatory column to create a row entry.
 
-A defined **SyncKey** column of any data type can be checked for NULL values using isMandatory="true”. When validation fails, an error message is displayed in the command line. For other columns when validation fails, the Execution Errors Table is updated with Error Type, Mandatory Rule violation for that column and row that failed.
+A defined **SyncKey** column of any data type can be checked for NULL values using `isMandatory=true`. When validation fails, an error message is displayed in the command line. For other columns when validation fails, the Execution Errors Table is updated with Error Type, Mandatory Rule violation for that column and row that failed.
 
 **`validateData`**
 
-Boolean value determining whether to validate the data before insertion. Valid data means to fit all the constraints of the column (dataType, maxLength, isMandatory, inputFormat). If the data isn't valid and validateData is true, then the entry will not be synced into the table. The Execution Errors Table is also updated with the appropriate Error Type (Invalid Format Exception, Max Length Violation, Mandatory Rule Violation, Input Format Exception)
+Boolean value determining whether to validate the data before insertion. Valid data means to fit all the constraints of the column (`dataType`, `maxLength`, `isMandatory`, `inputFormat`). If the data isn't valid and validateData is true, then the entry won't be synced into the table. The Execution Errors Table is also updated with the appropriate Error Type (Invalid Format Exception, Max Length Violation, Mandatory Rule Violation, Input Format Exception)
 
 **`trimWhitespace`**
 
@@ -237,7 +237,7 @@ Description of the column.
 
 **`inputFormat`**
 
-Date fields support the inputFormat which adheres to the c# .net DateTime.ParseExact format. See [here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) for reference.
+Date fields support the `inputFormat` which adheres to the C# .NET DateTime\.ParseExact format. See [here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) for reference.
 
 {% hint style="info" %}
 `inputFormat` attribute is useful when source file need some format changes in the input data
@@ -249,7 +249,7 @@ Date fields support the inputFormat which adheres to the c# .net DateTime.ParseE
 
 ## Column Mappings
 
-Column mappings defines how a single column from the data source maps to a column in a target table. Each `<ColumnMapping>` has both a source and a target. If the destination is a Cinchy table and the target column is a link, then a third attribute becomes available called "linkColumn" which you can use to specify the column used to resolve the linked record from the source value. The value of sourceColumn should match name attribute of Source . The value of targetColumn should match that of the target table.
+Column mappings defines how a single column from the data source maps to a column in a target table. Each `<ColumnMapping>` has both a source and a target. If the destination is a Cinchy table and the target column is a link, then a third attribute becomes available called `linkColumn` which you can use to specify the column used to resolve the linked record from the source value. The value of `sourceColumn` should match name attribute of Source . The value of `targetColumn` should match that of the target table.
 
 Below is an example of a Column Mapping in the experience followed by the equivalent XML. In the experience, the Source Column attribute is a dropdown of columns configured in the Source Section.
 

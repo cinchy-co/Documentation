@@ -10,7 +10,7 @@ For more information on saved queries, see our [Builder Guide](https://cinchy.gi
 
 ## Create a list of specific users <a href="#1.1-creating-a-list-of-specific-users" id="1.1-creating-a-list-of-specific-users"></a>
 
-This query is useful for pulling a list of specific user information from a table. This query will return a list with **Names** (which will be returned under the **'Full Name'** label), **Emails**, and **Companies** of the users listed in the **\[Contacts].\[People]** table. We have stipulated to only include entries where the **\[Name]** is not null, and where the **\[Tags].\[Name]** column is set to _'Analyst'_
+This query is useful for pulling a list of specific user information from a table. This query will return a list with **Names** (which will be returned under the **'Full Name'** label), **Emails**, and **Companies** of the users listed in the **\[Contacts].\[People]** table. This example only includes entries where the **\[Name]** isn't null, and where the **\[Tags].\[Name]** column is set to _'Analyst'_
 
 ### Syntax
 
@@ -80,7 +80,7 @@ ORDER BY [Cinchy Id], [Title], [Version], [Draft Version]
 
 ## Create a custom View for a logged-in user <a href="#1.4-creating-a-view-that-is-tailored-to-the-user-who-is-logged-in" id="1.4-creating-a-view-that-is-tailored-to-the-user-who-is-logged-in"></a>
 
-This example has a table with a view for _"My Open Tasks"._ This view uses **currentuserID=()**, which only shows the tasks assigned to the user currently logged in.
+This example has a table with a view for **My Open Tasks**. This view uses **currentuserID=()**, which only shows the tasks assigned to the user currently logged in.
 
 ### Example
 
@@ -90,7 +90,7 @@ This example has a table with a view for _"My Open Tasks"._ This view uses **cur
 
 ## Finding the owner of a table <a href="#1.5-finding-the-owner-of-a-table" id="1.5-finding-the-owner-of-a-table"></a>
 
-The below query finds the creator of any specific table, based on its **tablecinchyid**. The query pulls the **Table Name** and the **Created By** user information from the **\[Cinchy].\[Tables]** table. By using **\[Cinchy Id] = @tablecinchyid**, a search box will appear when you run this query, where you can insert the **Table ID** number of the table you are curious about.
+The below query finds the creator of any specific table, based on its `tablecinchyid`. The query pulls the **Table Name** and the **Created By** user information from the **\[Cinchy].\[Tables]** table. By using **\[Cinchy Id] = @tablecinchyid**, a search box will appear when you run this query, where you can insert the **Table ID** number of the table you are curious about.
 
 ### Example
 
@@ -166,7 +166,7 @@ End
 
 ## Find all Deleted Tables <a href="#1.8-finding-all-deleted-tables" id="1.8-finding-all-deleted-tables"></a>
 
-This query returns the **Name, Domain, and timestamp** of deletion for all tables within **\[Cinchy].\[Tables]** where _\[Deleted] IS NOT NULL._ We have added an option **WHERE** clause to ignore any data from the **'Sandbox'** Domain.
+This query returns the **Name, Domain, and timestamp** of deletion for all tables within **\[Cinchy].\[Tables]** where `[Deleted] IS NOT NULL`. We've added an option **WHERE** clause to ignore any data from the **'Sandbox'** Domain.
 
 ### Example
 

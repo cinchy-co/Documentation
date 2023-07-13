@@ -4,7 +4,7 @@
 
 Variables are values that can be dynamically inserted when the sync job is run. The variables you define here can be referenced in fields in other parts of your sync config (using the @ prefix) and when the job is run you can be prompted for their values.
 
-The execution variables are either passed in at the time of execution or calculated through a formula. The value of the name attribute is passed in as command line option, param-values. (Optional, if the path to the source file to load is specified in the path attribute of the source element or calculated column formula do not reference execution variables)
+The execution variables are either passed in at the time of execution or calculated through a formula. The value of the name attribute is passed in as command line option, param-values. (Optional, if the path to the source file to load is specified in the path attribute of the source element or calculated column formula don't reference execution variables)
 
 <figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Image 1: Connections UI</p></figcaption></figure>
 
@@ -28,7 +28,7 @@ The following formulas are currently supported by Connections.
   2.  A regular expression that includes a match group. 
   The first match group's value is assigned to the variable. The FILEPATH function executes the regex against the full file path (**including** the directory structure).
 * **GUID()**: The GUID formula uses a random GUID for that variable's value. Use **GUID()** to generate a unique identifier to use during the context the sync. For example, use it to track changes made from a particular sync.
-* **GETSECRETVALUE('domain', 'secretname')**: The GETSECRETVALUE formula can be used to call a secret from the [Cinchy Secrets Table](../../../guides-for-using-cinchy/additional-guides/cinchy-secrets-manager.md). This secret can then be used anywhere variables are supported where you may need to insert sensitive information, such as a connection string, Access Key ID, or within a REST URL, Body, or Header.
+* **GETSECRETVALUE(`domain`, `secretname`)**: The GETSECRETVALUE formula can be used to call a secret from the [Cinchy Secrets Table](../../../guides-for-using-cinchy/additional-guides/cinchy-secrets-manager.md). This secret can then be used anywhere variables are supported where you may need to insert sensitive information, such as a connection string, Access Key ID, or within a REST URL, Body, or Header.
 * **ENV(\<place-environment-variable-here>):** The ENV formula uses an environment variable available in the connections/worker pods as the value of the variable. 
 
 {% hint style="danger" %}
@@ -83,7 +83,7 @@ This secret can then be used in the REST Header _(Image 7)._
 
 <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Image 7: Example 5</p></figcaption></figure>
 
-#### Example XMLs
+#### XML examples
 
 {% hint style="info" %}
 While in the UI the term is **variables**, the paired XML configuration uses the term **parameters**.
@@ -127,7 +127,7 @@ To configure an environment variable in Kubernetes, do the following:
 
 #### Add the variable to your cluster
 
-1. Navigate to your **cinchy.kubernetes\environment\_kustomizations\_template\instance\_template\connections\kustomization.yaml file.**
+1. Navigate to your `cinchy.kubernetes\environment\_kustomizations\_template\instance\_template\connections\kustomization.yaml` file.
 2. Under **patchesJson6902 > patch**, add your environment variable as shown in the code snippet below. Input your own namespace and variable name where indicated.
 
 ```yaml
@@ -143,7 +143,7 @@ patchesJson6902:
 #### Add the variable to your pod
 
 1. Navigate to your **platform\_components/connections/connections-app.yaml** file.
-2. Under **Spec > Template > Spec > Containers > Env**, add in your environment variable. This addition depends on what value you are using as an environment variable. The below code snippet shows a basic example:
+2. Under **Spec > Template > Spec > Containers > ENV**, add in your environment variable. This addition depends on what value you are using as an environment variable. The below code snippet shows a basic example:
 
 ```yaml
         env:

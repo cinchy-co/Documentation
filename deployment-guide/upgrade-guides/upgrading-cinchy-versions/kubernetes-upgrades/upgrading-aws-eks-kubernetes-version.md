@@ -10,16 +10,16 @@ description: >-
 
 This page will guide you through how to update your AWS EKS Kubernetes version for your Cinchy v5 platform.
 
-## 2. Prerequisites
+## Prerequisites
 
 * Update your Cinchy platform to the [latest version.](../../)
 * Confirm the latest Cinchy supported version of EKS. You can find the version number in the  **cinchy.devops.automations\aws-deployment.json** as _"cluster\_version": "1.xx"_.
 
-## 3. Considerations
+## Considerations
 
 * You must upgrade your EKS sequentially. For example, if you are on EKS cluster version 1.22 and wish to upgrade to 1.24, you must upgrade from 1.22 > 1.23 > 1.24.
 
-## 4. Upgrade Instructions
+## Instructions
 
 1. Navigate to your **cinchy.devops.automations\aws-deployment.json** file.
 2. Change the **cluster\_version** key value to the EKS version you wish to upgrade to. _(Example: "1.24")_
@@ -46,17 +46,17 @@ The below two commands can be used to verify that all pods are being migrated to
 
 * To show both old and new nodes:
 
-```
+```bash
 kubectl get nodes #
 ```
 
 * To show all the pods on the new worker nodes and the old worker nodes.
 
-```
+```bash
 kubectl get pods --all-namespaces -o wide #
 ```
 
-## 5. Reinstalling the Metrics Server
+## Reinstall the metrics server
 
 **For EKS version 1.24, the metrics server goes into a crashed loop status. Reinstalling the metrics server will fix this, should you encounter this during your upgrade.**
 
@@ -65,13 +65,13 @@ kubectl get pods --all-namespaces -o wide #
 3. Open a new shell/terminal and navigate to the **cinchy.terraform\aws\eks\_cluster\CLUSTER\_NAME file.**
 4. Run the below command to remove metrics server.
 
-```
+```bash
 terraform apply
 ```
 
 5. Revert the **enable\_metrics\_server key** value from step 1 to **true.**
 6. Run the below command within the same shell/terminal as step 3 to deploy metrics server with
 
-```
+```bash
  terraform apply
 ```

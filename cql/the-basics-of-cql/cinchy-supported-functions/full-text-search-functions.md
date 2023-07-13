@@ -1,4 +1,4 @@
-# Full Text Search Functions
+# Full text search functions
 
 ## Overview
 
@@ -21,7 +21,7 @@ CONTAINS can search for:
 * A word near another word.
 * A word inflectionally generated from another (for example, the word drive is the inflectional stem of drives, drove, driving, and driven).
 
-#### General Syntax
+#### General syntax
 
 Using this general syntax without any modifiers, your results will return the specific rows that match the exact word or phrase specified between the single quotes in line 2.
 
@@ -33,7 +33,7 @@ FROM [domain].[table]
 WHERE CONTAINS([Title], @SearchWord)
 ```
 
-#### Example Syntax
+#### Example syntax
 
 In the following example, we want to return all rows from the **Cinchy Wiki Documentation** table (in the **Product** domain) that match the exact word **overview** in their **Title** column.
 
@@ -45,21 +45,21 @@ FROM [Product].[Cinchy Wiki Documentation]
 WHERE CONTAINS([Title], @SearchWord)
 ```
 
-#### Example Results
+#### Example results
 
 <figure><img src="../../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
 
-## CONTAINS Modifiers
+## CONTAINS modifiers
 
-There are many modifiers you can add to your CONTAINS full text search query to receive more specific results.
+Cinchy has many modifiers you can add to your CONTAINS full text search query to receive more specific results.
 
-### Prefix Term
+### Prefix term
 
 Using a prefix term modifier will return results with your specified prefix. For example, the prefix **'over'** could return overview, overture, overruled, etc.
 
-To use a prefix term, wrap your term in single, then double quotes and put an asterix at the end: _'"example\*"'_
+To use a prefix term, wrap your term in single, then double quotes and put an `*` at the end.
 
-#### General Syntax
+#### General syntax
 
 ```sql
 DECLARE @SearchWord VARCHAR(30)
@@ -69,9 +69,9 @@ FROM [domain].[table]
 WHERE CONTAINS([column], '"*"')
 ```
 
-#### Example Syntax
+#### Example syntax
 
-In this example, we have modified our search so that we receive all results where the any word in the **Title** column contains the prefix **'over'.**
+This example modifies the search so that you receive all results where the any word in the **Title** column has the prefix **'over'.**
 
 ```sql
 DECLARE @SearchWord VARCHAR(30)
@@ -85,7 +85,7 @@ WHERE CONTAINS([Title], '"over*"')
 
 <figure><img src="../../../.gitbook/assets/image (520).png" alt=""><figcaption></figcaption></figure>
 
-### Generation Term
+### Generation term
 
 A generation term modifier searches for all the different tenses and conjugations of a verb or both the singular and plural forms of a noun (an **inflectional** search) or for synonymous forms of a specific word (a **thesaurus** search).
 
@@ -93,7 +93,7 @@ A generation term modifier searches for all the different tenses and conjugation
 To return the synonymous forms, you must have a Thesaurus file configured. [Find more information here.](https://docs.microsoft.com/en-us/sql/relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search?view=sql-server-ver16)
 {% endhint %}
 
-#### General Syntax (Inflectional)
+#### General syntax (Inflectional)
 
 ```sql
 DECLARE @SearchWord VARCHAR(30)  
@@ -103,7 +103,7 @@ FROM [domain].[table]
 WHERE CONTAINS([column], 'FORMSOF(INFLECTIONAL, "")') 
 ```
 
-#### Example Syntax (Inflectional)
+#### Example syntax (Inflectional)
 
 In this example, our query will return all results with different tense and conjugations of our search word, **'gave'.**
 
@@ -115,11 +115,11 @@ FROM [Product].[Cinchy Wiki Documentation]
 WHERE CONTAINS([Summary], 'FORMSOF(INFLECTIONAL, "gave")') 
 ```
 
-#### Example Results (Inflectional)
+#### Example results (Inflectional)
 
 <figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
-#### General Syntax (Thesaurus)
+#### General syntax (Thesaurus)
 
 ```sql
 DECLARE @SearchWord VARCHAR(30)  
@@ -129,11 +129,11 @@ FROM [domain].[table]
 WHERE CONTAINS([column], 'FORMSOF(THESAURUS, "")') 
 ```
 
-#### Example Syntax (Thesaurus)
+#### Example syntax (Thesaurus)
 
 In this example, we want to return all results where the data in the Summary column matches the meaning of our search term.
 
-_I.E. "install" might return results with "deploy", "configure", "set", etc._
+That is, *install* might return results with *deploy*, *configure*, *set*.
 
 ```sql
 DECLARE @SearchWord VARCHAR(30)  
@@ -143,15 +143,15 @@ FROM [Product].[Cinchy Wiki Documentation]
 WHERE CONTAINS([Summary], 'FORMSOF(THESAURUS, "install")') 
 ```
 
-### Proximity Term
+### Proximity term
 
 A _proximity term_ will return words or phrases that are near to each other. You can also specify the maximum number of non-search terms that separate the first and last search terms.
 
 {% hint style="info" %}
-**Note** that proximity terms in Cinchy don't adhere to the specified order written in the query. You will receive results of both "term 1+term 2" as well as "term 2+term 1".
+Proximity terms in Cinchy don't adhere to the specified order written in the query. You will receive results of both **term 1+term 2** and **term 2+term 1**.
 {% endhint %}
 
-#### General Syntax
+#### General syntax
 
 ```sql
 DECLARE @SearchWord VARCHAR(30)  
@@ -239,7 +239,7 @@ WHERE CONTAINS([summary], @SearchWord)
 
 ### NEAR
 
-You can use this modifier to return results with terms that appear near each other (i.e. within the same data cell).
+You can use this modifier to return results with terms that appear near each other (that is, within the same data cell).
 
 #### General Syntax
 
@@ -273,7 +273,7 @@ The FREETEXT command provides the ability to search for a matched term based on 
 
 At a high level, this commands finds matches based on separating the string into individual words, determining inflectional versions of the word and using a thesaurus to expand or replace the term to improve the search.
 
-The difference between FREETEXT and CONTAINS is that it searches for the values that match the **meaning of a phrase** and not just exact words. It is therefore a better option if you are **searching phrases**, in lieu of individual words.
+The difference between FREETEXT and CONTAINS is that it searches for the values that match the **meaning of a phrase** and not just exact words. It's therefore a better option if you are **searching phrases**, in lieu of individual words.
 
 {% hint style="warning" %}
 To use FREETEXT, you must have a Thesaurus file configured. [Find more information here.](https://docs.microsoft.com/en-us/sql/relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search?view=sql-server-ver16)
@@ -293,7 +293,7 @@ WHERE FREETEXT([summary], @SearchWord);
 
 In this example, we want to return all results where the data in the Summary column matches the meaning of our search phrase.
 
-I.E. "installation guide" might return results with "deployment instructions", "set up guide", etc.
+For example, *installation guide* might return results with *deployment instructions*, *set up guide*.
 
 ```sql
 DECLARE @SearchWord VARCHAR(30)  

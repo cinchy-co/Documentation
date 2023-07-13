@@ -2,7 +2,7 @@
 
 ## Overview
 
-Becoming comfortable with the Cinchy terms and verbiage is an essential step to broaden your understanding of the platform and Data Collaboration as a whole. We've created this handy guide featuring to help you better understand the words and phrases you may see appear throughout this wiki space.
+Becoming comfortable with the Cinchy terms and verbiage is an essential step to broaden your understanding of the platform and data collaboration as a whole. We've created this handy guide featuring to help you better understand the words and phrases you may see appear throughout this wiki space.
 
 ## B
 
@@ -58,7 +58,7 @@ Cinchy ID is a unique identifier assigned automatically to all records within a 
 
 #### Cinchy Query Language (CQL)
 
-[Cinchy Query Language (CQL)](cql/the-basics-of-cql/cql-functions-master-list.md) is the Data Collaboration version of common query languages such as SQL. With a robust set of functions and commands, you can use CQL to retrieve and manage/modify data and metadata from tables in your network. While data can reside across many tables, a query can isolate it to a single output, making the possibilities of CQL endlessly powerful.
+[Cinchy Query Language (CQL)](cql/the-basics-of-cql/cql-functions-master-list.md) is the data collaboration version of common query languages such as SQL. With a robust set of functions and commands, you can use CQL to retrieve and manage/modify data and metadata from tables in your network. While data can reside across many tables, a query can isolate it to a single output, making the possibilities of CQL endlessly powerful.
 
 **Cinchy Query Language can be used in many ways, including but not limited to:**
 
@@ -88,7 +88,7 @@ Cinchy End-Users are able to:
 
 #### Connections Experience
 
-The Connections Experience is an integral part of Cinchy [Data Collaboration](cinchy-glossary.md#data-collaboration). Serving as the front-end UI for performing[ Data Syncs](cinchy-glossary.md#data-synchronizations), the Connections Experience can be accessed natively in your Cinchy browser to create, configure, and manage the data being synced in and out of the platform. The user friendly interface makes synchronizing your data across a range of apps easy.
+The Connections Experience is an integral part of Cinchy [data collaboration](cinchy-glossary.md#data-collaboration). Serving as the front-end UI for performing[ Data Syncs](cinchy-glossary.md#data-synchronizations), the Connections Experience can be accessed natively in your Cinchy browser to create, configure, and manage the data being synced in and out of the platform. The user friendly interface makes synchronizing your data across a range of apps easy.
 
 ## D
 
@@ -98,7 +98,7 @@ The [Data Browser](https://platform.docs.cinchy.com/guides-for-using-cinchy/user
 
 #### Data Collaboration
 
-Data Collaboration entails the collection, exchange and use of data from different origins within an organization. This interaction creates data products with data owners acting as experts for their specific data domains. The interaction of these various data set domains also results in dramatically informed insights that are solely driven by the interactions of the data itself.
+Data collaboration entails the collection, exchange and use of data from different origins within an organization. This interaction creates data products with data owners acting as experts for their specific data domains. The interaction of these various data set domains also results in dramatically informed insights that are solely driven by the interactions of the data itself.
 
 #### Data Destination(s)
 
@@ -110,7 +110,7 @@ When setting up a Data Sync, you must define which source to pull data from. Cin
 
 #### Data Synchronizations
 
-Data Synchronizations ("Data Syncs") are a powerful and important aspect of the Cinchy platform. Using a Data Sync allows you to bidirectional push and pull data between various [Data Sources](cinchy-glossary.md#data-source-s) and [Data Destinations](cinchy-glossary.md#data-destination-s), including Salesforce, Snowflake, REST APIs, and more. Built with keeping the core tenants of Data Collaboration in mind, Data Syncs adhere to your set [Entitlements](cinchy-glossary.md#entitlements) and can be configured using the intuitive [Connections Experience](cinchy-glossary.md#connections-experience) to enable a myriad of use-cases for your business.
+Data Synchronizations ("Data Syncs") are a powerful and important aspect of the Cinchy platform. Using a Data Sync allows you to bidirectional push and pull data between various [Data Sources](cinchy-glossary.md#data-source-s) and [Data Destinations](cinchy-glossary.md#data-destination-s), including Salesforce, Snowflake, REST APIs, and more. Built with keeping the core tenants of data collaboration in mind, Data Syncs adhere to your set [Entitlements](cinchy-glossary.md#entitlements) and can be configured using the intuitive [Connections Experience](cinchy-glossary.md#connections-experience) to enable a myriad of use-cases for your business.
 
 ## E
 
@@ -128,7 +128,7 @@ Entitlements can persist across the platform when using features such as link co
 
 #### Experiences
 
-Rather than traditional code-centric applications which creates data silos, you can build [metadata driven application experiences](https://platform.docs.cinchy.com/guides-for-using-cinchy/additional-guides/application-experiences) directly on the Cinchy platform. These look and feel like regular applications, but persists its data on the data network autonomously, rather than managing its own persistence. These experiences automatically adapt as your data evolves. An Org Chart is an example of a metadata driven Experience you can create using the power of [Data Collaboration](cinchy-glossary.md#data-collaboration) on Cinchy.
+Rather than traditional code-centric applications which creates data silos, you can build [metadata driven application experiences](https://platform.docs.cinchy.com/guides-for-using-cinchy/additional-guides/application-experiences) directly on the Cinchy platform. These look and feel like regular applications, but persists its data on the data network autonomously, rather than managing its own persistence. These experiences automatically adapt as your data evolves. An Org Chart is an example of a metadata driven Experience you can create using the power of [data collaboration](cinchy-glossary.md#data-collaboration) on Cinchy.
 
 ## L
 

@@ -25,7 +25,7 @@ An expression of the exact numeric or approximate numeric data type category.
 
 #### Return Types
 
-Returns the same type as _numeric\_expression_.
+Returns the same type as _numeric_expression_.
 
 #### Example
 
@@ -35,7 +35,7 @@ This example shows the results of using the `ABS` function on three different nu
 SELECT ABS(-5.2), ABS(0.0), ABS(5.2);
 ```
 
-## ACOS  <a href="#acos-transact-sql" id="acos-transact-sql"></a>
+## ACOS <a href="#acos-transact-sql" id="acos-transact-sql"></a>
 
 A function that returns the angle, in radians, whose cosine is the specified float expression. This is also called arccosine.
 
@@ -62,9 +62,9 @@ This example returns the `ACOS` value of the specified angle.
 SELECT 'The ACOS of ' + @number + ' is: ' + CONVERT(varchar, ACOS(@number))
 ```
 
-## ASIN  <a href="#asin-transact-sql" id="asin-transact-sql"></a>
+## ASIN <a href="#asin-transact-sql" id="asin-transact-sql"></a>
 
-A function that returns the angle, in radians, whose sine is the specified **float** expression. This is also called **arcsine**.
+A function that returns the angle, in radians, whose sine is the specified **float** expression. This is also called arcsine.
 
 #### Syntax
 
@@ -77,7 +77,7 @@ ASIN ( float_expression )
 `float_expression`\
 An expression of either type **float** or of a type that can implicitly convert to float. Only a value ranging from -1.00 to 1.00 is valid. Values outside this range return NULL and ASIN will report a domain error.
 
-#### Return Types
+#### Return types
 
 float
 
@@ -89,7 +89,7 @@ This example returns the `ASIN` value of the specified angle.
 SELECT 'The ASIN of ' + @number + ' is: ' + CONVERT(varchar, ASIN(@number))
 ```
 
-## ATAN  <a href="#atan-transact-sql" id="atan-transact-sql"></a>
+## ATAN <a href="#atan-transact-sql" id="atan-transact-sql"></a>
 
 A function that returns the angle, in radians, whose tangent is a specified **float** expression. This is also called arctangent.
 
@@ -116,7 +116,7 @@ This example returns the `ATAN` value of the specified angle.
 SELECT 'The ATAN of ' + @number + ' is: ' + CONVERT(varchar, ATAN(@number))
 ```
 
-## ATN2  <a href="#atn2-transact-sql" id="atn2-transact-sql"></a>
+## ATN2 <a href="#atn2-transact-sql" id="atn2-transact-sql"></a>
 
 Returns the angle, in radians, between the positive x-axis and the ray from the origin to the point (y, x), where x and y are the values of the two specified float expressions.
 
@@ -143,7 +143,7 @@ The following example calculates the `ATN2` for the specified `x` and `y` compon
 SELECT 'The ATAN from the x-axis to point (' + @x + ',' + @y + ') is: ' + CONVERT(varchar, ATN2(@y,@x))
 ```
 
-## CEILING  <a href="#ceiling-transact-sql" id="ceiling-transact-sql"></a>
+## CEILING <a href="#ceiling-transact-sql" id="ceiling-transact-sql"></a>
 
 This function returns the smallest integer greater than, or equal to, the specified numeric expression.
 
@@ -160,7 +160,7 @@ An expression of the exact numeric or approximate numeric data type category. Fo
 
 #### Return Types
 
-Return values have the same type as _numeric\_expression_.
+Return values have the same type as _numeric_expression_.
 
 #### Example
 
@@ -198,7 +198,7 @@ SELECT 'The COS of ' + @number + ' is: ' + CONVERT(varchar, COS(@number))
 
 ```
 
-## COT  <a href="#cot-transact-sql" id="cot-transact-sql"></a>
+## COT <a href="#cot-transact-sql" id="cot-transact-sql"></a>
 
 A mathematical function that returns the trigonometric cotangent of the specified angle - in radians - in the specified **float** expression.
 
@@ -225,7 +225,7 @@ This example returns the `COT` value for the specific angle.
 SELECT 'The COT of ' + @number + ' is: ' + CONVERT(varchar, COT(@number))
 ```
 
-## DEGREES  <a href="#degrees-transact-sql" id="degrees-transact-sql"></a>
+## DEGREES <a href="#degrees-transact-sql" id="degrees-transact-sql"></a>
 
 This function returns the corresponding angle, in degrees, for an angle specified in radians.
 
@@ -242,7 +242,7 @@ An expression of the exact numeric or approximate numeric data type category, ex
 
 #### Return Types
 
-Returns a value whose data type matches the data type of _numeric\_expression_.
+Returns a value whose data type matches the data type of _numeric_expression_.
 
 #### Example
 
@@ -253,7 +253,7 @@ SELECT 'The number of degrees in ' + @radians + ' radians is: '
        + CONVERT(VARCHAR, DEGREES(@radians))
 ```
 
-## EXP  <a href="#exp-transact-sql" id="exp-transact-sql"></a>
+## EXP <a href="#exp-transact-sql" id="exp-transact-sql"></a>
 
 Returns the exponential value of the specified **float** expression.
 
@@ -278,13 +278,13 @@ The following example uses a compounding interest example to illustrate the use 
 
 ```sql
 SELECT 'With continuous compounding interest, your principal amount of $'
-  + @principal + ' will turn into $' 
+  + @principal + ' will turn into $'
   + CONVERT(VARCHAR,@principal * EXP(@years * CAST(@interestRate AS FLOAT)))
   +' after ' + @years + ' years at the interest rate of '
   + CONVERT(VARCHAR,CAST(@interestRate AS FLOAT) * 100) + '%'
 ```
 
-## FLOOR  <a href="#floor-transact-sql" id="floor-transact-sql"></a>
+## FLOOR <a href="#floor-transact-sql" id="floor-transact-sql"></a>
 
 Returns the largest integer less than or equal to the specified numeric expression.
 
@@ -301,7 +301,7 @@ Is an expression of the exact numeric or approximate numeric data type category,
 
 #### Return Types
 
-Returns the same type as _numeric\_expression_.
+Returns the same type as _numeric_expression_.
 
 #### Example
 
@@ -311,12 +311,12 @@ The following example shows positive numeric, negative numeric, and zero value i
 SELECT FLOOR(1.2), FLOOR(-1.2), FLOOR(0)
 ```
 
-## LOG  <a href="#log-transact-sql" id="log-transact-sql"></a>
+## LOG <a href="#log-transact-sql" id="log-transact-sql"></a>
 
 Returns the natural logarithm of the specified **float** expression in SQL Server.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -358,11 +358,11 @@ The following example calculates the `LOG` for a specified number.
 ```sql
 SELECT 'The log base ' + @base + ' of ' + @number + ' is: '
   + CONVERT(varchar, LOG(@number,@base))
-  
+
 SELECT 'The log of ' + @number + ' is: ' + CONVERT(varchar, LOG(@number))
 ```
 
-## LOG10  <a href="#log10-transact-sql" id="log10-transact-sql"></a>
+## LOG10 <a href="#log10-transact-sql" id="log10-transact-sql"></a>
 
 Returns the base-10 logarithm of the specified **float** expression.
 
@@ -443,22 +443,26 @@ POWER ( float_expression , y )
 Is an expression of type **float** or of a type that can be implicitly converted to **float**.
 
 `y`\
-Is the power to which to raise _float\_expression_. _y_ can be an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.
+Is the power to which to raise _float_expression_. _y_ can be an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.
 
 #### Return Types
 
-The return type depends on the input type of _float\_expression_:
+The return type depends on the input type of _float_expression_:
+
+<!-- vale off -->
 
 | Input type                          | Return type      |
 | ----------------------------------- | ---------------- |
 | float, real                         | float            |
 | decimal(_p_, _s_)                   | decimal(38, _s_) |
-| int, smallint, tinyint              | int              |
+| int, mallint, tinyint               | int              |
 | bigint                              | bigint           |
 | money, smallmoney                   | money            |
 | bit, char, nchar, varchar, nvarchar | float            |
 
-If the result does not fit in the return type, an arithmetic overflow error occurs.
+<!-- vale on -->
+
+If the result doesn't fit in the return type, an arithmetic overflow error occurs.
 
 #### Example
 
@@ -468,12 +472,12 @@ The following example demonstrates raising a specified number to a specified pow
 SELECT @x + ' to the power of ' + @y + ' is: ' + CONVERT(VARCHAR, POWER(@x,@y))
 ```
 
-## RADIANS  <a href="#radians-transact-sql" id="radians-transact-sql"></a>
+## RADIANS <a href="#radians-transact-sql" id="radians-transact-sql"></a>
 
 Returns radians when a numeric expression, in degrees, is entered.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -493,7 +497,7 @@ Is an expression of the exact numeric or approximate numeric data type category,
 
 #### Return Types
 
-Returns the same type as _numeric\_expression_.
+Returns the same type as _numeric_expression_.
 
 #### Example
 
@@ -503,10 +507,10 @@ The following example shows the number of radians based on a specified degree.
 SELECT @degrees + ' degrees in radians is: ' + CONVERT(VARCHAR, RADIANS(@degrees))
 ```
 
-## RAND  <a href="#rand-transact-sql" id="rand-transact-sql"></a>
+## RAND <a href="#rand-transact-sql" id="rand-transact-sql"></a>
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -524,7 +528,7 @@ RAND ( [ seed ] )
 #### Arguments
 
 `seed`\
-Is an integer expression (**tinyint**, **smallint**, or **int**) that gives the seed value. If _seed_ is not specified, the SQL Server Database Engine assigns a seed value at random. For a specified seed value, the result returned is always the same.
+Is an integer expression (**tinyint**, **smallint**, or **int**) that gives the seed value. If _seed_ isn't specified, the SQL Server Database Engine assigns a seed value at random. For a specified seed value, the result returned is always the same.
 
 #### Return Types
 
@@ -546,7 +550,7 @@ SELECT RAND(100), RAND(), RAND()
 SELECT RAND(100), RAND(), RAND(5), RAND(), RAND(100), RAND()
 ```
 
-## ROUND  <a href="#round-transact-sql" id="round-transact-sql"></a>
+## ROUND <a href="#round-transact-sql" id="round-transact-sql"></a>
 
 Returns a numeric value, rounded to the specified length or precision.
 
@@ -562,10 +566,10 @@ ROUND ( numeric_expression , length [ ,function ] )
 Is an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.
 
 `length`\
-Is the precision to which _numeric\_expression_ is to be rounded. _length_ must be an expression of type **tinyint**, **smallint**, or **int**. When _length_ is a positive number, _numeric\_expression_ is rounded to the number of decimal positions specified by _length_. When _length_ is a negative number, _numeric\_expression_ is rounded on the left side of the decimal point, as specified by _length_.
+Is the precision to which _numeric_expression_ is to be rounded. _length_ must be an expression of type **tinyint**, **smallint**, or **int**. When _length_ is a positive number, _numeric_expression_ is rounded to the number of decimal positions specified by _length_. When _length_ is a negative number, _numeric_expression_ is rounded on the left side of the decimal point, as specified by _length_.
 
 `function`\
-Is the type of operation to perform. _function_ must be **tinyint**, **smallint**, or **int**. When _function_ is omitted or has a value of 0 (default), _numeric\_expression_ is rounded. When a value other than 0 is specified, _numeric\_expression_ is truncated.
+Is the type of operation to perform. _function_ must be **tinyint**, **smallint**, or **int**. When _function_ is omitted or has a value of 0 (default), _numeric_expression_ is rounded. When a value other than 0 is specified, _numeric_expression_ is truncated.
 
 #### Return Types
 
@@ -589,13 +593,13 @@ ROUND always returns a value. If _length_ is negative and larger than the number
 | ----------------- | ------- |
 | ROUND(748.58, -4) | 0       |
 
-ROUND returns a rounded _numeric\_expression_, regardless of data type, when _length_ is a negative number.
+ROUND returns a rounded _numeric_expression_, regardless of data type, when _length_ is a negative number.
 
-| Examples                                                                                                                                             | Restuls                                                                                                  |
+| Examples                                                                                                                                             | Results                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | ROUND(748.58, -1)                                                                                                                                    | 750.00                                                                                                   |
 | ROUND(748.58, -2)                                                                                                                                    | 700.00                                                                                                   |
-| ROUND(748.58, -3)                                                                                                                                    | Results in an arithmetic overflow, because 748.58 defaults to decimal(5,2), which cannot return 1000.00. |
+| ROUND(748.58, -3)                                                                                                                                    | Results in an arithmetic overflow, because 748.58 defaults to decimal(5,2), which can't return 1000.00. |
 | <p>To round up to 4 digits, change the data type of the input. For example:<br><br><code>SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);</code></p> | 1000.00                                                                                                  |
 
 #### **Example 1**
@@ -690,7 +694,7 @@ The following example calculates the SIN for a specified angle.
 SELECT 'The SIN of ' + @number + ' is: ' + CONVERT(varchar, SIN(@number))
 ```
 
-## SQRT  <a href="#sqrt-transact-sql" id="sqrt-transact-sql"></a>
+## SQRT <a href="#sqrt-transact-sql" id="sqrt-transact-sql"></a>
 
 Returns the square root of the specified float value.
 
@@ -717,7 +721,7 @@ The following example returns the square root of a number.
 SELECT 'The square root of ' + @number + ' is: ' + CONVERT(varchar, SQRT(@number))
 ```
 
-## SQUARE  <a href="#square-transact-sql" id="square-transact-sql"></a>
+## SQUARE <a href="#square-transact-sql" id="square-transact-sql"></a>
 
 Returns the square of the specified float value.
 
@@ -745,7 +749,7 @@ SELECT @number + ' squared (to the power of 2) is: '
   + CONVERT(varchar, SQUARE(@number))
 ```
 
-## TAN  <a href="#tan-transact-sql" id="tan-transact-sql"></a>
+## TAN <a href="#tan-transact-sql" id="tan-transact-sql"></a>
 
 Returns the tangent of the input expression.
 
@@ -771,4 +775,3 @@ The following example returns the tangent of a specified angle.
 ```sql
 SELECT 'The TAN of ' + @number + ' is: ' + CONVERT(varchar, TAN(@number))
 ```
-

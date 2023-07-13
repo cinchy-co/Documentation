@@ -18,7 +18,7 @@ Cinchy has two types of pagination available _(Image 2):_
 To set up cursor pagination, fill in the following parameters _(Image 3)_:
 
 - **Type:** Select _Cursor_
-- **Next Page URL JSON Path:** This is the JSON Path within the response to the URL for the next page
+- **Next Page URL JSON Path:** This is the JSON Path within the response to the URL of the next page
 - **Cursor Key:** This is the key used in the query string to specify the cursor value. This is only required if the cursor returned isn't a fully qualified URL.
 
 <figure><img src="../../../.gitbook/assets/image (430).png" alt=""><figcaption><p>Image 3: Cursor Pagination</p></figcaption></figure>

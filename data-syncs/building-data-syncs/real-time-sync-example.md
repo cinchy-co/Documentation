@@ -96,12 +96,12 @@ This example will walk you through both options.
 
 <figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Image 3: The Connections Experience</p></figcaption></figure>
 
-2. In the **Info** tab, input the name of your data sync. For this example we are using **"New Hires"** _(Image 4)._
+2. In the **Info** tab, input the name of your data sync. This example uses **"New Hires"** _(Image 4)._
 
 <figure><img src="../../.gitbook/assets/image (187).png" alt=""><figcaption><p>Image 4: The Info Tab</p></figcaption></figure>
 
 3. Navigate to the **Source** tab.
-4. Under **"Select a Source"**, select **Cinchy Event Broker** _(Image 5)._
+4. Under **Select a Source**, select **Cinchy Event Broker** _(Image 5)_.
 
 <figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption><p>Image 5: Select your Source</p></figcaption></figure>
 
@@ -137,7 +137,7 @@ Full load processing means that the entire amount of data is imported iterativel
 1.  Set the following parameters _(Image 10):_
 
 | Parameter                 | Description                                                                                                                                                                                                                     | Example |
-|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Sync Key Column Reference | The SyncKey is used as a unique key reference when syncing the data from the data source into the Cinchy table. It's used to match data between the source and the target. This allows for updates to occur on changed records. | Name    |
 | New Record Behaviour      | This defines the action taken when a new record is found in the sync source. This can be either Insert or Ignore.                                                                                                               | Insert  |
 | Dropped Record Behaviour  | <p>This defines the action taken when a dropped record is found in the sync source.</p><p>This can be either Delete, Ignore, or Expire.</p>                                                                                     | Delete  |
@@ -200,7 +200,7 @@ The below filled XML example matches the Connections UI configuration made in **
 
 | Parameter                      | Description                                                                                                                                                                                                                     | Example                  |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| Name                           | The name of your data sync.                                                                                                                                                                                                     | New Hites                |
+| Name                           | The name of your data sync.                                                                                                                                                                                                     | New Hires                |
 | Column Name                    | The name(s) of the source columns that you wish to sync.                                                                                                                                                                        | <p>"Name"<br>"Title"</p> |
 | Column Data Type               | The data type that corresponds to our selected source columns.                                                                                                                                                                  | "Text"                   |
 | Domain                         | The domain of your Cinchy Target table.                                                                                                                                                                                         | Sandbox                  |
@@ -258,7 +258,16 @@ Be sure when you are pasting into the Config XML column that you double click in
 4. To execute your Data Sync you will use the CLI. If you don't have this downloaded, [refer to the documentation here.](broken-reference)
 5. In this example we will be using the following Data Sync Commands, however, for the full list of commands click [here](https://app.gitbook.com/@cinchy/s/draft-data-sync/~/drafts/-MEYg-7T93WGsJ-TwPLy/builder-guide/data-sync-commands).
 
-<table><thead><tr><th width="199.33333333333331">Parameter</th><th width="241">Description</th><th>Example</th></tr></thead><tbody><tr><td>-s (server)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The full path to the Cinchy server without the protocol (e.g. cinchy.co/Cinchy).</td><td>"pilot.cinchy.co/Training/Cinchy/"</td></tr><tr><td>-u (userid)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The user id to login to Cinchy that has execution access to the data sync.</td><td>"admin"</td></tr><tr><td>-p (password)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The password of the above User ID parameter. This can optionally be encrypted. For a walkthrough on how to use the CLI to encrypt the password, refer to the Appendix section. </td><td>"DESuEGqfffsamx55yl256hjuPYxa4ncc+5+bLkoVIFpgs0Lq6hkcU="</td></tr><tr><td>-f (feed)</td><td><mark style="color:orange;"><strong>Required</strong>.</mark> The name of the Data Sync Configuration as defined in Cinchy</td><td>"Contact Import"</td></tr></tbody></table>
+<!-- vale off -->
+
+| Parameter     | Description                                                                                                                                                                              | Example                                                  |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| -s (server)   | Required. The full path to the Cinchy server without the protocol (cinchy.co/Cinchy).                                                                                                    | "pilot.cinchy.co/Training/Cinchy/"                       |
+| -u (user id)  | Required. The user id to login to Cinchy that has execution access to the data sync.                                                                                                     | "admin"                                                  |
+| -p (password) | Required. The password of the above User ID parameter. This can optionally be encrypted. For a walkthrough on how to use the CLI to encrypt the password, refer to the Appendix section. | "DESuEGqfffsamx55yl256hjuPYxa4ncc+5+bLkoVIFpgs0Lq6hkcU=" |
+| -f (feed)     | Required. The name of the Data Sync Configuration as defined in Cinchy                                                                                                                   | "Contact Import"                                         |
+
+<!-- vale on -->
 
 5. Launch PowerShell and navigate to the Cinchy CLI directory.
 6. Enter and execute the following into PowerShell:
@@ -294,9 +303,9 @@ You must set up a listener configuration when doing a real-time data sync. While
         }
     ],
 }
-</code></pre></td></tr><tr><td>Connection Attributes</td><td>This section isn't required for data syncs using the Cinchy Event Broker/CDC, so we can just enter "{}"</td><td>{}</td></tr><tr><td>Status</td><td>This sets where your config is Enabled or Disabled. You can leave this blank until you want to turn on your config.</td><td></td></tr><tr><td>Data Sync Config</td><td>The name of the Data Sync Config you created in the Connections UI or via XML.</td><td>New Hires</td></tr><tr><td>Auto Offset Reset</td><td>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br><br><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed This is the typical configuration.<br><br><strong>None</strong> will not read start reading any events.</td><td><strong>Latest</strong></td></tr></tbody></table>
+</code></pre></td></tr><tr><td>Connection Attributes</td><td>This section isn't required for data syncs using the Cinchy Event Broker/CDC, so we can just enter "{}"</td><td>{}</td></tr><tr><td>Status</td><td>This sets where your config is Enabled or Disabled. You can leave this blank until you want to turn on your config.</td><td></td></tr><tr><td>Data Sync Config</td><td>The name of the Data Sync Config you created in the Connections UI or via XML.</td><td>New Hires</td></tr><tr><td>Auto Offset Reset</td><td>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br><br><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed This is the typical configuration.<br><br><strong>None</strong> won't read start reading any events.</td><td><strong>Latest</strong></td></tr></tbody></table>
 
-#### 4.1 JSON Topic Column
+#### JSON Topic Column
 
 For the topic JSON, you need to provide the following:
 
@@ -305,7 +314,7 @@ For the topic JSON, you need to provide the following:
 | Table GUID | The GUID of the table whose notifications you wish to consume. You can find this in the **Design Table** screen for Cinchy v5.5+, and in the **Tables table** otherwise.                                                                                                                                                                     |
 | Column(s)  | <p>The names of the columns you wish to include.<br><br><strong>Note:</strong> If you will be using the <a href="https://cli.docs.cinchy.com/builder-guide/configuring-a-data-sync/supported-data-sources/cinchy-event-broker">runQuery=true</a> parameter in your data sync, you only need to include the Cinchy Id in the topic JSON. </p> |
 | BatchSize  | The desired result batch size. This will **default to 1** if not passed in. The maximum batch size is 1000; using a number higher than that will result in a **Bad Request** response.                                                                                                                                                       |
-| Filter     | Optional. When CDC is enabled, you can set a filter on columns where you are capturing changes to receive specific data.                                                                                                                                                                                                            |
+| Filter     | Optional. When CDC is enabled, you can set a filter on columns where you are capturing changes to receive specific data.                                                                                                                                                                                                                     |
 
 #### Topic JSON example
 
@@ -331,13 +340,13 @@ Before executing the data sync command, encrypt the password using PowerShell.
 
 To encrypt a password using PowerShell, complete the following:
 
-1. Launch PowerShell and navigate to the Cinchy CLI directory (note, you can always type PowerShell in the windows explore path for the Cinchy CLI directory)
-2. Enter the following into PowerShell `.\Cinchy.CLI.exe encrypt -t "password"`
-3. Hit enter to execute the command
-4. Copy the password (e.g. notepad, Visual Studio Code, word etc.) so you have it accessible at batch execution time
+1. Launch PowerShell and navigate to the Cinchy CLI directory (note, you can always type PowerShell in the windows explore path for the Cinchy CLI directory).
+2. Enter the following into PowerShell `.\Cinchy.CLI.exe encrypt -t "password"`.
+3. Hit enter to execute the command.
+4. Copy the password so you have it accessible at batch execution time.
 
 {% hint style="info" %}
-Please note, you will need to replace `password` with your specific password.
+You will need to replace `password` with your specific password.
 {% endhint %}
 
 ### Execution logs
@@ -348,6 +357,6 @@ The **Execution Log** table is a system table in Cinchy that logs the outputs of
 
 ### Execution errors
 
-The **Execution Errors** table is a system table in Cinchy that logs any errors that may occur in a data sync _(Image 19)._ Any data sync errors will also be logged in the temp directory outlined in the data sync execution command (e.g. `-d "C:\Cinchy\temp"`)
+The **Execution Errors** table is a system table in Cinchy that logs any errors that may occur in a data sync _(Image 19)._ Any data sync errors will also be logged in the temp directory outlined in the data sync execution command (`-d "C:\Cinchy\temp"`)
 
 <figure><img src="../../.gitbook/assets/image (570).png" alt=""><figcaption><p>Image 19: Execution Errors table</p></figcaption></figure>

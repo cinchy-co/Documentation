@@ -2,7 +2,7 @@
 
 ## Overview
 
-Similar to the SQL construct of table-valued functions, you can `SELECT` or `CROSS JOIN` from a Cinchy UDF as if it is a table.
+Similar to the SQL construct of table-valued functions, you can `SELECT` or `CROSS JOIN` from a Cinchy UDF as if it's a table.
 
 ## Use a Table Valued UDF in CQL <a href="#static-table" id="static-table"></a>
 

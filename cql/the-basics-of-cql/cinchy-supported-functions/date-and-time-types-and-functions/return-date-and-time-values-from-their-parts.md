@@ -258,7 +258,7 @@ SELECT DATETIMEOFFSETFROMPARTS( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 )
 SMALLDATETIMEFROMPARTS returns a **smalldatetime** value for the specified date and time.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 

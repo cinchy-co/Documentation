@@ -8,7 +8,7 @@ description: >-
 
 ## Introduction
 
-The install of a Data Experience is executed in a different environment than that of the export. Please ensure that before moving forward with the following instructions you have an environment to install the data experience into.The install of a data experience MUST be done in the same version. Your source and target environment version MUST be the same (For example, Source Version = 4.11 | Target Version = 4.11).
+The install of a Data Experience is executed in a different environment than that of the export. Please ensure that before moving forward with the following instructions you have an environment to install the data experience into. The install of a data experience MUST be done in the same version. Your source and target environment version MUST be the same (For example, Source Version = 4.11 | Target Version = 4.11).
 
 Below are the details that will be required for the installation environment:
 

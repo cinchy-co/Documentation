@@ -143,7 +143,7 @@ int
 
 `DATEPART` can be used in the select list, WHERE, HAVING, GROUP BY, and ORDER BY clauses.
 
-DATEPART implicitly casts string literals as a **datetime2** type in SQL Server 2019 (15.x). This means that DATENAME does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+DATEPART implicitly casts string literals as a **datetime2** type in SQL Server 2019 (15.x). This means that DATENAME doesn't support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
 
 #### Example 1
 

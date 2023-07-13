@@ -4,14 +4,6 @@ description: This page provides an overview for the deployment architecture of C
 
 # Deployment architecture overview
 
-## Table of contents
-
-| Table of Contents                                                                                    |
-| ---------------------------------------------------------------------------------------------------- |
-| [#1.-kubernetes-vs-iis](./#1.-kubernetes-vs-iis "mention")                                           |
-| [#2.-choosing-a-database](./#2.-choosing-a-database "mention")                                       |
-| [#3.-sizing-considerations-and-requirements](./#3.-sizing-considerations-and-requirements "mention") |
-
 ## Kubernetes vs IIS
 
 When choosing to deploy Cinchy version 5, you must decide whether to deploy via Kubernetes or on a VM (IIS).
@@ -85,7 +77,7 @@ Before deploying Cinchy v5, you need to define your sizing requirements.
 
 #### Kubernetes sizing
 
-Cluster sizing recommendations vary and are dependant on a number of deployment factors. We've provided the following very general sizing recommendations, but encourage you to explore more personalized options.
+Cluster sizing recommendations vary and are dependant on a number of deployment factors. We've provided the following general sizing recommendations, but encourage you to explore more personalized options.
 
 **CPU:** 8 Cores
 
@@ -113,10 +105,11 @@ If you are using Terraform for your Kubernetes deployment, you will need to set 
 
 You will create your **two S3 compatible buckets** using either Amazon or Azure. Ensure that you use the following convention when naming your buckets so that the automation script runs correctly: **\<org>-\<component>-\<cluster>.** These bucket names will be referenced in your configuration files when you [deploy Cinchy on Kubernetes.](kubernetes-deployment-architecture.md)
 
-**Example Terraform Bucket:** cinchy-terraform-state
+**Example Terraform Bucket:** `cinchy-terraform-state`
 
-**Example Connection Bucket:** cinchy-connections-cinchy-nonprod
+**Example Connection Bucket:** `cinchy-connections-cinchy-nonprod`
 
 S3 provides unlimited scalability and it charges only for what you use/how much you store on it, so there are no sizing definitions.
+
 - [How to set up an Amazon S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)
 - [How to set up Azure Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal)

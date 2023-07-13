@@ -4,15 +4,15 @@
 
 These functions support data type casting and conversion. Conversion functions convert an expression of one data type to another data type. The conversion functions covered in this section are:
 
-* ​[CAST](conversion-functions.md#cast)​
-* [​CONVERT​](conversion-functions.md#convert)
+- ​[CAST](conversion-functions.md#cast)​
+- [​CONVERT​](conversion-functions.md#convert)
 
 ## CAST <a href="#cast" id="cast"></a>
 
 This function is used with CONVERT to convert an expression of one data type to another.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -51,7 +51,7 @@ SELECT CAST(1.5 AS int)
 This function is used with CAST to convert an expression of one data type to another.
 
 {% hint style="warning" %}
-This function is not currently supported in PostgreSQL deployments of the Cinchy platform.
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform.
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
@@ -76,10 +76,10 @@ The target data type.
 An optional integer that specifies the length of the target data type, for data types that allow a user specified length.
 
 `style`\
-An optional integer expression that specifies how the CONVERT function will translate _expression_. For a style value of NULL, NULL is returned. _data\_type_ determines the range.
+An optional integer expression that specifies how the CONVERT function will translate _expression_. For a style value of NULL, NULL is returned. _data_type_ determines the range.
 
-#### **Converting datetime to character:**
-
+#### Converting datetime to character
+<!-- vale off -->
 | Without century | With century | Input/Output                       | Standard                       |
 | --------------- | ------------ | ---------------------------------- | ------------------------------ |
 | 0               | 100          | mon dd yyyy hh:miAM/PM             | Default                        |
@@ -103,8 +103,8 @@ An optional integer expression that specifies how the CONVERT function will tran
 | -               | 127          | yyyy-mm-ddThh:mi:ss.mmmZ           | ISO8061 (with time zone Z)     |
 | -               | 130          | dd mon yyyy hh:mi:ss:mmmAM         | Hijiri                         |
 | -               | 131          | dd/mm/yy hh:mi:ss:mmmAM            | Hijiri                         |
-
-#### **Converting float to real:**
+<!-- vale on -->
+#### Converting float to real
 
 | Value | Explanation                |
 | ----- | -------------------------- |
@@ -112,13 +112,13 @@ An optional integer expression that specifies how the CONVERT function will tran
 | 1     | 8 digits                   |
 | 2     | 16 digits                  |
 
-#### **Converting money to character:**
+#### Converting money to character
 
-| **Value** | Explanation                                           |
-| --------- | ----------------------------------------------------- |
-| 0         | No comma delimiters, 2 digits to the right of decimal |
-| 1         | Comma delimiters, 2 digits to the right of decimal    |
-| 2         | No comma delimiters, 4 digits to the right of decimal |
+| Value | Explanation                                           |
+| ----- | ----------------------------------------------------- |
+| 0     | No comma delimiters, 2 digits to the right of decimal |
+| 1     | Comma delimiters, 2 digits to the right of decimal    |
+| 2     | No comma delimiters, 4 digits to the right of decimal |
 
 #### Example
 

@@ -27,7 +27,7 @@ A filter on your source is optional. It relies on a source specific syntax for f
 This is only available if using a table, not a query. For queries, include the filter in the query itself.
 
 {% hint style="warning" %}
-There can only be one \<Filter>  for each source. To specify more than one condition, use AND/OR to allow logical combination of multiple expressions.
+There can only be one \<Filter> for each source. To specify more than one condition, use AND/OR to allow logical combination of multiple expressions.
 {% endhint %}
 
 ## Conditional filters
@@ -36,19 +36,22 @@ There can only be one \<Filter>  for each source. To specify more than one condi
 
 Once selected you will be able to define the conditions upon which data is pulled into your source via the filter. After data is pulled from the source, new conditional UI filters down the set of returned records to ones that match the defined conditions.
 
-* Multiple Conditions can be added to a single data sync by using the **AND/OR and +Rule buttons.**
-* You are able to group your Rules into a rule set by using the **+Ruleset button.**
-* **The left-most drop down** is used to select either a source or a target column as defined in your Source and Destination tabs
-* **The centre drop-down** is used to select from the following options:
-  * \=
-  * !=
-  * Contains
-  * Is Null
-  * Is Not Null
-* **The right-most drop-down** can either be used for a plain value (ex: text, numerical, etc.) This will adjust based on the column data type picked in the left-most drop down. For example, if in the source schema the column is a date, then it renders a date picker.
+<!-- vale off -->
+
+- Multiple Conditions can be added to a single data sync by using the **AND/OR and +Rule buttons.**
+- You are able to group your Rules into a rule set by using the **+Ruleset button.**
+- **The left-most drop down** is used to select either a source or a target column as defined in your Source and Destination tabs.
+- **The centre drop-down** is used to select from the following options:
+  - \=
+  - !=
+  - Contains
+  - Is Null
+  - Is Not Null
+- **The right-most drop-down** can either be used for a plain value (ex: text, numerical, etc.) This will adjust based on the column data type picked in the left-most drop down. For example, if in the source schema the column is a date, then it renders a date picker.
 
 For example, the below condition would only bring in records where the **source column "Employee Status" is not null** _(Image 2)._
 
+<!-- vale on -->
 <figure><img src="../../../.gitbook/assets/image (657).png" alt=""><figcaption><p>Image 2: Conditional Example</p></figcaption></figure>
 
 ### Source filter examples
@@ -73,7 +76,7 @@ A target destination filter is optional. It relies on a source specific syntax f
 | SqlServer  | For SqlServer the syntax is the TSQL where clause (without the where expression)  |
 
 {% hint style="warning" %}
-There can only be one \<Filter>  for each target. To specify more than one condition, use AND/OR to allow logical combination of multiple expressions.
+There can only be one \<Filter> for each target. To specify more than one condition, use AND/OR to allow logical combination of multiple expressions.
 {% endhint %}
 
 ### Filter examples
@@ -82,7 +85,11 @@ There can only be one \<Filter>  for each target. To specify more than one condi
 
 <figure><img src="../../../.gitbook/assets/image (432).png" alt=""><figcaption><p>Image 5: Target Filter Example 1</p></figcaption></figure>
 
+<!-- vale off -->
+
 #### Example 2:Filter only target records where the Override ID is not Null _(Image 6)._
+
+<!-- vale on -->
 
 <figure><img src="../../../.gitbook/assets/image (581).png" alt=""><figcaption><p>Image 6: Target Filter Example 2</p></figcaption></figure>
 

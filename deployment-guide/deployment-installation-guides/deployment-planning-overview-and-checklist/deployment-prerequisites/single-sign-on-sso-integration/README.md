@@ -22,7 +22,7 @@ Below is a diagram outlining the flow when a non-authenticated user attempt to a
 
 You must register Cinchy with the Identity Provider. As part of that process you'll supply the Assertion Consumer Service URL, choose a client identifier for the Cinchy application, and generate a metadata XML file.
 
-The Assertion Consumer Service URL for Cinchy is **the base URL of the CinchySSO application followed by "{AcsURLModule}/Acs"**
+The Assertion Consumer Service URL of Cinchy is **the base URL of the CinchySSO application followed by "{AcsURLModule}/Acs"**
 
 `https:///\<CinchySSO URL>/Saml2/Acs`
 
@@ -35,9 +35,9 @@ To enable SAML authentication within Cinchy, do the following:
 {% hint style="info" %}
 If you are using **Azure AD** for this process, you can find your metadata XML by [following these steps.](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/troubleshoot-saml-based-sso#cant-find-the-azure-ad-metadata-to-complete-the-configuration-with-the-application)
 
-If you are using **GSuite** for this process, you can find your metadata XML by [following steps 1-6 here.](https://support.google.com/a/answer/6087519?hl=en)
+If you are using **Google Workspace** for this process, you can find your metadata XML by [following steps 1-6 here.](https://support.google.com/a/answer/6087519?hl=en)
 
-If you are using **ADFS** for this process, you can find your metadata XML at the following link, inputting your own information for **\<your.AD.server>**: _`https://`**`<your.AD.server>`**`/FederationMetadata/2007-06/FederationMetadata.xml`_
+If you are using **ADFS** for this process, you can find your metadata XML at the following link, inputting your own information for **\<your.ad.server>**: _`https://`**`<your.AD.server>`**`/FederationMetadata/2007-06/FederationMetadata.xml`_
 
 If you are using **Okta** for this process, you can find your metadata XML by [following these steps.](https://support.okta.com/help/s/article/How-do-we-download-the-IDP-XML-metadata-file-from-a-SAML-Template-App?language=en\_US)
 
@@ -57,7 +57,7 @@ If you are using **PingIdentity** for this process, you can find your metadata X
 When configuring the Identity Provider, the only required claim is a user name identifier. If you plan to enable automatic user creation, then additional claims must be added to the configuration, **see section 4 below for more details.**
 {% endhint %}
 
-Once you enable SSO, the next time a user arrives at the Cinchy login screen they will see an additional button for **"Single Sign-On".**
+Once you enable SSO, the next time a user arrives at the Cinchy login screen they will see an additional button for **Single Sign-On"**.
 
 ## Configure SAML authentication - Kubernetes deployments
 
@@ -66,9 +66,9 @@ Once you enable SSO, the next time a user arrives at the Cinchy login screen the
 {% hint style="info" %}
 If you are using **Azure AD** for this process, you can find your metadata XML by [following these steps.](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/troubleshoot-saml-based-sso#cant-find-the-azure-ad-metadata-to-complete-the-configuration-with-the-application)
 
-If you are using **GSuite** for this process, you can find your metadata XML by [following steps 1-6 here.](https://support.google.com/a/answer/6087519?hl=en)
+If you are using **Google Workspace** for this process, you can find your metadata XML by [following steps 1-6 here.](https://support.google.com/a/answer/6087519?hl=en)
 
-If you are using **ADFS** for this process, you can find your metadata XML at the following link, inputting your own information for **\<your.AD.server>**: _`https://`**`<your.AD.server>`**`/FederationMetadata/2007-06/FederationMetadata.xml`_
+If you are using **ADFS** for this process, you can find your metadata XML at the following link, inputting your own information for **\<your.ad.server>**: _`https://`**`<your.AD.server>`**`/FederationMetadata/2007-06/FederationMetadata.xml`_
 
 If you are using **Okta** for this process, you can find your metadata XML by [following these steps.](https://support.okta.com/help/s/article/How-do-we-download-the-IDP-XML-metadata-file-from-a-SAML-Template-App?language=en\_US)
 
@@ -77,11 +77,11 @@ If you are using **Auth0** for this process, you can find your metadata XML by [
 If you are using **PingIdentity** for this process, you can find your metadata XML by [following these steps.](https://docs.pingidentity.com/bundle/pingfederate-93/page/bdx1564002975039.html)
 {% endhint %}
 
-2. Navigate to your **cinchy.kubernetes\environment\_kustomizations\_template\instance\_template\idp\kustomization.yaml** file.
+1. Navigate to your `cinchy.kubernetes\environment\_kustomizations\_template\instance\_template\idp\kustomization.yaml ` file.
 
-3. Add your **metadata.xml patch** into your secrets where specified below as <\<metadata.xml>>
+2. Add your **metadata.xml patch** into your secrets where specified below as <\<metadata.xml>>
 
-```yaml
+```yaml 
 - target:
     version: v1
     kind: Secret
@@ -147,7 +147,7 @@ If you are using **PingIdentity** for this process, you can find your metadata X
 }
 ```
 
-8. **Run DevOps automation script** which will populate the updated outputs into the **cinchy.kubernetes** repository.
+8. **Run DevOps automation script** which will populate the updated outputs into the `cinchy.kubernetes` repository.
 
 9. Commit your changes and push to your source control system.
 
@@ -207,7 +207,7 @@ The Identity Provider configuration must include the following additions to the 
 * Last Name
 * Email
 
-To enable automatic group assignment for newly created users, then you must also include an attribute that captures the groups that this user is a member of. For example, the **memberOf** field in AD. This is applicable if you plan on using AD Groups.
+To enable automatic group assignment for newly created users, then you must also include an attribute that captures the groups that this user is a member of. For example, the `memberOf` field in AD. This is applicable if you plan on using AD Groups.
 
 ### Configuration setup
 
