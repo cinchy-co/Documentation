@@ -8,26 +8,26 @@
 
 Please review the following considerations before you set up your MongoDB Collection data sync source:
 
-* We currently only support SCRAM authentication (Mongo 4.0+).
-* Syncs are column based. This means that **you must flatten the MongoDB source document** prior to sync by using a projection _(See section 2: Projection (JSON Object))_.
-* The column names used in the source must match elements on the root object, with the exception of **"$"** which can be used to retrieve the full document.
-* By default, MongoDB batch size is 101.
-* By default, bulk operations size is 5000.
-* Due to a conversion of doubles to decimals that occurs during the sync process, minor data losses may occur.
-* The following data types aren't supported:
-  * **Binary Data**
-  * **Regular Expression**
-  * **DBPointer**
-  * **JavaScript**
-  * **JavaScript code with scope**
-  * **Symbol**
-  * **Min Key**
-  * **Max Key**
-* The following data types are supported with conversions:
-  * **ObjectID** is supported, but converted to **string**
-  * **Object** is supported, but converted to **JSON**
-  * **Array** is supported, but converted to **JSON**
-  * **Timestamp** is supported, but converted to **64-bit integers**
+- We currently only support SCRAM authentication (Mongo 4.0+).
+- Syncs are column based. This means that **you must flatten the MongoDB source document** prior to sync by using a projection _(See section 2: Projection (JSON Object))_.
+- The column names used in the source must match elements on the root object, with the exception of **"$"** which can be used to retrieve the full document.
+- By default, MongoDB batch size is 101.
+- By default, bulk operations size is 5000.
+- Due to a conversion of doubles to decimals that occurs during the sync process, minor data losses may occur.
+- The following data types aren't supported:
+  - **Binary Data**
+  - **Regular Expression**
+  - **DBPointer**
+  - **JavaScript**
+  - **JavaScript code with scope**
+  - **Symbol**
+  - **Min Key**
+  - **Max Key**
+- The following data types are supported with conversions:
+  - **ObjectID** is supported, but converted to **string**
+  - **Object** is supported, but converted to **JSON**
+  - **Array** is supported, but converted to **JSON**
+  - **Timestamp** is supported, but converted to **64-bit integers**
 
 {% hint style="success" %}
 The MongoDB Collection source supports batch syncs. (To enable real-time syncs with MongoDB, use the MongoDB Collection (Cinchy Event Triggered) or Mongo Event source instead.)
@@ -68,23 +68,21 @@ The following parameters will help to define your data sync source and how it fu
 | Data Type   | <p><strong>Mandatory.</strong> The data type of the column values. <br><br><a href="./#data-types">You can review the supported data types and their translations here.</a></p> | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                                                                                               |         |
 
-
-
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
-| Parameter   | Description                                                                                                                           | Example |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Parameter   | Description                                                                       | Example |
+| ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
-| Replacement | What you want to replace your pattern with.                                                                                           |         |
+| Replacement | What you want to replace your pattern with.                                       |         |
 
 {% hint style="info" %}
 Note that you can have more than one String Replacement
@@ -139,10 +137,10 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 ## Next steps
 
-* Configure your [Destination](../../supported-data-sync-destinations/)
-* Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
-* Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* To run a batch sync, select **Jobs > Start Job.**
+- Configure your [Destination](../../supported-data-sync-destinations/)
+- Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
+- Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
+- To run a batch sync, select **Jobs > Start Job.**
 
 ## Appendix A
 
@@ -162,7 +160,7 @@ The following table shows how MongoDB data types are translated in Cinchy.
 | Array          | Text (JSON) | Supported   |
 | Binary Data    | Binary      | Unsupported |
 | ObjectId       | Text        | Supported   |
-| Boolean        | Boolean        | Supported   |
+| Boolean        | Boolean     | Supported   |
 | Date           | Date        | Supported   |
 | Null           | -           | Supported   |
 | RegEx          | -           | Unsupported |
@@ -189,9 +187,9 @@ To set up a retry specification:
 1. Select "Add Retry Configuration" from the Source tab.
 2. Select your Delay Strategy.
 
-* **Linear Backoff:** Defines a delay of approximately n seconds where n = current retry attempt.
-* **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
-  * _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
+- **Linear Backoff:** Defines a delay of approximately n seconds where n = current retry attempt.
+- **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
+  - _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
 
 3\. Input your Max Attempts. The maximum number of retries allowed is 10.
 
@@ -205,9 +203,9 @@ Retry conditions are only evaluated if the response code isn't 2xx Success.
 
 Each Retry Condition contains **one or more "Attribute Match" sections**. This defines a Regex to evaluate against a section of the HTTP response. The following are the three areas of the HTTP response that can be inspected:
 
-* Response Code
-* Header
-* Body
+- Response Code
+- Header
+- Body
 
 If there are multiple "Attribute Match" blocks within a Retry Condition, **all have to match for the retry condition to evaluate to true.**
 
