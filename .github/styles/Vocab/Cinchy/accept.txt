@@ -90,3 +90,4 @@ STWithin
 Backoff
 VNet
 database_connection_string
+unicode

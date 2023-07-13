@@ -8,26 +8,26 @@
 
 Please review the following considerations before you set up your MongoDB Collection data sync source:
 
-* We currently only support SCRAM authentication (Mongo 4.0+).
-* Syncs are column based. This means that **you must flatten the MongoDB source document** prior to sync by using a projection _(See section 2: Projection (JSON Object))_.
-* The column names used in the source must match elements on the root object, with the exception of **"$"** which can be used to retrieve the full document.
-* By default, MongoDB batch size is 101.
-* By default, bulk operations size is 5000.
-* Due to a conversion of doubles to decimals that occurs during the sync process, minor data losses may occur.
-* The following data types aren't supported:
-  * **Binary Data**
-  * **Regular Expression**
-  * **DBPointer**
-  * **JavaScript**
-  * **JavaScript code with scope**
-  * **Symbol**
-  * **Min Key**
-  * **Max Key**
-* The following data types are supported with conversions:
-  * **ObjectID** is supported, but converted to **string**
-  * **Object** is supported, but converted to **JSON**
-  * **Array** is supported, but converted to **JSON**
-  * **Timestamp** is supported, but converted to **64-bit integers**
+- We currently only support SCRAM authentication (Mongo 4.0+).
+- Syncs are column based. This means that **you must flatten the MongoDB source document** prior to sync by using a projection _(See section 2: Projection (JSON Object))_.
+- The column names used in the source must match elements on the root object, with the exception of **"$"** which can be used to retrieve the full document.
+- By default, MongoDB batch size is 101.
+- By default, bulk operations size is 5000.
+- Due to a conversion of doubles to decimals that occurs during the sync process, minor data losses may occur.
+- The following data types aren't supported:
+  - **Binary Data**
+  - **Regular Expression**
+  - **DBPointer**
+  - **JavaScript**
+  - **JavaScript code with scope**
+  - **Symbol**
+  - **Min Key**
+  - **Max Key**
+- The following data types are supported with conversions:
+  - **ObjectID** is supported, but converted to **string**
+  - **Object** is supported, but converted to **JSON**
+  - **Array** is supported, but converted to **JSON**
+  - **Timestamp** is supported, but converted to **64-bit integers**
 
 {% hint style="success" %}
 The MongoDB Collection source supports batch syncs. (To enable real-time syncs with MongoDB, use the MongoDB Collection (Cinchy Event Triggered) or Mongo Event source instead.)
@@ -55,7 +55,18 @@ The following table outlines the mandatory and optional parameters you will find
 {% tab title="Source Details" %}
 The following parameters will help to define your data sync source and how it functions.
 
-<table><thead><tr><th>Parameter</th><th width="289.66666666666663">Description</th><th>Example</th></tr></thead><tbody><tr><td>Source</td><td><strong>Mandatory.</strong> Select your source from the drop down menu.</td><td>MongoDB Collection</td></tr><tr><td>Connection String</td><td><strong>Mandatory.</strong> This is the encrypted connection string.<br><br>You can review MongoDB's Connection String guide and parameter descriptions <a href="https://www.mongodb.com/docs/manual/reference/connection-string/">here.</a><br><br><mark style="color:red;"><strong>Do not include the /[database] in your connection URL.</strong></mark> By default services like MongoDB Atlas will automatically include it when copying the connection string.<br><br>If authenticating against a database <strong>other than the admin db</strong>, please provide the name of the database associated with the user’s credentials using the authSource parameter.</td><td><p><em>Example (Default):</em></p><p>mongodb+srv://&#x3C;username>:&#x3C;password>@&#x3C;mongo host URI><br></p><p><em>Example (Against different database):</em></p><p>mongodb+srv://&#x3C;username>:&#x3C;password>@&#x3C;mongo host URI>?<strong>authSource=&#x3C;authentication_db></strong></p></td></tr><tr><td>Database</td><td><strong>Mandatory.</strong> The name of the <a href="https://www.mongodb.com/docs/manual/core/databases-and-collections/">MongoDB database</a> that contains the collection listed in the "Collection" parameter.</td><td>Blog</td></tr><tr><td>Collection</td><td><strong>Mandatory.</strong> The name of your <a href="https://www.mongodb.com/docs/manual/core/databases-and-collections/">MongoDB collection.</a></td><td>Article</td></tr><tr><td>Type</td><td><strong>Mandatory.</strong> The method for retrieving your data. This will be either:<br><br><strong>- db.collection.find():</strong> This method is used to select documents in a collection when there is no need to transform (e.g. flatten or aggregate) the data. It is used for basic queries where query and projection are sufficient.<br><br><strong>- db.collection.aggregate():</strong> This method is used when there is a need to transform the data in a collection. It is used for more complex scenarios with single or multi-stages pipelines.<br><br>In general, you will yield the quickest performance by using <strong>the find method</strong>, unless you need a <a href="https://www.mongodb.com/docs/manual/aggregation/">specific aggregation operator.</a></td><td></td></tr><tr><td>Query (JSON Object)</td><td>A query for retrieving your data. This option appears if you have selected <strong>db.collection.find().</strong></td><td><a href="./#example-query">Example Query</a></td></tr><tr><td>Projection (JSON Object)</td><td>This option appears if you have selected <strong>db.collection.find().</strong><br><br>Syncs are column based. This means that <strong>you must flatten the MongoDB source document</strong> prior to sync using a projection.</td><td><a href="./#example-projection">Example Projection</a></td></tr><tr><td>Pipeline (JSON Array of Objects)</td><td><a href="https://www.mongodb.com/docs/manual/core/aggregation-pipeline/">An aggregation pipeline </a>consists of one or more stages that process documents.<br><br>This option appears if you have selected <strong>db.collection.aggregate().</strong></td><td></td></tr><tr><td>Use SSL</td><td>This checkbox can be used to define the use of<a href="https://sectigo.com/resource-library/what-is-x509-certificate"> x.509 certificate</a> <strong>authentication</strong> for your sync. If checked, you will need to input the following values taken from your cert:<br>- SSL Key PEM<br>- SSL Certificate PEM<br>- SSL CLA PEM</td><td></td></tr></tbody></table>
+| Parameter                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example                                                                                                                                                                                                                           |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source                           | Mandatory. Select your source from the drop down menu.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | MongoDB Collection                                                                                                                                                                                                                |
+| Connection String                | Mandatory. This is the encrypted connection string. You can review MongoDB's Connection String guide and parameter descriptions here.**Don't include the /[database] in your connection URL**. By default services like MongoDB Atlas will automatically include it when copying the connection string. If authenticating against a database other than the admin db, please provide the name of the database associated with the user’s credentials using the `authSource` parameter.                                                                                                                                      | Example (Default):mongodb+srv://&#x3C;username>:&#x3C;password>@&#x3C;mongo host URI>Example (Against different database):mongodb+srv://&#x3C;username>:&#x3C;password>@&#x3C;mongo host URI>?authSource=&#x3C;authentication_db> |
+| Database                         | Mandatory. The name of the MongoDB database that contains the collection listed in the "Collection" parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Blog                                                                                                                                                                                                                              |
+| Collection                       | Mandatory. The name of your MongoDB collection.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Article                                                                                                                                                                                                                           |
+| Type                             | Mandatory. The method for retrieving your data. This will be either:- db.collection.find(): This method is used to select documents in a collection when there is no need to transform (flatten or aggregate) the data. It's used for basic queries where query and projection are sufficient.- db.collection.aggregate(): This method is used when there is a need to transform the data in a collection. It's used for more complex scenarios with single or multi-stages pipelines.In general, you will yield the quickest performance by using the find method, unless you need a specific aggregation operator. |
+| Query (JSON Object)              | A query for retrieving your data. This option appears if you have selected db.collection.find().                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Example Query                                                                                                                                                                                                                     |
+| Projection (JSON Object)         | This option appears if you have selected db.collection.find().Syncs are column based. This means that you must flatten the MongoDB source document before a sync using a projection.                                                                                                                                                                                                                                                                                                                                                                                                                                  | Example Projection                                                                                                                                                                                                                |
+| Pipeline (JSON Array of Objects) | An aggregation pipeline consists of one or more stages that process documents.This option appears if you have selected db.collection.aggregate().                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Use SSL                          | This checkbox can be used to define the use of x.509 certificate authentication for your sync. If checked, you will need to input the following values taken from your cert:- SSL Key PEM- SSL Certificate PEM- SSL CLA PEM                                                                                                                                                                                                                                                                                                                                                                                           |
+
 {% endtab %}
 
 {% tab title="Schema" %}
@@ -68,23 +79,21 @@ The following parameters will help to define your data sync source and how it fu
 | Data Type   | <p><strong>Mandatory.</strong> The data type of the column values. <br><br><a href="./#data-types">You can review the supported data types and their translations here.</a></p> | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                                                                                               |         |
 
-
-
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
-| Parameter   | Description                                                                                                                           | Example |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Parameter   | Description                                                                       | Example |
+| ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
-| Replacement | What you want to replace your pattern with.                                                                                           |         |
+| Replacement | What you want to replace your pattern with.                                       |         |
 
 {% hint style="info" %}
 Note that you can have more than one String Replacement
@@ -139,10 +148,10 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 
 ## Next steps
 
-* Configure your [Destination](../../supported-data-sync-destinations/)
-* Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
-* Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* To run a batch sync, select **Jobs > Start Job.**
+- Configure your [Destination](../../supported-data-sync-destinations/)
+- Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
+- Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
+- To run a batch sync, select **Jobs > Start Job.**
 
 ## Appendix A
 
@@ -189,9 +198,9 @@ To set up a retry specification:
 1. Select "Add Retry Configuration" from the Source tab.
 2. Select your Delay Strategy.
 
-* **Linear Backoff:** Defines a delay of approximately n seconds where n = current retry attempt.
-* **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
-  * _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
+- **Linear Backoff:** Defines a delay of approximately n seconds where n = current retry attempt.
+- **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
+  - _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
 
 3\. Input your Max Attempts. The maximum number of retries allowed is 10.
 
@@ -200,21 +209,21 @@ To set up a retry specification:
 4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.
 
 {% hint style="info" %}
-Retry conditions are only evaluated if the response code is not 2xx Success.
+Retry conditions are only evaluated if the response code isn't 2xx Success.
 {% endhint %}
 
 Each Retry Condition contains **one or more "Attribute Match" sections**. This defines a Regex to evaluate against a section of the HTTP response. The following are the three areas of the HTTP response that can be inspected:
 
-* Response Code
-* Header
-* Body
+- Response Code
+- Header
+- Body
 
 If there are multiple "Attribute Match" blocks within a Retry Condition, **all have to match for the retry condition to evaluate to true.**
 
 {% hint style="warning" %}
-The Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of "5\[0-9]\[0-9]".\
+The Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of `5[0-9][0-9]`.
 \
-**For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".
+**For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, `"Content-Type=application/json"`.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image (750).png" alt=""><figcaption></figcaption></figure>
