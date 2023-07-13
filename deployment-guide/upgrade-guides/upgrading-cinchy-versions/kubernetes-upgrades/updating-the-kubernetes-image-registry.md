@@ -42,4 +42,4 @@ kubectl edit deployment cluster-autoscaler -n kube-system
 
 4. In the editor, find any instances of **k8s.gcr.io** and replace it with **registry.k8s.io.**
 5. Save and close the file.
-6. Repeat steps 3-5 for the rest of your pods until they are all pointing to the correct registry.
+6. Repeat steps 3-5 for the rest of your pods until they're all pointing to the correct registry.

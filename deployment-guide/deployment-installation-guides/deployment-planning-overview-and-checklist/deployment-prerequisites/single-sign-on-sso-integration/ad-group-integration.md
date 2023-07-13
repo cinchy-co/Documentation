@@ -140,16 +140,16 @@ The user account credentials provided in above CLI syncdata command must have Vi
 
 <summary>SyncData Parameters</summary>
 
-- **-h, -https:** Flag indicating connections to Cinchy should be over https.
-- **-s, --server:** <mark style="color:orange;">**Required**</mark><mark style="color:orange;">.</mark> The full path to the Cinchy server without the protocol (e.g. cinchy.co/Cinchy).
+- **-h, -HTTPS:** Flag indicating connections to Cinchy should be over https.
+- **-s, --server:** <mark style="color:orange;">**Required**</mark><mark style="color:orange;">.</mark> The full path to the Cinchy server without the protocol (cinchy.co/Cinchy).
 - **-u, --userid: **<mark style="color:orange;">**Required**</mark><mark style="color:orange;">.</mark> The user id to login to Cinchy.
 - **-p, --password:** <mark style="color:orange;">**Required**</mark><mark style="color:orange;">.</mark> The password of the specified user. This can be optionally encrypted using the CLI's encrypt command.
 - **-f, --feed: **<mark style="color:orange;">**Required**</mark><mark style="color:orange;">.</mark> The name of the feed configuration as defined in Cinchy.
 - **-d, --tempdirectory:** <mark style="color:red;">**Only applies to Cinchy v4.**</mark>\
-  **Required**. The path to a directory that the CLI can use for storing temporary files to support the sync (e.g. error files).
+  **Required**. The path to a directory that the CLI can use for storing temporary files to support the sync (such as error files).
 - **-b, --batchsize:** (Default: 5000) The number of rows to sync per batch (within a partition) when executing inserts/updates.
 - **-z, --retrievalbatchsize:** (Default: 5000) The max number of rows to retrieve in a single batch from Cinchy when downloading data.
-- **-v, --param-values:** Job parameter values defined as one or more name value pairs delimited by a colon (i.e. -v name1:value1 name2:value2).
+- **-v, --param-values:** Job parameter values defined as one or more name value pairs delimited by a colon (`-v name1:value1 name2:value2`).
 - **--file:** Works exactly as -v but it's for parameters that are files.
 - **--help:** Displays the help screen with the options.
 - **-w, --writetofile**: Write the data from Cinchy to disk, required for large data sets exceeding 2GB.

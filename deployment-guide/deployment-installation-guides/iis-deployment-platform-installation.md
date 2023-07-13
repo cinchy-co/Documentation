@@ -258,7 +258,7 @@ To enable HTTPS, the server certificate must be loaded and the standard IIS conf
 
 ## Test the application
 
-1. Access the **\<base url>/Cinchy (e.g. http://app.cinchy.co/Cinchy)** through Google Chrome.
+1. Access the **\<base url>/Cinchy (http://app.cinchy.co/Cinchy)** through Google Chrome.
 2. Once the login screen appears, enter the credentials:
    1. The default username is **admin** and the password is **cinchy**.
    2. You will be prompted to change your password the first time you log in.
