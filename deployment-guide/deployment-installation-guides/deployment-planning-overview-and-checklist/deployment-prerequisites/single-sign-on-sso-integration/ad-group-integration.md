@@ -23,17 +23,17 @@ Groups are defined in the **Groups** table within the Cinchy domain. By default,
 | **User Groups**  | The Groups which are members of the group                                                                                                                                                                                                                                                            |
 | **Owners**       | Users who are able to administer memberships to the group. By default, Owners are also members of the group and this don't need to also be added into the Users category.                                                                                                                           |
 | **Owner Groups** | Groups whose members are able to administer the membership of the group. By default, members of Owner Groups are also members of the group itself, and thus don't need to also be added into the User or User Groups category.                                                                      |
-| **Group Type**   | <p>This will be either <strong>"Cinchy Group"</strong> or <strong>"AD Group".</strong><br><strong>"Cinchy Group":</strong> The membership is maintained directly in Cinchy.<br><strong>"AD Group":</strong> A sync process will be leveraged to maintain the membership and overwrite the Users.</p> |
+| **Group Type**   | <p>This will be either <strong>"Cinchy Group"</strong> or <strong>AD Group.</strong><br><strong>"Cinchy Group":</strong> The membership is maintained directly in Cinchy.<br><strong>"AD Group":</strong> A sync process will be leveraged to maintain the membership and overwrite the Users.</p> |
 
 ### Define a new AD Group
 
 1. To define a new AD Group, create a new record within the Groups Table with the same name as the AD Group (using the `cn` attribute).
-2. Set the Group Type to **"AD Group".**
+2. Set the Group Type to **AD Group**.
 
 ### Convert an existing Group to sync with AD
 
 1. To convert an existing group, update the **Name** attribute of the existing group record to match the AD Group (using the `cn` attribute).
-2. Set the Group Type to **"AD Group".**
+2. Set the Group Type to **AD Group**.
 
 ## Group membership sync
 
