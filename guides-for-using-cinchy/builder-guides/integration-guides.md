@@ -21,7 +21,7 @@ For example: `http://your.cinchy.instance.domain/API/YourQueryDomain/API Test`
 {% hint style="warning" %}
 Note that for **Basic Authentication** with a result format of CSV we will use a slightly different URL endpoint.\
 \
-**For Basic Auth:** **/API/** becomes **/BasicAuthAPI/** \
+**For Basic Auth:** **/API/** becomes **/BasicAuthAPI/**\
 \
 **For CSV results** you will add the `querystring` parameter of **ResultFormat=CSV**
 
@@ -105,7 +105,7 @@ For example: `http://your.cinchy.instance.domain/API/YourQueryDomain/API Test`
 {% hint style="warning" %}
 Note that for **Basic Authentication** with a result format of CSV we will use a slightly different URL endpoint.\
 \
-**For Basic Auth:** **/API/** becomes **/BasicAuthAPI/** \
+**For Basic Auth:** **/API/** becomes **/BasicAuthAPI/**\
 \
 **For CSV results** you will add the `querystring` parameter of **ResultFormat=CSV**
 
@@ -114,13 +114,12 @@ Our example URL of a basic auth using CSV results would then become: `http://you
 
 ### Use basic auth
 
-1. Launch Power BI and navigate **Get Data > Web** _(Image 7)_\
-
+1. Launch Power BI and navigate **Get Data > Web** _(Image 7)._
 
 <figure><img src="../../.gitbook/assets/image (199).png" alt=""><figcaption><p>Image 7: Get Data > Web</p></figcaption></figure>
 
 6. In the window that launches, you will enter the below text, using your own URL endpoint where highlighted _(Image 8):_\
-`=Csv.Document(Web.Contents(`<mark style="color:yellow;background-color:yellow;">`"http://your.cinchy.instance.domain/BasicAuthAPI/YourQueryDomain/API Test?ResultFormat=CSV"`</mark>`))`
+   `=Csv.Document(Web.Contents(`<mark style="color:yellow;background-color:yellow;">`"http://your.cinchy.instance.domain/BasicAuthAPI/YourQueryDomain/API Test?ResultFormat=CSV"`</mark>`))`
 
 ![Image 8: Enter your expression](<../../.gitbook/assets/image (531).png>)
 
@@ -161,7 +160,7 @@ In this example we also changed the name from Query1 to Product Roadmap and have
 <figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Image 14</p></figcaption></figure>
 
 4. Select **OK.**
-5. Select **Load** to use the query data in Power BI_._
+5. Select **Load** to use the query data in Power BI.
 6. You can now apply any transformations to the dataset.
 
 In this example we also changed the name from Query1 to Product Roadmap and have edited to use the first row as a header _(Image 15)._
@@ -213,11 +212,11 @@ To get started, you must add a record into the `Integrated Clients` table in the
 
 ### Connect from Tableau
 
-1. Launch Tableau
-2. Under **`Connect` -> `To a Server`** select the **`Web Data Connector`** option
-3. Enter the URL from the **`Permitted Login Redirect URLs`** field on the **`Integrated Clients`** record created under the **Prerequisites** section above
+1. Launch Tableau.
+2. Under **`Connect` -> `To a Server`** select the **`Web Data Connector`** option.
+3. Enter the URL from the **`Permitted Login Redirect URLs`** field on the **`Integrated Clients`** record created under the **Prerequisites** section above.
 4. The Cinchy login screen will appear, enter your credentials
 5. Select one or more queries to add to your data set. The result of each query will be available as a Table in Tableau. If a query has parameters, you will be prompted to provide the parameter values before you can add it to your collection.
-6. Select the **Load** button
+6. Select the **Load** button.
 
 The Cinchy query results will now be accessible for you to create your visualization.
