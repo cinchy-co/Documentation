@@ -12,7 +12,7 @@
 [cinchy-table](cinchy-table/)
 {% endcontent-ref %}
 
-### Cincy Query
+### Cinchy Query
 
 {% content-ref url="cinchy-query/" %}
 [cinchy-query](cinchy-query/)
@@ -20,7 +20,7 @@
 
 ### Binary file
 
-A binary file is a computer file that is **not a text file**, and whose content is in a binary format consisting of a series of sequential bytes, each of which is eight bits in length.
+A binary file is a computer file that's **not a text file**, and whose content is in a binary format consisting of a series of sequential bytes, each of which is eight bits in length.
 
 You can use binary files from a **Local upload, Amazon S3, or Azure Blob Storage** in your data syncs.
 
@@ -28,7 +28,7 @@ Some benefits of using binary files include:
 
 * **Better efficiency via compression**
 * **Better Security** through the ability to create custom encoding standards.
-* **Unmatched Speed,** since the data is stored in a raw format, and is not encoded using any character encoding standards, it is faster to read and store.
+* **Unmatched Speed,** since the data is stored in a raw format, and isn't encoded using any character encoding standards, it's faster to read and store.
 
 {% content-ref url="file-based-sources/binary-file.md" %}
 [binary-file.md](file-based-sources/binary-file.md)
@@ -84,8 +84,8 @@ A **fixed-width file** is a file that has a specific format which allows for the
 
 Advantages of using a fixed-width file include:
 
-* It is a very **compact** representation of your data
-* It is fast to parse because every field is in the same place in every line
+* It's a **compact** representation of your data
+* It's fast to parse because every field is in the same place in every line
 
 {% content-ref url="file-based-sources/fixed-width-file.md" %}
 [fixed-width-file.md](file-based-sources/fixed-width-file.md)
@@ -131,7 +131,7 @@ Common uses of LDAP include when:
 
 ### MongoDB collection (CDC triggered)
 
-[MongoDB](https://www.mongodb.com/what-is-mongodb/features) is a scalable, flexible NoSQL document database platform known for its horizontal scaling and load balancing capabilities, which has given application developers an unprecedented level of flexibility and scalability. Data changes in Cinchy (CDC) can be used to trigger a data sync from a MongoDB data source to a specified target. The attributes of the CDC Event are available to use as parameters within the  Data Source Definition to narrow the scope of the request, e.g. a lookup.
+[MongoDB](https://www.mongodb.com/what-is-mongodb/features) is a scalable, flexible NoSQL document database platform known for its horizontal scaling and load balancing capabilities, which has given application developers an unprecedented level of flexibility and scalability. Data changes in Cinchy (CDC) can be used to trigger a data sync from a MongoDB data source to a specified target. The attributes of the CDC Event are available to use as parameters within the  Data Source Definition to narrow the scope of the request. For example, a lookup.
 
 {% content-ref url="mongodb-collection-cinchy-event-triggered.md" %}
 [mongodb-collection-cinchy-event-triggered.md](mongodb-collection-cinchy-event-triggered.md)
@@ -192,7 +192,7 @@ REST APIs work by fielding **requests for a resource** and **returning all relev
 Salesforce objects are database tables that permit you to store data that's specific to an organization. Salesforce objects are of two types:
 
 * Standard Objects: Standard objects are the kind of objects that are provided by salesforce.com such as users, contracts, reports, dashboards, etc.
-* Custom Objects: Custom objects are those objects that are created by users. They supply information that's unique and essential to their organization. They are the heart of any application and provide a structure for sharing data.
+* Custom Objects: Custom objects are those objects that are created by users. They supply information that's unique and essential to their organization. Custom objects are the heart of any application and provide a structure for sharing data.
 
 {% content-ref url="salesforce-object-bulk-api.md" %}
 [salesforce-object-bulk-api.md](salesforce-object-bulk-api.md)

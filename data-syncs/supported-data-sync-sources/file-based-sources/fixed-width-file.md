@@ -13,7 +13,9 @@ If a text file follows the rules below it's a fixed-width text file:
 * Each piece of data can be left or right aligned, meaning the pad characters can occur on either side.
 * Each column must consistently use the same number of characters, same pad character and same alignment (left/right).
 
-**Example Use Case:** You have a fixed-width file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
+## Example use case 
+
+You have a fixed-width file that contains your Employee information. You want to use a batch sync to pull this info into a Cinchy table and liberate your data.
 
 {% hint style="success" %}
 The fixed-width file source supports **batch syncs.**

@@ -25,7 +25,9 @@ The below example shows what the source parameters would look like in XML.
 
 ## Full example
 
-**Example Use Case:** You want to set up batch sync between a **Cinchy Query** and a **Cinchy Table**. You query polls for any unapproved timesheets, out of office requests, or sick hours and, if found, adds them to an "Open Approval Tasks" table.
+### Example use case 
+
+You want to set up batch sync between a **Cinchy Query** and a **Cinchy Table**. You query polls for any unapproved timesheets, out of office requests, or sick hours and, if found, adds them to an "Open Approval Tasks" table.
 
 ```xml
 <?xml version=""1.0"" encoding=""utf-16""?>

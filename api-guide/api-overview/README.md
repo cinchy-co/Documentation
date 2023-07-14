@@ -85,7 +85,7 @@ The following is a list of common API endpoints. These follow the format of \<ba
 
 | Name          | Data Type | Description                                                                                                                                                                                                                                                                                      |
 | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Authorization | string    | <p>Bearer &#x3C;access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
+| Authorization | string    | <p>Bearer <access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
 
 #### Responses:
 
@@ -121,7 +121,7 @@ To pass in parameters in your executeCQL, you will need to pass in sets of param
 
 | Name          | Data Type | Description                                                                                                                                                                                                                                                                                      |
 | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Authorization | string    | <p>Bearer &#x3C;access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
+| Authorization | string    | <p>Bearer <access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
 
 #### Responses
 
@@ -260,7 +260,7 @@ Example:
 
 | Name          | Data Type | Description                                                                                                                                                                                                                                                                                                       |
 | ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Authorization | string    | <p>Optional.<br><br>Bearer &#x3C;access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
+| Authorization | string    | <p>Optional.<br><br>Bearer <access_token><br><br>The access token can be either a Bearer token or a <a href="../../guides-for-using-cinchy/user-guides/user-preferences/personal-access-tokens.md">Personal Access token.</a><br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
 
 #### Body parameters
 
@@ -302,7 +302,7 @@ The API will return an object in the below format:
 
 | Name          | Data Type | Description                                                                                                                                                                          |
 | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Authorization | string    | <p>Bearer &#x3C;access_token><br><br>Note that this endpoint doesn't support Personal Access Tokens.<br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
+| Authorization | string    | <p>Bearer <access_token><br><br>Note that this endpoint doesn't support Personal Access Tokens.<br><br>See <a href="api-authentication.md">Authentication</a> for details.</p> |
 | Content-Type  | String    | multipart/form-data                                                                                                                                                                  |
 
 #### Body parameters

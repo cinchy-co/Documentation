@@ -22,7 +22,9 @@ The below example shows what the source parameters would look like in XML.
 
 ## Full example
 
-**Example Use Case:** You want to set up a **batch sync,** that you can run when needed, between a Cinchy Table and a MongoDB Collection. This sync will push out Client Name and Customer Number information.
+### Example use case 
+
+You want to set up a **batch sync,** that you can run when needed, between a Cinchy Table and a MongoDB Collection. This sync will push out Client Name and Customer Number information.
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>

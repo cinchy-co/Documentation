@@ -93,8 +93,8 @@ Ex:. if you're using HTTPS with the domain app.cinchy.co, then **\<base url>** s
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **CinchyUri**                 | _\<base url>/Cinchy_                                                                                                                                                                                                    |
 | **CertificatePath**           | <p>Adjust the certificate path to point to the CinchySSO v5 folder.<br><br><em>Ex: C:\CinchySSO\\cinchyidentitysrv.pfx</em></p>                                                                                         |
-| **StsPublicOriginUri**        | <p>The Base URL used by the .well-known discovery.</p><p><br><em>Ex: &#x3C;base url>/cinchySSO</em></p>                                                                                                                 |
-| **StsPrivateOriginUri**       | <p>The Private Base URL used by the .well-known discovery. <br><br><em>Ex: &#x3C;base url>/cinchySSO</em></p>                                                                                                           |
+| **StsPublicOriginUri**        | <p>The Base URL used by the .well-known discovery.</p><p><br><em>Ex: <base url>/cinchySSO</em></p>                                                                                                                 |
+| **StsPrivateOriginUri**       | <p>The Private Base URL used by the .well-known discovery. <br><br><em>Ex: <base url>/cinchySSO</em></p>                                                                                                           |
 | **CinchyAccessTokenLifetime** | <p>The duration for the Cinchy Access Token. This determines how long a user can be inactive until they need to re-enter their credentials.</p><p><br>In Cinchy v5.4+ <strong>it defaults to `7.00:00:00`.</strong></p> |
 | **DB Type**                   | Either "PostgreSQL" or "TSQL"                                                                                                                                                                                           |
 
@@ -200,13 +200,13 @@ This configuration makes a log every day (defined by the _"rollingInterval"_ val
 
 | Key                        | Value                                                                                                                                                                                                                                                                                    |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **StsPrivateAuthorityUri** | <p>This should match your private Cinchy SSO URL.<br><br><em>Ex: &#x3C;baseURL>/CinchySSO</em></p>                                                                                                                                                                                       |
-| **StsPublicAuthorityUri**  | <p>This should match your public Cinchy SSO URL.<br><br><em>Ex: &#x3C;baseURL>/CinchySSO</em></p>                                                                                                                                                                                        |
-| **CinchyPrivateUri**       | <p>This should match your private Cinchy URL.<br><br><em>Ex: &#x3C;baseURL>/Cinchy</em></p>                                                                                                                                                                                              |
-| **CinchyPublicUri**        | <p>This should match your public Cinchy URL.<br><br><em>Ex: &#x3C;baseURL>/Cinchy</em></p>                                                                                                                                                                                               |
+| **StsPrivateAuthorityUri** | <p>This should match your private Cinchy SSO URL.<br><br><em>Ex: <baseURL>/CinchySSO</em></p>                                                                                                                                                                                       |
+| **StsPublicAuthorityUri**  | <p>This should match your public Cinchy SSO URL.<br><br><em>Ex: <baseURL>/CinchySSO</em></p>                                                                                                                                                                                        |
+| **CinchyPrivateUri**       | <p>This should match your private Cinchy URL.<br><br><em>Ex: <baseURL>/Cinchy</em></p>                                                                                                                                                                                              |
+| **CinchyPublicUri**        | <p>This should match your public Cinchy URL.<br><br><em>Ex: <baseURL>/Cinchy</em></p>                                                                                                                                                                                               |
 | **UseHttps**               | This is "true" by default.                                                                                                                                                                                                                                                               |
 | **DB Type**                | Either "PostgreSQL" or "TSQL"                                                                                                                                                                                                                                                            |
-| **“MaxRequestBodySize”**   | <p><strong>This capability was introduced in Cinchy v5.4</strong></p><p></p><p>This configurable property to allow you to set your own file upload size for the Files API, should you wish. <strong>It is defaulted to 1G.</strong></p><pre><code>“MaxRequestBodySize”: 1073741824 // 1g |
+| **“MaxRequestBodySize”**   | <p><strong>This capability was introduced in Cinchy v5.4</strong></p><p></p><p>This configurable property to allow you to set your own file upload size for the Files API, should you wish. <strong>It's defaulted to 1G.</strong></p><pre><code>“MaxRequestBodySize”: 1073741824 // 1g |
 | </code></pre>              |
 
 ### Connection string
@@ -258,7 +258,7 @@ To enable HTTPS, the server certificate must be loaded and the standard IIS conf
 
 ## Test the application
 
-1. Access the **\<base url>/Cinchy (e.g. http://app.cinchy.co/Cinchy)** through Google Chrome.
+1. Access the **\<base url>/Cinchy (http://app.cinchy.co/Cinchy)** through Google Chrome.
 2. Once the login screen appears, enter the credentials:
    1. The default username is **admin** and the password is **cinchy**.
    2. You will be prompted to change your password the first time you log in.

@@ -135,7 +135,7 @@ To set up a retry specification:
 4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.
 
 {% hint style="info" %}
-Retry conditions are only evaluated if the response code is not 2xx Success.
+Retry conditions are only evaluated if the response code isn't 2xx Success.
 {% endhint %}
 
 Each Retry Condition contains **one or more "Attribute Match" sections**. This defines a Regex to evaluate against a section of the HTTP response. The following are the three areas of the HTTP response that can be inspected:
@@ -147,9 +147,9 @@ Each Retry Condition contains **one or more "Attribute Match" sections**. This d
 If there are multiple "Attribute Match" blocks within a Retry Condition, **all have to match for the retry condition to evaluate to true.**
 
 {% hint style="warning" %}
-Note that the Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of "5\[0-9]\[0-9]".\
+Note that the Regex value should be entered as a regular expression. The Regex engine is .NET and expressions can be tested by using [this online tool](http://regexstorm.net/tester). In the below example, the Regex is designed to match any HTTP 5xx Server Error Codes, using a Regex value of `5[0-9][0-9]`.\
 \
-**For Headers,** the format of the Header string which the Regex is applied against is {Header Name}={Header Value}, e.g. "Content-Type=application/json".
+**For Headers**, the format of the Header string which the Regex is applied against is {Header Name}={Header Value}. For example `"Content-Type=application/json"`.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (750).png" alt=""><figcaption></figcaption></figure>

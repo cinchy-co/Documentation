@@ -12,7 +12,7 @@ Avro is an open source data serialization system that helps with data exchange b
 
 Some of the benefits for using AVRO as a data format are:
 
-* It is compact
+* It's compact
 * It has a direct mapping to/from JSON
 * It's fast
 * It has bindings for a wide variety of programming languages.
@@ -46,7 +46,7 @@ To set up the Apache AVRO connection to a Kafka Schema Registry, you will need t
 | Name                         | Description                                                                                                                                                                                 |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "bootstrapServers"           | **Mandatory.** List the Kafka bootstrap servers in a comma-separated list. Should be in the form of **host:port**                                                                           |
-| "url"                        | **This is required if your data follows a schema when serialized in AVRO.** It is a comma-separated list of URLs for schema registry instances that are used to register or lookup schemas. |
+| "url"                        | **This is required if your data follows a schema when serialized in AVRO.** It's a comma-separated list of URLs for schema registry instances that are used to register or lookup schemas. |
 | "basicAuthCredentialsSource" | Specifies the Kafka configuration property "schema.registry.basic.auth.credentials.source" that provides the basic authentication credentials. This can be **"UserInfo" \| "SaslInherit"**  |
 | "basicAuthUserInfo"          | Basic Auth credentials specified in the form of **username:password**                                                                                                                       |
 | "sslKeystorePassword"        | The client keystore (PKCS#12) password                                                                                                                                                      |
