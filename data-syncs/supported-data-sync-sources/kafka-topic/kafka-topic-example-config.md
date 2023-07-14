@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this example, we are syncing **from a Kafka Topic** source **to a Cinchy Table** target.
+This example syncs **from a Kafka Topic** source **to a Cinchy Table** target.
 
 We want to sync the following data from Kafka and map it to the appropriate column in the **"Sync Target 2"** table in the **"Kafka Sync"** domain.
 
@@ -40,11 +40,11 @@ Tip: Click on an image in this document to enlarge it.
 
 ### Destination tab
 
-Your destination tab should be set to **"Cinchy Table"**, and have the following information _(Image 2):_
+Your destination tab should be set to **Cinchy Table**, and have the following information _(Image 2):_
 
-**Domain:** The domain where your destination table resides. In our example we are using the **"Kafka Sync" domain.**
+**Domain:** The domain where your destination table resides. This example uses the **"Kafka Sync" domain.**
 
-**Table:** The name of your destination table. In our example we are using the **"Sync Target 2" table.**
+**Table:** The name of your destination table. This example uses the **"Sync Target 2" table.**
 
 **Degree of Parallelism:** This is the number of parallel batch inserts and updates that can be run. Set this to **1** for our example.
 

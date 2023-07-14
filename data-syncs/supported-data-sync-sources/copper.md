@@ -4,7 +4,9 @@
 
 [Copper](https://www.copper.com/) is a **Customer Relationship Management (CRM)** software. Copper is a tool focused on automation and simplicity, most known for its Google Workspace integration.
 
-**Example Use Case:** You have customer information currently sitting in the Copper CRM software. You want to sync this data into Cinchy through a batch sync to liberate your data from the silo.
+## Example use case
+
+You have customer information currently sitting in the Copper CRM software. You want to sync this data into Cinchy through a batch sync to liberate your data from the silo.
 
 {% hint style="success" %}
 The Copper source supports batch syncs.
@@ -45,23 +47,21 @@ The following parameters will help to define your data sync source and how it fu
 | Data Type   | **Mandatory.** The data type of the column values.                                                            | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                             |         |
 
-
-
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
-| Parameter   | Description                                                                                                                           | Example |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Parameter   | Description                                                                       | Example |
+| ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
-| Replacement | What you want to replace your pattern with.                                                                                           |         |
+| Replacement | What you want to replace your pattern with.                                       |         |
 
 {% hint style="info" %}
 Note that you can have more than one String Replacement
@@ -81,7 +81,7 @@ You have the option to add a source filter to your data sync. Please review the 
 
 ## Next steps
 
-* Configure your [Destination](../supported-data-sync-destinations/)
-* Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
-* Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* Click **Jobs > Start a Job** to begin your sync.
+- Configure your [Destination](../supported-data-sync-destinations/)
+- Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
+- Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
+- Click **Jobs > Start a Job** to begin your sync.

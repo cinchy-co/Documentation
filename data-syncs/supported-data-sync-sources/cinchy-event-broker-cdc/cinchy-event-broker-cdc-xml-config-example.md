@@ -23,7 +23,9 @@ The below example shows what the source parameters would look like in XML.
 
 ## Full example
 
-**Example Use Case:** You want to set up a **real-time sync** between two Cinchy tables so that any time specific data is added, updated, or deleted from Table A it gets propagated to Table B. As long as you enable change notifications on your Cinchy table, you can do so by setting up a data sync and listener config with your source as the Cinchy Event Broker/CDC.
+### Use case
+
+You want to set up a **real-time sync** between two Cinchy tables so that any time specific data is added, updated, or deleted from Table A it gets propagated to Table B. As long as you enable change notifications on your Cinchy table, you can do so by setting up a data sync and listener config with your source as the Cinchy Event Broker/CDC.
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>

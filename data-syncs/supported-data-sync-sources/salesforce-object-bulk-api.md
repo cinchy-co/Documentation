@@ -4,10 +4,10 @@
 
 [Salesforce](https://www.salesforce.com/ca/products/what-is-salesforce/) is a cloud-based CRM software designed for service, marketing, and sales.
 
-Salesforce objects are database tables that permit you to store data that is specific to an organization. Salesforce objects are of two types:
+Salesforce objects are database tables that permit you to store data that's specific to an organization. Salesforce objects are of two types:
 
 * Standard Objects: Standard objects are the kind of objects that are provided by salesforce.com such as users, contracts, reports, dashboards, etc.
-* Custom Objects: Custom objects are those objects that are created by users. They supply information that is unique and essential to their organization. They are the heart of any application and provide a structure for sharing data.
+* Custom Objects: Custom objects are those objects that are created by users. They supply information that's unique and essential to their organization. Custom objects are the heart of any application and provide a structure for sharing data.
 
 {% hint style="success" %}
 The Salesforce Object (Bulk API) source supports batch syncs.

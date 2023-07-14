@@ -4,7 +4,9 @@
 
 Cinchy queries are commonly used data sync sources that leverage the platform's Saved Query functionality. For more on creating Saved Queries,[ see the Saved queries page](../../../guides-for-using-cinchy/builder-guides/saved-queries.md).
 
-**Example Use Case:** You want to set up batch sync between a **Cinchy Query** and a **Cinchy Table**. You query polls for any unapproved timesheets, out of office requests, or sick hours and, if found, adds them to an "Open Approval Tasks" table.
+## Example use case 
+
+You want to set up batch sync between a **Cinchy Query** and a **Cinchy Table**. You query polls for any unapproved timesheets, out of office requests, or sick hours and, if found, adds them to an "Open Approval Tasks" table.
 
 
 

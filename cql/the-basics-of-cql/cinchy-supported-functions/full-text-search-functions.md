@@ -239,7 +239,7 @@ WHERE CONTAINS([summary], @SearchWord)
 
 ### NEAR
 
-You can use this modifier to return results with terms that appear near each other (that is, within the same data cell).
+You can use this modifier to return results with terms that appear near each other (like within the same data cell).
 
 #### General Syntax
 

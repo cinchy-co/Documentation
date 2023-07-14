@@ -135,7 +135,7 @@ To set up a retry specification:
 4\. Define your Retry Conditions. You must define the conditions under which a retry should be attempted. For the Retry to trigger, **at least one** of the "Retry Conditions" has to evaluate to true.
 
 {% hint style="info" %}
-Retry conditions are only evaluated if the response code is not 2xx Success.
+Retry conditions are only evaluated if the response code isn't 2xx Success.
 {% endhint %}
 
 Each Retry Condition contains **one or more "Attribute Match" sections**. This defines a Regex to evaluate against a section of the HTTP response. The following are the three areas of the HTTP response that can be inspected:
