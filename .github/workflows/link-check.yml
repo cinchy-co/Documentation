@@ -23,6 +23,7 @@ jobs:
             https://support.google.com,
             https://www.snowflake.com/
           verbose: 'error'
+          resolve_before_filtering: 'true'
           max_retry_time: 10
           max_retries: 3
           max_depth: -1
