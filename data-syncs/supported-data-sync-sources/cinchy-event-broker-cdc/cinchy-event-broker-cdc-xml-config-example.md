@@ -74,6 +74,8 @@ The following is the Cinchy CDC listener config Topic and Connection Attributes 
 
 #### Connection Attributes
 
+Insert the text below for connection attributes:
+
 ```
 {}
 ```
