@@ -6,12 +6,14 @@ The Cinchy Event Broker/CDC (Change Data Capture) source allows you to capture d
 
 ### Use Case
 
-To mitigate the labour and time costs of hosting information in a silo, as well as remove the costly integration tax plaguing your IT teams, you want to connect your legacy systems into Cinchy to take advantage of the platform's sync capabilities. To do so, you want to set up a real-time sync between a Cinchy Table and Salesforce that updates Salesforce any time data is added, updated, or deleted on the Cinchy side. As long as you enable change notifications on your Cinchy table, you can do so by setting up a data sync and listener config with your source as the Cinchy Event Broker/CDC.
+To mitigate the labour and time costs of hosting information in a silo and remove the costly integration tax plaguing your IT teams, you want to connect your legacy systems into Cinchy to take advantage of the platform's sync capabilities.
+
+To do this, you can set up a real-time sync between a Cinchy Table and Salesforce that updates Salesforce any time data is added, updated, or deleted on the Cinchy side. If you enable change notifications on your Cinchy table, you can set up a data sync and listener config with your source as the Cinchy Event Broker/CDC.
 
 {% hint style="success" %}
 The Cinchy Event Broker/CDC supports both batch syncs and real-time syncs (most common).
 
-Remember to set up your Listener Config if you are creating a real-time sync.
+Remember to set up your listener config if you are creating a real-time sync.
 {% endhint %}
 
 ## Info tab
@@ -20,7 +22,11 @@ You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
 
-<table><thead><tr><th>Parameter</th><th width="236.33333333333331">Description</th><th>Example</th></tr></thead><tbody><tr><td>Title</td><td><strong>Mandatory.</strong> Input a name for your data sync</td><td>CDC</td></tr><tr><td>Variables</td><td><strong>Optional.</strong> Review our documentation on <a href="../../building-data-syncs/advanced-settings/variables.md">Variables here </a>for more information about this field.</td><td></td></tr><tr><td>Permissions</td><td>Data syncs are role based access systems where you can give specific groups read, write, execute, and/or all of the above with admin access. <strong>Inputting at least an Admin Group is mandatory.</strong></td><td></td></tr></tbody></table>
+| Parameter   | Description                                                                                                                                                                               | Example |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Title       | Mandatory. Input a name for your data sync                                                                                                                                                | CDC     |
+| Variables   | Optional. Review our documentation on Variables here for more information about this field.                                                                                               |
+| Permissions | Data syncs are role based access systems where you can give specific groups read, write, execute, and/or all the above with admin access. Inputting at least an Admin Group is mandatory. |
 
 <figure><img src="../../../.gitbook/assets/image (688).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
@@ -38,63 +44,66 @@ The following parameters will help to define your data sync source and how it fu
 {% tab title="Listener Configuration" %}
 To set up a real-time sync, you must configure your Listener values. You can do so through the Connections UI.
 
-Note that If there is more than one listener associated with your data sync, you will need to configure the addition listeners via [the Listener Configuration table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
+If there is more than one listener associated with your data sync, you will need to configure the addition listeners via [the Listener Configuration table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
 
 If you are creating a CDC listener config for a **Cinchy Event Triggered REST API data source**, pay in mind the following unique constraints:
 
-* **Column names** in the listener config shouldn't contain spaces. If they do, they will be automatically removed. For example, a column named **First Name** will become **@FirstName**.
-* The replacement variable names are **case sensitive.**
-* **Column names** in the listener config shouldn't be prefixes of other column names. E_.g. if you have a column called **Name**, you shouldn't have another called "Name2" as the value of @Name2 may end up being replaced by the value of @Name suffixed with a `2`.
+- **Column names** in the listener config shouldn't contain spaces. If they do, they will be automatically removed. For example, a column named **First Name** will become **@FirstName**.
+- The replacement variable names are **case sensitive.**
+- **Column names** in the listener config shouldn't be prefixes of other column names. For example, if you have a column called **Name**, you shouldn't have another called "Name2" as the value of @Name2 may end up being replaced by the value of @Name suffixed with a `2`.
 
 #### Reset behaviour
 
-| Parameter             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Example |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| Parameter             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Example |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | **Auto Offset Reset** | <p><strong>Earliest, Latest or None.</strong> <br><br>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br></p><p><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed. This is the typical configuration.<br><br><strong>None</strong> won't read start reading any events.<br><br>You are able to switch between Auto Offset Reset types after your initial configuration through the process outlined <a href="../../error-logging-and-troubleshooting.md">here.</a></p> | None    |
 
 #### Topic JSON
 
+A Topic JSON is necessary for all real-time syncs. Enter your JSON parameters through the Connections UI, or edit them directly through [the Listener Configuration table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md). 
+
 | Parameter  | Description                                                                                                                                                                                                                                                                                                                                                                             | Example                                                                                |
-|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | Table GUID | **Mandatory.** The GUID of the table whose notifications you wish to consume. You can find this in the **Design Table** screen.                                                                                                                                                                                                                                                         | 16523e54-4242-4156-835a-0e572e862304                                                   |
 | Column(s)  | <p><strong>Mandatory.</strong> The names of the column(s) you wish to include in your sync.<br><br><strong>Note:</strong> If you will be using the <a href="https://cli.docs.cinchy.com/builder-guide/configuring-a-data-sync/supported-data-sources/cinchy-event-broker">runQuery=true</a> parameter in your data sync, you only need to include the Cinchy Id in the topic JSON. </p> | <p>Name<br>Age</p>                                                                     |
 | BatchSize  | The desired result batch size. This will **default to 1** if not passed in. The maximum batch size is 1000; using a number higher than that will result in a **Bad Request** response.                                                                                                                                                                                                  | 10                                                                                     |
-| Filter     | <p><strong>Optional.</strong> When CDC is enabled, you can set a filter on columns where you are capturing changes to receive specific data.<br><br>More information on using Filters can be found in <a href="./#old-vs-new-filter">Appendix B.</a></p>                                                                                                                       | "filter": "New.\[Approval State] = 'Approved' AND Old.\[Approval State] != 'Approved'" |
+| Filter     | <p><strong>Optional.</strong> When CDC is enabled, you can set a filter on columns where you are capturing changes to receive specific data.<br><br>More information on using Filters can be found in <a href="./#old-vs-new-filter">Appendix B.</a></p>                                                                                                                                | "filter": "New.\[Approval State] = 'Approved' AND Old.\[Approval State] != 'Approved'" |
 
 #### Connection Attributes
 
-You don't need to provide Connections Attributes when using the Cinchy CDC Stream Source. However if you inputting your configuration via the Listener Config table, rather than through the Connections UI, you can't leave the field blank. Instead, insert the below text into the column:
+You don't need to provide Connections Attributes when using the Cinchy CDC Stream Source. 
+
+If you're inputting your configuration via the Listener Config table, you must insert the below text into the column:
 
 ```
 {}
 ```
+
 {% endtab %}
 
 {% tab title="Schema" %}
 **The**[ **Schema** ](../../building-data-syncs/columns-and-mappings/#2.-schema-columns)**section** is where you define which source columns you want to sync in your connection. You have the option to add in a Standard, Calculated, Conditional, or JavaScript column. You can repeat the values for multiple columns.
 
 | Parameter   | Description                                                                                                   | Example |
-|-------------|---------------------------------------------------------------------------------------------------------------|---------|
+| ----------- | ------------------------------------------------------------------------------------------------------------- | ------- |
 | Name        | **Mandatory.** The name of your column as it appears in the source.                                           | Name    |
 | Alias       | **Optional.** You may choose to use an alias on your column so that it has a different name in the data sync. |         |
 | Data Type   | **Mandatory.** The data type of the column values.                                                            | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                             |         |
 
-
-
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
 | Parameter   | Description                                                                       | Example |
-|-------------|-----------------------------------------------------------------------------------|---------|
+| ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
 | Replacement | What you want to replace your pattern with.                                       |         |
 
@@ -116,11 +125,11 @@ You have the option to add a source filter to your data sync. Please review the 
 
 ## Next steps
 
-* Configure your [Destination](../../supported-data-sync-destinations/).
-* Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
-* Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* If more than one listener is needed for a real-time sync, configure it/them via [the Listener Config table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
-* To run a real-time sync, enable your Listener from [the Execution tab.](../../building-data-syncs/)
+- Configure your [Destination](../../supported-data-sync-destinations/).
+- Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
+- Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
+- If more than one listener is needed for a real-time sync, configure it/them via [the Listener Config table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
+- To run a real-time sync, enable your Listener from [the Execution tab.](../../building-data-syncs/)
 
 ## Appendix A - Source Parameters
 
@@ -162,7 +171,7 @@ The **messageKeyExpression** property allows you to change the default message k
 
 #### Possible Use Case
 
-* Ensuring records with the same message key can be updated with the proper ordering to reflect an accurate collaboration log history.
+- Ensuring records with the same message key can be updated with the proper ordering to reflect an accurate collaboration log history.
 
 #### Example Syntax
 
