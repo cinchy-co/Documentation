@@ -10,20 +10,6 @@ jobs:
     steps:
       - name: Check for broken links
         id: link-report
-        uses: ScholliYT/Broken-Links-Crawler-Action@v3
+        uses: untitaker/hyperlink@0.1.29
         with:
-          website_url: 'https://platform.docs.cinchy.com/'
-          exclude_url_prefix: >
-            mailto:,https://www.linkedin.com,
-            https://linkedin.com, https://jshint.co, 
-            https://www.salesforce.com/, 
-            https://org.api.crm.dynamics.com,
-            https://apisalesdemo4.successfactors.com, 
-            https://support.cloudflare.com',
-            https://support.google.com,
-            https://www.snowflake.com/
-          verbose: 'error'
-          resolve_before_filtering: 'true'
-          max_retry_time: 10
-          max_retries: 3
-          max_depth: -1
+          args: public/ --sources src/
