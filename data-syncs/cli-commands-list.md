@@ -1,4 +1,4 @@
-# CLI Commands List
+# CLI commands list
 
 ## Overview
 
@@ -6,7 +6,7 @@ This page provides a list of the commands you can use in tandem with the Cinchy 
 
 Before attempting to use any of the below commands, [ensure that you have installed the CLI.](installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
 
-## Global Command List
+## Global command list
 
 <!-- vale off -->
 
@@ -24,7 +24,7 @@ Before attempting to use any of the below commands, [ensure that you have instal
 
 ## Parameters
 
-### SyncData Parameters
+### SyncData parameters
 
 <!-- vale off -->
 
@@ -45,7 +45,7 @@ Before attempting to use any of the below commands, [ensure that you have instal
 
 <!-- vale on -->
 
-### ExportData Parameters
+### ExportData parameters
 
 <!-- vale off -->
 
