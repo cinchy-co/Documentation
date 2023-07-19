@@ -72,7 +72,7 @@ If there is more than one listener associated with your data sync, you will need
 
 <figure><img src="../../.gitbook/assets/image (713).png" alt=""><figcaption><p>Image 6: Sync Actions</p></figcaption></figure>
 
-7. [**The Post Sync tab**](advanced-settings/post-sync-scripts.md) is an optional field that utilizes [Cinchy Query Language (CQL)](broken-reference) to perform actions on your resulting data _(Image 7)_. For example, you could set up a post sync script to push retrieved data values into a specific Cinchy table.
+7. [**The Post Sync tab**](advanced-settings/post-sync-scripts.md) is an optional field that utilizes [Cinchy Query Language (CQL)](/cql/the-basics-of-cql/README.md) to perform actions on your resulting data _(Image 7)_. For example, you could set up a post sync script to push retrieved data values into a specific Cinchy table.
 
 <figure><img src="../../.gitbook/assets/image (660).png" alt=""><figcaption><p>Image 7: Post Sync Scripts</p></figcaption></figure>
 
@@ -144,13 +144,13 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 ### Set Up a listener config (real-time syncs)
 
-You must set up a listener configuration when doing a real-time data sync. You will configure your Event Stream Source with your data sync information. You can review an more on the [Listener Config here.](broken-reference)
+You must set up a listener configuration when doing a real-time data sync. You will configure your Event Stream Source with your data sync information. You can review an more on the [Listener Config here.](/data-syncs/)
 
 1. Navigate to the **Listener Config table** in Cinchy _(Image 12)._
 
 <figure><img src="../../.gitbook/assets/image (503).png" alt=""><figcaption><p>Image 12: Listener Config table</p></figcaption></figure>
 
-2. In a new row, add in your listener config configuration data. [Review the documentation here](../supported-real-time-sync-stream-sources/) for more information.
+2. In a new row, add in your listener config configuration data. [Review the documentation here](../supported-real-time-sync-stream-sources/the-listener-configuration-table.md) for more information.
 3. Make sure to set the config to **Enabled**.
 
 ## Examples

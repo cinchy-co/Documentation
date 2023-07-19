@@ -10,10 +10,6 @@ An organization wants to use the Dun & Bradstreet API for enriching company info
 
 ## Define the connection
 
-{% hint style="success" %}
-The options available to the REST API (Cinchy Event Triggered) connector are identical to the REST API source connector which can be found [here](broken-reference).
-{% endhint %}
-
 The following sections in the Source configuration of the Connections experience can reference attributes of the CDC Event as parameters:
 
 * **Auth Request -> Body**
