@@ -1,5 +1,6 @@
 name: Broken link check (Daily)
 on:
+  push:
   schedule:
     - cron: '0 0 * * *'
 
@@ -8,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Check for broken links
     steps:
-      - name: Check for broken links
-        id: link-report
-        uses: untitaker/hyperlink@0.1.29
+      - uses: actions/checkout@v3
+      - uses: filiph/linkcheck@master
         with:
-          args: public/ --sources src/
+          arguments: https://platform.docs.cinchy.com/
+  
+          # https://github.com/filiph/linkcheck
