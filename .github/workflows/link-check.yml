@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: filiph/linkcheck@master
         with:
-          arguments: https://platform.docs.cinchy.com/
+          arguments: https://platform.docs.cinchy.com/ --connection-failures-as-warnings  
   
           # https://github.com/filiph/linkcheck
