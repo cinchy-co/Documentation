@@ -2,9 +2,10 @@
 
 ## Overview
 
-You are able to set up your stream source configurations for real-time syncs via the Connections UI, and you can find that information on the relative [Data Sync Source page.](../supported-data-sync-sources/)
+The Listener Configuration table lets you set up your stream source configurations for real-time syncs via the Connections UI, and you can find that information on the relative [Data Sync Source page.](../supported-data-sync-sources/). It's also important to track your real-time syncs. As of Cinchy v5.7, you can now set up your listener configuration on the **Sources** tab under the **Listener** section of the Connections experience.
+If your data sync requires more than one listener, you must set up additional configurations via the Listener Config table on your Cinchy platform. 
 
-If your data sync requires more than one listener, however, you must set up additional configurations via the Listener Config table on your Cinchy platform. You can also use this table to manage and review all the configurations currently set up on your system _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
+You can also use this table to manage and review all the configurations currently set up on your system _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
 
 <figure><img src="../../.gitbook/assets/image (468).png" alt=""><figcaption><p>Image 1: The Listener Config table</p></figcaption></figure>
 

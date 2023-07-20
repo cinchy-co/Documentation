@@ -181,8 +181,6 @@ This example will walk you through option one.
 
 {% hint style="info" %}
 Full load processing means that the entire amount of data is imported iteratively the first time a data source is loaded into the data studio. Delta processing means loading the data incrementally, loading the source data at specific pre-established intervals.
-
-[Read more about Sync Behaviour types here.](broken-reference)
 {% endhint %}
 
 1.  Set the following parameters _(Image 14):_
@@ -338,7 +336,7 @@ Tip: Click on the below image to enlarge it.
 Be sure when you are pasting into the Config XML column that you double click into the column before pasting, otherwise each line of the XML will appear as an individual record in the Data Sync Configurations table.
 {% endhint %}
 
-3. To execute your Data Sync you will use the CLI. If you don't have this downloaded, [refer to the documentation here.](broken-reference)
+3. To execute your Data Sync you will use the CLI. If you don't have this downloaded, [refer to the CLI commands list page.](/data-syncs/cli-commands-list.md)
 4. In this example we will be using the following Data Sync Commands, however, for the full list of commands click [here](https://app.gitbook.com/@cinchy/s/draft-data-sync/~/drafts/-MEYg-7T93WGsJ-TwPLy/builder-guide/data-sync-commands).
    <!-- vale off -->
    | Parameter     | Description                                                                                                                                                                              | Example                                                  |

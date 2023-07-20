@@ -14,10 +14,6 @@ The Worker and Listener are important components for using Real-Time Data syncs.
 **In a Kubernetes deployment of the Cinchy Platform**, the Worker/Listener is automatically installed. The below steps refer only to an IIS deployment of the Cinchy Platform.
 {% endhint %}
 
-{% hint style="warning" %}
-**Before proceeding, make sure that you have read the** [**Prerequisites**](broken-reference) **section.**
-{% endhint %}
-
 ## Prerequisites
 
 - Windows Server 2012+

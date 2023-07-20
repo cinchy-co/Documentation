@@ -35,7 +35,7 @@ Fill in the following attributes for a Standard Column _(Image 1)_:
   - **Boolean**
 
 {% hint style="warning" %}
-If a source column (of any type) is syncing into a Cinchy Target Table[ link column](broken-reference), the source column must be **dataType="Text"**.
+If a source column (of any type) is syncing into a Cinchy Target Table link column, the source column must be **dataType="Text"**.
 {% endhint %}
 
 - **Description:** Describe your column
