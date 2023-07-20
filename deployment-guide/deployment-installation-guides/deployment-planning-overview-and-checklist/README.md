@@ -58,17 +58,17 @@ Starting in Cinchy v5.4, you will have the option between Alpine or Debian based
   - **"5.x.x-debian" - Debian**
     {% endhint %}
 
-- [ ] Access the [deployment repositories](deployment-prerequisites/#6.-access-to-cinchy-artifacts) and copy them into your own repository (GitHub or similar).
+- [ ] Access the [deployment repositories](deployment-prerequisites/README.md#access-to-cinchy-artifacts) and copy them into your own repository (GitHub or similar).
 
 ### IIS checklist
 
 **If you will be running on IIS,** please review the following checklist:
 
-- [ ] Ensure that you have an instance of [SQL Server 201](deployment-prerequisites/#2.1-general-requirements)7+
-- [ ] Ensure that you have [a Windows Server 2012+ machine with IIS 7.5+ installed](deployment-prerequisites/#2.1-general-requirements)
+- [ ] Ensure that you have an instance of [SQL Server 201](deployment-prerequisites/README.md#general-requirements)7+
+- [ ] Ensure that you have [a Windows Server 2012+ machine with IIS 7.5+ installed](deployment-prerequisites/README.md#general-requirements)
 - [ ] [Install .net core Hosting bundle Version 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
   - Specifically, install: ASP.NET Core/.NET Core Runtime & Hosting Bundle
-- [ ] Ensure that you review the minimum [web server hardware recommendations](deployment-prerequisites/#2.2-system-requirements)
-- [ ] Ensure that you review the minimum [database server hardware recommendations](deployment-prerequisites/#2.2-system-requirements)
-- [ ] Define your [application storage requirements.](deployment-architecture-overview/#3.3-application-storage-requirements)
-- [ ] Ensure you have access to the[ release binary.](deployment-prerequisites/#2.1-access-the-binary)
+- [ ] Ensure that you review the minimum [web server hardware recommendations](deployment-prerequisites/README.md#system-requirements)
+- [ ] Ensure that you review the minimum [database server hardware recommendations](deployment-prerequisites/README.md#system-requirements)
+- [ ] Define your [application storage requirements.](deployment-architecture-overview/README.md#application-storage-requirements)
+- [ ] Ensure you have access to the[ release binary.](deployment-prerequisites/README.md#access-the-artifacts)

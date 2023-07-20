@@ -123,7 +123,7 @@ You can also use **keyword filters** to drill down into a more specific subset o
 4. In the **Action** section you will define what happens if the trigger condition is met _(Image 13)._ Enter the following information to set up your **Action:**
 
 * **Action Name**
-* [**Destination** ](setting-up-alerts.md#3.1-create-your-destination)
+* [**Destination** ](setting-up-alerts.md#create-your-destination)
 * **Message Subject:** In the case of an email alert, this will be the email subject line.
 * **Message:** In the case of an email alert, this will be the email body.
 * **Perform Action:** If you’re using a bucket-level monitor, decide whether the action is performed per execution or per alert.
@@ -156,7 +156,7 @@ This is how our example monitor will appear; it shows when in the last 15 days o
 
 <figure><img src="../../../../.gitbook/assets/image (517).png" alt=""><figcaption><p>Image 15: Example monitor</p></figcaption></figure>
 
-2. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is more than one stderr in our Connections stream _(Image 16)._ Input the following:
+2. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#create-your-destination) In this example we want to be alerted when there is more than one stderr in our Connections stream _(Image 16)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**
@@ -183,7 +183,7 @@ This is how our example monitor will appear; it shows when in the last 30 days o
 
 <figure><img src="../../../../.gitbook/assets/image (537).png" alt=""><figcaption><p>Image 18: Example Monitor</p></figcaption></figure>
 
-2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is more than 100 restarts across our instance _(Image 19)._ Input the following:
+2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#create-your-destination) In this example we want to be alerted when there is more than 100 restarts across our instance _(Image 19)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**
@@ -210,7 +210,7 @@ This is how our example monitor will appear (note that there are no instances of
 
 <figure><img src="../../../../.gitbook/assets/image (70).png" alt=""><figcaption><p>Image 21: Example Monitor</p></figcaption></figure>
 
-1. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to the defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is at least one 400 status code across out instance _(Image 22)._ Input the following:
+1. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to the defined [Recipient(s).](setting-up-alerts.md#create-your-destination) In this example we want to be alerted when there is at least one 400 status code across out instance _(Image 22)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**
