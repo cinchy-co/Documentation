@@ -80,7 +80,7 @@ Any existing tables created before installing Cinchy Platform v4.19.0 are standa
 Currently there is no functionality tied directly to Data Security Classification - the tagging is just for internal auditing purposes. Future security settings will be tied to Data Security Classifications, rather than simply done at a column level.
 {% endhint %}
 
-* **Advanced Settings:** Select any checkboxes that pertain to your column. [See here](columns.md#2.4-common-parameters) for more information about these parameters.
+- **Advanced Settings:** Select any checkboxes that pertain to your column. [See here](columns.md#common-parameters) for more information about these parameters.
 
 {% hint style="info" %}
 You may have further mandatory or optional data to input depending on your selected Data Type.

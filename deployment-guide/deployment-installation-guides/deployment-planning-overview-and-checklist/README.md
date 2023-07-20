@@ -46,19 +46,19 @@ The main differences between a Kubernetes based deployment and an IIS deployment
 
 **If you will be running on Kubernetes**, please review the following checklist:
 
-* [ ] [Which database](deployment-architecture-overview/#2.-choosing-a-database) will you use?
-* [ ] Define your [sizing.](deployment-architecture-overview/#3.-sizing-considerations-and-requirements)
-* [ ] Define your [cluster configuration](deployment-architecture-overview/kubernetes-deployment-architecture.md#3.1-cluster-configuration).
-* [ ] How many [clusters will you need](deployment-architecture-overview/kubernetes-deployment-architecture.md#3.1-cluster-configuration)?
-  * [ ] Will you be sharing from an existing cluster?
-  * [ ] Will you be running multiple environments on a single cluster?
-  * [ ] Will you be using Cinchy's recommended cluster components or your own?
-* [ ] Define your [object storage requirements.](deployment-architecture-overview/#3.4-object-storage-requirements)
-  * [ ] Create an [S3 compatible bucket](deployment-architecture-overview/#3.4-object-storage-requirements).
-* [ ] Create your [SSL Certs](deployment-prerequisites/#2.-ssl-certs) (With the option to use [Self-Signed](../kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)).
-* [ ] Define your [Secrets Management,](deployment-prerequisites/#3.-secrets-management) if desired.
-* [ ] Define whether you will use Cinchy's [Docker Images ](deployment-prerequisites/#5.-docker-images)or your own.
-  * [ ] If using Cinchy’s, [pull the images.](deployment-prerequisites/#5.1-accessing-cinchys-docker-images)
+- [ ] [Which database](deployment-architecture-overview/README.md/#choose-a-database) will you use?
+- [ ] Define your [sizing.](deployment-architecture-overview/README.md/#sizing-considerations-and-requirements)
+- [ ] Define your [cluster configuration](deployment-architecture-overview/kubernetes-deployment-architecture.md#cluster-configuration).
+- [ ] How many [clusters will you need](deployment-architecture-overview/kubernetes-deployment-architecture.md#cluster-configuration)?
+  - [ ] Will you be sharing from an existing cluster?
+  - [ ] Will you be running multiple environments on a single cluster?
+  - [ ] Will you be using Cinchy's recommended cluster components or your own?
+- [ ] Define your [object storage requirements.](deployment-architecture-overview/README.md/#object-storage-requirements)
+  - [ ] Create an [S3 compatible bucket](deployment-architecture-overview/README.md#object-storage-requirements).
+- [ ] Create your [SSL Certs](deployment-prerequisites/README.md#ssl-certs) (With the option to use [Self-Signed](../kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)).
+- [ ] Define your [Secrets Management,](deployment-prerequisites/README.md#secrets-management#secrets-management) if desired.
+- [ ] Define whether you will use Cinchy's [Docker Images ](deployment-prerequisites/README.md#docker-images)or your own.
+  - [ ] If using Cinchy’s, [pull the images.](deployment-prerequisites/README.md#access-cinchy-docker-images)
 
 {% hint style="info" %}
 Starting in Cinchy v5.4, you will have the option between Alpine or Debian based image tags for the listener, worker, and connections. **Using Debian tags will allow a Kubernetes deployment to be able to connect to a DB2 data source, and that option should be selected if you plan on leveraging a DB2 data sync.**
