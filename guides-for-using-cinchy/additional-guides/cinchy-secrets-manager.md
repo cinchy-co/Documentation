@@ -14,7 +14,7 @@ You can use secrets stored in this table when configuring data syncs:
 * Within a REST Header, URL, or Body;
 * In the Listener Configuration;
 
-Cinchy has also implemented a new [API endpoint](broken-reference) for the retrieval of your secrets.
+Cinchy has also implemented a new [API endpoint](/api-guide/api-overview/README.md) for the retrieval of your secrets.
 
 ## Configuring a secret
 
@@ -37,7 +37,7 @@ To create a secret in Cinchy:
 
 ## Calling a secret via API
 
-Cinchy has implemented a new [API endpoint](broken-reference) for the retrieval of your secrets. Using the below endpoint, fill in your \<base-url>, \<secret-name>, and the \<domain-name> to retrieve the referenced secret.
+Cinchy has implemented a new [API endpoint](/api-guide/api-overview/README.md) for the retrieval of your secrets. Using the below endpoint, fill in your \<base-url>, \<secret-name>, and the \<domain-name> to retrieve the referenced secret.
 
 This endpoint works with Cinchy’s [Personal Access Token](../user-guides/user-preferences/personal-access-tokens.md) capability, as well as Access Tokens retrieved from your IDP.
 
