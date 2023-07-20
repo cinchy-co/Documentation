@@ -5,7 +5,7 @@
 Opensearch comes with the ability to set up alerts based on any number of monitors. You can then push these alerts via email, should you desire.
 
 {% hint style="success" %}
-Prior to setting up a monitor or alert, ensure that you have [added your data source as an index pattern](setting-up-alerts.md#2.1-setting-up-an-index).
+Prior to setting up a monitor or alert, ensure that you have [added your data source as an index pattern](setting-up-alerts.md#setting-up-alerts).
 {% endhint %}
 
 Definitions:
@@ -46,7 +46,7 @@ Your destination will be where you want your alerts to be pushed to. Opensearch 
 * **Encryption**
 
 {% hint style="danger" %}
-Ensure that you[ authenticate the Sender](setting-up-alerts.md#3.2-authenticate-your-sender), else your alert will not work.
+Ensure that you[ authenticate the Sender](setting-up-alerts.md#12-authenticate-your-sender), else your alert will not work.
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/image (249).png" alt=""><figcaption><p>Image 4: Configure your Sender</p></figcaption></figure>
@@ -120,7 +120,7 @@ You can also use **keyword filters** to drill down into a more specific subset o
 4\. In the **Action** section you will define what happens if the trigger condition is met _(Image 13)._ Enter the following information to set up your **Action:**
 
 * **Action Name**
-* [**Destination** ](setting-up-alerts.md#3.1-create-your-destination)
+* [**Destination** ](setting-up-alerts.md#11-create-your-destination)
 * **Message Subject:** In the case of an email alert, this will be the email subject line.
 * **Message:** In the case of an email alert, this will be the email body.
 * **Perform Action:** If you’re using a bucket-level monitor, decide whether the action is performed per execution or per alert.
@@ -141,7 +141,7 @@ You can also use **keyword filters** to drill down into a more specific subset o
 
 In this example, we are pushing an alert based on errors. We will monitor our Connections stream for any instance of 'error', and push out an alert when our trigger threshold is hit.
 
-1. First we create our [Monitor](setting-up-alerts.md#3.3-create-your-monitor) by defining the following _(Image 14):_
+1. First we create our [Monitor](setting-up-alerts.md#13-create-your-monitor) by defining the following _(Image 14):_
 
 * **Index:** In this example we are looking specifically at Connections.
 * **Time Field**
@@ -154,7 +154,7 @@ This is how our example monitor will appear; it shows when in the last 15 days o
 
 <figure><img src="../../../../.gitbook/assets/image (537).png" alt=""><figcaption><p>Image 15: Example monitor</p></figcaption></figure>
 
-2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is more than one stderr in our Connections stream _(Image 16)._ Input the following:
+2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#14-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#11-create-your-destination) In this example we want to be alerted when there is more than one stderr in our Connections stream _(Image 16)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**
@@ -168,7 +168,7 @@ The trigger threshold will be visible on your monitoring graph as a red line.
 
 In this example, we are pushing an alert based on the kubectl.kubernetes.io/restartedAt annotation, which updates whenever your pod restarts. We will monitor this annotation across our entire product-mssql instance, and push out an alert when our trigger threshold is hit.
 
-1. First we create our [Monitor](setting-up-alerts.md#3.3-create-your-monitor) by defining the following _(Image 17):_
+1. First we create our [Monitor](setting-up-alerts.md#13-create-your-monitor) by defining the following _(Image 17):_
 
 * **Index:** In this example we are looking at our entire product-mssql instance.
 * **Time Field**
@@ -181,7 +181,7 @@ This is how our example monitor will appear; it shows when in the last 30 days o
 
 <figure><img src="../../../../.gitbook/assets/image (459).png" alt=""><figcaption><p>Image 18: Example Monitor</p></figcaption></figure>
 
-2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is more than 100 restarts across our instance _(Image 19)._ Input the following:
+2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#14-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#11-create-your-destination) In this example we want to be alerted when there is more than 100 restarts across our instance _(Image 19)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**
@@ -195,7 +195,7 @@ The trigger threshold will be visible on your monitoring graph as a red line.
 
 In this example, we are pushing an alert based on status codes. We will monitor our entire instance for 400 status codes and push out an alert when our trigger threshold is hit.
 
-1. First we create our [Monitor](setting-up-alerts.md#3.3-create-your-monitor) by defining the following _(Image 20):_
+1. First we create our [Monitor](setting-up-alerts.md#13-create-your-monitor) by defining the following _(Image 20):_
 
 * **Index:** In this example we are looking across out entire product-mssql-1 instance.
 * **Time Field**
@@ -208,7 +208,7 @@ This is how our example monitor will appear (note that there are no instances of
 
 <figure><img src="../../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Image 21: Example Monitor</p></figcaption></figure>
 
-2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#3.4-add-a-trigger). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is at least one 400 status code across out instance _(Image 22)._ Input the following:
+2\. Once our monitor is created, we need to define a [trigger condition](setting-up-alerts.md#11-create-your-destination). When this condition is met, the alert will be pushed out to our defined [Recipient(s).](setting-up-alerts.md#3.1-create-your-destination) In this example we want to be alerted when there is at least one 400 status code across out instance _(Image 22)._ Input the following:
 
 * **Trigger Name**
 * **Severity Level**
