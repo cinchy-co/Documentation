@@ -1,5 +1,7 @@
-name: Vale test
-on: [push,pull_request]
+name: Vale linter
+on: 
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   vale:

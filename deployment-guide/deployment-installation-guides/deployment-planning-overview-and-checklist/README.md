@@ -46,19 +46,19 @@ The main differences between a Kubernetes based deployment and an IIS deployment
 
 **If you will be running on Kubernetes**, please review the following checklist:
 
-- [ ] [Which database](deployment-architecture-overview/README.md#2-choosing-a-database) will you use?
-- [ ] Define your [sizing.](deployment-architecture-overview/README.md#3-sizing-considerations-and-requirements)
-- [ ] Define your [cluster configuration](deployment-architecture-overview/kubernetes-deployment-architecture.md#41-cluster-configuration).
-- [ ] How many [clusters will you need](deployment-architecture-overview/kubernetes-deployment-architecture.md#41-cluster-configuration)?
+- [ ] [Which database](deployment-architecture-overview/README.md/#2-choosing-a-database) will you use?
+- [ ] Define your [sizing.](deployment-architecture-overview/README.md/#3-sizing-considerations-and-requirements)
+- [ ] Define your [cluster configuration](deployment-architecture-overview/kubernetes-deployment-architecture.md/#41-cluster-configuration).
+- [ ] How many [clusters will you need](deployment-architecture-overview/kubernetes-deployment-architecture.md/#41-cluster-configuration)?
   - [ ] Will you be sharing from an existing cluster?
   - [ ] Will you be running multiple environments on a single cluster?
   - [ ] Will you be using Cinchy's recommended cluster components or your own?
-- [ ] Define your [object storage requirements.](deployment-architecture-overview/README.md#33-object-storage-requirements)
-  - [ ] Create an [S3 compatible bucket](deployment-architecture-overview/README.md#33-object-storage-requirements).
+- [ ] Define your [object storage requirements.](deployment-architecture-overview/README.md/#33-object-storage-requirements)
+  - [ ] Create an [S3 compatible bucket](deployment-architecture-overview/README.md/#33-object-storage-requirements).
 - [ ] Create your [SSL Certs](deployment-prerequisites/README.md#ssl-certs) (With the option to use [Self-Signed](../kubernetes-deployment-installation/dusing-self-signed-ssl-certs-kubernetes-deployments.md)).
-- [ ] Define your [Secrets Management,](deployment-prerequisites/README.md#14-secrets-management) if desired.
-- [ ] Define whether you will use Cinchy's [Docker Images ](deployment-prerequisites/README.md#16-docker-images)or your own.
-  - [ ] If using Cinchy’s, [pull the images.](deployment-prerequisites/README.md#161-accessing-cinchys-docker-images)
+- [ ] Define your [Secrets Management,](deployment-prerequisites/README.md/#14-secrets-management) if desired.
+- [ ] Define whether you will use Cinchy's [Docker Images ](deployment-prerequisites/README.md/#16-docker-images)or your own.
+  - [ ] If using Cinchy’s, [pull the images.](deployment-prerequisites/README.md/#161-accessing-cinchys-docker-images)
 
 {% hint style="info" %}
 Starting in Cinchy v5.4, you will have the option between Alpine or Debian based image tags for the listener, worker, and connections. **Using Debian tags will allow a Kubernetes deployment to be able to connect to a DB2 data source, and that option should be selected if you plan on leveraging a DB2 data sync.**
@@ -72,11 +72,11 @@ Starting in Cinchy v5.4, you will have the option between Alpine or Debian based
 
 **If you will be running on IIS,** please review the following checklist:
 
-* [ ] Ensure that you have an instance of [SQL Server 201](deployment-prerequisites/readme.md#deployment-prerequisites)7+
-* [ ] Ensure that you have [a Windows Server 2012+ machine with IIS 7.5+ installed](deployment-prerequisites/readme.md#general-requirements)
+* [ ] Ensure that you have an instance of [SQL Server 201](deployment-prerequisites/readme.md/#deployment-prerequisites)7+
+* [ ] Ensure that you have [a Windows Server 2012+ machine with IIS 7.5+ installed](deployment-prerequisites/readme.md/#general-requirements)
 * [ ] [Install .net core Hosting bundle Version 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
   * Specifically, install: ASP.NET Core/.NET Core Runtime & Hosting Bundle
-* [ ] Ensure that you review the minimum [web server hardware recommendations](deployment-prerequisites/readme.md#system-requirements)
+* [ ] Ensure that you review the minimum [web server hardware recommendations](deployment-prerequisites/readme.md/#system-requirements)
 * [ ] Ensure that you review the minimum [database server hardware recommendations](deployment-prerequisites/readme.md/#system-requirements)
-* [ ] Define your [application storage requirements.](deployment-architecture-overview/readme.md#32-application-storage-requirements)
+* [ ] Define your [application storage requirements.](deployment-architecture-overview/readme.md/#32-application-storage-requirements)
 * [ ] Ensure you have access to the[ release binary.](deployment-prerequisites/readme.md#access-the-artifacts)
