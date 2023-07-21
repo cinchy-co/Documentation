@@ -7,6 +7,8 @@ on:
 jobs:
   broken_link_checker_job:
     runs-on: ubuntu-latest
+    env:
+      TERM: xterm-256color
     name: Check for broken links
     steps:
       - uses: actions/checkout@v3
