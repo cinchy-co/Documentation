@@ -6,9 +6,9 @@ on:
   
 
 jobs:
-  linkinator:
+  linkcheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: JustinBeckwith/linkinator-action@v1
+      - uses: filiph/linkcheck@2.0.23
         with:
-          paths: 
+          arguments: https://platform.docs.cinchy.com/ --connection-failures-as-warnings
