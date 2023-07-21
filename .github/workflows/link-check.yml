@@ -1,17 +1,14 @@
-name: Broken link check (Daily)
+name: Broken link checker
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 9 * * *'
+  
 
 jobs:
-  broken_link_checker_job:
+  linkinator:
     runs-on: ubuntu-latest
-    name: Check for broken links
     steps:
-      - uses: actions/checkout@v3
-      - uses: filiph/linkcheck@master
+      - uses: JustinBeckwith/linkinator-action@v1
         with:
-          arguments: https://platform.docs.cinchy.com/ --connection-failures-as-warnings --nice
-          # https://github.com/filiph/linkcheck
-
+          paths: 
