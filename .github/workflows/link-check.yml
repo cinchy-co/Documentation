@@ -9,6 +9,7 @@ jobs:
   hyperlink:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: untitaker/hyperlink@0.1.29
         with:
           args: ./ --check-anchors
