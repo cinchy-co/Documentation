@@ -3,14 +3,7 @@ on:
   schedule:
     - cron: '0 9 * * *'
 
-name: Check markdown links
-jobs:
-  my-broken-link-checker:
-    name: Check broken links
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check
-        uses: ruzickap/action-my-broken-link-checker@v2
-        with:
-          url: https://platform.docs.cinchy.com/
-          cmd_params: " --max-connections=3 --color=always"  # Check 
+name: Hyperlink checker
+uses: untitaker/hyperlink@0.1.29
+  with:
+    args: ./ --check-anchors
