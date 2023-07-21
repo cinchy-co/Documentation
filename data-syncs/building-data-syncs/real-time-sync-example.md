@@ -132,8 +132,6 @@ We are not using the RunQuery functionality in this example but you can review i
 
 {% hint style="info" %}
 Full load processing means that the entire amount of data is imported iteratively the first time a data source is loaded into the data studio. Delta processing, on the other hand, means loading the data incrementally, loading the source data at specific pre-established intervals.
-
-**Read more about** [**Sync Behaviour types here.**](broken-reference)
 {% endhint %}
 
 16. Set the following parameters _(Image 10):_
@@ -156,7 +154,7 @@ Any groups given Admin Access will have the ability to Execute, Write, and Read 
 <figure><img src="../../.gitbook/assets/image (522).png" alt=""><figcaption><p>Image 11: Sync Permissions</p></figcaption></figure>
 
 18. Click **Save.**
-19. [Navigate to the Cinchy Listener Config table and set up your configuration. ](real-time-sync-example.md#setting-the-listener-config)Ensure it is set to Enabled. Your real-time data sync should now be listening to your People table ready to push updates to your New Employees table.
+19. [Navigate to the Cinchy Listener Config table and set up your configuration. ](#4-setting-the-listener-config)Ensure it is set to Enabled. Your real-time data sync should now be listening to your People table ready to push updates to your New Employees table.
 20. &#x20;Test your data sync by adding a new row to your People table. Ensure that the data is then updated across to the New Employees table _(Images 12 & 13)._
 
 <figure><img src="../../.gitbook/assets/image (272).png" alt=""><figcaption><p>Image 12: Test your Sync</p></figcaption></figure>
@@ -258,7 +256,7 @@ The Name and Config Version columns will be auto populated as they values are co
 Be sure when you are pasting into the Config XML column that you double click into the column before pasting, otherwise each line of the XML will appear as an individual record in the Data Sync Configurations table.
 {% endhint %}
 
-3. [Navigate to the Cinchy Listener Config table and set up your configuration.](real-time-sync-example.md#setting-the-listener-config) Ensure it is set to Enabled. Your real-time data sync should now be listening to your People table ready to push updates to your New Employees table.
+3. [Navigate to the Cinchy Listener Config table and set up your configuration.](#4-setting-the-listener-config) Ensure it is set to Enabled. Your real-time data sync should now be listening to your People table ready to push updates to your New Employees table.
 4. To execute your Data Sync you will use the CLI. If you do not have this downloaded, [refer to the documentation here.](broken-reference)
 5. In this example we will be using the following Data Sync Commands, however, for the full list of commands click [here](https://app.gitbook.com/@cinchy/s/draft-data-sync/\~/drafts/-MEYg-7T93WGsJ-TwPLy/builder-guide/data-sync-commands).
 
