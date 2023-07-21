@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: JustinBeckwith/linkinator-action@v1
         with:
-          paths: 
+          paths: https://platform.docs.cinchy.com/
