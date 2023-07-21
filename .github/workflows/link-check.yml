@@ -1,14 +1,16 @@
-name: Broken link checker
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 9 * * *'
-  
 
+name: Check markdown links
 jobs:
-  linkinator:
+  my-broken-link-checker:
+    name: Check broken links
     runs-on: ubuntu-latest
     steps:
-      - uses: JustinBeckwith/linkinator-action@v1
+      - name: Check
+        uses: ruzickap/action-my-broken-link-checker@v2
         with:
-          paths: https://platform.docs.cinchy.com/
+          url: https://platform.docs.cinchy.com/
+          cmd_params: " --max-connections=3 --color=always"  # Check 
