@@ -12,4 +12,4 @@ jobs:
       - uses: actions/checkout@v3
       - uses: untitaker/hyperlink@0.1.29
         with:
-          args: /Documentation --check-anchors
+          args: --sources ./ --check-anchors
