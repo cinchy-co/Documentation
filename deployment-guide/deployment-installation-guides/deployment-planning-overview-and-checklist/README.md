@@ -21,7 +21,7 @@ The pages in this section include:
 
 We have provided the following checklist for you to use when planning for your Cinchy v5 deployment. Each item is linked to the appropriate documentation page to provide more insight and clarity.
 
-* [ ] Will you run on [Kubernetes or a VM](deployment-architecture-overview/#1.-kubernetes-vs-vms)?
+* [ ] Will you run on [Kubernetes or a VM](deployment-architecture-overview/readme.md#1-kubernetes-vs-iis)?
 
 #### WIndows IIS vs Kubernetes
 
@@ -55,10 +55,10 @@ The main differences between a Kubernetes based deployment and an IIS deployment
   - [ ] Will you be using Cinchy's recommended cluster components or your own?
 - [ ] Define your [object storage requirements.](deployment-architecture-overview/README.md#33-object-storage-requirements)
   - [ ] Create an [S3 compatible bucket](deployment-architecture-overview/README.md#33-object-storage-requirements).
-- [ ] Create your [SSL Certs](deployment-prerequisites/README.md#ssl-certs) (With the option to use [Self-Signed](../kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)).
+- [ ] Create your [SSL Certs](deployment-prerequisites/README.md#ssl-certs) (With the option to use [Self-Signed](../kubernetes-deployment-installation/dusing-self-signed-ssl-certs-kubernetes-deployments.md)).
 - [ ] Define your [Secrets Management,](deployment-prerequisites/README.md#14-secrets-management) if desired.
-- [ ] Define whether you will use Cinchy's [Docker Images ](deployment-prerequisites/README.md#docker-images)or your own.
-  - [ ] If using Cinchy’s, [pull the images.](deployment-prerequisites/README.md#access-cinchy-docker-images)
+- [ ] Define whether you will use Cinchy's [Docker Images ](deployment-prerequisites/README.md#16-docker-images)or your own.
+  - [ ] If using Cinchy’s, [pull the images.](deployment-prerequisites/README.md#161-accessing-cinchys-docker-images)
 
 {% hint style="info" %}
 Starting in Cinchy v5.4, you will have the option between Alpine or Debian based image tags for the listener, worker, and connections. **Using Debian tags will allow a Kubernetes deployment to be able to connect to a DB2 data source, and that option should be selected if you plan on leveraging a DB2 data sync.**

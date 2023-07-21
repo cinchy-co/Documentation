@@ -21,7 +21,7 @@ The example values in this section follow the use case outlined [here.](broken-r
 
 Refer to the table below for information about the columns in the Listener Config.
 
-<table><thead><tr><th width="192">Column</th><th width="249.33333333333331">Description</th><th>Example</th></tr></thead><tbody><tr><td>Name</td><td>The name of your Listener Config</td><td>New Hire Sync</td></tr><tr><td>Event Connector Type</td><td>Select from the drop-down list which event stream you are listening in on.</td><td>Cinchy CDC</td></tr><tr><td>Topic</td><td>This column expects a JSON value with certain specific information. Please review the <a href="listener-configuration.md#4.1-json-topic-column">Topic Column table </a>below for details.</td><td><pre><code>{
+<table><thead><tr><th width="192">Column</th><th width="249.33333333333331">Description</th><th>Example</th></tr></thead><tbody><tr><td>Name</td><td>The name of your Listener Config</td><td>New Hire Sync</td></tr><tr><td>Event Connector Type</td><td>Select from the drop-down list which event stream you are listening in on.</td><td>Cinchy CDC</td></tr><tr><td>Topic</td><td>This column expects a JSON value with certain specific information. Please review the **Topic Column** table below for details.</td><td><pre><code>{
     "tableGuid": "3daba5da-5e07-4d35-8d7c-d451a2c9068e",
     "fields": [
         {
