@@ -6,13 +6,12 @@ on:
 
 jobs:
   broken_link_checker_job:
-    runs-on: windows-latest
- 
+    runs-on: ubuntu-latest
     name: Check for broken links
     steps:
       - uses: actions/checkout@v3
       - uses: filiph/linkcheck@master
         with:
           arguments: https://platform.docs.cinchy.com/ --connection-failures-as-warnings --nice
-  
           # https://github.com/filiph/linkcheck
+
