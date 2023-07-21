@@ -1,9 +1,14 @@
+name: Broken link checker
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 9 * * *'
+  
 
-name: Hyperlink checker
-uses: untitaker/hyperlink@0.1.29
-  with:
-    args: ./ --check-anchors
+jobs:
+  hyperlink:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: untitaker/hyperlink@0.1.29
+        with:
+          args: ./ --check-anchors
