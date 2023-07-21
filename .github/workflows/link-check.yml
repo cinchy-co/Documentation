@@ -6,10 +6,9 @@ on:
   
 
 jobs:
-  hyperlink:
+  linkcheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: untitaker/hyperlink@0.1.29
+      - uses: filiph/linkcheck@2.0.23
         with:
-          args: ./ --check-anchors
+          arguments: https://platform.docs.cinchy.com/ --connection-failures-as-warnings
