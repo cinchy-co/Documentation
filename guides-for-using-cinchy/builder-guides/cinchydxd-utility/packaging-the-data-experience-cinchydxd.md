@@ -25,7 +25,7 @@ To download the Utility:
 1. Login to Cinchy
 2. Navigate to the **Releases Table**
 3. Select the **Experience Deployment Utility View**
-4. Locate and download the utility **(e.g. Cinchy DXD v1.7.0.zip)**
+4. Locate and download the utility **(Cinchy DXD v1.7.0.zip)**
 
 {% hint style="warning" %}
 The CinchyDXD utility is only upwards compatible with Cinchy version 4.6+
