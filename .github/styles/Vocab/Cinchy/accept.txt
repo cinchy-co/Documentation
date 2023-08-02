@@ -91,3 +91,5 @@ Backoff
 VNet
 database_connection_string
 unicode
+CRD(s)
+teardown
