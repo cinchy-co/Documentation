@@ -18,33 +18,27 @@ The CinchyDXD utility is only required (made accessible) for the environment tha
 
 For CinchyDXD to work, you must have CinchyCLI installed. For further installation instructions please refer to CLI ([https://cli.docs.cinchy.com/](https://cli.docs.cinchy.com/)) documentation
 
-<!-- vale off -->
-
 To access the Data Experience Deployment utility please contact Cinchy support (support@cinchy.com).
-
-<!-- vale on -->
 
 To download the Utility:
 
 1. Login to Cinchy
 2. Navigate to the **Releases Table**
 3. Select the **Experience Deployment Utility View**
-4. Locate and download the utility **(Cinchy DXD v1.3.1.zip)**
+4. Locate and download the utility **(e.g. Cinchy DXD v1.7.0.zip)**
 
 {% hint style="warning" %}
 The CinchyDXD utility is only upwards compatible with Cinchy version 4.6+
 {% endhint %}
 
 5. Unzip the utility and place the folder at any location on a computer that also has CinchyCLI installed
-
-6. Create a new folder in the same directory that will hold all of the DX exports generated (CinchyDXD*Output) *(Image 1).\_
+6. Create a new folder in the same directory that will hold all of the DX exports generated (CinchyDXD\*Output) \*(Image 1).\_
 
 ![Image 1: Creating your new folder](<../../../.gitbook/assets/image (598).png>)
 
 This folder will then hold all your deployment packages.
 
 7. Launch a PowerShell console window
-
 8. From the console, navigate to the CinchyDXD directory _(Image 2 and 3)._
 
 {% hint style="success" %}
@@ -71,29 +65,24 @@ PowerShell requires an initial setup when using CinchyDXD.
 **You will get an error message** (above) that `CinchyDXD.ps1 cannot be loaded because the running script is disabled`.
 
 To resolve this error:
- 
+
 4. From your **start menu**, search for **PowerShell** and select **Run as Administrator** _(Image 6)._
 
 ![Image 6: Run as administrator](<../../../.gitbook/assets/image (226).png>)
 
 5. When prompted **if you want to allow this app to make changes on your device**, select Yes.
-
 6. In your PowerShell Administrator window enter **Set-ExecutionPolicy RemoteSigned** _(Image 7)._
 
-![Image 7: Set-ExecutionPolicy RemoteSigned ](<../../../.gitbook/assets/image (460).png>)
+![Image 7: Set-ExecutionPolicy RemoteSigned](<../../../.gitbook/assets/image (460).png>)
 
 7. Hit **Enter** on your keyboard _(Image 8)._
 
 ![Image 8: Hit Enter](<../../../.gitbook/assets/image (462).png>)
 
 8. When prompted with the _Execution Policy Changes_, enter **A for “Yes to All”**
-
 9. Close the PowerShell Administrator window
-
 10. Navigate back to your PowerShell window for the _CinchDXD window_
-
 11. From your PowerShell window type `cin`
-
 12. Hit **Tab** and then **Enter** on your keyboard _(Image 9)._
 
 ![Image 9: Finishing your set up](<../../../.gitbook/assets/image (703).png>)
@@ -113,11 +102,11 @@ The Data Experience is defined and packed in what will be referred to moving for
 1. **Data Experience Definition Table**: Where the data experience is defined (tables, queries, views, formatting rules, UDF’s etc.)
 2. **Data Experience Reference Data Table:** Where we define any data that needs to move with the Data Experience for the experience to work (lookup values, static values that may need to exist in tables - it typically would not be the physical data itself)
 3. **Data Experience Releases Table:** Once a Data Experience is exported, an entry is created in this table for the export containing:
-   - **Version Number**
-   - **Release Binary** is the location where you can archive/backup your release history in Cinchy\
+   * **Version Number**
+   * **Release Binary** is the location where you can archive/backup your release history in Cinchy\
      Please Note: if you have your own release management system, you do have the option to opt out of archiving the releases in Cinchy and check the release into your own source control
-   - **Release Name**
-   - **Data Experience**
+   * **Release Name**
+   * **Data Experience**
 4. **Data Experience Release Artifact Table**: Stores all of the files that are part of the Data Experience package as individual records along with all of the binary for each record
 
 ### Define the data experience
@@ -133,18 +122,24 @@ When setting up a Data Experience definition, you will need one definition for e
 | GUID                     | This value is calculated, please note this value will be required as one of your export parameters in PowerShell                                                                                                                                                               |
 | Name                     | This is the Name of your Data Experience                                                                                                                                                                                                                                       |
 | Tables                   | Select all tables that are part of the Data Experience                                                                                                                                                                                                                         |
-| Integrated Clients       | Select any integrated clientes (For example: Tableau, PowerBI, custom integrations) that are part of the Data Experience                                                                                                                                                       |
+| Views                    | Select all views (in the data browser) that are a part of the Data Experience                                                                                                                                                                                                  |
+| Integrated Clients       | Select any integrated clients (For example: Tableau, PowerBI, custom integrations) that are part of the Data Experience                                                                                                                                                        |
 | Data Sync Configurations | Select any data syncs (CLI’s experience needs to work) that are part of the Data Experience                                                                                                                                                                                    |
+| Listener Configurations  | Select any Listener Config rows that refer to a Data Sync Configuration which is a part of the Data Experience                                                                                                                                                                 |
 | Reference Data           | Select any reference data that's part of the Data Experience. Please note that the setup of the reference data is done in the table called Data Experience Reference Data (see step 2 below for setup details)                                                                 |
+| Secrets                  | Select any Secrets you'd like to include that are used Data Sync Configurations or Listener Configs which are a part of this Data Experience.                                                                                                                                  |
+| Webhooks                 | Select any Webhooks that are a part of this data experience                                                                                                                                                                                                                    |
 | User Defined Functions   | Select any user defined functions (For example: validate phone, validate email) that are part of the Data Experience                                                                                                                                                           |
 | Models                   | Select any custom models that override columns or tables in your Data Experience, if there are none - leave blank                                                                                                                                                              |
 | Groups                   | Select any groups that are part of the Data Experience (when moving groups, it will also move all table access \[design] controls)                                                                                                                                             |
 | System Colours           | Select a system colour (if defined) for the Data Experience                                                                                                                                                                                                                    |
 | Saved Queries            | Select any queries that are part of the Data Experience                                                                                                                                                                                                                        |
 | Applets                  | Select any applets that are part of the Data Experience                                                                                                                                                                                                                        |
+| Pre-install Scripts      | Select any Pre-install Scripts (Saved Queries) that should run **before** the installation of this Data Experience.                                                                                                                                                            |
+| Post-install Scripts     | <p>Select any Post-install Scripts (Saved Queries) that should run <strong>after</strong> to the installation of this Data Experience.<br><br>A common use-case is to rectify data that may be different between environments.</p>                                             |
 | Formatting Rules         | Select any formatting rules that are part of the Data Experience                                                                                                                                                                                                               |
 | Literal Groups           | Select any literals associated to the Data Experience (For example: key values with English and French definitions)                                                                                                                                                            |
-| Builder                  | Select the builder(s) who have permission to export the Data Experience                                                                                                                                                                                                        |
+| Builders                 | Select the builder(s) who have permission to export the Data Experience                                                                                                                                                                                                        |
 | Builder Groups           | <p>Select the builder group(s) that have permission to export the Data Experience<br></p><p>Note: Best Practice is to use a Group over a User. Users within groups can fluctuate, where the Group (or Role) will remain. This will require less maintenance moving forward</p> |
 | Sync GUID                | Leave this column blank                                                                                                                                                                                                                                                        |
 
@@ -207,11 +202,7 @@ Reminder: you can launch PowerShell right from your file explorer window in the 
 
 2. In the PowerShell window type in `cin` and hit **Tab** on your keyboard _(Image 16)._
 
-<!-- vale off -->
-
 ![Image 16: Type cin](<../../../.gitbook/assets/image (98).png>)
-
-<!-- vale on -->
 
 3. Hit **Enter** on your keyboard, you will see a list of commands that are available to execute _(Image 17)._
 
@@ -236,18 +227,17 @@ The parameters executed in PowerShell can exist on one line in PowerShell, howev
 {% hint style="warning" %}
 Please ensure that you are using the sample below as a sample. You will be required to provide values that correspond to:
 
-- the URL of the source environment
-- the User ID for the user who is performing the export
-- the Password for the user who is performing the export
-- your folder path for where CLI is stored
-- your folder path for where the CLI output files are written to
-- the GUID for the Data Experience that's generated in the Data Experience Definition table
-- your own version naming convention
-- your folder path for where your CinchyDXD output files are written to
-  {% endhint %}
+* the URL of the source environment
+* the User ID for the user who is performing the export
+* the Password for the user who is performing the export
+* your folder path for where CLI is stored
+* your folder path for where the CLI output files are written to
+* the GUID for the Data Experience that's generated in the Data Experience Definition table
+* your own version naming convention
+* your folder path for where your CinchyDXD output files are written to
+{% endhint %}
 
-Sample:
-`` .\CinchyDXD.ps1 export ` ``\
+Sample: `` .\CinchyDXD.ps1 export ` ``\
 `` -s "<cinchy source url>" ` ``\
 `` -u "<source user id>" ` ``\
 `` -p "<source passsword>" ` ``\
@@ -255,7 +245,7 @@ Sample:
 `` -d "C:\CLI Output Logs" ` ``\
 `` -g "8C4D08A1-C0ED-4FFC-A695-BBED068507E9" ` ``\
 `` -v "1.0.0" ` ``\
-`` -o "C:\CinchyDXD_Output" ` ``\
+`` -o "C:\CinchyDXD_Output" ` ``\\
 
 7. Enter the export parameters into the PowerShell window _(Image 20)._
 
@@ -275,7 +265,7 @@ PowerShell will begin to process the export. Once the export is complete, PowerS
 
 2\. Ensure that the **Data Experience Release** table is populated in the source environment _(Image 23)._
 
-![Image 23: Validate that the Data Experience Release Table is populated ](<../../../.gitbook/assets/image (142).png>)
+![Image 23: Validate that the Data Experience Release Table is populated](<../../../.gitbook/assets/image (142).png>)
 
 3\. Ensure that the **Data Experience Release Artifacts** table is populated in the source environment _(Image 24)._
 

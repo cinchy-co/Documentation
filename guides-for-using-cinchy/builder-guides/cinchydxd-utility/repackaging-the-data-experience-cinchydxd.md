@@ -14,36 +14,42 @@ After you have made any applicable changes to your DX, you must re-export the pa
 
 If you have added or removed any of the following while updating your DX, you will need to update the **Data Experience Definition** table:
 
-- Name
-- Tables
-- Integrated Clients
-- Data Sync Configurations
-- Reference Data
-- User Defined Functions
-- Models
-- Groups
-- System Colours
-- Saved Queries
-- Applets
-- Literal Groups
-- Builders
-- Builder Groups
-- Sync GUID
+* Name
+* Tables
+* Views
+* Integrated Clients
+* Data Sync Configurations
+* Listener Configurations
+* Secrets
+* Reference Data
+* User Defined Functions
+* Models
+* Groups
+* System Colours
+* Saved Queries
+* Pre-Install Scripts
+* Post-Install Scripts
+* Applets
+* Literal Groups
+* Webhooks
+* Builders
+* Builder Groups
+* Sync GUID
 
 ## 2. Update reference data table
 
 If you have added or removed any of the following while updating your DX, you will need to update the **Data Experience Reference Data** table:
 
-- Name
-- Ordinal
-- Filter
-- New Records
-- Changed Records
-- Dropped Records
-- Table
-- Sync Key
-- Expiration Timestamp Field
-- Sync GUID
+* Name
+* Ordinal
+* Filter
+* New Records
+* Changed Records
+* Dropped Records
+* Table
+* Sync Key
+* Expiration Timestamp Field
+* Sync GUID
 
 ## 3. Re-run CinchyDXD export
 
@@ -83,7 +89,7 @@ Sample:\
 `` -d "C:\CLI Output Logs" ` ``\
 `` -g "8C4D08A1-C0ED-4FFC-A695-BBED068507E9" ` ``\
 `` -v "2.0.0" ` ``\
-`` -o "C:\CinchyDXD_Output" ` ``\
+`` -o "C:\CinchyDXD_Output" ` ``\\
 
 6. Enter the export parameters into the PowerShell window _(Image 1)._
 
