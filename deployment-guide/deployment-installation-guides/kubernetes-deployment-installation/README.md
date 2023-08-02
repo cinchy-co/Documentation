@@ -160,7 +160,7 @@ This utility updates the configurations in the cinchy.terraform, cinchy.argocd, 
 dotnet Cinchy.DevOps.Automations.dll "deployment.json"
 ```
 
-2. If the file created in [**"Configuring the Deployment.json" step 2**](./#3.1-configure-deployment.json) has a name other than `deployment.json`, the reference in the command will will need to be replaced with the correct name of the file.
+2. If the file created in [**"Configuring the Deployment.json" step 2**](#configure-the-deploymentjson-file) has a name other than `deployment.json`, the reference in the command will will need to be replaced with the correct name of the file.
 
 3. The console output should have the following message:
 
@@ -248,7 +248,7 @@ The following section pertains to updating the Deployment.json file.
 
 ### Update the database connection string
 
-1. Navigate to the **deployment.json (**[**created in step 3.1**](./#3.1-configure-the-deployment.json)**) > cinchy_instance_configs section.**
+1. Navigate to the **deployment.json (**[**created in step 3.1**](#configure-the-deploymentjson-file)**) > cinchy_instance_configs section.**
 2. Each object within represents an instance that will be deployed on the cluster. Each instance configuration has a `database_connection_string` property. This has placeholders for the **host name and password** that must be updated using output variables from the previous section.
 
 {% hint style="warning" %}

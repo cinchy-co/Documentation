@@ -91,7 +91,7 @@ Cluster sizing recommendations vary and are dependant on a number of deployment 
 
 #### IIS sizing
 
-For sizing recommendations and prerequisites about an IIS deployment, [please review the IIS deployment prerequisites.](../deployment-prerequisites/#2.-iis-deployment-prerequisites)
+For sizing recommendations and prerequisites about an IIS deployment, [please review the IIS deployment prerequisites.](../deployment-prerequisites/README.md#deployment-prerequisites)
 
 ### Application storage requirements
 

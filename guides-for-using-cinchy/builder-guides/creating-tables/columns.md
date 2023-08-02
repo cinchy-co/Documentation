@@ -112,7 +112,8 @@ A GUID is a globally unique identifier, formatted as a 128-bit text string, that
 Be careful when editing a GUID, as you can have unintended consequences.
 {% endhint %}
 
-### 2.5 Common Parameters
+
+### Common Parameters
 
 #### Add to Default View
 
