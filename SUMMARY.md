@@ -48,7 +48,7 @@
       * [v5.3 (Kubernetes)](deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/v5.3-kubernetes.md)
       * [v5.4 (Kubernetes)](deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/v5.4-kubernetes.md)
       * [v5.5 (Kubernetes)](deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/v5.5-kubernetes.md)
-      * [v5.6 (Kubernetes)](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/v5.6-kubernetes)
+      * [v5.6 (Kubernetes)](deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/v5.6-kubernetes.md)
       * [Upgrade AWS EKS Kubernetes version](deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/upgrading-aws-eks-kubernetes-version.md)
       * [Update the Kubernetes Image Registry](deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/updating-the-kubernetes-image-registry.md)
       * [Upgrade Azure Kubernetes Service (AKS)](deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/upgrading-aks-azure-kubernetes-service.md)
