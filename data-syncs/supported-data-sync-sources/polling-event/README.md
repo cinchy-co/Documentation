@@ -99,10 +99,11 @@ WHERE Timestamp IN (SELECT TOP (2)
 Timestamp
 FROM [Table2]
 WHERE Timestamp > '2022-11-18 11:34:09 AM'
-AND Timestamp <= '2022-
-11-19 11:34:09 AM'
+AND Timestamp <= '2022-11-19 11:34:09 AM'
 AND 1=1
 ORDER BY Timestamp)
+AND Timestamp > '2022-11-18 11:34:09 AM'
+AND Timestamp <= '2022-11-19 11:34:09 AM'
 AND 1=1
 ) AS t
 INNER JOIN [Table1] ts ON ts.[Id] = t.[Id]
