@@ -1,16 +1,16 @@
-# Cinchy DML Statements
+# Cinchy DML statements
 
 ## Overview
 
 Use Data Manipulation Language (DML) to add, retrieve, update and manipulate data. The Cinchy DML statements covered on this page are:
 
-- [​SELECT](cinchy-dml-statements.md#select)​
-- [​INSERT](cinchy-dml-statements.md#insert-1)​
-- [​UPDATE​](cinchy-dml-statements.md#update)
-- [​DELETE​](cinchy-dml-statements.md#delete)
-- ​[IF](cinchy-dml-statements.md#if)​
-- [DECLARE​](cinchy-dml-statements.md#declare-variable)
-- ​[SET](cinchy-dml-statements.md#set-variable)​
+* [​SELECT](cinchy-dml-statements.md#select)​
+* [​INSERT](cinchy-dml-statements.md#insert-1)​
+* [​UPDATE​](cinchy-dml-statements.md#update)
+* [​DELETE​](cinchy-dml-statements.md#delete)
+* ​[IF](cinchy-dml-statements.md#if)​
+* [DECLARE​](cinchy-dml-statements.md#declare-variable)
+* ​[SET](cinchy-dml-statements.md#set-variable)​
 
 ## SELECT <a href="#select" id="select"></a>
 
@@ -151,7 +151,7 @@ DELETE FROM [Revenue].[Customers] WHERE [CustomerName] = 'Alfreds Futterkiste';
 
 ## IF <a href="#if" id="if"></a>
 
-Use the IF statement to execute a condition. If the condition is satisfied, then the Boolean expressions returns **TRUE** value. The optional **ELSE** keyword introduces another statement that executes when the **IF** condition isn't satisfied and returns **FALSE** value.
+Use the **IF** statement to execute a condition. If the condition is satisfied, then the Boolean expressions returns **TRUE** value. The optional **ELSE** keyword introduces another statement that executes when the **IF** condition isn't satisfied and returns **FALSE** value.
 
 ### Syntax
 
