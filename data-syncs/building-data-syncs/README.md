@@ -28,7 +28,7 @@ For real-time syncs, you must also set up a listener configuration.
 
 ## Create a Data Sync Configuration
 
-Whether you are setting up a real-time or a batch sync, you will need to create your data sync configuration. The data sync configuration defines the source, the mapping to the target, and synchronization behavior.
+The data sync configuration connects Cinchy as a source or destination to another data system. It defines the source, the mapping to the target, and synchronization behavior for both real-time and batch syncs.
 
 To set up a data sync, you can use the Connections UI or manually input an XML into the Data Sync Configuration table in Cinchy.
 
@@ -42,11 +42,11 @@ To set up a data sync, you can use the Connections UI or manually input an XML i
 
 <figure><img src="../../.gitbook/assets/image (389).png" alt=""><figcaption><p>Image 2: The Connections Tabs</p></figcaption></figure>
 
-3. **The Info tab** is used to define some basic information about your data sync such as its name and permissions set _(Image 3)._ This is a role based access system where you can give specific groups read, write, execute, and/or all of the above with admin access. Inputting a name and an Admin Group are mandatory. You also have the optional ability to add in Variables; [please review the documentation here](advanced-settings/variables.md) for more details on Variables.
+3. **The Info tab** defines some basic information about your data sync, such as its name and permissions set _(Image 3)._ This is a role based access system where you can give specific groups read, write, execute, and/or all of the above with admin access. Inputting a name and an Admin Group are mandatory. You also have the optional ability to add in Variables; [please review the documentation here](advanced-settings/variables.md) for more details on Variables.
 
 <figure><img src="../../.gitbook/assets/image (680).png" alt=""><figcaption><p>Image 3: The Info Tab</p></figcaption></figure>
 
-4. **The Source tab** is used to define important information about the source of your data sync _(Image 4)_. This tab is mandatory. Cinchy supports many different source options including different file types and popular software systems. Each source will have different, and often unique, parameters that must be populated in the Source tab screen. You can review the full list of supported data sources, as well as their unique parameters and features, [here.](../supported-data-sync-sources/)
+4. **The Source tab** defines important information about the source of your data sync _(Image 4)_. This tab is mandatory. Cinchy supports many different source options including different file types and popular software systems. Each source will have different, and often unique, parameters that must be populated in the Source tab screen. You can review the full list of supported data sources, as well as their unique parameters and features, [here.](../supported-data-sync-sources/)
 
 <figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption><p>Image 4: The Source Tab</p></figcaption></figure>
 
@@ -64,7 +64,7 @@ If there is more than one listener associated with your data sync, you will need
 
 <figure><img src="../../.gitbook/assets/image (693).png" alt=""><figcaption></figcaption></figure>
 
-1. Use the **The Destination tab** to define important information about the target of your data sync _(Image 5)_. This tab is mandatory. Like with sources, Cinchy supports many different destination options. You must map each destination to its source, and some may have unique parameters that must be populated in the Destination tab. You can review the full list of supported destinations, as well as their unique parameters and features, [here.](../supported-data-sync-destinations/)
+1. Use the **The Destination tab** to define important information about the target of your data sync _(Image 5)_. This tab is mandatory. Like with sources, Cinchy supports many different destination options. You must map each destination to its source, and some may have unique parameters that must be populated in the Destination tab. For a full list of supported destinations and their unique parameters and features, see the [Supported data sync destinations page](../supported-data-sync-destinations/).
 
 <figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption><p>Image 5: The Destination tab</p></figcaption></figure>
 
