@@ -8,19 +8,19 @@ description: This page outlines the Cinchy Secrets Manager, added to the platfor
 
 The Cinchy platform comes with an out-of-the-box way to store secrets: the Cinchy Secrets Table. Adhering to Cinchy’s Universal Access Controls, you can use this table as a key vault (such as Azure Key Vault or AWS Secrets Manager) to store sensitive data only accessible to the users or user groups that you give access to.
 
-You can use secrets stored in this table when configuring data syncs:
+You can reference secrets stored in this table in the Connections UI and use them in places where Cinchy supports variables. Some examples are:
 
-* As part of a connection string;
-* Within a REST Header, URL, or Body;
-* In the Listener Configuration;
+* As part of a connection string
+* Within a REST Header, URL, or Body
+* In the Listener Configuration
 
-Cinchy has also implemented a new [API endpoint](/api-guide/api-overview/README.md) for the retrieval of your secrets.
+Cinchy has also implemented a new [API endpoint](../../api-guide/api-overview/) for the retrieval of your secrets.
 
 ## Configuring a secret
 
 To create a secret in Cinchy:
 
-1. Navigate to the **[Cinchy].[Secrets]** table on your platform (Image 1).
+1. Navigate to the **\[Cinchy].\[Secrets]** table on your platform (Image 1).
 2. Input the following values for your secret:
 
 | Value         | Description                                                                                                                    | Example                                                                        |
@@ -35,9 +35,9 @@ To create a secret in Cinchy:
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
 
-## Calling a secret via API
+## Call a secret via API
 
-Cinchy has implemented a new [API endpoint](/api-guide/api-overview/README.md) for the retrieval of your secrets. Using the below endpoint, fill in your \<base-url>, \<secret-name>, and the \<domain-name> to retrieve the referenced secret.
+Cinchy has implemented a new [API endpoint](../../api-guide/api-overview/) for the retrieval of your secrets. Using the below endpoint, fill in your `<base-url>`, `<secret-name>`, and the `<domain-name>`to retrieve the referenced secret.
 
 This endpoint works with Cinchy’s [Personal Access Token](../user-guides/user-preferences/personal-access-tokens.md) capability, as well as Access Tokens retrieved from your IDP.
 
@@ -61,52 +61,36 @@ The API will return an object in the below format:
 }
 ```
 
-## Using a secret as a Connections variable
+## Use a secret as a Connections variable
 
-You can use secrets stored in the Cinchy Secrets table as a variable for your data syncs anywhere a regular variable can be used; for example **as part of a connection string, access key ID, or within a REST Source or Destination (in the Header, URL, or Body).**
+You can use secrets stored in the Cinchy Secrets table as a variable for your data syncs anywhere a regular variable can be used. For example, as part of a connection string, access key ID, or within a REST Source or Destination in the Header, URL, or Body**.**
 
 To use a Secret within Connections:
 
-1. When configuring your sync, navigate to the **Info Tab > Variables.**
-2. Use the **GETSECRETVALUE formula**, [described here](../../data-syncs/building-data-syncs/advanced-settings/variables.md#2.-supported-formulas), to configure your secret _(Image 2)._
-
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Image 2: Configure your Variable</p></figcaption></figure>
-
-3. Use your defined Variable anywhere aa regular variable can be used, such as **within a REST Header** _(Image 3)._
+1. In the Connections UI, navigate to the **Info Tab > Variables.**
+2. Under the **Variables** section, select **Secret.**
+3. Use your defined Variable anywhere a regular variable can be used, such as **within a REST Header** _(Image 3)._
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Image 3: Use your Variable in a REST Header</p></figcaption></figure>
 
-## Using a Secret in the Listener Config
+## Use a Secret in real-time syncs
 
-You are also able to call and use your Cinchy Secrets when configuring your Listener for real-time syncs.
+You are also able to use your Cinchy Secrets when configuring your Listener for real-time syncs.
 
-To call a secret in the Listener:
+To use a secret in the Listener:
 
 1. When configuring your sync, navigate to the **Info Tab > Variables.**
-2. Use the **GETSECRETVALUE formula**, [described here](../../data-syncs/building-data-syncs/advanced-settings/variables.md#2.-supported-formulas), to configure your secret _(Image 4)._
+2. Under the **Variables** section, select **Secret.**
+3. Under **Listener** section, use your secrets in the **Topic** or **Connection Attributes** field of your sync. For example:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Image 4: Configure your Variable</p></figcaption></figure>
-
-3. Navigate the the **\[Cinchy].\[Listener Config]** table in your Cinchy platform.
-4. Navigate to the row pertaining to the data sync you want to configure.
-5. Using the below as a guide, update the **"Parameters" column** _(Image 5)._
-
-{% code overflow="wrap" %}
 ```json
-// Update the below values, where "name" and "formula" are equal to the values set in step 2.
+// Lists variables for GrantType, ClientID, Username, Password 
 {
-    "parameters": [
-        {
-            "name": "mySecret"
-            "formula": "GETSECRETVALUE('domain','name')"
-        }
-    ]
-}
+"InstanceAuthUrl": "@Url",
+"ApiVersion": 41.0,
+       "GrantType": "@GrantType",
+       "ClientId": "@ClientId",
+       "UserName": "@Username",
+       "Password": "@Password"
+   }
 ```
-{% endcode %}
-
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Image 5: Listener Config Parameters Column</p></figcaption></figure>
-
-6. You are able to use your secret in the **Topic or Connection Attributes column** of your sync _(Image 6)_, for example:
-
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Image 6: Listener Config Connection Attributes</p></figcaption></figure>
