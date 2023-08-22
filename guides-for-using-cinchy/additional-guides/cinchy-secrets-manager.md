@@ -10,8 +10,8 @@ The Cinchy platform provides a built-in solution for securely storing secrets kn
 
 You can refer to secrets stored within this table in the Connections UI and utilize them wherever Cinchy supports variables. Some common use cases include:
 
-- Including them in a connection string
-- Using them in REST Headers, URLs, or the request body
+- Including them in a connection string.
+- Using them in REST Headers, URLs, or the request body.
 - Configuring the Listener via the Listener Configuration table.
 
 Cinchy has also introduced a new [API endpoint](../../api-guide/api-overview/) for retrieving your stored secrets.
