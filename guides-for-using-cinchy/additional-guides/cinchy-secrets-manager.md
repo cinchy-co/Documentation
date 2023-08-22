@@ -8,7 +8,7 @@ description: This page outlines the Cinchy Secrets Manager, added to the platfor
 
 The Cinchy platform provides a built-in solution for securely storing secrets known as the Cinchy Secrets Table. Built with adherence to Cinchy’s Universal Access Controls, this table functions as a key vault similar to services like Azure Key Vault or AWS Secrets Manager. It allows you to store sensitive data that's accessible only to specific user groups with authorized access.
 
-You can refer to secrets stored within this table in the Connections UI and use them wherever Cinchy supports variables. Some common use cases include:
+Within the Connections UI, you can work with variables stored in this table, which then resolve as secrets. This approach ensures careful handling of confidential information. Some common use cases include:
 
 - Including them in a connection string.
 - Using them in REST Headers, URLs, or the request body.
@@ -30,7 +30,7 @@ To create a secret in Cinchy:
 | Name          | The identifier for your secret.                                                                       | Password                                                               |
 | Secret Value  | The actual secret content.                                                                            | YourSecretValueHere                                                    |
 | Description   | A brief explanation of the secret's purpose.                                                          | This secret contains the password for logging into the QA environment. |
-| Read Groups   | A list of User Groups with read access to the secret. These groups can access the secret via the API. | GroupA, GroupB                                                         |
+| Read Groups   | A list of User Groups with read access to the secret. These groups can access the secret via the API, table, connections UI, or CQL. | GroupA, GroupB                                                         |
 | Write Groups  | A list of User Groups with write access to configure the secret.                                      | GroupC, GroupD                                                         |
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
