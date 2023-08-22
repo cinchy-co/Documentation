@@ -12,7 +12,7 @@ Within the Connections UI, you can work with variables stored in this table, whi
 
 - Including them in a connection string.
 - Using them in REST Headers, URLs, or the request body.
-- Configuring the Listener via the Listener Configuration table.
+- Configuring the Listener via the **Listener Config** table.
 
 Cinchy has also introduced a new [API endpoint](../../api-guide/api-overview/) for retrieving your stored secrets.
 
@@ -23,18 +23,17 @@ To create a secret in Cinchy:
 1. Navigate to the **\[Cinchy].\[Secrets]** table on your platform (see Image 1).
 2. Provide the following details for your secret:
 
-| Field         | Description                                                                                           | Example                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Secret Source | The location where the secret is stored. This field supports only 'Cinchy' as a source.               | Cinchy                                                                 |
-| Domain        | The domain name of the location where the secret is stored.                                           | QA                                                                     |
-| Name          | The identifier for your secret.                                                                       | Password                                                               |
-| Secret Value  | The actual secret content.                                                                            | YourSecretValueHere                                                    |
-| Description   | A brief explanation of the secret's purpose.                                                          | This secret contains the password for logging into the QA environment. |
+| Field         | Description                                                                                                                          | Example                                                                |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| Secret Source | The location where the secret is stored. This field supports only 'Cinchy' as a source.                                              | Cinchy                                                                 |
+| Domain        | The domain name of the location where the secret is stored.                                                                          | QA                                                                     |
+| Name          | The identifier for your secret.                                                                                                      | Password                                                               |
+| Secret Value  | The actual secret content.                                                                                                           | YourSecretValueHere                                                    |
+| Description   | A brief explanation of the secret's purpose.                                                                                         | This secret contains the password for logging into the QA environment. |
 | Read Groups   | A list of User Groups with read access to the secret. These groups can access the secret via the API, table, connections UI, or CQL. | GroupA, GroupB                                                         |
-| Write Groups  | A list of User Groups with write access to configure the secret.                                      | GroupC, GroupD                                                         |
+| Write Groups  | A list of User Groups with write access to configure the secret.                                                                     | GroupC, GroupD                                                         |
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
-
 
 ## Call a secret via API
 
@@ -90,39 +89,37 @@ To use a secret in real-time syncs:
 
    For example:
 
-    ```json
-    // Lists variables for GrantType, ClientID, Username, Password 
-    {
-    "InstanceAuthUrl": "@Url",
-    "ApiVersion": 41.0,
-        "GrantType": "@GrantType",
-        "ClientId": "@ClientId",
-        "UserName": "@Username",
-        "Password": "@Password"
-    }
-    ```
+   ```json
+   {
+     "InstanceAuthUrl": "@Url",
+     "ApiVersion": 41.0,
+     "GrantType": "@GrantType",
+     "ClientId": "@ClientId",
+     "UserName": "@Username",
+     "Password": "@Password"
+   }
+   ```
 
 ## Use a secret in the Listener Config table
 
-You can also add a secret that's attached to a variable to the **Topic** or **Connection Attributes** in the Listener Config table. 
+You can also add a secret that's attached to a variable to the **Topic** or **Connection Attributes** in the Listener Config table.
 
 1. Open the **Listener Config** table.
 1. Select the row that corresponds to your data sync.
 1. Select the **Topic** or **Connection Attribute** cell you want to change.
-1. Replace the value for a property with the variable assigned to a secret. 
+1. Replace the value for a property with the variable assigned to a secret.
 
 For example, in the JSON code below, the Connection Attribute property `connectionString` is replaced with the `@connectionString` variable defined in the data sync.
 
 ```json
 {
-	"connectionString": "@connectionString",
-	"retryConfiguration": {
-		"retryMaxAttempts": "2",
-		"retryDelayStrategy": "Linear"
-	}
+  "connectionString": "@connectionString",
+  "retryConfiguration": {
+    "retryMaxAttempts": "2",
+    "retryDelayStrategy": "Linear"
+  }
 }
 ```
-
 
 ## Listener Config parameters
 
