@@ -1,10 +1,10 @@
 # Build data syncs in Cinchy
 
-Data syncs in Cinchy allow you to synchronize data between different systems. This guide will walk you through the process of setting up your data syncs.
+Data syncs in Cinchy synchronizes information between different systems. This guide walks you through the process of setting up your data syncs.
 
 ## Basic workflow
 
-The basic workflow of a data sync in Cinchy is the following:
+The basic workflow of a data sync in Cinchy is:
 
 1. [Install Necessary Components](link-to-installation-doc).
 1. [Choose Data Sync Type and Design Pattern](link-to-sync-type-pattern).
@@ -30,7 +30,7 @@ To use the Connections UI, open the **Connections Experience**.
 
 #### Connections UI workflow
 
-The UI has six tabs. Each tab requires data for your connection setup. The tabs are the following:
+The UI has six tabs. Each tab requires data for your connection setup:
 
 1. Info
 1. Source
@@ -47,7 +47,7 @@ The **Info Tab** has fundamental details about your data sync, such as its name 
 
 #### **Source Tab**
 
-The **Source Tab** defines the origin of your data sync. Each data source type, from specific file formats to integrated software systems, require unique parameters. You can see the available options in the [Supported Data Sources list](../supported-data-sync-sources/).
+The **Source Tab** defines the origin of your data sync. Each data source type, from specific file formats to integrated software systems, requires unique parameters. See the [Supported Data Sources list](../supported-data-sync-sources/) for available options.
 
 <figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption>Image 4: Setting up the Source Tab</figcaption></figure>
 
@@ -59,13 +59,13 @@ When working with real-time sync sources, you'll notice an extra tab for Listene
 
 #### **Destination Tab**
 
-The **Destination Tab** where your data sync should point to. Each destination comes with its set of parameters. Ensure data is mapped correctly from the source. Consult the [Supported Destinations directory](../supported-data-sync-destinations/) for specifics.
+The **Destination Tab** identifies where your data sync goes. Each destination comes with its own set of parameters. You must map each destination to its source. Consult the [Supported Destinations directory](../supported-data-sync-destinations/) for specifics.
 
 <figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption>Image 5: Setting the Destination Course</figcaption></figure>
 
 #### **Sync Actions Tab**
 
-In the **Sync Actions Tab**, you can choose your preferred data action. Your main options are Full File Sync and Delta Sync. Not sure about the differences? Check out this [comparison](sync-actions.md).
+In the **Sync Actions Tab**, you can choose your preferred data action. Your main options are **Full File Sync** and **Delta Sync**. Not sure about the differences? Check out this [comparison](sync-actions.md) for more details.
 
 <figure><img src="../../.gitbook/assets/image (713).png" alt=""><figcaption>Image 6: Sync Action Choices</figcaption></figure>
 
