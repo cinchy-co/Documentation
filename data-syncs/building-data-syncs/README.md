@@ -42,8 +42,7 @@ The UI has six tabs. Each tab requires data for your connection setup. The tabs 
 
 #### **Info Tab**
 
-The **Info Tab** has fundamental details about your data sync, such as its name and access controls. You must add a name and select an Admin Group. You can also [use variables(advanced-settings/variables.md)] for advanced functionality. [Learn about Variables](advanced-settings/variables.md).
-
+The **Info Tab** has fundamental details about your data sync, such as its name and access controls. You must add a name and select an Admin Group. You can also [use variables](advanced-settings/variables.md) for advanced functionality. 
 <figure><img src="../../.gitbook/assets/image (680).png" alt=""><figcaption>Image 3: Working with the Info Tab</figcaption></figure>
 
 #### **Source Tab**
@@ -88,7 +87,7 @@ Track potential issues with your real-time syncs. Syncs become operational once 
 
 <figure><img src="../../.gitbook/assets/image (678).png" alt=""><figcaption>Image 9: Keeping an Eye on Execution</figcaption></figure>
 
-### Set Up a data sync with Config XML
+### Set up a data sync with Config XML
 
 You can also set up a data sync in Cinchy by uploading a formatted XML into the **Data Sync Configurations** table. This method is only recommended for those with advanced knowledge in data sync operations.
 
@@ -128,7 +127,7 @@ If you are setting up a real-time sync, you must set up a listener configuration
 
 <figure><img src="../../.gitbook/assets/image (503).png" alt=""><figcaption><p>Image 12: Listener Config table</p></figcaption></figure>
 
-2. In a new row, add in your listener config configuration data. [Review the documentation here](../supported-real-time-sync-stream-sources/the-listener-configuration-table.md) for more information.
+2. In a new row, add in your listener config configuration data. See [Supported real-time sync sources](../supported-real-time-sync-stream-sources/the-listener-configuration-table.md) for more information.
 3. Make sure to set the config to **Enabled**.
 
 ## Examples
