@@ -30,7 +30,7 @@ To create a secret in Cinchy:
 | Name          | The identifier for your secret.                                                                                                      | Password                                                               |
 | Secret Value  | The actual secret content.                                                                                                           | YourSecretValueHere                                                    |
 | Description   | A brief explanation of the secret's purpose.                                                                                         | This secret contains the password for logging into the QA environment. |
-| Read Groups   | A list of User Groups with read access to the secret. These groups can access the secret via the API, table, connections UI, or CQL. | GroupA, GroupB                                                         |
+| Read Groups   | A list of User Groups with read access to the secret. These groups can access the secret via the API, table, Connections UI, or CQL. | GroupA, GroupB                                                         |
 | Write Groups  | A list of User Groups with write access to configure the secret.                                                                     | GroupC, GroupD                                                         |
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
