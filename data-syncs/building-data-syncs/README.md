@@ -1,95 +1,67 @@
-# Build data syncs
+# Build Data Syncs in Cinchy
 
-## Guide
+Data syncs in Cinchy allow you to synchronize data between different systems. This guide will walk you through the process of setting up your data syncs.
 
-You can use this checklist in conjunction with the documentation below and elsewhere in this space to configure your data syncs in Cinchy.
+## Preparation Checklist
 
-- [ ] [Install any applicable components](../installation-and-maintenance/)
-- [ ] Determine your [Data Sync Type](types-of-data-syncs.md) and [Design Pattern](common-design-patterns.md)
-- [ ] Define and Configure your [Data Sync Source](../supported-data-sync-sources/)
-- [ ] Define and Configure your [Data Sync Destination](../supported-data-sync-destinations/)
-- [ ] Define and Configure your [Sync Actions](sync-actions.md)
-- [ ] Define and Configure your [Event Stream source](../supported-real-time-sync-stream-sources/) (if running a real-time sync)
+- [Install Necessary Components](link-to-installation-doc).
+- [Choose Data Sync Type and Design Pattern](link-to-sync-type-pattern).
+- [Define and Configure Data Sync Source](link-to-configure-source).
+- [Set Up Data Sync Destination](link-to-setup-destination).
+- [Specify Sync Actions](link-to-sync-actions).
+- [Configure Event Stream Source (For Real-time Syncs)](link-to-event-stream).
 
-## Prerequisites
+### Overview
 
-Before you start, make sure you've installed all the necessary components that you need for your data sync.
+You have two ways to set up a data sync in Cinchy:
 
-## Overview
+1. Use the Connections UI to input and save configuration details. The data will be stored as an XML file in the **Data Sync Configurations** table.
+2. Directly upload an XML config into the **Data Sync Configurations** table.
 
-When you've decided on the type of data sync you want to use, you're ready to configure it.
-
-You have two options when you create a data sync in Cinchy.
-
-1. You can input all the necessary information through the intuitive Connections UI. Once saved, this data uploads as an XML file into the Data Sync configurations table.
-2. You can bypass the UI and upload your XML config directly into the Data Sync configuration table yourself.
-
-For real-time syncs, you must also set up a listener configuration.
-
-## Create a Data Sync Configuration
-
-The data sync configuration connects Cinchy as a source or destination to another data system. It defines the source, the mapping to the target, and synchronization behavior for both real-time and batch syncs.
-
-To set up a data sync, you can use the Connections UI or manually input an XML into the Data Sync Configuration table in Cinchy.
+For real-time syncs, you'll also need to set up a lister configuration in the **Listener Configuration** table.
 
 ### Use the Connections UI
 
-1. Navigate to the **Connections Experience** in Cinchy _(Image 1)._
+To use the Connections UI, open the **Connections Experience**.
+<figure><img src="../../.gitbook/assets/image (413).png" alt=""><figcaption>Image 1: Cinchy's Connections Experience</figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (413).png" alt=""><figcaption><p>Image 1: The Cinchy Connections Experience</p></figcaption></figure>
+#### Connections UI workflow
+The UI has six tabs. Each tab requires data for your connection setup.
+<figure><img src="../../.gitbook/assets/image (389).png" alt=""><figcaption>Image 2: Overview of the Tabs</figcaption></figure>
 
-2. In the experience, there are six tabs that accept mandatory or conditional data to define your connection _(Image 2)._
+#### **Info Tab** 
+The **Info Tab** has fundamental details about your data sync, such as its name and access controls. You must add a name and select an Admin Group. You can also [use variables(advanced-settings/variables.md)] for advanced functionality. [Learn about Variables](advanced-settings/variables.md).
+<figure><img src="../../.gitbook/assets/image (680).png" alt=""><figcaption>Image 3: Working with the Info Tab</figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (389).png" alt=""><figcaption><p>Image 2: The Connections Tabs</p></figcaption></figure>
-
-3. **The Info tab** defines some basic information about your data sync, such as its name and permissions set _(Image 3)._ This is a role based access system where you can give specific groups read, write, execute, and/or all of the above with admin access. Inputting a name and an Admin Group are mandatory. You also have the optional ability to add in Variables; [please review the documentation here](advanced-settings/variables.md) for more details on Variables.
-
-<figure><img src="../../.gitbook/assets/image (680).png" alt=""><figcaption><p>Image 3: The Info Tab</p></figcaption></figure>
-
-4. **The Source tab** defines important information about the source of your data sync _(Image 4)_. This tab is mandatory. Cinchy supports many different source options including different file types and popular software systems. Each source will have different, and often unique, parameters that must be populated in the Source tab screen. You can review the full list of supported data sources, as well as their unique parameters and features, [here.](../supported-data-sync-sources/)
-
-<figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption><p>Image 4: The Source Tab</p></figcaption></figure>
-
-[For event based real-time sync sources](../supported-real-time-sync-stream-sources/) (such as the Cinchy Event Broker/CDC, Kafka Topic, MongoDB Event, Polling Event, Salesforce Platform Event, or the Salesforce Push Topic) you will see an addition configuration tab to configure your Listener. Any configuration populated via the UI here will automatically reconcile back to the Listener Config table in your platform. You are able to set the:
-
-- Topic JSON
-- Connections Attribute(s)
-- Auto Offset Reset
-
-You can find more information about the Listener Config settings in the relevant [Sync Source](../supported-data-sync-sources/) or [Real-Time Sync Stream Source](../supported-real-time-sync-stream-sources/) page(s).
+#### **Source Tab** 
+The **Source Tab** defines the origin of your data sync. Each data source type, from specific file formats to integrated software systems, require unique parameters. You can see the available options in the [Supported Data Sources list](../supported-data-sync-sources/).
+<figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption>Image 4: Setting up the Source Tab</figcaption></figure>
 
 {% hint style="info" %}
-If there is more than one listener associated with your data sync, you will need to configure it via [the Listener Configuration table](../supported-real-time-sync-stream-sources/the-listener-configuration-table.md).
+When working with real-time sync sources, you'll notice an extra tab for Listener configurations. The adjustments you make here directly influence the **Listener Config** table. Navigate through the options and set up as needed. For more info, see the [Listener Config](../supported-real-time-sync-stream-sources/) and [Sync Source](../supported-data-sync-sources/) pages.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (693).png" alt=""><figcaption></figcaption></figure>
 
-1. Use the **The Destination tab** to define important information about the target of your data sync _(Image 5)_. This tab is mandatory. Like with sources, Cinchy supports many different destination options. You must map each destination to its source, and some may have unique parameters that must be populated in the Destination tab. For a full list of supported destinations and their unique parameters and features, see the [Supported data sync destinations page](../supported-data-sync-destinations/).
+#### **Destination Tab** 
+The **Destination Tab** where your data sync should point to. Each destination comes with its set of parameters. Ensure data is mapped correctly from the source. Consult the [Supported Destinations directory](../supported-data-sync-destinations/) for specifics.
+<figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption>Image 5: Setting the Destination Course</figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption><p>Image 5: The Destination tab</p></figcaption></figure>
+#### **Sync Actions Tab** 
+In the **Sync Actions Tab**, you can choose your preferred data action. Your main options are Full File Sync and Delta Sync. Not sure about the differences? Check out this [comparison](sync-actions.md).
+<figure><img src="../../.gitbook/assets/image (713).png" alt=""><figcaption>Image 6: Sync Action Choices</figcaption></figure>
 
-6. **The Sync Actions tab** defines what you want to happen to your data _(Image 6)_. This tab is mandatory. You have two options on this page: Full File Sync and Delta Sync. You can review the differences between them [here.](sync-actions.md)
+#### **Post Sync Tab (Optional)** 
+In the **Post Sync Tab**, you can use [Cinchy Query Language (CQL)](/cql/the-basics-of-cql/README.md) to refine the post-sync data. For example, you could set up a post-sync script to push retrieved data values into a specific Cinchy table. You can find more on this in the [Post-sync scripts](advanced-settings/post-sync-scripts.md) page.
+<figure><img src="../../.gitbook/assets/image (660).png" alt=""><figcaption>Image 7: Mastering Post Sync Operations</figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (713).png" alt=""><figcaption><p>Image 6: Sync Actions</p></figcaption></figure>
+#### **Jobs Tab (For Batch Data Syncs)** 
+In the **Jobs tab**, you can start, monitor, and troubleshoot batch jobs. You can also view sync outputs or download detailed logs for analysis. For non-default user operations, ensure you have the right credentials and permissions.
+<figure><img src="../../.gitbook/assets/image (698).png" alt=""><figcaption>Image 8: Handling Batch Data Jobs</figcaption></figure>
 
-7. [**The Post Sync tab**](advanced-settings/post-sync-scripts.md) is an optional field that utilizes [Cinchy Query Language (CQL)](/cql/the-basics-of-cql/README.md) to perform actions on your resulting data _(Image 7)_. For example, you could set up a post sync script to push retrieved data values into a specific Cinchy table.
-
-<figure><img src="../../.gitbook/assets/image (660).png" alt=""><figcaption><p>Image 7: Post Sync Scripts</p></figcaption></figure>
-
-1.  **The Jobs tab** will appear when you are configuring a **batch data sync** _(Image 8)_. This page starts and track your batch jobs, and shows important info on any job successes or failures. By default, the job will run as the logged-in user (as long as you have authority to run the Job). You have the option to run it as another, non-SSO account if:
-
-    - You have the credentials
-    - The account has access to run the Job
-
-    You can configure this by clicking on **Advanced > Run Job as a Different User**
-
-**The Jobs tab** also gives you the option to review your sync Output or download the logs of successful or failed syncs.
-
-<figure><img src="../../.gitbook/assets/image (698).png" alt=""><figcaption><p>Image 8: The Jobs tab</p></figcaption></figure>
-
-1.  **The Execution tab** will appear when you are configuring a **real-time sync** _(Image 9)_. This provides useful information for tracking any errors associated with your real-time sync. You don't need to click **Start a Job** in the UI for real-time syncs; a sync is active when you finish setting up your Listener Config set it to **Enabled**, which you can do through this tab.
-
-<figure><img src="../../.gitbook/assets/image (678).png" alt=""><figcaption><p>Image 9: Execution Errors</p></figcaption></figure>
+#### **Execution Tab (For Real-time Syncs)** 
+Track potential issues with your real-time syncs. Syncs become operational once the Listener Config is enabled—no need for manual job starts.
+<figure><img src="../../.gitbook/assets/image (678).png" alt=""><figcaption>Image 9: Keeping an Eye on Execution</figcaption></figure>
 
 ### Use a Config XML
 
