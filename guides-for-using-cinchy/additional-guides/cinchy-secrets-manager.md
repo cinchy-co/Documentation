@@ -66,7 +66,7 @@ The API response will be in the following format:
 
 ## Use a secret as a connections variable
 
-You can use secrets stored in the Cinchy Secrets table as variables for your data syncs, wherever you use a regular variable. For instance, you can incorporate them within a connection string, an access key ID, or within a REST Source or Destination in the Header.
+You can use secrets stored in the Cinchy Secrets table as [variables](../../data-syncs/building-data-syncs/advanced-settings/variables.md) for your data syncs, wherever you use a variable. For instance, you can incorporate them within a connection string, an access key ID, or within a REST Source or Destination in the Header.
 
 To use a Secret within Connections:
 
