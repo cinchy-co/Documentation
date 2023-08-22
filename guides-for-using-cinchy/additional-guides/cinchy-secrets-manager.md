@@ -126,7 +126,7 @@ For example, in the JSON code below, the Connection Attribute property `connecti
 
 ## Listener Config parameters
 
-The following table lists the applicable Topic and Connection Attributes you can use as parameters or secrets.
+The following table provides an users with an overview of which parameters can be used as secrets or variables for each event connector type.
 
 | Event Connector Type      | Topic                | Connection Attributes | Value as Parameter/Secrets |
 | ------------------------- | -------------------- | --------------------- | -------------------------- |
