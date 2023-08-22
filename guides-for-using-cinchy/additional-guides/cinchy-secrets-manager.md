@@ -6,7 +6,7 @@ description: This page outlines the Cinchy Secrets Manager, added to the platfor
 
 ## Overview
 
-The Cinchy platform provides a built-in solution for securely storing secrets known as the Cinchy Secrets Table. Built with adherence to Cinchy’s Universal Access Controls, this table functions as a key vault similar to services like Azure Key Vault or AWS Secrets Manager. It allows you to store sensitive data that's accessible only to specific users or user groups with authorized access.
+The Cinchy platform provides a built-in solution for securely storing secrets known as the Cinchy Secrets Table. Built with adherence to Cinchy’s Universal Access Controls, this table functions as a key vault similar to services like Azure Key Vault or AWS Secrets Manager. It allows you to store sensitive data that's accessible only to specific user groups with authorized access.
 
 You can refer to secrets stored within this table in the Connections UI and use them wherever Cinchy supports variables. Some common use cases include:
 
