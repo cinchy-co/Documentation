@@ -1,10 +1,29 @@
-name: Check Markdown links
-
+name: Markdown Links Check
+# runs every monday at 9 am
 on: push
 
 jobs:
-  markdown-link-check:
+  check-links:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - uses: actions/checkout@v3
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+        # checks all markdown files from root but ignores subfolders
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          max-depth: 0
+
+  up-to-date-with-chromium:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: git clone
+      uses: actions/checkout@v3
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+    - run: yarn --frozen-lockfile
+
+    - run: yarn mocha --testMatch=third-party/chromium-synchronization/*-test.js
