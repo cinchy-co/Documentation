@@ -12,11 +12,11 @@ You can reference secrets stored in this table in the Connections UI and use the
 
 * As part of a connection string
 * Within a REST Header, URL, or Body
-* In the Listener Configuration
+* In the Listener Configuration table.
 
 Cinchy has also implemented a new [API endpoint](../../api-guide/api-overview/) for the retrieval of your secrets.
 
-## Configuring a secret
+## Create a secret
 
 To create a secret in Cinchy:
 
@@ -25,7 +25,7 @@ To create a secret in Cinchy:
 
 | Value         | Description                                                                                                                    | Example                                                                        |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| Secret Source | Where your secret is housed. Currently this field only supports 'Cinchy' as a source.                                          | Cinchy                                                                         |
+| Secret Source | Where your secret is housed. This field only supports 'Cinchy' as a source.                                          | Cinchy                                                                         |
 | Domain        | The domain name of where your secret resides.                                                                                  | QA                                                                             |
 | Name          | The name of your secret.                                                                                                       | Password                                                                       |
 | Secret Value  | The value of your secret.                                                                                                      |                                                                                |
@@ -61,17 +61,18 @@ The API will return an object in the below format:
 }
 ```
 
+
+
 ## Use a secret as a Connections variable
 
-You can use secrets stored in the Cinchy Secrets table as a variable for your data syncs anywhere a regular variable can be used. For example, as part of a connection string, access key ID, or within a REST Source or Destination in the Header, URL, or Body**.**
+You can use secrets stored in the Cinchy Secrets table as a variable for your data syncs anywhere you use a regular variable. For example, as part of a connection string, access key ID, or within a REST Source or Destination in the Header.
 
 To use a Secret within Connections:
 
-1. In the Connections UI, navigate to the **Info Tab > Variables.**
-2. Under the **Variables** section, select **Secret.**
-3. Use your defined Variable anywhere a regular variable can be used, such as **within a REST Header** _(Image 3)._
-
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Image 3: Use your Variable in a REST Header</p></figcaption></figure>
+1. In the Connections UI, navigate to **Info > Variables.**
+1. Under the **Variables** section, select **Secret.**
+1. Enter the name of your variable.
+1. Under the **Value** dropdown, select the secret you want to assign from the **Secrets** table.
 
 ## Use a Secret in real-time syncs
 
@@ -80,17 +81,99 @@ You are also able to use your Cinchy Secrets when configuring your Listener for 
 To use a secret in the Listener:
 
 1. When configuring your sync, navigate to the **Info Tab > Variables.**
-2. Under the **Variables** section, select **Secret.**
-3. Under **Listener** section, use your secrets in the **Topic** or **Connection Attributes** field of your sync. For example:
+1. Under the **Variables** section, select **Secret.**
+1. Enter the name of your variable.
+1. Under the **Value** dropdown, select the secret you want to assign from the **Secrets** table.
+1. Go to the **Source** tab.
+1. Under the **Listener** section, enter the secret variables as values for the relevant property in your **Topic** or **Connection Attribute** fields. 
+
+    For example:
+
+    ```json
+    // Lists variables for GrantType, ClientID, Username, Password 
+    {
+    "InstanceAuthUrl": "@Url",
+    "ApiVersion": 41.0,
+        "GrantType": "@GrantType",
+        "ClientId": "@ClientId",
+        "UserName": "@Username",
+        "Password": "@Password"
+    }
+    ```
+
+## Use a secret in the Listener Config table
+
+You can also add a secret that's attached to a variable to the **Topic** or **Connection Attributes** in the Listener Config table. 
+
+1. Open the **Listener Config** table.
+1. Select the row that corresponds to your data sync.
+1. Select the **Topic** or **Connection Attribute** cell you want to change.
+1. Replace the value for a property with the variable assigned to a secret. 
+
+For example, the JSON code below replaces a **Connection Attribute** property, `connectionString`, with the `@connectionString` variable defined in the data sync.
 
 ```json
-// Lists variables for GrantType, ClientID, Username, Password 
 {
-"InstanceAuthUrl": "@Url",
-"ApiVersion": 41.0,
-       "GrantType": "@GrantType",
-       "ClientId": "@ClientId",
-       "UserName": "@Username",
-       "Password": "@Password"
-   }
+	"connectionString": "@connectionString",
+	"retryConfiguration": {
+		"retryMaxAttempts": "2",
+		"retryDelayStrategy": "Linear"
+	}
+}
 ```
+
+
+## Listener Config parameters
+
+The following table lists the applicable Topic and Connection Attributes you can use as parameters or secrets.
+
+| Event Connector Type      | Topic                | Connection Attributes | Value as Parameter/Secrets |
+| ------------------------- | -------------------- | --------------------- | -------------------------- |
+| Cinchy CDC                | tableGuid            |                       | Yes                        |
+|                           | filter               |                       | Yes                        |
+|                           | messageKeyExpression |                       | Yes                        |
+|                           | batchSize            |                       | No                         |
+|                           |                      |                       |                            |
+| Salesforce Push Topic     | Name                 |                       | Yes                        |
+|                           | Id                   |                       | Yes                        |
+|                           | Query                |                       | Yes                        |
+|                           |                      | InstanceAuthUrl       | Yes                        |
+|                           |                      | GrantType             | Yes                        |
+|                           |                      | ClientId              | Yes                        |
+|                           |                      | ClientSecret          | Yes                        |
+|                           |                      | UserName              | Yes                        |
+|                           |                      | Password              | Yes                        |
+|                           |                      | ApiVersion            | No                         |
+|                           |                      |                       |                            |
+| MongoDB Event             | database             |                       | Yes                        |
+|                           | collection           |                       | Yes                        |
+|                           | pipelineStage        |                       | Yes                        |
+|                           |                      | connectionString      | Yes                        |
+|                           |                      |                       |                            |
+| Data Polling              | FromClause           |                       | Yes                        |
+|                           | CursorColumn         |                       | Yes                        |
+|                           | FilterCondition      |                       | Yes                        |
+|                           | CursorColumnDataType |                       | Yes                        |
+|                           | Columns              |                       | Yes                        |
+|                           | BatchSize            |                       | No                         |
+|                           | Delay                |                       | No                         |
+|                           |                      | databaseType          | Yes                        |
+|                           |                      | connectionString      | Yes                        |
+|                           |                      |                       |                            |
+| Kafka Topic               | topicName            |                       | Yes                        |
+|                           |                      | bootstrapServers      | Yes                        |
+|                           |                      |                       |                            |
+| Salesforce Platform Event | Name                 |                       | Yes                        |
+|                           |                      | InstanceAuthUrl       | Yes                        |
+|                           |                      | GrantType             | Yes                        |
+|                           |                      | ClientId              | Yes                        |
+|                           |                      | ClientSecret          | Yes                        |
+|                           |                      | UserName              | Yes                        |
+|                           |                      | Password              | Yes                        |
+|                           |                      | ApiVersion            | No                         |
+|                           |                      |                       |                            |
+| Amazon SQS                | deleteMessages       |                       | No                         |
+|                           |                      | awsRegion             | No                         |
+|                           |                      | awsAccessKey          | Yes                        |
+|                           |                      | awsSecret             | Yes                        |
+|                           |                      | queueUrl              | Yes                        |
