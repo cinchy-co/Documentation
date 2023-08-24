@@ -2,58 +2,60 @@
 description: This page outlines the Cinchy Secrets Manager, added to the platform in v5.7.
 ---
 
-# Cinchy Secrets Manager
+# Cinchy secrets manager
 
 ## Overview
 
-The Cinchy platform comes with an out-of-the-box way to store secrets: the Cinchy Secrets Table. Adhering to Cinchy’s Universal Access Controls, you can use this table as a key vault (such as Azure Key Vault or AWS Secrets Manager) to store sensitive data only accessible to the users or user groups that you give access to.
+The Cinchy platform provides a built-in solution for securely storing secrets known as the Cinchy Secrets Table. Built with adherence to Cinchy’s Universal Access Controls, this table functions as a key vault similar to services like Azure Key Vault or AWS Secrets Manager. It allows you to store sensitive data that's accessible only to specific user groups with authorized access.
 
-You can reference secrets stored in this table in the Connections UI and use them in places where Cinchy supports variables. Some examples are:
+Within the Connections UI, you can use variables stored in this table, which then resolve as secrets. This approach ensures careful handling of confidential information. Some common use cases include:
 
-* As part of a connection string
-* Within a REST Header, URL, or Body
-* In the Listener Configuration table.
+- Including them in a connection string.
+- Using them in REST Headers, URLs, or the request body.
+- Configuring the Listener via the **Listener Config** table.
 
-Cinchy has also implemented a new [API endpoint](../../api-guide/api-overview/) for the retrieval of your secrets.
+Cinchy has also introduced a new [API endpoint](../../api-guide/api-overview/) for retrieving your stored secrets.
 
-## Create a secret
+## Creating a secret
 
 To create a secret in Cinchy:
 
-1. Navigate to the **\[Cinchy].\[Secrets]** table on your platform (Image 1).
-2. Input the following values for your secret:
+1. Navigate to the **\[Cinchy].\[Secrets]** table on your platform (see Image 1).
+2. Provide the following details for your secret:
 
-| Value         | Description                                                                                                                    | Example                                                                        |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| Secret Source | Where your secret is housed. This field only supports 'Cinchy' as a source.                                          | Cinchy                                                                         |
-| Domain        | The domain name of where your secret resides.                                                                                  | QA                                                                             |
-| Name          | The name of your secret.                                                                                                       | Password                                                                       |
-| Secret Value  | The value of your secret.                                                                                                      |                                                                                |
-| Description   | A brief description of what your secret is.                                                                                    | This secret contains the password information to log in to the QA environment. |
-| Read Groups   | A list of User Groups who have read access to your secret. User Groups in this column will be able to call the secret via API. |                                                                                |
-| Write Groups  | A list of User Groups who have write access to configure your secret.                                                          |                                                                                |
+| Field         | Description                                                                                                                          | Example                                                                |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| Secret Source | The location where the secret is stored. This field supports only 'Cinchy' as a source.                                              | Cinchy                                                                 |
+| Domain        | The domain name of the location where the secret is stored.                                                                          | QA                                                                     |
+| Name          | The identifier for your secret.                                                                                                      | Password                                                               |
+| Secret Value  | The actual secret content.                                                                                                           | YourSecretValueHere                                                    |
+| Description   | A brief explanation of the secret's purpose.                                                                                         | This secret contains the password for logging into the QA environment. |
+| Read Groups   | A list of User Groups with read access to the secret. These groups can access the secret via the API, table, Connections UI, or CQL. | GroupA, GroupB                                                         |
+| Write Groups  | A list of User Groups with write access to configure the secret.                                                                     | GroupC, GroupD                                                         |
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Image 1: Cinchy Secrets Table</p></figcaption></figure>
 
 ## Call a secret via API
 
-Cinchy has implemented a new [API endpoint](../../api-guide/api-overview/) for the retrieval of your secrets. Using the below endpoint, fill in your `<base-url>`, `<secret-name>`, and the `<domain-name>`to retrieve the referenced secret.
+Cinchy has a new [API endpoint](../../api-guide/api-overview/) designed for retrieving secrets. By utilizing the endpoint provided below, you can specify the `<base-url>`, `<secret-name>`, and `<domain-name>` to retrieve the desired secret.
 
-This endpoint works with Cinchy’s [Personal Access Token](../user-guides/user-preferences/personal-access-tokens.md) capability, as well as Access Tokens retrieved from your IDP.
+This endpoint functions seamlessly with Cinchy’s [Personal Access Token](../user-guides/user-preferences/personal-access-tokens.md) capability, along with Access Tokens obtained from your Identity Provider (IDP).
 
 **Blank Example:**
 
-```
+```http
 <base-url>/api/v1.0/secrets-manager/secret?secretName=<secret-name>&domain=<domain-name>
 ```
 
 **Populated Example:**
 
+The example below uses `ExampleSecret` as a secretName and `Sandbox` as the domain:
+
 ```
 Cinchy.net/api/v1.0/secrets-manager/secret?secretName=<ExampleSecret>&domain=<Sandbox>
 ```
 
-The API will return an object in the below format:
+The API response will be in the following format:
 
 ```
 {
@@ -61,75 +63,71 @@ The API will return an object in the below format:
 }
 ```
 
+## Use a secret as a connections variable
 
-
-## Use a secret as a Connections variable
-
-You can use secrets stored in the Cinchy Secrets table as a variable for your data syncs anywhere you use a regular variable. For example, as part of a connection string, access key ID, or within a REST Source or Destination in the Header.
+You can use secrets stored in the Cinchy Secrets table as [variables](../../data-syncs/building-data-syncs/advanced-settings/variables.md) for your data syncs, wherever you use a variable. For instance, you can incorporate them within a connection string, an access key ID, or within a REST Source or Destination in the Header.
 
 To use a Secret within Connections:
 
-1. In the Connections UI, navigate to **Info > Variables.**
-1. Under the **Variables** section, select **Secret.**
-1. Enter the name of your variable.
-1. Under the **Value** dropdown, select the secret you want to assign from the **Secrets** table.
+1. In the Connections UI, navigate to **Info > Variables**.
+2. Under the **Variables** section, select **Secret**.
+3. Enter the name of your variable.
+4. Under the **Value** dropdown, select the secret you want to assign from the **Secrets** table.
 
-## Use a Secret in real-time syncs
+## Use a secret in real-time syncs
 
-You are also able to use your Cinchy Secrets when configuring your Listener for real-time syncs.
+You can also use your Cinchy Secrets when configuring your Listener for real-time syncs.
 
-To use a secret in the Listener:
+To use a secret in real-time syncs:
 
-1. When configuring your sync, navigate to the **Info Tab > Variables.**
-1. Under the **Variables** section, select **Secret.**
-1. Enter the name of your variable.
-1. Under the **Value** dropdown, select the secret you want to assign from the **Secrets** table.
-1. Go to the **Source** tab.
-1. Under the **Listener** section, enter the secret variables as values for the relevant property in your **Topic** or **Connection Attribute** fields. 
+1. When configuring your sync, navigate to the **Info Tab > Variables**.
+2. Under the **Variables** section, choose **Secret**.
+3. Input the name of your variable.
+4. Under the **Value** dropdown, choose the secret you intend to assign from the **Secrets** table.
+5. Go to the **Source** tab.
+6. Within the **Listener** section, input the secret variables as values for the relevant property in your **Topic** or **Connection Attribute** fields.
 
-    For example:
+   For example:
 
-    ```json
-    // Lists variables for GrantType, ClientID, Username, Password 
-    {
-    "InstanceAuthUrl": "@Url",
-    "ApiVersion": 41.0,
-        "GrantType": "@GrantType",
-        "ClientId": "@ClientId",
-        "UserName": "@Username",
-        "Password": "@Password"
-    }
-    ```
+   ```json
+   {
+     "InstanceAuthUrl": "@Url",
+     "ApiVersion": 41.0,
+     "GrantType": "@GrantType",
+     "ClientId": "@ClientId",
+     "UserName": "@Username",
+     "Password": "@Password"
+   }
+   ```
 
 ## Use a secret in the Listener Config table
 
-You can also add a secret that's attached to a variable to the **Topic** or **Connection Attributes** in the Listener Config table. 
+You can also add a secret that's attached to a variable to the **Topic** or **Connection Attributes** in the Listener Config table.
 
 1. Open the **Listener Config** table.
 1. Select the row that corresponds to your data sync.
 1. Select the **Topic** or **Connection Attribute** cell you want to change.
-1. Replace the value for a property with the variable assigned to a secret. 
+1. Replace the value for a property with the variable assigned to a secret.
 
-For example, the JSON code below replaces a **Connection Attribute** property, `connectionString`, with the `@connectionString` variable defined in the data sync.
+For example, in the JSON code below, the Connection Attribute property `connectionString` is replaced with the `@connectionString` variable defined in the data sync.
 
 ```json
 {
-	"connectionString": "@connectionString",
-	"retryConfiguration": {
-		"retryMaxAttempts": "2",
-		"retryDelayStrategy": "Linear"
-	}
+  "connectionString": "@connectionString",
+  "retryConfiguration": {
+    "retryMaxAttempts": "2",
+    "retryDelayStrategy": "Linear"
+  }
 }
 ```
 
-
 ## Listener Config parameters
 
-The following table lists the applicable Topic and Connection Attributes you can use as parameters or secrets.
+The following table provides an overview of which parameters you can use as secrets for each event connector type.
 
 | Event Connector Type      | Topic                | Connection Attributes | Value as Parameter/Secrets |
 | ------------------------- | -------------------- | --------------------- | -------------------------- |
-| Cinchy CDC                | tableGuid            |                       | Yes                        |
+| Cinchy CDC                | tableGuid            |                       | No |
 |                           | filter               |                       | Yes                        |
 |                           | messageKeyExpression |                       | Yes                        |
 |                           | batchSize            |                       | No                         |
