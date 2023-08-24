@@ -8,7 +8,7 @@ description: This page outlines the Cinchy Secrets Manager, added to the platfor
 
 The Cinchy platform provides a built-in solution for securely storing secrets known as the Cinchy Secrets Table. Built with adherence to Cinchy’s Universal Access Controls, this table functions as a key vault similar to services like Azure Key Vault or AWS Secrets Manager. It allows you to store sensitive data that's accessible only to specific user groups with authorized access.
 
-Within the Connections UI, you can work with variables stored in this table, which then resolve as secrets. This approach ensures careful handling of confidential information. Some common use cases include:
+Within the Connections UI, you can use variables stored in this table, which then resolve as secrets. This approach ensures careful handling of confidential information. Some common use cases include:
 
 - Including them in a connection string.
 - Using them in REST Headers, URLs, or the request body.
@@ -123,7 +123,7 @@ For example, in the JSON code below, the Connection Attribute property `connecti
 
 ## Listener Config parameters
 
-The following table provides an overview of which parameters you can use as secrets or variables for each event connector type.
+The following table provides an overview of which parameters you can use as secrets for each event connector type.
 
 | Event Connector Type      | Topic                | Connection Attributes | Value as Parameter/Secrets |
 | ------------------------- | -------------------- | --------------------- | -------------------------- |
