@@ -5,8 +5,8 @@
 The Worker and Event Listener are vital components for real-time Data syncs. Here's a brief overview of how the Worker/Event Listener operates:
 
 - The Event Listener, once successfully subscribed, awaits events from the streaming source.
-- Upon receiving a message from a streaming source, the Event Listener pushes it to the SQL Server Broker.
-- The Worker then retrieves the message from the SQL Server Broker.
+- Upon receiving a message from a streaming source, the Event Listener pushes it to the message queue.
+- The Worker then retrieves the message from the message queue.
 - The Worker fetches the corresponding record from the target based on the sync key.
 - If changes are detected, the Worker pushes them to the target system. Both successes and failures get logged in the worker's log file.
 
