@@ -127,7 +127,7 @@ The following table provides an overview of which parameters you can use as secr
 
 | Event Connector Type      | Topic                | Connection Attributes | Value as Parameter/Secrets |
 | ------------------------- | -------------------- | --------------------- | -------------------------- |
-| Cinchy CDC                | tableGuid            |                       | Yes                        |
+| Cinchy CDC                | tableGuid            |                       | No |
 |                           | filter               |                       | Yes                        |
 |                           | messageKeyExpression |                       | Yes                        |
 |                           | batchSize            |                       | No                         |
