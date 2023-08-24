@@ -1,17 +1,17 @@
 # Build data syncs in Cinchy
 
-Data syncs in Cinchy synchronizes information between different systems. This guide walks you through the process of setting up your data syncs.
+A data sync in Cinchy synchronizes information between a source and a destination. This guide walks you through the process of setting up your data syncs.
 
 ## Basic workflow
 
 The basic workflow of a data sync in Cinchy is:
 
-1. [Install Necessary Components](link-to-installation-doc).
-1. [Choose Data Sync Type and Design Pattern](link-to-sync-type-pattern).
-1. [Define and Configure Data Sync Source](link-to-configure-source).
-1. [Set Up Data Sync Destination](link-to-setup-destination).
-1. [Specify Sync Actions](link-to-sync-actions).
-1. [Configure Event Stream Source (For Real-time Syncs)](link-to-event-stream).
+1. [Install the necessary components](../installation-and-maintenance/).
+1. [Choose your data sync type](types-of-data-syncs.md).
+1. [Choose your design pattern](common-design-patterns.md).
+1. [Define and configure your data sync source](../supported-data-sync-sources/).
+1. [Set up your data sync destination](../supported-data-sync-destinations/).
+1. [Specify Sync Actions](sync-actions.md).
 
 ### Overview
 
@@ -20,7 +20,7 @@ You have two ways to set up a data sync in Cinchy:
 1. Use the Connections UI to input and save configuration details. The data will be stored as an XML file in the **Data Sync Configurations** table.
 2. Directly upload an XML config into the **Data Sync Configurations** table.
 
-For real-time syncs, you'll also need to set up a lister configuration in the **Listener Configuration** table.
+For real-time syncs using Connections UI, you'll also need to set up a lister configuration in the **Listener Config** table.
 
 ### Set up a data sync with the Connections UI
 
@@ -52,7 +52,7 @@ The **Source Tab** defines the origin of your data sync. Each data source type, 
 <figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption>Image 4: Setting up the Source Tab</figcaption></figure>
 
 {% hint style="info" %}
-When working with real-time sync sources, you'll notice an extra tab for Listener configurations. The adjustments you make here directly influence the **Listener Config** table. Navigate through the options and set up as needed. For more info, see the [Listener Config](../supported-real-time-sync-stream-sources/) and [Sync Source](../supported-data-sync-sources/) pages.
+When working with real-time sync sources, you'll notice an extra tab for Listener configuration. The adjustments you make here directly influence the **Listener Config** table. Navigate through the options and set up as needed. For more info, see the [Listener Config](../supported-real-time-sync-stream-sources/) and [Sync Source](../supported-data-sync-sources/) pages.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (693).png" alt=""><figcaption></figcaption></figure>
