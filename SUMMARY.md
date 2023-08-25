@@ -5,20 +5,20 @@
 ## Release notes
 
 * [Release notes](release-notes/release-notes/README.md)
-  * [5.0 Release Notes](release-notes/release-notes/5.0-release-notes.md)
-  * [5.1 Release Notes](release-notes/release-notes/5.1-release-notes.md)
-  * [5.2 Release Notes](release-notes/release-notes/5.2-release-notes.md)
-  * [5.3 Release Notes](release-notes/release-notes/5.3-release-notes.md)
-  * [5.4 Release Notes](release-notes/release-notes/5.4-release-notes.md)
-  * [5.5 Release Notes](release-notes/release-notes/5.5-release-notes.md)
-  * [5.6 Release Notes](release-notes/release-notes/5.6-release-notes.md)
   * [5.7 Release Notes](release-notes/release-notes/5.7-release-notes.md)
+  * [5.6 Release Notes](release-notes/release-notes/5.6-release-notes.md)
+  * [5.5 Release Notes](release-notes/release-notes/5.5-release-notes.md)
+  * [5.4 Release Notes](release-notes/release-notes/5.4-release-notes.md)
+  * [5.3 Release Notes](release-notes/release-notes/5.3-release-notes.md)
+  * [5.2 Release Notes](release-notes/release-notes/5.2-release-notes.md)
+  * [5.1 Release Notes](release-notes/release-notes/5.1-release-notes.md)
+  * [5.0 Release Notes](release-notes/release-notes/5.0-release-notes.md)
 
 ***
 
-* [Get help](getting-help.md)
-* [Cinchy glossary](cinchy-glossary.md)
-* [Frequently asked questions](frequently-asked-questions.md)
+* [Support](getting-help.md)
+* [Glossary](cinchy-glossary.md)
+* [FAQ](frequently-asked-questions.md)
 
 ## Deployment guide
 
@@ -94,12 +94,12 @@
     * [Restore tables, columns, and rows](guides-for-using-cinchy/builder-guides/deleting-tables/restoring-tables-columns-and-rows.md)
   * [Saved queries](guides-for-using-cinchy/builder-guides/saved-queries.md)
   * [CinchyDXD Utility](guides-for-using-cinchy/builder-guides/cinchydxd-utility/README.md)
-    * [Build the data experience (CinchyDXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/building-the-data-experience-cinchydxd.md)
-    * [Package the data experience (CinchyDXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/packaging-the-data-experience-cinchydxd.md)
-    * [Install the data experience (CinchyDXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/installing-the-data-experience-cinchydxd.md)
-    * [Update the data experience (CinchyDXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/updating-the-data-experience-cinchydxd.md)
-    * [Repackage the data experience (CinchyDXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/repackaging-the-data-experience-cinchydxd.md)
-    * [Reinstall the data experience (CinchyDXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/reinstalling-the-data-experience-cinchydxd.md)
+    * [Build the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/building-the-data-experience-cinchydxd.md)
+    * [Package the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/packaging-the-data-experience-cinchydxd.md)
+    * [Install the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/installing-the-data-experience-cinchydxd.md)
+    * [Update the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/updating-the-data-experience-cinchydxd.md)
+    * [Repackage the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/repackaging-the-data-experience-cinchydxd.md)
+    * [Reinstall the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/reinstalling-the-data-experience-cinchydxd.md)
   * [Multilingual support](guides-for-using-cinchy/builder-guides/multi-lingual-support.md)
   * [Integration guides](guides-for-using-cinchy/builder-guides/integration-guides.md)
 * [Administrator Guide](guides-for-using-cinchy/administrator-guide.md)
@@ -177,14 +177,14 @@
 ## Data syncs
 
 * [Get started with data syncs](data-syncs/getting-started-with-data-syncs.md)
-* [Installation & maintenance](data-syncs/installation-and-maintenance/README.md)
+* [IIS installation](data-syncs/installation-and-maintenance/README.md)
   * [Prerequisites](data-syncs/installation-and-maintenance/prerequisites.md)
   * [Install Connections](data-syncs/installation-and-maintenance/installing-connections.md)
   * [Install the Worker/Listener](data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
   * [Install the CLI and the Maintenance CLI](data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
 * [Build data syncs](data-syncs/building-data-syncs/README.md)
   * [Data sync types](data-syncs/building-data-syncs/types-of-data-syncs.md)
-  * [Common design patterns](data-syncs/building-data-syncs/common-design-patterns.md)
+  * [Design patterns](data-syncs/building-data-syncs/common-design-patterns.md)
   * [Sync actions](data-syncs/building-data-syncs/sync-actions.md)
   * [Columns and mappings](data-syncs/building-data-syncs/columns-and-mappings/README.md)
     * [Calculated column examples](data-syncs/building-data-syncs/columns-and-mappings/calculated-column-examples.md)
@@ -200,8 +200,8 @@
   * [Schedule a data sync](data-syncs/building-data-syncs/scheduling-a-data-sync.md)
   * [Connection functions](https://platform.docs.cinchy.com/cql/the-basics-of-cql/cinchy-supported-functions/connections-functions)
 * [CLI commands list](data-syncs/cli-commands-list.md)
-* [Error logging and troubleshooting](data-syncs/error-logging-and-troubleshooting.md)
-* [Supported data sync sources](data-syncs/supported-data-sync-sources/README.md)
+* [Troubleshooting](data-syncs/error-logging-and-troubleshooting.md)
+* [Data sync sources](data-syncs/supported-data-sync-sources/README.md)
   * [Cinchy Event Broker/CDC](data-syncs/supported-data-sync-sources/cinchy-event-broker-cdc/README.md)
     * [Cinchy Event Broker/CDC XML config example](data-syncs/supported-data-sync-sources/cinchy-event-broker-cdc/cinchy-event-broker-cdc-xml-config-example.md)
   * [Cinchy Table](data-syncs/supported-data-sync-sources/cinchy-table/README.md)
@@ -241,7 +241,7 @@
   * [Snowflake](data-syncs/supported-data-sync-sources/snowflake/README.md)
     * [Snowflake source example config](data-syncs/supported-data-sync-sources/snowflake/snowflake-source-example-config.md)
   * [SOAP 1.2 web service](data-syncs/supported-data-sync-sources/soap-1.2-web-service.md)
-* [Supported data sync destinations](data-syncs/supported-data-sync-destinations/README.md)
+* [Data sync destinations](data-syncs/supported-data-sync-destinations/README.md)
   * [Cinchy Table](data-syncs/supported-data-sync-destinations/cinchy-table.md)
   * [DB2 table](data-syncs/supported-data-sync-destinations/db2-table.md)
   * [Dynamics](data-syncs/supported-data-sync-destinations/dynamics.md)
@@ -253,8 +253,8 @@
   * [Salesforce](data-syncs/supported-data-sync-destinations/salesforce.md)
   * [Snowflake table](data-syncs/supported-data-sync-destinations/snowflake-table.md)
   * [SOAP 1.2 web service](data-syncs/supported-data-sync-destinations/soap-1.2-web-service.md)
-* [Supported real-time sync stream sources](data-syncs/supported-real-time-sync-stream-sources/README.md)
-  * [The listener configuration table](data-syncs/supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
+* [Real-time sync stream sources](data-syncs/supported-real-time-sync-stream-sources/README.md)
+  * [The Listener Config table](data-syncs/supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
 
 ## Other Resources
 

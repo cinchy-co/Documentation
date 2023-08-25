@@ -36,6 +36,7 @@ The UI has six tabs. Each tab requires data for your connection setup:
 1. Sync Actions
 1. Post Sync (Optional)
 1. Jobs (Optional)
+
 <figure><img src="../../.gitbook/assets/image (389).png" alt=""><figcaption>Image 2: Overview of the Tabs</figcaption></figure>
 
 #### **Info Tab**
