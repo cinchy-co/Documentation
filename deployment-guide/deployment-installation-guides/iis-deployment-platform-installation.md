@@ -2,18 +2,18 @@
 description: This guide serves as a walkthrough of how to deploy v5 on IIS.
 ---
 
-# IIS Deployment Platform Installation
+# IIS&#x20;
 
 ## Overview and Prerequisites
 
 Cinchy version 5 on IIS comes bundled with common components such as Connections, Meta Forms, and the Event Listener. This page details the configuration and deployment instructions for **the Cinchy Platform, including SSO.** Click on the links below to be taken to the appropriate pages for other components:
 
-- [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
-- [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-- [Meta Forms Deployment](../../meta-forms/meta-forms-deployment-installation-guide/)
-- [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
+* [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
+* [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
+* [Meta Forms Deployment](../../meta-forms/meta-forms-deployment-installation-guide/)
+* [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
 
-**Ensure that you review the** [**prerequisites listed here**](deployment-planning-overview-and-checklist/deployment-prerequisites/readme.md#deployment-prerequisites) prior to performing an IIS Deployment, including downloading all necessary artifacts from the [Cinchy Releases Table.](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded)
+**Ensure that you review the** [**prerequisites listed here**](deployment-planning-overview-and-checklist/deployment-prerequisites/#deployment-prerequisites) prior to performing an IIS Deployment, including downloading all necessary artifacts from the [Cinchy Releases Table.](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded)
 
 Please contact [Cinchy Support](../../getting-help.md) if you don't have the credentials required to access the artifacts table.
 
@@ -25,7 +25,7 @@ For more information about creating a database in SQL server, see the [Microsoft
 
 1. On your SQL Server 2017+ instance, **create a new database** named Cinchy (or any other name you prefer).
    1. If you choose an alternate name, in the remaining instructions wherever the database name is referenced, replace the word Cinchy with the name you chose.
-2. Create a single user account **db_owner privileges** for Cinchy to connect to the database. If you choose to use Windows Authentication instead of SQL Server Authentication, the authorized account must be the same account that runs the IIS Application Pool.
+2. Create a single user account **db\_owner privileges** for Cinchy to connect to the database. If you choose to use Windows Authentication instead of SQL Server Authentication, the authorized account must be the same account that runs the IIS Application Pool.
 
 ## Create an IIS application pool
 
@@ -84,19 +84,18 @@ md C:\CinchyErrors
 ### App Settings
 
 1. Under **AppSettings** section, update the values outlined in the table.
-
 2. Wherever you see **\<base url>** in the value, replace this with the actual protocol (HTTP or HTTPS) and the domain name (or IP address) you plan to use.
 
 Ex:. if you're using HTTPS with the domain app.cinchy.co, then **\<base url>** should be replaced with **https://app.cinchy.co**
 
-| Key                           | Value                                                                                                                                                                                                                   |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **CinchyUri**                 | _\<base url>/Cinchy_                                                                                                                                                                                                    |
-| **CertificatePath**           | <p>Adjust the certificate path to point to the CinchySSO v5 folder.<br><br><em>Ex: C:\CinchySSO\\cinchyidentitysrv.pfx</em></p>                                                                                         |
-| **StsPublicOriginUri**        | <p>The Base URL used by the .well-known discovery.</p><p><br><em>Ex: <base url>/cinchySSO</em></p>                                                                                                                 |
-| **StsPrivateOriginUri**       | <p>The Private Base URL used by the .well-known discovery. <br><br><em>Ex: <base url>/cinchySSO</em></p>                                                                                                           |
-| **CinchyAccessTokenLifetime** | <p>The duration for the Cinchy Access Token. This determines how long a user can be inactive until they need to re-enter their credentials.</p><p><br>In Cinchy v5.4+ <strong>it defaults to `7.00:00:00`.</strong></p> |
-| **DB Type**                   | Either "PostgreSQL" or "TSQL"                                                                                                                                                                                           |
+| Key                           | Value                                                                                                                                                                                                                              |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **CinchyUri**                 | _\<base url>/Cinchy_                                                                                                                                                                                                               |
+| **CertificatePath**           | <p>Adjust the certificate path to point to the CinchySSO v5 folder.<br><br><em>Ex: C:\CinchySSO\cinchyidentitysrv.pfx</em></p>                                                                                                     |
+| **StsPublicOriginUri**        | <p>The Base URL used by the .well-known discovery.</p><p><br><em>Ex: /cinchySSO</em></p>                                                                                                                                           |
+| **StsPrivateOriginUri**       | <p>The Private Base URL used by the .well-known discovery.<br><br><em>Ex: /cinchySSO</em></p>                                                                                                                                      |
+| **CinchyAccessTokenLifetime** | <p>The duration for the Cinchy Access Token. This determines how long a user can be inactive until they need to re-enter their credentials.</p><p><br>In Cinchy v5.4+ <strong>it defaults to <code>7.00:00:00</code>.</strong></p> |
+| **DB Type**                   | Either "PostgreSQL" or "TSQL"                                                                                                                                                                                                      |
 
 {% hint style="info" %}
 4.18.0+ includes session expiration based on the CinchyAccessTokenLifetime. For the default of `7.00:00:00`, if you have been inactive in Cinchy for 7 days your session will expire and you will need to log in again.
@@ -142,7 +141,6 @@ Example:
 ```json
 "SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;TrustServerCertificate=True"
 ```
-
 {% endhint %}
 
 ### External identity claim section
@@ -155,10 +153,9 @@ These values are used for SAML SSO. **If you aren't using SSO, keep these values
 
 ### Serilog
 
-1.  Cinchy has a **serilog** property that allows you to configure where it logs to. In the below code, update the following:
-
-    1. "Name" must be set to "File" so it writes to a physical file on the disk.
-    2. Set "path" to the file path to where you want it to log.
+1. Cinchy has a **serilog** property that allows you to configure where it logs to. In the below code, update the following:
+   1. "Name" must be set to "File" so it writes to a physical file on the disk.
+   2. Set "path" to the file path to where you want it to log.
 
 {% hint style="info" %}
 This configuration makes a log every day (defined by the _"rollingInterval"_ value) and keeps your file count to 30 (defined by the _"retainedFileCountLimit"_ value).
@@ -198,16 +195,17 @@ This configuration makes a log every day (defined by the _"rollingInterval"_ val
 
 ### AppSettings
 
-| Key                        | Value                                                                                                                                                                                                                                                                                    |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **StsPrivateAuthorityUri** | <p>This should match your private Cinchy SSO URL.<br><br><em>Ex: <baseURL>/CinchySSO</em></p>                                                                                                                                                                                       |
-| **StsPublicAuthorityUri**  | <p>This should match your public Cinchy SSO URL.<br><br><em>Ex: <baseURL>/CinchySSO</em></p>                                                                                                                                                                                        |
-| **CinchyPrivateUri**       | <p>This should match your private Cinchy URL.<br><br><em>Ex: <baseURL>/Cinchy</em></p>                                                                                                                                                                                              |
-| **CinchyPublicUri**        | <p>This should match your public Cinchy URL.<br><br><em>Ex: <baseURL>/Cinchy</em></p>                                                                                                                                                                                               |
-| **UseHttps**               | This is "true" by default.                                                                                                                                                                                                                                                               |
-| **DB Type**                | Either "PostgreSQL" or "TSQL"                                                                                                                                                                                                                                                            |
-| **“MaxRequestBodySize”**   | <p><strong>This capability was introduced in Cinchy v5.4</strong></p><p></p><p>This configurable property to allow you to set your own file upload size for the Files API, should you wish. <strong>It's defaulted to 1G.</strong></p><pre><code>“MaxRequestBodySize”: 1073741824 // 1g |
-| </code></pre>              |
+| Key                        | Value                                                                                                                                                                                                                                                                                          |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **StsPrivateAuthorityUri** | <p>This should match your private Cinchy SSO URL.<br><br><em>Ex: /CinchySSO</em></p>                                                                                                                                                                                                           |
+| **StsPublicAuthorityUri**  | <p>This should match your public Cinchy SSO URL.<br><br><em>Ex: /CinchySSO</em></p>                                                                                                                                                                                                            |
+| **CinchyPrivateUri**       | <p>This should match your private Cinchy URL.<br><br><em>Ex: /Cinchy</em></p>                                                                                                                                                                                                                  |
+| **CinchyPublicUri**        | <p>This should match your public Cinchy URL.<br><br><em>Ex: /Cinchy</em></p>                                                                                                                                                                                                                   |
+| **UseHttps**               | This is "true" by default.                                                                                                                                                                                                                                                                     |
+| **DB Type**                | Either "PostgreSQL" or "TSQL"                                                                                                                                                                                                                                                                  |
+| **“MaxRequestBodySize”**   | <p><strong>This capability was introduced in Cinchy v5.4</strong></p><p>This configurable property to allow you to set your own file upload size for the Files API, should you wish. <strong>It's defaulted to 1G.</strong></p><pre><code>“MaxRequestBodySize”: 1073741824 // 1g
+</code></pre> |
+|                            |                                                                                                                                                                                                                                                                                                |
 
 ### Connection string
 
@@ -271,6 +269,6 @@ To avoid users from having to access the application at a URL that contains /Cin
 
 Navigate to the following sub-pages to deploy the following bundled v5 components:
 
-- [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
-- [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-- [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
+* [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
+* [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
+* [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
