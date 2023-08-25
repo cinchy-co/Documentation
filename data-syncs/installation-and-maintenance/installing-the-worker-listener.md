@@ -1,17 +1,17 @@
-# Installing the Worker/Listener
+# Install the Worker/Listener
 
 ## Overview
 
-The Worker and Listener are important components for using Real-Time Data syncs. At a high level, the Worker/Listener follows this process:
+The Worker and Event Listener are vital components for real-time Data syncs. Here's a brief overview of how the Worker/Event Listener operates:
 
-- Once the Listener is successfully subscribed, it waits for events from streaming source.
-- The Listener receives a message from a streaming source and pushes it to SQL Server Broker.
-- The Worker then picks up message from SQL Server Broker.
-- The Worker fetches the matching record from the target based on the sync key.
-- If there are changes detected, the Worker pushes them to the target system. Successes and failures are logged in the worker's log file.
+- The Event Listener, once successfully subscribed, awaits events from the streaming source.
+- Upon receiving a message from a streaming source, the Event Listener pushes it to the message queue.
+- The Worker then retrieves the message from the message queue.
+- The Worker fetches the corresponding record from the target based on the sync key.
+- If changes are detected, the Worker pushes them to the target system. Both successes and failures get logged in the worker's log file.
 
 {% hint style="warning" %}
-**In a Kubernetes deployment of the Cinchy Platform**, the Worker/Listener is automatically installed. The below steps refer only to an IIS deployment of the Cinchy Platform.
+**For a Kubernetes deployment of the Cinchy Platform**, the Worker/Event Listener is automatically installed. The steps below are specific to an IIS deployment of the Cinchy Platform.
 {% endhint %}
 
 ## Prerequisites
@@ -22,90 +22,94 @@ The Worker and Listener are important components for using Real-Time Data syncs.
   - Service Broker enabled
 - Cinchy Platform
 
-## SQL service broker setup
+## SQL Service Broker setup
 
 1. On a Windows Server machine, launch an instance of PowerShell as Administrator.
-2. Set up the SQL Service Broker by executing the following command:
+2. Enable the SQL Service Broker using the command:
 
 ```sql
 ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE;
 ```
 
-## Downloading the resources
+## Download the resources
 
-1. Navigate to the[ Cinchy Releases table.](https://cinchy.net/Tables/1477?rowHeight=Expanded)
+1. Navigate to the [Cinchy Releases table](https://cinchy.net/Tables/1477?rowHeight=Expanded).
 
-### Event listener
+### Event Listener
 
 1. Download the latest **Cinchy Event Listener.zip** file from the **Release Artifacts** column.
-2. Extract the .zip to the folder to \<your event listener folder>
-3. Execute the `create-cinchy-event-listener-windows-service.ps1` PowerShell script located in the installation directory. Pass in `filePath` parameter _-filePath \<Your Listener/Worker Path>_ to the **agent.exe file.**
+2. Extract the .zip file to your designated directory. For example, `C:\your event listener folder`.
+3. Run the `create-cinchy-event-listener-windows-service.ps1` PowerShell script from the installation directory. Use the `filePath` parameter as `-filePath <Path to your agent.exe file>`.
 
 ### Worker
 
 1. Download the latest **Cinchy Connections.zip** file from the **Release Artifacts** column.
-2. Extract the content of the **Cinchy Worker** folder to C:\\\<your CLI worker folder>
-3. Execute `create-cinchy-cli-worker-windows-service.ps1` PowerShell script located in the installation directory. Pass in `filePath` parameter _filePath = path_ to the **Cinchy\.CLI.exe file.**
+2. Unzip the content of the **Cinchy Worker** folder to, for example, `C:\your CLI worker folder`.
+3. Run the `create-cinchy-cli-worker-windows-service.ps1` PowerShell script from the installation directory. Pass the `filePath` parameter pointing to the **Cinchy\.CLI.exe file**.
 
-## Event listener deployment
+## Event Listener deployment
 
-1. Navigate to the _appSettings.json_ in your Event Listener directory and make the following configurations:
+1. Open the `appSettings.json` file in your Event Listener directory and configure:
 
-#### ClientSettings
+  #### ClientSettings
 
-<!-- vale off -->
+  <!-- vale off -->
 
-| Parameter | Value                                               |
-| --------- | --------------------------------------------------- |
-| URL       | Cinchy Web URL (ex. https://cinchy.net/Cinchy)      |
-| Password  | The password for the user eventlistener@cinchy.com. |
+  | Parameter | Value                                               |
+  | --------- | --------------------------------------------------- |
+  | URL       | Cinchy Web URL (e.g., https://cinchy.net/Cinchy)    |
+  | Password  | Password for the user: eventlistener@cinchy.com     |
 
-<!-- vale on -->
+  <!-- vale on -->
 
-#### AppSettings
+  #### AppSettings
 
-| Parameter                     | Value                                                                                                             |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| GetNewListenerConfigsInterval | (seconds) How often the listener polls for new configs in the \[Cinchy].\[Listener Configs] table. Default is 60. |
+  | Parameter                     | Value                                                                                                             |
+  | ----------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+  | GetNewListenerConfigsInterval | (seconds) Frequency at which the listener checks for new configs in the \[Cinchy].\[Listener Configs] table. Default is 60 seconds. |
 
-#### ConnectionStrings
+  #### ConnectionStrings
 
-| Parameter | Value                                                                        |
-| --------- | ---------------------------------------------------------------------------- |
-| SqlServer | Fill in the connection string to the SQL server hosting the Cinchy database. |
+  | Parameter | Value                                                                        |
+  | --------- | ---------------------------------------------------------------------------- |
+  | SqlServer | Connection string to the SQL server that hosts the Cinchy database.          |
 
-2. To start the service, open the **Run box (Windows + R) > services.msc**
+2. To start the Event Listener service:
+    - Press `Windows + R` to access the Run box.
+    - Type `services.msc` and press Enter.
+    - From the services list, locate **Cinchy Event Listener**.
+    - Right-click on it and select **Start**.
 
-3. In the list of services, find the **Cinchy Event Listener** service. Right-click on the service and click **Start.**
+## Worker Deployment
 
-## Worker deployment
+1. Open the _appSettings.json_ file in your Worker directory and configure:
 
-1. Navigate to the _appSettings.json_ in your Worker directory and make the following configurations:
+  #### ClientSettings
 
-#### ClientSettings
+  <!-- vale off -->
 
-<!-- vale off -->
+  | Parameter | Value                                            |
+  | --------- | ------------------------------------------------ |
+  | URL       | Cinchy Web URL (e.g., https://cinchy.net/Cinchy) |
+  | Password  | Password for the user: connections@cinchy.com    |
 
-| Parameter | Value                                             |
-| --------- | ------------------------------------------------- |
-| URL       | Cinchy Web URL (ex. https://cinchy.net/Cinchy)    |
-| Password  | The password for the user connections@cinchy.com. |
+  <!-- vale on -->
 
-<!-- vale on -->
+  #### AppSettings
 
-#### AppSettings
+  | Parameter     | Value                                      |
+  | ------------- | ------------------------------------------ |
+  | Model         | Cinchy. This specifies the model for the CLI. |
+  | TempDirectory | Temporary directory for the CLI to store files. |
 
-| Parameter     | Value                                      |
-| ------------- | ------------------------------------------ |
-| Model         | Cinchy. This is the model for the CLI.     |
-| TempDirectory | Temp directory for the CLI to store files. |
+  #### ConnectionStrings
 
-#### ConnectionStrings
+  | Parameter | Value                                                                        |
+  | --------- | ---------------------------------------------------------------------------- |
+  | SqlServer | Connection string to the SQL server that hosts the Cinchy database.          |
 
-| Parameter | Value                                                                        |
-| --------- | ---------------------------------------------------------------------------- |
-| SqlServer | Fill in the connection string to the SQL server hosting the Cinchy database. |
-
-2. To start the service, open the **Run box** on your machine **(Windows + R) >** type in **services.msc**
-3. In the list of services, find the **Cinchy Worker**.
-4. Right click on the service and click **Start.**
+2. To start the Worker service:
+    - Press `Windows + R` to open the Run box.
+    - Input `services.msc` and hit Enter.
+    - In the list of services, find **Cinchy Worker**.
+    - Right-click on the service and select **Start**.
