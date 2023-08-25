@@ -20,8 +20,6 @@ You have two ways to set up a data sync in Cinchy:
 1. Use the Connections UI to input and save configuration details. The data will be stored as an XML file in the **Data Sync Configurations** table.
 2. Directly upload an XML config into the **Data Sync Configurations** table.
 
-For real-time syncs using Connections UI, you'll also need to set up a lister configuration in the **Listener Config** table.
-
 ### Set up a data sync with the Connections UI
 
 To use the Connections UI, open the **Connections Experience**.
