@@ -4,9 +4,15 @@
 
 The set of functions listed in this page are for use in the [Cinchy Connections Experience](https://cli.docs.cinchy.com/) when configuring data syncs.
 
+* [@COLUMN]
 * [​JSON\_ESCAPE​](connections-functions.md#json\_escape)
 * [​URL\_ESCAPE​](connections-functions.md#url\_escape)
 * [STRING\_ESCAPE()](connections-functions.md#string\_escape)
+* [@ID](connections-functions#id)
+
+## @COLUMN
+
+The `@COLUMN` function connects a specific property within a REST API response to a column within Cinchy.
 
 ## JSON\_ESCAPE <a href="#json_escape" id="json_escape"></a>
 
@@ -44,7 +50,7 @@ This example uses an API and adds a value (@Parameter) that contains double quot
 
 ## URL\_ESCAPE
 
-This function is used in Connections to escape parameter values and be safe to use inside a URL without breaking it
+This function is used in Connections to escape parameter values for use inside a URL without breaking it
 
 **This function can be used in a REST API connection anywhere that allows parameters to be, such as the URL endpoint, the Request Body, or a Post-Sync Script.**
 
@@ -58,7 +64,7 @@ This function is used in Connections to escape parameter values and be safe to u
 
 | Argument  | Description                                                                                             |
 | --------- | ------------------------------------------------------------------------------------------------------- |
-| Parameter | The parameter value that you want to escape in order to be safe to use inside a URL without breaking it |
+| Parameter | The parameter value that you want to escape for use inside a URL without breaking it |
 
 ### Example 1
 
@@ -100,7 +106,7 @@ will become
 This is my data sync''s test
 ```
 
-## @ID 
+## @ID <a href="#id" id="id"></a>
 
 The `@ID` function is specific to full file syncs. One of its primary uses in data syncs where the source is Cinchy Event Broker and the destination is a REST API to reconcile specific properties. 
 
