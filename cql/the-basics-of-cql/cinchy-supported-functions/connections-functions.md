@@ -14,19 +14,19 @@ This function is used in Connections to escape parameter values and be safe to u
 
 This function can be used in a REST API connection anywhere that allows parameters to be, such as the URL endpoint, the Request Body, or a Post-Sync Script.
 
-#### Syntax
+### Syntax
 
 ```sql
 JSON_ESCAPE(@Parameter)
 ```
 
-#### Arguments
+### Arguments
 
-| Argument  | Description                                                                                                       |
-| --------- | ----------------------------------------------------------------------------------------------------------------- |
+| Argument  | Description                                                                                              |
+| --------- | -------------------------------------------------------------------------------------------------------- |
 | Parameter | The parameter value that you want to escape to be safe to use inside a JSON document without breaking it |
 
-#### Example 1
+### Example 1
 
 The following example shows how you would use JSON\_ESCAPE in your REST API URL _(Image 1)._
 
@@ -34,7 +34,7 @@ This example uses an API and adds a value (@Parameter) that contains double quot
 
 <figure><img src="../../../.gitbook/assets/image (515).png" alt=""><figcaption><p>Image 1: Example 1</p></figcaption></figure>
 
-#### Example 2
+### Example 2
 
 The following example shows how you would use JSON\_ESCAPE in your REST API Request Body _(Image 2)._
 
@@ -48,19 +48,19 @@ This function is used in Connections to escape parameter values and be safe to u
 
 **This function can be used in a REST API connection anywhere that allows parameters to be, such as the URL endpoint, the Request Body, or a Post-Sync Script.**
 
-#### Syntax
+### Syntax
 
 ```sql
  URL_ESCAPE(@Parameter)
 ```
 
-#### Arguments
+### Arguments
 
 | Argument  | Description                                                                                             |
 | --------- | ------------------------------------------------------------------------------------------------------- |
 | Parameter | The parameter value that you want to escape in order to be safe to use inside a URL without breaking it |
 
-#### Example 1
+### Example 1
 
 The following example shows how you would use URL\_ESCAPE in your REST API URL _(Image 3)._
 
@@ -98,4 +98,52 @@ STRING_ESCAPE(This is my data sync's test)
 will become
 
 This is my data sync''s test
+```
+
+## @ID 
+
+The `@ID` function is specific to full file syncs. One of its primary uses in data syncs where the source is Cinchy Event Broker and the destination is a REST API to reconcile specific properties. 
+
+### Syntax
+
+```json
+{
+    "id": "@ID"
+}
+```
+
+### Example
+
+The following example uses the Cinchy Event Broker as a Source with a REST API destination.
+
+ This scenario updates the data from the `employeeID` property to the source. The example below is a REST API response from our destination. 
+
+```json
+
+{
+    "data": [
+        {"employeeId": 1, 
+        "name": "John"
+        },
+        {"employeeId": 2, 
+        "name": "Ravi"
+        }
+    ]
+}
+```
+
+Under **REST API SOURCE**, you would configure your endpoint to the URL of the API request. For this example, your response format would be **JSON**, your **Records Root JSONPath** is `$.data`, and your ID Column is `$.employeeID`. 
+
+With this configuration, your `@ID` is now mapped to the `data.employeeID` in your JSON file.
+
+<figure><img src="../../.gitbook/assets/../../../.gitbook/assets/connections-functions/id-connections-functions.png" alt=""><figcaption><p>Image 3: REST API Source configuration</p></figcaption></figure>
+
+Under **REST API** > **API Specification** > **Update Specification** > **Body**, the following content maps the `id` property to the `@ID` function:
+
+```json
+{
+    "key":"@COLUMN('Name')",
+    "id": "@ID"
+
+}
 ```
