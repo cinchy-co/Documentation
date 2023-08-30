@@ -15,7 +15,7 @@ Before starting with the ADFS configuration, make sure to have following informa
 
 | Information Required         | Description                                 | Reference              |
 | ---------------------------- | ------------------------------------------- | ---------------------- |
-| Cinchy SSO URL               | The URL for your Cinchy SSO instance        | `{your.cinchysso.url}` |
+| Cinchy SSO URL               | The URL of your Cinchy SSO instance        | `{your.cinchysso.url}` |
 | Cinchy URL                   | The URL of your main Cinchy instance        | `{your.cinchy.url}`    |
 | Cinchy SSO Installation Path | Directory where CinchySSO files are located | `{Path/to/CinchySSO}`  |
 | ADFS Server                  | The URL of your ADFS server                 | `{your.ADFS.server}`   |
@@ -149,7 +149,7 @@ You will need to refer to the Rule Language URLs you copied from the ADFS Config
 
 ### Edit web.config
 
-Insert the following lines within the **appSettings** section of your `web.config` file. Make sure to replace the 
+Insert the following lines within the `<appSettings>` section of your `web.config` file. Make sure to replace the 
 `{your.cinchy.url}` and `{your.cinchysso.url}` with your Cinchy and Cinchy SSO values.
 
 ```xml
