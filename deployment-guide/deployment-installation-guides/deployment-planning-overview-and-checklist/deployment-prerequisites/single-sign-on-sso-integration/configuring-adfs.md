@@ -7,28 +7,26 @@ description: >-
 
 # Configuring ADFS for Cinchy SSO
 
-## Before you begin
+Certainly, presenting the information in a table can help make it easier to understand. Here's how you can structure it:
 
-Before you start the ADFS configuration, make sure you have the following pieces of information:
+## Before You Begin
 
-- **Cinchy SSO URL**: The URL for your Cinchy SSO instance.  
-  Reference: `{your.cinchysso.url}`
+Before starting with the ADFS configuration, make sure to have following information:
 
-- **Cinchy URL**: The URL of your main Cinchy instance.  
-  Reference: `{your.cinchy.url}`
+| Information Required        | Description                                       |  Reference     |
+|-----------------------------|---------------------------------------------------|-----------------------|
+| Cinchy SSO URL              | The URL for your Cinchy SSO instance              | `{your.cinchysso.url}` |
+| Cinchy URL                  | The URL of your main Cinchy instance              | `{your.cinchy.url}`    |
+| Cinchy SSO Installation Path| Directory where CinchySSO files are located       | `{Path/to/CinchySSO}`  |
+| ADFS Server                 | The URL of your ADFS server                       | `{your.ADFS.server}`   |
 
-- **Cinchy SSO Installation Path**: The directory where the CinchySSO files are located.  
-  Reference: `{Path/to/CinchySSO}`
-
-- **ADFS server**: The URL of your ADFS server.
-- Reference: `{your.ADFS.server}`
+Having these details readily available will streamline the ADFS configuration process.
 
 ## Configuration Steps in ADFS
 
 1. Navigate to **AD FS Management** on your ADFS server.
 
 2. Right-click on **Relying Party Trusts** and choose **Add Relying Party Trust** to open the **Add Relying Party Trust Wizard**.  
-   ![Image 1: Add Relying Party Trust Wizard](<../../../../../.gitbook/assets/image (586).png>)
 
 3. In the wizard, select **Claims Aware > Start > Select Data Source**.
 
