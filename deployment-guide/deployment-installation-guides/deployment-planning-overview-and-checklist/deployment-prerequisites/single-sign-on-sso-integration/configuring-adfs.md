@@ -13,12 +13,12 @@ Certainly, presenting the information in a table can help make it easier to unde
 
 Before starting with the ADFS configuration, make sure to have following information:
 
-| Information Required        | Description                                       |  Reference     |
-|-----------------------------|---------------------------------------------------|-----------------------|
-| Cinchy SSO URL              | The URL for your Cinchy SSO instance              | `{your.cinchysso.url}` |
-| Cinchy URL                  | The URL of your main Cinchy instance              | `{your.cinchy.url}`    |
-| Cinchy SSO Installation Path| Directory where CinchySSO files are located       | `{Path/to/CinchySSO}`  |
-| ADFS Server                 | The URL of your ADFS server                       | `{your.ADFS.server}`   |
+| Information Required         | Description                                 | Reference              |
+| ---------------------------- | ------------------------------------------- | ---------------------- |
+| Cinchy SSO URL               | The URL for your Cinchy SSO instance        | `{your.cinchysso.url}` |
+| Cinchy URL                   | The URL of your main Cinchy instance        | `{your.cinchy.url}`    |
+| Cinchy SSO Installation Path | Directory where CinchySSO files are located | `{Path/to/CinchySSO}`  |
+| ADFS Server                  | The URL of your ADFS server                 | `{your.ADFS.server}`   |
 
 Having these details readily available will streamline the ADFS configuration process.
 
@@ -105,21 +105,21 @@ Note: Please ensure that the configurations below are case-sensitive and align e
 
 ### Configuration for appsettings.json
 
-#### App settings section
+#### App Settings Section
 
-| Attribute                   | Value or Description                                                                                                                                                                                                |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CinchyLoginRedirectUri      | The URL where the user is redirected to log in: `https://{your.cinchysso.url}/Account/LoginRedirect`                                                                                                                |
-| CinchyPostLogoutRedirectUri | The URL where the user is redirected after logout: `https://{your.cinchy.url}`                                                                                                                                      |
-| CertificatePath             | The path to the Cinchy SSO certificate: `{Path/to/CinchySSO}\\cinchyidentitysrv.pfx`                                                                                                                                |
-| SAMLClientEntityId          | The **Relying Party Identifier** from the **Relying Party Trust** you configured earlier                                                                                                                            |
-| SAMLIDPEntityId             | The entity ID for the SAML Identity Provider, as seen near the beginning of your FederationMetadata.xml: `http://<AD-Server>/adfs/services/trust`                                                                   |
-| SAMLMetadataXmlPath         | The location where you saved the FederationMetadata.xml file during step 1                                                                                                                                          |
-| SAMLSSOServiceURL           | Located in the Domain controller under in-service endpoints, look for type SAML 2, URL path: `https://{your.AD.server}/Saml2/Acs`. This should be the same as the login URL you provided in the ADFS Configuration. |
-| AcsURLModule                | `/Saml2`                                                                                                                                                                                                            |
-| MaxRequestHeadersTotalSize  | The maximum header size in bytes. Adjust this value if the default size doesn't accommodate your needs.                                                                                                             |
-| MaxRequestBufferSize        | Should be equal or larger than the total size of your headers.                                                                                                                                                      |
-| MaxRequestBodySize          | The maximum request body size in bytes. If set to `-1`, the default value will be used. It's usually not necessary to modify this value.                                                                            |
+| Attribute                       | Value or Description                                                                                     |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **CinchyLoginRedirectUri**      | URL of the user login redirect<br>`https://{your.cinchysso.url}/Account/LoginRedirect`                   |
+| **CinchyPostLogoutRedirectUri** | URL of the user post-logout redirect<br>`https://{your.cinchy.url}`                                      |
+| **CertificatePath**             | Path to Cinchy SSO certificate<br>`{Path/to/CinchySSO}\\cinchyidentitysrv.pfx`                           |
+| **SAMLClientEntityId**          | Relying Party Identifier from earlier-configured Relying Party Trust                                     |
+| **SAMLIDPEntityId**             | Entity ID for SAML IdP, found in FederationMetadata.xml<br>`http://{your.AD.server}/adfs/services/trust` |
+| **SAMLMetadataXmlPath**         | Location of saved FederationMetadata.xml from Initial setup                                              |
+| **SAMLSSOServiceURL**           | URL path in Domain Controller's in-service endpoints<br>`https://{your.AD.server}/Saml2/Acs`             |
+| **AcsURLModule**                | `/Saml2`                                                                                                 |
+| **MaxRequestHeadersTotalSize**  | Maximum header size in bytes; adjustable if default is insufficient                                      |
+| **MaxRequestBufferSize**        | Should be equal to or larger than `MaxRequestHeadersTotalSize`                                           |
+| **MaxRequestBodySize**          | Maximum request body size in bytes (use `-1` for default; usually no need to change)                     |
 
 #### External identity claim section
 
