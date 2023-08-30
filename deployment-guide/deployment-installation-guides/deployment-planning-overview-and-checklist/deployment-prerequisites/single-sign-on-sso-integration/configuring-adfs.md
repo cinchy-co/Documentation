@@ -46,7 +46,7 @@ Having these details readily available will streamline the ADFS configuration pr
 
 9. Under **Configure Identifiers**, add an Identifier and press **Next** to complete the setup.
 
-## Setting Up Claim Issuance Policy
+## Set up Claim Issuance Policy
 
 1. **Right-click** on the newly created Relying Party Trust (located by its Display Name) and select **Edit Claim Issuance Policy**.
 
