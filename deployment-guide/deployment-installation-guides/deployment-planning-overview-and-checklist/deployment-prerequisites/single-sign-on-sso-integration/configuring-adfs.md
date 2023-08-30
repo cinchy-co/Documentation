@@ -128,7 +128,7 @@ You will need to refer to the Rule Language URLs you copied from the ADFS Config
 ```js
 {
   "AppSettings": {
-    // ... Other settings
+    // Replace placeholders below with URLS
   },
   "ExternalIdentityClaimSection": {
     "FirstName": {
@@ -154,10 +154,10 @@ Insert the following lines within the **appSettings** section of your `web.confi
 
 ```xml
 <appSettings>
-  <!-- Other settings -->
+  <!-- Replace placeholders below with URLS -->
   <add key="UseHttps" value="true" />
   <add key="StsAuthorityUri" value="https://{your.cinchy.url}" />
   <add key="StsRedirectUri" value="https://{your.cinchysso.url}/Account/LoginRedirect" />
-  <!-- Other settings -->
+  <!--  -->
 </appSettings>
 ```
