@@ -1,122 +1,135 @@
 ---
+
 description: >-
-  The following outlines the configuration required in Active Directory
-  Federation Services (ADFS) to enable Single Sign-On (SSO).
+  This document outlines the steps for configuring Active Directory Federation Services (ADFS) to facilitate Single Sign-On (SSO) with Cinchy.
+
 ---
 
-# Configuring ADFS
+# Configuring ADFS for Cinchy SSO
 
-## Table of Contents
+Certainly, presenting the information in a table can help make it easier to understand. Here's how you can structure it:
 
-| Table of Contents                                                                   |
-| ----------------------------------------------------------------------------------- |
-| [#1.-adfs-configuration](configuring-adfs.md#1.-adfs-configuration "mention")       |
-| [#2.-claim-issuance-policy](configuring-adfs.md#2.-claim-issuance-policy "mention") |
-| [#3.-cinchy-configuration](configuring-adfs.md#3.-cinchy-configuration "mention")   |
+## Before You Begin
 
-## 1. ADFS Configuration
+Before starting with the ADFS configuration, make sure to have following information:
 
-1. On your ADFS Server, Open **AD FS Management.**
+| Information Required         | Description                                 | Reference              |
+| ---------------------------- | ------------------------------------------- | ---------------------- |
+| Cinchy SSO URL               | The URL of your Cinchy SSO instance        | `{your.cinchysso.url}` |
+| Cinchy URL                   | The URL of your main Cinchy instance        | `{your.cinchy.url}`    |
+| Cinchy SSO Installation Path | Directory where CinchySSO files are located | `{Path/to/CinchySSO}`  |
+| ADFS Server                  | The URL of your ADFS server                 | `{your.ADFS.server}`   |
 
-2\. Right-click on **Relying Party Trusts** and select **Add Relying Party Trust** to launch the **Add Relying Party Trust Wizard** _(Image 1)._
+Having these details readily available will streamline the ADFS configuration process.
 
-![Image 1: Add Relying Party Trust Wizard](<../../../../../.gitbook/assets/image (225).png>)
+## Configuration Steps in ADFS
 
-3\. In the ADFS Wizard, select **Claims Aware > Start > Select Data Source**
+1. Navigate to **AD FS Management** on your ADFS server.
 
-4\. Select **Enter Data About the Relying Part Manually > Next**
+2. Right-click on **Relying Party Trusts** and choose **Add Relying Party Trust** to open the **Add Relying Party Trust Wizard**.  
 
-5\. Under **Specify Display Name**, enter a Display Name of your choice
+3. In the wizard, select **Claims Aware > Start > Select Data Source**.
 
-6\. Under **Configure Certificates**, do not choose any certificates
+4. Select **Enter Data About the Relying Part Manually > Next**.
 
-7\. Under **Configure UR**L, Select **Enable support for the SAML 2.0 SSO Web SSO protocol**.
+5. Fill in a **Display Name** under **Specify Display Name**.
 
-8\. Enter your **login URL** in the following format:
+6. Skip certificate configuration in **Configure Certificates**.
 
-```
-https://<cinchy-sso-URL>/Saml2/Acs
-```
+7. In **Configure URL**, select **Enable support for the SAML 2.0 SSO Web SSO protocol**.
 
-9\. Under **Configure Identifiers**, choose an Identifier
+8. Input your **login URL** as follows:
 
-10\. Select **Nex**t until the process finishes.
+   ```
+   https://{your.cinchysso.url}/Saml2/Acs
+   ```
 
-## 2. Claim Issuance Policy
+9. Under **Configure Identifiers**, add an Identifier and press **Next** to complete the setup.
 
-1. To begin configuring you Claim Issuance policy, **Right-click** on the Relying Party Trust you just created (look for the Display Name) and click **Edit Claim Issuance Policy**.
-2. Click on **Add Rule >** **Claim Rule >** **Send LDAP Attributes as Claims**.
-3. Add your **Claim Rule Name**
-4. Under **Attribute Store**, choose **Active Directory**. Map the **LDAP attribute** to the following outgoing claim types:
+## Set up Claim Issuance Policy
 
-<table data-header-hidden><thead><tr><th>LDAP Attribute</th><th width="249.33333333333331">Outgoing Claim Type</th><th>Comments</th></tr></thead><tbody><tr><td>LDAP Attribute</td><td>Outgoing Claim Type</td><td>Comments</td></tr><tr><td>User-Principal-Name</td><td>Name ID</td><td></td></tr><tr><td>SAM-Account-Name</td><td>sub</td><td><code>sub</code>will need to be typed manually, make sure it does not autocomplete to something else like subject.</td></tr><tr><td>Given-Name</td><td>Given Name</td><td>Necessary for Automatic User Creation</td></tr><tr><td>Surname</td><td>Surname</td><td>Necessary for Automatic User Creation</td></tr><tr><td>E-Mail-Address</td><td>E-Mail Address</td><td>Necessary for Automatic User Creation</td></tr><tr><td>Is-Member-Of-DL</td><td>Role</td><td>Necessary for Automatic User Creation</td></tr></tbody></table>
+1. **Right-click** on the newly created Relying Party Trust (located by its Display Name) and select **Edit Claim Issuance Policy**.
 
-![Image 2: Add Transform Claim Rule Wizard](<../../../../../.gitbook/assets/image (508).png>)
+2. Select **Add Rule > Claim Rule > Send LDAP Attributes as Claims**.
 
-&#x20; 4\. Click **Finish**.
+3. Input a **Claim Rule Name**.
 
-&#x20; 5\. Click on **Edit Rule.**
+4. In the **Attribute Store**, select **Active Directory**. Map the LDAP attributes to the corresponding outgoing claim types as shown in the table below:
 
-&#x20; 6\. Click on **View Rule Language** and copy out the Claim URLs for the claims defined. This information will be needed in a later step to configure your Cinchy **appsettings.json**. This will look something like this:
+| LDAP Attribute      | Outgoing Claim Type | Comments                                   |
+| ------------------- | ------------------- | ------------------------------------------ |
+| User-Principal-Name | Name ID             |                                            |
+| SAM-Account-Name    | sub                 | Type `sub` manually to avoid auto complete |
+| Given-Name          | Given Name          | Required for Auto User Creation            |
+| Surname             | Surname             | Required for Auto User Creation            |
+| E-Mail-Address      | E-Mail Address      | Required for Auto User Creation            |
+| Is-Member-Of-DL     | Role                | Required for Auto User Creation            |
 
-```
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
-  => issue(store = "Active Directory",
-           types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
-                    "sub",
-                    "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname",
-                    "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname",
-                    "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
-                    "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"),
-           query = ";userPrincipalName,sAMAccountName,givenName,sn,mail,memberOf;{0}",
-           param = c.Value);
-```
+![Image 2: Add Transform Claim Rule Wizard](<../../../../../.gitbook/assets/image (495).png>)
 
-&#x20; 7\. Click **OK** to save the rule.
+5. Select **Finish**.
 
-&#x20; 8\. Right-click on **Relying Party Trust** > **Properties**.
+6. Select **Edit Rule** > **View Rule Language**. Copy the Claim URLs for later use in configuring your Cinchy `appsettings.json`. It should look like the following:
+    ```json
+    c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
+      => issue(store = "Active Directory",
+              types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
+                        "sub",
+                        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname",
+                        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname",
+                        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
+                        "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"),
+              query = ";userPrincipalName,sAMAccountName,givenName,sn,mail,memberOf;{0}",
+              param = c.Value);
+    ```
+    
 
-&#x20; 9\. Go to the **Advanced** tab and set the secure hash algorithm to **SHA-256** _(Image 3)._
+7. Press **OK** to confirm and save.
 
-![Image 3: Set the secure hash algorithm to SHA-256](<../../../../../.gitbook/assets/image (222).png>)
+8. Right-click on **Relying Party Trust > Properties**. Move to the **Advanced** tab and select **SHA-256** as the secure hash algorithm.  
+   ![Image 3: Set the secure hash algorithm to SHA-256](<../../../../../.gitbook/assets/image (583).png>)
 
-## **3. Cinchy Configuration**
+## Configuration for Cinchy
 
 {% hint style="info" %}
-Everything below is case sensitive and must match whatever is specified in your SAML IdP configuration.
+Note: Please ensure that the configurations below are case-sensitive and align exactly with those in your SAML IdP setup.
 {% endhint %}
 
-1. Open `https://<your.AD.server>/FederationMetadata/2007-06/FederationMetadata.xml` in a browser and save the XML file in the cinchysso folder.
-2. Open **IIS Manager** and create an HTTPS binding on the Cinchy site (if necessary).
-3. Go to sso site and bind HTTPS with it. Make sure to use the same port as the login URL above if specified.
+### Initial setup
 
-### **Cinchy appsettings.json**
+1. Retrieve and save the Federation Metadata XML file from the following location: `https://{your.ADFS.server}/FederationMetadata/2007-06/FederationMetadata.xml`.
 
-#### AppSettings Section
+2. If needed, use **IIS Manager** to establish an HTTPS connection for the Cinchy website.
 
-| Attribute                   | Value                                                                                                                                                                                                             |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CinchyLoginRedirectUri      | `https://<cinchy-sso-URL>/Account/LoginRedirect`                                                                                                                                                                  |
-| CinchyPostLogoutRedirectUri | `https://<Cinchy-Web-URL>`                                                                                                                                                                                        |
-| CertificatePath             | `<Path to cinchysso>\\cinchyidentitysrv.pfx`                                                                                                                                                                      |
-| SAMLClientEntityId          | **Relying party identifie**r from **Relying Party Trust** above                                                                                                                                                   |
-| SAMLIDPEntityId             | <p><code>http://&#x3C;AD-Server>/adfs/services/trust</code></p><p>Your FederationMetadata.xml will have this near the beginning. Note that this is the entityID, not the ID.</p>                                  |
-| SAMLMetadataXmlPath         | <p><code>&#x3C;Path to cinchysso>\\FederationMetadata.xml</code></p><p>This is the location where you placed the FederationMetadata.xml in step 1.</p>                                                            |
-| SAMLSSOServiceURL           | <p>In Domain controller, in-service endpoints, look for type Saml 2, URL path: <code>https://&#x3C;AD-Server>/Saml2/Acs</code>  </p><p>Same as the login URL provided to the wizard in the ADFS Configuration</p> |
-| AcsURLModule                | `/Saml2`                                                                                                                                                                                                          |
-| MaxRequestHeadersTotalSize  | <p><strong>Integer</strong></p><p>Bytes to set the max request header to. If the default (likely 32kb) does not work, you may have to set this larger to accommodate a large number of groups.</p>                |
-| MaxRequestBufferSize        | <p><strong>Integer</strong></p><p>This should be equal or larger than your header's total size above.</p>                                                                                                         |
-| MaxRequestBodySize          | <p><strong>Integer</strong></p><p>If any of these values are -1 they will use the default. It is not necessary to change the body size.</p>                                                                       |
+3. Also establish an HTTPS connection for the SSO site. Make sure the port number aligns with the one specified in the login URL.
 
-#### External Identity Claim Section
+### Configuration for appsettings.json
 
-You will need the Rule Language URLs you copied out from the ADFS Configuration above. Using the same example as above, we would get the following (replace with your own URLs).
+#### App Settings Section
 
-```javascript
+| Attribute                       | Value or Description                                                                                     |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **CinchyLoginRedirectUri**      | URL of the user login redirect<br>`https://{your.cinchysso.url}/Account/LoginRedirect`                   |
+| **CinchyPostLogoutRedirectUri** | URL of the user post-logout redirect<br>`https://{your.cinchy.url}`                                      |
+| **CertificatePath**             | Path to Cinchy SSO certificate<br>`{Path/to/CinchySSO}\\cinchyidentitysrv.pfx`                           |
+| **SAMLClientEntityId**          | Relying Party Identifier from earlier-configured Relying Party Trust                                     |
+| **SAMLIDPEntityId**             | Entity ID for SAML IdP, found in FederationMetadata.xml<br>`http://{your.AD.server}/adfs/services/trust` |
+| **SAMLMetadataXmlPath**         | Location of saved FederationMetadata.xml from Initial setup                                              |
+| **SAMLSSOServiceURL**           | URL path in Domain Controller's in-service endpoints<br>`https://{your.AD.server}/Saml2/Acs`             |
+| **AcsURLModule**                | `/Saml2`                                                                                                 |
+| **MaxRequestHeadersTotalSize**  | Maximum header size in bytes; adjustable if default is insufficient                                      |
+| **MaxRequestBufferSize**        | Should be equal to or larger than `MaxRequestHeadersTotalSize`                                           |
+| **MaxRequestBodySize**          | Maximum request body size in bytes (use `-1` for default; usually no need to change)                     |
+
+#### External identity claim section
+
+You will need to refer to the Rule Language URLs you copied from the ADFS Configuration. Replace the placeholders below with your own URLs:
+
+```js
 {
   "AppSettings": {
-    ...
-    },
+    // Replace placeholders below with URLS
+  },
   "ExternalIdentityClaimSection": {
     "FirstName": {
       "ExternalClaimName": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"
@@ -134,16 +147,17 @@ You will need the Rule Language URLs you copied out from the ADFS Configuration 
 }
 ```
 
-### Web.config
+### Edit web.config
 
-Add the 3 following lines to your web.config within the **appSettings** section:
+Insert the following lines within the `<appSettings>` section of your `web.config` file. Make sure to replace the 
+`{your.cinchy.url}` and `{your.cinchysso.url}` with your Cinchy and Cinchy SSO values.
 
-```markup
+```xml
 <appSettings>
-  ...
+  <!-- Replace placeholders below with URLS -->
   <add key="UseHttps" value="true" />
-  <add key="StsAuthorityUri" value="https://<your.cinchy.url>" />
-  <add key="StsRedirectUri" value="https://<your.cinchysso.url>/Account/LoginRedirect" />
-  ...
+  <add key="StsAuthorityUri" value="https://{your.cinchy.url}" />
+  <add key="StsRedirectUri" value="https://{your.cinchysso.url}/Account/LoginRedirect" />
+  <!--  -->
 </appSettings>
 ```
