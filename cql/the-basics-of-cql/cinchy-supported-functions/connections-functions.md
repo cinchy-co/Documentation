@@ -12,7 +12,43 @@ The set of functions listed in this page are for use in the [Cinchy Connections 
 
 ## @COLUMN
 
-The `@COLUMN` function connects a specific property within a REST API response to a column within Cinchy.
+The `@COLUMN` function is used for real-time syncs where your source is an event (such as Cinchy Event Broker) and your target is REST/SOAP. 
+
+Use `@COLUMN` to build the request body of SOAP/REST API specifications.
+
+### Syntax
+
+```
+{
+    "employeeNane": "@COLUMN('Name')"
+}
+```
+
+### Example
+
+The following example uses the Cinchy Event Broker as a Source with a REST API destination. 
+
+This scenario maps the data from the `Name` property to the REST API destination property `employeeName`.
+
+1. In the **Source** tab, set the source to Cinchy Event Broker. 
+2. In the **Schema** section, select your schema. In this example, the schema consists of two columns: 
+
+ - `Id`, with a **Data Type** of Number.
+ - `Name` with a **Data Type** of Text.
+
+2. In the **Destination** tab, go to **REST API** > **API Specification** > **Insert Specification** > **Request** and select **POST** with an endpoint URL.
+
+
+3. Enter your mapping into the **Body**. This scenario uses the following:
+
+    ```json
+    {
+        "employeeNane": "@COLUMN('Name')",
+        "id": "@ID"
+
+
+    }
+    ```
 
 ## JSON\_ESCAPE <a href="#json_escape" id="json_escape"></a>
 
@@ -122,7 +158,7 @@ The `@ID` function is specific to full file syncs. One of its primary uses in da
 
 The following example uses the Cinchy Event Broker as a Source with a REST API destination.
 
- This scenario updates the data from the `employeeID` property to the source. The example below is a REST API response from our destination. 
+This scenario updates the data from the `employeeID` property to the source. The example below is a REST API response from our destination. 
 
 ```json
 
@@ -138,7 +174,7 @@ The following example uses the Cinchy Event Broker as a Source with a REST API d
 }
 ```
 
-Under **REST API SOURCE**, you would configure your endpoint to the URL of the API request. For this example, your response format would be **JSON**, your **Records Root JSONPath** is `$.data`, and your ID Column is `$.employeeID`. 
+Under **REST API SOURCE**, configure your endpoint to the URL of the API request. For this example, your response format would be **JSON**, your **Records Root JSONPath** is `$.data`, and your ID Column is `$.employeeID`. 
 
 With this configuration, your `@ID` is now mapped to the `data.employeeID` in your JSON file.
 
