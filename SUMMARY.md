@@ -39,6 +39,9 @@
     * [Use Self-Signed SSL Certs (Kubernetes)](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)
     * [Deploy the CLI (Kubernetes)](https://app.gitbook.com/o/-LDtM6UlhGoQ91uwM5SF/s/-M9TgaGdQpt0ZS9aqe1c/connections-installation-guide/v5-connections-and-cli-installation-guide#3.-running-the-cli)
   * [IIS ](deployment-guide/deployment-installation-guides/iis-deployment-platform-installation.md)
+
+## Upgrade guide
+
 * [Upgrading Cinchy](deployment-guide/upgrade-guides/README.md)
   * [Upgrade Cinchy versions](deployment-guide/upgrade-guides/upgrading-cinchy-versions/README.md)
     * [Cinchy Upgrade Utility](deployment-guide/upgrade-guides/upgrading-cinchy-versions/cinchy-upgrade-utility.md)
@@ -131,9 +134,9 @@
 
 ## CQL
 
-* [CQL basics](cql/the-basics-of-cql/README.md)
+* [Overview](cql/the-basics-of-cql/README.md)
   * [CQL examples](cql/the-basics-of-cql/cql-examples.md)
-  * [CQL functions master list](cql/the-basics-of-cql/cql-functions-master-list.md)
+
   * [CQL statements overview](cql/the-basics-of-cql/cql-statements-overview/README.md)
     * [Cinchy DML statements](cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements.md)
     * [Cinchy DDL statements](cql/the-basics-of-cql/cql-statements-overview/cinchy-ddl-statements.md)
@@ -160,7 +163,7 @@
     * [Full Text Search functions](cql/the-basics-of-cql/cinchy-supported-functions/full-text-search-functions.md)
     * [Connections functions](cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md)
     * [JSON functions](cql/the-basics-of-cql/cinchy-supported-functions/json-functions.md)
-
+* [CQL functions master list](cql/the-basics-of-cql/cql-functions-master-list.md)
 ## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)

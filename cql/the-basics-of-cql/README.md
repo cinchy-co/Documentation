@@ -2,6 +2,7 @@
 description: >-
   This page will help you to understand the fundamentals of getting started with
   Cinchy Query Language.
+labels: CQL
 ---
 
 # The Basics of Cinchy Query Language (CQL)
