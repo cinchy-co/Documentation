@@ -25,7 +25,7 @@ All CQL queries are secured by default through universal data access controls. T
 
 CQL, unique to Cinchy, shares similarities with SQL and PGSQL but has key differences. The following list guides you through some key differences:
 
-#### Streamline your CQL queries with Query Builder
+#### Query Builder UI
 
 Cinchy's Query Builder UI pre-fills basic syntax to expedite your query process. Add terms manually or via drag-and-drop. More details can be found on the [Saved Queries page](https://cinchy.gitbook.io/guides-for-using-cinchy/builder-guides/saved-queries).
 
@@ -67,7 +67,7 @@ WHERE [Deleted] IS NULL
 - Query draft rows using **Draft([Column Name])**. Also include **[Column Name]** for non-draft rows.
 - Default sorting is ascending unless specified.
 - In boolean queries, **1** means true, **0** means false.
-- Cinchy splits version numbers differently. Use **Version** and **Draft Data** to specify, like `\[Version]: 2` and `\[Draft Data]: 5`.
+- In Cinchy, version history labeling diverges from standard SQL systems. While typical systems use a single label like "version 1.2.4," Cinchy breaks this into two components: Version and Draft Data. These serve as **ORDER BY** options. For example, if Version is `2` and Draft Data is `5`, the complete version is denoted as `2.5`.
 
 #### Error and syntax guidance
 
@@ -93,14 +93,14 @@ You can specify what your results return as in the Query Builder
 
 The table below lists what your results can return:
 
-| Options                                    | Description                                                                                                    |
+| Query return result                                    | Description                                                                                                    |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| **Approved Data (Default)**                | Returns table data that is approved. Ideal for use with external APIs.                                          |
-| **Draft Data**                             | Displays records that are pending approval.                                                                    |
-| **With History**                           | Includes historical data for all tables, capturing all changes within the query's scope.                       |
-| **Row Count**                              | Indicates the number of rows affected if the last statement is an INSERT, UPDATE, or DELETE.                    |
-| **DDL Commands**                           | For queries with DDL (Data Definition Language) commands like CREATE, ALTER, DROP.                              |
-| **Single Value**                           | Provides a single value, the first column of the first row, irrespective of query size.                         |
+| **Query Result (Approved Data Only)**                | Default return type. Returns table data that's approved. Ideal for use with external APIs.                                          |
+| **Query Result (Including Draft Data)**                             | Displays records that are pending approval.                                                                    |
+| **Query Result (Including Version History)**                           | Returns a table from a select query with historical data for all tables, as seen in the Collaboration Log, including all changes within the scope of the query.                       |
+| **Number of Rows Affected**                              | Returns a single string response of the number of rows affected if the last statement is an INSERT, UPDATE, or DELETE.                    |
+| **Execute DDL Script**                           | For queries with DDL (Data Definition Language) commands like CREATE, ALTER, DROP.                              |
+| **Single Value**                           | Returns a result of 1 row x 1 column, irrespective of the underlying result set.                         |
 ### Data return types <a href="#3.-data-return-types" id="3.-data-return-types"></a>
 
 The following tables show the data types that a **Cinchy Data Type** translates to in the database:
