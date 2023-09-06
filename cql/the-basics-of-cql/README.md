@@ -61,7 +61,7 @@ WHERE [Deleted] IS NULL
 #### Query essentials
 
 - For text or string data, encapsulate the text with single quotes, as in **[Domain] = 'Sandbox'**.
-- Use **!=** to specify "not equal to,". For example, **[Domain] != 'Sandbox'**.
+- Use **!=** to specify **Not equal to**. For example, **[Domain] != 'Sandbox'**.
 
 #### Draft and version handling
 - Query draft rows using **Draft([Column Name])**. Also include **[Column Name]** for non-draft rows.
