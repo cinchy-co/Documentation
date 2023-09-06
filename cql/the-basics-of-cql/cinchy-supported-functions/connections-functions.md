@@ -12,7 +12,7 @@ The set of functions listed in this page are for use in the [Cinchy Connections 
 
 ## @COLUMN
 
-The `@COLUMN` function is used for real-time syncs where your source is an event (such as Cinchy Event Broker) and your target is REST/SOAP. 
+The `@COLUMN` function is used for data syncs where your source is an event (such as Cinchy Event Broker) and your target is REST/SOAP. 
 
 Use `@COLUMN` to build the request body of SOAP/REST API specifications.
 
@@ -20,7 +20,7 @@ Use `@COLUMN` to build the request body of SOAP/REST API specifications.
 
 ```
 {
-    "employeeNane": "@COLUMN('Name')"
+    "employeeName": "@COLUMN('Name')"
 }
 ```
 
