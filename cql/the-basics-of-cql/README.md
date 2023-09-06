@@ -23,11 +23,11 @@ All CQL queries are secured by default through universal data access controls. T
 
 ### Basic rules <a href="#2.-basic-rules-of-cql" id="2.-basic-rules-of-cql"></a>
 
-CQL, unique to Cinchy, shares similarities with SQL and PGSQL but has key differences. The following list guides you through some key differences:
+CQL, unique to Cinchy, shares similarities with SQL and PGSQL but has key differences. The list below defines the foundational elements of CQL.
 
 #### Query Builder UI
 
-Cinchy's Query Builder UI pre-fills basic syntax to expedite your query process.  You can add terms manually or via drag-and-drop. More details can be found on the [Saved Queries page](https://cinchy.gitbook.io/guides-for-using-cinchy/builder-guides/saved-queries).
+Cinchy's Query Builder UI pre-fills basic syntax to expedite your query process. You can add terms manually or via drag-and-drop. More details can be found on the [Saved Queries page](https://cinchy.gitbook.io/guides-for-using-cinchy/builder-guides/saved-queries).
 
 ![Query example.](https://762429502-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MBtHkNqYteSDPDzpqqZ%2Fuploads%2FXPwQAuVPRZiEd8cM1N6p%2Fimage.png?alt=media&token=90cfce6d-cc3f-46dd-98a1-8392b7d88938)
 
