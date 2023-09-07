@@ -12,7 +12,7 @@ The set of functions listed in this page are for use in the [Cinchy Connections 
 
 ## @COLUMN
 
-The `@COLUMN` function is used for data syncs where your source is an event (such as Cinchy Event Broker) and your target is REST/SOAP. 
+The `@COLUMN` function is used for data syncs to map Cinchy sources to REST/SOAP destinations. 
 
 Use `@COLUMN` to build the request body of SOAP/REST API specifications.
 
@@ -26,12 +26,12 @@ Use `@COLUMN` to build the request body of SOAP/REST API specifications.
 
 ### Example
 
-The following example uses the Cinchy Event Broker as a Source with a REST API destination. 
+The following example uses a Cinchy Table as a Source with a REST API destination. 
 
-This scenario maps the data from the `Name` property to the REST API destination property `employeeName`.
+This scenario will map data from a table called **Employees** that contain two columns: `Name` and `EmployeeID`. We will map the  `Name` property in a Cinchy Table to the REST API destination property `employeeName`.
 
-1. In the **Source** tab, set the source to Cinchy Event Broker. 
-2. In the **Schema** section, select your schema. In this example, the schema consists of two columns: 
+1. In the **Source** tab, set the source to Cinchy Table. 
+2. In the **Schema** section, define your columns for `Name` and `Id`: 
 
  - `Id`, with a **Data Type** of Number.
  - `Name` with a **Data Type** of Text.
@@ -39,11 +39,11 @@ This scenario maps the data from the `Name` property to the REST API destination
 2. In the **Destination** tab, go to **REST API** > **API Specification** > **Insert Specification** > **Request** and select **POST** with an endpoint URL.
 
 
-3. Enter your mapping into the **Body**. This scenario uses the following:
-
+3. Enter the mapping into the **Body**. Use `@COLUMN`, then append the name to link it to the `Name` column of the Cinchy Table, as shown in the sample below:
+   
     ```json
     {
-        "employeeNane": "@COLUMN('Name')",
+        "employeeName": "@COLUMN('Name')",
         "id": "@ID"
 
 
@@ -52,9 +52,9 @@ This scenario maps the data from the `Name` property to the REST API destination
 
 ## JSON\_ESCAPE <a href="#json_escape" id="json_escape"></a>
 
-This function is used in Connections to escape parameter values and be safe to use inside a JSON document without breaking it
+This function escapes reserved or special characters in parameter values in a JSON document, making it possible to insert them into strings.
 
-This function can be used in a REST API connection anywhere that allows parameters to be, such as the URL endpoint, the Request Body, or a Post-Sync Script.
+Use this function in any REST API connection that accepts parameters, such as URL endpoints, Request Body, or Post-Sync Scripts.
 
 ### Syntax
 
@@ -86,7 +86,7 @@ This example uses an API and adds a value (@Parameter) that contains double quot
 
 ## URL\_ESCAPE
 
-This function is used in Connections to escape parameter values for use inside a URL without breaking it
+Use this function in Connections to escape parameter values for use inside a URL without breaking it
 
 **This function can be used in a REST API connection anywhere that allows parameters to be, such as the URL endpoint, the Request Body, or a Post-Sync Script.**
 
