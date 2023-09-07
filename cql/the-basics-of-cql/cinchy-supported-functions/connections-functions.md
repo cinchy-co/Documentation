@@ -12,7 +12,7 @@ The set of functions listed in this page are for use in the [Cinchy Connections 
 
 ## @COLUMN
 
-Use the `@COLUMN` function in data syncs to map Cinchy sources to REST/SOAP destinations. You can use `@COLUMN` in the request body of SOAP/REST API specifications.
+Use @COLUMN for dynamic column referencing in data syncs, specifically for mapping Cinchy sources to REST or SOAP destinations.
 
 ### Syntax
 
@@ -60,13 +60,6 @@ Use this function in any REST API connection that accepts parameters, such as UR
 ```sql
 JSON_ESCAPE(@Parameter)
 ```
-
-### Arguments
-
-| Argument  | Description                                                                                              |
-| --------- | -------------------------------------------------------------------------------------------------------- |
-| Parameter | The parameter value that you want to escape to be safe to use inside a JSON document without breaking it |
-
 ### Example 1
 
 The following example shows how you would use JSON\_ESCAPE in your REST API URL _(Image 1)._
@@ -133,16 +126,11 @@ STRING_ESCAPE("@yourparameter")
 
 #### Example
 
-In the example below, 
+The example below uses a string escape for the last name to catch any single quotes, such as `O'Connell`.
 
 ```json
 	"@lastname": "STRING_ESCAPE("@COLUMN('$.LastName')")",
 ```
-will become
-
-This is my data sync''s test
-```
-
 ## @ID <a href="#id" id="id"></a>
 
 The `@ID` function is specific to full file syncs. One of its primary uses in data syncs where the source is Cinchy Event Broker and the destination is a REST API to reconcile specific properties. 
