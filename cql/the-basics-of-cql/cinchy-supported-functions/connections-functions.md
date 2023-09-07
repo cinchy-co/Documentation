@@ -12,12 +12,11 @@ The set of functions listed in this page are for use in the [Cinchy Connections 
 
 ## @COLUMN
 
-The `@COLUMN` function is used for data syncs to map Cinchy sources to REST/SOAP destinations. 
-
-Use `@COLUMN` to build the request body of SOAP/REST API specifications.
+Use the `@COLUMN` function in data syncs to map Cinchy sources to REST/SOAP destinations. You can use `@COLUMN` in the request body of SOAP/REST API specifications.
 
 ### Syntax
 
+The following snippet links the `@COLUMN` mapped to `Name` to `employeeName`.
 ```
 {
     "employeeName": "@COLUMN('Name')"
@@ -134,9 +133,11 @@ STRING_ESCAPE("@yourparameter")
 
 #### Example
 
-```
-STRING_ESCAPE(This is my data sync's test)
+In the example below, 
 
+```json
+	"@lastname": "STRING_ESCAPE("@COLUMN('$.LastName')")",
+```
 will become
 
 This is my data sync''s test
