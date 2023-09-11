@@ -58,7 +58,7 @@ Decide on your data sync direction:
 Explore various connection types:
 * [Supported data sync sources](supported-data-sync-sources/)
 * [Supported data sync destinations](supported-data-sync-destinations/)
-* [Supported sync stream sources (for real-time syncs)](supported-real-time-sync-stream-sources/)
+* [Supported sync stream sources (for real-time syncs)](supported-real-time-sources/)
 
 ### 4. **Create a data sync configuration**
 
@@ -72,7 +72,7 @@ Use the Connections UI or manually input a Data Sync XML into the Data Sync Conf
 
 ### 5. **Set up Listener Config (For Real-time Syncs)**
 
-For real-time syncs, configure your listener in the **Listener Config** table. [See the supported real-time sync stream sources page](supported-real-time-sync-stream-sources/) for subscribing to your event stream.
+For real-time syncs, configure your listener in the **Listener Config** table. [See the supported real-time sync stream sources page](supported-real-time-sources/) for subscribing to your event stream.
 
 ### 6. **Test and Run**
 

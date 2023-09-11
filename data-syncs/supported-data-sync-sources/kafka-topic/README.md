@@ -48,7 +48,7 @@ The following parameters will help to define your data sync source and how it fu
 {% tab title="LIstener Configuration" %}
 To set up a real-time sync, you must configure your Listener values. You can do so through the Connections UI.
 
-Note that If there is more than one listener associated with your data sync, you will need to configure the addition listeners via [the Listener Configuration table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
+Note that If there is more than one listener associated with your data sync, you will need to configure the addition listeners via [the Listener Configuration table.](../../supported-real-time-sources/the-listener-configuration-table.md)
 
 #### Reset behaviour
 
@@ -154,5 +154,5 @@ You have the option to add a source filter to your data sync. Please review the 
 * Configure your [Destination](../../supported-data-sync-destinations/)
 * Define your[ ](../../building-data-syncs/sync-actions.md)[Sync Actions.](../../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* If more than one listener is needed for a real-time sync, configure it/them via [the Listener Config table.](../../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
+* If more than one listener is needed for a real-time sync, configure it/them via [the Listener Config table.](../../supported-real-time-sources/the-listener-configuration-table.md)
 * To run a real-time sync, enable your Listener from [the Execution tab.](../../building-data-syncs/)

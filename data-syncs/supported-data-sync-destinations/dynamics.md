@@ -51,5 +51,5 @@ You have the option to add a destination filter to your data sync. Please review
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
 * Define your [Permissions](../building-data-syncs/#2.-create-a-data-sync-configuration).
-* If you are running a real-time sync, [set up your Listener Config](../supported-real-time-sync-stream-sources/) and enable it to begin your sync.
+* If you are running a real-time sync, [set up your Listener Config](../supported-real-time-sources/) and enable it to begin your sync.
 * If you are running a batch sync, click **Jobs > Start a Job** to begin your sync.
