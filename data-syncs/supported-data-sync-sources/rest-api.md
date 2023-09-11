@@ -57,12 +57,16 @@ The following parameters will help to define your data sync source and how it fu
 
 Select **Show Advanced** for more options for the Schema section.
 
-| Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
-| Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                                                                                           |         |
-| Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
+Here's the edited table, streamlined for clarity and easy translation:
+
+|    Parameter    |                                                                        Description                                                                        | Example |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Mandatory       | - If both 'Mandatory' and 'Validated': empty rows rejected. <br> - If only 'Mandatory': rows synced but marked as failed with 'Mandatory Rule Violation'. |         |
+| Validate Data   | - If both 'Mandatory' and 'Validated': empty rows rejected. <br> - If only 'Validated': all rows synced.                                                  |         |
+| Trim Whitespace | Optional for text data. Choose to trim whitespace.                                                                                                        |         |
+| Max Length      | Optional for text data. Set max length; exceeding values get rejected.                                                                                    |         |
+
+I've simplified the descriptions and used a more structured list format to enhance readability.                                                                                                                                                                                                            |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
@@ -88,6 +92,34 @@ You can learn more about these sections in [Appendix A - Other Sections.](rest-a
 {% endtabs %}
 
 <figure><img src="../../.gitbook/assets/image (298).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
+
+## Best practices
+
+For JSON objects, use `$.data` in the **Records Root JSONPAth** to access object values. Otherwise, you must append each column in the **Schema** section with `$.data`. 
+
+For example, here is a sample JSON return object:
+```json
+{
+  "data": {
+    "name": "Strawberry",
+    "id": 3,
+    "family": "Rosaceae",
+    "order": "Rosales",
+    "genus": "Fragaria",
+    "nutritions": {
+      "calories": 29,
+      "fat": 0.4,
+      "sugar": 5.4,
+      "carbohydrates": 5.5,
+      "protein": 0.8
+    }
+  }
+}
+```
+To define each column in the source data, you can:
+
+1. Use `$.data` as the **Records Root JSON Path** and  map each column to the attribute name. For example, `$.name`, `$.id`, `$.family`
+1. Use `$` as **Records Root JSON Path** map each column to the attribute name to `$.data.{attribute}`. For example, `$.data.name`, `$.data.id`, `$.data.family`
 
 ## Next steps
 
