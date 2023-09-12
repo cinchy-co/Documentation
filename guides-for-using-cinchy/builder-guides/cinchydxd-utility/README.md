@@ -39,9 +39,9 @@ Future iterations of this document will add to this example's complexity level.
 
 The general steps to deploying the CinchyDXD Utility are as follows:
 
-* [building-the-data-experience.md](building-the-data-experience.md "mention")
-* [packaging-the-data-experience.md](packaging-the-data-experience.md "mention")
-* [installing-the-data-experience.md](installing-the-data-experience.md "mention")
-* [updating-the-data-experience.md](updating-the-data-experience.md "mention")
-* [repackaging-the-data-experience.md](repackaging-the-data-experience.md "mention")
-* [reinstalling-the-data-experience.md](reinstalling-the-data-experience.md "mention")
+* [building-the-data-experience.md](building-the-data-experience.md)
+* [packaging-the-data-experience.md](packaging-the-data-experience.md)
+* [installing-the-data-experience.md](installing-the-data-experience.md)
+* [updating-the-data-experience.md](updating-the-data-experience.md)
+* [repackaging-the-data-experience.md](repackaging-the-data-experience.md)
+* [reinstalling-the-data-experience.md](reinstalling-the-data-experience.md)
