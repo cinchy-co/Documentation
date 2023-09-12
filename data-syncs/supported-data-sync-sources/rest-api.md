@@ -37,8 +37,8 @@ The following parameters will help to define your data sync source and how it fu
 | Source                 | Mandatory. Select your source from the drop down menu.                                                                                                                                                   | REST API                                                                                          |
 | HTTP Method            | Mandatory.                                                                                                                                                                                               | This will be either GET or POST.                                                                  |
 | API Response Format    | Mandatory. Use this field to specify a response format of the endpoint. Currently, the Connections UI only supports JSON responses.                                                                      | JSON                                                                                              |
-| Records Root JSONPath  | Mandatory. Specify the JSON path for the results. If the JSON response top-element is an object, use `$.data` to return the parent object of the response, which will contain the array. | `$.data`, `$`                                                                                     |
-| Path to Iterate        | The path of the parameter to iterate. Use to flatten JSON objects.                                                                                                                                       |                                                                                                   |
+| Records Root JSONPath  | Mandatory. Specify the JSON path for the results. The default root of a JSON object is `$`. If the JSON response top-element is an array, use `$.data` as the root of the response, which will contain the array. See [Best practices](/data-syncs/supported-data-sync-sources/rest-api.md#best-practices) for more info.| `$.data`, `$`                                                                                     |
+| Path to Iterate        | The path of the parameter to iterate. This is used to target subarrays within objects.                                                                                                                                       |                                                                                                   |
 | API Endpoint URL       | Mandatory. API endpoint, including URL parameters like API key                                                                                                                                           | https://www.quandl.com/api/v3/datatables/CLS/IDHP?fx_business_date=@date&#x26;amp;api_key=API_KEY |
 | Next Page URL JSONPath | Specify the path for the next page URL. This is only relevant for APIs that use cursor pagination                                                                                                        |                                                                                                   |
 {% endtab %}
@@ -95,31 +95,35 @@ You can learn more about these sections in [Appendix A - Other Sections.](rest-a
 
 ## Best practices
 
-For JSON objects, use `$.data` in the **Records Root JSONPAth** to access object values. Otherwise, you must append each column in the **Schema** section with `$.data`. 
+### JSON array returns
+
+If the API returns a top-level JSON array, use `$.data` in the **Records Root JSONPath**.  
 
 For example, here is a sample JSON return object:
 ```json
-{
-  "data": {
-    "name": "Strawberry",
-    "id": 3,
-    "family": "Rosaceae",
-    "order": "Rosales",
-    "genus": "Fragaria",
-    "nutritions": {
-      "calories": 29,
-      "fat": 0.4,
-      "sugar": 5.4,
-      "carbohydrates": 5.5,
-      "protein": 0.8
-    }
-  }
+[
+  {
+  "name": "John Doe",
+  "age": 30,
+  "hobbies": ["reading", "swimming", "coding"]
 }
+]
 ```
-To define each column in the source data, you can:
+If you use `$` as the **Records Root JSONPath** and the top level is an array, then you must append `$.data` to each schema. For example, for the JSON array above, you can do either of the following:
 
-1. Use `$.data` as the **Records Root JSON Path** and  map each column to the attribute name. For example, `$.name`, `$.id`, `$.family`
-1. Use `$` as **Records Root JSON Path** map each column to the attribute name to `$.data.{attribute}`. For example, `$.data.name`, `$.data.id`, `$.data.family`
+#### Example 1
+
+**Records Root JSONPath**: `$.data`
+**Schema**: 
+- `$.name` for "name"
+- `$.age` for "age"
+
+#### Example 2
+
+**Records Root JSONPath**: `$`
+**Schema**: 
+- `$.data.name` for "name"
+- `$.data.age` for "age"
 
 ## Next steps
 
