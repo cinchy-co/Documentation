@@ -39,6 +39,9 @@
     * [Use Self-Signed SSL Certs (Kubernetes)](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)
     * [Deploy the CLI (Kubernetes)](https://app.gitbook.com/o/-LDtM6UlhGoQ91uwM5SF/s/-M9TgaGdQpt0ZS9aqe1c/connections-installation-guide/v5-connections-and-cli-installation-guide#3.-running-the-cli)
   * [IIS ](deployment-guide/deployment-installation-guides/iis-deployment-platform-installation.md)
+
+## Upgrade guide
+
 * [Upgrading Cinchy](deployment-guide/upgrade-guides/README.md)
   * [Upgrade Cinchy versions](deployment-guide/upgrade-guides/upgrading-cinchy-versions/README.md)
     * [Cinchy Upgrade Utility](deployment-guide/upgrade-guides/upgrading-cinchy-versions/cinchy-upgrade-utility.md)
@@ -93,13 +96,13 @@
   * [Delete tables](guides-for-using-cinchy/builder-guides/deleting-tables/README.md)
     * [Restore tables, columns, and rows](guides-for-using-cinchy/builder-guides/deleting-tables/restoring-tables-columns-and-rows.md)
   * [Saved queries](guides-for-using-cinchy/builder-guides/saved-queries.md)
-  * [CinchyDXD Utility](guides-for-using-cinchy/builder-guides/cinchydxd-utility/README.md)
-    * [Build the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/building-the-data-experience-cinchydxd.md)
-    * [Package the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/packaging-the-data-experience-cinchydxd.md)
-    * [Install the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/installing-the-data-experience-cinchydxd.md)
-    * [Update the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/updating-the-data-experience-cinchydxd.md)
-    * [Repackage the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/repackaging-the-data-experience-cinchydxd.md)
-    * [Reinstall the data experience (DXD)](guides-for-using-cinchy/builder-guides/cinchydxd-utility/reinstalling-the-data-experience-cinchydxd.md)
+  * [CinchyDXD](guides-for-using-cinchy/builder-guides/cinchydxd-utility/README.md)
+    * [Build the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/building-the-data-experience.md)
+    * [Package the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/packaging-the-data-experience.md)
+    * [Install the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/installing-the-data-experience.md)
+    * [Update the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/updating-the-data-experience.md)
+    * [Repackage the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/repackaging-the-data-experience.md)
+    * [Reinstall the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/reinstalling-the-data-experience.md)
   * [Multilingual support](guides-for-using-cinchy/builder-guides/multi-lingual-support.md)
   * [Integration guides](guides-for-using-cinchy/builder-guides/integration-guides.md)
 * [Administrator Guide](guides-for-using-cinchy/administrator-guide.md)
@@ -131,9 +134,9 @@
 
 ## CQL
 
-* [CQL basics](cql/the-basics-of-cql/README.md)
+* [Overview](cql/the-basics-of-cql/README.md)
   * [CQL examples](cql/the-basics-of-cql/cql-examples.md)
-  * [CQL functions master list](cql/the-basics-of-cql/cql-functions-master-list.md)
+
   * [CQL statements overview](cql/the-basics-of-cql/cql-statements-overview/README.md)
     * [Cinchy DML statements](cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements.md)
     * [Cinchy DDL statements](cql/the-basics-of-cql/cql-statements-overview/cinchy-ddl-statements.md)
@@ -160,7 +163,7 @@
     * [Full Text Search functions](cql/the-basics-of-cql/cinchy-supported-functions/full-text-search-functions.md)
     * [Connections functions](cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md)
     * [JSON functions](cql/the-basics-of-cql/cinchy-supported-functions/json-functions.md)
-
+* [CQL functions master list](cql/the-basics-of-cql/cql-functions-master-list.md)
 ## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)
