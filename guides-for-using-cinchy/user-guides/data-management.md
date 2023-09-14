@@ -101,7 +101,7 @@ To approve or reject a cell/row of data, complete the following:
 
 The Collaboration log is accessible from every table within Cinchy (including metadata). It shows the version history of ALL changes that have been made to an individual row of data.
 
-To access Cinchy’s Collaboration Log:
+To access the Cinchy Collaboration Log:
 
 1. Open the desired table
 2. Locate the desired row **> Right Click > View Collaboration Log** _(Image 6)._
