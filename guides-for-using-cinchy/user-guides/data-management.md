@@ -56,9 +56,7 @@ You can simply fix any errors in your error log followed by importing the error 
 
 ## Export data <a href="#export-data" id="export-data"></a>
 
-The export data 
-
-You can export your data from a table view in CSV or TSV format. Cinchy doesn't currently support pagination, so the maximum export is 250,000 records. To export a table of more than 250,000 records, you can use [CLI to export your entire table at once.](../../data-syncs/cli-commands-list.md)
+You can export your data from a table view in CSV or TSV format. This export starts at the first record. Cinchy doesn't currently support pagination, so the maximum export is 250,000 records. To export a table of more than 250,000 records, you can use [CLI to export your entire table at once.](../../data-syncs/cli-commands-list.md)
 
 {% hint style="warning" %}
 When data is exported out of the network, it's now just a copy and no longer connected to Cinchy.
