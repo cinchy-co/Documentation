@@ -51,7 +51,7 @@ The **Source Tab** defines the origin of your data sync. Each data source type, 
 <figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption>Image 4: Setting up the Source Tab</figcaption></figure>
 
 {% hint style="info" %}
-When working with real-time sync sources, you'll notice an extra tab for Listener configuration. The adjustments you make here directly influence the **Listener Config** table. Navigate through the options and set up as needed. For more info, see the [Listener Config](../supported-real-time-sync-stream-sources/) and [Sync Source](../supported-data-sync-sources/) pages.
+When working with real-time sync sources, you'll notice an extra tab for Listener configuration. The adjustments you make here directly influence the **Listener Config** table. Navigate through the options and set up as needed. For more info, see the [Listener Config](../supported-real-time-sources/) and [Sync Source](../supported-data-sync-sources/) pages.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (693).png" alt=""><figcaption></figcaption></figure>
@@ -126,7 +126,7 @@ If you are setting up a real-time sync, you must set up a listener configuration
 
 <figure><img src="../../.gitbook/assets/image (503).png" alt=""><figcaption><p>Image 12: Listener Config table</p></figcaption></figure>
 
-2. In a new row, add in your listener config configuration data. See [Supported real-time sync sources](../supported-real-time-sync-stream-sources/the-listener-configuration-table.md) for more information.
+2. In a new row, add in your listener config configuration data. See [Supported real-time sync sources](../supported-real-time-sources/the-listener-configuration-table.md) for more information.
 3. Make sure to set the config to **Enabled**.
 
 ## Examples

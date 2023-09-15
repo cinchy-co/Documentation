@@ -291,7 +291,7 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 ## Manually set the listener config
 
-This section provides information on how to manually set up the listener config using the Listener Config table. While this example shows how to configure the sync using the Cinchy Event Broker/CDC, Cinchy also supports other Event Stream Sources. For more information, see [the supported real-time sync stream sources](data-syncs/supported-real-time-sync-stream-sources/).
+This section provides information on how to manually set up the listener config using the Listener Config table. While this example shows how to configure the sync using the Cinchy Event Broker/CDC, Cinchy also supports other Event Stream Sources. For more information, see [the supported real-time sync stream sources](data-syncs/supported-real-time-sources/).
 
 1. Navigate to the **Listener Config table** in Cinchy _(Image 16)._
 
