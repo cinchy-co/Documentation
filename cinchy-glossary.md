@@ -134,7 +134,7 @@ Rather than traditional code-centric applications which creates data silos, you 
 
 #### Listener configuration
 
-Real-time data syncs need to [set up a Cinchy listener configuration](/data-syncs/supported-real-time-sync-stream-sources/the-listener-configuration-table.md) for [event stream sources ](data-syncs/supported-real-time-sync-stream-sources/)so that it knows what data to pull/push through your sync. As of 5.7, this can now be done under the **Sources** section in the **Listener** tab. Each stream source has different variables and parameters that you can use to refine your sync. The Listener only needs to be configured for [real-time syncs](cinchy-glossary.md#real-time-sync), not for [batch syncs.](cinchy-glossary.md#batch-sync)
+Real-time data syncs need to [set up a Cinchy listener configuration](/data-syncs/supported-real-time-sources/the-listener-configuration-table.md) for [event stream sources ](data-syncs/supported-real-time-sources/)so that it knows what data to pull/push through your sync. As of 5.7, this can now be done under the **Sources** section in the **Listener** tab. Each stream source has different variables and parameters that you can use to refine your sync. The Listener only needs to be configured for [real-time syncs](cinchy-glossary.md#real-time-sync), not for [batch syncs.](cinchy-glossary.md#batch-sync)
 
 ## M
 

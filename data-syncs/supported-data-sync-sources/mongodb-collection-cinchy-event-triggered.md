@@ -188,7 +188,7 @@ blog> db.Articles.find({}, { Name: 1, Price: 1, Color: "Details.Color", Size: "D
 - Configure your [Destination](../supported-data-sync-destinations/)
 - Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
 - Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-- To run a real-time sync (using the Cinchy Event Triggered MongoDB Source), [set up your Listener Config](../supported-real-time-sync-stream-sources/) using the Cinchy Event Broker/CDC and enable it to begin your sync.
+- To run a real-time sync (using the Cinchy Event Triggered MongoDB Source), [set up your Listener Config](../supported-real-time-sources/) using the Cinchy Event Broker/CDC and enable it to begin your sync.
 
 ## Appendix A
 
@@ -226,7 +226,7 @@ The following table shows how MongoDB data types are translated in Cinchy.
 
 To configure a MongoDB Collection (Cinchy Event Triggered) connection, **a listener must be configured via the Listener Config table with an Event Connector Type of Cinchy CDC.**
 
-**Review the** [**Cinchy Event Broker/CDC Listener Configuration values here**](cinchy-event-broker-cdc/)**, and then navigate to** [**the Listener Config table** ](../supported-real-time-sync-stream-sources/the-listener-configuration-table.md)**to input a new row.**
+**Review the** [**Cinchy Event Broker/CDC Listener Configuration values here**](cinchy-event-broker-cdc/)**, and then navigate to** [**the Listener Config table** ](../supported-real-time-sources/the-listener-configuration-table.md)**to input a new row.**
 
 When setting up your listener configuration for your data sync, keeping the following constraints in mind:
 

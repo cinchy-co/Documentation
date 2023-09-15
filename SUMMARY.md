@@ -256,8 +256,8 @@
   * [Salesforce](data-syncs/supported-data-sync-destinations/salesforce.md)
   * [Snowflake table](data-syncs/supported-data-sync-destinations/snowflake-table.md)
   * [SOAP 1.2 web service](data-syncs/supported-data-sync-destinations/soap-1.2-web-service.md)
-* [Real-time sync stream sources](data-syncs/supported-real-time-sync-stream-sources/README.md)
-  * [The Listener Config table](data-syncs/supported-real-time-sync-stream-sources/the-listener-configuration-table.md)
+* [Real-time sync stream sources](data-syncs/supported-real-time-sources/README.md)
+  * [The Listener Config table](data-syncs/supported-real-time-sources/the-listener-configuration-table.md)
 
 ## Other Resources
 
