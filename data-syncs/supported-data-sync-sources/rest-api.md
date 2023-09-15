@@ -31,15 +31,15 @@ Mandatory and optional parameters for the Source tab are outlined below (Image 2
 {% tabs %}
 {% tab title="Source Details" %}
 
-| Parameter              | Description                                                                                                                                                                                                                                                                            | Example                                                                                        |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Source                 | Mandatory. Select your source from the drop down menu.                                                                                                                                                                                                                                 | REST API                                                                                       |
-| HTTP Method            | Mandatory.                                                                                                                                                                                                                                                                             | This will be either GET or POST.                                                               |
-| API Response Format    | Mandatory. Use this field to specify a response format of the endpoint. Currently, the Connections UI only supports JSON responses.                                                                                                                                                    | JSON                                                                                           |
-| Records Root JSONPath  | Mandatory. Specify the JSON path for the results. The root of a JSON object is `$`. If the top-element of the response is an array, the array is wrapped under a `"data"` key. See [Best practices](/data-syncs/supported-data-sync-sources/rest-api.md#best-practices) for more info. | `$.data`, `$`, `$.ResponseObject`                                                              |
-| Path to Iterate        | The path to select an array of records for capturing elements inside. A record is created for each element which you can use as the input in a source schema. The path is relative to the root JSONPath.                                                                               |                                                                                                |
-| API Endpoint URL       | Mandatory. API endpoint, including URL parameters like API key                                                                                                                                                                                                                         | https://www.quandl.com/api/v3/datatables/CLS/IDHP?fx_business_date=2024-01-01&api_key=@API_KEY |
-| Next Page URL JSONPath | Specify the path for the next page URL. This is only relevant for APIs that use cursor pagination                                                                                                                                                                                      |                                                                                                |
+| Parameter              | Description                                                                                                                                                                                                                                                                                                    | Example                                                                                        |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Source                 | Mandatory. Select your source from the drop down menu.                                                                                                                                                                                                                                                         | REST API                                                                                       |
+| HTTP Method            | Mandatory.                                                                                                                                                                                                                                                                                                     | This will be either GET or POST.                                                               |
+| API Response Format    | Mandatory. Use this field to specify a response format of the endpoint. Currently, the Connections UI only supports JSON responses.                                                                                                                                                                            | JSON                                                                                           |
+| Records Root JSONPath  | Mandatory. Specify the JSON path for the results. The root of a JSON object is `$`. If the top-element of the response is an array, Cinchy places the array under a `"data"` key in a new JSON object. See [Best practices](/data-syncs/supported-data-sync-sources/rest-api.md#best-practices) for more info. | `$.data`, `$`, `$.ResponseObject`                                                              |
+| Path to Iterate        | The path to select an array of records for capturing elements inside. A record is created for each element which you can use as the input in a source schema. The path is relative to the root JSONPath.                                                                                                       |                                                                                                |
+| API Endpoint URL       | Mandatory. API endpoint, including URL parameters like API key                                                                                                                                                                                                                                                 | https://www.quandl.com/api/v3/datatables/CLS/IDHP?fx_business_date=2024-01-01&api_key=@API_KEY |
+| Next Page URL JSONPath | Specify the path for the next page URL. This is only relevant for APIs that use cursor pagination                                                                                                                                                                                                              |                                                                                                |
 
 {% endtab %}
 
@@ -112,13 +112,15 @@ Here is a sample JSON response:
   ]
 }
 ```
-**Records Root JSONPath**: `$`
-**Path to Iterate**: `$.users`
+
+**Records Root JSONPath:** $.users
 **Schema**:
+- `$.userId` for **ID**
+- `$.name `for **Name**
 
-- `$.users` for **Name**
-- `$.data.age` for **Age**
-
+{% hint style="info" %}
+You can't reference `"groupId"` as it's one level above the specified root scope.
+{% endhint %}
 
 ### JSON array handling
 
@@ -140,20 +142,6 @@ Here is a sample JSON response:
 ]
 ```
 
-**Records Root JSONPath**: `$`
-
-**Schema**:
-
-- `$.data.name` for **Name**
-- `$.data.age` for **Age**
-
-
-If you use `$` as the **Records Root JSONPath** and the top level is an array, then you must append `$.data` to each schema. For example, for the JSON array above, you can do either of the following:
-
-### Using "Data" as RootJSONPath
-
-This example uses the JSON response above, and wants to map two columns in a Cinchy Table, **Name** and **Age**, to the keys `"Name"` and `"Age"` in the JSON response.
-
 **Records Root JSONPath**: `$.data`
 
 **Schema**:
@@ -165,7 +153,7 @@ This example uses the JSON response above, and wants to map two columns in a Cin
 
 Use Path to Iterate to expand within an array. It allows you to target nested keys within the array. This only applies if the records within an array are objects.
 
-If the record within the path to iterate is an array, it will be wrapped in an `"item"` object.
+If the record within the path to iterate is an array, each item within the array gets placed under an `"item"` key in a new JSON object.
 
 #### Example
 
