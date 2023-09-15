@@ -38,7 +38,7 @@ The following parameters will help to define your data sync source and how it fu
 | HTTP Method            | Mandatory.                                                                                                                                                                                               | This will be either GET or POST.                                                                  |
 | API Response Format    | Mandatory. Use this field to specify a response format of the endpoint. Currently, the Connections UI only supports JSON responses.                                                                      | JSON                                                                                              |
 | Records Root JSONPath  | Mandatory. Specify the JSON path for the results. The default root of a JSON object is `$`. If the JSON response top-element is an array, use `$.data` as the root of the response, which will contain the array. See [Best practices](/data-syncs/supported-data-sync-sources/rest-api.md#best-practices) for more info.| `$.data`, `$`                                                                                     |
-| Path to Iterate        | The path of the parameter to iterate. This is used to target subarrays within objects.                                                                                                                                       |                                                                                                   |
+| Path to Iterate        | The path of the parameter to iterate. This is used to target subarrays within objects. The path to iterate is relative to the root JSONPath.                                                                                                                                       |                                                                                                   |
 | API Endpoint URL       | Mandatory. API endpoint, including URL parameters like API key                                                                                                                                           | https://www.quandl.com/api/v3/datatables/CLS/IDHP?fx_business_date=@date&#x26;amp;api_key=API_KEY |
 | Next Page URL JSONPath | Specify the path for the next page URL. This is only relevant for APIs that use cursor pagination                                                                                                        |                                                                                                   |
 {% endtab %}
@@ -99,7 +99,7 @@ You can learn more about these sections in [Appendix A - Other Sections.](rest-a
 
 If the API returns a top-level JSON array, use `$.data` in the **Records Root JSONPath**.  
 
-For example, here is a sample JSON return object:
+For example, here is a sample JSON response:
 ```json
 [
   {
@@ -111,7 +111,7 @@ For example, here is a sample JSON return object:
 ```
 If you use `$` as the **Records Root JSONPath** and the top level is an array, then you must append `$.data` to each schema. For example, for the JSON array above, you can do either of the following:
 
-#### Example 1
+#### Example 
 
 **Records Root JSONPath**: `$.data`
 **Schema**: 
@@ -125,6 +125,29 @@ If you use `$` as the **Records Root JSONPath** and the top level is an array, t
 - `$.data.name` for "name"
 - `$.data.age` for "age"
 
+### Using Path to Iterate
+
+Use Path to Iterate to expand records within an array. It allows you to target nested keys within the array. This only applies if the records within an array are objects. 
+
+If the record within the path to iterate is an array, it will be wrapped in an `"item"` object.
+
+#### Example 
+
+For example, here is a sample JSON response:
+
+```json
+{
+  "name": "John",
+  "transactions": [
+    {"transactionId": 1}, {"transactionId": 2}
+  ]
+}
+```
+
+**Records Root JSONPath**: `$`
+**Schema**: 
+- `$.data.name` for "name"
+- `$.data.age` for "age"
 ## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
