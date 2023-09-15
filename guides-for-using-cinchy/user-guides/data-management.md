@@ -56,7 +56,7 @@ You can simply fix any errors in your error log followed by importing the error 
 
 ## Export data <a href="#export-data" id="export-data"></a>
 
-Users are only able to export data in CSV or TSV format. In tables with over 1000 records, you will need to export each page of data separately, or you can use the [CLI to export your entire table at once.](../../data-syncs/cli-commands-list.md)
+You can export your data from a table view in CSV or TSV format. This export starts at the first record. Cinchy doesn't currently support pagination, so the maximum export is 250,000 records. To export a table of more than 250,000 records, you can use [CLI to export your entire table at once.](../../data-syncs/cli-commands-list.md)
 
 {% hint style="warning" %}
 When data is exported out of the network, it's now just a copy and no longer connected to Cinchy.
@@ -99,7 +99,7 @@ To approve or reject a cell/row of data, complete the following:
 
 The Collaboration log is accessible from every table within Cinchy (including metadata). It shows the version history of ALL changes that have been made to an individual row of data.
 
-To access Cinchy’s Collaboration Log:
+To access the Cinchy Collaboration Log:
 
 1. Open the desired table
 2. Locate the desired row **> Right Click > View Collaboration Log** _(Image 6)._
