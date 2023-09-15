@@ -26,11 +26,10 @@ You can find the parameters in the **Info** tab below _(Image 1)_.
 
 ## Source tab
 
-The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
+Mandatory and optional parameters for the Source tab are outlined below (Image 2).
 
 {% tabs %}
 {% tab title="Source Details" %}
-The following parameters will help to define your data sync source and how it functions.
 
 |       Parameter        |                                                                                               Description                                                                                                |                                              Example                                              |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -95,11 +94,12 @@ You can learn more about these sections in [Appendix A - Other Sections.](rest-a
 
 ## Best practices
 
-### JSON array returns
+### JSON array handling
 
-If the API returns a top-level JSON array, use `$.data` in the **Records Root JSONPath**.  
+Use `$.data` in **Records Root JSONPath** if the API returns a top-level JSON array.  
 
 For example, here is a sample JSON response:
+
 ```json
 [
   {
@@ -113,17 +113,21 @@ If you use `$` as the **Records Root JSONPath** and the top level is an array, t
 
 #### Example 
 
+This example uses the JSON response above, and wants to map two columns in a Cinchy Table, **Name** and **Age**, to the keys `"Name"` and `"Age"` in the JSON response.
+
 **Records Root JSONPath**: `$.data`
+
 **Schema**: 
-- `$.name` for "name"
-- `$.age` for "age"
+- `$.name` for "Name"
+- `$.age` for "Age"
 
 #### Example 2
 
 **Records Root JSONPath**: `$`
+
 **Schema**: 
-- `$.data.name` for "name"
-- `$.data.age` for "age"
+- `$.data.name` for "Name"
+- `$.data.age` for "Age"
 
 ### Using Path to Iterate
 
@@ -144,10 +148,14 @@ For example, here is a sample JSON response:
 }
 ```
 
+In this example, we want to iterate over the `"transactions"` array and capture the records for `"transactionid"` and assign them to the **"tid"** column, and then add the parent `"name"` key to a **Name** column .
+
 **Records Root JSONPath**: `$`
+**Path to iterate**: `$.transactions`
 **Schema**: 
-- `$.data.name` for "name"
-- `$.data.age` for "age"
+- `$.name` for "name"
+- `$.transactions.id` for "tid"
+
 ## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
