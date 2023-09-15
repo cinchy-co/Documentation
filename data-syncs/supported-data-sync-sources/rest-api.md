@@ -118,16 +118,16 @@ This example uses the JSON response above, and wants to map two columns in a Cin
 **Records Root JSONPath**: `$.data`
 
 **Schema**: 
-- `$.name` for "Name"
-- `$.age` for "Age"
+- `$.name` for **Name**
+- `$.age` for **Age**
 
 #### Example 2
 
 **Records Root JSONPath**: `$`
 
 **Schema**: 
-- `$.data.name` for "Name"
-- `$.data.age` for "Age"
+- `$.data.name` for **Name**
+- `$.data.age` for **Age**
 
 ### Using Path to Iterate
 
@@ -148,13 +148,13 @@ For example, here is a sample JSON response:
 }
 ```
 
-In this example, we want to iterate over the `"transactions"` array and capture the records for `"transactionid"` and assign them to the **"tid"** column, and then add the parent `"name"` key to a **Name** column .
+In this example, we want to iterate over the `"transactions"` array and capture the records for `"transactionid"` and assign them to the **"Transaction ID"** column, and then add the parent `"name"` key to a **Name** column .
 
 **Records Root JSONPath**: `$`
 **Path to iterate**: `$.transactions`
 **Schema**: 
-- `$.name` for "name"
-- `$.transactions.id` for "tid"
+- `$.name` for **Name**
+- `$.transactions.id` for **Transaction ID**
 
 ## Next steps
 
