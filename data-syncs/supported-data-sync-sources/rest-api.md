@@ -36,7 +36,7 @@ Mandatory and optional parameters for the Source tab are outlined below (Image 2
 | Source                 | Mandatory. Select your source from the drop down menu.                                                                                                                                                                                                                                                                    | REST API                                                                                          |
 | HTTP Method            | Mandatory.                                                                                                                                                                                                                                                                                                                | This will be either GET or POST.                                                                  |
 | API Response Format    | Mandatory. Use this field to specify a response format of the endpoint. Currently, the Connections UI only supports JSON responses.                                                                                                                                                                                       | JSON                                                                                              |
-| Records Root JSONPath  | Mandatory. Specify the JSON path for the results. The default root of a JSON object is `$`. If the JSON response top-element is an array, use `$.data` as the root of the response, which will contain the array. See [Best practices](/data-syncs/supported-data-sync-sources/rest-api.md#best-practices) for more info. | `$.data`, `$`                                                                                     |
+| Records Root JSONPath  | Mandatory. Specify the JSON path for the results. The default root of a JSON object is `$`. If the top-element of the response is an array, the array is wrapped in a `"data"` object. See [Best practices](/data-syncs/supported-data-sync-sources/rest-api.md#best-practices) for more info. | `$.data`, `$`, `$.ResponseObject`                                                                                    |
 | Path to Iterate        | The path of the parameter to iterate. This is used to target subarrays within objects. The path to iterate is relative to the root JSONPath.                                                                                                                                                                              |                                                                                                   |
 | API Endpoint URL       | Mandatory. API endpoint, including URL parameters like API key                                                                                                                                                                                                                                                            | https://www.quandl.com/api/v3/datatables/CLS/IDHP?fx_business_date=@date&#x26;amp;api_key=API_KEY |
 | Next Page URL JSONPath | Specify the path for the next page URL. This is only relevant for APIs that use cursor pagination                                                                                                                                                                                                                         |                                                                                                   |
@@ -68,10 +68,10 @@ I've simplified the descriptions and used a more structured list format to enhan
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
-| Parameter   | Description                                                                       | Example |
-| ----------- | --------------------------------------------------------------------------------- | ------- |
-| Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
-| Replacement | What you want to replace your pattern with.                                       |         |
+| Parameter   | Description                                                                         | Example |
+| ----------- | ----------------------------------------------------------------------------------- | ------- |
+| Pattern     | **Mandatory when using a Transformation.** The pattern for your string replacement. |         |
+| Replacement | What you want to replace your pattern with.                                         |         |
 
 {% hint style="info" %}
 Note that you can have more than one String Replacement
@@ -79,7 +79,7 @@ Note that you can have more than one String Replacement
 {% endtab %}
 
 {% tab title="Other Sections" %}
-There are a few more options available to you under the "Add a Section" drop down.
+More options are available to you under the "Add a Section" drop down.
 
 {% hint style="danger" %}
 **Note that adding a Pagination Block is mandatory.**
@@ -163,7 +163,7 @@ This example uses the JSON response above, and wants to map two columns in a Cin
 - `$.data.name` for **Name**
 - `$.data.age` for **Age**
 
-#### Exampl
+#### Example
 ### Path to Iterate
 
 Use Path to Iterate to expand records within an array. It allows you to target nested keys within the array. This only applies if the records within an array are objects.
@@ -201,11 +201,11 @@ In this example, we want to iterate over the `"transactions"` array and capture 
 
 ### Auth Request
 
-For more information, see the page about [auth requests](../building-data-syncs/advanced-settings/auth-requests.md)
+For more information, see the page about [auth requests](../building-data-syncs/advanced-settings/auth-requests.md).
 
 ### Request Headers
 
-For more information, see the page about [request headers](../building-data-syncs/advanced-settings/request-headers.md)
+For more information, see the page about [request headers](../building-data-syncs/advanced-settings/request-headers.md).
 
 ### Body
 
