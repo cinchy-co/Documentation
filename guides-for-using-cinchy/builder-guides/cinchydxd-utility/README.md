@@ -18,7 +18,7 @@ Items of note moving forward in this document:
 All objects need to be created in one source environment (ex: DEV). From there, DXD will be used to push them into others (ex: SIT, UAT, Production).
 {% endhint %}
 
-* **Target Environment** is the environment in which the DX will be installed
+* **Target Environment** is the environment in which the DX will be installed.
 * The example DX is a simple Currency Converter DX that consists of
   * One (1) table
   * One (1) query
@@ -39,9 +39,9 @@ Future iterations of this document will add to this example's complexity level.
 
 The general steps to deploying the CinchyDXD Utility are as follows:
 
-* [building-the-data-experience.md](building-the-data-experience.md)
-* [packaging-the-data-experience.md](packaging-the-data-experience.md)
-* [installing-the-data-experience.md](installing-the-data-experience.md)
-* [updating-the-data-experience.md](updating-the-data-experience.md)
-* [repackaging-the-data-experience.md](repackaging-the-data-experience.md)
-* [reinstalling-the-data-experience.md](reinstalling-the-data-experience.md)
+* [Build the data experience](building-the-data-experience.md)
+* [Package the data experience](packaging-the-data-experience.md)
+* [Install the data experience](installing-the-data-experience.md)
+* [Update the data experience](updating-the-data-experience.md)
+* [Repackage the data experience](repackaging-the-data-experience.md)
+* [Reinstall the data experience](reinstalling-the-data-experience.md)
