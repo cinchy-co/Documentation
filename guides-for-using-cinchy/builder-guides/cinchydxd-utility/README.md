@@ -8,30 +8,33 @@ description: This page guides you through the Cinchy Data Experience Deployment 
 
 CinchyDXD is a downloadable utility used to move Data Experiences (DX) from one environment to another. This includes any and all objects and components that have been built for, or are required in, support of the Data Experience.
 
-The following sections in this document will outline the basics of how to build, export**,** and install a DX’s.
+The following sections in this document will outline the basics of how to build, export, and install a data experience (DX) using a simple Currency Converter DX. 
 
-Items of note moving forward in this document:
+## Before you begin
 
-* **Source Environment** is the environment in which the DX is built.
+Before you start, please note the following:
 
-{% hint style="danger" %}
-All objects need to be created in one source environment (ex: DEV). From there, DXD will be used to push them into others (ex: SIT, UAT, Production).
-{% endhint %}
-
-* **Target Environment** is the environment in which the DX will be installed.
-* The example DX is a simple Currency Converter DX that consists of
+* The **Source Environment** is the environment where the DX is built.
+* The **Target Environment** is the environment where the DX will be installed.
+* The sample DX consists of:
   * One (1) table
   * One (1) query
 * This example doesn't include the following:
-  * NO applets
-  * NO integrated clients
-  * NO Data Sync Configurations
-  * NO Reference Data
-  * NO Models
-  * NO Groups
-  * NO System Colours
-  * NO Formatting Groups
-  * NO Literal Groups
+  * Applets
+  * Integrated clients
+  * Data Sync Configurations
+  * Reference Data
+  * Models
+  * Groups
+  * System Colours
+  * Formatting Groups
+  * Literal Groups
+
+{% hint style="danger" %}
+All objects need to be created in one source environment (such as DEV). From there, DXD will be used to push them into others (such as SIT, UAT, Production).
+{% endhint %}
+
+
 
 Future iterations of this document will add to this example's complexity level.
 
