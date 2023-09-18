@@ -18,7 +18,7 @@ Items of note moving forward in this document:
 All objects need to be created in one source environment (ex: DEV). From there, DXD will be used to push them into others (ex: SIT, UAT, Production).
 {% endhint %}
 
-* **Target Environment** is the environment in which the DX will be installed
+* **Target Environment** is the environment in which the DX will be installed.
 * The example DX is a simple Currency Converter DX that consists of
   * One (1) table
   * One (1) query
