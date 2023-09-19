@@ -1,50 +1,104 @@
----
-description: This page guides you through the Cinchy Data Experience Deployment Utility.
----
+# CinchyDXD
 
-# CinchyDXD utility
+## Overview
 
-## Introduction to CinchyDXD
+CinchyDXD is a utility that will export a Data Experience Definition from a source Cinchy environment and create a complete release package that can:
 
-CinchyDXD is a downloadable utility used to move Data Experiences (DX) from one environment to another. This includes any and all objects and components that have been built for, or are required in, support of the Data Experience.
+- Deploy to an upper environment with the same CinchyDXD utility.
+- Committed to source control to reflect a snapshot of a specific point in the release version.
 
-The following sections in this document will outline the basics of how to build, export, and install a data experience (DX) using a simple Currency Converter DX. 
+## Prerequisites
 
-## Before you begin
+CinchyDXD 1.5.0 and later requires Cinchy v4.21.0+ with the Connections UI installed.
 
-Before you start, please note the following:
+For a full list of requirements, see the [Dependencies](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/README.md#dependencies) section below.
+## Download CinchyDXD
 
-* The **Source Environment** is the environment where the DX is built.
-* The **Target Environment** is the environment where the DX will be installed.
-* The sample DX consists of:
-  * One (1) table
-  * One (1) query
-* This example doesn't include the following:
-  * Applets
-  * Integrated clients
-  * Data Sync Configurations
-  * Reference Data
-  * Models
-  * Groups
-  * System Colours
-  * Formatting Groups
-  * Literal Groups
+{% hint style="info" %}
+Install CinchyDXD on the source environment; it's not needed on the destination.
+{% endhint %}
 
-{% hint style="danger" %}
-All objects need to be created in one source environment (such as DEV). From there, DXD will be used to push them into others (such as SIT, UAT, Production).
+To download the Utility:
+
+1. Login to Cinchy.
+2. Navigate to the **Releases Table**.
+3. Select the **Experience Deployment Utility View**.
+4. Locate and download the utility **(Cinchy DXD vX.X.X.zip)**.
+5. Unzip the utility and place the folder at any location on a computer that also has CinchyCLI installed.
+6. Create a new folder in the same directory that will hold all DX exports generated (CinchyDXD\*Output).
+
+
+## Using CinchyDXD
+
+1. Unzip CinchyDXD and place the folder at any location.
+2. From a PowerShell console, navigate to the CinchyDXD directory.
+3. For first time users, execute this command:
+    - `Get-ChildItem -Recurse * | Unblock-File`
+4. For a list of actions and parameters execute one of the following at the PowerShell command prompt:
+    - `.\CinchyDXD version`
+    - `.\CinchyDXD help`
+    - `.\CinchyDXD export`
+    - `.\CinchyDXD install`
+    - `.\CinchyDXD keygen`
+
+## Dependencies
+
+### Cinchy
+
+| Cinchy Platform Version | Cinchy DXD Version |
+| ----------------------- | ------------------ |
+| v5.7.0 or later         | v1.7.0 or later    |
+| v5.2.0 - v5.6.3         | v1.5.1 - v1.6.1    |
+| v4.21.0 - v5.1.5 **     | v1.4.0 - v1.5.0    |
+| v4.20.0 - v4.20.2       | v1.3.2 - v1.3.4    |
+| v4.17.0 - v4.19.2       | v1.3.0 - v1.3.1    |
+| v4.13.2 - v4.16.0       | v1.1.0 - v1.2.2    |
+| v4.13.0 - v4.13.1       | Not supported      |
+| v4.6.0  - v4.12.0       | v1.1.0 - v1.2.0    |
+| v4.3.0  - v4.5.1        | v1.0.0             |
+
+
+{% hint style="info" %}
+- When deploying from Cinchy v4 to Cinchy v5, use CinchyDXD v1.5.0 to generate the source package.
+- For using CinchyDXD 1.5.0+ with Cinchy v4.21.0+ environments, ensure the Cinchy Connections Applet Sync GUID is set to 98055dec-e314-421a-a9da-456ae8308c60 in the [Cinchy].[Applets] table.
 {% endhint %}
 
 
+### Cinchy CLI and Connections CLI
 
-Future iterations of this document will add to this example's complexity level.
+| CLI Type and Version           | Cinchy DXD Version |
+| ------------------------------ | ------------------ |
+| Not required                   | v1.5.0 or later    |
+| Connections CLIv5.0.0 or later | v1.4.0             |
+| CinchyCLI v3.7.0 or later      | v1.0.0 - v1.4.0    |
 
-## Steps
 
-The general steps to deploying the CinchyDXD Utility are as follows:
+### PowerShell
 
-* [Build the data experience](building-the-data-experience.md)
-* [Package the data experience](packaging-the-data-experience.md)
-* [Install the data experience](installing-the-data-experience.md)
-* [Update the data experience](updating-the-data-experience.md)
-* [Repackage the data experience](repackaging-the-data-experience.md)
-* [Reinstall the data experience](reinstalling-the-data-experience.md)
+| PowerShell Version | Cinchy DXD Version |
+| ------------------ | ------------------ |
+| 7 or later         | v1.4.0 or later    |
+| 5.0.1 or later     | v1.0.0 - v1.3.4    |
+
+
+### SQL Server 
+
+| SQL Server Version | Cinchy DXD Version |
+| ------------------ | ------------------ |
+| 2017 or later      | v1.4.0 or later    |
+| 2012 - 2016        | v1.0.0 - v1.3.4    |
+
+### PostgreSQL
+
+| PostgreSQL Version | Cinchy DXD Version |
+| ------------------ | ------------------ |
+| 14.3 or later      | v1.5.0 or later    |
+
+## Version history
+
+See the [Version history](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/version-history-dxd.md) for more details.
+
+## Next steps
+
+
+
