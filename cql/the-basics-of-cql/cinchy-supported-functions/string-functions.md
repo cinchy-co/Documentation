@@ -1,4 +1,4 @@
-# String Functions
+# String functions
 
 ## Overview
 
@@ -22,7 +22,7 @@ ASCII (character_expression) return_type int
 SELECT ASCII('A') SELECT ASCII(1)
 ```
 
-## CHAR  <a href="#char-transact-sql" id="char-transact-sql"></a>
+## CHAR <a href="#char-transact-sql" id="char-transact-sql"></a>
 
 This function converts an **int** between 0 to 255 to a character value. Outside of this range, the CHAR function will return a NULL value.‌
 
@@ -31,7 +31,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-1" id="syntax-1"></a>
@@ -57,7 +57,7 @@ SELECT CHAR(65)
 SELECT CHAR(100)
 ```
 
-## CHARINDEX  <a href="#charindex-transact-sql" id="charindex-transact-sql"></a>
+## CHARINDEX <a href="#charindex-transact-sql" id="charindex-transact-sql"></a>
 
 This function searches for one character expression inside another character string. If found, the function will return the starting position of the first expression.‌
 
@@ -66,7 +66,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-2" id="syntax-2"></a>
@@ -134,7 +134,7 @@ A string with all the concatenated strings.
 SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;
 ```
 
-## DIFFERENCE  <a href="#difference-transact-sql" id="difference-transact-sql"></a>
+## DIFFERENCE <a href="#difference-transact-sql" id="difference-transact-sql"></a>
 
 This function returns an integer value measuring the difference between the SOUNDEX () values of two different character expressions.strings.‌
 
@@ -143,7 +143,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-4" id="syntax-4"></a>
@@ -168,7 +168,7 @@ int
 SELECT SOUNDEX('day'), SOUNDEX('monday'), DIFFERENCE('day', 'monday');
 ```
 
-## FORMAT  <a href="#format-transact-sql" id="format-transact-sql"></a>
+## FORMAT <a href="#format-transact-sql" id="format-transact-sql"></a>
 
 Returns a value formatted with the specified format. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.‌
 
@@ -177,7 +177,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-5" id="syntax-5"></a>
@@ -227,7 +227,7 @@ The following table lists the acceptable data types for the _value_ argument tog
 
 #### Example 1 <a href="#examples-3" id="examples-3"></a>
 
-FORMAT with  strings‌
+FORMAT with strings‌
 
 The following example shows formatting date values by specifying a custom format.
 
@@ -245,7 +245,7 @@ The following example shows formatting numeric values by specifying a custom for
 SELECT FORMAT(123456789,'###-##-####') AS 'Numeric Format';
 ```
 
-## LEFT  <a href="#left-transact-sql" id="left-transact-sql"></a>
+## LEFT <a href="#left-transact-sql" id="left-transact-sql"></a>
 
 Returns the left part of a character string with the specified number of characters.‌
 
@@ -277,7 +277,7 @@ The following example returns the two leftmost characters from the string.
 SELECT LEFT('abcdefghi, 2) FROM domain.table
 ```
 
-## LEN  <a href="#len-transact-sql" id="len-transact-sql"></a>
+## LEN <a href="#len-transact-sql" id="len-transact-sql"></a>
 
 Returns the number of characters of the specified string expression, excluding trailing spaces.‌
 
@@ -286,7 +286,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-7" id="syntax-7"></a>
@@ -313,7 +313,7 @@ The following example selects the number of characters and the data in string `a
 SELECT LEN('abcde')
 ```
 
-## LOWER  <a href="#lower-transact-sql" id="lower-transact-sql"></a>
+## LOWER <a href="#lower-transact-sql" id="lower-transact-sql"></a>
 
 Returns a character expression after converting uppercase character data to lowercase.‌
 
@@ -341,7 +341,7 @@ The following example uses the `LOWER` function.
 SELECT LOWER('ABCDE') AS LowerString
 ```
 
-## LTRIM  <a href="#ltrim-transact-sql" id="ltrim-transact-sql"></a>
+## LTRIM <a href="#ltrim-transact-sql" id="ltrim-transact-sql"></a>
 
 Returns a character expression after it removes leading blanks.‌
 
@@ -369,7 +369,7 @@ The following example uses LTRIM to remove leading spaces from a string
 SELECT LTRIM(' Remove trailing spaces.')
 ```
 
-## PATINDEX  <a href="#patindex-transact-sql" id="patindex-transact-sql"></a>
+## PATINDEX <a href="#patindex-transact-sql" id="patindex-transact-sql"></a>
 
 Returns the starting position of the first occurrence of a pattern in a specified expression.‌
 
@@ -378,7 +378,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-11" id="syntax-11"></a>
@@ -409,7 +409,7 @@ The following example checks a short character string (`this is a great day`) fo
 SELECT PATINDEX('%eat%', 'this is a great day')
 ```
 
-## REPLACE  <a href="#replace-transact-sql" id="replace-transact-sql"></a>
+## REPLACE <a href="#replace-transact-sql" id="replace-transact-sql"></a>
 
 Replaces all occurrences of a specified string value with another string value.‌
 
@@ -446,7 +446,7 @@ SELECT REPLACE('abcdefghicde','cde','xyz');
 GO
 ```
 
-## REVERSE  <a href="#reverse-transact-sql" id="reverse-transact-sql"></a>
+## REVERSE <a href="#reverse-transact-sql" id="reverse-transact-sql"></a>
 
 Returns the reverse order of a string value.‌
 
@@ -508,7 +508,7 @@ Using RIGHT with a string
 SELECT RIGHT('Good Day', 5)
 ```
 
-## RTRIM  <a href="#rtrim-transact-sql" id="rtrim-transact-sql"></a>
+## RTRIM <a href="#rtrim-transact-sql" id="rtrim-transact-sql"></a>
 
 Returns a character string after truncating all trailing spaces.‌
 
@@ -536,7 +536,7 @@ The following example takes a string of characters that has spaces at the end of
 SELECT RTRIM('Removes trailing spaces. ');
 ```
 
-## SOUNDEX  <a href="#soundex-transact-sql" id="soundex-transact-sql"></a>
+## SOUNDEX <a href="#soundex-transact-sql" id="soundex-transact-sql"></a>
 
 Returns a four-character (SOUNDEX) code to evaluate the similarity of two strings.‌
 
@@ -545,7 +545,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-18" id="syntax-18"></a>
@@ -572,7 +572,7 @@ The following example shows the standard `SOUNDEX` values are returned for all c
 SELECT SOUNDEX ('Raul'), SOUNDEX ('Rahul');
 ```
 
-## SPACE  <a href="#space-transact-sql" id="space-transact-sql"></a>
+## SPACE <a href="#space-transact-sql" id="space-transact-sql"></a>
 
 Returns a string of repeated spaces.‌
 
@@ -581,7 +581,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-19" id="syntax-19"></a>
@@ -608,7 +608,7 @@ The following example concatenates a comma, two spaces, and the first name of th
 SELECT 'John' + ',' + SPACE(2) + 'Doe'
 ```
 
-## STR  <a href="#str-transact-sql" id="str-transact-sql"></a>
+## STR <a href="#str-transact-sql" id="str-transact-sql"></a>
 
 Returns character data converted from numeric data. The character data is right-justified, with a specified length and decimal precision.‌
 
@@ -617,7 +617,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-20" id="syntax-20"></a>
@@ -653,7 +653,7 @@ SELECT STR(345.67, 6, 1);
 GO
 ```
 
-## ‌STUFF  <a href="#string_split-transact-sql" id="string_split-transact-sql"></a>
+## ‌STUFF <a href="#string_split-transact-sql" id="string_split-transact-sql"></a>
 
 The STUFF function inserts a string into another string. It deletes a specified length of characters in the first string at the start position and then inserts the second string into the first string at the start position.‌
 
@@ -662,7 +662,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 #### Syntax <a href="#syntax-24" id="syntax-24"></a>
@@ -702,7 +702,7 @@ SELECT STUFF('abcdef', 2, 3, 'ijklmn');
 GO
 ```
 
-## SUBSTRING  <a href="#substring-transact-sql" id="substring-transact-sql"></a>
+## SUBSTRING <a href="#substring-transact-sql" id="substring-transact-sql"></a>
 
 Returns part of a character, binary, text, or image expression in SQL Server.‌
 

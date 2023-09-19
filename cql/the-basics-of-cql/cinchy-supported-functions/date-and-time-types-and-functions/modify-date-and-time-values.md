@@ -4,18 +4,17 @@
 
 The modify date and time value functions covered in this section are:
 
-- ​[DATEADD](modify-date-and-time-values.md#dateadd-transact-sql)
-- [​EOMONTH](modify-date-and-time-values.md#eomonth-transact-sql)
-- ​[SWITCHOFFSET](modify-date-and-time-values.md#switchoffset-transact-sql)
-- ​[TODATETIMEOFFSET​](modify-date-and-time-values.md#todatetimeoffset-transact-sql)
+* ​[DATEADD](modify-date-and-time-values.md#dateadd-transact-sql)
+* [​EOMONTH](modify-date-and-time-values.md#eomonth-transact-sql)
+* ​[SWITCHOFFSET](modify-date-and-time-values.md#switchoffset-transact-sql)
+* ​[TODATETIMEOFFSET​](modify-date-and-time-values.md#todatetimeoffset-transact-sql)
 
 ## DATEADD <a href="#dateadd-transact-sql" id="dateadd-transact-sql"></a>
 
 DATEADD function adds a specified _number_ value to a specified _datepart_ of an input _date_ value, and then returns that modified value.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax
@@ -51,18 +50,18 @@ An expression that can resolve to an int that `DATEADD` adds to a _datepart_ of 
 `date`\
 An expression that can resolve to one of the following values:
 
-- date
-- datetime
-- datetimeoffset
-- datetime2
-- smalldatetime
-- time
+* date
+* datetime
+* datetimeoffset
+* datetime2
+* smalldatetime
+* time
 
-For _date_, `DATEADD` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a *datetime*. Use four-digit years to avoid ambiguity issues.
+For _date_, `DATEADD` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a _datetime_. Use four-digit years to avoid ambiguity issues.
 
 ### Return types
 
-The return value data type for this method is dynamic. The return type depends on the argument supplied for `date`. If the value for `date` is a string literal date, `DATEADD` returns a *datetime* value. If another valid input data type is supplied for `date`, `DATEADD` returns the same data type. `DATEADD` raises an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
+The return value data type for this method is dynamic. The return type depends on the argument supplied for `date`. If the value for `date` is a string literal date, `DATEADD` returns a _datetime_ value. If another valid input data type is supplied for `date`, `DATEADD` returns the same data type. `DATEADD` raises an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
 
 #### Example 1
 
@@ -146,8 +145,7 @@ WHERE
 The EOMONTH function returns the last day of the month containing a specified date, with an optional offset.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax
@@ -162,9 +160,9 @@ EOMONTH ( start_date [, month_to_add ] )
 A date expression that specifies the date for which to return the last day of the month.
 
 `month_to_add`\
-An optional integer expression that specifies the number of months to add to _start_date_.
+An optional integer expression that specifies the number of months to add to _start\_date_.
 
-If the _month_to_add_ argument has a value, then `EOMONTH` adds the specified number of months to _start_date_, and then returns the last day of the month for the resulting date. If this addition overflows the valid range of dates, then `EOMONTH` will raise an error.
+If the _month\_to\_add_ argument has a value, then `EOMONTH` adds the specified number of months to _start\_date_, and then returns the last day of the month for the resulting date. If this addition overflows the valid range of dates, then `EOMONTH` will raise an error.
 
 ### Return Types
 
@@ -196,7 +194,7 @@ SELECT EOMONTH( @date ) AS Result
 
 #### Example 3
 
-EOMONTH with and without the *month_to_add* parameter
+EOMONTH with and without the _month\_to\_add_ parameter
 
 ```sql
 DECLARE @date DATETIME = GETDATE()
@@ -212,8 +210,7 @@ SELECT
 The SWITCHOFFSEET function returns a **datetimeoffset** value that's changed from the stored time zone offset to a specified new time zone offset.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax
@@ -236,7 +233,7 @@ Is a character string in the format \[+|-]TZH:TZM or a signed integer (of minute
 
 #### Remarks
 
-Use SWITCHOFFSET to select a **datetimeoffset** value into a time zone offset that's different from the time zone offset that was originally stored. SWITCHOFFSET doesn't update the stored *time_zone* value.
+Use SWITCHOFFSET to select a **datetimeoffset** value into a time zone offset that's different from the time zone offset that was originally stored. SWITCHOFFSET doesn't update the stored _time\_zone_ value.
 
 SWITCHOFFSET can be used to update a **datetimeoffset** column.
 
@@ -253,10 +250,10 @@ SELECT SWITCHOFFSET(ColDatetimeoffset, '-08:00')
 TODATETIMEOFFSET function returns a **datetimeoffset** value that's translated from a **datetime2** expression.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
-### Syntax
+
+\### Syntax
 
 ```sql
 TODATETIMEOFFSET ( expression , time_zone )
@@ -268,7 +265,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 Is an expression that resolves to a datetime2 value.
 
 `time_zone`\
-Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to —14 (in hours). The expression is interpreted in local time for the specified time_zone.
+Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to —14 (in hours). The expression is interpreted in local time for the specified time\_zone.
 
 ### Return Types
 
