@@ -15,7 +15,7 @@ For a full list of requirements, see the [Dependencies](/guides-for-using-cinchy
 ## Download CinchyDXD
 
 {% hint style="info" %}
-Install CinchyDXD on the source environment; it's not needed on the destination.
+You only need to download CinchyDXD on the source environment; it's not needed on the destination.
 {% endhint %}
 
 To download the Utility:
