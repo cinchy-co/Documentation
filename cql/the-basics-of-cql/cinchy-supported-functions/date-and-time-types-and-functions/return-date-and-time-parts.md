@@ -1,19 +1,20 @@
-# Return Date and Time parts
+# Return Date and Time Parts
 
 ## Overview
 
 The return date and time part functions covered in this section are:
 
-* [DATENAME](return-date-and-time-parts.md#datename-transact-sql)
-* [DATEPART](return-date-and-time-parts.md#datepart-transact-sql)
-* [DAY](return-date-and-time-parts.md#day-transact-sql)
-* [MONTH](return-date-and-time-parts.md#month-transact-sql)
-* [YEAR](return-date-and-time-parts.md#year-transact-sql)
+- [DATENAME](return-date-and-time-parts.md#datename-transact-sql)
+- [DATEPART](return-date-and-time-parts.md#datepart-transact-sql)
+- [DAY](return-date-and-time-parts.md#day-transact-sql)
+- [MONTH](return-date-and-time-parts.md#month-transact-sql)
+- [YEAR](return-date-and-time-parts.md#year-transact-sql)
 
 ## DATENAME <a href="#datename-transact-sql" id="datename-transact-sql"></a>
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 The `DATENAME` function returns a character string representing the specified _datepart_ of the specified _date_.
@@ -45,18 +46,18 @@ The specific part of the _date_ argument that `DATENAME` will return. This table
 | microsecond |
 | nanosecond  |
 | TZoffset    |
-| ISO\_WEEK   |
+| ISO_WEEK    |
 
 `date`
 
 An expression that can resolve to one of the following data types:
 
-* date
-* datetime
-* datetimeoffset
-* datetime2
-* smalldatetime
-* time
+- date
+- datetime
+- datetimeoffset
+- datetime2
+- smalldatetime
+- time
 
 For _date_, `DATENAME` will accept a column expression, expression, string literal, or user-defined variable. Use four-digit years to avoid ambiguity issues.
 
@@ -70,11 +71,11 @@ nvarchar
 
 Use `DATENAME` in the following clauses:
 
-* GROUP BY
-* HAVING
-* ORDER BY
-* SELECT \<list>
-* WHERE
+- GROUP BY
+- HAVING
+- ORDER BY
+- SELECT \<list>
+- WHERE
 
 #### Examples
 
@@ -98,12 +99,13 @@ Result Set
 | microsecond | 123456       |
 | nanosecond  | 123456700    |
 | TZoffset    | +05:10       |
-| ISO\_WEEK   | 44           |
+| ISO_WEEK    | 44           |
 
 ## DATEPART <a href="#datepart-transact-sql" id="datepart-transact-sql"></a>
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 DATEPART function returns an integer representing the specified _datepart_ of the specified _date_.
@@ -122,12 +124,12 @@ The specific part of the _date_ argument for which `DATEPART` will return an **i
 `date`\
 An expression that resolves to one of the following data types:
 
-* date
-* datetime
-* datetimeoffset
-* datetime2
-* smalldatetime
-* time
+- date
+- datetime
+- datetimeoffset
+- datetime2
+- smalldatetime
+- time
 
 For _date_, `DATEPART` will accept a column expression, expression, string literal, or user-defined variable. Use four-digit years to avoid ambiguity issues.
 
@@ -180,9 +182,9 @@ WHERE [Deleted] IS NULL
 ## DAY <a href="#day-transact-sql" id="day-transact-sql"></a>
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
-
 DAY function returns an integer that represents the day (day of the month) of the specified _date_.
 
 ### Syntax
@@ -196,12 +198,12 @@ DAY ( date )
 `date`\
 An expression that resolves to one of the following data types:
 
-* date
-* datetime
-* datetimeoffset
-* datetime2
-* smalldatetime
-* time
+- date
+- datetime
+- datetimeoffset
+- datetime2
+- smalldatetime
+- time
 
 For _date_, `DAY` will accept a column expression, expression, string literal, or user-defined variable.
 
@@ -230,7 +232,8 @@ SELECT YEAR(0), MONTH(0), DAY(0)
 ## MONTH <a href="#month-transact-sql" id="month-transact-sql"></a>
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 MONTH returns an integer that represents the month of the specified _date_.
@@ -271,7 +274,8 @@ SELECT YEAR(0), MONTH(0), DAY(0)
 ## YEAR <a href="#year-transact-sql" id="year-transact-sql"></a>
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 YEAR function returns an integer that represents the year of the specified _date_.

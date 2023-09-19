@@ -1,4 +1,4 @@
-# Logical functions
+# Logical Functions
 
 ## Overview
 
@@ -16,7 +16,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](broken-reference).
+You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
 {% endhint %}
 
 #### Syntax
@@ -103,7 +103,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](broken-reference).
+You can review the full list of in-progress function translations[ here](../cql-functions-master-list.md).
 {% endhint %}
 
 #### Syntax
@@ -131,7 +131,7 @@ Returns the data type with the highest precedence from the types in _`true_value
 
 #### Remarks
 
-IIF is a second version of writing a CASE expression. It evaluates the Boolean expression which was passed as the first argument and then returns either TRUE or FALSE based on the result of the evaluation. The _true\_value_ is returned if the Boolean expression is TRUE, and the _false\_value_ is returned if the Boolean expression is FALSE or unknown.
+IIF is a second version of writing a CASE expression. It evaluates the Boolean expression which was passed as the first argument and then returns either TRUE or FALSE based on the result of the evaluation. The _true_value_ is returned if the Boolean expression is TRUE, and the _false_value_ is returned if the Boolean expression is FALSE or unknown.
 
 #### Example
 
