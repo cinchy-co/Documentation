@@ -6,16 +6,17 @@ SQL derives all system date and time values from the operating system of the com
 
 SQL Server 2019 (15.x) derives the date and time values through use of the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of SQL Server running. This API has a precision fixed at 100 nanoseconds. Use the GetSystemTimeAdjustment() Windows API to determine the accuracy. The return system date and time value functions covered in this section are:
 
-* ​[SYSDATETIME​](return-system-date-and-time-values.md#sysdatetime)
-* [​SYSDATETIMEOFFSET​](return-system-date-and-time-values.md#sysdatetimeoffset)
-* [​SYSUTCDATETIME​](return-system-date-and-time-values.md#sysutcdatetime)
+- ​[SYSDATETIME​](return-system-date-and-time-values.md#sysdatetime)
+- [​SYSDATETIMEOFFSET​](return-system-date-and-time-values.md#sysdatetimeoffset)
+- [​SYSUTCDATETIME​](return-system-date-and-time-values.md#sysutcdatetime)
 
 ## SYSDATETIME
 
 SYSDATETIME returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of SQL Server is running.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
@@ -94,7 +95,8 @@ GETUTCDATE()         20:18:45.3470000
 SYSDATETIMEOFFSET returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of SQL Server is running. The time zone offset is included.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
@@ -153,7 +155,8 @@ SELECT
 `SYSUTCDATETIME` returns a **datetime2** value that contains the date and time of the computer on which the instance of SQL Server is running. The date and time are returned as UTC time (Coordinated Universal Time). The fractional second precision specification has a range from 1 to 7 digits. The default precision is 7 digits.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
+For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
 {% endhint %}
 
 ### Syntax
