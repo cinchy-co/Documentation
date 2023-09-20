@@ -19,6 +19,28 @@ The basic workflow for using CinchyDXD 2.0 is the following:
 
 1. Define your data references in the **Data Experience Definitions** table. This definition creates a GUID.
 1. Create the references to data you want to move with the data experience in the **Data Experience Releases** table.
-1. Package the data experience in PowerShell using .\CinchyDXD.ps1
+1. Package the data experience in PowerShell with CinchyDXD.
 1. Upload the package to a version control system for further development work.
-1. 
+1. When finished, use CinchyDXD to install the package on the destination environment.
+
+### Example workflow
+
+The diagram below illustrates a sample scenario where a data experience is exported from a production environment for hotfixes from a development team.
+
+1. After packaging the data experience, the experience is uploaded to version control.
+1. The development team works on the release package.
+1. The release package is then installed to a Dev environment for testing.
+1. When ready, the package is installed back onto the Prod environment.
+
+
+
+```mermaid
+flowchart LR
+  subgraph Version Control 
+  D1[Developer 1] --#2--> A[Release Package]
+
+  D2[Developer 2] --#2--> A
+  end
+  A <--#3----> B[Cinchy Dev]
+  B --#4--> C[Cinchy Prod] -- #1 -->A
+```

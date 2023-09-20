@@ -19,18 +19,18 @@
   - Pre|Post-Install Scripts are run automatically with the `Install` command.
   - Pre|Post-Install Scripts will be executed in alphabetical order
   - The command line options `-ps` and `-pr` have been removed from CinchyDXD as a result of this new enhancement
-- NEW: Cinchy DXD automatically skips syncing metadata not in the defintion, and when the target does not already contain metadata from a previous version
+- NEW: Cinchy DXD automatically skips syncing metadata not in the definition, and when the target doesn't already contain metadata from a previous version
 
 ### Version 1.6.2
 
-- FIXED: Corrected an issue with the model validator logic to properly check for link display columns that are more than two table hops away.
+- FIXED: Corrected an issue with the model validation logic to properly check for link display columns that are more than two table hops away.
 
 ### Version 1.6.1
 
 - NEW: `Groups` now sync in two stages to account for parent/child references
 - NEW: Added pre-export error messaging for common `Data Experience Definition` configuration issues
 - FIXED: Optimization of linkColumn references in all syncs to batter support syncing references to Domains, Tables, and Columns with & in their names
-- FIXED: Optimizations of linkColumns throughout to use Guid and Sync GUID references where applicable, improving sync accuracy and reducing sync errors
+- FIXED: Optimizations of linkColumns throughout to use GUID and Sync GUID references where applicable, improving sync accuracy and reducing sync errors
 - FIXED: Data Experience Reference Data that have Binary data type columns would fail to sync. Binary columns are now excluded from Reference Data configurations
 
 ### Version 1.6.0
@@ -40,21 +40,21 @@
   - `Table.Column` names to skip syncing
   - Example: `-skip "System Colours, Groups.User Groups, Groups.Owner Groups"`
     - This will completely skip the synchronization of the `System Colours` table and exclude the `Groups.User Groups` and `Groups.Owner Groups` columns when syncing the `Groups` table.
-    - If a `Table` is specified that is the same as a `Table.Column`, the sync for that `Table` will not be executed, and the `Table.Column` directive will be ignored.
+    - If a `Table` is specified that's the same as a `Table.Column`, the sync for that `Table` won't be executed, and the `Table.Column` directive will be ignored.
 - NEW: During the export process, DXD will now notify you if there are tables that need to be opened and saved before exporting the DXD. This requirement may arise if a Display Value of a Linked Column has been renamed in the Linked Table.
   - Currently, this check only works with TSQL.
 - NEW: During the installation process, if you specify the -y flag (force install), DXD will remove any existing [Cinchy].[Models] record for this DXD, if it already exists.
 - NEW: Encryption (optional). Cinchy DXD now supports encrypting the contents of exported Data Experience Definitions. To utilize this feature:
   - Use the `./CinchyDXD.ps1 keygen` command to generate an encryption key file.
   - For `./CinchyDXD.ps1 export|install`, use the -k property to specify the location of the encryption key file.
-  - It is important to note that the encryption key used for exporting a DXD package must be the same as the encryption key used during the installation process. To prevent any issues, ensure not to misplace the key file and store it separately in a secure location from the exported DXD package.
+  - The encryption key used for exporting a DXD package must be the same as the encryption key used during the installation process. To prevent any issues, ensure not to misplace the key file and store it separately in a secure location from the exported DXD package.
 - NEW: Support for optionally executing pre-install CQL scripts.
 - FIXED: Fixed an issue where Views modified in the Install destination outside of DXD could result in duplicate column entries. A check and fix have been implemented to address this.
 - FIXED: Changed the loading order of System Colours to load before Domains, as Domains depend on System Colours.
 
 ### Version 1.5.1
 
-- CinchyDXD now requires Cinchy isntalled on SQL Server 2017 or PostgreSQL 14.3
+- CinchyDXD now requires Cinchy installed on SQL Server 2017 or PostgreSQL 14.3
 
 ### Version 1.5.0
 
@@ -77,7 +77,7 @@
 ### Version 1.4.0
 
 - Support for Cinchy v5
-- Support for Cinchy.Connections.CLI v5
+- Support for `Cinchy.Connections.CLI` v5
 - Now initializes Views data in source and target environments
 - Now removes DXDF CLIs after deployment is complete
 - Fixed an issue where passwords containing $ would not properly encrypt
@@ -88,7 +88,7 @@
 
 - Added encrypt command
   - For encrypting passwords that will be used with CinchyDXD
-  - Usage: .\CinchyDXD.ps1 encrypt -t "TextToBeEncrypted"
+  - Usage: `.\CinchyDXD.ps1 encrypt -t "TextToBeEncrypted"`
 
 ### Version 1.3.3
 
@@ -108,7 +108,7 @@
 
 ### Version 1.3.1
 
-- Version differences during an install are now displayed as a warning only and will not prevent as install
+- Version differences during an install are now displayed as a warning only and won't prevent as install
 - Corrected an issue with character encoding in the model file generation
 
 ### Version 1.3.0
@@ -134,7 +134,7 @@
   - Dropping Columns
   - Updating Column Information
   - Renaming Tables and Creating/Updating Domain Assignments
-- Cinchy DXD will no longer allow an install when the source and target Cinchy versions are not the same
+- Cinchy DXD will no longer allow an install when the source and target Cinchy versions aren't the same
 - Fixed an issue where Domains or Tables with & would prevent REFDATA from loading
 
 ### Version 1.1.4
@@ -147,7 +147,7 @@
 
 ### Version 1.1.2
 
-- Fixed an issue introduced in 1.1.1 where REFDATA CLIs were not assigning the correct dataType to Date columns
+- Fixed an issue introduced in 1.1.1 where REFDATA CLIs weren't assigning the correct dataType to Date columns
 
 ### Version 1.1.1
 
@@ -166,7 +166,7 @@
 
 ### Known issues in version 1.0.0
 
-If using `CinchyCLI` version 4 and above, `[Cinchy].[Views]`, `[Cinchy].[View Columns]`, and `[Cinchy].[View Columns Link Graph]` will not synchronize unless the `Mandatory` attribute of the `[Json]` column in the `[Cinchy].[Views]` table is set to `False`. This issue is not present in `CinchyCLI` version 3.7.0 and earlier.
+If using `CinchyCLI` version 4 and above, `[Cinchy].[Views]`, `[Cinchy].[View Columns]`, and `[Cinchy].[View Columns Link Graph]` won't synchronize unless the `Mandatory` attribute of the `[Json]` column in the `[Cinchy].[Views]` table is set to `False`. This issue isn't present in `CinchyCLI` version 3.7.0 and earlier.
 
 ### Version 0.9.1
 

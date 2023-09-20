@@ -1,13 +1,15 @@
 # CinchyDXD
 
-## Overview
+## What is CinchyDXD
 
-CinchyDXD is a utility that exports a data experiences from a source Cinchy environment to a release package that can:
+CinchyDXD is a utility that exports a data experiences from a source Cinchy environment to a release package that you can:
 
 - Deploy to an upper environment with the same CinchyDXD utility.
-- Committed to source control to reflect a snapshot of a specific point in the release version.
+- Commit to source control to reflect a snapshot of a specific point in the release version.
 
-With CinchyDXD 2.0, you can also now work on a release package in a version controlled environment (such as Git) so multiple developers can work on a package.
+## About CinchyDXD 2.0
+
+CinchyDXD 2.0 creates packages for further development in a version controlled environment (such as Git) where multiple deve
 
 ## Prerequisites
 
