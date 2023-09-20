@@ -25,14 +25,15 @@ The basic workflow for using CinchyDXD 2.0 is the following:
 
 ### Example workflow
 
-The diagram below illustrates a sample scenario where a data experience is exported from a production environment for hotfixes from a development team.
+The diagram below illustrates a sample scenario where a data experience is exported from a production environment for hot fixes from a development team.
 
 1. After packaging the data experience, the experience is uploaded to version control.
 1. The development team works on the release package.
 1. The release package is then installed to a Dev environment for testing.
-1. When ready, the package is installed back onto the Prod environment.
+1. When ready, install the release package back onto the Prod environment.
 
-
+<!-- Best practices either here or on a new page  -->
+For more information on DXD package workflows, see the [Best practices](TBD) page.
 
 ```mermaid
 flowchart LR
@@ -44,3 +45,7 @@ flowchart LR
   A <--#3----> B[Cinchy Dev]
   B --#4--> C[Cinchy Prod] -- #1 -->A
 ```
+
+## Next steps
+
+- [Package the data experience]()
