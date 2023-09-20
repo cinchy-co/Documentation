@@ -48,4 +48,5 @@ flowchart LR
 
 ## Next steps
 
-- [Package the data experience]()
+- [Package the data experience]().
+- Review the [Release package]() page.
