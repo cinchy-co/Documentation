@@ -98,6 +98,12 @@
   * [Saved queries](guides-for-using-cinchy/builder-guides/saved-queries.md)
   * [CinchyDXD]
     * [Overview](guides-for-using-cinchy/builder-guides/cinchydxd-utility/overview.md)
+    * [DXD workflow](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-workflow.md)
+    * [Changelog](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-changelog.md)
+    * [References](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References)
+      * [Cinchy DXD commands](guides-for-using-cinchy/builder-guides/cinchydxd-utility/references/Cinchy-DXD-commands.md)
+      * [Data Experience Definitions table](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References/data-experience-definitions.md)
+      * [Data Experience Reference table](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References/data-experience-reference.md)
   * [Multilingual support](guides-for-using-cinchy/builder-guides/multi-lingual-support.md)
   * [Integration guides](guides-for-using-cinchy/builder-guides/integration-guides.md)
 * [Administrator Guide](guides-for-using-cinchy/administrator-guide.md)
