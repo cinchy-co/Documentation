@@ -104,6 +104,10 @@ Data collaboration entails the collection, exchange and use of data from differe
 
 When setting up a Data Sync, you must define which destination to push data to. Cinchy maintains [a robust list](data-syncs/supported-data-sync-destinations/) of Data Destination connectors and is always working on adding more into the [Connections Experience](cinchy-glossary.md#connections-experience).
 
+### Data Experience
+
+A data experience is a deployable package in Cinchy consisting of tables, queries, groups, and data sync configurations designed for a specific business workflow.
+
 #### Data Source(s)
 
 When setting up a Data Sync, you must define which source to pull data from. Cinchy maintains [a robust list](data-syncs/supported-data-sync-sources/) of Data Source connectors and is always working on adding more into the [Connections Experience.](cinchy-glossary.md#connections-experience)

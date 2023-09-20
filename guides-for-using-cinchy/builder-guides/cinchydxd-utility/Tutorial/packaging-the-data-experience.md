@@ -105,7 +105,8 @@ The Data Experience is defined and packed in what will be referred to moving for
      Please Note: if you have your own release management system, you do have the option to opt out of archiving the releases in Cinchy and check the release into your own source control
    * **Release Name**
    * **Data Experience**
-4. **Data Experience Release Artifact Table**: Stores all of the files that are part of the Data Experience package as individual records along with all of the binary for each record
+4. **Data Experience Release
+1.  Artifact Table**: Stores all of the files that are part of the Data Experience package as individual records along with all of the binary for each record
 
 ### Define the data experience
 
@@ -141,7 +142,7 @@ When setting up a Data Experience definition, you will need one definition for e
 | Builder Groups           | <p>Select the builder group(s) that have permission to export the Data Experience<br></p><p>Note: Best Practice is to use a Group over a User. Users within groups can fluctuate, where the Group (or Role) will remain. This will require less maintenance moving forward</p> |
 | Sync GUID                | Leave this column blank                                                                                                                                                                                                                                                        |
 
-2\. Complete the following _(Image 12):_
+2. Complete the following _(Image 12):_
 
 | Column         | Value                            |
 | -------------- | -------------------------------- |

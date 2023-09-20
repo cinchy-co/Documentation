@@ -1,4 +1,4 @@
-## CinchyDXD Version History
+## CinchyDXD changelog
 
 ### Version 2.0.0
 
