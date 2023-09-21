@@ -1,6 +1,6 @@
 ## Data Experience Definitions Table
 
-The list below is a reference to all fields in the Data Experience Definitions Table.
+The list below is a reference to all columns in the Data Experience Definitions Table.
 
 | Column                   | Definition                                                                                            |
 | ------------------------ | ----------------------------------------------------------------------------------------------------- |

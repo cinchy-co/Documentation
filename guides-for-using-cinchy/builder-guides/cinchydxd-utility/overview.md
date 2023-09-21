@@ -9,7 +9,7 @@ CinchyDXD is a utility that exports a data experiences from a source Cinchy envi
 
 ## About CinchyDXD 2.0
 
-CinchyDXD 2.0 creates packages for further development in a version controlled environment (such as Git) where multiple deve
+CinchyDXD 2.0 creates packages for further development in a version controlled environment (such as Git) where multiple developers can work on the same data experience.
 
 ## Prerequisites
 

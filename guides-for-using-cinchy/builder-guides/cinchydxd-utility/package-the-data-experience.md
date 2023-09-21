@@ -22,7 +22,7 @@ A definition contains the entities that make up the experience. Some examples of
 For a complete list of all fields, see the [Data Experience Definitions](../cinchydxd-utility/References/data-experience-definitions.md) reference page.
 
 
-### Definition best practices
+### Best practices
 
 Cinchy recommends packaging entities based on their dependencies on one another. For example entities such as Applets, System Colours, Literal Groups, and Models can be packaged separately. This makes versioning these entities easier when exporting to other environments.
 
@@ -37,4 +37,10 @@ For each table data reference, you must define an entry in the **Data Experience
 
 Treat this reference data similarly to a Data Sync Configuration for batch synchronization. It should move data from a CSV file to a Cinchy Table with matching attributes. The sync key column should contain unique values and shouldn't be a system or calculated column.
 
-For a complete list of all 
+For a complete list of all columns, please see the [Data Experience Reference Table](../cinchydxd-utility/References/data-experience-reference.md).
+
+## Export the data experience
+
+After you define the data experience and the reference data you want with it, you can now use PowerShell to export your experience.
+
+Launch Powershell and navigate to your CinchyDXD folder (e.g., C:\DxDv1.5.1) and run command in the below format following the example without newlines (f you are putting your parameters on separate lines you will be required to have backticks quote ` for the parameters to execute)
