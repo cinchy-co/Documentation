@@ -219,6 +219,7 @@ You can create a choice column (single or multi-select) in Cinchy. In this scena
 A calculated column uses values from other fields in the record for its evaluation. These columns also have a specified result type, which dictates the format of the calculated output.
 
 **Example**:  
+
 A `[Full Name]` column can be calculated as `CONCAT([First Name], ' ', [Last Name])`.
 
 {% hint style="info" %}
@@ -237,6 +238,7 @@ When creating a calculated column, you have two types to choose from: **cached**
 - **When It Updates**: Updates only if the data in the same row changes.
 
 **Example**:  
+
 Changing a name in a single row only triggers a recalculation for that row's "Label" column.
 
 #### Live Calculated Columns
@@ -245,7 +247,8 @@ Changing a name in a single row only triggers a recalculation for that row's "La
 - **How It's Stored**: As a formula executed on-the-fly during read or query.
 - **When It Updates**: Refreshes automatically upon every query or screen refresh.
 
-**Example**:  
+**Example**: 
+ 
 A live "Label" column will update instantly if any referenced data changes, affecting all rows and tables.
 
 #### Limitations
