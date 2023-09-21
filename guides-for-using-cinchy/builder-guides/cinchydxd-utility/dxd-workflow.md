@@ -23,7 +23,22 @@ The basic workflow for using CinchyDXD 2.0 is the following:
 1. Upload the package to a version control system for further development work.
 1. When finished, use CinchyDXD to install the package on the destination environment.
 
-### Example workflow
+
+
+### Example stepped workflow
+
+The example
+
+```mermaid
+flowchart LR
+  subgraph Version Control 
+  D1[Developer 1 Cinchy Local] --#1--> A[Release Package]
+  end
+  A <--#2----> B[Cinchy Dev]
+  B --#3--> C[Cinchy Prod]
+```
+
+### Example continuous workflow
 
 The diagram below illustrates a sample scenario where a data experience is exported from a production environment for hot fixes from a development team.
 
@@ -45,7 +60,11 @@ flowchart LR
   A <--#3----> B[Cinchy Dev]
   B --#4--> C[Cinchy Prod] -- #1 -->A
 ```
+### Best practices
 
+- Enforce that production becomes read-only.
+- The DEV environment needs to be kept in sync with the dev branch.
+- 
 ## Next steps
 
 - [Package the data experience]().
