@@ -1,4 +1,4 @@
-# SOAP 1.2 Web Service
+# SOAP 1.2 web service
 
 ## Overview
 
@@ -32,35 +32,28 @@ The following table outlines the mandatory and optional parameters you will find
 {% tab title="Source Details" %}
 The following parameters will help to define your data sync source and how it functions.
 
-<table><thead><tr><th>Parameter</th><th width="289.66666666666663">Description</th><th>Example</th></tr></thead><tbody><tr><td>Source</td><td><strong>Mandatory.</strong> Select your source from the drop down menu.</td><td>SOAP 1.2 Web Service</td></tr><tr><td>authType</td><td><strong>Mandatory.</strong> Select the type of authentication you wish to us in this sync.<br><strong>- None</strong><br><strong>- WSSE:</strong> This will allow you to use a Username and Password to authenticate via a WS-Security SOAP envelope header.<br><strong>- Basic:</strong> This will allow you to use a Username and Password to authenticate via a basic auth header.</td><td>Basic</td></tr><tr><td>Use Password Digest</td><td>The password digest is a cryptographic hash of the password and timestamp. <strong>This parameter should only be used in conjunction with a WSSE authType, and when the Password Type for your auth is **PasswordDigest**.</strong> If neither of those applies, leave this value unchecked.</td><td></td></tr><tr><td>Request Timeout</td><td><strong>Mandatory.</strong> You can use this field to set a timeout, in milliseconds, for your request. There is no maximum value. The minimum should be greater than 0. The default value is 100 milliseconds</td><td>2000</td></tr><tr><td>Endpoint</td><td><strong>Mandatory.</strong> This field should contain your SOAP 1.2 Web Service API endpoint.</td><td><a href="https://www.dataaccess.com/webservicesserver/NumberConversion.wso">dataaccess</a></td></tr><tr><td>Has Mtom Response</td><td><strong>This value is required to be true if:</strong> the SOAP API response contains an attachment outside of the response message. <a href="https://images.app.goo.gl/E82L6mYrJxCxXwhKA">See here for an example.</a></td><td></td></tr><tr><td>Record Xpath</td><td><strong>Mandatory.</strong> The Xpath to select all records we want to extract from the SOAP response. The path should point to the XML element wrapping the column data.<br><br>XPath stands for XML Path Language. It uses a non-XML syntax to provide a flexible way of addressing (pointing to) different parts of an XML document. This value should start with ‘//’ and be followed by the tag name of the data. <br><br>You can refer http://xpather.com/ to find out the Xpath.</td><td></td></tr><tr><td>Envelope Namespace</td><td><p>The namespace prefix to use for the SOAP request elements.<br><br>For example, setting the value to "foo" would result in the soap request being prefixed with the "foo" namespace. </p><p></p><p></p><pre><code><foo:Envelope xmlns:foo="...">
-	<foo:Body>
+<table><thead><tr><th>Parameter</th><th width="289.66666666666663">Description</th><th>Example</th></tr></thead><tbody><tr><td>Source</td><td><strong>Mandatory.</strong> Select your source from the drop down menu.</td><td>SOAP 1.2 Web Service</td></tr><tr><td>authType</td><td><strong>Mandatory.</strong> Select the type of authentication you wish to us in this sync.<br><strong>- None</strong><br><strong>- WSSE:</strong> This will allow you to use a Username and Password to authenticate via a WS-Security SOAP envelope header.<br><strong>- Basic:</strong> This will allow you to use a Username and Password to authenticate via a basic auth header.</td><td>Basic</td></tr><tr><td>Use Password Digest</td><td>The password digest is a cryptographic hash of the password and timestamp. <strong>This parameter should only be used in conjunction with a WSSE authType, and when the Password Type for your auth is **PasswordDigest**.</strong> If neither of those applies, leave this value unchecked.</td><td></td></tr><tr><td>Request Timeout</td><td><strong>Mandatory.</strong> You can use this field to set a timeout, in milliseconds, for your request. There is no maximum value. The minimum should be greater than 0. The default value is 100 milliseconds</td><td>2000</td></tr><tr><td>Endpoint</td><td><strong>Mandatory.</strong> This field should contain your SOAP 1.2 Web Service API endpoint.</td><td><a href="https://www.dataaccess.com/webservicesserver/NumberConversion.wso">dataaccess</a></td></tr><tr><td>Has Mtom Response</td><td><strong>This value is required to be true if:</strong> the SOAP API response contains an attachment outside of the response message. <a href="https://images.app.goo.gl/E82L6mYrJxCxXwhKA">See here for an example.</a></td><td></td></tr><tr><td>Record Xpath</td><td><strong>Mandatory.</strong> The Xpath to select all records we want to extract from the SOAP response. The path should point to the XML element wrapping the column data.<br><br>XPath stands for XML Path Language. It uses a non-XML syntax to provide a flexible way of addressing (pointing to) different parts of an XML document. This value should start with ‘//’ and be followed by the tag name of the data.<br><br>You can refer http://xpather.com/ to find out the Xpath.</td><td></td></tr><tr><td>Envelope Namespace</td><td><p>The namespace prefix to use for the SOAP request elements.<br><br>For example, setting the value to "foo" would result in the soap request being prefixed with the "foo" namespace.</p><pre><code>
+	
 		[Request XML]
-	</foo:Body>
-</foo:Envelope>
-</code></pre></td><td>"foo"</td></tr><tr><td>Namespaces - Name</td><td><p>The name of your SOAP namespace tags in your request and response. This value appear as "soap" in the snippet below.</p><p></p><p>These should be the values immediately after "xmlns:"<br></p><pre><code><?xml version="1.0" encoding="utf-8"?>
-<soapenv:Envelope
-	xmlns:<a data-footnote-ref href="#user-content-fn-1">soap</a>="http://schemas.xmlsoap.org/soap/envelope/">
-	<soap:Body>
-		<m:NumberToWordsResponse
-			xmlns:m="http://www.dataaccess.com/webservicesserver/">
-			<m:NumberToWordsResult>four million four hundred and seventy three thousand two hundred and thirty nine </m:NumberToWordsResult>
-		</m:NumberToWordsResponse>
-	</soap:Body>
-</soap:Envelope>
-</code></pre></td><td>"soap"</td></tr><tr><td>Namespaces - Value</td><td><p>The URL describing this namespace in the response. In the below snippet this value is "<a href="http://www.dataaccess.com/webservicesserver/">http://www.dataaccess.com/webservicesserver/</a>"<br></p><pre><code><?xml version="1.0" encoding="utf-8"?>
-<soapenv:Envelope
-	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-	<soap:Body>
-		<m:NumberToWordsResponse
-			xmlns:m=<a data-footnote-ref href="#user-content-fn-2">"http://www.dataaccess.com/webservicesserver/"</a>>
-			<m:NumberToWordsResult>four million four hundred and seventy three thousand two hundred and thirty nine </m:NumberToWordsResult>
-		</m:NumberToWordsResponse>
-	</soap:Body>
-</soapenv:Envelope>
+	
+
+</code></pre></td><td>"foo"</td></tr><tr><td>Namespaces - Name</td><td><p>The name of your SOAP namespace tags in your request and response. This value appear as "soap" in the snippet below.</p><p>These should be the values immediately after "xmlns:"<br></p><pre><code>
+soap="http://schemas.xmlsoap.org/soap/envelope/">
+	
+		
+			four million four hundred and seventy three thousand two hundred and thirty nine 
+		
+	
+
+</code></pre></td><td>"soap"</td></tr><tr><td>Namespaces - Value</td><td><p>The URL describing this namespace in the response. In the below snippet this value is "<a href="http://www.dataaccess.com/webservicesserver/">http://www.dataaccess.com/webservicesserver/</a>"<br></p><pre><code>
+
+	
+		"http://www.dataaccess.com/webservicesserver/">
+			four million four hundred and seventy three thousand two hundred and thirty nine 
+		
+	
 
 </code></pre></td><td>"<a href="http://www.dataaccess.com/webservicesserver/">http://www.dataaccess.com/webservicesserver/</a>"</td></tr></tbody></table>
-
-
 {% endtab %}
 
 {% tab title="Schema" %}
@@ -73,31 +66,27 @@ The following parameters will help to define your data sync source and how it fu
 | Data Type   | **Mandatory.** The data type of the column values.                                                            | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                             |         |
 
-
-
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
-| Parameter   | Description                                                                                                                           | Example |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Parameter   | Description                                                                       | Example |
+| ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
-| Replacement | What you want to replace your pattern with.                                                                                           |         |
+| Replacement | What you want to replace your pattern with.                                       |         |
 
 {% hint style="info" %}
 Note that you can have more than one String Replacement
 {% endhint %}
 {% endtab %}
 {% endtabs %}
-
-
 
 <figure><img src="../../.gitbook/assets/image (339).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
@@ -108,6 +97,4 @@ Note that you can have more than one String Replacement
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
 * Click **Jobs > Start a Job** to begin your sync.
 
-[^1]: Namespace tag
-
-[^2]: Namespace Value
+1. Namespace Value
