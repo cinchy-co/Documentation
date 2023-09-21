@@ -30,17 +30,15 @@ Mandatory and optional parameters for the Source tab are outlined below (Image 2
 
 {% tabs %}
 {% tab title="Source Details" %}
-
-| Parameter              | Description                                                                                                                                                                                                                                                                                                    | Example                                                                                        |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Source                 | Mandatory. Select your source from the drop down menu.                                                                                                                                                                                                                                                         | REST API                                                                                       |
-| HTTP Method            | Mandatory.                                                                                                                                                                                                                                                                                                     | This will be either GET or POST.                                                               |
-| API Response Format    | Mandatory. Use this field to specify a response format of the endpoint. Currently, the Connections UI only supports JSON responses.                                                                                                                                                                            | JSON                                                                                           |
-| Records Root JSONPath  | Mandatory. Specify the JSON path for the results. The root of a JSON object is `$`. If the top-element of the response is an array, Cinchy places the array under a `"data"` key in a new JSON object. See [Best practices](/data-syncs/supported-data-sync-sources/rest-api.md#best-practices) for more info. | `$.data`, `$`, `$.ResponseObject`                                                              |
-| Path to Iterate        | The path to select an array of records for capturing elements inside. A record is created for each element which you can use as the input in a source schema. The path is relative to the root JSONPath.                                                                                                       |                                                                                                |
-| API Endpoint URL       | Mandatory. API endpoint, including URL parameters like API key                                                                                                                                                                                                                                                 | https://www.quandl.com/api/v3/datatables/CLS/IDHP?fx_business_date=2024-01-01&api_key=@API_KEY |
-| Next Page URL JSONPath | Specify the path for the next page URL. This is only relevant for APIs that use cursor pagination                                                                                                                                                                                                              |                                                                                                |
-
+| Parameter              | Description                                                                                                                                                                                                                                                            | Example                                                                                             |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Source                 | Mandatory. Select your source from the drop down menu.                                                                                                                                                                                                                 | REST API                                                                                            |
+| HTTP Method            | Mandatory.                                                                                                                                                                                                                                                             | This will be either GET or POST.                                                                    |
+| API Response Format    | Mandatory. Use this field to specify a response format of the endpoint. Currently, the Connections UI only supports JSON responses.                                                                                                                                    | JSON                                                                                                |
+| Records Root JSONPath  | Mandatory. Specify the JSON path for the results. The root of a JSON object is `$`. If the top-element of the response is an array, Cinchy places the array under a `"data"` key in a new JSON object. See [Best practices](rest-api.md#best-practices) for more info. | `$.data`, `$`, `$.ResponseObject`                                                                   |
+| Path to Iterate        | The path to select an array of records for capturing elements inside. A record is created for each element which you can use as the input in a source schema. The path is relative to the root JSONPath.                                                               |                                                                                                     |
+| API Endpoint URL       | Mandatory. API endpoint, including URL parameters like API key                                                                                                                                                                                                         | https://www.quandl.com/api/v3/datatables/CLS/IDHP?fx\_business\_date=2024-01-01\&api\_key=@API\_KEY |
+| Next Page URL JSONPath | Specify the path for the next page URL. This is only relevant for APIs that use cursor pagination                                                                                                                                                                      |                                                                                                     |
 {% endtab %}
 
 {% tab title="Schema" %}
@@ -55,13 +53,12 @@ Mandatory and optional parameters for the Source tab are outlined below (Image 2
 
 Select **Show Advanced** for more options for the Schema section.
 
-| Parameter       | Description                                                                                                                                               | Example |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Mandatory       | - If both 'Mandatory' and 'Validated': empty rows rejected. <br> - If only 'Mandatory': rows synced but marked as failed with 'Mandatory Rule Violation'. |         |
-| Validate Data   | - If both 'Mandatory' and 'Validated': empty rows rejected. <br> - If only 'Validated': all rows synced.                                                  |         |
-| Trim Whitespace | Optional for text data. Choose to trim whitespace.                                                                                                        |         |
-| Max Length      | Optional for text data. Set max length; exceeding values get rejected.                                                                                    |         |
-
+| Parameter       | Description                                                                                                                                                    | Example |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Mandatory       | <p>- If both 'Mandatory' and 'Validated': empty rows rejected.<br>- If only 'Mandatory': rows synced but marked as failed with 'Mandatory Rule Violation'.</p> |         |
+| Validate Data   | <p>- If both 'Mandatory' and 'Validated': empty rows rejected.<br>- If only 'Validated': all rows synced.</p>                                                  |         |
+| Trim Whitespace | Optional for text data. Choose to trim whitespace.                                                                                                             |         |
+| Max Length      | Optional for text data. Set max length; exceeding values get rejected.                                                                                         |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
@@ -92,7 +89,7 @@ You can learn more about these sections in [Appendix A - Other Sections.](rest-a
 
 ### Retrieve nested fields
 
-To get fields in a nested array, you can either set the nested array as the root, or you can use Path to Iterate to expand the array. 
+To get fields in a nested array, you can either set the nested array as the root, or you can use Path to Iterate to expand the array.
 
 #### Examples
 
@@ -113,10 +110,10 @@ Here is a sample JSON response:
 }
 ```
 
-**Records Root JSONPath:** $.users
-**Schema**:
-- `$.userId` for **ID**
-- `$.name `for **Name**
+**Records Root JSONPath:** $.users **Schema**:
+
+* `$.userId` for **ID**
+* `$.name` for **Name**
 
 {% hint style="info" %}
 You can't reference `"groupId"` as it's one level above the specified root scope.
@@ -146,12 +143,12 @@ Here is a sample JSON response:
 
 **Schema**:
 
-- `$.name` for **Name**
-- `$.age` for **Age**
+* `$.name` for **Name**
+* `$.age` for **Age**
 
 ### Path to Iterate
 
-Use Path to Iterate to expand within an array. It allows you to target nested keys within the array. This only applies if the records within an array are objects.
+Use **Path to Iterate** to expand and target nested keys within the array. This only applies if the records within an array are objects.
 
 If the record within the path to iterate is an array, each item within the array gets placed under an `"item"` key in a new JSON object.
 
@@ -168,19 +165,19 @@ For example, here is a sample JSON response:
 
 In this example, we want to iterate over the `"transactions"` array and capture the records for `"transactionid"` and assign them to the **"Transaction ID"** column, and then add the parent `"name"` key to a **Name** column .
 
-**Records Root JSONPath**: `$`
-**Path to iterate**: `$.transactions`
+**Records Root JSONPath**: `$` **Path to iterate**: `$.transactions`&#x20;
+
 **Schema**:
 
-- `$.name` for **Name**
-- `$.transactions.id` for **Transaction ID**
+* `$.name` for **Name**
+* `$.transactions.id` for **Transaction ID**
 
 ## Next steps
 
-- Configure your [Destination](../supported-data-sync-destinations/)
-- Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
-- Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-- To run a batch sync, select **Jobs > Start Job**
+* Configure your [Destination](../supported-data-sync-destinations/)
+* Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
+* Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
+* To run a batch sync, select **Jobs > Start Job**
 
 ## Resources
 
@@ -218,9 +215,9 @@ To set up a retry specification:
 
 2. Select your Delay Strategy.
 
-- **Linear Backoff:** Defines a delay of approximately n seconds where n = current retry attempt.
-- **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
-  - _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
+* **Linear Backoff:** Defines a delay of approximately n seconds where n = current retry attempt.
+* **Exponential Backoff:** A strategy where every new retry attempt is delayed exponentially by 2^n seconds, where n = current retry attempt.
+  * _Example: you defined Max Attempts = 3. Your first retry is going to be in 2^1 = 2, second: 2^2 = 4, third: 2^3 = 8 sec._
 
 3\. Input your Max Attempts. The maximum number of retries allowed is 10.
 
@@ -234,9 +231,9 @@ Retry conditions are only evaluated if the response code isn't 2xx Success.
 
 Each Retry Condition contains **one or more "Attribute Match" sections**. This defines a regex to evaluate against a section of the HTTP response. The following are the three areas of the HTTP response that can be inspected:
 
-- Response Code
-- Header
-- Body
+* Response Code
+* Header
+* Body
 
 If there are multiple "Attribute Match" blocks within a Retry Condition, **all have to match for the retry condition to evaluate to true.**
 
