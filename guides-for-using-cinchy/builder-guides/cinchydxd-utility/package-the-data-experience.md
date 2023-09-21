@@ -32,3 +32,9 @@ If you make changes to the DX in the future, update the relevant Data Experience
 
 
 ## Define the reference data
+
+For each table data reference, you must define an entry in the **Data Experience Reference Data** system table. This entry will be deployed alongside your Data Experience Definition (DX).
+
+Treat this reference data similarly to a Data Sync Configuration for batch synchronization. It should move data from a CSV file to a Cinchy Table with matching attributes. The sync key column should contain unique values and shouldn't be a system or calculated column.
+
+For a complete list of all 

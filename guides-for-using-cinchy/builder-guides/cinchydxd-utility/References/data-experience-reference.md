@@ -1,6 +1,6 @@
-## Revised Data Experience Reference Table with Filter Example
+## Data Experience Reference Table
 
-Certainly, here's the revised table with the example for the "Filter" column retained:
+The list below is a reference to all columns in the Data Experience Reference Table.
 
 | Column                     | Definition                                                                                                                                                                  |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

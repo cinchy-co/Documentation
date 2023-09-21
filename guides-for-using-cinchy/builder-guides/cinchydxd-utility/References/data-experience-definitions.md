@@ -1,6 +1,6 @@
-## Revised Data Experience Definitions Table
+## Data Experience Definitions Table
 
-Here's a simplified version of your Data Experience Definitions Table:
+The list below is a reference to all fields in the Data Experience Definitions Table.
 
 | Column                   | Definition                                                                                            |
 | ------------------------ | ----------------------------------------------------------------------------------------------------- |
