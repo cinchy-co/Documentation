@@ -1,29 +1,29 @@
-# Data Experience Definitions Table
+## Revised Data Experience Definitions Table
 
-The following table lists all properties of the **Data Experience Definitions** table.
+Here's a simplified version of your Data Experience Definitions Table:
 
-| Column                   | Definition                                                                                                                                                                                                                                                                     |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GUID                     | This value is calculated, please note this value will be required as one of your export parameters in PowerShell                                                                                                                                                               |
-| Name                     | This is the Name of your Data Experience                                                                                                                                                                                                                                       |
-| Tables                   | Select all tables that are part of the Data Experience                                                                                                                                                                                                                         |
-| Views                    | Select all views (in the data browser) that are a part of the Data Experience                                                                                                                                                                                                  |
-| Integrated Clients       | Select any integrated clients (For example: Tableau, PowerBI, custom integrations) that are part of the Data Experience                                                                                                                                                        |
-| Data Sync Configurations | Select any data syncs (CLI’s experience needs to work) that are part of the Data Experience                                                                                                                                                                                    |
-| Listener Configurations  | Select any Listener Config rows that refer to a Data Sync Configuration which is a part of the Data Experience                                                                                                                                                                 |
-| Reference Data           | Select any reference data that's part of the Data Experience. Please note that the setup of the reference data is done in the table called Data Experience Reference Data (see step 2 below for setup details)                                                                 |
-| Secrets                  | Select any Secrets you'd like to include that are used Data Sync Configurations or Listener Configs which are a part of this Data Experience.                                                                                                                                  |
-| Webhooks                 | Select any Webhooks that are a part of this data experience                                                                                                                                                                                                                    |
-| User Defined Functions   | Select any user defined functions (For example: validate phone, validate email) that are part of the Data Experience                                                                                                                                                           |
-| Models                   | Select any custom models that override columns or tables in your Data Experience, if there are none - leave blank                                                                                                                                                              |
-| Groups                   | Select any groups that are part of the Data Experience (when moving groups, it will also move all table access \[design] controls)                                                                                                                                             |
-| System Colours           | Select a system colour (if defined) for the Data Experience                                                                                                                                                                                                                    |
-| Saved Queries            | Select any queries that are part of the Data Experience                                                                                                                                                                                                                        |
-| Applets                  | Select any applets that are part of the Data Experience                                                                                                                                                                                                                        |
-| Pre-install Scripts      | Select any Pre-install Scripts (Saved Queries) that should run **before** the installation of this Data Experience.                                                                                                                                                            |
-| Post-install Scripts     | <p>Select any Post-install Scripts (Saved Queries) that should run <strong>after</strong> to the installation of this Data Experience.<br><br>A common use-case is to rectify data that may be different between environments.</p>                                             |
-| Formatting Rules         | Select any formatting rules that are part of the Data Experience                                                                                                                                                                                                               |
-| Literal Groups           | Select any literals associated to the Data Experience (For example: key values with English and French definitions)                                                                                                                                                            |
-| Builders                 | Select the builder(s) who have permission to export the Data Experience                                                                                                                                                                                                        |
-| Builder Groups           | <p>Select the builder group(s) that have permission to export the Data Experience<br></p><p>Note: Best Practice is to use a Group over a User. Users within groups can fluctuate, where the Group (or Role) will remain. This will require less maintenance moving forward</p> |
-| Sync GUID                | Leave this column blank                                                                                                                                                                                                                                                        |
+| Column                   | Definition                                                                                            |
+| ------------------------ | ----------------------------------------------------------------------------------------------------- |
+| GUID                     | Calculated value. Required for PowerShell exports.                                                    |
+| Name                     | Name of your Data Experience.                                                                         |
+| Tables                   | Tables included in the Data Experience.                                                               |
+| Views                    | Views from the data browser included.                                                                 |
+| Integrated Clients       | Integrated clients like Tableau, PowerBI.                                                             |
+| Data Sync Configurations | Data syncs included. CLI compatibility required.                                                      |
+| Listener Configurations  | Listener Config rows referring to Data Syncs.                                                         |
+| Reference Data           | Reference data setup in the Data Experience Reference Data table.                                     |
+| Secrets                  | Secrets used in Data Syncs or Listener Configs.                                                       |
+| Webhooks                 | Webhooks included.                                                                                    |
+| User Defined Functions   | User Defined Functions to include. For example, phone or email validation.                            |
+| Models                   | Custom models that override columns or tables. Leave blank if none.                                   |
+| Groups                   | Groups included. Also moves table access controls.                                                    |
+| System Colours           | System color for the data experience, if defined.                                                         |
+| Saved Queries            | Queries included.                                                                                     |
+| Applets                  | Applets included.                                                                                     |
+| Pre-install Scripts      | Scripts to run before installation.                                                                   |
+| Post-install Scripts     | Scripts to run after installation. For data rectification between environments.                       |
+| Formatting Rules         | Formatting rules included.                                                                            |
+| Literal Groups           | Literals like key values in multiple languages.                                                       |
+| Builders                 | Builders with export permission.                                                                      |
+| Builder Groups           | Builder groups with export permission. Group preferred over individual users for ease of maintenance. |
+| Sync GUID                | Leave blank.                                                                                          |
