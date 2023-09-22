@@ -50,7 +50,7 @@ To download the Utility:
 
 1. Run `.\CinchyDXD.ps1 keygen -o "<TargetDirectory>"`, where `TargetDirectory` is your desired output path.
 1. Find the `dxd.key` file created.
-1. Use the `dxd.key` file in any 
+
 ## Changelog
 
 See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/version-history-dxd.md) for more details.
