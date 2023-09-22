@@ -12,7 +12,7 @@
 - **Enhanced Data Sync**: Now supports syncing of Secrets, Listener Configurations, Webhooks, and Views.
     - **Note**: Views must be explicitly defined; Secrets automatically include External Secrets Manager.
 - **Script Management**: Define Pre-Install and Post-Install Scripts in Data Experience Definition.
-    - **Auto-run**: Scripts run automatically during Install.
+    - **Auto run**: Scripts run automatically during Install.
     - **Order**: Scripts executed alphabetically.
     - **Deprecated**: `-ps` and `-pr` command line options removed.
 - **Metadata Skip**: Automatically omits non-defined or obsolete metadata during sync.

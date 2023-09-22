@@ -1,6 +1,6 @@
 # CinchyDXD
 
-## What is CinchyDXD
+## CinchyDXD introduction
 
 CinchyDXD is a utility that exports a data experiences from a source Cinchy environment to a release package that you can:
 
