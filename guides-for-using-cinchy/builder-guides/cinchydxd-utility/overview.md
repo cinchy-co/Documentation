@@ -51,7 +51,7 @@ See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/ve
 
 ## Next steps
 
-- Review the [DXD workflow]()
-- Try the [DXD tutorial: Currency exchange]()
+- Review the [DXD workflow](../cinchydxd-utility/dxd-workflow.md)
+
 
 
