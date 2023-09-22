@@ -52,11 +52,17 @@ flowchart LR
   A --#4--> C[Cinchy Prod] -- #1 ------>A
 ```
 
-### Sync GUID
+### Sync GUID components
 
-To make environment workflows have a Sync GUID. The sync GUID is made from three parts:
+The Sync GUID in the origin environment consists of three elements:
 
-1. 
+1. Data Experience Sync GUID
+2. Data Experience GUID
+3. Entity GUID
+
+In the origin environment (the export environment of the original data experience), both the Sync GUID and the GUID are identical.
+
+A Sync GUID is created for each entity when it's installed onto a second environment.
 ### Export and install process between instances
 
 If you export data from environment A and install it into environment B, and later plan to export from Instance B, use the original DXD GUID. This GUID can now be found in the **Sync GUID** column under the **Data Experience Definitions** table in Instance B.
@@ -65,10 +71,10 @@ If you export data from environment A and install it into environment B, and lat
 
 When using DXD, you should always consider the following:
 
-- Both the source and target environments must run on the same version of Cinchy. For example, Source Version 5.5, Target Version 5.5.
+- Both the source and target environments must run on the same version of Cinchy. For example, Source Version 5.7, Target Version 5.7.
 
 
 ## Next steps
 
-- [Package the data experience]().
-- Review the [Release package]() page.
+- [Package the data experience](../cinchydxd-utility/package-the-data-experience.md).
+- Review the [Release package](../cinchydxd-utility/release-package.md) page.
