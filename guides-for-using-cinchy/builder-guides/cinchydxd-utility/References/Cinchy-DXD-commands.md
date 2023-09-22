@@ -2,7 +2,18 @@
 
 This section lists all available commands and their arguments for CinchyDXD.
 
-## Universal arguments
+## Cinchy DXD functions
+
+| Action  | Description                                                               |
+|---------|---------------------------------------------------------------------------|
+| export  | Exports a Data Experience from a Cinchy source environment.                |
+| install | Installs a Data Experience in a Cinchy target environment.                 |
+| keygen  | Generates an encryption key file.                                         |
+| help    | Displays this help text. To display help for an action, pass only that action. |
+| version | Displays version information.                                             |
+
+
+## Common arguments
 
 | Option   | Description                                                  | Requirement |
 | -------- | ------------------------------------------------------------ | ----------- |
