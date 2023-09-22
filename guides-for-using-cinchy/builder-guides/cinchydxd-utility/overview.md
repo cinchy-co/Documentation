@@ -57,5 +57,5 @@ See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/ve
 
 ## Next steps
 
-- Review the [DXD workflow]()
+- Review the [DXD workflow](../cinchydxd-utility/dxd-workflow.md)
 

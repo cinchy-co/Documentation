@@ -1,4 +1,4 @@
-# Cinchy Functions
+# Cinchy functions
 
 ## Overview
 

@@ -38,7 +38,7 @@
     * [Configure AWS IAM for Connections](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/configuring-aws-iam-for-connections.md)
     * [Use Self-Signed SSL Certs (Kubernetes)](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)
     * [Deploy the CLI (Kubernetes)](https://app.gitbook.com/o/-LDtM6UlhGoQ91uwM5SF/s/-M9TgaGdQpt0ZS9aqe1c/connections-installation-guide/v5-connections-and-cli-installation-guide#3.-running-the-cli)
-  * [IIS ](deployment-guide/deployment-installation-guides/iis-deployment-platform-installation.md)
+  * [IIS](deployment-guide/deployment-installation-guides/iis-deployment-platform-installation.md)
 
 ## Upgrade guide
 
@@ -96,15 +96,15 @@
   * [Delete tables](guides-for-using-cinchy/builder-guides/deleting-tables/README.md)
     * [Restore tables, columns, and rows](guides-for-using-cinchy/builder-guides/deleting-tables/restoring-tables-columns-and-rows.md)
   * [Saved queries](guides-for-using-cinchy/builder-guides/saved-queries.md)
-  * [CinchyDXD]
+  * [CinchyDXD](guides-for-using-cinchy/builder-guides/cinchydxd/README.md)
     * [Overview](guides-for-using-cinchy/builder-guides/cinchydxd-utility/overview.md)
     * [DXD workflow](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-workflow.md)
     * [Package the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/package-the-data-experience.md)
     * [Install the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/package-the-data-experience.md)
     * [Release package](guides-for-using-cinchy/builder-guides/cinchydxd-utility/release-package.md)
     * [Changelog](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-changelog.md)
-    * [References](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References)
-      * [Cinchy DXD commands](guides-for-using-cinchy/builder-guides/cinchydxd-utility/references/Cinchy-DXD-commands.md)
+    * [References](guides-for-using-cinchy/builder-guides/cinchydxd/references/README.md)
+      * [Cinchy DXD commands](guides-for-using-cinchy/builder-guides/cinchydxd/references/cinchy-dxd-commands.md)
       * [Data Experience Definitions table](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References/data-experience-definitions.md)
       * [Data Experience Reference table](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References/data-experience-reference.md)
   * [Multilingual support](guides-for-using-cinchy/builder-guides/multi-lingual-support.md)
@@ -140,7 +140,6 @@
 
 * [Overview](cql/the-basics-of-cql/README.md)
   * [CQL examples](cql/the-basics-of-cql/cql-examples.md)
-
   * [CQL statements overview](cql/the-basics-of-cql/cql-statements-overview/README.md)
     * [Cinchy DML statements](cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements.md)
     * [Cinchy DDL statements](cql/the-basics-of-cql/cql-statements-overview/cinchy-ddl-statements.md)
@@ -168,10 +167,11 @@
     * [Connections functions](cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md)
     * [JSON functions](cql/the-basics-of-cql/cinchy-supported-functions/json-functions.md)
 * [CQL functions master list](cql/the-basics-of-cql/cql-functions-master-list.md)
+
 ## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)
-* [Install Meta-Forms ](meta-forms/meta-forms-deployment-installation-guide/README.md)
+* [Install Meta-Forms](meta-forms/meta-forms-deployment-installation-guide/README.md)
   * [Deploy Meta-Forms (Kubernetes)](meta-forms/meta-forms-deployment-installation-guide/deploying-meta-forms-kubernetes.md)
   * [Deploy Meta-Forms (IIS)](meta-forms/meta-forms-deployment-installation-guide/deploying-meta-forms-iis.md)
 * [Forms data types](meta-forms/forms-data-types.md)
