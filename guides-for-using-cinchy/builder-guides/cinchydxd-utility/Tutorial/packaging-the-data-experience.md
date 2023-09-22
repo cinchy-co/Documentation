@@ -6,6 +6,10 @@ description: >-
 
 # Package the data experience (CinchyDXD)
 
+## Prerequisties
+
+For CinchyDXD to work, you must have CinchyCLI installed. See the [Cinchy Command Line Interface (CLI) ](data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md) page for more information.
+
 ## Download the CinchyDXD utility
 
 The CinchyDXD utility takes all the components (tables, queries, views, formatting rules) of a DX and package them up so they can be moved from one environment to another.
@@ -14,25 +18,19 @@ The CinchyDXD utility takes all the components (tables, queries, views, formatti
 **Remember that a**ll objects need to be created in one source environment (ex: DEV). From there, DXD will be used to push them into others (ex: SIT, UAT, Production).
 {% endhint %}
 
-The CinchyDXD utility is only required (made accessible) for the environment that's packing up the data experience. It's not required for the destination (or target) environment.
-
-For CinchyDXD to work, you must have CinchyCLI installed. For further installation instructions please refer to CLI ([https://cli.docs.cinchy.com/](https://cli.docs.cinchy.com/)) documentation
-
-To access the Data Experience Deployment utility please contact Cinchy support (support@cinchy.com).
-
 To download the Utility:
 
 1. Login to Cinchy
 2. Navigate to the **Releases Table**
 3. Select the **Experience Deployment Utility View**
-4. Locate and download the utility **(Cinchy DXD v1.7.0.zip)**
+4. Locate and download the utility **(Cinchy DXD vX.X.X.zip)**
 
 {% hint style="warning" %}
 The CinchyDXD utility is only upwards compatible with Cinchy version 4.6+
 {% endhint %}
 
 5. Unzip the utility and place the folder at any location on a computer that also has CinchyCLI installed
-6. Create a new folder in the same directory that will hold all of the DX exports generated (CinchyDXD\*Output) \*(Image 1).\_
+6. Create a new folder in the same directory that will hold all of the DX exports generated (CinchyDXD\*Output)(Image 1).
 
 ![Image 1: Creating your new folder](<../../../.gitbook/assets/image (598).png>)
 
@@ -107,7 +105,8 @@ The Data Experience is defined and packed in what will be referred to moving for
      Please Note: if you have your own release management system, you do have the option to opt out of archiving the releases in Cinchy and check the release into your own source control
    * **Release Name**
    * **Data Experience**
-4. **Data Experience Release Artifact Table**: Stores all of the files that are part of the Data Experience package as individual records along with all of the binary for each record
+4. **Data Experience Release
+1.  Artifact Table**: Stores all of the files that are part of the Data Experience package as individual records along with all of the binary for each record
 
 ### Define the data experience
 
@@ -143,7 +142,7 @@ When setting up a Data Experience definition, you will need one definition for e
 | Builder Groups           | <p>Select the builder group(s) that have permission to export the Data Experience<br></p><p>Note: Best Practice is to use a Group over a User. Users within groups can fluctuate, where the Group (or Role) will remain. This will require less maintenance moving forward</p> |
 | Sync GUID                | Leave this column blank                                                                                                                                                                                                                                                        |
 
-2\. Complete the following _(Image 12):_
+2. Complete the following _(Image 12):_
 
 | Column         | Value                            |
 | -------------- | -------------------------------- |
