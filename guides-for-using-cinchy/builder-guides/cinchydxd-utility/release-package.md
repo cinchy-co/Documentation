@@ -13,101 +13,223 @@ The architecture of a release package in CinchyDXD 2.0 separates into a folder f
 
 The following list is an example of the release package folder architecture and their respective files. 
 
-ExampleRepo
-- manifest.json
-- Data Experience Definitions
-  - Data Definition 1
-    - manifest.json
-    - model.xml
-- Data Sync Configurations
-  - Data Sync 1
-    - config.xml
-    - manifest.json
-- Domains
-  - Domain 1
-    - Queries
-      - metadata.json
-      - query.sql
-  - Domain 2
-    - Queries
-      - metadata.json
-      - query.sql 
-- External Secrets Manager
-    - metadata.json
-- Groups
-  - Group 1
-    - manifest.json
-  - Group 1
-    - manifest.json
-- Integrated Clients
-  - Integrated Client Export
-    - manifest.json
-- System Colours
-- User Defined Functions
-  - UDF 1
-    - manifest.json
-    - script.js
+```markdown
+Release Package
+│   manifest.json
+├───Data Experience Definitions
+│   └───Demo
+│           metadata.json
+│           model.xml
+│
+├───Data Sync Configurations
+│   ├───Data Sync 1
+│   │       config.xml
+│   │       metadata.json
+│   │
+│   ├───Data sync 2
+│   │       config.xml
+│   │       metadata.json
+│   │
+│   └───Sync basicauth endpoint
+│       │   config.xml
+│       │   metadata.json
+│       │
+│       └───Listener Configs
+│           ├───Example1
+│           │       connection-attributes.json
+│           │       metadata.json
+│           │       topic.json
+│           │
+│           └───Example2
+│                   connection-attributes.json
+│                   metadata.json
+│                   topic.json
+│
+├───Domains
+│   ├───Domain 1
+│   │   │   metadata.json
+│   │   │
+│   │   └───Saved Queries
+│   │       ├───SQ1
+│   │       │   │   metadata.json
+│   │       │   │   query.sql
+│   │       │   │
+│   │       │   └───Webhooks
+│   │       │       └───Webhook 1
+│   │       │               metadata.json
+│   │       │
+│   │       ├───SQ2
+│   │       │   │   metadata.json
+│   │       │   │   query.sql
+│   │       │   │
+│   │       │   └───Webhooks
+│   │       │       └───Webhook 2
+│   │       │               metadata.json
+│   │       │
+│   │       └───PostInsallQuery 
+│   │               metadata.json
+│   │               query.sql
+│   │
+│   └───Domain 2
+│       │   metadata.json
+│       │
+│       └───Tables
+│           ├───Sample Table
+│           │   ├───Entitlements
+│           │   │       metadata.json
+│           │   │
+│           │   ├───Formatting Rules
+│           │   │       metadata.json
+│           │   │
+│           │   ├───Reference Data
+│           │   │   ├───Sample Table with HLink or  MSH
+│           │   │   │       config.xml
+│           │   │   │       data.csv
+│           │   │   │       metadata.json
+│           │   │   │
+│           │   │   └───Sample Table without HLink or MSH
+│           │   │           config.xml
+│           │   │           data.csv
+│           │   │           metadata.json
+│           │   │
+│           │   └───Views
+│           │       └───Default
+│           │           │   metadata.json
+│           │           │
+│           │           └───Columns
+│           │                   metadata.json
+│           │
+│           ├───Sample Table Types Link Target
+│           │   ├───Entitlements
+│           │   │       metadata.json
+│           │   │
+│           │   ├───Formatting Rules
+│           │   │       metadata.json
+│           │   │
+│           │   ├───Reference Data
+│           │   │   └───Sample Table Types Link Target
+│           │   │           config.xml
+│           │   │           data.csv
+│           │   │           metadata.json
+│           │   │
+│           │   └───Views
+│           │       └───View 1
+│           │           │   metadata.json
+│           │           │
+│           │           └───Columns
+│           │                   metadata.json
+│           │
+│           └───Nested Link Target
+│               └───Reference Data
+│                   └───Nested DXD Link Target
+│                           config.xml
+│                           data.csv
+│                           metadata.json
+│
+├───External Secrets Manager
+│   └───Local Secrets
+│       ├───Secret 1
+│       │       metadata.json
+│       │
+│       └───Secret 2 2
+│               metadata.json
+│
+├───Groups
+│   ├───G1
+│   │       metadata.json
+│   │
+│   ├───G2
+│   │       metadata.json
+│   │
+│   └───G3
+│           metadata.json
+│
+├───Integrated Clients
+│   └───IG 1
+│           metadata.json
+│
+└───User Defined Functions
+    ├───UDF 1
+    │       metadata.json
+    │       script.js
+    │
+    └───UDF 2
+            metadata.json
+            script.js
+```
+
 
 ## Visual representation
 
+The example below is a simplified visual representation of the folder structure. 
+
 ```mermaid
 graph LR
-  A[ExampleRepo] --> B[manifest.json]
-  style B fill:#FFFF00,stroke:#000000,stroke-width:2px;
+    A[Release Package]
+    A --> B[Data Experience Definitions]
+    B --> BA[Demo]
+    BA --> BAA[metadata.json]
+    BA --> BAB[model.xml]
+    
+    A --> C[Data Sync Configurations]
+    C --> CA[Data Sync 1]
+    CA --> CAA[config.xml]
+    CA --> CAB[metadata.json]
+    C --> CB[Data Sync 2]
+    CB --> CBA[config.xml]
+    CB --> CBB[metadata.json]
+    C --> CC[Sync basicauth endpoint]
+    CC --> CCA[config.xml]
+    CC --> CCB[metadata.json]
+    CC --> CCC[Listener Configs]
+    CCC --> CCCC[Example1]
+    CCCC --> CCCCA[connection-attributes.json]
+    CCCC --> CCCCB[metadata.json]
+    CCCC --> CCCCC[topic.json]
+    CCC --> CCCD[Example2]
+    CCCD --> CCCDA[connection-attributes.json]
+    CCCD --> CCCDB[metadata.json]
+    CCCD --> CCCDC[topic.json]
 
-  A --> C[Data Experience Definitions]
-  C --> D1[Data Definition 1]
-  D1 --> E1[manifest.json]
-  style E1 fill:#FFFF00,stroke:#000000,stroke-width:2px;
-  D1 --> E2[model.xml]
-  style E2 fill:#FFA500,stroke:#000000,stroke-width:2px;
+    A --> D[Domains]
+    D --> DA[Domain 1]
+    DA --> DAA[metadata.json]
+    DA --> DAB[Saved Queries]
+    DAB --> DABA[SQ1]
+    DABA --> DABAA[metadata.json]
+    DABA --> DABAB[query.sql]
+    DAB --> DABB[SQ2]
+    DABB --> DABBA[metadata.json]
+    DABB --> DABBB[query.sql]
 
-  A --> F[Data Sync Configurations]
-  F --> G1[Data Sync 1]
-  G1 --> H1[manifest.json]
-  style H1 fill:#FFFF00,stroke:#000000,stroke-width:2px;
-  G1 --> H2[config.xml]
-  style H2 fill:#FFA500,stroke:#000000,stroke-width:2px;
+    A --> E[External Secrets Manager]
+    E --> EA[Local Secrets]
+    EA --> EAA[Secret 1]
+    EAA --> EAAA[metadata.json]
+    EA --> EAB[Secret 2]
+    EAB --> EABA[metadata.json]
 
-  A --> I[Domains]
-  I --> J1[Domain 1]
-  J1 --> K1[Queries]
-  K1 --> L1[metadata.json]
-  style L1 fill:#FFFF00,stroke:#000000,stroke-width:2px;
-  K1 --> L2[query.sql]
-  style L2 fill:#00FFFF,stroke:#000000,stroke-width:2px;
-  I --> J2[Domain 2]
-  J2 --> K2[Queries]
-  K2 --> L3[metadata.json]
-  style L3 fill:#FFFF00,stroke:#000000,stroke-width:2px;
-  K2 --> L4[query.sql]
-  style L4 fill:#00FFFF,stroke:#000000,stroke-width:2px;
+    A --> F[Groups]
+    F --> FA[G1]
+    FA --> FAA[metadata.json]
+    F --> FB[G2]
+    FB --> FBA[metadata.json]
+    F --> FC[G3]
+    FC --> FCA[metadata.json]
+    
+    A --> G[Integrated Clients]
+    G --> GA[IG 1]
+    GA --> GAA[metadata.json]
+    
+    A --> H[User Defined Functions]
+    H --> HA[UDF 1]
+    HA --> HAA[metadata.json]
+    HA --> HAB[script.js]
+    H --> HB[UDF 2]
+    HB --> HBA[metadata.json]
+    HB --> HBB[script.js]
 
-  A --> IA[External Secrets Manager]
-  IA --> IB[metadata.json]
-  style IB fill:#FFFF00,stroke:#000000,stroke-width:2px;
 
-  A --> M[Groups]
-  M --> N1[Group 1]
-  N1 --> O1[manifest.json]
-  style O1 fill:#FFFF00,stroke:#000000,stroke-width:2px;
-  M --> N2[Group 2]
-  N2 --> O2[manifest.json]
-  style O2 fill:#FFFF00,stroke:#000000,stroke-width:2px;
-
-  A --> P[Integrated Clients]
-  P --> Q1[Integrated Client Export]
-  Q1 --> R1[manifest.json]
-  style R1 fill:#FFFF00,stroke:#000000,stroke-width:2px;
-
-  A --> S[System Colours]
-
-  A --> T[User Defined Functions]
-  T --> U1[UDF 1]
-  U1 --> V1[manifest.json]
-  style V1 fill:#FFFF00,stroke:#000000,stroke-width:2px;
-  U1 --> V2[script.js]
-  style V2 fill:#008000,stroke:#FFFFFF,stroke-width:2px;
 
 
   ```
