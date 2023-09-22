@@ -1,4 +1,4 @@
-# CinchyDXD Release Notes
+# CinchyDXD changelog
 
 ## Version 2.0.0
 
