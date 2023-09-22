@@ -75,5 +75,5 @@ When using DXD, you should always consider the following:
 
 ## Next steps
 
-- [Package the data experience]().
-- Review the [Release package]() page.
+- [Package the data experience](../cinchydxd-utility/package-the-data-experience.md).
+- Review the [Release package](../cinchydxd-utility/release-package.md) page.
