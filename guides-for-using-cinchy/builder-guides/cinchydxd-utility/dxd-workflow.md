@@ -54,9 +54,10 @@ flowchart LR
 
 ### Sync GUID
 
-To make environment workflows have a Sync GUID. The sync GUID is made from three parts:
+To make environment workflows have a Sync GUID. The sync GUID has three parts:
 
-1. 
+1. The Sync GUID, which is the GUID from the origin environment. In the origin environment, the GUID and Sync GUID will be the same. The origin environment GUID becomes the base for all future data experience installations.
+1. The current environment GUID, which 
 ### Export and install process between instances
 
 If you export data from environment A and install it into environment B, and later plan to export from Instance B, use the original DXD GUID. This GUID can now be found in the **Sync GUID** column under the **Data Experience Definitions** table in Instance B.
