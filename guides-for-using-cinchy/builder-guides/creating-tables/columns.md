@@ -231,7 +231,7 @@ These columns are similar to computed columns in SQL databases.
 
 When creating a calculated column, you have two types to choose from: **cached** and **live**. This feature is accessible via the Advanced Settings and was a part of the 4.0 version update.
 
-#### Cached Calculated Columns
+### Cached Calculated Columns
 
 - **What It Does**: Speeds up data retrieval.
 - **How It's Stored**: As an actual column based on a CQL formula.
@@ -241,11 +241,17 @@ When creating a calculated column, you have two types to choose from: **cached**
 
 Changing a name in a single row only triggers a recalculation for that row's "Label" column.
 
-#### Live Calculated Columns
+#### Limitations
+
+If a cached column relies on a column from another table, changes in the other table's column won't automatically update the cached column. Make sure to account for this when using cached columns that depend on external data.
+### Live Calculated Columns
 
 - **What It Does**: Provides real-time data.
 - **How It's Stored**: As a formula executed on-the-fly during read or query.
 - **When It Updates**: Refreshes automatically upon every query or screen refresh.
+- **When to use**: 
+  - Your calculated column depends on a value from a linked table and you need the latest value from the linked table.
+  - Your table doesn't contain many records.
 
 **Example**: 
  
