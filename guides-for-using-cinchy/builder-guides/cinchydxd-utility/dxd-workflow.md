@@ -62,6 +62,7 @@ The Sync GUID in the origin environment consists of three elements:
 
 In the origin environment (the export environment of the original data experience), both the Sync GUID and the GUID are identical.
 
+A Sync GUID is created for each entity when it's installed onto a second environment.
 ### Export and install process between instances
 
 If you export data from environment A and install it into environment B, and later plan to export from Instance B, use the original DXD GUID. This GUID can now be found in the **Sync GUID** column under the **Data Experience Definitions** table in Instance B.
@@ -70,7 +71,7 @@ If you export data from environment A and install it into environment B, and lat
 
 When using DXD, you should always consider the following:
 
-- Both the source and target environments must run on the same version of Cinchy. For example, Source Version 5.5, Target Version 5.5.
+- Both the source and target environments must run on the same version of Cinchy. For example, Source Version 5.7, Target Version 5.7.
 
 
 ## Next steps
