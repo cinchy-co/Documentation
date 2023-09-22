@@ -96,7 +96,7 @@
   * [Delete tables](guides-for-using-cinchy/builder-guides/deleting-tables/README.md)
     * [Restore tables, columns, and rows](guides-for-using-cinchy/builder-guides/deleting-tables/restoring-tables-columns-and-rows.md)
   * [Saved queries](guides-for-using-cinchy/builder-guides/saved-queries.md)
-  * [\[CinchyDXD\]](guides-for-using-cinchy/builder-guides/cinchydxd/README.md)
+  * [CinchyDXD](guides-for-using-cinchy/builder-guides/cinchydxd/README.md)
     * [Overview](guides-for-using-cinchy/builder-guides/cinchydxd-utility/overview.md)
     * [DXD workflow](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-workflow.md)
     * [Changelog](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-changelog.md)
