@@ -61,7 +61,6 @@ If you export data from environment A and install it into environment B, and lat
 When using DXD, you should always consider the following:
 
 - Both the source and target environments must run on the same version of Cinchy. For example, Source Version 5.5, Target Version 5.5.
-- 
 
 
 ## Next steps
