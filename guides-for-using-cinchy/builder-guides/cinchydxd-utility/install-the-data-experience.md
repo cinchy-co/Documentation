@@ -29,5 +29,40 @@ The installation for a release package typically proceeds in the following steps
 1. Record the Release.
 1. Clean up install.
 
+### Versioning
+
+CinchyDXD uses version arguments for installations. These
 ## Install the release package
 
+1. Open PowerShell and navigate to the location of the release package created from your CinchyDXD export.
+1. Run `.\CinchyDXD.ps1 install` with the required and optional parameters.
+1. The installation will run through the steps listed above.
+
+### Install arguments
+
+Use the following arguments to create your installation with CinchyDXD.
+
+```pwsh
+
+-s "<target Cinchy url>" 
+-u "<target user name>" 
+-p "<target user password>" 
+-d "C:\CLI Output Logs"
+-v "Data Experience Definition Version"
+
+```
+
+For a list of the available parameters, see the **Install** section of the [CinchyDXD commands](../cinchydxd-utility/References/Cinchy-DXD-commands.md) reference page for more information.
+### Example
+
+The following example shows the use of arguments for a data package export in Cinchy.
+
+```pwsh
+.\CinchyDXD.ps1 install -s "sandbox.cinchy.net/target-url-environment" -u "JohnDoe" -p "123456" -d "C:\Logs\CLI-Output-Logs" -v "1.0.0"
+```
+## Validate install
+
+To validate the install:
+
+1. Make sure all entities that were present were installed on the target environment. For example, make sure your tables, data sync configurations, and saved queries are present.
+1. Make sure that the **Data Experience Definitions** table has the DX parameters from the source environment.

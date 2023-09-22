@@ -60,8 +60,8 @@
 
 - Cinchy DXD no longer requires Cinchy Connections CLI
 - Note the following switch updates:
-  -h    REMOVED     http/https is now auto-detected
-  -sso  REMOVED     SSO/IDP is now auto-detected
+  -h    REMOVED     http/https is now auto detected
+  -sso  REMOVED     SSO/IDP is now auto detected
   -c    REMOVED     Connections CLI is no longer used
   -t    REMOVED     No longer used
   -e    REPURPOSED  For Install - Pause on Errors
@@ -126,7 +126,7 @@
 
 ### Version 1.2.1
 
-- Updated REFDATA Data Sync Configurations to set Linked column source dataTypes to Text
+- Updated REFDATA Data Sync Configurations to set Linked column source `dataTypes` to `Text`
 
 ### Version 1.2.0
 

@@ -52,6 +52,11 @@ flowchart LR
   A --#4--> C[Cinchy Prod] -- #1 ------>A
 ```
 
+### Sync GUID
+
+To make environment workflows have a Sync GUID. The sync GUID is made from three parts:
+
+1. 
 ### Export and install process between instances
 
 If you export data from environment A and install it into environment B, and later plan to export from Instance B, use the original DXD GUID. This GUID can now be found in the **Sync GUID** column under the **Data Experience Definitions** table in Instance B.
