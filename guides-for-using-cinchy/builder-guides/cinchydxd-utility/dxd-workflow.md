@@ -23,15 +23,13 @@ The basic workflow for using CinchyDXD 2.0 is the following:
 1. Upload the package to a version control system for further development work.
 1. When finished, use CinchyDXD to install the package on the upper environment.
 
-
-
 ```mermaid
 flowchart LR
   subgraph Version Control 
   D1[Developer 1 Cinchy Local] --#1--> A[Release Package]
   end
   A <--#2----> B[Cinchy Dev]
-  B --#3--> C[Cinchy Prod]
+  A --#3-----> C[Cinchy Prod]
 ```
 
 ### Example continuous workflow
@@ -43,9 +41,6 @@ The diagram below illustrates a sample scenario where a data experience is expor
 1. The release package is then installed to a Dev environment for testing.
 1. When ready, install the release package back onto the Prod environment.
 
-<!-- Best practices either here or on a new page  -->
-For more information on DXD package workflows, see the [Best practices](TBD) page.
-
 ```mermaid
 flowchart LR
   subgraph Version Control 
@@ -54,8 +49,21 @@ flowchart LR
   D2[Developer 2] --#2--> A
   end
   A <--#3----> B[Cinchy Dev]
-  B --#4--> C[Cinchy Prod] -- #1 -->A
+  A --#4--> C[Cinchy Prod] -- #1 ------>A
 ```
+
+### Export and install process between instances
+
+If you export data from environment A and install it into environment B, and later plan to export from Instance B, use the original DXD GUID. This GUID can now be found in the **Sync GUID** column under the **Data Experience Definitions** table in Instance B.
+
+### Considerations
+
+When using DXD, you should always consider the following:
+
+- Both the source and target environments must run on the same version of Cinchy. For example, Source Version 5.5, Target Version 5.5.
+- 
+
+
 ## Next steps
 
 - [Package the data experience]().
