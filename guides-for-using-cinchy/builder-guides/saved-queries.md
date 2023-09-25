@@ -44,11 +44,11 @@ Under the Info tab, you can fill out information on the query if you wish to sav
 
   - **Query Results (Including Draft Data)**
 
-    This return type returns a table from a SELECT query with only draft data for tables with Change Approval enabled. Use this return type when looking to display results of records that are pending approval.
+    This return type returns a table from a SELECT query (including draft data) for tables with Change Approval enabled. Use this return type when looking to display results of records that are pending approval.
 
   - **Query Results (Including Version History)**
 
-    This return type returns a table from a SELECT query with historical data for all tables, as seen in the Collaboration Log of any record. This data includes all changes that happened to all records within the scope of the select query.
+    This return type returns a table from a SELECT query (including draft data) with historical data for all tables, as seen in the Collaboration Log of any record. This data includes all changes that happened to all records within the scope of the select query.
 
   - **Number of Rows Affected**
 
