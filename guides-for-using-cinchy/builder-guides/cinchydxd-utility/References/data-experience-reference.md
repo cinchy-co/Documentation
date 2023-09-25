@@ -7,7 +7,7 @@ The list below is a reference to all columns in the Data Experience Reference Ta
 | Name                       | The name you give to your Reference Data Table. Doesn't have to  match the actual table name.                                                                               |
 | Ordinal                    | Specifies load order based on data dependencies.                                                                                                                            |
 | Filter                     | WHERE clause for row conditions. For example, for parent-child hierarchies, two rows are needed—one for parent data and one for child data, each with its own WHERE clause. |
-| Target Filter |  Defines conditions that impact records in the target table, such as INSERT, UPDATE, DELETE, or IGNORE. |
+| Target Filter |  Defines conditions that impact records in the target table, such as INSERT, UPDATE, DELETE, or IGNORE. The Filter column must also have the same logical set of records to avoid inconsistent data.  |
 | New Records                | Action for new records: INSERT, UPDATE, DELETE, IGNORE.                                                                                                                     |
 | Change Records             | Action for updated records: INSERT, UPDATE, DELETE, IGNORE.                                                                                                                 |
 | Dropped Records            | Action for removed records: INSERT, UPDATE, DELETE, IGNORE.                                                                                                                 |
