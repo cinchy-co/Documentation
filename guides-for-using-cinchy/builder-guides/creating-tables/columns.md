@@ -246,7 +246,7 @@ Changing a name in a single row only triggers a recalculation for that row's "La
 If a cached column relies on a column from another table, changes in the other table's column won't automatically update the cached column. Make sure to account for this when using cached columns that depend on external data.
 ### Live Calculated Columns
 
-- **What It Does**: Provides real-time data.
+- **What It Does**: A live calculated column is a non-cached calculated column that provides real-time data.
 - **How It's Stored**: As a formula executed on-the-fly during read or query.
 - **When It Updates**: Refreshes automatically upon every query or screen refresh.
 - **When to use**: 
