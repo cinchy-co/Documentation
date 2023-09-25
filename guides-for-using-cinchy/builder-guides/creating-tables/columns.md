@@ -173,14 +173,17 @@ Selecting encryption makes no difference  to the user experience within the Cinc
 
 Text columns have a maximum length, set to 500 by default.
 
-_These are equivalent to `VARCHAR(n)` data type in SQL._
+{% hint style="info" %}
+These are equivalent to `VARCHAR(n)` data type in SQL.
+{% endhint %}
 
 ###  Number
 
 You can choose from 3 display formats for number - regular, currency, and percentage. You can also decide how many decimal places to display (0 by default). Note that these are both display settings, and won't affect how the number is stored.
 
-_These are equivalent to `FLOAT(53)` data type in SQL (default, 8-byte field)._
-
+{% hint style="info" %}
+These are equivalent to `FLOAT(53)` data type in SQL (default, 8-byte field).
+{% endhint %}
 ### Date
 
 Cinchy has several Date column type display format options available:
@@ -194,47 +197,70 @@ Cinchy has several Date column type display format options available:
 ![](<../../../.gitbook/assets/image (81).png>)
 
 {% hint style="info" %}
-Please Note: the "Default Value" field isn't mandatory and should be left blank (best practice). However, if populated you won't be able to clear the default date value provided to a "blank" data (no date). You will only be able to overwrite it with another date value.
+The "Default Value" field isn't mandatory and should be left blank (best practice). However, if populated you won't be able to clear the default date value provided to a "blank" data (no date). You will only be able to overwrite it with another date value.
 {% endhint %}
 
-_These are equivalent to `DATE()` data type in SQL._
-
+{% hint style="info" %}
+These are equivalent to `DATE()` data type in SQL.
+{% endhint %}
 ### Yes/No
 
 You must select a default value of yes (1) or no (0) for yes/no fields.
 
-_These are equivalent to `bit`data type in SQL._
-
-### Calculated
-
-A calculated column is evaluated using other fields on the record. It will also have a result type - which is the form in which the calculated results will be stored.
-
-For example, you can have a column `[Full Name]` that's `CONCAT([First Name], ' ', [Last Name])`_._
-
-_These are equivalent to computed columns in SQL._
-
-#### Cached vs Live Calculated Columns
-
-When creating a calculated column, you will notice the option to have it cached or not, located under Advanced Settings. This was an option introduced in version 4.0 of the platform.
-
-![](<../../../.gitbook/assets/image (304).png>)
-
-A **cached calculated column** stores your data for fast retrieval and querying. Calculated columns are defaulted to cached. This is an actual column in your table that's based on a defined CQL formula. This column will recalculate when data is changed **in the same row.**
-
-In the below example, the **Label** column is a calculated column that connects various name columns together. You can see that _Connect your data_ appears in each label. If you then wanted to change the name in row one from _Connect your data_ to _Connect **all** your data_, only that specific row would recalculate automatically to update the label. To update any other row (within this table or another) with a calculated column that references that data, you would need to manually make changes to each to prompt a recalculation.
-
-![](<../../../.gitbook/assets/image (205).png>)
-
-The other option is to deselect the cached button, and to have a **live calculated column** instead. A live column runs the query in real time, on the fly: it's a stored formula that's only executed when you read or query the record, and is executed each time you do so.
-
-In the above example, if the **Label** column was a live calculation, the formula would run every time you refresh the screen or query the data. If changes have been made (in this example, changing _"Connect your data"_ to _"Connect **all** your data"_), the calculated column will automatically reflect them, regardless of if it references another row or even another table.
-
-While live calculated columns can be powerful this way, they also have their drawbacks, including possibly throwing errors and being resource intensive. Sometimes live calculated columns can even break a table (for example if you have a live calculated column linking to **another** live calculated column, you may run into errors).
+{% hint style="info" %}
+These are equivalent to `bit`data type in SQL.
+{% endhint %}
 
 ### Choice
 
 You can create a choice column (single or multi-select) in Cinchy. In this scenario, you specify all your choices (1 per newline) in the table design. A user will only be able to select from the options provided.
+## Calculated Columns 
 
+A calculated column uses values from other fields in the record for its evaluation. These columns also have a specified result type, which dictates the format of the calculated output.
+
+**Example**:  
+
+A `[Full Name]` column can be calculated as `CONCAT([First Name], ' ', [Last Name])`.
+
+{% hint style="info" %}
+These columns are similar to computed columns in SQL databases.
+{% endhint %}
+### Live vs Cached Calculated Columns
+
+#### Choose Your Calculation Type
+
+When creating a calculated column, you have two types to choose from: **cached** and **live**. This feature is accessible via the Advanced Settings and was a part of the 4.0 version update.
+
+### Cached Calculated Columns
+
+- **What It Does**: Speeds up data retrieval.
+- **How It's Stored**: As an actual column based on a CQL formula.
+- **When It Updates**: Updates only if the data in the same row changes.
+
+**Example**:  
+
+Changing a name in a single row only triggers a recalculation for that row's "Label" column.
+
+#### Limitations
+
+If a cached column relies on a column from another table, changes in the other table's column won't automatically update the cached column. Make sure to account for this when using cached columns that depend on external data.
+### Live Calculated Columns
+
+- **What It Does**: A live calculated column is a non-cached calculated column that provides real-time data.
+- **How It's Stored**: As a formula executed on-the-fly during read or query.
+- **When It Updates**: Refreshes automatically upon every query or screen refresh.
+- **When to use**: 
+  - Your calculated column depends on a value from a linked table and you need the latest value from the linked table.
+  - Your table doesn't contain many records.
+
+**Example**: 
+ 
+A live "Label" column will update instantly if any referenced data changes, affecting all rows and tables.
+
+#### Limitations
+
+- Live columns consume more system resources.
+- Using user-defined functions in live calculated columns can cause errors if they reference other live calculated columns. Only use inbuilt functions in live columns if they reference other live columns.
 ## Geospatial Columns
 
 If you created a spatial table, you will have access to the geography and geometry column types. These columns also have the option to be indexed via Index in the advanced settings on the column itself.
