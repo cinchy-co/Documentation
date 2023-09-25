@@ -100,7 +100,7 @@
     * [Overview](guides-for-using-cinchy/builder-guides/cinchydxd-utility/overview.md)
     * [DXD workflow](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-workflow.md)
     * [Package the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/package-the-data-experience.md)
-    * [Install the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/package-the-data-experience.md)
+    * [Install the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/install-the-data-experience.md)
     * [Release package](guides-for-using-cinchy/builder-guides/cinchydxd-utility/release-package.md)
     * [Changelog](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-changelog.md)
     * [References](guides-for-using-cinchy/builder-guides/cinchydxd/references/README.md)

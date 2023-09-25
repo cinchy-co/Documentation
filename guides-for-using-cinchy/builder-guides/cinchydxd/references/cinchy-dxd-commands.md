@@ -1,2 +1,0 @@
-# Cinchy DXD commands
-
