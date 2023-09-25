@@ -40,15 +40,15 @@ Under the Info tab, you can fill out information on the query if you wish to sav
 
   - **Query Results (Approved Data Only)**
 
-    This is the default return type, it returns a table from a select query with only approved data for Maker/Checker-enabled tables, or all data for tables without Maker/Checker-enabled. This is generally used for external APIs as you will want to query approved data, rather than drafts.
+    This is the default return type, it returns a table from a select query with only approved data for tables with Change Approval enabled, or all data for tables without Change Approval. This is generally used for external APIs as you will want to query approved data, rather than drafts.
 
   - **Query Results (Including Draft Data)**
 
-    This return type returns a table from a select query with only draft data for Maker/Checker-enabled tables. Use this return type when looking to display results of records that are pending approval.
+    This return type returns a table from a SELECT query with only draft data for tables with Change Approval enabled. Use this return type when looking to display results of records that are pending approval.
 
   - **Query Results (Including Version History)**
 
-    This return type returns a table from a select query with historical data for all tables, as seen in the Collaboration Log of any record. This data includes all changes that happened to all records within the scope of the select query.
+    This return type returns a table from a SELECT query with historical data for all tables, as seen in the Collaboration Log of any record. This data includes all changes that happened to all records within the scope of the select query.
 
   - **Number of Rows Affected**
 

@@ -93,14 +93,14 @@ You can specify what your results return as in the Query Builder
 
 The table below lists what your results can return:
 
-| Query return result                                    | Description                                                                                                    |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| **Query Result (Approved Data Only)**                | Default return type. Returns table data that's approved. Ideal for use with external APIs.                                          |
-| **Query Result (Including Draft Data)**                             | Displays records that are pending approval.                                                                    |
-| **Query Result (Including Version History)**                           | Returns a table from a select query with historical data for all tables, as seen in the Collaboration Log, including all changes within the scope of the query.                       |
-| **Number of Rows Affected**                              | Returns a single string response of the number of rows affected if the last statement is an INSERT, UPDATE, or DELETE.                    |
-| **Execute DDL Script**                           | For queries with DDL (Data Definition Language) commands like CREATE, ALTER, DROP.                              |
-| **Single Value**                           | Returns a result of 1 row x 1 column, irrespective of the underlying result set.                         |
+| Query return result                          | Description                                                                                                                                                  |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Query Result (Approved Data Only)**        | Default return type. Returns table data that's approved. Ideal for use with external APIs.                                                                   |
+| **Query Result (Including Draft Data)**      | Displays records that are pending approval.                                                                                                                  |
+| **Query Result (Including Version History)** | Returns a table from a SELECT query with only draft data for tables with **Change Approval** enabled. Use this to display records that are pending approval. |
+| **Number of Rows Affected**                  | Returns a single string response of the number of rows affected if the last statement is an INSERT, UPDATE, or DELETE.                                       |
+| **Execute DDL Script**                       | For queries with DDL (Data Definition Language) commands like CREATE, ALTER, DROP.                                                                           |
+| **Single Value**                             | Returns a result of 1 row x 1 column, irrespective of the underlying result set.                                                                             |
 ### Data return types <a href="#3.-data-return-types" id="3.-data-return-types"></a>
 
 The following tables show the data types that a **Cinchy Data Type** translates to in the database:
