@@ -88,7 +88,7 @@ This secret can then be used in the REST Header _(Image 7)._
 While in the UI the term is **variables**, the paired XML configuration uses the term **parameters**.
 {% endhint %}
 
-```markup
+```xml
 <Parameters>
 	<!-- Example 1 -->
 	<Parameter name="file_path" />
