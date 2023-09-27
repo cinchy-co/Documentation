@@ -8,15 +8,15 @@ The execution variables are either passed in at the time of execution or calcula
 
 <figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Image 1: Connections UI</p></figcaption></figure>
 
-{% hint style="info" %}
-While in the UI the term is **variables**, please note that the paired XML configuration will refer to the term as **parameters**.
-{% endhint %}
-
 ## Supported Formulas
 
 You can choose to just use plain text in the Name field of the Variable or you can use a calculated formula.
 
 The following formulas are currently supported by Connections.
+
+{% hint style="info" %}
+Cinchy supports .NET regular expressions. For more information, please see the [Microsoft .NET Expressions page](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions).
+{% endhint %}
 
 
 * **FILENAME(\<some-path>, \<some-regex>):** The FILENAME formula takes in two variables:
