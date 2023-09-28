@@ -13,4 +13,4 @@ jobs:
           use-quiet-mode: 'yes'
           use-verbose-mode: 'yes'
           max-depth: -1
-          config-file: 'mlc_config.json'
+          config-file: '.github\workflows\mlc_config.json'
