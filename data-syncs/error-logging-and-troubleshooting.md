@@ -66,7 +66,7 @@ If the data sync runs on a schedule, there are two (2) tables in the Cinchy doma
 | Execution Time   | This column will display how long it took to execute the job                                                                                                                                                                                                                                  |
 | Data Sync Config | This column will have a link to the name of your configuration file                                                                                                                                                                                                                           |
 
-![](https://lh5.googleusercontent.com/SZ-qgCoacJOREhPUyjK6XH0z7OZ-cK\_dg1liNGNRgoSkAvOjqRKD0HSreuvoFTGKAfYQ\_i0P44PDORI0GvuicLAqbYi05qqrkTr9cBQIDZQ6KtIxlXQszIh\_40yLsQ5nQTSX4lEu)
+![](../.gitbook/assets/error-logging/execution-log.png)
 
 ### Execution Error Table defined
 
@@ -79,7 +79,7 @@ If the data sync runs on a schedule, there are two (2) tables in the Cinchy doma
 | Row Count    | This column will display the number of records affected by this error                                                                       |
 | Execution ID | This column will have a link that ties back to the error to the Execution Log                                                               |
 
-![](https://lh3.googleusercontent.com/rupFhLK-vn2sXyxwNG18Dihzv\_ZOfBmFhqLXU7ex3N06VKIMrMSvmXeqO9ddo7A-8T9MV9gfXiO966Bh9qI0R1E1W\_iaDRZdO04Eo4J5VQJKmMXLdxjPGvLeFMizblTjl40vjx3R)
+![](../.gitbook/assets/error-logging/execution-errors.png)
 
 #### Tip
 

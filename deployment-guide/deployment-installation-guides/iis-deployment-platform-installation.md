@@ -85,9 +85,9 @@ md C:\CinchyErrors
 
 1. Under **AppSettings** section, update the values outlined in the table.
 2. Wherever you see **\<base url>** in the value, replace this with the actual protocol (HTTP or HTTPS) and the domain name (or IP address) you plan to use.
-
+<!-- markdown-link-check-disable -->
 Ex:. if you're using HTTPS with the domain app.cinchy.co, then **\<base url>** should be replaced with **https://app.cinchy.co**
-
+<!-- markdown-link-check-enable -->
 | Key                           | Value                                                                                                                                                                                                                              |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **CinchyUri**                 | _\<base url>/Cinchy_                                                                                                                                                                                                               |
@@ -255,12 +255,12 @@ To enable HTTPS, the server certificate must be loaded and the standard IIS conf
 {% endhint %}
 
 ## Test the application
-
+<!-- markdown-link-check-disable -->
 1. Access the **\<base url>/Cinchy (http://app.cinchy.co/Cinchy)** through Google Chrome.
 2. Once the login screen appears, enter the credentials:
    1. The default username is **admin** and the password is **cinchy**.
    2. You will be prompted to change your password the first time you log in.
-
+<!-- markdown-link-check-enable -->
 {% hint style="info" %}
 To avoid users from having to access the application at a URL that contains /Cinchy, you can use a downloadable IIS extension called URL Rewrite to remap requests hitting the \<base url> to \<base url>/Cinchy. The extension is available [here](https://www.iis.net/downloads/microsoft/url-rewrite).
 {% endhint %}

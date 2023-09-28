@@ -30,6 +30,7 @@ Mandatory and optional parameters for the Source tab are outlined below (Image 2
 
 {% tabs %}
 {% tab title="Source Details" %}
+<!-- markdown-link-check-disable -->
 | Parameter              | Description                                                                                                                                                                                                                                                            | Example                                                                                             |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | Source                 | Mandatory. Select your source from the drop down menu.                                                                                                                                                                                                                 | REST API                                                                                            |
@@ -40,7 +41,7 @@ Mandatory and optional parameters for the Source tab are outlined below (Image 2
 | API Endpoint URL       | Mandatory. API endpoint, including URL parameters like API key                                                                                                                                                                                                         | https://www.quandl.com/api/v3/datatables/CLS/IDHP?fx\_business\_date=2024-01-01\&api\_key=@API\_KEY |
 | Next Page URL JSONPath | Specify the path for the next page URL. This is only relevant for APIs that use cursor pagination                                                                                                                                                                      |                                                                                                     |
 {% endtab %}
-
+<!-- markdown-link-check-enable -->
 {% tab title="Schema" %}
 **The** [**Schema**](../building-data-syncs/columns-and-mappings/#2.-schema-columns) **section** is where you define which source columns you want to sync in your connection. You can repeat the values for multiple columns.
 

@@ -93,7 +93,7 @@ This example splits a \[Name] column with the format "Lastname, Firstname" into 
 
 **`name`**
 
-The user defined name for each calculated column. This is used in [\<ColumnMapping>](https://cinchy.atlassian.net/wiki/spaces/KB/pages/196575278) when you want to indicate the name of the _sourceColumn_.
+The user defined name for each calculated column. This is used in <ColumnMapping> when you want to indicate the name of the _sourceColumn_.
 
 **`formula`**
 

@@ -28,7 +28,7 @@ A Kubernetes deployment of the Cinchy Platform includes the Connections and Even
 
 For an IIS deployment, install:
 
-* [Connections](./installation-and-maintenance/installing-connections)
+* [Connections](./installation-and-maintenance/installing-connections.md)
 * [Event Worker/Listener](./installation-and-maintenance/installing-the-worker-listener.md)
 
 **Post-installation:** Ensure you have access to these Cinchy Tables:
@@ -68,7 +68,7 @@ For both real-time and batch syncs, you'll need to set up your configuration:
 * Map to the target
 * Determine synchronization behavior
 
-Use the Connections UI or manually input a Data Sync XML into the Data Sync Configuration table. More details are on the [Building data syncs page.](../data-syncs/building-data-syncs/README)
+Use the Connections UI or manually input a Data Sync XML into the Data Sync Configuration table. More details are on the [Building data syncs page.](../data-syncs/building-data-syncs/README.md)
 
 ### 5. **Set up Listener Config (For Real-time Syncs)**
 

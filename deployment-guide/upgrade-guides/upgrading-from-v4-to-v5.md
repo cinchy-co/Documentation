@@ -7,7 +7,7 @@ When you upgrade to Cinchy v5 on Kubernetes you are creating a separate instance
 
 ## Upgrading to v5 on IIS
 
-To upgrade from v4+ to v5+ on IIS, [review the documentation here.](upgrading-cinchy-versions/#3.-upgrading-on-iis-v4-to-v5+)
+To upgrade from v4+ to v5+ on IIS, [review the documentation here.](upgrades/#3.-upgrading-on-iis-v4-to-v5+)
 
 ## Compatibility issues between databases or versions
 

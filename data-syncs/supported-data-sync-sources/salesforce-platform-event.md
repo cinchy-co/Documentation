@@ -60,7 +60,7 @@ The below table can be used to help create your Topic JSON needed to set up a re
 #### Connection attributes
 
 The below table can be used to help create your Connection Attributes JSON needed to set up a real-time sync.
-
+<!-- markdown-link-check-disable -->
 | Parameter       | Description                                                                                                                                  | Example                                                                                                  |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | ApiVersion      | **Mandatory.** Your Salesforce API Version. Note that this needs to be an exact match; for instance `47.0` can't be written as simply `47`. | 47.0                                                                                                     |
@@ -123,7 +123,7 @@ You have the option to add a source filter to your data sync. Please review the 
 {% endtabs %}
 
 <figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
-
+<!-- markdown-link-check-enable -->
 ## Next steps
 
 * Configure your [Destination](../supported-data-sync-destinations/)
