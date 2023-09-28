@@ -147,7 +147,7 @@ For example, the column `Players` in `[Football].[Teams]` can be a multi-select 
 
 Checked by default. This allows other tables to use the column as a link/relationship.
 
-See [Linking data](guides-for-using-cinchy/builder-guides/creating-tables/linking-data.md) to get more context on how they're used.
+See [Linking data](../creating-tables/linking-data.md) to get more context on how they're used.
 
 {% hint style="info" %}
 You want to pick identifying columns for linking, such as IDs or Name. Generally you want to use unique columns, but in some cases it's a better user experience to pick an almost unique field for readability.

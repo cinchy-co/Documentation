@@ -36,7 +36,7 @@ This process of making copies now consumes up to 50% of the resources on large I
 
 With data collaboration, you shift your approach from **integration for data sharing**, to **access for data collaboration** _(Image 3)._
 
-![Image 3: The shift to data collaboration](https://lh5.googleusercontent.com/DSJwTLfBWBIWtzTE5qyNKqHOmRL85PcXYUNQuGFhcGzIWefJnqtaGEdoc\_AfaECMp2cHvnqnQIWaBI8qvkOmgjC0ID74szGLBDnCAsbHo03JseWF-VfHC4szvyjP66PaQB9UCQ9w)
+![Image 3: The shift to data collaboration](../.gitbook/assets/../../Documentation/.gitbook/assets/Overview/data-collaboration.png)
 
 For every app you build where you leverage data collaboration, you’re able to access the network to reuse information for future apps**.** Your IT team will find that previous projects have already connected many of the data sources they need to the network.
 

@@ -112,7 +112,7 @@ Tip: Click on the image below to enlarge it.
 If there are any errors during execution or your validation fails, we suggest that you restore your database from the backup and contact Cinchy support.
 {% endhint %}
 
-6. [Deploy your Cinchy Upgrade](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades.md).
+6. [Deploy your Cinchy Upgrade](../upgrades/README.md).
 
 {% hint style="warning" %}
 Note: You must deploy whichever version of the platform you ran the upgrade utility for.
