@@ -19,13 +19,13 @@ The Cinchy Upgrade Utility was first introduced in v5.2 to ease a mandatory INT 
 
 * You will need to run this process as a user with admin/dbowner privileges to your database.
 * You will need to have [.NET Core 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) installed on the machine that you will run the utility on.
-* Retrieve the Upgrade Utility from the [Cinchy Releases table.](https://cinchy.net/Tables/1477?rowHeight=Expanded)
+* Retrieve the Upgrade Utility from the **Cinchy Releases** table.
 
 ## Upgrades
 | Release | Upgrade                                                                 | Kubernetes Upgrade                                                                                                                              | IIS Upgrade                                                                                                                       |
 | ------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| 5.2     | [INT to BigInt](cinchy-upgrade-utility.md#)                             | [Upgrade Guide](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.2-kubernetes) | [Upgrade Guide](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.2-iis) |
-| 5.5     | [4000 Character Bug](cinchy-upgrade-utility.md#v5.5-4000-character-bug) | [Upgrade Guide](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.5-kubernetes) | [Upgrade Guide](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.5-iis) |
+| 5.2     | [INT to BigInt](cinchy-upgrade-utility.md#)                             | [Upgrade Guide](./kubernetes-upgrades/v5.2-kubernetes.md) | [Upgrade Guide](./iis-upgrades/v5.2-iis.md) |
+| 5.5     | [4000 Character Bug](cinchy-upgrade-utility.md#v5.5-4000-character-bug) | [Upgrade Guide](./kubernetes-upgrades/v5.5-kubernetes.md) | [Upgrade Guide](./iis-upgrades/v5.5-iis.md) |
 
 
 ## Overview and considerations
@@ -86,7 +86,7 @@ We recommend you follow this process **during off-peak hours.**
    1. In a Kubernetes deployment on AWS, you can [follow the documentation here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html#ebs-create-snapshots)
    2. In a Kubernetes deployment on Azure, you can [follow the documentation here.](https://docs.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk?tabs=portal)
    3. In an IIS Deployment, you can [follow the documentation here.](https://docs.microsoft.com/en-us/iis/web-hosting/web-server-for-shared-hosting/create-a-backup-with-appcmd)
-3. Retrieve the Upgrade Utility from the [Cinchy Releases table](https://cinchy.net/Tables/1477?rowHeight=Expanded) if you haven't already.
+3. Retrieve the Upgrade Utility from the **Cinchy Releases** table if you haven't already.
 4. Run the following command through a command window as an admin/dbowner, using the table below as a guide.
 
 ```
@@ -112,7 +112,7 @@ Tip: Click on the image below to enlarge it.
 If there are any errors during execution or your validation fails, we suggest that you restore your database from the backup and contact Cinchy support.
 {% endhint %}
 
-6. [Deploy your Cinchy Upgrade](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades)[.](../)
+6. [Deploy your Cinchy Upgrade](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades.md).
 
 {% hint style="warning" %}
 Note: You must deploy whichever version of the platform you ran the upgrade utility for.

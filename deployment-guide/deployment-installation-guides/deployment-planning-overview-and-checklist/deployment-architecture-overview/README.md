@@ -29,18 +29,18 @@ For IIS Deployments [please review the architecture requirements here.](iis-depl
 
 ### Microsoft SQL Server
 
-#### [MS SQL Server](https://www.microsoft.com/en-ca/sql-server/sql-server-downloads)
+#### [MS SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 
 - Microsoft SQL Server is a relational database management system. As a database server, it's a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network.
 - [Resource limits](https://docs.microsoft.com/en-us/sql/sql-server/maximum-capacity-specifications-for-sql-server?view=sql-server-ver16)
 
-#### [Azure SQL Database](https://azure.microsoft.com/en-ca/products/azure-sql/database/)
+#### [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/)
 
 - Microsoft Azure SQL Database is a managed cloud database provided as part of Microsoft Azure. It runs on a cloud computing platform, and access to it's provided as a service. Managed database services take care of scalability, backup, and high availability of the database.
 - [Differences between Azure SQL and Azure Managed SQL](https://docs.microsoft.com/en-us/azure/azure-sql/database/features-comparison?view=azuresql#features-of-sql-database-and-sql-managed-instance)
 - [Resource Limits](https://docs.microsoft.com/en-us/azure/azure-sql/database/resource-limits-logical-server?view=azuresql)
 
-#### [Azure Managed SQL Instance](https://azure.microsoft.com/en-ca/products/azure-sql/managed-instance/)
+#### [Azure Managed SQL Instance](https://azure.microsoft.com/products/azure-sql/managed-instance/)
 
 - SQL Managed Instance is a managed, cloud-based, always up-to-date SQL instance that combines broad SQL Server engine compatibility with the benefits of a fully managed PaaS.
 - [Differences between Azure SQL and Azure Managed SQL](https://docs.microsoft.com/en-us/azure/azure-sql/database/features-comparison?view=azuresql#features-of-sql-database-and-sql-managed-instance)
@@ -64,7 +64,7 @@ For IIS Deployments [please review the architecture requirements here.](iis-depl
 - Amazon RDS makes it easy to set up, operate, and scale cloud-based PostgreSQL deployments. With Amazon RDS, you can deploy scalable PostgreSQL deployments with cost-efficient and resizable hardware capacity. Amazon RDS manages complex and time-consuming administrative tasks such as PostgreSQL software installation and upgrades; storage management; replication for high availability and read throughput; and backups for disaster recovery. Amazon RDS for PostgreSQL gives you access to the capabilities of the familiar PostgreSQL database engine.
 - [Resource Limits](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts.General.Limits)
 
-#### [Azure PostgreSQL Database](https://azure.microsoft.com/en-us/services/postgresql/#overview)
+#### [Azure PostgreSQL Database](https://azure.microsoft.com/products/postgresql)
 
 - This is a fully managed and intelligent Azure Database for PostgreSQL. Enjoy high availability with a service-level agreement (SLA) up to 99.99 percent, AI-powered performance optimization, and advanced security. A fully managed database that automates maintenance, patching, and updates. Provision in minutes and independently scale compute or storage in seconds.
 - [Resource Limits](https://docs.microsoft.com/en-us/azure/postgresql/single-server/concepts-limits)

@@ -379,9 +379,9 @@ bash deploy_argocd.sh
 ```bash
 bash access_argocd.sh
 ```
-
-This script creates a port forward using kubectl to enable ArgoCD to be accessed at **http://localhost:9090**
 <!-- markdown-link-check-disable -->
+This script creates a port forward using kubectl to enable ArgoCD to be accessed at **http://localhost:9090**
+
 The credentials for ArgoCD's portal are output at the start of the `access_argocd` script execution in Base64. [The Base64 value must be decoded](https://www.base64decode.org/) to get the login credentials to use for the **http://localhost:9090** endpoint.
 <!-- markdown-link-check-enable -->
 ## Deploy cluster components

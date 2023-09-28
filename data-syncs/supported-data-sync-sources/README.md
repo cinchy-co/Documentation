@@ -226,7 +226,7 @@ You can use PushTopic events to:
 {% endcontent-ref %}
 
 ### Snowflake
-
+<!-- markdown-link-check-disable -->
 [Snowflake ](https://www.snowflake.com)is a fully managed SaaS that provides a single platform for data warehousing, data lakes, data engineering, data science, data application development, and secure sharing and consumption of real-time/shared data.
 
 Snowflake enables data storage, processing, and analytic solutions.
@@ -234,7 +234,7 @@ Snowflake enables data storage, processing, and analytic solutions.
 {% content-ref url="snowflake/" %}
 [snowflake](snowflake/)
 {% endcontent-ref %}
-
+<!-- markdown-link-check-enable -->
 ### SOAP 1.2 web service
 
 SOAP (Simple Object Access Protocol) is an XML-based protocol for accessing web services over HTTP.
