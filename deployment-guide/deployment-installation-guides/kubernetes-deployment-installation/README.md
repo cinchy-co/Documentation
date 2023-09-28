@@ -381,9 +381,9 @@ bash access_argocd.sh
 ```
 
 This script creates a port forward using kubectl to enable ArgoCD to be accessed at **http://localhost:9090**
-
+<!-- markdown-link-check-disable -->
 The credentials for ArgoCD's portal are output at the start of the `access_argocd` script execution in Base64. [The Base64 value must be decoded](https://www.base64decode.org/) to get the login credentials to use for the **http://localhost:9090** endpoint.
-
+<!-- markdown-link-check-enable -->
 ## Deploy cluster components
 
 In this step, you will deploy your cluster components.
@@ -396,9 +396,9 @@ In this step, you will deploy your cluster components.
 ```bash
 bash deploy_cluster_components.sh
 ```
-
+<!-- markdown-link-check-disable -->
 3. Navigate to ArgoCD at **http://localhost:9090** and login. Wait until all components are healthy (this may take a few minutes).
-
+<!-- markdown-link-check-enable -->
 {% hint style="success" %}
 **Tips for Success:**
 
@@ -451,7 +451,7 @@ In this step, you will deploy your Cinchy components.
 ```
 bash deploy_cinchy_components.sh
 ```
-
+<!-- markdown-link-check-disable -->
 3. Navigate to ArgoCD at **http://localhost:9090** and login. Wait until all components are healthy (may take a few minutes)
 
 4. You will be able to access ArgoCD through the **URL that you configured in your deployment.json**, as long as you created a DNS entry for it in step [8.2.](./#8.2-update-the-dns)
@@ -459,7 +459,7 @@ bash deploy_cinchy_components.sh
 {% hint style="info" %}
 You have now finished the deployment steps required for Cinchy. Navigate to your configured domain URL to verify that you can login using the default username (**admin**) and password (**cinchy**).
 {% endhint %}
-
+<!-- markdown-link-check-enable -->
 ## Troubleshooting
 
 - If ArgoCD Application Sync is stuck waiting for PreSync jobs to complete, you can run the below command to restart the application controller.

@@ -52,7 +52,7 @@ You can use Cinchy Docker images or your own. If you would like to use Cinchy im
 
 You will pull Docker images from Cinchy's AWS Elastic Container Registry (ECR).
 
-To gain access to Cinchy's Docker images, you need login credentials to the ECR. Contact [Cinchy Support](../../../../getting-help) for access.
+To gain access to Cinchy's Docker images, you need login credentials to the ECR. Contact [Cinchy Support](../../../../getting-help.md) for access.
 
 {% hint style="info" %}
 Starting in Cinchy v5.4, you will have the option between Alpine or Debian based image tags for the listener, worker, and connections. **Using Debian tags will allow a Kubernetes deployment to be able to connect to a DB2 data source. Use this option if you plan on leveraging a DB2 data sync.**

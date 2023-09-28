@@ -29,7 +29,7 @@ For IIS Deployments [please review the architecture requirements here.](iis-depl
 
 ### Microsoft SQL Server
 
-#### [MS SQL Server](https://www.microsoft.com/en-ca/sql-server/sql-server-2019?SilentAuth=1&f=255&MSPPError=-2147208139)
+#### [MS SQL Server](https://www.microsoft.com/en-ca/sql-server/sql-server-downloads)
 
 - Microsoft SQL Server is a relational database management system. As a database server, it's a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network.
 - [Resource limits](https://docs.microsoft.com/en-us/sql/sql-server/maximum-capacity-specifications-for-sql-server?view=sql-server-ver16)
