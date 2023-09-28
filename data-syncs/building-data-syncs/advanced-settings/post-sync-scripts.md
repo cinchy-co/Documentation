@@ -7,9 +7,9 @@ Post sync scripts are written in CQL and can be added to the end of a sync to al
 <figure><img src="../../../.gitbook/assets/image (278).png" alt=""><figcaption></figcaption></figure>
 
 ## Example
-
+<!-- markdown-link-check-disable -->
 This example takes you through a batch data sync using the Cinchy Table **\[Product].\[Names Test].** This scenario uses the following API as the destination:  [https://cinchy.net/API/Product/LatestCinchyReleaseDate](https://cinchy.net/API/Product/LatestCinchyReleaseDate)
-
+<!-- markdown-link-check-enable -->
 When you run the batch job, it will check for updates in the source table. These updates trigger the REST API to fetch our defined value, which we can use in a post-sync script. In this example, the script will insert this value into a second table, **\[Product].\[Response Table].**
 
 The following steps will walk you through how to use this functionality.

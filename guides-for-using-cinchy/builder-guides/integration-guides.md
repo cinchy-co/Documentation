@@ -197,7 +197,7 @@ You need an active internet connection to use the Web Data Connector.
 ### Prerequisites
 
 To get started, you must add a record into the `Integrated Clients` table in the `Cinchy` domain with the below values.
-
+<!-- markdown-link-check-disable -->
 | Column                          | Value                                                                                       |
 | ------------------------------- | ------------------------------------------------------------------------------------------- |
 | Client Id                       | tableau-connector                                                                           |
@@ -209,7 +209,7 @@ To get started, you must add a record into the `Integrated Clients` table in the
 | Access Token Lifetime (seconds) | 3600                                                                                        |
 | Show Cinchy Login Screen        | Checked                                                                                     |
 | Enabled                         | Checked                                                                                     |
-
+<!-- markdown-link-check-enable -->
 ### Connect from Tableau
 
 1. Launch Tableau.

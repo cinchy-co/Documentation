@@ -260,7 +260,7 @@ Be sure when you are pasting into the Config XML column that you double click in
 {% endhint %}
 
 3. [Navigate to the Cinchy Listener Config table and set up your configuration.](real-time-sync-example.md#setting-the-listener-config) Ensure it's set to Enabled. Your real-time data sync should now be listening to your People table ready to push updates to your New Employees table.
-4. To execute your Data Sync you will use the CLI. If you don't have this downloaded, [refer to the CLI commands list page](/data-syncs/cli-commands-list.md)
+4. To execute your Data Sync you will use the CLI. If you don't have this downloaded, [refer to the CLI commands list page](../cli-commands-list.md)
 5. In this example we will be using the following Data Sync Commands, however, for the full list of commands click [here](https://app.gitbook.com/@cinchy/s/draft-data-sync/~/drafts/-MEYg-7T93WGsJ-TwPLy/builder-guide/data-sync-commands).
 
 <!-- vale off -->
@@ -291,7 +291,7 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 ## Manually set the listener config
 
-This section provides information on how to manually set up the listener config using the Listener Config table. While this example shows how to configure the sync using the Cinchy Event Broker/CDC, Cinchy also supports other Event Stream Sources. For more information, see [the supported real-time sync stream sources](data-syncs/supported-real-time-sources/).
+This section provides information on how to manually set up the listener config using the Listener Config table. While this example shows how to configure the sync using the Cinchy Event Broker/CDC, Cinchy also supports other Event Stream Sources. For more information, see [the supported real-time sync stream sources](/data-syncs/supported-real-time-sources/README.md).
 
 1. Navigate to the **Listener Config table** in Cinchy _(Image 16)._
 

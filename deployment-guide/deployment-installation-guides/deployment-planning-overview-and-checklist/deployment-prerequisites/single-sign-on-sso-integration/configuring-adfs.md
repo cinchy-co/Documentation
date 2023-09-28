@@ -54,7 +54,7 @@ Having these details readily available will streamline the ADFS configuration pr
 | Is-Member-Of-DL     | Role                | Required for Auto User Creation            |
 
 ![Image 2: Add Transform Claim Rule Wizard](<../../../../../.gitbook/assets/image (495).png>)
-
+<!-- markdown-link-check-disable -->
 5. Select **Finish**.
 6.  Select **Edit Rule** > **View Rule Language**. Copy the Claim URLs for later use in configuring your Cinchy `appsettings.json`. It should look like the following:
 
@@ -73,7 +73,7 @@ Having these details readily available will streamline the ADFS configuration pr
 7. Press **OK** to confirm and save.
 8. Right-click on **Relying Party Trust > Properties**. Move to the **Advanced** tab and select **SHA-256** as the secure hash algorithm.\
    ![Image 3: Set the secure hash algorithm to SHA-256](<../../../../../.gitbook/assets/image (583).png>)
-
+<!-- markdown-link-check-enable -->
 ## Configuration for Cinchy
 
 {% hint style="info" %}

@@ -93,11 +93,8 @@ You can upload a custom logo to appear on your platform login screen and homepag
 ### Upload a logo
 
 1. Navigate to **\<base url>/admin/index**
-2. Scroll to the bottom of the admin panel and navigate to the **“Upload Logo”** button _(Image 11)._
-
-![Image 11: Upload Logo Button](https://lh5.googleusercontent.com/MrswakvG\_xoGCJp2R0wY-YWMs-NhdBeaoBZG5-K37d1fHA0SqaNpLIUFFI1lAph6oAwpzyfpdY-8bObZLhwUt16gCZs5lZ0QzWlWv040lO4wfxkfo8uwJC6JzPLiJLdLloGZLKLt16Yy4lR5FA)
-
-3\. Upload your logo
+2. Scroll to the bottom of the admin panel and navigate to the **“Upload Logo”** button.
+3. Upload your logo.
 
 ### Remove a Logo
 

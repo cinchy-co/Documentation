@@ -215,7 +215,7 @@ To enable automatic user creation, you require the following changes. For IIS De
 
 1. Add **ExternalClaimName** attribute values under **"ExternalIdentityClaimSection"** in **appsettings.json** file. Don't add the value for **MemberOf** if you don't want to enable automatic group assignment .
 2. The **ExternalClaimName** value must be updated to create a mapping between the attribute name in the SAML response and the required field. For example, **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname** is the name in the SAML response for the FirstName field.
-
+<!-- markdown-link-check-disable -->
 {% code title="ExternalIdentityClaimSection" %}
 ```javascript
 "ExternalIdentityClaimSection": {
@@ -234,7 +234,7 @@ To enable automatic user creation, you require the following changes. For IIS De
 		}
 ```
 {% endcode %}
-
+<!-- markdown-link-check-enable -->
 ## 6. Further Reading
 
 * [Configuring ADFS](configuring-adfs.md)
