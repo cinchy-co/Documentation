@@ -22,8 +22,11 @@ The Cinchy Upgrade Utility was first introduced in v5.2 to ease a mandatory INT 
 * Retrieve the Upgrade Utility from the [Cinchy Releases table.](https://cinchy.net/Tables/1477?rowHeight=Expanded)
 
 ## Upgrades
+| Release | Upgrade                                                                 | Kubernetes Upgrade                                                                                                                              | IIS Upgrade                                                                                                                       |
+| ------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| 5.2     | [INT to BigInt](cinchy-upgrade-utility.md#)                             | [Upgrade Guide](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.2-kubernetes) | [Upgrade Guide](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.2-iis) |
+| 5.5     | [4000 Character Bug](cinchy-upgrade-utility.md#v5.5-4000-character-bug) | [Upgrade Guide](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.5-kubernetes) | [Upgrade Guide](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.5-iis) |
 
-<table><thead><tr><th width="115">Release</th><th width="180">Upgrade</th><th width="211">Kubernetes Upgrade</th><th>IIS Upgrade</th></tr></thead><tbody><tr><td>5.2</td><td><a href="cinchy-upgrade-utility.md#v5.2-int-to-bigint">INT to BigInt</a></td><td><a href="https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/v5.2-kubernetes">Upgrade Guide</a></td><td><a href="https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrading-cinchy-versions/iis-upgrades/v5.2-iis">Upgrade Guide</a></td></tr><tr><td>5.5</td><td><a href="cinchy-upgrade-utility.md#v5.5-4000-character-bug">4000 Character Bug</a></td><td><a href="https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrading-cinchy-versions/kubernetes-upgrades/v5.5-kubernetes">Upgrade Guide</a></td><td><a href="https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrading-cinchy-versions/iis-upgrades/v5.5-iis">Upgrade Guide</a></td></tr></tbody></table>
 
 ## Overview and considerations
 
@@ -109,7 +112,7 @@ Tip: Click on the image below to enlarge it.
 If there are any errors during execution or your validation fails, we suggest that you restore your database from the backup and contact Cinchy support.
 {% endhint %}
 
-6. [Deploy your Cinchy Upgrade](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrading-cinchy-versions)[.](../)
+6. [Deploy your Cinchy Upgrade](https://platform.docs.cinchy.com/deployment-guide/upgrade-guides/upgrades)[.](../)
 
 {% hint style="warning" %}
 Note: You must deploy whichever version of the platform you ran the upgrade utility for.
