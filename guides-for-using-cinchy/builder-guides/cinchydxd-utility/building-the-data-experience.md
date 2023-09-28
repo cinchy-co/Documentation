@@ -8,9 +8,9 @@ description: 'This page outlines Step 1 of Deploying CinchyDXD: Building the Dat
 
 | Table of Contents                                                                                 |
 | ------------------------------------------------------------------------------------------------- |
-| [#1.-table-creation](building-the-data-experience-cinchydxd.md#1.-table-creation "mention")       |
-| [#2.-enter-sample-data](building-the-data-experience-cinchydxd.md#2.-enter-sample-data "mention") |
-| [#3.-create-the-query](building-the-data-experience-cinchydxd.md#3.-create-the-query "mention")   |
+| [#1.-table-creation](building-the-data-experience.md#1.-table-creation "mention")       |
+| [#2.-enter-sample-data](building-the-data-experience.md#2.-enter-sample-data "mention") |
+| [#3.-create-the-query](building-the-data-experience.md#3.-create-the-query "mention")   |
 
 {% hint style="danger" %}
 **Remember that a**ll objects need to be created in one source environment (ex: DEV). From there, DXD will be used to push them into others (ex: SIT, UAT, Production).

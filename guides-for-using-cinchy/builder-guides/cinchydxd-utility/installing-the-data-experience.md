@@ -10,9 +10,9 @@ description: >-
 
 | Table of Contents                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------- |
-| [#1.-introduction](installing-the-data-experience-cinchydxd.md#1.-introduction "mention")                               |
-| [#2.-install-the-data-experience](installing-the-data-experience-cinchydxd.md#2.-install-the-data-experience "mention") |
-| [#3.-validate-the-install](installing-the-data-experience-cinchydxd.md#3.-validate-the-install "mention")               |
+| [#1.-introduction](installing-the-data-experience.md#1.-introduction "mention")                               |
+| [#2.-install-the-data-experience](installing-the-data-experience.md#2.-install-the-data-experience "mention") |
+| [#3.-validate-the-install](installing-the-data-experience.md#3.-validate-the-install "mention")               |
 
 ## 1. Introduction
 
