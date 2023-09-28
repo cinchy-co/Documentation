@@ -191,7 +191,7 @@ This XML element defines each column and their data type in the data set :
 
 **`name`**
 
-The user defined name for each column. This is used in [\<ColumnMapping>](https://cinchy.atlassian.net/wiki/spaces/KB/pages/196575278) when you want to indicate the name of the `sourceColumn`.
+The user defined name for each column. This is used in <ColumnMapping> when you want to indicate the name of the `sourceColumn`.
 
 **`dataType`**
 
@@ -245,8 +245,6 @@ Date fields support the `inputFormat` which adheres to the C# .NET DateTime\.Par
 
 ### Elements: <a href="#id-less-than-column-greater-than-elements" id="id-less-than-column-greater-than-elements"></a>
 
-[ **\<Transformations>**](https://cinchy.atlassian.net/wiki/spaces/KB/pages/186613813)
-
 ## Column Mappings
 
 Column mappings defines how a single column from the data source maps to a column in a target table. Each `<ColumnMapping>` has both a source and a target. If the destination is a Cinchy table and the target column is a link, then a third attribute becomes available called `linkColumn` which you can use to specify the column used to resolve the linked record from the source value. The value of `sourceColumn` should match name attribute of Source . The value of `targetColumn` should match that of the target table.
@@ -268,7 +266,7 @@ Below is an example of a Column Mapping in the experience followed by the equiva
 
 **`sourceColumn`**
 
-The name of the column in the data source. The name corresponds to the user defined name from the [\<Column>](https://cli.docs.cinchy.co/~/edit/drafts/-LOcwWriIK-GECPm03rw/syncdata-command/tags-and-attributes/column) elements in the schema.
+The name of the column in the data source. The name corresponds to the user defined name from the <Column> elements in the schema.
 
 **`targetColumn`**
 
