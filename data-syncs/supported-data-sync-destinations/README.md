@@ -75,7 +75,7 @@ Salesforce objects are database tables that permit you to store data that's spec
 
 ### Snowflake Table
 
-[Snowflake ](https://www.snowflake.com/en/)is a fully managed SaaS that provides a single platform for data warehousing, data lakes, data engineering, data science, data application development, and secure sharing and consumption of real-time/shared data.
+[Snowflake ](https://www.snowflake.com)is a fully managed SaaS that provides a single platform for data warehousing, data lakes, data engineering, data science, data application development, and secure sharing and consumption of real-time/shared data.
 
 Snowflake enables data storage, processing, and analytic solutions.
 
