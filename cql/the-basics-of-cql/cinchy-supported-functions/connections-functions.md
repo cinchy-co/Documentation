@@ -4,29 +4,63 @@
 
 The set of functions listed in this page are for use in the [Cinchy Connections Experience](https://cli.docs.cinchy.com/) when configuring data syncs.
 
+* [@COLUMN]
 * [​JSON\_ESCAPE​](connections-functions.md#json\_escape)
 * [​URL\_ESCAPE​](connections-functions.md#url\_escape)
 * [STRING\_ESCAPE()](connections-functions.md#string\_escape)
+* [@ID](connections-functions#id)
+
+## @COLUMN
+
+Use @COLUMN for dynamic column referencing in data syncs, specifically for mapping Cinchy sources to REST or SOAP destinations.
+
+### Syntax
+
+The following snippet links the `@COLUMN` mapped to `Name` to `employeeName`.
+```
+{
+    "employeeName": "@COLUMN('Name')"
+}
+```
+
+### Example
+
+The following example uses a Cinchy Table as a Source with a REST API destination. 
+
+This scenario will map data from a table called **Employees** that contain two columns: `Name` and `EmployeeID`. We will map the  `Name` property in a Cinchy Table to the REST API destination property `employeeName`.
+
+1. In the **Source** tab, set the source to Cinchy Table. 
+2. In the **Schema** section, define your columns for `Name` and `Id`: 
+
+ - `Id`, with a **Data Type** of Number.
+ - `Name` with a **Data Type** of Text.
+
+2. In the **Destination** tab, go to **REST API** > **API Specification** > **Insert Specification** > **Request** and select **POST** with an endpoint URL.
+
+
+3. Enter the mapping into the **Body**. Use `@COLUMN`, then append the name to link it to the `Name` column of the Cinchy Table, as shown in the sample below:
+   
+    ```json
+    {
+        "employeeName": "@COLUMN('Name')",
+        "id": "@ID"
+
+
+    }
+    ```
 
 ## JSON\_ESCAPE <a href="#json_escape" id="json_escape"></a>
 
-This function is used in Connections to escape parameter values and be safe to use inside a JSON document without breaking it
+This function escapes reserved or special characters in parameter values in a JSON document, making it possible to insert them into strings.
 
-This function can be used in a REST API connection anywhere that allows parameters to be, such as the URL endpoint, the Request Body, or a Post-Sync Script.
+Use this function in any REST API connection that accepts parameters, such as URL endpoints, Request Body, or Post-Sync Scripts.
 
-#### Syntax
+### Syntax
 
 ```sql
 JSON_ESCAPE(@Parameter)
 ```
-
-#### Arguments
-
-| Argument  | Description                                                                                                       |
-| --------- | ----------------------------------------------------------------------------------------------------------------- |
-| Parameter | The parameter value that you want to escape to be safe to use inside a JSON document without breaking it |
-
-#### Example 1
+### Example 1
 
 The following example shows how you would use JSON\_ESCAPE in your REST API URL _(Image 1)._
 
@@ -34,7 +68,7 @@ This example uses an API and adds a value (@Parameter) that contains double quot
 
 <figure><img src="../../../.gitbook/assets/image (515).png" alt=""><figcaption><p>Image 1: Example 1</p></figcaption></figure>
 
-#### Example 2
+### Example 2
 
 The following example shows how you would use JSON\_ESCAPE in your REST API Request Body _(Image 2)._
 
@@ -44,23 +78,23 @@ This example uses an API and adds a value (@Parameter) that contains double quot
 
 ## URL\_ESCAPE
 
-This function is used in Connections to escape parameter values and be safe to use inside a URL without breaking it
+Use this function in Connections to escape parameter values for use inside a URL without breaking it
 
 **This function can be used in a REST API connection anywhere that allows parameters to be, such as the URL endpoint, the Request Body, or a Post-Sync Script.**
 
-#### Syntax
+### Syntax
 
 ```sql
  URL_ESCAPE(@Parameter)
 ```
 
-#### Arguments
+### Arguments
 
 | Argument  | Description                                                                                             |
 | --------- | ------------------------------------------------------------------------------------------------------- |
-| Parameter | The parameter value that you want to escape in order to be safe to use inside a URL without breaking it |
+| Parameter | The parameter value that you want to escape for use inside a URL without breaking it |
 
-#### Example 1
+### Example 1
 
 The following example shows how you would use URL\_ESCAPE in your REST API URL _(Image 3)._
 
@@ -92,10 +126,55 @@ STRING_ESCAPE("@yourparameter")
 
 #### Example
 
+The example below uses a string escape for the last name to catch any single quotes, such as `O'Connell`.
+
+```json
+	"@lastname": "STRING_ESCAPE("@COLUMN('$.LastName')")",
 ```
-STRING_ESCAPE(This is my data sync's test)
+## @ID <a href="#id" id="id"></a>
 
-will become
+The `@ID` function is specific to full file syncs. One of its primary uses in data syncs where the source is Cinchy Event Broker and the destination is a REST API to reconcile specific properties. 
 
-This is my data sync''s test
+### Syntax
+
+```json
+{
+    "id": "@ID"
+}
+```
+
+### Example
+
+The following example uses the Cinchy Event Broker as a Source with a REST API destination.
+
+This scenario updates the data from the `employeeID` property to the source. The example below is a REST API response from our destination. 
+
+```json
+
+{
+    "data": [
+        {"employeeId": 1, 
+        "name": "John"
+        },
+        {"employeeId": 2, 
+        "name": "Ravi"
+        }
+    ]
+}
+```
+
+Under **REST API SOURCE**, configure your endpoint to the URL of the API request. For this example, your response format would be **JSON**, your **Records Root JSONPath** is `$.data`, and your ID Column is `$.employeeID`. 
+
+With this configuration, your `@ID` is now mapped to the `data.employeeID` in your JSON file.
+
+<figure><img src="../../.gitbook/assets/../../../.gitbook/assets/connections-functions/id-connections-functions.png" alt=""><figcaption><p>Image 3: REST API Source configuration</p></figcaption></figure>
+
+Under **REST API** > **API Specification** > **Update Specification** > **Body**, the following content maps the `id` property to the `@ID` function:
+
+```json
+{
+    "key":"@COLUMN('Name')",
+    "id": "@ID"
+
+}
 ```
