@@ -25,9 +25,9 @@ The pages under this section can be used to help guide you through an upgrade of
 {% endcontent-ref %}
 
 {% content-ref url="v5.5-kubernetes.md" %}
-[v5.5-kubernetes.md](/v5.6-kubernetes.md)
+[v5.6-kubernetes.md](/v5.6-kubernetes.md)
 {% endcontent-ref %}
 
 {% content-ref url="v5.5-kubernetes.md" %}
-[v5.5-kubernetes.md](/v5.7-kubernetes.md)
+[v5.7-kubernetes.md](/v5.7-kubernetes.md)
 {% endcontent-ref %}
