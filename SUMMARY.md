@@ -38,7 +38,7 @@
     * [Configure AWS IAM for Connections](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/configuring-aws-iam-for-connections.md)
     * [Use Self-Signed SSL Certs (Kubernetes)](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)
     * [Deploy the CLI (Kubernetes)](https://app.gitbook.com/o/-LDtM6UlhGoQ91uwM5SF/s/-M9TgaGdQpt0ZS9aqe1c/connections-installation-guide/v5-connections-and-cli-installation-guide#3.-running-the-cli)
-  * [IIS ](deployment-guide/deployment-installation-guides/iis-deployment-platform-installation.md)
+  * [IIS](deployment-guide/deployment-installation-guides/iis-deployment-platform-installation.md)
 
 ## Upgrade guide
 
@@ -52,6 +52,7 @@
       * [v5.4 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.4-kubernetes.md)
       * [v5.5 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.5-kubernetes.md)
       * [v5.6 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.6-kubernetes.md)
+      * [v5.7 (kubernetes)](upgrade-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.7-kubernetes.md)
       * [Upgrade AWS EKS Kubernetes version](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/upgrading-aws-eks-kubernetes-version.md)
       * [Update the Kubernetes Image Registry](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/updating-the-kubernetes-image-registry.md)
       * [Upgrade Azure Kubernetes Service (AKS)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/upgrading-aks-azure-kubernetes-service.md)
@@ -136,7 +137,6 @@
 
 * [Overview](cql/the-basics-of-cql/README.md)
   * [CQL examples](cql/the-basics-of-cql/cql-examples.md)
-
   * [CQL statements overview](cql/the-basics-of-cql/cql-statements-overview/README.md)
     * [Cinchy DML statements](cql/the-basics-of-cql/cql-statements-overview/cinchy-dml-statements.md)
     * [Cinchy DDL statements](cql/the-basics-of-cql/cql-statements-overview/cinchy-ddl-statements.md)
@@ -164,10 +164,11 @@
     * [Connections functions](cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md)
     * [JSON functions](cql/the-basics-of-cql/cinchy-supported-functions/json-functions.md)
 * [CQL functions master list](cql/the-basics-of-cql/cql-functions-master-list.md)
+
 ## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)
-* [Install Meta-Forms ](meta-forms/meta-forms-deployment-installation-guide/README.md)
+* [Install Meta-Forms](meta-forms/meta-forms-deployment-installation-guide/README.md)
   * [Deploy Meta-Forms (Kubernetes)](meta-forms/meta-forms-deployment-installation-guide/deploying-meta-forms-kubernetes.md)
   * [Deploy Meta-Forms (IIS)](meta-forms/meta-forms-deployment-installation-guide/deploying-meta-forms-iis.md)
 * [Forms data types](meta-forms/forms-data-types.md)
