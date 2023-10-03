@@ -64,7 +64,7 @@ The following are some common search patterns when looking through your OpenSear
 
 The first step to utilizing the power of OpenSearch Dashboards is to set up an index to pull data from your sources. An Index Pattern identifies which indices you want to explore. An index pattern can point to a specific index, for example, your log data from yesterday, or all indices that contain your log data.
 
-1. Login to OpenSearch. You would have configured the access point during your [deployment installation](../../../../deployment-guide/deployment-installation-guides/); traditionally it will be found at **\<baseurl>/dashboard.**
+1. Login to OpenSearch. You would have configured the access point during your [deployment installation](../../../../deployment-guide/deployment-guides/); traditionally it will be found at **\<baseurl>/dashboard.**
 
 {% hint style="info" %}
 If this is your first time logging in, the username and password will be set to **admin/admin.**

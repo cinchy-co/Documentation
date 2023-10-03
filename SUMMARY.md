@@ -22,23 +22,23 @@
 
 ## Deployment guide
 
-* [Deploying Cinchy](deployment-guide/deployment-installation-guides/README.md)
-  * [Plan your deployment](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/README.md)
-    * [Deployment architecture](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview/README.md)
-      * [Kubernetes architecture](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview/kubernetes-deployment-architecture.md)
-      * [IIS architecture](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview/iis-deployment-architecture.md)
-    * [Deployment prerequisites](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/README.md)
-      * [Single Sign-On (SSO) integration](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/README.md)
-        * [Enable TLS 1.2](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/enabling-tls-1.2.md)
-        * [Configure ADFS](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/configuring-adfs.md)
-        * [AD Group Integration](deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/ad-group-integration.md)
-  * [Kubernetes](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/README.md)
-    * [Disable your Kubernetes applications](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/disabling-your-kubernetes-applications.md)
-    * [Change your file storage configuration](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/changing-your-file-storage-configuration.md)
-    * [Configure AWS IAM for Connections](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/configuring-aws-iam-for-connections.md)
-    * [Use Self-Signed SSL Certs (Kubernetes)](deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)
+* [Deploying Cinchy](deployment-guide/deployment-guides/README.md)
+  * [Plan your deployment](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/README.md)
+    * [Deployment architecture](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview/README.md)
+      * [Kubernetes architecture](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview/kubernetes-deployment-architecture.md)
+      * [IIS architecture](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview/iis-deployment-architecture.md)
+    * [Deployment prerequisites](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/README.md)
+      * [Single Sign-On (SSO) integration](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/README.md)
+        * [Enable TLS 1.2](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/enabling-tls-1.2.md)
+        * [Configure ADFS](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/configuring-adfs.md)
+        * [AD Group Integration](deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/ad-group-integration.md)
+  * [Kubernetes](deployment-guide/deployment-guides/kubernetes/README.md)
+    * [Disable your Kubernetes applications](deployment-guide/deployment-guides/kubernetes/disabling-your-kubernetes-applications.md)
+    * [Change your file storage configuration](deployment-guide/deployment-guides/kubernetes/changing-your-file-storage-configuration.md)
+    * [Configure AWS IAM for Connections](deployment-guide/deployment-guides/kubernetes/configuring-aws-iam-for-connections.md)
+    * [Use Self-Signed SSL Certs (Kubernetes)](deployment-guide/deployment-guides/kubernetes/using-self-signed-ssl-certs-kubernetes-deployments.md)
     * [Deploy the CLI (Kubernetes)](https://app.gitbook.com/o/-LDtM6UlhGoQ91uwM5SF/s/-M9TgaGdQpt0ZS9aqe1c/connections-installation-guide/v5-connections-and-cli-installation-guide#3.-running-the-cli)
-  * [IIS](deployment-guide/deployment-installation-guides/iis-deployment-platform-installation.md)
+  * [IIS](deployment-guide/deployment-guides/iis-deployment-installation.md)
 
 ## Upgrade guide
 
@@ -172,9 +172,9 @@
 ## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)
-* [Install Meta-Forms](meta-forms/meta-forms-deployment-installation-guide/README.md)
-  * [Deploy Meta-Forms (Kubernetes)](meta-forms/meta-forms-deployment-installation-guide/deploying-meta-forms-kubernetes.md)
-  * [Deploy Meta-Forms (IIS)](meta-forms/meta-forms-deployment-installation-guide/deploying-meta-forms-iis.md)
+* [Install Meta-Forms](meta-forms/meta-forms-guide/README.md)
+  * [Deploy Meta-Forms (Kubernetes)](meta-forms/meta-forms-guide/deploying-meta-forms-kubernetes.md)
+  * [Deploy Meta-Forms (IIS)](meta-forms/meta-forms-guide/deploying-meta-forms-iis.md)
 * [Forms data types](meta-forms/forms-data-types.md)
 * [Meta-Forms Builder Guide](meta-forms/meta-forms-builders-guides/README.md)
   * [Create a dynamic meta-form with tables](meta-forms/meta-forms-builders-guides/creating-a-dynamic-meta-form-using-tables.md)

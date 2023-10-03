@@ -75,7 +75,7 @@ We recommend you follow this process **during off-peak hours.**
 {% endhint %}
 
 1. Turn off your Cinchy platform. _(Note: This step is only required for the 5.2 upgrade)_
-   1. In a Kubernetes deployment,[ you can do so via ArgoCD.](../../deployment-installation-guides/kubernetes-deployment-installation/disabling-your-kubernetes-applications.md)
+   1. In a Kubernetes deployment,[ you can do so via ArgoCD.](../../deployment-guides/kubernetes/disabling-your-kubernetes-applications.md)
    2. In an IIS Deployment:
       1. Open your Windows Services Panel.
       2. Select **IIS Admin Service.**
@@ -119,7 +119,7 @@ Note: You must deploy whichever version of the platform you ran the upgrade util
 {% endhint %}
 
 7. If it was turned off in step 1, turn your Cinchy platform back on.
-   1. In a Kubernetes deployment, [you can do so via Argo CD](../../deployment-installation-guides/kubernetes-deployment-installation/disabling-your-kubernetes-applications.md#2.-re-enabling-your-applications)
+   1. In a Kubernetes deployment, [you can do so via Argo CD](../../deployment-guides/kubernetes/disabling-your-kubernetes-applications.md#2.-re-enabling-your-applications)
    2. In an IIS deployment:
       1. Open your Windows Services Panel.
       2. Select **IIS Admin Service.**

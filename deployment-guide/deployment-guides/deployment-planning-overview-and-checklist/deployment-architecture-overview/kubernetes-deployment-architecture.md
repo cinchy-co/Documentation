@@ -89,7 +89,7 @@ Tip: Click on an image to enlarge it.
 * **Identity Provider:** An Identity Provider (IdP) creates and manages user credentials and associated identity attributes. Cinchy uses IdPs authentication services to authenticate end-users.
 * **Event Listener:** The Event Listener picks up events from connected sources during a data sync. Review the [Data Sync page ](https://cli.docs.cinchy.com/) for further information on the Event Listener. The Event Listener uses persistent storage.
 * **Event Stream Worker:** The Event Stream Worker processes data picked up by the Event Listener during data syncs. Review the [ Data Sync page ](https://cli.docs.cinchy.com/)for further information on the Event Stream Worker. The Event Worker uses persistent storage.
-* **Maintenance (Batch Jobs):** Cinchy [performs maintenance tasks](https://cinchy.gitbook.io/cinchy-v5.0.0/deployment-guide/deployment-installation-guide/maintenance#maintenance) through the CLI. This includes the data erasure and data compression deletions.
+* **Maintenance (Batch Jobs):** Cinchy [performs maintenance tasks](https://cinchy.gitbook.io/cinchy-v5.0.0/deployment-guide/deployment-guide/maintenance#maintenance) through the CLI. This includes the data erasure and data compression deletions.
 
 ## GitOps
 

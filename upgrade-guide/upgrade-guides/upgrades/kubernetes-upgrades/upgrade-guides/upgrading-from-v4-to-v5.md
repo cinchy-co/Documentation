@@ -3,7 +3,7 @@
 
 ## Upgrading to v5 on Kubernetes
 
-When you upgrade to Cinchy v5 on Kubernetes you are creating a separate instance. You will need to plan the migration of your database, and then follow the [deployment installation guide.](../deployment-installation-guides/)
+When you upgrade to Cinchy v5 on Kubernetes you are creating a separate instance. You will need to plan the migration of your database, and then follow the [deployment installation guide.](../deployment-guides/)
 
 ## Upgrading to v5 on IIS
 
