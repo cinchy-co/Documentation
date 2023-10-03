@@ -10,7 +10,7 @@ Cinchy version 5 on IIS comes bundled with common components such as Connections
 
 * [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
 * [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-* [Meta Forms Deployment](../../meta-forms/meta-forms-deployment-installation-guide/)
+* [Meta Forms Deployment](../../meta-forms/meta-forms-guide/)
 * [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
 
 **Ensure that you review the** [**prerequisites listed here**](deployment-planning-overview-and-checklist/deployment-prerequisites/#deployment-prerequisites) prior to performing an IIS Deployment, including downloading all necessary artifacts from the [Cinchy Releases Table.](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded)

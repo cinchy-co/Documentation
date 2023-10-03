@@ -31,7 +31,7 @@ Do this through your specific domain registrar. For example, GoDaddy or Google D
 
 You must have valid SSL Certs ready when you deploy Cinchy v5. **Cinchy recommends** using a wildcard certificate if ArgoCD will be exposed via a subdomain. Without the wildcard certificate, you must create a port forward using `kubectl` on demand to access ArgoCD's portal.
 
-You also have the option to use Self-Signed Certs in Kubernetes deployments. Find more information [here.](../../kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)
+You also have the option to use Self-Signed Certs in Kubernetes deployments. Find more information [here.](../../kubernetes/using-self-signed-ssl-certs-kubernetes-deployments.md)
 
 ### Secrets management
 
@@ -125,7 +125,7 @@ If you are deploying Cinchy v5 on AWS, you require the following:
 
 ### Terraform requirements:
 
-- [An S3 bucket](https://platform.docs.cinchy.com/deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview#3.3-object-storage-requirements) that will contain the terraform state.
+- [An S3 bucket](https://platform.docs.cinchy.com/deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview#3.3-object-storage-requirements) that will contain the terraform state.
 - Install the [AWS CLI](https://aws.amazon.com/cli/) on the deployment machine. It must be set to the correct profile/login
 
 The template has two options available:

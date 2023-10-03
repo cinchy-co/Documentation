@@ -94,7 +94,7 @@ If you are deploying Cinchy v5 on AWS, you require the following:
 
 ### Terraform requirements:
 
-- [An S3 bucket](https://platform.docs.cinchy.com/deployment-guide/deployment-installation-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview#3.3-object-storage-requirements) that will contain the terraform state.
+- [An S3 bucket](https://platform.docs.cinchy.com/deployment-guide/deployment-guides/deployment-planning-overview-and-checklist/deployment-architecture-overview#3.3-object-storage-requirements) that will contain the terraform state.
 - Install the [AWS CLI](https://aws.amazon.com/cli/) on the deployment machine. It must be set to the correct profile/login
 
 The template has two options available:

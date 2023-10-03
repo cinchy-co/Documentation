@@ -44,7 +44,7 @@ The main differences between a Kubernetes based deployment and an IIS deployment
   - [ ] Will you be using Cinchy's recommended cluster components or your own?
 - [ ] Define your [object storage requirements.](deployment-architecture-overview/README.md/#object-storage-requirements)
   - [ ] Create an [S3 compatible bucket](deployment-architecture-overview/README.md#object-storage-requirements).
-- [ ] Create your [SSL Certs](deployment-prerequisites/README.md#ssl-certs) (With the option to use [Self-Signed](../kubernetes-deployment-installation/using-self-signed-ssl-certs-kubernetes-deployments.md)).
+- [ ] Create your [SSL Certs](deployment-prerequisites/README.md#ssl-certs) (With the option to use [Self-Signed](../kubernetes/using-self-signed-ssl-certs-kubernetes-deployments.md)).
 - [ ] Define your [Secrets Management,](deployment-prerequisites/README.md#secrets-management) if desired.
 - [ ] Define whether you will use Cinchy's [Docker Images ](deployment-prerequisites/README.md#docker-images)or your own.
   - [ ] If using Cinchy’s, [pull the images.](deployment-prerequisites/README.md#access-cinchy-docker-images)
