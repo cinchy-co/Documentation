@@ -8,7 +8,7 @@ description: >-
 
 ## Introduction
 
-**Compatibility:** Webhook ingestion was introduced in Cinchy platform [v4.21](https://platform.docs.cinchy.com/release-notes/4.21-release-notes#new-features). Note that previous Cinchy versions won't include a Webhooks system table, and won't support this feature.
+**Compatibility:** Webhook ingestion was introduced in Cinchy platform v4.21. Note that previous Cinchy versions won't include a Webhooks system table, and won't support this feature.
 
 **Context:** A webhook uses a trigger event to initiate a data transfer that can then be ingested by another application. Many applications support webhooks to provide data updates in real time with minimal configuration required. Cinchy users can subscribe to and ingest webhooks via configuring a unique API endpoint. When the external application addresses this endpoint, a pre-identified saved query can be run, under an authorized user account, to ingest the data and insert or update it into Cinchy. The following video walks you through a specific configuration, with a general step-by-step guide below:
 

@@ -12,6 +12,6 @@ If at any point you require help or clarification on this documentation or your 
 
 - **Via email:** support@cinchy.com
 - **Via phone:** 1-888-792-6051
-- **Through the support portal**: [Support Portal](http://support.cinchy.com/)
+- **Through the support portal**: [Support Portal](https://support.cinchy.com/)
 
 <!-- vale on -->

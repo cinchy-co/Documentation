@@ -71,7 +71,7 @@ Note that an administrator can also go into the 'Users' table to manually unlock
 
 ### Maintenance enabled
 
-This property, defaulted to 0, shows this warning when a data owner is setting up [Data Erasure](broken-reference) or [Data Compression](broken-reference) on a table _(Image 2)_. It's the administrator's responsibility to set up a scheduled maintenance job for performing compression and erasure, and then to change the property to 1 so that the warning no longer appears.
+This property, defaulted to 0, shows this warning when a data owner is setting up Data Erasure or Data Compression on a table _(Image 2)_. It's the administrator's responsibility to set up a scheduled maintenance job for performing compression and erasure, and then to change the property to 1 so that the warning no longer appears.
 
 ![Image 2: Data Compression](<../../.gitbook/assets/image (216).png>)
 

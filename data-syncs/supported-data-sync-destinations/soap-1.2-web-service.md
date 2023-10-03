@@ -41,7 +41,7 @@ The API Specification section will default with a mandatory Insert Specification
 \
 **Insert Specification**\
 When specifying the Target Column in the Column Mappings section, **all names are case-sensitive.**
-
+<!-- markdown-link-check-disable -->
 | Parameter                                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Example                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Endpoint URL                                                                                           | **Mandatory.** The URL of the [SOAP 1.2 Web Service API endpoint](https://www.ibm.com/docs/en/wsr-and-r/8.5.6?topic=mswsd-retrieving-addresses-from-soap-11-soap-12-endpoints)                                                                                                                                                                                                                                                                                                                      | [https://www.dataaccess.com/webservicesserver/NumberConversion.wso](https://www.dataaccess.com/webservicesserver/NumberConversion.wso) |
@@ -139,7 +139,7 @@ You have the option to add a destination filter to your data sync. Please review
 {% endtabs %}
 
 <figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
-
+<!-- markdown-link-check-enable -->
 ## Next steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md) Note that if you are doing a Full-File sync, the **API Specification > SOAP 1.2 Source section should be filled in.**

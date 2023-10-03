@@ -81,7 +81,7 @@ The below table can be used to help create your Topic JSON needed to set up a re
 #### Connection Attributes
 
 The below table can be used to help create your Connection Attributes JSON needed to set up a real-time sync.
-
+<!-- markdown-link-check-disable -->
 | Parameter        | Description                                                                                                    | Example                  |
 | ---------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------ |
 | connectionString | **Mandatory.** Your MongoDB [connection string.](https://www.mongodb.com/docs/guides/atlas/connection-string/) | mongodb://localhost:9877 |
@@ -103,7 +103,7 @@ The below table can be used to help create your Connection Attributes JSON neede
 | Data Type   | <p><strong>Mandatory.</strong> The data type of the column values. <br><br><a href="mongo-event.md#data-types">You can review the supported data types and their translations here.</a></p> | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                                                                                                           |         |
 
-
+<!-- markdown-link-check-enable -->
 
 Select **Show Advanced** for more options for the Schema section.
 

@@ -38,12 +38,12 @@ If the Push Topic name doesn't exist in Salesforce, Cinchy will attempt to creat
 You can find the parameters in the **Info** tab below _(Image 1)_.
 
 #### Values
-
-| Parameter   | Description                                                                                                                                                                                       | Example               |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| Title       | **Mandatory.** Input a name for your data sync                                                                                                                                                    | Salesforce Push Topic |
-| Variables   | **Optional.** Review our documentation on [Variables here ](../building-data-syncs/advanced-settings/variables.md)for more information about this field.                                          |                       |
-| Permissions | Data syncs are role based access systems where you can give specific groups read, write, execute, and/or all of the above with admin access. **Inputting at least an Admin Group is mandatory.**  |                       |
+<!-- markdown-link-check-disable -->
+| Parameter   | Description                                                                                                                                                                                      | Example               |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- |
+| Title       | **Mandatory.** Input a name for your data sync                                                                                                                                                   | Salesforce Push Topic |
+| Variables   | **Optional.** Review our documentation on [Variables here ](../building-data-syncs/advanced-settings/variables.md)for more information about this field.                                         |                       |
+| Permissions | Data syncs are role based access systems where you can give specific groups read, write, execute, and/or all of the above with admin access. **Inputting at least an Admin Group is mandatory.** |                       |
 
 <figure><img src="../../.gitbook/assets/image (674).png" alt=""><figcaption><p>Image 1: The Info Tab</p></figcaption></figure>
 
@@ -65,13 +65,29 @@ Note that If there is more than one listener associated with your data sync, you
 
 #### Reset Behaviour
 
-<table><thead><tr><th width="265.66666666666663">Parameter</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td><strong>Auto Offset Reset</strong></td><td><p><strong>Earliest, Latest or None.</strong> <br><br>In the case where the listener is started and either there is no last message ID, or when the last message ID is invalid (due to it being deleted or it's just a new listener), it will use this column as a fallback to determine where to start reading events from.<br></p><p><strong>Earliest</strong> will start reading from the beginning on the queue (when the CDC was enabled on the table). This might be a suggested configuration if your use case is recoverable or re-runnable and if you need to reprocess all events to ensure accuracy.<br><br><strong>Latest</strong> will fetch the last value after whatever was last processed. This is the typical configuration.<br><br><strong>None</strong> won't read or start reading any events.<br><br>You are able to switch between Auto Offset Reset types after your initial configuration through the process outlined <a href="../error-logging-and-troubleshooting.md">here.</a></p></td><td>None</td></tr></tbody></table>
+### Auto Offset Reset table
+
+| Parameter         | Description                                                                                                                                                                                                                           | Default Value |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Auto Offset Reset | Determines the starting point for event reading. Options: <ul><li>**Earliest**: Starts from the queue beginning. Useful for recoverable or re-runnable use cases.</li><li>**Latest**: Starts after the last processed event.</li><li>**None**: No events are read.</li></ul> You can change this setting later. | None          |
+
 
 #### Topic JSON
 
 The below table can be used to help create your Topic JSON needed to set up a real-time sync.
 
-<table><thead><tr><th width="264.66666666666663">Parameter</th><th width="272">Description</th><th>Example</th></tr></thead><tbody><tr><td>Id</td><td></td><td></td></tr><tr><td>Name</td><td><strong>Mandatory.</strong> Descriptive name of the PushTopic. Note that there is a 25 character limit on this field.</td><td>LeadsTopic</td></tr><tr><td>Query</td><td><p><strong>Mandatory.</strong> The SOQL query statement that determines which record changes trigger events to be sent to the channel.</p><p>Note that there is a 1,300 character limit on this field.</p><p></p></td><td>SELECT Id, Name, Email FROM Lead</td></tr><tr><td>ApiVersion</td><td><strong>Mandatory.</strong> The API version to use for executing the query specified in Query. It must be an API version greater than 20.0. If your query applies to a custom object from a package, this value must match the package's ApiVersion.</td><td>47.0</td></tr><tr><td>NotifyForOperationCreate</td><td>Set this to true if a create operation should generate a notification, otherwise, false. Defaults to true.</td><td>true</td></tr><tr><td>NotifyForOperationUpdate</td><td>Set this to true if an update operation should generate a notification, otherwise, false. Defaults to true.</td><td>true</td></tr><tr><td>NotifyForOperationUndelete</td><td>Set this to true if an undelete operation should generate a notification, otherwise, false. Defaults to true.</td><td>true</td></tr><tr><td>NotifyForOperationDelete</td><td>Set this to true if a delete operation should generate a notification, otherwise, false. Defaults to true.</td><td>true</td></tr><tr><td>NotifyForFields</td><td><p></p><p>Specifies which fields are evaluated to generate a notification. Possible values are:</p><ul><li>All</li><li>Referenced (default)</li><li>Select</li><li>Where</li></ul></td><td>Referenced</td></tr></tbody></table>
+| Parameter                  | Description                                                                                                                                                                                                                         | Example                          |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Id                         |
+| Name                       | Mandatory. Descriptive name of the PushTopic. Note that there is a 25 character limit on this field.                                                                                                                                | LeadsTopic                       |
+| Query                      | Mandatory. The SOQL query statement that determines which record changes trigger events to be sent to the channel. This field has a 1,300 character limit.                                                         | SELECT Id, Name, Email FROM Lead |
+| ApiVersion                 | Mandatory. The API version to use for executing the query specified in Query. It must be an API version greater than 20.0. If your query applies to a custom object from a package, this value must match the package's ApiVersion. | 47.0                             |
+| NotifyForOperationCreate   | Set this to true if a create operation should generate a notification, otherwise, false. Defaults to true.                                                                                                                          | true                             |
+| NotifyForOperationUpdate   | Set this to true if an update operation should generate a notification, otherwise, false. Defaults to true.                                                                                                                         | true                             |
+| NotifyForOperationUndelete | Set this to true if an undelete operation should generate a notification, otherwise, false. Defaults to true.                                                                                                                       | true                             |
+| NotifyForOperationDelete   | Set this to true if a delete operation should generate a notification, otherwise, false. Defaults to true.                                                                                                                          | true                             |
+| NotifyForFields            | Specifies which fields are evaluated to generate a notification. Possible values are:AllReferenced (default)SelectWhere                                                                                                             | Referenced                       |
+
 
 **Example Topic JSON**
 
@@ -93,7 +109,16 @@ The below table can be used to help create your Topic JSON needed to set up a re
 
 The below table can be used to help create your Connection Attributes JSON needed to set up a real-time sync.
 
-<table><thead><tr><th width="261.66666666666663">Parameter</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td>ApiVersion</td><td><strong>Mandatory.</strong> Your Salesforce API Version. Note that this needs to be an exact match; for instance `47.0` can't be written as simply `47`.</td><td>47.0</td></tr><tr><td>GrantType</td><td>This value should be set to `password`.</td><td>password</td></tr><tr><td>ClientId</td><td>The encrypted Salesforce Client ID. You can encrypt this value using the Cinchy CLI.</td><td>Bn8UmtiLydmYQV6//qCL5dqfNUMhqchdk959hu0XXgauGMYAmYoyWN8FD+voGuMwGyJa7onrc60q1Hu6QFsQXHVA==</td></tr><tr><td>ClientSecret</td><td>The encrypted Salesforce Client Secret. You can encrypt this value using the Cinchy CLI.</td><td>DyU1hqde3cWwkPOwK97T6rzwqv6t3bgQeCGq/fUx+tKI=</td></tr><tr><td>Username</td><td>The encrypted Salesforce username. You can encrypt this value using the Cinchy CLI.</td><td>dXNlcm5hbWVAZW1haWwuY29t</td></tr><tr><td>Password</td><td>The encrypted Salesforce password You can encrypt this value using the Cinchy CLI.</td><td>cGFzc3dvcmRwYXNzd29yZA==</td></tr><tr><td>InstanceAuthUrl</td><td>The authorization URL of the Salesforce instance.</td><td><a href="https://login.salesforce.com/services/oauth2/token">https://login.salesforce.com/services/oauth2/token</a></td></tr></tbody></table>
+| Parameter       | Description                                                                                                                             | Example                                                                                    |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| ApiVersion      | Mandatory. Your Salesforce API Version. Note that this needs to be an exact match; for instance `47.0` can't be written as simply `47`. | 47.0                                                                                       |
+| GrantType       | This value should be set to `password`.                                                                                                 | password                                                                                   |
+| ClientId        | The encrypted Salesforce Client ID. You can encrypt this value using the Cinchy CLI.                                                    | Bn8UmtiLydmYQV6//qCL5dqfNUMhqchdk959hu0XXgauGMYAmYoyWN8FD+voGuMwGyJa7onrc60q1Hu6QFsQXHVA== |
+| ClientSecret    | The encrypted Salesforce Client Secret. You can encrypt this value using the Cinchy CLI.                                                | DyU1hqde3cWwkPOwK97T6rzwqv6t3bgQeCGq/fUx+tKI=                                              |
+| Username        | The encrypted Salesforce username. You can encrypt this value using the Cinchy CLI.                                                     | dXNlcm5hbWVAZW1haWwuY29t                                                                   |
+| Password        | The encrypted Salesforce password You can encrypt this value using the Cinchy CLI.                                                      | cGFzc3dvcmRwYXNzd29yZA==                                                                   |
+| InstanceAuthUrl | The authorization URL of the Salesforce instance.                                                                                       | https://login.salesforce.com/services/oauth2/token                                         |
+
 
 ```json
 {
@@ -119,22 +144,22 @@ The below table can be used to help create your Connection Attributes JSON neede
 | Description | **Optional.** You may choose to add a description to your column.                                             |         |
 
 
-
+<!-- markdown-link-check-enable -->
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                   |         |
+| Trim Whitespace | **Optional if data type = text.**  For Text data types, you can choose whether to **trim the whitespace**._                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
-| Parameter   | Description                                                                                                                           | Example |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Parameter   | Description                                                                       | Example |
+| ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
-| Replacement | What you want to replace your pattern with.                                                                                           |         |
+| Replacement | What you want to replace your pattern with.                                       |         |
 
 {% hint style="info" %}
 Note that you can have more than one String Replacement

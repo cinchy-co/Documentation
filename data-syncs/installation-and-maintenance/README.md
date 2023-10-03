@@ -6,12 +6,12 @@ To use Cinchy Data Sync, there are some environmental configurations that will n
 
 ## Prerequisites
 
-Review the hardware, software, and server sizing prerequisites [here.](\prerequisites)
+Review the hardware, software, and server sizing prerequisites [here.](./prerequisites.md)
 
 ## Data Sync installation instructions
 
 Review the below documentation for installation instructions:
 
-* Installing [Connections](\installing-connections)
-* Installing the [Worker/Listener](\installing-the-worker-listener)
-* Installing the [CLI and the Maintenance CLI](\installing-the-cli-and-the-maintenance-cli)
+* Installing [Connections](./installing-connections.md)
+* Installing the [Worker/Listener](./installing-the-worker-listener.md)
+* Installing the [CLI and the Maintenance CLI](./installing-the-cli-and-the-maintenance-cli.md)

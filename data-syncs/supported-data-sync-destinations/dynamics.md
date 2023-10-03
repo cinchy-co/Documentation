@@ -19,14 +19,15 @@ The following table outlines the mandatory and optional parameters you will find
 {% tabs %}
 {% tab title="Destination Details" %}
 The following parameters will help to define your data sync destination and how it functions.
-| Parameter        | Description                                                                                                                                                                  | Example                                         |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
-| Destination      | Mandatory. Select your destination from the drop down menu.                                                                                                                  | Dynamics                                        |
-| Entity           | Mandatory. The name of the entity you want to sync to as it appears in your Dynamics CRM.                                                                                    |
-| Service URL      | Mandatory. The Web API URL of your instance.                                                                                                                                | https://org.api.crm.dynamics.com/api/data/v9.0/ |
-| Client ID        | Mandatory. The encrypted Client ID found in your Azure AD app registration. The Connection UI will automatically encrypt this value for you.                                 |
-| Client Secret    | Mandatory. The encrypted Client Secret found in your Azure AD app registration. The Connection UI will automatically encrypt this value for you.                             |
-| ID Column        | Mandatory. The unique ID Column name of the Entity that you wish to sync to.                                                                                                 |
+<!-- markdown-link-check-disable -->
+| Parameter        | Description                                                                                                                                                  | Example                                         |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| Destination      | Mandatory. Select your destination from the drop down menu.                                                                                                  | Dynamics                                        |
+| Entity           | Mandatory. The name of the entity you want to sync to as it appears in your Dynamics CRM.                                                                    |
+| Service URL      | Mandatory. The Web API URL of your instance.                                                                                                                 | https://org.api.crm.dynamics.com/api/data/v9.0/ |
+| Client ID        | Mandatory. The encrypted Client ID found in your Azure AD app registration. The Connection UI will automatically encrypt this value for you.                 |
+| Client Secret    | Mandatory. The encrypted Client Secret found in your Azure AD app registration. The Connection UI will automatically encrypt this value for you.             |
+| ID Column        | Mandatory. The unique ID Column name of the Entity that you wish to sync to.                                                                                 |
 | ID Column Insert | Setting this value to true will allow direct inserts into the ID Column. The default state is false: ID values will be matched but no data will be inserted. |
 {% endtab %}
 
@@ -43,7 +44,7 @@ The following parameters will help to define your data sync destination and how 
 You have the option to add a destination filter to your data sync. Please review the documentation here for more information on [destination filters.](../building-data-syncs/advanced-settings/filters.md#target-filters)
 {% endtab %}
 {% endtabs %}
-
+<!-- markdown-link-check-enable -->
 <figure><img src="../../.gitbook/assets/image (344).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
 
 ## Next steps
