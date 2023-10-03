@@ -42,33 +42,7 @@
 
 ## Upgrade guide
 
-<<<<<<< HEAD
-* [Upgrading Cinchy](deployment-guide/upgrade-guides/README.md)
-  * [Upgrade Cinchy versions](deployment-guide/upgrade-guides/upgrades/README.md)
-    * [Cinchy Upgrade Utility](deployment-guide/upgrade-guides/upgrades/cinchy-upgrade-utility.md)
-    * [Kubernetes upgrades](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/README.md)
-      * [v5.1 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.1-kubernetes.md)
-      * [v5.2 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.2-kubernetes.md)
-      * [v5.3 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.3-kubernetes.md)
-      * [v5.4 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.4-kubernetes.md)
-      * [v5.5 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.5-kubernetes.md)
-      * [v5.6 (Kubernetes)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.6-kubernetes.md)
-      * [v5.7 (Kubernetes)](upgrade-guide/upgrade-guides/upgrades/kubernetes-upgrades/v5.7-kubernetes.md)
-      * [Upgrade AWS EKS Kubernetes version](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/upgrading-aws-eks-kubernetes-version.md)
-      * [Update the Kubernetes Image Registry](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/updating-the-kubernetes-image-registry.md)
-      * [Upgrade Azure Kubernetes Service (AKS)](deployment-guide/upgrade-guides/upgrades/kubernetes-upgrades/upgrading-aks-azure-kubernetes-service.md)
-    * [IIS upgrades](deployment-guide/upgrade-guides/upgrades/iis-upgrades/README.md)
-      * [v4.21 (IIS)](deployment-guide/upgrade-guides/upgrades/iis-upgrades/v4.21-iis.md)
-      * [v4.x to v5.x (IIS)](deployment-guide/upgrade-guides/upgrades/iis-upgrades/v4.x-to-v5.x-iis.md)
-      * [v5.1 (IIS)](deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.1-iis.md)
-      * [v5.2 (IIS)](deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.2-iis.md)
-      * [v5.3 (IIS)](deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.3-iis.md)
-      * [v5.4 (IIS)](deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.4-iis.md)
-      * [v5.5 (IIS)](deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.5-iis.md)
-      * [v5.6 (IIS)](deployment-guide/upgrade-guides/upgrades/iis-upgrades/v5.6-iis.md)
-  * [Upgrading from v4 to v5](deployment-guide/upgrade-guides/upgrading-from-v4-to-v5.md)
-=======
-* [Upgrading Cinchy](upgrade-guide/upgrade-guides/README.md)
+* [Upgrade Cinchy](upgrade-guide/upgrade-guides/README.md)
   * [Cinchy Upgrade Utility](upgrade-guide/upgrade-guides/cinchy-upgrade-utility.md)
   * [Kubernetes upgrades](upgrade-guide/upgrade-guides/kubernetes-upgrades/README.md)
     * [v5.1 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/v5.1-kubernetes.md)
@@ -91,7 +65,6 @@
     * [v5.5 (IIS)](upgrade-guide/upgrade-guides/iis-upgrades/v5.5-iis.md)
     * [v5.6 (IIS)](upgrade-guide/upgrade-guides/iis-upgrades/v5.6-iis.md)
   * [Upgrading from v4 to v5](upgrade-guide/upgrade-guides/upgrading-from-v4-to-v5.md)
->>>>>>> ed39076 (TOC cleanup)
 
 ## Guides for using Cinchy
 
