@@ -2,15 +2,11 @@
 
 ## Overview
 
-Variables are values that can be dynamically inserted when the sync job is run. The variables you define here can be referenced in fields in other parts of your sync config (using the @ prefix) and when the job is run you can be prompted for their values.
+Variables are dynamic values you can include in sync jobs. Use the "@" prefix to reference these variables in other parts of your sync configuration. During job execution, you might be prompted to input these values.
 
-The execution variables are either passed in at the time of execution or calculated through a formula. The value of the name attribute is passed in as command line option, param-values. (Optional, if the path to the source file to load is specified in the path attribute of the source element or calculated column formula don't reference execution variables)
+Execution variables can be either provided at runtime or computed using a formula. Optionally, you can pass the `name` attribute value as a command line option using `param-values`.
 
 <figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Image 1: Connections UI</p></figcaption></figure>
-
-{% hint style="info" %}
-While in the UI the term is **variables**, please note that the paired XML configuration will refer to the term as **parameters**.
-{% endhint %}
 
 ## Supported Formulas
 
@@ -18,21 +14,24 @@ You can choose to just use plain text in the Name field of the Variable or you c
 
 The following formulas are currently supported by Connections.
 
+{% hint style="info" %}
+Cinchy supports .NET regular expressions. For more information, please see the [Microsoft .NET Expressions page](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions).
+{% endhint %}
 
-* **FILENAME(\<some-path>, \<some-regex>):** The FILENAME formula takes in two variables:
-  1.  A reference to the first parameter **(like a file path)**
-  2.  A regular expression that includes a match group.
-  The first match group's value is assigned to the variable. The FILENAME function applies the regex only to the name of the file (**excluding** the directory structure).
-* **FILEPATH(\<some-path>, \<some-regex>)**: The FILEPATH formula takes in two variables:
-  1.  A reference to the first parameter **(like a file path)**
-  2.  A regular expression that includes a match group. 
-  The first match group's value is assigned to the variable. The FILEPATH function executes the regex against the full file path (**including** the directory structure).
-* **GUID()**: The GUID formula uses a random GUID for that variable's value. Use **GUID()** to generate a unique identifier to use during the context the sync. For example, use it to track changes made from a particular sync.
-* **GETSECRETVALUE(`domain`, `secretname`)**: The GETSECRETVALUE formula can be used to call a secret from the [Cinchy Secrets Table](../../../guides-for-using-cinchy/additional-guides/cinchy-secrets-manager.md). This secret can then be used anywhere variables are supported where you may need to insert sensitive information, such as a connection string, Access Key ID, or within a REST URL, Body, or Header.
-* **ENV(\<place-environment-variable-here>):** The ENV formula uses an environment variable available in the connections/worker pods as the value of the variable. 
+
+### Supported formulas
+
+| Formula | Parameters | Description | Use Case |
+| ------- | ---------- | ----------- | -------- |
+| `FILENAME(<some-path>, <some-regex>)` | 1. File path<br>2. Regex with match group | Applies regex to file name only, excluding the directory. | To extract specific data from a file name. |
+| `FILEPATH(<some-path>, <some-regex>)` | 1. File path<br>2. Regex with match group | Applies regex to the full file path, including the directory. | To extract specific data from a full file path. |
+| `GUID()` | None | Generates a random GUID. | To create a unique identifier during sync. |
+| `GETSECRETVALUE(domain, secretname)` | Domain, Secret name | Retrieves a secret from the Cinchy Secrets Table. | To insert sensitive information like a connection string. |
+| `ENV(<place-environment-variable-here>)` | Environment variable | Uses an available environment variable. | To insert an environment variable value. |
+
 
 {% hint style="danger" %}
-We don't recommend using the ENV formula for credentials.
+Avoid using the ENV formula for credentials.
 {% endhint %}
 
 ## Examples
@@ -89,7 +88,7 @@ This secret can then be used in the REST Header _(Image 7)._
 While in the UI the term is **variables**, the paired XML configuration uses the term **parameters**.
 {% endhint %}
 
-```markup
+```xml
 <Parameters>
 	<!-- Example 1 -->
 	<Parameter name="file_path" />
