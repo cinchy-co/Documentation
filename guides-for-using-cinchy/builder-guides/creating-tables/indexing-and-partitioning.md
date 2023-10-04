@@ -62,7 +62,7 @@ A full-text index is a special index type that provides index access for full-te
 
 Columnar Indexing (also known as [Columnstore indexing](https://docs.microsoft.com/en-us/sql/relational-databases/indexes/columnstore-indexes-overview?view=sql-server-ver16)) is available when running SQL Server 2016+. It's not currently available on a PostgreSQL deployment of the Cinchy platform.
 
-[Columnar indexes](https://www.c-sharpcorner.com/article/understanding-columnstore-indexes-in-sql-server-part-one/) are used for storing and querying large tables. This index uses column-based data storage and query processing to improve query performance. Instead of rowstore or b-tree indexes where the data is logically and physically organized and stored as a table with rows and column, the data in a columnstore indexes is _physically_ stored in columns and _logically_ organized in rows and columns.
+[Columnar indexes](https://learn.microsoft.com/en-us/sql/relational-databases/indexes/columnstore-indexes-overview?view=sql-server-ver16) are used for storing and querying large tables. This index uses column-based data storage and query processing to improve query performance. Instead of rowstore or b-tree indexes where the data is logically and physically organized and stored as a table with rows and column, the data in a columnstore indexes is _physically_ stored in columns and _logically_ organized in rows and columns.
 
 You may want to use a columnar index when:
 

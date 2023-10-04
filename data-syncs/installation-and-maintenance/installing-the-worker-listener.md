@@ -54,7 +54,7 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
   #### ClientSettings
 
   <!-- vale off -->
-
+<!-- markdown-link-check-disable -->
   | Parameter | Value                                               |
   | --------- | --------------------------------------------------- |
   | URL       | Cinchy Web URL (e.g., https://cinchy.net/Cinchy)    |
@@ -113,3 +113,4 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
     - Input `services.msc` and hit Enter.
     - In the list of services, find **Cinchy Worker**.
     - Right-click on the service and select **Start**.
+<!-- markdown-link-check-enable -->

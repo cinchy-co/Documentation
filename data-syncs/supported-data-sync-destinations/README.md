@@ -74,15 +74,15 @@ Salesforce objects are database tables that permit you to store data that's spec
 {% endcontent-ref %}
 
 ### Snowflake Table
-
-[Snowflake ](https://www.snowflake.com/en/)is a fully managed SaaS that provides a single platform for data warehousing, data lakes, data engineering, data science, data application development, and secure sharing and consumption of real-time/shared data.
+<!-- markdown-link-check-disable -->
+[Snowflake ](https://www.snowflake.com)is a fully managed SaaS that provides a single platform for data warehousing, data lakes, data engineering, data science, data application development, and secure sharing and consumption of real-time/shared data.
 
 Snowflake enables data storage, processing, and analytic solutions.
 
 {% content-ref url="snowflake-table.md" %}
 [snowflake-table.md](snowflake-table.md)
 {% endcontent-ref %}
-
+<!-- markdown-link-check-enable -->
 ### SOAP 1.2 Web Service
 
 SOAP (Simple Object Access Protocol) is an XML-based protocol for accessing web services over HTTP.

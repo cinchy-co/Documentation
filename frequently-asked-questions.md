@@ -182,9 +182,9 @@ You must provide the full list of multi-select values. If your field was '1,2' a
 ## How do I know which version of Cinchy I am running?
 
 Navigate to **\<baseURL>/healthcheck**
-
+<!-- markdown-link-check-disable -->
 (ex. if your current URL is https://cinchy.mycompany.com/Tables/123?viewId=0 then you would navigate to https://cinchy.mycompany.com/healthcheck)
-
+<!-- markdown-link-check-enable -->
 The response looks this:
 
 ```json

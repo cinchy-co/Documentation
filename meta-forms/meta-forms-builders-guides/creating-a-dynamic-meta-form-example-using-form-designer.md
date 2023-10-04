@@ -7,7 +7,7 @@ This page outlines how to create a form using the Form Designer, a simple altern
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Before creating a form, you must have the [CLI package set up in your environment](https://cinchy.gitbook.io/cinchy-meta-forms/meta-forms-overview/dynamic-forms-example-using-form-designer)​
-- You must also have [installed and configured the Meta-Forms experience​](../meta-forms-deployment-installation-guide/)
+- You must also have [installed and configured the Meta-Forms experience​](../meta-forms-guide/)
 
 ## Create your Form <a href="#1.-creating-your-form" id="1.-creating-your-form"></a>
 

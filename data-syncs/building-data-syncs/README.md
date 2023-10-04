@@ -70,7 +70,7 @@ In the **Sync Actions Tab**, you can choose your preferred data action. Your mai
 
 #### **Post Sync Tab (Optional)**
 
-In the **Post Sync Tab**, you can use [Cinchy Query Language (CQL)](/cql/the-basics-of-cql/README.md) to refine the post-sync data. For example, you could set up a post-sync script to push retrieved data values into a specific Cinchy table. You can find more on this in the [Post-sync scripts](advanced-settings/post-sync-scripts.md) page.
+In the **Post Sync Tab**, you can use [Cinchy Query Language (CQL)](../../cql/the-basics-of-cql/README.md) to refine the post-sync data. For example, you could set up a post-sync script to push retrieved data values into a specific Cinchy table. You can find more on this in the [Post-sync scripts](advanced-settings/post-sync-scripts.md) page.
 
 <figure><img src="../../.gitbook/assets/image (660).png" alt=""><figcaption>Image 7: Mastering Post Sync Operations</figcaption></figure>
 
@@ -120,7 +120,7 @@ More details on CLI commands can be found in the [CLI commands list](../cli-comm
 
 ### Set Up a listener config (real-time syncs)
 
-If you are setting up a real-time sync, you must set up a listener configuration. You must configure your Event Stream Source with your data sync information. You can review an more on the [Listener Config here.](/data-syncs/)
+If you are setting up a real-time sync, you must set up a listener configuration. You must configure your Event Stream Source with your data sync information. You can review an more on the [Listener Config here.](../supported-real-time-sources/the-listener-configuration-table.md)
 
 1. Navigate to the **Listener Config table** in Cinchy _(Image 12)._
 
