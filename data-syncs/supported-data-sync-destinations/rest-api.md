@@ -75,7 +75,7 @@ You have the option to add a destination filter to your data sync. Please review
 
 ### Retry configuration
 
-Cinchy v5.5 introduced the Retry Configuration for REST API targets. This will automatically retry HTTP Requests on failure based on a defined set of conditions. A single retry configuration is defined for the REST API target, and applies to all requests configured in the Insert, Update, and Delete specifications. This capability provides a mechanism to recover from transient errors such as network disruptions or temporary service outages.
+Retry Configuration automatically retries HTTP Requests on failure based on a defined set of conditions. A single retry configuration is defined for the REST API target, and applies to all requests configured in the Insert, Update, and Delete specifications. This capability provides a mechanism to recover from transient errors such as network disruptions or temporary service outages.
 
 {% hint style="warning" %}
 **Note: the maximum number of retries is capped at 10.**
@@ -123,7 +123,8 @@ The Regex value should be entered as a regular expression. The Regex engine is .
 
 This section has the same parameters as the usual REST API Source. For more information, see[the Rest API source page](../supported-data-sync-sources/rest-api.md)
 
-### **Insert specification**
+### Request specifications
+#### **Insert specification**
 
 Select either:
 
@@ -132,7 +133,7 @@ Select either:
   * HTTP Method: GET, POST, PUT, PATCH, DELETE
   * Endpoint URL: Refers to where this request will be made to and inserted.
 
-### **Update specification**
+#### **Update specification**
 
 Select either:
 
@@ -141,7 +142,7 @@ Select either:
   * HTTP Method: GET, POST, PUT, PATCH, DELETE
   * Endpoint URL: Refers to where this request will be made to and updated.
 
-### **Delete specification**
+#### **Delete specification**
 
 Select either:
 
@@ -149,3 +150,29 @@ Select either:
 * **Request**
   * HTTP Method: GET, POST, PUT, PATCH, DELETE
   * Endpoint URL: Refers to where this request will be made to and deleted.
+
+### Request subsections
+
+#### Request Headers
+
+For more information, see the page about [request headers](../building-data-syncs/advanced-settings/request-headers.md).
+
+#### Files
+
+Use this to upload a file to the target API.
+#### Body
+
+Use this section to add body content.
+
+#### Variables to Extract
+
+You can choose to specify variables to extract from your REST response.
+
+| Parameter        | Description                                   | Example                                                                         |
+| ---------------- | --------------------------------------------- | ------------------------------------------------------------------------------- |
+| Name             | The name of the variable you wish to extract. | Value                                                                           |
+| Extract vale from | The response area you want to extract from | Response Body, Response Header |
+| Path in Response | The path to the above variable.               | $.headers.variable  |
+| Header Vale Regex| Expression using .NET regex to capture a single value. See [.NET Regular Expressions](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions) for more info.| ([^\\/]+$) |
+
+For more information, please see the [Variables](../building-data-syncs/advanced-settings/variables.md) page.
