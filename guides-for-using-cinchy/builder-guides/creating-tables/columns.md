@@ -225,6 +225,7 @@ A `[Full Name]` column can be calculated as `CONCAT([First Name], ' ', [Last Nam
 {% hint style="info" %}
 These columns are similar to computed columns in SQL databases.
 {% endhint %}
+
 ### Live vs Cached Calculated Columns
 
 #### Choose Your Calculation Type
