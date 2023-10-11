@@ -35,7 +35,7 @@ Below is a description of the value that should be used for each column in the `
 | Enabled                         | This is used to enable or disable a client                                                                              |
 | GUID                            | This is a calculated field that will auto generate the client secret                                                    |
 
-### 1.2 API Method Table
+### API Method Table
 
 #### <mark style="color:green;">**POST:**</mark>** Bearer Token Request**
 
