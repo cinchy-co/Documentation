@@ -8,9 +8,9 @@ description: >-
 
 System Properties is a table within Cinchy for managing system properties, such as default time zones, system lockout durations, password expiration, password properties, password attempts allowed etc.
 
-## 1. Set up
+## Setup
 
-The Default of the Systems Properties table is set up as follows _(Image 1)_:
+The Default of the Systems Properties table is set up as follows:
 
 | Property ID | Name                              | Value (Default)       |
 | ----------- | --------------------------------- | --------------------- |
@@ -23,15 +23,14 @@ The Default of the Systems Properties table is set up as follows _(Image 1)_:
 | 11          | Password Expiration (Days)        | 90                    |
 | 15          | Maintenance Enabled               | 0                     |
 
-![Image 1: Default Set Up](<../../.gitbook/assets/image (482).png>)
 
 {% hint style="info" %}
-Please note that this table is case sensitive.
+This table is case sensitive.
 {% endhint %}
 
 ## Configure the table values
 
-The System Properties requirements can be changed by an admin user simply by editing the 'Value' columns where applicable:
+The System Properties requirements can be changed by an admin user by editing the 'Value' columns where applicable:
 
 ### Default time zone
 
