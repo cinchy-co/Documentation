@@ -43,7 +43,8 @@
 
 ## Upgrade guide
 
-* [Upgrading Cinchy](upgrade-guide/upgrade-guides/README.md)
+
+* [Upgrade Cinchy](upgrade-guide/upgrade-guides/README.md)
   * [Cinchy Upgrade Utility](upgrade-guide/upgrade-guides/cinchy-upgrade-utility.md)
   * [Kubernetes upgrades](upgrade-guide/upgrade-guides/kubernetes-upgrades/README.md)
     * [v5.1 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/v5.1-kubernetes.md)
