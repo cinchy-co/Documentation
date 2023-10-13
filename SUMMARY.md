@@ -5,6 +5,7 @@
 ## Release notes
 
 * [Release notes](release-notes/release-notes/README.md)
+  * [5.8 Release Notes](release-notes/release-notes/5.8-release-notes.md)
   * [5.7 Release Notes](release-notes/release-notes/5.7-release-notes.md)
   * [5.6 Release Notes](release-notes/release-notes/5.6-release-notes.md)
   * [5.5 Release Notes](release-notes/release-notes/5.5-release-notes.md)
@@ -41,6 +42,7 @@
   * [IIS](deployment-guide/deployment-guides/iis-deployment-installation.md)
 
 ## Upgrade guide
+
 
 * [Upgrade Cinchy](upgrade-guide/upgrade-guides/README.md)
   * [Cinchy Upgrade Utility](upgrade-guide/upgrade-guides/cinchy-upgrade-utility.md)
@@ -96,13 +98,17 @@
   * [Delete tables](guides-for-using-cinchy/builder-guides/deleting-tables/README.md)
     * [Restore tables, columns, and rows](guides-for-using-cinchy/builder-guides/deleting-tables/restoring-tables-columns-and-rows.md)
   * [Saved queries](guides-for-using-cinchy/builder-guides/saved-queries.md)
-  * [CinchyDXD](guides-for-using-cinchy/builder-guides/cinchydxd-utility/README.md)
-    * [Build the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/building-the-data-experience.md)
-    * [Package the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/packaging-the-data-experience.md)
-    * [Install the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/installing-the-data-experience.md)
-    * [Update the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/updating-the-data-experience.md)
-    * [Repackage the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/repackaging-the-data-experience.md)
-    * [Reinstall the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/reinstalling-the-data-experience.md)
+  * [CinchyDXD](guides-for-using-cinchy/builder-guides/cinchydxd/README.md)
+    * [Overview](guides-for-using-cinchy/builder-guides/cinchydxd-utility/overview.md)
+    * [DXD workflow](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-workflow.md)
+    * [Package the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/package-the-data-experience.md)
+    * [Install the data experience](guides-for-using-cinchy/builder-guides/cinchydxd-utility/install-the-data-experience.md)
+    * [Release package](guides-for-using-cinchy/builder-guides/cinchydxd-utility/release-package.md)
+    * [Changelog](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-changelog.md)
+    * [References](guides-for-using-cinchy/builder-guides/cinchydxd/references/README.md)
+      * [Cinchy DXD commands](guides-for-using-cinchy/builder-guides/cinchydxd/references/cinchy-dxd-commands.md)
+      * [Data Experience Definitions table](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References/data-experience-definitions.md)
+      * [Data Experience Reference table](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References/data-experience-reference.md)
   * [Multilingual support](guides-for-using-cinchy/builder-guides/multi-lingual-support.md)
   * [Integration guides](guides-for-using-cinchy/builder-guides/integration-guides.md)
 * [Administrator Guide](guides-for-using-cinchy/administrator-guide.md)

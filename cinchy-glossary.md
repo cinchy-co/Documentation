@@ -68,7 +68,7 @@ Cinchy ID is a unique identifier assigned automatically to all records within a 
 
 #### Cinchy Upgrade Utility
 
-[The Cinchy Upgrade Utility](deployment-guide/upgrade-guides/upgrades/cinchy-upgrade-utility.md) is an easy to use tool that can help you deploy important changes and upgrades to your Cinchy environment when upgrading versions. Note that not every major or minor release version will require the Utility to be run, however this will be clearly noted in the release notes and upgrade guide.
+[The Cinchy Upgrade Utility](upgrade-guide/upgrade-guides/upgrades/cinchy-upgrade-utility.md) is an easy to use tool that can help you deploy important changes and upgrades to your Cinchy environment when upgrading versions. Note that not every major or minor release version will require the Utility to be run, however this will be clearly noted in the release notes and upgrade guide.
 
 #### Cinchy End-User
 
@@ -103,6 +103,10 @@ Data collaboration entails the collection, exchange and use of data from differe
 #### Data Destination(s)
 
 When setting up a Data Sync, you must define which destination to push data to. Cinchy maintains [a robust list](data-syncs/supported-data-sync-destinations/) of Data Destination connectors and is always working on adding more into the [Connections Experience](cinchy-glossary.md#connections-experience).
+
+### Data Experience
+
+A data experience is a deployable package in Cinchy consisting of tables, queries, groups, and data sync configurations designed for a specific business workflow.
 
 #### Data Source(s)
 

@@ -1,7 +1,3 @@
----
-description: This page outlines the Network Map (Previously called My Data Network
----
-
 ## Network Map
 
 Cinchy comes out of the box with a system applet called **Network Map** _(Image 1)_, which is a visualization of your data on the platform and how everything interconnects.

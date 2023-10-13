@@ -2,7 +2,7 @@
 
 ### Overview <a href="#introduction" id="introduction"></a>
 
-The following living list documents Cinchy Query Language functions. Select the function name to see its individual documentation page. Please note that some CQL functions are"in progress" for support on PGSQL deployments. Please check back regularly for the updated list.
+The following list documents Cinchy Query Language functions. Select the function name to see its individual documentation page. Please note that some CQL functions are"in progress" for support on PGSQL deployments. Please check back regularly for the updated list.
 
 ### CQL functions <a href="#cql-functions" id="cql-functions"></a>
 
