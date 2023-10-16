@@ -124,6 +124,7 @@ The Regex value should be entered as a regular expression. The Regex engine is .
 This section has the same parameters as the usual REST API Source. For more information, see[the Rest API source page](../supported-data-sync-sources/rest-api.md)
 
 ### Request specifications
+
 #### **Insert specification**
 
 Select either:
