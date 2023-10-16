@@ -1,10 +1,10 @@
 # Cinchy Event Broker/CDC
 
-## 1. Overview
+## Overview
 
 The Cinchy Event Broker/CDC is an event streaming source used to listen for changes on Cinchy tables and push those changes to various data sync destinations.
 
-## 2. The Listener Config Table
+## The Listener Config Table
 
 To set up an Stream Source, you must  navigate to the Listener Config table and insert a new row for your data sync _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
 

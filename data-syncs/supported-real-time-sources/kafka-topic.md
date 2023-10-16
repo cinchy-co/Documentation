@@ -1,6 +1,6 @@
 # Kafka Topic
 
-## 1. Overview
+## Overview
 
 The page outlines the parameters that should be included in your listener configuration when setting up a real time sync with a Kafka stream source. This process currently supports **JSON string or AVRO serialized format.**To listen in on multiple topics, you will need to configure multiple listener configs.
 
@@ -8,7 +8,7 @@ The page outlines the parameters that should be included in your listener config
 To listen in on multiple topics, you will need to configure multiple listener configs.
 {% endhint %}
 
-## 2. The Listener Config Table
+## The Listener Config Table
 
 To set up an Stream Source, you must  navigate to the Listener Config table and insert a new row for your data sync _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
 

@@ -1,10 +1,10 @@
 # Salesforce Platform Event
 
-## 1. Overview
+## Overview
 
 [A Salesforce Platform Event ](https://developer.salesforce.com/docs/atlas.en-us.242.0.object\_reference.meta/object\_reference/sforce\_api\_objects\_pushtopic.htm)is a supported Sync Source that you can use in your Cinchy data syncs. The below documentation will refer to the parameters necessary to set up your Platform Event as part of your sync configuration.
 
-## 2. The Listener Config Table
+## The Listener Config Table
 
 To set up an Stream Source, you must navigate to the Listener Config table and insert a new row for your data sync _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
 

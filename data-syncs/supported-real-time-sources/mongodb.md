@@ -1,10 +1,10 @@
 # MongoDB
 
-## 1. Overview
+## Overview
 
 The MongoDB stream source works similar to Cinchy's Change Data Capture functionality. The listener subscribes to monitor the change stream of a specific collection in the database of the MongoDB server. Any actions performed on document(s) inside of that collection are picked up by the listener and sent to the queue.
 
-### 1.1 Limitations
+### Limitations
 
 In order to use change streams in MongoDB, there are a few requirements your environment must meet.
 
@@ -12,7 +12,7 @@ In order to use change streams in MongoDB, there are a few requirements your env
 * The database must use the [WiredTiger](https://docs.mongodb.com/manual/core/wiredtiger/#storage-wiredtiger) storage engine.
 * The replica set or sharded cluster must use replica set protocol [version 1](https://docs.mongodb.com/manual/reference/replica-configuration/#rsconf.protocolVersion).
 
-## 2. The Listener Config Table
+## The Listener Config Table
 
 To set up an Stream Source, you must navigate to the Listener Config table and insert a new row for your data sync _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
 

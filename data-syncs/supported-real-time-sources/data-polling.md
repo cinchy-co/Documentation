@@ -1,12 +1,12 @@
 # Data Polling
 
-## 1. Overview
+## Overview
 
 Version 5.4 of the Cinchy platform introduced data polling, which uses the Cinchy Event Listener to continuously monitor and sync data entries from your SQLServer or DB2 server into your Cinchy table. This capability makes data polling a much easier, effective, and streamlined process and avoids implementing the complex orchestration logic that was previous necessary.
 
 This page outlines the necessary Listener Config values that need to be used prior to setting up your data sync.
 
-## 2. The Listener Config Table
+## The Listener Config Table
 
 To set up an Stream Source, you must  navigate to the Listener Config table and insert a new row for your data sync _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
 

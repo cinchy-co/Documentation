@@ -1,10 +1,10 @@
 # Salesforce Push Topic
 
-## 1. Overview
+## Overview
 
 [A Salesforce Push Topic ](https://developer.salesforce.com/docs/atlas.en-us.242.0.object\_reference.meta/object\_reference/sforce\_api\_objects\_pushtopic.htm)is a supported Sync Source that you can use in your Cinchy data syncs. The below documentation will refer to the parameters necessary to set up your Push Topic as part of your sync configuration.
 
-### 1.1 Scenarios
+### Scenarios
 
 You can use a Push Topic already configured in Salesforce, or have Cinchy Event Listener create the Push Topic for you.
 
@@ -20,7 +20,7 @@ Cinchy will compare the JSON with the properties on the push topic in Salesforce
 
 If the Push Topic name does not exist in Salesforce, Cinchy will attempt to create the Push Topic. If it is successful, it will sync in the Id from Salesforce and start listening on the push topic.
 
-## 2. The Listener Config Table
+## The Listener Config Table
 
 To set up an Stream Source, you must navigate to the Listener Config table and insert a new row for your data sync _(Image 1)_. Most of the columns within the Listener Config table persist across all Stream Sources, however exceptions will be noted. You can find all of these parameters and their relevant descriptions in the tables below.
 
