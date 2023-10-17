@@ -105,7 +105,7 @@ Unique XML patterns may exist across different sources and targets. If you're un
     <figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption>Image 11: Config XML Entry</figcaption></figure>
 
         {% hint style="info" %}
-        The Config XML auto-populates columns like Name and Config Version.
+        The Config XML auto populates columns like Name and Config Version.
         {% endhint %}
 
 5.  **Initiate Sync with the CLI**: If you haven't installed the CLI, refer to the [CLI installation guide](../installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md). Otherwise, launch PowerShell and navigate to the Cinchy CLI directory.

@@ -49,7 +49,7 @@ Once selected you will be able to define the conditions upon which data is pulle
   - Is Not Null
 - **The right-most drop-down** can either be used for a plain value (ex: text, numerical, etc.) This will adjust based on the column data type picked in the left-most drop down. For example, if in the source schema the column is a date, then it renders a date picker.
 
-For example, the below condition would only bring in records where the **source column "Employee Status" is not null** _(Image 2)._
+For example, the below condition would only bring in records where the source column **Employee Status** isn't null _(Image 2)._
 
 <!-- vale on -->
 <figure><img src="../../../.gitbook/assets/image (657).png" alt=""><figcaption><p>Image 2: Conditional Example</p></figcaption></figure>
@@ -87,7 +87,7 @@ There can only be one \<Filter> for each target. To specify more than one condit
 
 <!-- vale off -->
 
-#### Example 2:Filter only target records where the Override ID is not Null _(Image 6)._
+#### Example 2:Filter only target records where the Override ID isn't Null _(Image 6)._
 
 <!-- vale on -->
 
