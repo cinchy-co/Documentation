@@ -78,7 +78,7 @@ You don't need to provide Connections Attributes when using the Cinchy CDC Strea
 
 Each of your Event Listener message keys a message key. **By default, this key is dictated by the Cinchy ID of the record being changed.**
 
-When the worker processes your Event Listener messages, it does so in batches, and for efficiency and to guarantee order, messages that contain the same key will not be processed in the same batch.
+When the worker processes your Event Listener messages, it does so in batches, and for efficiency and to guarantee order, messages that contain the same key won't be processed in the same batch.
 
 The **messageKeyExpression** property allows you to change the default message key to something else.
 
