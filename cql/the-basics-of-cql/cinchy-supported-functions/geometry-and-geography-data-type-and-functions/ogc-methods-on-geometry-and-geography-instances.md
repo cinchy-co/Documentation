@@ -952,7 +952,7 @@ SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 
 SELECT CASE @g.STIntersects(@h)
 WHEN 1 THEN '@g intersects @h'
-ELSE '@g does not intersect @h'
+ELSE '@g doesn't intersect @h'
 END;
 ```
 

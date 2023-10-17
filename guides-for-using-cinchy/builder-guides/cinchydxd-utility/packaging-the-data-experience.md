@@ -62,7 +62,7 @@ PowerShell requires an initial setup when using CinchyDXD.
 
 ![Image 5: Setting up, cont.](<../../../.gitbook/assets/image (310).png>)
 
-**You will get an error message** (above) that `CinchyDXD.ps1 cannot be loaded because the running script is disabled`.
+**You will get an error message** (above) that `CinchyDXD.ps1 can't be loaded because the running script is disabled`.
 
 To resolve this error:
 
