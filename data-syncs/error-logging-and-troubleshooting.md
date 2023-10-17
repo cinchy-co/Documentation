@@ -21,7 +21,7 @@ You are able to switch between Auto Offset Reset types after your initial config
 4. Navigate to the **Event Listener State table.**
 5. Find the column that pertains to your data sync's Listener Config and delete it.
 6. Navigate back to the **Listener Config table.**
-7. Set the **"Status"** column of the Listener Config to **"Enabled"** in order for your new Auto Offset Reset configuration to take effect.
+7. Set the **"Status"** column of the Listener Config to ****Enabled**** in order for your new Auto Offset Reset configuration to take effect.
 
 ### Skipping messages
 

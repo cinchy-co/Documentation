@@ -78,7 +78,7 @@ Note that If there is more than one listener associated with your data sync, you
 
 The below table can be used to help create your Topic JSON needed to set up a real-time sync.
 <!-- vale off -->
-<table><thead><tr><th width="267.66666666666663">Parameter</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td>CursorConfiguration</td><td><p><strong>Mandatory.</strong> The parameters here are used in a basic query which searches for all records in a particular table.</p><p></p><p><em>Note that in our example we need to use a sub-query to prevent an infinite loop if the "CursorColumn" parameter is not unique.</em></p></td><td><p></p><p>Example basic query: </p><pre class="language-sql" data-overflow="wrap"><code class="lang-sql">SELECT Id, Name
+<table><thead><tr><th width="267.66666666666663">Parameter</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td>CursorConfiguration</td><td><p><strong>Mandatory.</strong> The parameters here are used in a basic query which searches for all records in a particular table.</p><p></p><p><em>Note that in our example we need to use a sub-query to prevent an infinite loop if the "CursorColumn" parameter isn't unique.</em></p></td><td><p></p><p>Example basic query: </p><pre class="language-sql" data-overflow="wrap"><code class="lang-sql">SELECT Id, Name
 FROM [SourceTable]
 WHERE Id IN (SELECT TOP (100) Id
     FROM [SourceTable]
