@@ -23,7 +23,7 @@ Cinchy version 5 on IIS comes bundled with common components such as Connections
 - [DotNet Core 6 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.23-windows-hosting-bundle-installer)
 
 {% hint style="warning" %}
-Dotnet 7 is not supported with Cinchy 5.x
+Dotnet 7 isn't supported with Cinchy 5.x
 {% endhint %}
 
 ### Minimum Hardware Requirements
@@ -43,9 +43,9 @@ Dotnet 7 is not supported with Cinchy 5.x
 - Access to Cinchy.net (Cinchy Prod) can be obtained during onboarding.
 - Alternatively, users can request access by sending an email to [support@cinchy.com](mailto:support@cinchy.com).
 
-### Access Cinchy.Releases Table from Cinchy UI
+### Access Cinchy Releases Table from Cinchy UI
 
-1. Navigate to the Cinchy.Releases table from the Cinchy user interface.
+1. Navigate to the **Cinchy Releases** table from the Cinchy user interface.
 
 ### Download Release Artifacts
 
