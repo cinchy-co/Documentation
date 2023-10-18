@@ -173,11 +173,6 @@ with `https://app.cinchy.co`. For localhost, use `http://localhost/Cinchy`.
 | `CinchyAccessTokenLifetime` | Duration for the Cinchy Access Token in v5.4+. Defaults to `7.00:00:00` (7 days). | `7.00:00:00`                           |
 | `DB Type`                   | Database type. Either `PostgreSQL` or `TSQL`.                                     | For SQLSERVER installation:`TSQL`      |
 
-{% hint style="info" %} 4.18.0+ includes session expiration based on the
-CinchyAccessTokenLifetime. For the default of `7.00:00:00`, if you have been
-inactive in Cinchy for 7 days your session will expire and you will need to log
-in again. {% endhint %}
-
 #### SSO installation
 
 For more information on the SSO installation, please seee the
@@ -193,13 +188,13 @@ To connect the application to the database, you must set the `SqlServer` value.
     "SqlServer" : ""
     ```
 
-[SQL Server Authentication Example:](https://www.connectionstrings.com/sql-server/)
+#### SQL Server Authentication example
 
 ```js
 "SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;TrustServerCertificate=True;"
 ```
 
-[SQL Server Windows Authentication Example:](https://www.connectionstrings.com/sql-server/)
+#### SQL Server Windows Authentication example
 
 ```js
 "SqlServer" : "Server=MyServer;Database=Cinchy;Trusted_Connection=True;Connection Timeout=30;Min Pool Size=10;"
@@ -207,7 +202,7 @@ To connect the application to the database, you must set the `SqlServer` value.
 
 ### Serilog
 
-There is a "serilog" property that allows you to configure where it logs to. In
+Cinchy has a `serilog` property that configures where the logs are located. In
 the below code, update the following:
 
 - `"Name"` must be set to "File" so it writes to a physical file on the disk.
@@ -233,7 +228,7 @@ the below code, update the following:
     ]
 ```
 
-## Update the Cinchy appsettings.json
+## Update appsettings.json
 
 1. Navigate to the installation folder for Cinchy (**C:\Cinchy**).
 2. Open the **appsettings.json** file and update the following
@@ -258,69 +253,42 @@ the below code, update the following:
 To connect the application to the database, the `SqlServer` value needs to be
 set.
 
-1.  Find and update the value under the **"ConnectionStrings"** section:
-
-    ```
-    "SqlServer" : ""
-    ```
-
-[SQL Server Authentication Example:](https://www.connectionstrings.com/sql-server/)
-
-```
-"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;"
-```
-
-[SQL Server Windows Authentication Example:](https://www.connectionstrings.com/sql-server/)
-
-```
-"SqlServer" : "Server=MyServer;Database=Cinchy;Trusted_Connection=True;Connection Timeout=30;
-```
-
-{% hint style="danger" %} If you are deploying Cinchy **v5.4+ on an SQL Server
-Database,** you will need to make an addition to your `connectionString`. Adding
-[**TrustServerCertificate=True**](https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.trustservercertificate?view=dotnet-plat-ext-6.0)
-will allow you to bypass the certificate chain during validation.
-
-Example:
+#### SQL Server Authentication example
 
 ```json
-"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;TrustServerCertificate=True"
+"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;TrustServerCertificate=True;"
 ```
 
-{% endhint %}
+#### SQL Server Windows Authentication example
+
+```json
+"SqlServer" : "Server=MyServer;Database=Cinchy;Trusted_Connection=True;Connection Timeout=30;Min Pool Size=10;"
+```
 
 ## Create the IIS applications
 
-1. Open an administrator instance of PowerShell
+1. Open an administrator instance of PowerShell.
 2. Execute the below commands to create the IIS applications and enable
    anonymous authentication. (This is required to allow authentication to be
-   handled by the application)
+   handled by the application).
 
-```
+```powershell
 New-WebApplication -Name Cinchy -Site 'Default Web Site' -PhysicalPath C:\Cinchy -ApplicationPool CinchyWeb
 New-WebApplication -Name CinchySSO -Site 'Default Web Site' -PhysicalPath C:\CinchySSO -ApplicationPool CinchySSO
 Set-WebConfigurationProperty -Filter "/system.webServer/security/authentication/anonymousAuthentication" -Name Enabled -Value True -PSPath IIS:\ -Location "Default Web Site"
 ```
 
-{% hint style="info" %} To enable HTTPS, the server certificate must be loaded
+{% hint style="info" %} To enable HTTPS, you must load the server certificate
 and the standard IIS configuration completed at the Web Site level to add the
 binding. {% endhint %}
 
 ## Test the application
 
-<!-- markdown-link-check-disable -->
-
-1. Access the **\<base url>/Cinchy (http://app.cinchy.co/Cinchy)** through
-   Google Chrome.
+1. Access the `<base url>/Cinchy` (http://app.cinchy.co/Cinchy) through
+   a web browser.
 2. Once the login screen appears, enter the credentials:
-   1. The default username is **admin** and the password is **cinchy**.
-   2. You will be prompted to change your password the first time you log in.
-      <!-- markdown-link-check-enable -->
-      {% hint style="info" %} To avoid users from having to access the
-      application at a URL that contains /Cinchy, you can use a downloadable IIS
-      extension called URL Rewrite to remap requests hitting the \<base url> to
-      \<base url>/Cinchy. The extension is available
-      [here](https://www.iis.net/downloads/microsoft/url-rewrite). {% endhint %}
+   - The default username is **admin** and the password is **cinchy**.
+   - You will be prompted to change your password the first time you log in.
 
 ## Next steps
 
