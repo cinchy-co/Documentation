@@ -2,20 +2,62 @@
 description: This guide serves as a walkthrough of how to deploy v5 on IIS.
 ---
 
-# IIS&#x20;
+# IIS
 
-## Overview and Prerequisites
+## Overview 
 
-Cinchy version 5 on IIS comes bundled with common components such as Connections, Meta Forms, and the Event Listener. This page details the configuration and deployment instructions for **the Cinchy Platform, including SSO.** Click on the links below to be taken to the appropriate pages for other components:
+Cinchy version 5 on IIS comes bundled with common components such as Connections, Meta Forms, and the Event Listener. This page details the configuration and deployment instructions for the Cinchy Platform, including SSO.
 
-* [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
-* [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-* [Meta Forms Deployment](../../meta-forms/meta-forms-guide/)
-* [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
+## Prerequisites
 
-**Ensure that you review the** [**prerequisites listed here**](deployment-planning-overview-and-checklist/deployment-prerequisites/#deployment-prerequisites) prior to performing an IIS Deployment, including downloading all necessary artifacts from the [Cinchy Releases Table.](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded)
+### System Requirements
 
-Please contact [Cinchy Support](../../getting-help.md) if you don't have the credentials required to access the artifacts table.
+- SQL SERVER 2017+
+- SSMS (optional)
+- Install IIS 7.5+ / enable IIS from Windows features
+- Dotnet 6
+
+### DotNet 6 Installation
+
+- [DotNet Core 6 SDK which includes ASP.NET Core /.NET Core Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- [DotNet Core 6 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.23-windows-hosting-bundle-installer)
+
+{% hint style="warning" %}
+Dotnet 7 is not supported with Cinchy 5.x
+{% endhint %}
+
+### Minimum Hardware Requirements
+
+- 2 × 2 GHz Processor
+- 8 GB RAM
+- 4 GB Hard Disk storage available
+
+### Minimum Database Server Hardware Recommendations
+
+- 4 × 2 GHz Processor
+- 12 GB RAM
+- Hard disk storage dependent upon use case. Cinchy maintains historical versions of data and performs soft deletes which will add to the storage requirements.
+
+## Get Access to Cinchy.net (Cinchy Prod Access)
+
+- Access to Cinchy.net (Cinchy Prod) can be obtained during onboarding.
+- Alternatively, users can request access by sending an email to [support@cinchy.com](mailto:support@cinchy.com).
+
+### Access Cinchy.Releases Table from Cinchy UI
+
+1. Navigate to the Cinchy.Releases table from the Cinchy user interface.
+
+### Download Release Artifacts
+
+Download the following items from the "Release Artifacts" column:
+
+- [Cinchy V5.6.2.zip](#) 
+- Cinchy Connection
+- Cinchy Event Listener
+- Cinchy Meta-Forms (optional)
+- Cinchy Maintenance CLI (optional)
+
+Please note that the link to "Cinchy V5.6.2.zip" should be replaced with the actual download link when available.
 
 ## Create a Database
 
