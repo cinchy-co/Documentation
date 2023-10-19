@@ -56,14 +56,11 @@ Navigate to the **Cinchy Releases** table from the Cinchy user interface.
 
 Download the following items from the "Release Artifacts" column:
 
-- [Cinchy V5.6.2.zip](#)
+- Cinchy VX.X.zip
 - Cinchy Connection
 - Cinchy Event Listener
 - Cinchy Meta-Forms (optional)
 - Cinchy Maintenance CLI (optional)
-
-Please note that the link to "Cinchy V5.6.2.zip" should be replaced with the
-actual download link when available.
 
 ## Create a Database
 
@@ -164,14 +161,14 @@ with `https://app.cinchy.co`. For localhost, use `http://localhost/Cinchy`.
 
    <!-- markdown-link-check-enable -->
 
-| Parameter                   | Description                                                                       | Example                                |
-| --------------------------- | --------------------------------------------------------------------------------- | -------------------------------------- |
-| `CinchyUri`                 | The base URL appended with `/Cinchy`.                                             | `http://localhost/Cinchy`              |
-| `CertificatePath`           | Path to the CinchySSO v5 folder for the certificate.                              | `C:\\CinchySSO\\cinchyidentitysrv.pfx` |
-| `StsPublicOriginUri`        | Base URL of the `.well-known` discovery.                                          | `http://localhost/CinchySSO`           |
-| `StsPrivateOriginUri`       | Private Base URL of the `.well-known` discovery.                                  | `http://localhost/CinchySSO`           |
-| `CinchyAccessTokenLifetime` | Duration for the Cinchy Access Token in v5.4+. Defaults to `7.00:00:00` (7 days). | `7.00:00:00`                           |
-| `DB Type`                   | Database type. Either `PostgreSQL` or `TSQL`.                                     | For SQLSERVER installation:`TSQL`      |
+| Parameter                   | Description                                                                       | Example                                                     |
+| --------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `CinchyUri`                 | The base URL appended with `/Cinchy`.                                             | `http://localhost/Cinchy`, `{base_cinchy_url}/Cinchy`       |
+| `CertificatePath`           | Path to the CinchySSO v5 folder for the certificate.                              | `C:\\CinchySSO\\cinchyidentitysrv.pfx`                      |
+| `StsPublicOriginUri`        | Base URL of the `.well-known` discovery.                                          | `http://localhost/CinchySSO`, `{base_cinchy_url}/CinchySSO` |
+| `StsPrivateOriginUri`       | Private Base URL of the `.well-known` discovery.                                  | `http://localhost/CinchySSO`, `{base_cinchy_url}/CinchySSO` |
+| `CinchyAccessTokenLifetime` | Duration for the Cinchy Access Token in v5.4+. Defaults to `7.00:00:00` (7 days). | `7.00:00:00`                                                |
+| `DB Type`                   | Database type. Either `PostgreSQL` or `TSQL`.                                     | For SQLSERVER installation:`TSQL`                           |
 
 #### SSO installation
 
@@ -231,22 +228,21 @@ the below code, update the following:
 ## Update appsettings.json
 
 1. Navigate to the installation folder for Cinchy (**C:\Cinchy**).
-2. Open the **appsettings.json** file and update the following
-   properties:
+2. Open the **appsettings.json** file and update the following properties:
 
 ### AppSettings
 
-| Key                      | Description                                                                         | Example                               |
-| ------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------- |
-| `StsPrivateAuthorityUri` | Match your private Cinchy SSO URL. i.e                                              | `http://localhost/CinchySSO`          |
-| `StsPublicAuthorityUri`  | Match your public Cinchy SSO URL. i.e                                               | `http://localhost/CinchySSO`          |
-| `CinchyPrivateUri`       | Match your private Cinchy URL. i.e                                                  | `http://localhost/Cinchy`             |
-| `CinchyPublicUri`        | Match your public Cinchy URL.                                                       | `http://localhost/Cinchy`             |
-| `UseHttps`               | Use HTTPS.                                                                          | `false`                               |
-| `DB Type`                | Database type.                                                                      | `TSQL`                                |
-| `MaxRequestBodySize`     | Introduced in Cinchy v5.4. Sets file upload size for the Files API. Defaults to 1G. | `1073741824 // 1g`                    |
-| `LogDirectoryPath`       | Match your Web/IDP logs folder path.                                                | `C:\\CinchyLogs\\CinchyWeb`           |
-| `SSOLogPath`             | Match your SSO log folder path.                                                     | `C:\\CinchyLogs\\CinchySSO\\log.json` |
+| Key                      | Description                                                                         | Example                                                     |
+| ------------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `StsPrivateAuthorityUri` | Match your private Cinchy SSO URL.                                                  | `http://localhost/CinchySSO`, `{base_cinchy_url}/CinchySSO` |
+| `StsPublicAuthorityUri`  | Match your public Cinchy SSO URL.                                                   | `http://localhost/CinchySSO`, `{base_cinchy_url}/CinchySSO` |
+| `CinchyPrivateUri`       | Match your private Cinchy URL.                                                      | `http://localhost/Cinchy`, `{base_cinchy_url}/CinchySSO`    |
+| `CinchyPublicUri`        | Match your public Cinchy URL.                                                       | `http://localhost/Cinchy`, `{base_cinchy_url}/Cinchy`       |
+| `UseHttps`               | Use HTTPS.                                                                          | `false`                                                     |
+| `DB Type`                | Database type.                                                                      | `TSQL`                                                      |
+| `MaxRequestBodySize`     | Introduced in Cinchy v5.4. Sets file upload size for the Files API. Defaults to 1G. | `1073741824 // 1g`                                          |
+| `LogDirectoryPath`       | Match your Web/IDP logs folder path.                                                | `C:\\CinchyLogs\\CinchyWeb`                                 |
+| `SSOLogPath`             | Match your SSO log folder path.                                                     | `C:\\CinchyLogs\\CinchySSO\\log.json`                       |
 
 ### Setup the connection string
 
@@ -284,8 +280,8 @@ binding. {% endhint %}
 
 ## Test the application
 
-1. Access the `<base url>/Cinchy` (http://app.cinchy.co/Cinchy) through
-   a web browser.
+1. Access the `<base url>/Cinchy` (http://app.cinchy.co/Cinchy) through a web
+   browser.
 2. Once the login screen appears, enter the credentials:
    - The default username is **admin** and the password is **cinchy**.
    - You will be prompted to change your password the first time you log in.
