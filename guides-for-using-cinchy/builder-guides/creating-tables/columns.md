@@ -16,7 +16,7 @@ You can't create a new column with the same name as a system column.
 
 Cinchy Id is a unique identifier assigned automatically to all records within a normal table. The Cinchy Id is associated with the record permanently and is never reassigned even if the record is deleted.
 
-### 1.2 Version & Draft Version
+### Version & Draft Version
 
 Version and Draft Version are used to track changes and versions.
 
@@ -225,6 +225,7 @@ A `[Full Name]` column can be calculated as `CONCAT([First Name], ' ', [Last Nam
 {% hint style="info" %}
 These columns are similar to computed columns in SQL databases.
 {% endhint %}
+
 ### Live vs Cached Calculated Columns
 
 #### Choose Your Calculation Type

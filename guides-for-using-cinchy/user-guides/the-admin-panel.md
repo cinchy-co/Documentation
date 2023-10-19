@@ -17,7 +17,7 @@ The Cinchy Healthcheck shows information about your system such as current versi
 This section shows a list of viewable log files from your system, as well as their size, creation time, and last modified time _(Image 2)._
 
 {% hint style="warning" %}
-Log files in the Admin Panel are only visible on Cinchy deployments on IIS, or on a version earlier than v5. In those cases, you will need to [navigate to OpenSearch (or comparable component).](../../deployment-guide/deployment-installation-guides/kubernetes-deployment-installation/#5.3.1-accessing-opensearch)
+Log files in the Admin Panel are only visible on Cinchy deployments on IIS, or on a version earlier than v5. In those cases, you will need to [navigate to OpenSearch (or comparable component).](../../deployment-guide/deployment-guides/kubernetes/#5.3.1-accessing-opensearch)
 {% endhint %}
 
 ![Image 2: Cinchy Log Files](<../../.gitbook/assets/image (95).png>)
