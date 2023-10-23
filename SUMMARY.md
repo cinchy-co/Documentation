@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Data collaboration Overview](README.md)
+* [Data Collaboration Overview](README.md)
 
 ## Release notes
 
@@ -171,9 +171,9 @@
 ## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)
-* [Install Meta-Forms](meta-forms/meta-forms-guide/README.md)
-  * [Deploy Meta-Forms (Kubernetes)](meta-forms/meta-forms-guide/deploying-meta-forms-kubernetes.md)
-  * [Deploy Meta-Forms (IIS)](meta-forms/meta-forms-guide/deploying-meta-forms-iis.md)
+* [Install Meta-Forms](meta-forms/install-meta-forms/README.md)
+  * [Deploy Meta-Forms (Kubernetes)](meta-forms/install-meta-forms/deploy-meta-forms-kubernetes.md)
+  * [Deploy Meta-Forms (IIS)](meta-forms/install-meta-forms/deploy-meta-forms-iis.md)
 * [Forms data types](meta-forms/forms-data-types.md)
 * [Meta-Forms Builder Guide](meta-forms/meta-forms-builders-guides/README.md)
   * [Create a dynamic meta-form with tables](meta-forms/meta-forms-builders-guides/creating-a-dynamic-meta-form-using-tables.md)
