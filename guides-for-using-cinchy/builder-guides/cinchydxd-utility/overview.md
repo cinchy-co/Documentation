@@ -2,10 +2,15 @@
 
 ## CinchyDXD introduction
 
-CinchyDXD is a utility that exports a data experiences from a source Cinchy environment to a release package that you can:
 
-- Deploy to an upper environment with the same CinchyDXD utility.
-- Commit to source control to reflect a snapshot of a specific point in the release version.
+
+CinchyDXD is a utility that helps developers manage changes to their solutions built on Cinchy in a controlled and scalable way by enabling source-driven development and team collaboration with governance.
+
+With DXD, you can:
+
+- Manage Cinchy objects related to a particular solution/data product (Data Experience) as code. This code can be exported from an existing Cinchy environment used for development.
+- Leverage existing software development best practices around change management using source-control
+- Deploy the Data Experience into other Cinchy environments.
 
 ## About CinchyDXD 2.0
 
@@ -16,6 +21,20 @@ CinchyDXD 2.0 creates packages for further development in a version controlled e
 CinchyDXD 1.5.0 and later requires Cinchy v4.21.0+ with the Connections UI installed.
 
 For a full list of requirements, see the [Dependencies](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/dependencies.md) page for more information.
+
+## Changelog
+
+See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/version-history-dxd.md) for more details.
+
+## Get started with DXD
+
+To get started using CinchyDXD:
+
+1. [Download CinchyDXD](overview.md#download-cinchydxd)
+1. [Review the DXD workflow](dxd-workflow.md)
+1. [Package your first data experience](package-the-data-experience.md)
+1. [Review the release package](release-package.md) documentation.
+1. [Install the data experience](install-the-data-experience.md) on another environment.
 ## Download CinchyDXD
 
 {% hint style="info" %}
@@ -50,10 +69,6 @@ To download the Utility:
 
 1. Run `.\CinchyDXD.ps1 keygen -o "<TargetDirectory>"`, where `TargetDirectory` is your desired output path.
 1. Find the `dxd.key` file created.
-
-## Changelog
-
-See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/version-history-dxd.md) for more details.
 
 ## Next steps
 
