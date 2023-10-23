@@ -6,7 +6,7 @@ description: This page provides a brief overview of data collaboration
 
 **You are currently browsing the Cinchy v5.7 platform documentation.** For documentation about other versions of the platform, please navigate to the relevant space(s) via the drop-down menu in the upper left of the page.
 
-## What’s the purpose of data collaboration?
+## What’s the purpose of Data Collaboration?
 
 Data collaboration aims to facilitate the sharing, management, and utilization of data across various departments, teams, and systems within an organization. This approach aims to eliminate data silos and reduce the inefficiencies associated with traditional data integration methods like ETL processes or APIs. Data collaboration enables multiple stakeholders to co-produce and maintain data in a controlled, federated manner. Doing so enhances data quality, speeds decision-making, and allows more agile and scalable business operations. Data collaboration aims to maximize the business value derived from data while minimizing the costs and complexities traditionally associated with data management.
 
@@ -56,7 +56,7 @@ The Cinchy data collaboration platform does for data what the **power grid** doe
 
 Individuals aren't homogenized, as in consensus-driven processes, nor equalized through quantitative data processing, as in collective intelligence. Consensus isn't required. Problem resolution is achieved through _systematic convergence toward coherent results._ Collaborative intelligence relies on Collaborative Autonomy to overcome “the consensus barrier” and succeed where other methods have failed.
 
-## Universal access controls, automated governance
+## Universal access controls and automated data governance
 
 One of the most significant advantages of data collaboration is the ease with which data owners can set universal data access controls at the cellular level and automate data governance.
 
