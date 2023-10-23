@@ -8,7 +8,7 @@ CinchyDXD is a utility that helps developers manage changes to their solutions b
 
 With DXD, you can:
 
-- Manage Cinchy objects related to a particular solution/data product (Data Experience) as code. This code can be exported from an existing Cinchy environment used for development.
+- Manage Cinchy objects related to a particular solution/data product (also known as a Data Experience) as code. This code can be exported from an existing Cinchy environment used for development.
 - Leverage existing software development best practices around change management using source-control
 - Deploy the Data Experience into other Cinchy environments.
 
