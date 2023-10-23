@@ -41,13 +41,14 @@ The API Specification section will default with a mandatory Insert Specification
 \
 **Insert Specification**\
 When specifying the Target Column in the Column Mappings section, **all names are case-sensitive.**
-<!-- markdown-link-check-disable -->
+
 | Parameter                                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Example                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Endpoint URL                                                                                           | **Mandatory.** The URL of the [SOAP 1.2 Web Service API endpoint](https://www.ibm.com/docs/en/wsr-and-r/8.5.6?topic=mswsd-retrieving-addresses-from-soap-11-soap-12-endpoints)                                                                                                                                                                                                                                                                                                                      | [https://www.dataaccess.com/webservicesserver/NumberConversion.wso](https://www.dataaccess.com/webservicesserver/NumberConversion.wso) |
 | Has [MTOM Response](https://www.ibm.com/docs/en/integration-bus/10.0?topic=services-what-is-soap-mtom) | This is required to be true if the SOAP API response contains an attachment outside of the SOAP response message. [See this diagram for more information.](https://images.app.goo.gl/E82L6mYrJxCxXwhKA)                                                                                                                                                                                                                                                                                             |                                                                                                                                        |
 | Envelope Namespace                                                                                     | <p>The namespace prefix to use for the SOAP request elements.<br><br>This value will default to <code>soapenv</code> as associated with the following schema: <a href="https://schemas.xmlsoap.org/soap/envelope/">https://schemas.xmlsoap.org/soap/envelope/</a><br><br>You can append the default value, if you wish. For example, setting the value to "foo" would result in the soap request being prefixed with the "foo" namespace.</p><pre><code>foo:Envelope xmlns:foo="...">
 </code></pre> |                                                                                                                                        |
+|                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                        |
 
 ```
 foo:Body>
@@ -63,8 +64,7 @@ By default, the Connections UI will populate this field with `soapenv`, but you 
 \
 This value appears as "soap" in the snippet below.
 
-These should be the values immediately after "xmlns:"\
-
+These should be the values immediately after "xmlns:"\\
 
 <pre><code>?xml version="1.0" encoding="utf-8"?>
 soapenv:Envelope
@@ -84,8 +84,7 @@ The URL describing this namespace in the response.\
 \
 By default, the Connections UI will populate this field with [http://schemas.xmlsoap.org/soap/envelope/](http://schemas.xmlsoap.org/soap/envelope/), however you can delete this value or add additional values, as needed.\
 \
-In the below snippet this value is "[http://www.dataaccess.com/webservicesserver/](http://www.dataaccess.com/webservicesserver/)"\
-
+In the below snippet this value is "[http://www.dataaccess.com/webservicesserver/](http://www.dataaccess.com/webservicesserver/)"\\
 
 ```
 ?xml version="1.0" encoding="utf-8"?>
@@ -112,6 +111,7 @@ You can add in Request Headers by [reviewing the documentation here.](../buildin
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | XML       | <p>The SOAP body is a sub-element of the SOAP envelope, which contains information intended for the ultimate recipient of the message.<br><br>This field is expecting you to specify the SOAP Body.</p> | <pre><code>NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
 </code></pre> |
+|           |                                                                                                                                                                                                         |                                                                                              |
 
 ```
 ubiNum>500/ubiNum>
@@ -139,8 +139,8 @@ You have the option to add a destination filter to your data sync. Please review
 {% endtabs %}
 
 <figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption><p>Image 2: Define your Destination</p></figcaption></figure>
-<!-- markdown-link-check-enable -->
-## Next steps
+
+\## Next steps
 
 * Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md) Note that if you are doing a Full-File sync, the **API Specification > SOAP 1.2 Source section should be filled in.**
 * Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
