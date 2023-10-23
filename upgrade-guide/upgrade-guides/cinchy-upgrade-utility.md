@@ -10,7 +10,7 @@ The Cinchy Upgrade Utility was first introduced in v5.2 to ease a mandatory INT 
 
 ## Considerations
 
-* Upgrades will also be specified on the applicable [Upgrade Guide](broken-reference) page for each release.
+* Upgrades will also be specified on the applicable [Upgrade Guide](../../upgrade-guide/upgrade-guides/README.md) page for each release.
 * Depending on your upgrade path, certain upgrades must be performed in sequential and/or specific order. This will be clearly marked in the[ "Overview and Considerations"](cinchy-upgrade-utility.md#5.-upgrade-overviews-and-considerations) section.
   * **For example: To go from v5.1 to v5.5, you would first have to run the 5.2 upgrade utility and deploy the release. Once validated, you would then run the 5.5 upgrade and deploy that version.**
 * Not all new releases will have changes that require the utility to be run. Review the table in section 4 for the full list.
@@ -25,8 +25,8 @@ The Cinchy Upgrade Utility was first introduced in v5.2 to ease a mandatory INT 
 
 | Release | Upgrade                                                                 | Kubernetes Upgrade                | IIS Upgrade                               |
 | ------- | ----------------------------------------------------------------------- | --------------------------------- | ----------------------------------------- |
-| 5.2     | [INT to BigInt](cinchy-upgrade-utility.md)                              | [Upgrade Guide](broken-reference) | [Upgrade Guide](iis-upgrades/v5.2-iis.md) |
-| 5.5     | [4000 Character Bug](cinchy-upgrade-utility.md#v5.5-4000-character-bug) | [Upgrade Guide](broken-reference) | [Upgrade Guide](iis-upgrades/v5.5-iis.md) |
+| 5.2     | [INT to BigInt](cinchy-upgrade-utility.md)                              | [Upgrade Guide](../../upgrade-guide/upgrade-guides/README.md) | [Upgrade Guide](iis-upgrades/v5.2-iis.md) |
+| 5.5     | [4000 Character Bug](cinchy-upgrade-utility.md#v5.5-4000-character-bug) | [Upgrade Guide](../../upgrade-guide/upgrade-guides/README.md) | [Upgrade Guide](iis-upgrades/v5.5-iis.md) |
 
 ## Overview and considerations
 

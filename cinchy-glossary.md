@@ -68,7 +68,7 @@ Cinchy ID is a unique identifier assigned automatically to all records within a 
 
 #### Cinchy Upgrade Utility
 
-[The Cinchy Upgrade Utility](broken-reference) is an easy to use tool that can help you deploy important changes and upgrades to your Cinchy environment when upgrading versions. Note that not every major or minor release version will require the Utility to be run, however this will be clearly noted in the release notes and upgrade guide.
+The Cinchy Upgrade Utility is an easy to use tool that can help you deploy important changes and upgrades to your Cinchy environment when upgrading versions. Note that not every major or minor release version will require the Utility to be run, however this will be clearly noted in the release notes and upgrade guide.
 
 #### Cinchy End-User
 

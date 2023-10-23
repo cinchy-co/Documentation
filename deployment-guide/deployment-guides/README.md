@@ -8,7 +8,7 @@ This section guides you through the deployment process for Cinchy version 5: fro
   * Once you have familiarized yourself with the above documentation, you may move on to either of the below guides, depending on your preference:
     * [Kubernetes Deployment Installation](kubernetes/)
     * [IIS Deployment Installation](iis-deployment-installation.md)
-* If you are a customer currently on v4 and want to upgrade to v5, start here: [Upgrading from v4 to v5](broken-reference)
+* If you are a customer currently on v4 and want to upgrade to v5, start here: [Upgrading from v4 to v5](../../upgrade-guide/upgrade-guides/README.md)
 
 If you have any questions about the processes outlined in this section, please reach out to the Cinchy Support team:
 

@@ -91,7 +91,7 @@ Cluster sizing recommendations vary and are dependant on a number of deployment 
 
 #### IIS sizing
 
-For sizing recommendations and prerequisites about an IIS deployment, [please review the IIS deployment prerequisites.](broken-reference)
+For sizing recommendations and prerequisites about an IIS deployment, [please review the IIS deployment prerequisites.](../deployment-prerequisites/README.md)
 
 ### Application storage requirements
 
@@ -103,7 +103,7 @@ Cinchy supports both [**Amazon S3**](https://aws.amazon.com/s3/) and [**Azure Bl
 
 If you are using Terraform for your Kubernetes deployment, you will need to set up a new S3 compatible bucket to manually to store your state file. You will also need a bucket for Connections, to store error files created during data syncs.
 
-You will create your **two S3 compatible buckets** using either Amazon or Azure. Ensure that you use the following convention when naming your buckets so that the automation script runs correctly: **\<org>-\<component>-\<cluster>.** These bucket names will be referenced in your configuration files when you [deploy Cinchy on Kubernetes.](broken-reference)
+You will create your **two S3 compatible buckets** using either Amazon or Azure. Ensure that you use the following convention when naming your buckets so that the automation script runs correctly: **\<org>-\<component>-\<cluster>.** These bucket names will be referenced in your configuration files when you [deploy Cinchy on Kubernetes.](../../kubernetes/README.md)
 
 **Example Terraform Bucket:** `cinchy-terraform-state`
 
