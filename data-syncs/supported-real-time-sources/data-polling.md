@@ -32,6 +32,7 @@ The following column parameters can be found in the Listener Config table:
 {% tab title="Topic" %}
 The below table can be used to help create your Topic JSON needed to set up a real-time sync.
 
+<!-- vale off -->
 | Parameter           | Description                                                                                                                                                                                                                                                                         | Example                                                                                                                        |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | CursorConfiguration | <p><strong>Mandatory.</strong> The parameters here are used in a basic query which searches for all records in a particular table.</p><p><em>Note that in our example we need to use a sub-query to prevent an infinite loop if the "CursorColumn" parameter isn't unique.</em></p> | <p>Example basic query:</p><pre class="language-sql" data-overflow="wrap"><code class="lang-sql">SELECT Id, Name
