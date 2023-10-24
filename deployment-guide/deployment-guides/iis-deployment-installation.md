@@ -2,35 +2,89 @@
 description: This guide serves as a walkthrough of how to deploy v5 on IIS.
 ---
 
-# IIS&#x20;
+# IIS
 
-## Overview and Prerequisites
+## Overview
 
-Cinchy version 5 on IIS comes bundled with common components such as Connections, Meta Forms, and the Event Listener. This page details the configuration and deployment instructions for **the Cinchy Platform, including SSO.** Click on the links below to be taken to the appropriate pages for other components:
+Cinchy version 5 on IIS comes bundled with common components such as
+Connections, Meta Forms, and the Event Listener. This page details the
+configuration and deployment instructions for the Cinchy Platform, including
+SSO.
 
-* [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
-* [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-* [Meta Forms Deployment](../../meta-forms/meta-forms-guide/)
-* [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
+## Prerequisites
 
-**Ensure that you review the** [**prerequisites listed here**](deployment-planning-overview-and-checklist/deployment-prerequisites/#deployment-prerequisites) prior to performing an IIS Deployment, including downloading all necessary artifacts from the [Cinchy Releases Table.](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded)
+### System Requirements
 
-Please contact [Cinchy Support](../../getting-help.md) if you don't have the credentials required to access the artifacts table.
+- SQL SERVER 2017+
+- SSMS (optional)
+- Install IIS 7.5+ / enable IIS from Windows features
+- Dotnet 6
+
+### DotNet 6 Installation
+
+- [DotNet Core 6 SDK which includes ASP.NET Core /.NET Core Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- [DotNet Core 6 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.23-windows-hosting-bundle-installer)
+
+{% hint style="warning" %} Dotnet 7 isn't supported with Cinchy 5.x
+{% endhint %}
+
+### Minimum Hardware Requirements
+
+- 2 × 2 GHz Processor
+- 8 GB RAM
+- 4 GB Hard Disk storage available
+
+### Minimum Database Server Hardware Recommendations
+
+- 4 × 2 GHz Processor
+- 12 GB RAM
+- Hard disk storage dependent upon use case. Cinchy maintains historical
+  versions of data and performs soft deletes which will add to the storage
+  requirements.
+
+## Get Access to Cinchy.net (Cinchy Prod Access)
+
+- Access to Cinchy.net (Cinchy Prod) can be obtained during onboarding.
+- Alternatively, users can request access by sending an email to
+  [support@cinchy.com](mailto:support@cinchy.com).
+
+### Access Cinchy Releases Table from Cinchy UI
+
+Navigate to the **Cinchy Releases** table from the Cinchy user interface.
+
+### Download Release Artifacts
+
+Download the following items from the "Release Artifacts" column:
+
+- Cinchy VX.X.zip
+- Cinchy Connection
+- Cinchy Event Listener
+- Cinchy Meta-Forms (optional)
+- Cinchy Maintenance CLI (optional)
 
 ## Create a Database
 
-{% hint style="success" %}
-For more information about creating a database in SQL server, see the [Microsoft Create a database page](https://learn.microsoft.com/en-us/sql/relational-databases/databases/create-a-database?view=sql-server-ver16).
+{% hint style="success" %} For more information about creating a database in SQL
+server, see the
+[Microsoft Create a database page](https://learn.microsoft.com/en-us/sql/relational-databases/databases/create-a-database?view=sql-server-ver16).
 {% endhint %}
 
-1. On your SQL Server 2017+ instance, **create a new database** named Cinchy (or any other name you prefer).
-   1. If you choose an alternate name, in the remaining instructions wherever the database name is referenced, replace the word Cinchy with the name you chose.
-2. Create a single user account **db\_owner privileges** for Cinchy to connect to the database. If you choose to use Windows Authentication instead of SQL Server Authentication, the authorized account must be the same account that runs the IIS Application Pool.
+1. On your SQL Server 2017+ instance, **create a new database** and name it
+   **Cinchy**. {% hint style="success" %} If you choose an alternate name, use
+   the name in the rest of the instructions instead of **Cinchy**. {% endhint %}
+2. Create a single user account with `db_owner privileges` for Cinchy to connect
+   to the database. If you choose to use Windows Authentication instead of SQL
+   Server Authentication, the authorized account must be the same account that
+   runs the IIS Application Pool.
 
 ## Create an IIS application pool
 
-1. On the Windows Server machine, launch an instance of PowerShell as Administrator.
-2. Run the commands below to create the application pool and set its properties.
+1. On the Windows Server machine, launch an instance of PowerShell as
+   Administrator.
+2. Copy and run the PowerShell snippet below to create the application pool and
+   set its priorities. You can also manually create the app pool via the
+   [IIS Manager](https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/).
+3. Verify Db_name → Security → Users → select the user → properties → membership
 
 ```powershell
 Import-Module WebAdministration
@@ -50,7 +104,12 @@ Set-ItemProperty "IIS:\AppPools\$applicationPoolNameWeb" -Name ProcessModel.idle
 Set-ItemProperty "IIS:\AppPools\$applicationPoolNameWeb" -Name Recycling.periodicRestart.privateMemory -Value 0
 ```
 
-3. If you use Windows Authentication in the database or want to run the application under a different user account, execute the commands below to change the application pool identity.
+3. If you use Windows Authentication in the database or want to run the
+   application under a different user account, execute the commands below to
+   change the application pool identity.
+
+{% hint style="info" %} You can also use an alternate name in the application
+pool. {% endhint %}
 
 ```powershell
 $credentials = (Get-Credential -Message "Please enter the Login credentials including your Domain Name").GetNetworkCredential()
@@ -62,14 +121,18 @@ Set-ItemProperty "IIS:\AppPools\$applicationPoolNameSSO" -name processModel.iden
 Set-ItemProperty "IIS:\AppPools\$applicationPoolNameSSO" -name processModel.userName -Value $username
 ```
 
-{% hint style="info" %}
-You may use an alternate application pool name if you prefer.
-{% endhint %}
-
 ## Create the application directories
 
-1. Unzip the **"Cinchy vX.X"** application package (for the Cinchy Platform) that you downloaded from the [Releases Table](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded) into your C drive. This will create 2 directories, C:\Cinchy and C:\CinchySSO. Ensure your application pool accounts has read and execute access to these directories (default accounts are IIS AppPool\CinchyWeb and IIS AppPool\CinchySSO).
-2. Run the below commands in the Administrator instance of PowerShell to create directories for the application logs. Ensure your application pool account has write access to these directories.
+1. Download and unzip the **"Cinchy vX.X"** application package from the
+   [Releases Table](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded).
+   This will create two directories: `Cinchy `and `CinchySSO`. For example, if
+   you unzip at the root of your C drive, the two directories will be
+   `C:\Cinchy `and `C:\CinchySSO`.
+1. Make sure your application pool accounts has read and execute access to these
+   directories.
+1.
+1. Run the below commands in the Administrator instance of PowerShell to create
+   separate directories for Errorlogs and Logs.
 
 ```powershell
 md C:\CinchyLogs\Cinchy
@@ -77,103 +140,78 @@ md C:\CinchyLogs\CinchySSO
 md C:\CinchyErrors
 ```
 
+{% hint style="info" %} You can create it under your single folder as well. For
+example, `md C:\your_folder_name\CinchyLogs\Cinchy`. If you do, make sure to
+replace any related directory instructions with the your folder path. pool.
+{% endhint %}
+
 ## Update the CinchySSO appsettings.json
 
-1. Open the **C:\CinchySSO\appsettings.json** file in a text editor and update the values below.
+1. Open the `C:\CinchySSO\appsettings.json` file in a text editor and update the
+   values below.
 
 ### App Settings
 
 1. Under **AppSettings** section, update the values outlined in the table.
-2. Wherever you see **\<base url>** in the value, replace this with the actual protocol (HTTP or HTTPS) and the domain name (or IP address) you plan to use.
-<!-- markdown-link-check-disable -->
-Ex:. if you're using HTTPS with the domain app.cinchy.co, then **\<base url>** should be replaced with **https://app.cinchy.co**
-<!-- markdown-link-check-enable -->
-| Key                           | Value                                                                                                                                                                                                                              |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **CinchyUri**                 | _\<base url>/Cinchy_                                                                                                                                                                                                               |
-| **CertificatePath**           | <p>Adjust the certificate path to point to the CinchySSO v5 folder.<br><br><em>Ex: C:\CinchySSO\cinchyidentitysrv.pfx</em></p>                                                                                                     |
-| **StsPublicOriginUri**        | <p>The Base URL used by the .well-known discovery.</p><p><br><em>Ex: /cinchySSO</em></p>                                                                                                                                           |
-| **StsPrivateOriginUri**       | <p>The Private Base URL used by the .well-known discovery.<br><br><em>Ex: /cinchySSO</em></p>                                                                                                                                      |
-| **CinchyAccessTokenLifetime** | <p>The duration for the Cinchy Access Token. This determines how long a user can be inactive until they need to re-enter their credentials.</p><p><br>In Cinchy v5.4+ <strong>it defaults to <code>7.00:00:00</code>.</strong></p> |
-| **DB Type**                   | Either "PostgreSQL" or "TSQL"                                                                                                                                                                                                      |
 
-{% hint style="info" %}
-4.18.0+ includes session expiration based on the CinchyAccessTokenLifetime. For the default of `7.00:00:00`, if you have been inactive in Cinchy for 7 days your session will expire and you will need to log in again.
+{% hint style="info" %} Replace `<base url>` with your chosen protocol and
+domain. For example, if using HTTPS on `app.cinchy.co`, substitute `<base url>`
+with `https://app.cinchy.co`. For localhost, use `http://localhost/Cinchy`.
 {% endhint %}
 
-#### Below values are only required for SSO, otherwise leave them as blank <a href="#below-values-are-only-required-for-sso-otherwise-leave-them-as-blank" id="below-values-are-only-required-for-sso-otherwise-leave-them-as-blank"></a>
+   <!-- markdown-link-check-enable -->
 
-| Key                 | Value                                                                                                                                                                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SAMLClientEntityId  | Client Entity Id                                                                                                                                                                                                                      |
-| SAMLIDPEntityId     | Identity Provider Entity Id                                                                                                                                                                                                           |
-| SAMLMetadataXmlPath | Identity Provider metadata XML file path                                                                                                                                                                                              |
-| SAMLSSOServiceURL   | Configure service endpoint for SAML authentication                                                                                                                                                                                    |
-| AcsURLModule        | This parameter is needs to be configured as per your SAML ACS URL. For example, if your ACS URL looks like this - `https:///CinchySSO/identity/AuthServices/Acs`, then the value of this parameter should be "/identity/AuthServices" |
+| Parameter                   | Description                                                                       | Example                                                     |
+| --------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `CinchyUri`                 | The base URL appended with `/Cinchy`.                                             | `http://localhost/Cinchy`, `{base_cinchy_url}/Cinchy`       |
+| `CertificatePath`           | Path to the CinchySSO v5 folder for the certificate.                              | `C:\\CinchySSO\\cinchyidentitysrv.pfx`                      |
+| `StsPublicOriginUri`        | Base URL of the `.well-known` discovery.                                          | `http://localhost/CinchySSO`, `{base_cinchy_url}/CinchySSO` |
+| `StsPrivateOriginUri`       | Private Base URL of the `.well-known` discovery.                                  | `http://localhost/CinchySSO`, `{base_cinchy_url}/CinchySSO` |
+| `CinchyAccessTokenLifetime` | Duration for the Cinchy Access Token in v5.4+. Defaults to `7.00:00:00` (7 days). | `7.00:00:00`                                                |
+| `DB Type`                   | Database type. Either `PostgreSQL` or `TSQL`.                                     | For SQLSERVER installation:`TSQL`                           |
+
+#### SSO installation
+
+For more information on the SSO installation, please seee the
+[SSO installation page](../deployment-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/README.md)
 
 ### Connection string
 
-In order for the application to connect to the database, the "SqlServer" value needs to be set.
+To connect the application to the database, you must set the `SqlServer` value.
 
 1.  Find and update the value under the **"ConnectionStrings"** section:
 
-    ```
+    ```js
     "SqlServer" : ""
     ```
 
-[SQL Server Authentication Example:](https://www.connectionstrings.com/sql-server/)
+#### SQL Server Authentication example
 
-```
-"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;"
+```js
+"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;TrustServerCertificate=True;"
 ```
 
-[SQL Server Windows Authentication Example:](https://www.connectionstrings.com/sql-server/)
+#### SQL Server Windows Authentication example
 
-```
+```js
 "SqlServer" : "Server=MyServer;Database=Cinchy;Trusted_Connection=True;Connection Timeout=30;Min Pool Size=10;"
 ```
 
-{% hint style="danger" %}
-If you are deploying Cinchy **v5.4+ on an SQL Server Database,** you will need to make an addition to your connectionString. Adding [**TrustServerCertificate=True**](https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.trustservercertificate?view=dotnet-plat-ext-6.0) will allow you to bypass the certificate chain during validation.
-
-Example:
-
-```json
-"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;TrustServerCertificate=True"
-```
-{% endhint %}
-
-### External identity claim section
-
-Under the **"ExternalIdentityClaimSection"** section you'll see the following values.
-
-These values are used for SAML SSO. **If you aren't using SSO, keep these values as blank**
-
-<table><thead><tr><th width="546">Key</th><th>Value</th></tr></thead><tbody><tr><td>ExternalIdentityClaim > FirstName > ExternalClaimName</td><td></td></tr><tr><td>ExternalIdentityClaim > LastName > ExternalClaimName</td><td></td></tr><tr><td>ExternalIdentityClaim > Email > ExternalClaimName</td><td></td></tr><tr><td>ExternalIdentityClaim -> MemberOf -> ExternalClaimName</td><td></td></tr></tbody></table>
-
 ### Serilog
 
-1. Cinchy has a **serilog** property that allows you to configure where it logs to. In the below code, update the following:
-   1. "Name" must be set to "File" so it writes to a physical file on the disk.
-   2. Set "path" to the file path to where you want it to log.
+Cinchy has a `serilog` property that configures where the logs are located. In
+the below code, update the following:
 
-{% hint style="info" %}
-This configuration makes a log every day (defined by the _"rollingInterval"_ value) and keeps your file count to 30 (defined by the _"retainedFileCountLimit"_ value).
-{% endhint %}
+- `"Name"` must be set to "File" so it writes to a physical file on the disk.
+- Set `"path"` to the file path to where you want it to log.
+- Replace `"WriteTo"` section with following:
 
 ```json
-    "Serilog": {
-    "MinimumLevel": {
-      "Default": "Debug",
-      "Override": {
-        "Microsoft": "Warning",
-        "System.Net": "Warning"
-      }
-    },
-    "WriteTo": [
+"WriteTo": [
       {
         "Name": "File",
         "Args": {
+// For the "path" variable, please refer to the original path in your system where these log folders were created.
           "path": "C:\\CinchyLogs\\CinchySSO\\log.json",
           "preserveLogFilename": true,
           "shared": "true",
@@ -185,90 +223,74 @@ This configuration makes a log every day (defined by the _"rollingInterval"_ val
         }
       }
     ]
-  },
 ```
 
-## Update the Cinchy appsettings.json
+## Update appsettings.json
 
-1. Navigate to **C:\Cinchy**
-2. Navigate to the **appsettings.json file** and update the following properties:
+1. Navigate to the installation folder for Cinchy (**C:\Cinchy**).
+2. Open the **appsettings.json** file and update the following properties:
 
 ### AppSettings
 
-| Key                        | Value                                                                                                                                                                                                                                                                                          |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **StsPrivateAuthorityUri** | <p>This should match your private Cinchy SSO URL.<br><br><em>Ex: /CinchySSO</em></p>                                                                                                                                                                                                           |
-| **StsPublicAuthorityUri**  | <p>This should match your public Cinchy SSO URL.<br><br><em>Ex: /CinchySSO</em></p>                                                                                                                                                                                                            |
-| **CinchyPrivateUri**       | <p>This should match your private Cinchy URL.<br><br><em>Ex: /Cinchy</em></p>                                                                                                                                                                                                                  |
-| **CinchyPublicUri**        | <p>This should match your public Cinchy URL.<br><br><em>Ex: /Cinchy</em></p>                                                                                                                                                                                                                   |
-| **UseHttps**               | This is "true" by default.                                                                                                                                                                                                                                                                     |
-| **DB Type**                | Either "PostgreSQL" or "TSQL"                                                                                                                                                                                                                                                                  |
-| **“MaxRequestBodySize”**   | <p><strong>This capability was introduced in Cinchy v5.4</strong></p><p>This configurable property to allow you to set your own file upload size for the Files API, should you wish. <strong>It's defaulted to 1G.</strong></p><pre><code>“MaxRequestBodySize”: 1073741824 // 1g
-</code></pre> |
-|                            |                                                                                                                                                                                                                                                                                                |
+| Key                      | Description                                                                         | Example                                                     |
+| ------------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `StsPrivateAuthorityUri` | Match your private Cinchy SSO URL.                                                  | `http://localhost/CinchySSO`, `{base_cinchy_url}/CinchySSO` |
+| `StsPublicAuthorityUri`  | Match your public Cinchy SSO URL.                                                   | `http://localhost/CinchySSO`, `{base_cinchy_url}/CinchySSO` |
+| `CinchyPrivateUri`       | Match your private Cinchy URL.                                                      | `http://localhost/Cinchy`, `{base_cinchy_url}/CinchySSO`    |
+| `CinchyPublicUri`        | Match your public Cinchy URL.                                                       | `http://localhost/Cinchy`, `{base_cinchy_url}/Cinchy`       |
+| `UseHttps`               | Use HTTPS.                                                                          | `false`                                                     |
+| `DB Type`                | Database type.                                                                      | `TSQL`                                                      |
+| `MaxRequestBodySize`     | Introduced in Cinchy v5.4. Sets file upload size for the Files API. Defaults to 1G. | `1073741824 // 1g`                                          |
+| `LogDirectoryPath`       | Match your Web/IDP logs folder path.                                                | `C:\\CinchyLogs\\CinchyWeb`                                 |
+| `SSOLogPath`             | Match your SSO log folder path.                                                     | `C:\\CinchyLogs\\CinchySSO\\log.json`                       |
 
-### Connection string
+### Setup the connection string
 
-To connect the application to the database, the `SqlServer` value needs to be set.
+To connect the application to the database, the `SqlServer` value needs to be
+set.
 
-1.  Find and update the value under the **"ConnectionStrings"** section:
-
-    ```
-    "SqlServer" : ""
-    ```
-
-[SQL Server Authentication Example:](https://www.connectionstrings.com/sql-server/)
-
-```
-"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;"
-```
-
-[SQL Server Windows Authentication Example:](https://www.connectionstrings.com/sql-server/)
-
-```
-"SqlServer" : "Server=MyServer;Database=Cinchy;Trusted_Connection=True;Connection Timeout=30;
-```
-
-{% hint style="danger" %}
-If you are deploying Cinchy **v5.4+ on an SQL Server Database,** you will need to make an addition to your `connectionString`. Adding [**TrustServerCertificate=True**](https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.trustservercertificate?view=dotnet-plat-ext-6.0) will allow you to bypass the certificate chain during validation.
-
-Example:
+#### SQL Server Authentication example
 
 ```json
-"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;TrustServerCertificate=True"
+"SqlServer" : "Server=MyServer;Database=Cinchy;User ID=cinchy;Password=password;Trusted_Connection=False;Connection Timeout=30;Min Pool Size=10;TrustServerCertificate=True;"
 ```
-{% endhint %}
+
+#### SQL Server Windows Authentication example
+
+```json
+"SqlServer" : "Server=MyServer;Database=Cinchy;Trusted_Connection=True;Connection Timeout=30;Min Pool Size=10;"
+```
 
 ## Create the IIS applications
 
-1. Open an administrator instance of PowerShell
-2. Execute the below commands to create the IIS applications and enable anonymous authentication. (This is required to allow authentication to be handled by the application)
+1. Open an administrator instance of PowerShell.
+2. Execute the below commands to create the IIS applications and enable
+   anonymous authentication. (This is required to allow authentication to be
+   handled by the application).
 
-```
+```powershell
 New-WebApplication -Name Cinchy -Site 'Default Web Site' -PhysicalPath C:\Cinchy -ApplicationPool CinchyWeb
 New-WebApplication -Name CinchySSO -Site 'Default Web Site' -PhysicalPath C:\CinchySSO -ApplicationPool CinchySSO
 Set-WebConfigurationProperty -Filter "/system.webServer/security/authentication/anonymousAuthentication" -Name Enabled -Value True -PSPath IIS:\ -Location "Default Web Site"
 ```
 
-{% hint style="info" %}
-To enable HTTPS, the server certificate must be loaded and the standard IIS configuration completed at the Web Site level to add the binding.
-{% endhint %}
+{% hint style="info" %} To enable HTTPS, you must load the server certificate
+and the standard IIS configuration completed at the Web Site level to add the
+binding. {% endhint %}
 
 ## Test the application
-<!-- markdown-link-check-disable -->
-1. Access the **\<base url>/Cinchy (http://app.cinchy.co/Cinchy)** through Google Chrome.
+
+1. Access the `<base url>/Cinchy` (http://app.cinchy.co/Cinchy) through a web
+   browser.
 2. Once the login screen appears, enter the credentials:
-   1. The default username is **admin** and the password is **cinchy**.
-   2. You will be prompted to change your password the first time you log in.
-<!-- markdown-link-check-enable -->
-{% hint style="info" %}
-To avoid users from having to access the application at a URL that contains /Cinchy, you can use a downloadable IIS extension called URL Rewrite to remap requests hitting the \<base url> to \<base url>/Cinchy. The extension is available [here](https://www.iis.net/downloads/microsoft/url-rewrite).
-{% endhint %}
+   - The default username is **admin** and the password is **cinchy**.
+   - You will be prompted to change your password the first time you log in.
 
 ## Next steps
 
-Navigate to the following sub-pages to deploy the following bundled v5 components:
+Navigate to the following sub-pages to deploy the following bundled v5
+components:
 
-* [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
-* [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-* [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
+- [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
+- [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
+- [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
