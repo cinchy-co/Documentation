@@ -85,20 +85,34 @@ The example below is an example of a Topic JSON for the Listener Config.
 {% endtab %} {% tab title="Source Details" %} The following parameters will help
 to define your data sync source and how it functions.
 
-| Parameter           | Description                                                                                                          | Example                                     |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| Source              | Mandatory. Select your source from the drop down menu.                                                               | SOAP 1.2 Web Service                        |
-| authType            | Mandatory. Select the type of authentication you wish to use in this sync: None, WSSE, Basic.                        | Basic                                       |
-| Use Password Digest | Use only with WSSE authType and Password Type as **PasswordDigest**. Otherwise, leave unchecked.                     |                                             |
-| Request Timeout     | Mandatory. Set a timeout in milliseconds. No maximum value. Minimum greater than 0. Default is 100 milliseconds.     | 2000                                        |
-| Endpoint            | Mandatory. Contains your SOAP 1.2 Web Service API endpoint.                                                          |                                             |
-| Has Mtom Response   | Required to be true if SOAP API response contains an attachment outside the message.                                 |                                             |
-| Record Xpath        | Mandatory. The Xpath to select records to extract from the SOAP response. Starts with ‘//’ followed by the tag name. |                                             |
-| Envelope Namespace  | Namespace prefix for SOAP request elements.                                                                          | "foo"                                       |
-| Namespaces - Name   | Name of your SOAP namespace tags in request and response.                                                            | "soap"                                      |
-| Namespaces - Value  | URL describing this namespace in the response.                                                                       | "http://schemas.xmlsoap.org/soap/envelope/" |
+### Namespaces
+
+You are required to define every Namespace present in your SOAP request, or in
+the SOAP response. You must define an envelope schema in the **Namespace** section. Use the following schema as a default:
+
+- **Name**: soapenv 
+- **Value**: "http://www.w3.org/2003/05/soap-envelope" 
+
+
+| Parameter          | Description                                               | Example                                     |
+| ------------------ | --------------------------------------------------------- | ------------------------------------------- |
+| Namespaces - Name  | Name of your SOAP namespace tags in request and response. | "soap"                                      |
+| Namespaces - Value | URL describing this namespace in the response.            | "http://schemas.xmlsoap.org/soap/envelope/" |
+
+### SOAP 1.2 parameters
+
+| Parameter           | Description                                                                                                                                                                                 | Example   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| authType            | **Mandatory**. Select the type of authentication you wish to use in this sync: None, WSSE, Basic.                                                                                               | Basic     |
+| Use Password Digest | Use only with WSSE authType and Password Type as **PasswordDigest**. Otherwise, leave unchecked.                                                                                            |           |
+| Request Timeout     | **Mandatory**. Set a timeout in milliseconds. No maximum value. Minimum greater than 0. Default is 100 milliseconds.                                                                            | 2000      |
+| Endpoint            | **Mandatory**. Contains your SOAP 1.2 Web Service API endpoint.                                                                                                                                 |           |
+| Has Mtom Response   | Required to be true if SOAP API response contains an attachment outside the message.                                                                                                        |           |
+| Record Xpath        | **Mandatory**. The Xpath to select records to extract from the SOAP response. Starts with ‘//’ followed by the tag name.                                                                        |           |
+| Envelope Namespace  | Namespace prefix for SOAP request elements. Make sure the envelope matches the Namespace definition. We recommend using `soapenv` with a value of "http://www.w3.org/2003/05/soap-envelope" | "soapenv" |
 
 <figure><img src="../../.gitbook/assets/image (339).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
+
 {% endtab %}
 
 {% tab title="Schema" %} **The**
