@@ -32,7 +32,51 @@ You can find the parameters in the **Info** tab below _(Image 1)_.
 The following table outlines the mandatory and optional parameters you will find
 on the Source tab _(Image 2)._
 
-{% tabs %} {% tab title="Source Details" %} The following parameters will help
+{% tabs %} {% tab title="Listener Details" %}
+
+### Listener Config
+
+To configure a SOAP 1.2 (Cinchy Event Triggered) connection, you must configure
+a listener via the Listener Config table with an `Event Connector Type` of
+**Cinchy CDC**.
+
+Review the
+[Cinchy Event Broker/CDC Listener Configuration values here](cinchy-event-broker-cdc/),
+and then navigate to
+[the Listener Config table](../supported-real-time-sources/the-listener-configuration-table.md)
+to input a new row.
+
+When setting up your listener configuration for your data sync, keeping the
+following constraints in mind:
+
+- **Column names** in the listener config shouldn't contain spaces. If they do,
+  they will be automatically removed. For example, a column named **Company
+  Name** will become the replacement parameter **@CompanyName**.
+- The replacement parameter names are **case sensitive.**
+- **Column names** in the listener config shouldn't be prefixes of other column
+  names. For example, if you have a column called **Name**, you shouldn't have
+  another called **Name2** as the value of **@Name2** may end up being replaced
+  by the value of **@Name** suffixed with a `2`.
+
+#### Example Listener Configuration
+
+```json
+{
+  "tableGuid": "420c1851-31ed-4ada-a71b-31659bca6f92",
+  "fields": [
+    {
+      "column": "Cinchy Id",
+      "alias": "CinchyId"
+    },
+    {
+      "column": "Company Name",
+      "alias": "CompanyName"
+    }
+  ]
+}
+```
+
+{% endtab %} {% tab title="Source Details" %} The following parameters will help
 to define your data sync source and how it functions.
 
 | Parameter           | Description                                                                                                          | Example                                        |
@@ -41,11 +85,11 @@ to define your data sync source and how it functions.
 | authType            | Mandatory. Select the type of authentication you wish to use in this sync: None, WSSE, Basic.                        | Basic                                          |
 | Use Password Digest | Use only with WSSE authType and Password Type as **PasswordDigest**. Otherwise, leave unchecked.                     |                                                |
 | Request Timeout     | Mandatory. Set a timeout in milliseconds. No maximum value. Minimum greater than 0. Default is 100 milliseconds.     | 2000                                           |
-| Endpoint            | Mandatory. Contains your SOAP 1.2 Web Service API endpoint.                                                          | `dataaccess`                                     |
+| Endpoint            | Mandatory. Contains your SOAP 1.2 Web Service API endpoint.                                                          |                                                |
 | Has Mtom Response   | Required to be true if SOAP API response contains an attachment outside the message.                                 |                                                |
 | Record Xpath        | Mandatory. The Xpath to select records to extract from the SOAP response. Starts with ‘//’ followed by the tag name. |                                                |
 | Envelope Namespace  | Namespace prefix for SOAP request elements.                                                                          | "foo"                                          |
-| Namespaces - Name   | Name of your SOAP namespace tags in request and response. Appears as "soap" in the snippet below.                    | "soap"                                         |
+| Namespaces - Name   | Name of your SOAP namespace tags in request and response.                                                            | "soap"                                         |
 | Namespaces - Value  | URL describing this namespace in the response.                                                                       | "http://www.dataaccess.com/webservicesserver/" |
 
 {% endtab %}
@@ -68,7 +112,7 @@ Select **Show Advanced** for more options for the Schema section.
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
-| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.                                                                                                                                                                                                                                                                                                                                                                             |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
 You can choose to add in a **Transformation > String Replacement** by inputting

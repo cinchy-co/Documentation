@@ -1,0 +1,14 @@
+{
+	"tableGuid": "ef6710ca-6e59-4b4a-86d3-f6d24ed7658b", --guid of the table you are reading from (i.e. turned on CDC)
+	"fields": [
+		{
+			"column": "Cinchy Id", -- columns you want back from request in table you are reading from
+			"alias" : "Andrew", -- this will alias your column for read purposes
+			"deserializeJsonValue" : true	--on read out it will turn text to json (please validate with qa)
+		}
+	],
+	"filter": "New.[Is Valid] = 1 AND (New.[Is Excluded] = 0 OR New.[Is Excluded] IS NULL)" --WHERE clause; NEW & OLD is special
+	"messageKeyExpression" : "value" -- this provides a key for the listener applciation to match and push into specific topics in kafka/broker
+	"next_cursor" : "ABCS" -- this is your offset it is provided in response when request sent and offsets for future requests
+	"batchSize" : 1000 -- how many records are read per request (if not provided/invalid default to 1; max allowed is 1000)
+}
