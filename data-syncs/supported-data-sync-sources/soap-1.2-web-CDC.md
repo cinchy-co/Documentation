@@ -96,7 +96,7 @@ the SOAP response. You must define an envelope schema in the **Namespace** secti
 
 | Parameter          | Description                                               | Example                                     |
 | ------------------ | --------------------------------------------------------- | ------------------------------------------- |
-| Namespaces - Name  | Name of your SOAP namespace tags in request and response. | "soap"                                      |
+| Namespaces - Name  | Name of your SOAP namespace tags in request and response. | "soapenv"                                      |
 | Namespaces - Value | URL describing this namespace in the response.            | "http://schemas.xmlsoap.org/soap/envelope/" |
 
 ### SOAP 1.2 parameters
