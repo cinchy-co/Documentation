@@ -99,7 +99,7 @@ above.
 | Field Property         | Description                          | Example Value |
 | ---------------------- | ------------------------------------ | ------------- |
 | `column`               | Column name to fetch from the table. | `Cinchy Id`   |
-| `alias`                | Alias for the column.                | `JohnDoe`     |
+| `alias`                | Alias for the column.                | `CinchyId`     |
 | `deserializeJsonValue` | Converts text to JSON on read out.   | `true`        |
 
 ### Topic JSON example
@@ -169,8 +169,8 @@ columns/rows.
 **"New" Example:**
 
 In the below filter, we only want to sync data where the `[Approval State]` of a
-record is newly 'Approved'. For example, if a record was changed from 'Draft' to
-'Approved', the filter would sync the record.
+record is newly `Approved`. For example, if a record was changed from `Draft` to
+`Approved`, the filter would sync the record.
 
 {% hint style="info" %} Due to internal logic, newly created records will be
 tagged as both **New** and **Old**. {% endhint %}
@@ -182,21 +182,21 @@ tagged as both **New** and **Old**. {% endhint %}
 **"Old" Example:**
 
 In the below filter, we only want to sync data where the `[Status]` of a record
-was 'In Progress' but has since been updated to any other `[Status]`. For
-example, if a record was changed from 'In Progress' to 'Done', the filter would
+was `In Progress` but has since been updated to any other `[Status]`. For
+example, if a record was changed from `In Progress` to `Done`, the filter would
 sync the record.
 
 {% hint style="info" %} Due to internal logic, newly created records will be
 tagged as both **New** and **Old**. {% endhint %}
 
 ```
-"filter": "Old.[Status] = 'In Progress'
+"filter": "Old.[Status] = `In Progress`
 ```
 
 
 #### Connection Attributes
 
-You don't need to provide Connections Attributes when using the Cinchy CDC
+You don`t need to provide Connections Attributes when using the Cinchy CDC
 Stream Source.
 
 If you're inputting your configuration via the Listener Config table, you must
