@@ -109,7 +109,7 @@ the SOAP response. You must define an envelope schema in the **Namespace** secti
 | Endpoint            | **Mandatory**. Contains your SOAP 1.2 Web Service API endpoint.                                                                                                                                 |           |
 | Has Mtom Response   | Required to be true if SOAP API response contains an attachment outside the message.                                                                                                        |           |
 | Record Xpath        | **Mandatory**. The Xpath to select records to extract from the SOAP response. Starts with ‘//’ followed by the tag name.                                                                        |           |
-| Envelope Namespace  | Namespace prefix for SOAP request elements. Make sure the envelope matches the Namespace definition. We recommend using `soapenv` with a value of "http://www.w3.org/2003/05/soap-envelope" | "soapenv" |
+| Envelope Namespace  | Namespace prefix for SOAP request elements. Make sure the envelope matches the Namespace definition for the envelope. | "soapenv" |
 
 <figure><img src="../../.gitbook/assets/image (339).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
