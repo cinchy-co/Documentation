@@ -37,10 +37,14 @@ on the Source tab _(Image 2)._
 ### Listener Config
 
 To configure a SOAP 1.2 (Cinchy Event Triggered) connection, you must configure
-a listener via the Listener Config table with an `Event Connector Type` of
-**Cinchy CDC**.
+a listener via the **Listener Config** table. When you create a sync in the
+table, do the following:
 
-Review the
+1. Enter the name of your Listener.
+1. Enter `Cinchy CDC` under **Event Connector Type**.
+1. Create your Topic JSON.
+
+For more information, review the
 [Cinchy Event Broker/CDC Listener Configuration values here](cinchy-event-broker-cdc/),
 and then navigate to
 [the Listener Config table](../supported-real-time-sources/the-listener-configuration-table.md)
@@ -59,6 +63,8 @@ following constraints in mind:
   by the value of **@Name** suffixed with a `2`.
 
 #### Example Listener Configuration
+
+The example below is an example of a Topic JSON for the Listener Config.
 
 ```json
 {
@@ -79,19 +85,20 @@ following constraints in mind:
 {% endtab %} {% tab title="Source Details" %} The following parameters will help
 to define your data sync source and how it functions.
 
-| Parameter           | Description                                                                                                          | Example                                        |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| Source              | Mandatory. Select your source from the drop down menu.                                                               | SOAP 1.2 Web Service                           |
-| authType            | Mandatory. Select the type of authentication you wish to use in this sync: None, WSSE, Basic.                        | Basic                                          |
-| Use Password Digest | Use only with WSSE authType and Password Type as **PasswordDigest**. Otherwise, leave unchecked.                     |                                                |
-| Request Timeout     | Mandatory. Set a timeout in milliseconds. No maximum value. Minimum greater than 0. Default is 100 milliseconds.     | 2000                                           |
-| Endpoint            | Mandatory. Contains your SOAP 1.2 Web Service API endpoint.                                                          |                                                |
-| Has Mtom Response   | Required to be true if SOAP API response contains an attachment outside the message.                                 |                                                |
-| Record Xpath        | Mandatory. The Xpath to select records to extract from the SOAP response. Starts with ‘//’ followed by the tag name. |                                                |
-| Envelope Namespace  | Namespace prefix for SOAP request elements.                                                                          | "foo"                                          |
-| Namespaces - Name   | Name of your SOAP namespace tags in request and response.                                                            | "soap"                                         |
-| Namespaces - Value  | URL describing this namespace in the response.                                                                       | "http://www.dataaccess.com/webservicesserver/" |
+| Parameter           | Description                                                                                                          | Example                                     |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| Source              | Mandatory. Select your source from the drop down menu.                                                               | SOAP 1.2 Web Service                        |
+| authType            | Mandatory. Select the type of authentication you wish to use in this sync: None, WSSE, Basic.                        | Basic                                       |
+| Use Password Digest | Use only with WSSE authType and Password Type as **PasswordDigest**. Otherwise, leave unchecked.                     |                                             |
+| Request Timeout     | Mandatory. Set a timeout in milliseconds. No maximum value. Minimum greater than 0. Default is 100 milliseconds.     | 2000                                        |
+| Endpoint            | Mandatory. Contains your SOAP 1.2 Web Service API endpoint.                                                          |                                             |
+| Has Mtom Response   | Required to be true if SOAP API response contains an attachment outside the message.                                 |                                             |
+| Record Xpath        | Mandatory. The Xpath to select records to extract from the SOAP response. Starts with ‘//’ followed by the tag name. |                                             |
+| Envelope Namespace  | Namespace prefix for SOAP request elements.                                                                          | "foo"                                       |
+| Namespaces - Name   | Name of your SOAP namespace tags in request and response.                                                            | "soap"                                      |
+| Namespaces - Value  | URL describing this namespace in the response.                                                                       | "http://schemas.xmlsoap.org/soap/envelope/" |
 
+<figure><img src="../../.gitbook/assets/image (339).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Schema" %} **The**
@@ -125,8 +132,6 @@ the following:
 
 {% hint style="info" %} Note that you can have more than one String Replacement
 {% endhint %} {% endtab %} {% endtabs %}
-
-<figure><img src="../../.gitbook/assets/image (339).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
 
 ## Next steps
 
