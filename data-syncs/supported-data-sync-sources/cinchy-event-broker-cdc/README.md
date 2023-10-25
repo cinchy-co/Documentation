@@ -209,10 +209,19 @@ insert the below text into the column:
 {% endtab %}
 
 {% tab title="Schema" %}
+
+### Schema section 
+
 **The**[ **Schema** ](../../building-data-syncs/columns-and-mappings/#2.-schema-columns)**section**
 is where you define which source columns you want to sync in your connection.
-You have the option to add in a Standard, Calculated, Conditional, or JavaScript
-column. You can repeat the values for multiple columns.
+You have the option to add the following columns:
+
+- Standard
+- Calculated
+- Conditional 
+-  JavaScript
+
+You can repeat the values for multiple columns.
 
 | Parameter   | Description                                                                                                   | Example |
 | ----------- | ------------------------------------------------------------------------------------------------------------- | ------- |
@@ -221,6 +230,9 @@ column. You can repeat the values for multiple columns.
 | Data Type   | **Mandatory.** The data type of the column values.                                                            | Text    |
 | Description | **Optional.** You may choose to add a description to your column.                                             |         |
 
+
+### Advanced parameters
+
 Select **Show Advanced** for more options for the Schema section.
 
 | Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Example |
@@ -228,7 +240,10 @@ Select **Show Advanced** for more options for the Schema section.
 | Mandatory       | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Mandatory is checked</strong> on a column, then all rows are synced with the execution log status of failed, and the source error of <strong>"Mandatory Rule Violation"</strong></li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul> |         |
 | Validate Data   | <ul><li><strong>If both Mandatory and Validated</strong> <strong>are checked</strong> on a column, then rows where the column is empty are rejected</li></ul><ul><li><strong>If just Validated is checked</strong> on a column, then all rows are synced.</li></ul>                                                                                                                                                                                                                   |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
-| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.\_                                                                                                                                                                                                                                                     
+                                                                                                                      |         |
+
+### String replacement
 
 You can choose to add in a **Transformation > String Replacement** by inputting
 the following:
