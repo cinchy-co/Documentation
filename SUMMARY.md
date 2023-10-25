@@ -64,7 +64,7 @@
     * [v5.4 (IIS)](upgrade-guide/upgrade-guides/iis-upgrades/v5.4-iis.md)
     * [v5.5 (IIS)](upgrade-guide/upgrade-guides/iis-upgrades/v5.5-iis.md)
     * [v5.6 (IIS)](upgrade-guide/upgrade-guides/iis-upgrades/v5.6-iis.md)
-    * [v5.7 (IIS)](upgrade-guide/upgrade-guides/iis-upgrades/v5.6-iis.md)
+    * [v5.7 (IIS)](upgrade-guide/upgrade-guides/iis-upgrades/v5.7-iis.md)
   * [Upgrading from v4 to v5](upgrade-guide/upgrade-guides/upgrading-from-v4-to-v5.md)
 
 ## Guides for using Cinchy
