@@ -32,7 +32,7 @@ These prerequisites apply whether you are installing on Azure or on AWS.
     - For an introduction to Terraform + AWS,[ see this Get started Guide.](https://learn.hashicorp.com/collections/terraform/aws-get-started?utm_source=terraform_io_download)
     - For an introduction to Terraform + Azure, [see this Get started Guide](https://learn.hashicorp.com/collections/terraform/azure-get-started?utm_source=terraform_io_download)
   - [kubectl](https://kubernetes.io/docs/tasks/tools/) (v1.23.0+)
-  - [.NET Core 3.1.x](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+  - [.NET Core 6](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) required for Cinchy v5.8 and higher.
   - [Bash](https://www.gnu.org/software/bash/) ([Git Bash](https://www.atlassian.com/git/tutorials/git-bash) may be used on Windows)
 - If you are using Cinchy docker images, [pull them.](../deployment-planning-overview-and-checklist/deployment-prerequisites/#1.6-docker-images)
 
