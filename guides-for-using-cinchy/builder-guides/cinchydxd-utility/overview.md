@@ -35,6 +35,7 @@ To get started using CinchyDXD:
 1. [Package your first data experience](package-the-data-experience.md)
 1. [Review the release package](release-package.md) documentation.
 1. [Install the data experience](install-the-data-experience.md) on another environment.
+   
 ## Download CinchyDXD
 
 {% hint style="info" %}
