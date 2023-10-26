@@ -17,7 +17,7 @@ You must define your data experience in the **Data Experience Definitions Table*
 
 A definition contains the entities that make up the experience. Some examples of entities are tables, domains, reference data, and user defined functions (UDFs) . 
 
-For a complete list of all fields, see the [Data Experience Definitions](../cinchydxd-utility/References/data-experience-definitions.md) reference page.
+For a complete list of all fields, see the [Data Experience Definitions](../cinchydxd/References/data-experience-definitions.md) reference page.
 
 
 ### Best practices
@@ -35,7 +35,7 @@ For each table data reference, you must define an entry in the **Data Experience
 
 Treat this reference data similarly to a Data Sync Configuration for batch synchronization. It should move data from a CSV file to a Cinchy Table with matching attributes. The sync key column should contain unique values and shouldn't be a system or calculated column.
 
-For a complete list of all columns, please see the [Data Experience Reference Table](../cinchydxd-utility/References/data-experience-reference.md).
+For a complete list of all columns, please see the [Data Experience Reference Table](../cinchydxd/References/data-experience-reference.md).
 
 ## Export the data experience
 
@@ -64,7 +64,7 @@ Use the arguments below to create your data export with CinchyDXD.
 -o "<folder path for where your CinchyDXD output files to install are written to>"
 ```
 
-For a list of the available parameters, see the **Export** section of the [CinchyDXD commands](../cinchydxd-utility/References/Cinchy-DXD-commands.md) reference page for more information.
+For a list of the available parameters, see the **Export** section of the [CinchyDXD commands](../cinchydxd/References/Cinchy-DXD-commands.md) reference page for more information.
 
 ### Example
 
@@ -98,4 +98,4 @@ Manually update the definition to remove the reference to the deleted data.
 
 ## Next steps
 
-- [Install the data experience](../cinchydxd-utility/install-the-data-experience.md)
+- [Install the data experience](../cinchydxd/install-the-data-experience.md)

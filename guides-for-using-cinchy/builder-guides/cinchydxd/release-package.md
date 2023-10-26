@@ -166,5 +166,5 @@ graph LR;
 ```
   ## Additional resources
 
-  - [CinchyDXD workflow](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-workflow.md)
-  - [Package the data experience](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/package-the-data-experience.md)
+  - [CinchyDXD workflow](/guides-for-using-cinchy/builder-guides/cinchydxd/dxd-workflow.md)
+  - [Package the data experience](/guides-for-using-cinchy/builder-guides/cinchydxd/package-the-data-experience.md)

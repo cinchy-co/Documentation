@@ -52,7 +52,7 @@ Use the following arguments to create your installation with CinchyDXD.
 
 ```
 
-For a list of the available parameters, see the **Install** section of the [CinchyDXD commands](../cinchydxd-utility/References/Cinchy-DXD-commands.md) reference page for more information.
+For a list of the available parameters, see the **Install** section of the [CinchyDXD commands](../cinchydxd/References/Cinchy-DXD-commands.md) reference page for more information.
 ### Example
 
 The following example shows the use of arguments for a data package export in Cinchy.
