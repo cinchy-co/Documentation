@@ -43,7 +43,6 @@
 
 ## Upgrade guide
 
-
 * [Upgrade Cinchy](upgrade-guide/upgrade-guides/README.md)
   * [Cinchy Upgrade Utility](upgrade-guide/upgrade-guides/cinchy-upgrade-utility.md)
   * [Kubernetes upgrades](upgrade-guide/upgrade-guides/kubernetes-upgrades/README.md)
@@ -54,7 +53,6 @@
     * [v5.5 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/v5.5-kubernetes.md)
     * [v5.6 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/v5.6-kubernetes.md)
     * [v5.7 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/5.7-kubernetes.md)
-    * [v5.8 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/5.8-kubernetes.md)
     * [Upgrade AWS EKS Kubernetes version](upgrade-guide/upgrade-guides/kubernetes-upgrades/upgrading-aws-eks-kubernetes-version.md)
     * [Update the Kubernetes Image Registry](upgrade-guide/upgrade-guides/kubernetes-upgrades/updating-the-kubernetes-image-registry.md)
     * [Upgrade Azure Kubernetes Service (AKS)](upgrade-guide/upgrade-guides/kubernetes-upgrades/upgrading-aks-azure-kubernetes-service.md)
@@ -176,9 +174,9 @@
 ## Meta-Forms
 
 * [Introduction](meta-forms/introduction-to-meta-forms.md)
-* [Install Meta-Forms](meta-forms/meta-forms-guide/README.md)
-  * [Deploy Meta-Forms (Kubernetes)](meta-forms/meta-forms-guide/deploying-meta-forms-kubernetes.md)
-  * [Deploy Meta-Forms (IIS)](meta-forms/meta-forms-guide/deploying-meta-forms-iis.md)
+* [Install Meta-Forms](meta-forms/install-meta-forms/README.md)
+  * [Deploy Meta-Forms (Kubernetes)](meta-forms/install-meta-forms/deploy-meta-forms-kubernetes.md)
+  * [Deploy Meta-Forms (IIS)](meta-forms/install-meta-forms/deploy-meta-forms-iis.md)
 * [Forms data types](meta-forms/forms-data-types.md)
 * [Meta-Forms Builder Guide](meta-forms/meta-forms-builders-guides/README.md)
   * [Create a dynamic meta-form with tables](meta-forms/meta-forms-builders-guides/creating-a-dynamic-meta-form-using-tables.md)
