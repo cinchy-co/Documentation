@@ -20,22 +20,7 @@ CinchyDXD 2.0 creates packages for further development in a version controlled e
 
 CinchyDXD 1.5.0 and later requires Cinchy v4.21.0+ with the Connections UI installed.
 
-For a full list of requirements, see the [Dependencies](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/dependencies.md) page for more information.
-
-## Changelog
-
-See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/version-history-dxd.md) for more details.
-
-## Get started with DXD
-
-To get started using CinchyDXD:
-
-1. [Download CinchyDXD](overview.md#download-cinchydxd)
-1. [Review the DXD workflow](dxd-workflow.md)
-1. [Package your first data experience](package-the-data-experience.md)
-1. [Review the release package](release-package.md) documentation.
-1. [Install the data experience](install-the-data-experience.md) on another environment.
-   
+For a full list of requirements, see the [Dependencies](/guides-for-using-cinchy/builder-guides/cinchydxd/dependencies.md) page for more information.
 ## Download CinchyDXD
 
 {% hint style="info" %}
@@ -71,7 +56,14 @@ To download the Utility:
 1. Run `.\CinchyDXD.ps1 keygen -o "<TargetDirectory>"`, where `TargetDirectory` is your desired output path.
 1. Find the `dxd.key` file created.
 
+<<<<<<< HEAD:guides-for-using-cinchy/builder-guides/cinchydxd-utility/overview.md
+=======
+## Changelog
+
+See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd/version-history-dxd.md) for more details.
+
+>>>>>>> 54ee3fe (Folder cleanup):guides-for-using-cinchy/builder-guides/cinchydxd/overview.md
 ## Next steps
 
-- Review the [DXD workflow](../cinchydxd-utility/dxd-workflow.md)
+- Review the [DXD workflow](../cinchydxd/dxd-workflow.md)
 

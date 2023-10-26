@@ -269,7 +269,7 @@ The pattern contains a regular expression:
 
 ## How do I clone a domain?
 
-If you just have a group of tables, see the instructions below. If you have tables, queries, you want to port the permissions, etc. you can use this: [Data Experience Deployment - Cinchy Platform Documentation](guides-for-using-cinchy/builder-guides/cinchydxd-utility/)
+If you just have a group of tables, see the instructions below. If you have tables, queries, you want to port the permissions, etc. you can use this: [Data Experience Deployment - Cinchy Platform Documentation](guides-for-using-cinchy/builder-guides/cinchydxd/)
 
 Table only instructions:
 

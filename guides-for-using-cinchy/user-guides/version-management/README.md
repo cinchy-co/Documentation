@@ -42,4 +42,4 @@ You can find the GUID for your object by navigating to the applicable System Tab
 
 While you are able to manually export/import data models across environments, you may want to **package up** multiple objects (tables, queries, reference data, etc.) and push that all together between environments. This method still adheres to schema version control and management.
 
-This can be accomplished using the **Cinchy DXD Utility**, which you can learn more about by [reviewing the documentation here](../../builder-guides/cinchydxd-utility/).
+This can be accomplished using the **Cinchy DXD Utility**, which you can learn more about by [reviewing the documentation here](../../builder-guides/cinchydxd/).
