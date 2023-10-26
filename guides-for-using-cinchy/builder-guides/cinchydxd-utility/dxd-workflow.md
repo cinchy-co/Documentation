@@ -38,7 +38,7 @@ The diagram below illustrates a sample scenario where a data experience is expor
 
 1. After packaging the data experience, the experience is uploaded to version control.
 1. The development team works on the release package.
-1. The release package is then installed to a Dev environment for testing.
+1. The release package is then installed to a DEV environment for testing.
 1. When ready, install the release package back onto the Prod environment.
 
 ```mermaid
