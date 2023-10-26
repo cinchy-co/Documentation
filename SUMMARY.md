@@ -52,7 +52,6 @@
     * [v5.5 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/v5.5-kubernetes.md)
     * [v5.6 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/v5.6-kubernetes.md)
     * [v5.7 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/5.7-kubernetes.md)
-    * [v5.8 (Kubernetes)](upgrade-guide/upgrade-guides/kubernetes-upgrades/5.8-kubernetes.md)
     * [Upgrade AWS EKS Kubernetes version](upgrade-guide/upgrade-guides/kubernetes-upgrades/upgrading-aws-eks-kubernetes-version.md)
     * [Update the Kubernetes Image Registry](upgrade-guide/upgrade-guides/kubernetes-upgrades/updating-the-kubernetes-image-registry.md)
     * [Upgrade Azure Kubernetes Service (AKS)](upgrade-guide/upgrade-guides/kubernetes-upgrades/upgrading-aks-azure-kubernetes-service.md)
