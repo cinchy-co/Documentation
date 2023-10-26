@@ -106,7 +106,7 @@
     * [Release package](guides-for-using-cinchy/builder-guides/cinchydxd-utility/release-package.md)
     * [Changelog](guides-for-using-cinchy/builder-guides/cinchydxd-utility/dxd-changelog.md)
     * [References](guides-for-using-cinchy/builder-guides/cinchydxd/references/README.md)
-      * [Cinchy DXD commands](guides-for-using-cinchy/builder-guides/cinchydxd/references/cinchy-dxd-commands.md)
+      * [Cinchy DXD CLI reference](guides-for-using-cinchy/builder-guides/cinchydxd/references/cinchy-dxd-commands.md)
       * [Data Experience Definitions table](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References/data-experience-definitions.md)
       * [Data Experience Reference table](guides-for-using-cinchy/builder-guides/cinchydxd-utility/References/data-experience-reference.md)
   * [Multilingual support](guides-for-using-cinchy/builder-guides/multi-lingual-support.md)
