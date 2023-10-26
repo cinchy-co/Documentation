@@ -15,7 +15,7 @@ CinchyDXD 2.0 creates packages for further development in a version controlled e
 
 CinchyDXD 1.5.0 and later requires Cinchy v4.21.0+ with the Connections UI installed.
 
-For a full list of requirements, see the [Dependencies](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/dependencies.md) page for more information.
+For a full list of requirements, see the [Dependencies](/guides-for-using-cinchy/builder-guides/cinchydxd/dependencies.md) page for more information.
 ## Download CinchyDXD
 
 {% hint style="info" %}
@@ -53,9 +53,9 @@ To download the Utility:
 
 ## Changelog
 
-See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd-utility/version-history-dxd.md) for more details.
+See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd/version-history-dxd.md) for more details.
 
 ## Next steps
 
-- Review the [DXD workflow](../cinchydxd-utility/dxd-workflow.md)
+- Review the [DXD workflow](../cinchydxd/dxd-workflow.md)
 
