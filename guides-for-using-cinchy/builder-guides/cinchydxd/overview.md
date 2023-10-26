@@ -2,10 +2,13 @@
 
 ## CinchyDXD introduction
 
-CinchyDXD is a utility that exports a data experiences from a source Cinchy environment to a release package that you can:
+CinchyDXD is a utility that helps developers manage changes to their solutions built on Cinchy in a controlled and scalable way by enabling source-driven development and team collaboration with governance.
 
-- Deploy to an upper environment with the same CinchyDXD utility.
-- Commit to source control to reflect a snapshot of a specific point in the release version.
+With DXD, you can:
+
+- Manage Cinchy objects related to a particular solution/data product (also known as a Data Experience) as code. This code can be exported from an existing Cinchy environment used for development.
+- Leverage existing software development best practices around change management using source-control
+- Deploy the Data Experience into other Cinchy environments.
 
 ## About CinchyDXD 2.0
 

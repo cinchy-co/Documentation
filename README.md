@@ -2,7 +2,7 @@
 description: This page provides a brief overview of data collaboration
 ---
 
-# Data collaboration overview
+# Data collaboration Overview
 
 {% hint style="info" %}
 **You are currently browsing the Cinchy v5.7 platform documentation.** For documentation pertaining to other versions of the platform, please navigate to the relevant space(s) via the drop down menu in the upper left of the page.
@@ -13,8 +13,6 @@ description: This page provides a brief overview of data collaboration
 Data collaboration is the emergence of a common group of technologies that solve data related problems across many business use cases. One of the most exciting new categories within this group is data collaboration.
 
 Data collaboration solves the costly, time-consuming, and ineffective integration processes born from silo-ing your data in a traditional app-centric environment. Instead of your data serving your applications, data collaboration refocuses and pivots to a model where your data is at the forefront and is being served by your apps _(Image 1)._
-
-
 
 <figure><img src=".gitbook/assets/image (366).png" alt=""><figcaption><p>Image 1: Apps serve your data</p></figcaption></figure>
 
@@ -36,31 +34,23 @@ This process of making copies now consumes up to 50% of the resources on large I
 
 With data collaboration, you shift your approach from **integration for data sharing**, to **access for data collaboration** _(Image 3)._
 
-![Image 3: The shift to data collaboration](../.gitbook/assets/../../Documentation/.gitbook/assets/Overview/data-collaboration.png)
-
-For every app you build where you leverage data collaboration, you’re able to access the network to reuse information for future apps**.** Your IT team will find that previous projects have already connected many of the data sources they need to the network.
+For every app you build where you leverage data collaboration, you’re able to access the network to reuse information for future apps. Your IT team will find that previous projects have already connected many of the data sources they need to the network.
 
 The Cinchy data collaboration platform does for application development what the **power grid** does for individual buildings. In the same way that buildings no longer need to generate their own power thanks to the power grid, with a data collaboration platform applications no longer need to manage, integrate, and protect their own data _(Image 4)._
 
-
-
 ![Image 4: Data collaboration is like the power grid](<.gitbook/assets/image (99).png>)
 
-
-Organizations can build data collaboration applications in half the time, while enabling effortless data sharing across applications. Using Cinchy is unique in that it eliminates the **"integration tax"** that today consumes half of most enterprise IT budgets  that's to say, **data collaboration makes integration obsolete **_**(Image 5).**_
-
+Organizations can build data collaboration applications in half the time, while enabling effortless data sharing across applications. Using Cinchy is unique in that it eliminates the **"integration tax"** that today consumes half of most enterprise IT budgets that's to say, **data collaboration makes integration obsolete \_(Image 5).**\_
 
 ![Image 5: Saving on integration costs](<.gitbook/assets/image (97).png>)
 
 Now, instead of connecting apps to gain access to data through costly point-to-point integration, your apps **serve** your data by leveraging and connecting it all together via Cinchy. In this way, you can still gain the best usage out of your apps through **zero-copy integration** while avoiding the disadvantages of data silo-ing. You have both **full access to** and **full control of** your data _(Image 6)._
 
-
-
 ![Image 6: Data collaboration means you have total control](<.gitbook/assets/image (601).png>)
 
 ## Not just connected, but autonomous.
 
-​Simply putting pipes between data silos, and centralizing a few housekeeping tasks, isn't data collaboration. What that's actually doing is leading you down a path of managing endless copies. True data collaboration not only connects your data but upgrades it as part of an interconnected**,** autonomous network.
+​Simply putting pipes between data silos, and centralizing a few housekeeping tasks, isn't data collaboration. What that's actually doing is leading you down a path of managing endless copies. True data collaboration not only connects your data but upgrades it as part of an interconnected\*\*,\*\* autonomous network.
 
 **Autonomous data** exists independently of any application. It's self-controlled, self-protected, and self-describing. This creates a number of benefits compared to traditional app-dependent data, including the ability to simplify cross-application usage and reporting. And when **you use autonomous data in an interconnected network,** wherein individual contributors maintain their roles and priorities as they apply their unique skills and leadership autonomy in a problem solving process, you get: **Collaborative Autonomy.**
 
