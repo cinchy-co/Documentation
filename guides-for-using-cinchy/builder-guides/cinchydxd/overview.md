@@ -56,13 +56,10 @@ To download the Utility:
 1. Run `.\CinchyDXD.ps1 keygen -o "<TargetDirectory>"`, where `TargetDirectory` is your desired output path.
 1. Find the `dxd.key` file created.
 
-<<<<<<< HEAD:guides-for-using-cinchy/builder-guides/cinchydxd-utility/overview.md
-=======
 ## Changelog
 
 See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd/version-history-dxd.md) for more details.
 
->>>>>>> 54ee3fe (Folder cleanup):guides-for-using-cinchy/builder-guides/cinchydxd/overview.md
 ## Next steps
 
 - Review the [DXD workflow](../cinchydxd/dxd-workflow.md)
