@@ -2,6 +2,10 @@
 
 ## Overview
 
+{% hint style="warning" %}
+CinchyDXD 2.0 is still in development. Documentation might not reflect the actual behavior or process of the utility.
+{% endhint %}
+
 The CinchyDXD 2.0 workflow depends on four system tables within Cinchy:
 
 1. [**Data Experience Definitions Table**](/guides-for-using-cinchy/builder-guides/cinchydxd/References/data-experience-definitions.md): This is where you define the data experience. This includes tables, queries, views, formatting rules, and user defined functions (UDFs).

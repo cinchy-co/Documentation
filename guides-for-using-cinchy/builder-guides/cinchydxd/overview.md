@@ -12,7 +12,11 @@ With DXD, you can:
 
 ## About CinchyDXD 2.0
 
-CinchyDXD 2.0 creates packages for further development in a version controlled environment (such as Git) where multiple developers can work on the same data experience.
+{% hint style="warning" %}
+CinchyDXD 2.0 is still in development. Documentation might not reflect the actual behavior or process of the utility.
+{% endhint %}
+
+CinchyDXD 2.0 creates packages for further development in a version controlled environment (such as Git) where multiple developers can work on the same data experience. 
 
 ## Prerequisites
 
