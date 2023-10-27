@@ -35,7 +35,6 @@ This section lists all available commands and their arguments for CinchyDXD.
 | `-end`   | The Export Step to end on.                               | Optional    |
 
 <!-- vale off -->
-
 ## Install
 
 **Command**: `.\CinchyDXD.ps1 install`
@@ -270,3 +269,4 @@ This section lists all available commands and their arguments for CinchyDXD.
 | `-z (Log syncdata)`          | Write CLI syncdata commands to the log.                     | Optional    |
 
 <!-- vale on -->
+
