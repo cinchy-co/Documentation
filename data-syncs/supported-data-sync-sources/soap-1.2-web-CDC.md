@@ -1,13 +1,16 @@
-# SOAP 1.2 web service
+# SOAP web service (Cinchy Event Triggered)
 
 ## Overview
 
-SOAP (Simple Object Access Protocol) is an XML-based protocol for accessing web services over HTTP.
+SOAP (Simple Object Access Protocol) is an XML-based protocol for accessing web
+services over HTTP.
 
-SOAP allows applications running on different operating systems to communicate using different technologies and programming languages. You can use SOAP APIs to create, retrieve, update or delete records, such as passwords, accounts, leads, and custom objects, from a server.
+SOAP allows applications running on different operating systems to communicate
+using different technologies and programming languages. You can use SOAP APIs to
+create, retrieve, update or delete records, such as passwords, accounts, leads,
+and custom objects, from a server.
 
-{% hint style="success" %}
-The SOAP 1.2 Web Service source supports batch syncs.
+{% hint style="success" %} The SOAP 1.2 Web Service source supports batch syncs.
 {% endhint %}
 
 ## Info tab
@@ -26,10 +29,62 @@ You can find the parameters in the **Info** tab below _(Image 1)_.
 
 ## Source tab
 
-The following table outlines the mandatory and optional parameters you will find on the Source tab _(Image 2)._
+The following table outlines the mandatory and optional parameters you will find
+on the Source tab _(Image 2)._
 
-{% tabs %}
-{% tab title="Source Details" %}
+{% tabs %} {% tab title="Listener Details" %}
+
+### Listener Config
+
+To configure a SOAP 1.2 (Cinchy Event Triggered) connection, you must configure
+a listener via the **Listener Config** table. When you create a sync in the
+table, do the following:
+
+1. Enter the name of your Listener.
+1. Enter `Cinchy CDC` under **Event Connector Type**.
+1. Create your Topic JSON.
+
+For more information, review the
+[Cinchy Event Broker/CDC Listener Configuration values here](cinchy-event-broker-cdc/),
+and then navigate to
+[the Listener Config table](../supported-real-time-sources/the-listener-configuration-table.md)
+to input a new row.
+
+When setting up your listener configuration for your data sync, keeping the
+following constraints in mind:
+
+- **Column names** in the listener config shouldn't contain spaces. If they do,
+  they will be automatically removed. For example, a column named **Company
+  Name** will become the replacement parameter **@CompanyName**.
+- The replacement parameter names are **case sensitive.**
+- **Column names** in the listener config shouldn't be prefixes of other column
+  names. For example, if you have a column called **Name**, you shouldn't have
+  another called **Name2** as the value of **@Name2** may end up being replaced
+  by the value of **@Name** suffixed with a `2`.
+
+#### Example Listener Configuration
+
+The example below is an example of a Topic JSON for the Listener Config.
+
+```json
+{
+  "tableGuid": "420c1851-31ed-4ada-a71b-31659bca6f92",
+  "fields": [
+    {
+      "column": "Cinchy Id",
+      "alias": "CinchyId"
+    },
+    {
+      "column": "Company Name",
+      "alias": "CompanyName"
+    }
+  ]
+}
+```
+
+{% endtab %} {% tab title="Source Details" %} The following parameters will help
+to define your data sync source and how it functions.
+
 ### Namespaces
 
 You are required to define every Namespace present in your SOAP request, or in
@@ -90,17 +145,16 @@ the following:
 | Replacement | What you want to replace your pattern with.                                       |         |
 
 {% hint style="info" %} Note that you can have more than one String Replacement
-{% endhint %}
-{% endtab %}
-{% endtabs %}
-
-<figure><img src="../../.gitbook/assets/image (339).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
+{% endhint %} {% endtab %} {% endtabs %}
 
 ## Next steps
 
-* Configure your [Destination](../supported-data-sync-destinations/)
-* Define your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
-* Add in your [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md), if required.
-* Click **Jobs > Start a Job** to begin your sync.
+- Configure your [Destination](../supported-data-sync-destinations/)
+- Define
+  your[ ](../building-data-syncs/sync-actions.md)[Sync Actions.](../building-data-syncs/sync-actions.md)
+- Add in your
+  [Post Sync Scripts](../building-data-syncs/advanced-settings/post-sync-scripts.md),
+  if required.
+- Click **Jobs > Start a Job** to begin your sync.
 
 1. Namespace Value
