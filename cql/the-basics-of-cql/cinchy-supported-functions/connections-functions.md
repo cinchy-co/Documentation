@@ -4,7 +4,7 @@
 
 The set of functions listed in this page are for use in the [Cinchy Connections Experience](https://cli.docs.cinchy.com/) when configuring data syncs.
 
-* [@COLUMN]
+* [@COLUMN](connections-functions#column)
 * [​JSON\_ESCAPE​](connections-functions.md#json\_escape)
 * [​URL\_ESCAPE​](connections-functions.md#url\_escape)
 * [STRING\_ESCAPE()](connections-functions.md#string\_escape)
