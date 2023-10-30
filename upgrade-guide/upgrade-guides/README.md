@@ -2,15 +2,8 @@
 
 The pages under this section deal with upgrading your Cinchy platform.
 
-
-{% content-ref url="kubernetes-upgrades/" %}
-[kubernetes-upgrades](kubernetes-upgrades/)
-{% endcontent-ref %}
-
-{% content-ref url="iis-upgrades/" %}
-[iis-upgrades](iis-upgrades/)
-{% endcontent-ref %}
-
+- [Kubernetes upgrades](../upgrade-guides/kubernetes-upgrades/)
+- [IIS upgrades](../upgrade-guides/iis-upgrades/)
 
 ## Additional notes
 
