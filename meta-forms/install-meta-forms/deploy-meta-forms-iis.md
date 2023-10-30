@@ -1,7 +1,5 @@
 # Deploy Meta-Forms (IIS)
 
-# Deploy Meta-Forms (IIS)
-
 ## Prerequisites
 
 To install Cinchy Meta-Forms you will need:
