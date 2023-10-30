@@ -1,7 +1,5 @@
 # Deploy Meta-Forms (Kubernetes)
 
-# Deploying Meta-Forms (Kubernetes)
-
 ## Prerequisites
 
 To install Cinchy Meta-Forms on Kubernetes you will need:
