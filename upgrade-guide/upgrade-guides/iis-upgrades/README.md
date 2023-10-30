@@ -4,7 +4,7 @@
 
 The pages under this section can be used to help guide you through an upgrade of your Cinchy instance on IIS.
 
-## Upgrade List
+## Upgrade list
 
 - [4.21 Upgrade Guide](v4.21-iis.md)
 - [v4 to v5 Upgrade Guide](v4.x-to-v5.x-iis.md) 
