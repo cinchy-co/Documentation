@@ -252,7 +252,7 @@
   * [Snowflake](data-syncs/supported-data-sync-sources/snowflake/README.md)
     * [Snowflake source example config](data-syncs/supported-data-sync-sources/snowflake/snowflake-source-example-config.md)
   * [SOAP 1.2 web service](data-syncs/supported-data-sync-sources/soap-1.2-web-service.md)
-  * [SOAP 1.2 web service (Cinchy Event)](data-syncs/supported-data-sync-sources/soap-1.2-cdc.md)
+  * [SOAP 1.2 web service (Cinchy Event)](data-syncs/supported-data-sync-sources/soap-cdc.md)
 * [Data sync destinations](data-syncs/supported-data-sync-destinations/README.md)
   * [Cinchy Table](data-syncs/supported-data-sync-destinations/cinchy-table.md)
   * [DB2 table](data-syncs/supported-data-sync-destinations/db2-table.md)
