@@ -361,17 +361,36 @@ Be sure when you are pasting into the Config XML column that you double click in
 
 ### Password encryption
 
-To encrypt a password using PowerShell, complete the following:
+The following tables show the necesary information to encrypt a password from the CLI.
 
-1. Launch PowerShell and navigate to the Cinchy CLI directory (note, you can always type `PowerShell` in the windows explore path for the Cinchy CLI directory)
-2. Enter the following into PowerShell `.\Cinchy.CLI.exe encrypt -t "password"`
-3. Hit enter to execute the command
-4. Copy the password so it's accessible at batch execution time
+#### Actions
 
-{% hint style="info" %}
-Please note, you will need to replace "password" with your specific password.
-{% endhint %}
+| Command      | Description                                                                                     |
+| ------------ | ----------------------------------------------------------------------------------------------- |
+| `encrypt`    | Generate an encrypted string.                                                                    |
+| `exportdata` | Exports data from a Cinchy saved query to a delimited file.                                      |
+| `syncdata`   | Synchronizes data in a Cinchy table with a specified source using a batch job definition.        |
+| `help`       | Display more information on a specific command.                                                  |
+| `version`    | Display version information.                                                                    |
 
+#### Arguments
+
+| Command/Flag  | Description                                                                                     |
+| ------------- | ----------------------------------------------------------------------------------------------- |
+| `-h, --https` | Flag indicating connections to Cinchy should be over https.                                      |
+| `-s, --server`| Required. The full path to the Cinchy server without the protocol (e.g. cinchy.co/Cinchy).       |
+| `-u, --userid`| Required. The user id for accessing Cinchy.                                                     |
+| `-p, --password`| Required. The password of the specified user.                                                  |
+| `-t, --text`  | Required. The full text to encrypt.                                                             |
+| `-a, --tls`   | TLS protocol version.                                                                           |
+| `--help`      | Display this help screen.                                                                       |
+| `--version`   | Display version information.                                                                    |
+
+#### Example
+
+```bash 
+dotnet Cinchy.Connections.CLI.dll -h -s sandbox.cinchy.net/ts-mssql-1 -u Simon -p cinchy -t cinchy
+```
 ### Execution Log table
 
 The Execution Log table is a system table in Cinchy that logs the outputs of all data syncs _(Image 23_). You can always review the entries in this table for information on the progression of your syncs.
