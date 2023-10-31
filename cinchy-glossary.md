@@ -46,7 +46,7 @@ The “Cinchy Builder” has access to perform the following capabilities:
 
 #### Cinchy CLI
 
-The [Cinchy Command Line Interface (CLI) ](data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)is a tool that offers utilities for syncing data in and out of Cinchy via [various commands.](data-syncs/cli-commands-list.md)
+The [Cinchy Command Line Interface (CLI) ](data-syncs/installation-and-maintenance/install-the-cli.md)is a tool that offers utilities for syncing data in and out of Cinchy via [various commands.](data-syncs/cli-commands-list.md)
 
 #### CinchyDXD
 

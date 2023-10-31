@@ -293,4 +293,4 @@ components:
 
 - [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
 - [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-- [Maintenance CLI](../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
+- [Maintenance CLI](../../data-syncs/installation-and-maintenance/install-the-cli.md)
