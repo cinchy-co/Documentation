@@ -143,6 +143,24 @@ Some fields can also be set to multi-select.
 
 For example, the column `Players` in `[Football].[Teams]` can be a multi-select field since each team will have multiple players.
 
+#### Updating Multi-Select Links in CQL
+
+When you need to update a multi-select link field in Cinchy Query Language (CQL), you'll use a concatenated string format. 
+
+**Example**
+
+In the example below, the query modifies the `[Users]` field in the `[Cinchy].[Groups]` table. This string is composed of alternating `[Cinchy Id]` and `[Version]` values separated by commas, where `7,7,45,3,51,2` represents `CinchyId,Version,CinchyId,Version,...` for the [Users] records.
+
+
+```sql
+UPDATE g
+SET g.[Users] = '7,7,45,3,51,2'
+FROM [Cinchy].[Groups] g
+WHERE g.[Deleted] IS NULL
+AND [Cinchy Id] = 29
+-- Where ’7,7,45,3,51,2’ represents 'CinchyId,Version,CinchyId,Version,etc.' for the Users records
+```
+
 #### Allow Linking
 
 Checked by default. This allows other tables to use the column as a link/relationship.
