@@ -14,3 +14,5 @@ The pages under this section can be used to help guide you through an upgrade of
 - [5.4 Upgrade Guide](v5.4-iis.md)
 - [5.5 Upgrade Guide](v5.5-iis.md) 
 - [5.6 Upgrade Guide](v5.6-iis.md)
+- [5.7 Upgrade Guide](v5.7-iis.md)
+- [5.8 Upgrade Guide](v5.8-iis.md)
