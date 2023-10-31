@@ -79,19 +79,3 @@ For the use case of books and authors, it makes sense to create a multi-select l
 
 To create a multi-select link column in Cinchy, you select the **Multi-Select** option when you create a new link column.
 
-## Updating Multi-Select Links in CQL
-
-When you need to update a multi-select link field in Cinchy Query Language (CQL), you'll use a concatenated string format. This string is composed of alternating `[Cinchy Id]` and `[Version]` values separated by commas.
-
-### CQL example
-
-```sql
-UPDATE g
-SET g.[Users] = '7,7,45,3,51,2'
-FROM [Cinchy].[Groups] g
-WHERE g.[Deleted] IS NULL
-AND [Cinchy Id] = 29
--- Where ’7,7,45,3,51,2’ represents 'CinchyId,Version,CinchyId,Version,etc.' for the User records
-```
-
-This query modifies the `[Users]` field in the `[Cinchy].[Groups]` table. The `g.[Deleted] IS NULL` condition ensures that only active records are updated. The `[Cinchy Id] = 29` specifies which record to update.
