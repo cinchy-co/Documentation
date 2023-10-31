@@ -57,9 +57,16 @@ Use this function in any REST API connection that accepts parameters, such as UR
 
 ### Syntax
 
-```sql
+```json
 JSON_ESCAPE(@Parameter)
 ```
+
+For use with the `@COLUMN` variable:
+
+```json
+@JSON_ESCAPE(@COLUMN('value'))
+```
+
 ### Example 1
 
 The following example shows how you would use JSON\_ESCAPE in your REST API URL _(Image 1)._
