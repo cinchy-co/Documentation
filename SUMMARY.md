@@ -170,7 +170,7 @@
     * [Full Text Search functions](cql/the-basics-of-cql/cinchy-supported-functions/full-text-search-functions.md)
     * [Connections functions](cql/the-basics-of-cql/cinchy-supported-functions/connections-functions.md)
     * [JSON functions](cql/the-basics-of-cql/cinchy-supported-functions/json-functions.md)
-* [CQL functions master list](cql/the-basics-of-cql/cql-functions-master-list.md)
+* [CQL functions reference list](cql/the-basics-of-cql/cql-functions-master-list.md)
 
 ## Meta-Forms
 
