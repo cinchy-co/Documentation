@@ -163,7 +163,7 @@ You need to access and download the Cinchy binary before deployment:
   - Cinchy Platform
   - [Cinchy Connections](https://cli.docs.cinchy.com/connections-installation-guide)
   - [Cinchy Event Listener](https://cli.docs.cinchy.com/installation-guide)
-  - [Cinchy Maintenance CLI and CLI ](../../../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)(optional)
+  - [Cinchy Maintenance CLI and CLI ](../../../../data-syncs/installation-and-maintenance/install-the-cli.md)(optional)
   - [Cinchy Meta-Forms](https://cinchy.gitbook.io/cinchy-meta-forms/) (optional)
 
 {% hint style="warning" %}

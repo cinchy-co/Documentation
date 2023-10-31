@@ -14,4 +14,4 @@ Review the below documentation for installation instructions:
 
 * Installing [Connections](./installing-connections.md)
 * Installing the [Worker/Listener](./installing-the-worker-listener.md)
-* Installing the [CLI and the Maintenance CLI](./installing-the-cli-and-the-maintenance-cli.md)
+* Installing the [CLI and the Maintenance CLI](./install-the-cli.md)

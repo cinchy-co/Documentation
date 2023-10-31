@@ -37,7 +37,7 @@ Groups are defined in the **Groups** table within the Cinchy domain. By default,
 
 ## Group membership sync
 
-AD Groups defined in Cinchy have their members synced from AD through a batch process that leverages the [Cinchy Command Line Interface (CLI). ](../../../../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
+AD Groups defined in Cinchy have their members synced from AD through a batch process that leverages the [Cinchy Command Line Interface (CLI). ](../../../../../data-syncs/installation-and-maintenance/install-the-cli.md)
 
 ### Execution flow
 
@@ -49,7 +49,7 @@ The sync operation performs the following high-level steps:
 
 ### Dependencies
 
-1. You must install the Cinchy CLI Model in your instance of Cinchy. [See the CLI installation page](../../../../../data-syncs/installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md) for more details.
+1. You must install the Cinchy CLI Model in your instance of Cinchy. [See the CLI installation page](../../../../../data-syncs/installation-and-maintenance/install-the-cli.md) for more details.
 2. An instance of the Cinchy CLI must be available to execute the sync.
 3. You must have a task scheduler to perform the sync on a regular basis (For example, AutoSys).
 

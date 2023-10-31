@@ -108,7 +108,7 @@ Unique XML patterns may exist across different sources and targets. If you're un
         The Config XML auto populates columns like Name and Config Version.
         {% endhint %}
 
-5.  **Initiate Sync with the CLI**: If you haven't installed the CLI, refer to the [CLI installation guide](../installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md). Otherwise, launch PowerShell and navigate to the Cinchy CLI directory.
+5.  **Initiate Sync with the CLI**: If you haven't installed the CLI, refer to the [CLI installation guide](../installation-and-maintenance/install-the-cli.md). Otherwise, launch PowerShell and navigate to the Cinchy CLI directory.
 
 6.  **Run the CLI Command**:
 

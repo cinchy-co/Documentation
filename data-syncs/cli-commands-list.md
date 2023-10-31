@@ -4,7 +4,7 @@
 
 This page provides a list of the commands you can use in tandem with the Cinchy Command LIne Interface (CLI).
 
-Before attempting to use any of the below commands, [ensure that you have installed the CLI.](installation-and-maintenance/installing-the-cli-and-the-maintenance-cli.md)
+Before attempting to use any of the below commands, [ensure that you have installed the CLI.](installation-and-maintenance/install-the-cli.md)
 
 ## Global command list
 
