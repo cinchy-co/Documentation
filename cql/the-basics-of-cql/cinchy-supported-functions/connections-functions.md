@@ -60,6 +60,13 @@ Use this function in any REST API connection that accepts parameters, such as UR
 ```sql
 JSON_ESCAPE(@Parameter)
 ```
+
+For use with the `@COLUMN` variable:
+
+```sql
+@JSON_ESCAPE(@COLUMN('value'))
+```
+
 ### Example 1
 
 The following example shows how you would use JSON\_ESCAPE in your REST API URL _(Image 1)._
@@ -112,13 +119,13 @@ The STRING\_ESCAPE() function escapes single quotes in data sync parameters by a
 STRING_ESCAPE(@yourparameter)
 ```
 
-Or
+or
 
 ```sql
 STRING_ESCAPE(@COLUMN('yourcolumn'))
 ```
 
-Or, when used inside of a post sync script or the sync body:
+When used inside of a post sync script or the sync body:
 
 ```sql
 STRING_ESCAPE("@yourparameter")
