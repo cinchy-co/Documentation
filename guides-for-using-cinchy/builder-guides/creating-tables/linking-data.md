@@ -78,3 +78,4 @@ To create a many:many relationship through a different entity, you want to creat
 For the use case of books and authors, it makes sense to create a multi-select link column in the Books table where multiple authors can be selected.‌
 
 To create a multi-select link column in Cinchy, you select the **Multi-Select** option when you create a new link column.
+
