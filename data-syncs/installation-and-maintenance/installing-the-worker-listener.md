@@ -113,4 +113,16 @@ ALTER DATABASE [Your Cinchy Database Name] SET ENABLE_BROKER WITH ROLLBACK IMMED
     - Input `services.msc` and hit Enter.
     - In the list of services, find **Cinchy Worker**.
     - Right-click on the service and select **Start**.
+
+## Known issues: Warning messages during listener deployment
+
+During the deployment of the listener, you may encounter specific warning messages. These warnings are currently expected and can be safely ignored. Proceed with the installation as usual.
+
+
+```
+Warning! The maximum key length for a clustered index is 900 bytes. The index 'PK_Conversations' has maximum length of 1768 bytes. For some combination of large values, the insert/update operation will fail.
+Nonqualified transactions are being rolled back. Estimated rollback completion: 0%.
+Nonqualified transactions are being rolled back. Estimated rollback completion: 100%.
+```
+
 <!-- markdown-link-check-enable -->
