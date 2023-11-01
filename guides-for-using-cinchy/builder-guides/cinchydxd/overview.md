@@ -60,7 +60,7 @@ To download the Utility:
 
 ## Changelog
 
-See the [Changelog](/guides-for-using-cinchy/builder-guides/cinchydxd/version-history-dxd.md) for more details.
+See the [Changelog](dxd-changelog.md) for more details.
 
 ## Next steps
 
