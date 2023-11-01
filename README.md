@@ -10,7 +10,7 @@ description: This page provides a brief overview of data collaboration
 
 Data collaboration aims to facilitate the sharing, management, and utilization of data across various departments, teams, and systems within an organization. This approach aims to eliminate data silos and reduce the inefficiencies associated with traditional data integration methods like ETL processes or APIs. Data collaboration enables multiple stakeholders to co-produce and maintain data in a controlled, federated manner. Doing so enhances data quality, speeds decision-making, and allows more agile and scalable business operations. Data collaboration aims to maximize the business value derived from data while minimizing the costs and complexities traditionally associated with data management.
 
-<figure><img src=".gitbook/assets/Cinchy Overview.png" alt=""><figcaption><p>Image 1: Collaboration vs. Integration</p></figcaption></figure>
+<figure><img src=".gitbook/assets/CinchyOverview.png" alt=""><figcaption><p>Image 1: Collaboration vs. Integration</p></figcaption></figure>
 
 ## The root causes of IT delay and frustration.
 
