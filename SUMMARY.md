@@ -125,7 +125,6 @@
   * [GraphQL (Beta)](guides-for-using-cinchy/additional-guides/graphql-beta.md)
   * [System properties](guides-for-using-cinchy/additional-guides/system-properties.md)
   * [Enable Data At Rest Encryption (DARE)](guides-for-using-cinchy/additional-guides/enable-data-at-rest-encryption.md)
-  * [MDQE](guides-for-using-cinchy/additional-guides/mdqe.md)
   * [Application experiences](guides-for-using-cinchy/additional-guides/application-experiences/README.md)
     * [Network map](guides-for-using-cinchy/additional-guides/application-experiences/network-map/README.md)
       * [Custom node results](guides-for-using-cinchy/additional-guides/application-experiences/network-map/custom-node-results.md)
