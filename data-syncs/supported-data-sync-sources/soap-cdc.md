@@ -1,4 +1,4 @@
-# SOAP web service (Cinchy Event Triggered)
+# SOAP 1.2 web service (Cinchy Event Triggered)
 
 ## Overview
 
