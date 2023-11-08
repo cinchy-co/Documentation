@@ -4,7 +4,7 @@
 
 The validate date and time value function covered in this section is:
 
-- [​ISDATE](validate-date-and-time-values.md#isdate-transact-sql)​
+* [​ISDATE](validate-date-and-time-values.md#isdate-transact-sql)​
 
 ## ISDATE <a href="#isdate-transact-sql" id="isdate-transact-sql"></a>
 
@@ -13,8 +13,7 @@ ISDATE checks an expression to see if it's correct.
 It will return 1 if the _expression_ is a valid **date**, **time**, or **datetime** value; otherwise, it will return 0. ISDATE will also return 0 if the _expression_ is a **datetime2** value.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax

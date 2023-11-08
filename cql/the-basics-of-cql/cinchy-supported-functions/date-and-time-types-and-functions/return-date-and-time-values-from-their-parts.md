@@ -1,23 +1,22 @@
-# Return Date and Time Values From Their Parts
+# Return Date and Time values from their parts
 
 ## Overview
 
 The following return date and time values from their parts functions covered in this section are:
 
-- [DATEFROMPARTS](return-date-and-time-values-from-their-parts.md#datefromparts)
-- [DATETIME2FROMPARTS](return-date-and-time-values-from-their-parts.md#datetime2fromparts)
-- [DATETIMEFROMPARTS ](return-date-and-time-values-from-their-parts.md#datetimefromparts)
-- [DATETIMEOFFSETFROMPARTS](return-date-and-time-values-from-their-parts.md#datetimeoffsetfromparts)
-- [SMALLDATETIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#smalldatetimefromparts)
-- [TIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#timefromparts)
+* [DATEFROMPARTS](return-date-and-time-values-from-their-parts.md#datefromparts)
+* [DATETIME2FROMPARTS](return-date-and-time-values-from-their-parts.md#datetime2fromparts)
+* [DATETIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#datetimefromparts)
+* [DATETIMEOFFSETFROMPARTS](return-date-and-time-values-from-their-parts.md#datetimeoffsetfromparts)
+* [SMALLDATETIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#smalldatetimefromparts)
+* [TIMEFROMPARTS](return-date-and-time-values-from-their-parts.md#timefromparts)
 
 ## DATEFROMPARTS
 
 This function returns a **date** value that maps to the specified year, month, and day values.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax
@@ -58,8 +57,7 @@ SELECT DATEFROMPARTS(2010, 12, 31) AS Result
 `DATETIME2FROMPARTS` function returns a **datetime2** value for the specified date and time arguments. The returned value has a precision specified by the precision argument.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax
@@ -127,8 +125,7 @@ SELECT DATETIME2FROMPARTS(2011, 8, 15, 14, 23, 44, 5, 1)
 DATETIMEFROMPARTS function returns a **datetime** value for the specified date and time arguments.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax
@@ -181,8 +178,7 @@ SELECT DATETIMEFROMPARTS( 2010, 12, 31, 23, 59, 59, 0 ) AS Result
 Returns a **datetimeoffset** value for the specified date and time arguments. The returned value has a precision specified by the precision argument and an offset as specified by the offset arguments.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax
@@ -220,7 +216,7 @@ An integer expression that specifies the hour portion of the time zone offset.
 `minute_offset`\
 An integer expression that specifies the minute portion of the time zone offset.
 
-`precision` \
+`precision`\
 An integer literal value that specifies the precision of the **datetimeoffset** value that `DATETIMEOFFSETFROMPARTS` will return.
 
 ### Return types
@@ -231,7 +227,7 @@ datetimeoffset( precision )
 
 #### Remarks
 
-`DATETIMEOFFSETFROMPARTS` returns a fully initialized **datetimeoffset** data type. The offset arguments represent the time zone offset. For omitted offset arguments, `DATETIMEOFFSETFROMPARTS` assumes a time zone offset of `00:00` - in other words, no time zone offset. For specified offset arguments, `DATETIMEOFFSETFROMPARTS` expects values for both arguments, and both values positive or negative. If _minute_offset_ has a value and _hour_offset_ has no value, `DATETIMEOFFSETFROMPARTS` will raise an error. `DATETIMEOFFSETFROMPARTS` will raise an error if the other arguments have invalid values. If at least one required arguments have a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will return `NULL`. However, if the _precision_ argument has a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will raise an error.
+`DATETIMEOFFSETFROMPARTS` returns a fully initialized **datetimeoffset** data type. The offset arguments represent the time zone offset. For omitted offset arguments, `DATETIMEOFFSETFROMPARTS` assumes a time zone offset of `00:00` - in other words, no time zone offset. For specified offset arguments, `DATETIMEOFFSETFROMPARTS` expects values for both arguments, and both values positive or negative. If _minute\_offset_ has a value and _hour\_offset_ has no value, `DATETIMEOFFSETFROMPARTS` will raise an error. `DATETIMEOFFSETFROMPARTS` will raise an error if the other arguments have invalid values. If at least one required arguments have a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will return `NULL`. However, if the _precision_ argument has a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will raise an error.
 
 The _fractions_ argument depends on the precision argument. For example, for a precision value of 7, each fraction represents 100 nanoseconds; for a precision of 3, each fraction represents a millisecond. For a precision value of zero, the value of fractions must also be zero; otherwise, `DATETIMEOFFSETFROMPARTS` will raise an error.
 
@@ -262,7 +258,7 @@ This function isn't currently supported in PostgreSQL deployments of the Cinchy 
 
 New function translations are actively being worked on by the development team; please check back at a later time.
 
-You can review the full list of in-progress function translations[ here](../../cql-functions-master-list.md).
+You can review the full list of in-progress function translations[ here](broken-reference).
 {% endhint %}
 
 ### Syntax
@@ -309,8 +305,7 @@ SELECT SMALLDATETIMEFROMPARTS( 2010, 12, 31, 23, 59 ) AS Result
 TIMEFROMPARTS returns a **time** value for the specified time and with the specified precision.
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 ### Syntax

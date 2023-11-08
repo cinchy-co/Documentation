@@ -1,4 +1,4 @@
-# Installation & maintenance
+# IIS installation
 
 ## Installation & Maintenance
 
@@ -6,12 +6,12 @@ To use Cinchy Data Sync, there are some environmental configurations that will n
 
 ## Prerequisites
 
-Review the hardware, software, and server sizing prerequisites [here.](./prerequisites.md)
+Review the hardware, software, and server sizing prerequisites [here.](broken-reference)
 
 ## Data Sync installation instructions
 
 Review the below documentation for installation instructions:
 
-* Installing [Connections](./installing-connections.md)
-* Installing the [Worker/Listener](./installing-the-worker-listener.md)
-* Installing the [CLI and the Maintenance CLI](./install-the-cli.md)
+* Installing [Connections](installing-connections.md)
+* Installing the [Worker/Listener](installing-the-worker-listener.md)
+* Installing the [CLI and the Maintenance CLI](install-the-cli.md)
