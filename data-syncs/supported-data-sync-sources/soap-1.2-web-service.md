@@ -30,40 +30,35 @@ The following table outlines the mandatory and optional parameters you will find
 
 {% tabs %}
 {% tab title="Source Details" %}
-### Namespaces
+#### Namespaces
 
-You are required to define every Namespace present in your SOAP request, or in
-the SOAP response. You must define an envelope schema in the **Namespace** section. Use the following schema as a default:
+You are required to define every Namespace present in your SOAP request, or in the SOAP response. You must define an envelope schema in the **Namespace** section. Use the following schema as a default:
 
-- **Name**: soapenv 
-- **Value**: "http://www.w3.org/2003/05/soap-envelope" 
-
+* **Name**: soapenv
+* **Value**: "http://www.w3.org/2003/05/soap-envelope"
 
 | Parameter          | Description                                               | Example                                     |
 | ------------------ | --------------------------------------------------------- | ------------------------------------------- |
-| Namespaces - Name  | Name of your SOAP namespace tags in request and response. | "soapenv"                                      |
+| Namespaces - Name  | Name of your SOAP namespace tags in request and response. | "soapenv"                                   |
 | Namespaces - Value | URL describing this namespace in the response.            | "http://schemas.xmlsoap.org/soap/envelope/" |
 
-### SOAP 1.2 parameters
+#### SOAP 1.2 parameters
 
-| Parameter           | Description                                                                                                                                                                                 | Example   |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| authType            | **Mandatory**. Select the type of authentication you wish to use in this sync: None, WSSE, Basic.                                                                                               | Basic     |
-| Use Password Digest | Use only with WSSE authType and Password Type as **PasswordDigest**. Otherwise, leave unchecked.                                                                                            |           |
-| Request Timeout     | **Mandatory**. Set a timeout in milliseconds. No maximum value. Minimum greater than 0. Default is 100 milliseconds.                                                                            | 2000      |
-| Endpoint            | **Mandatory**. Contains your SOAP 1.2 Web Service API endpoint.                                                                                                                                 |           |
-| Has Mtom Response   | Required to be true if SOAP API response contains an attachment outside the message.                                                                                                        |           |
-| Record Xpath        | **Mandatory**. The Xpath to select records to extract from the SOAP response. Starts with ‘//’ followed by the tag name.                                                                        |           |
-| Envelope Namespace  | Namespace prefix for SOAP request elements. Make sure the envelope matches the Namespace definition for the envelope. | "soapenv" |
+| Parameter           | Description                                                                                                              | Example   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------- |
+| authType            | **Mandatory**. Select the type of authentication you wish to use in this sync: None, WSSE, Basic.                        | Basic     |
+| Use Password Digest | Use only with WSSE authType and Password Type as **PasswordDigest**. Otherwise, leave unchecked.                         |           |
+| Request Timeout     | **Mandatory**. Set a timeout in milliseconds. No maximum value. Minimum greater than 0. Default is 100 milliseconds.     | 2000      |
+| Endpoint            | **Mandatory**. Contains your SOAP 1.2 Web Service API endpoint.                                                          |           |
+| Has Mtom Response   | Required to be true if SOAP API response contains an attachment outside the message.                                     |           |
+| Record Xpath        | **Mandatory**. The Xpath to select records to extract from the SOAP response. Starts with ‘//’ followed by the tag name. |           |
+| Envelope Namespace  | Namespace prefix for SOAP request elements. Make sure the envelope matches the Namespace definition for the envelope.    | "soapenv" |
 
 <figure><img src="../../.gitbook/assets/image (339).png" alt=""><figcaption><p>Image 2: The Source Tab</p></figcaption></figure>
-
 {% endtab %}
 
-{% tab title="Schema" %} **The**
-[**Schema**](../building-data-syncs/columns-and-mappings/#2.-schema-columns)
-**section** is where you define which source columns you want to sync in your
-connection. You can repeat the values for multiple columns.
+{% tab title="Schema" %}
+**The** [**Schema**](../building-data-syncs/columns-and-mappings/#2.-schema-columns) **section** is where you define which source columns you want to sync in your connection. You can repeat the values for multiple columns.
 
 | Parameter   | Description                                                                                                   | Example |
 | ----------- | ------------------------------------------------------------------------------------------------------------- | ------- |
@@ -81,15 +76,15 @@ Select **Show Advanced** for more options for the Schema section.
 | Trim Whitespace | **Optional if data type = text.** For Text data types, you can choose whether to **trim the whitespace**.                                                                                                                                                                                                                                                                                                                                                                             |         |
 | Max Length      | **Optional if data type = text.** You can input a numerical value in this field that represents the maximum length of the data that can be synced in your column. If the value is exceeded, the row will be rejected (you can find this error in the Execution Log).                                                                                                                                                                                                                  |         |
 
-You can choose to add in a **Transformation > String Replacement** by inputting
-the following:
+You can choose to add in a **Transformation > String Replacement** by inputting the following:
 
 | Parameter   | Description                                                                       | Example |
 | ----------- | --------------------------------------------------------------------------------- | ------- |
 | Pattern     | **Mandatory if using a Transformation.** The pattern for your string replacement. |         |
 | Replacement | What you want to replace your pattern with.                                       |         |
 
-{% hint style="info" %} Note that you can have more than one String Replacement
+{% hint style="info" %}
+Note that you can have more than one String Replacement
 {% endhint %}
 {% endtab %}
 {% endtabs %}
