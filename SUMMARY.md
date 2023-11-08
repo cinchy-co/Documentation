@@ -188,7 +188,6 @@
 
 * [Get started with data syncs](data-syncs/getting-started-with-data-syncs.md)
 * [IIS installation](data-syncs/installation-and-maintenance/README.md)
-  * [Prerequisites](data-syncs/installation-and-maintenance/prerequisites.md)
   * [Install Connections](data-syncs/installation-and-maintenance/installing-connections.md)
   * [Install the Worker/Listener](data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
   * [Install the CLI and the Maintenance CLI](data-syncs/installation-and-maintenance/install-the-cli.md)

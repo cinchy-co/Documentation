@@ -1,4 +1,4 @@
-# Extended Methods on Geometry & Geography Instances
+# Extended methods on Geometry & Geography instances
 
 ## Overview
 
@@ -9,8 +9,7 @@ All functions that have Geometry in parenthesis are only applicable to OGC metho
 {% endhint %}
 
 {% hint style="warning" %}
-This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time.
-For a full list of in-progress function translations, see [the CQL functions reference page](../../cql-functions-master-list.md).
+This function isn't currently supported in PostgreSQL deployments of the Cinchy platform. Please check back at a later time. For a full list of in-progress function translations, see [the CQL functions reference page](broken-reference).
 {% endhint %}
 
 The extended Methods covered in this section are:
@@ -41,17 +40,17 @@ The following table contains possible return values:
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | 24400        | Valid                                                                                                                          |
 | 24401        | Not valid, reason unknown.                                                                                                     |
-| 24402        | Not valid because point {0} is an isolated point, which isn't valid in this type of object.                                   |
+| 24402        | Not valid because point {0} is an isolated point, which isn't valid in this type of object.                                    |
 | 24403        | Not valid because some pair of polygon edges overlap.                                                                          |
 | 24404        | Not valid because polygon ring {0} intersects itself or some other ring.                                                       |
 | 24405        | Not valid because some polygon ring intersects itself or some other ring.                                                      |
 | 24406        | Not valid because curve {0} degenerates to a point.                                                                            |
 | 24407        | Not valid because polygon ring {0} collapses to a line at point {1}.                                                           |
-| 24408        | Not valid because polygon ring {0} isn't closed.                                                                              |
+| 24408        | Not valid because polygon ring {0} isn't closed.                                                                               |
 | 24409        | Not valid because some portion of polygon ring {0} lies in the interior of a polygon.                                          |
-| 24410        | Not valid because ring {0} is the first ring in a polygon of which it isn't the exterior ring.                                |
+| 24410        | Not valid because ring {0} is the first ring in a polygon of which it isn't the exterior ring.                                 |
 | 24411        | Not valid because ring {0} lies outside the exterior ring {1} of its polygon.                                                  |
-| 24412        | Not valid because the interior of a polygon with rings {0} and {1} isn't connected.                                           |
+| 24412        | Not valid because the interior of a polygon with rings {0} and {1} isn't connected.                                            |
 | 24413        | Not valid because of two overlapping edges in curve {0}.                                                                       |
 | 24414        | Not valid because an edge of curve {0} overlaps an edge of curve {1}.                                                          |
 | 24415        | Not valid some polygon has an invalid ring structure.                                                                          |
@@ -150,8 +149,7 @@ SELECT @g.Reduce(.75).ToString();
 
 ### Arguments
 
-_other_instance_
-Specifies the second geometry instance that the calling geometry instance is trying to determine the shortest distance to.
+_other\_instance_ Specifies the second geometry instance that the calling geometry instance is trying to determine the shortest distance to.
 
 ### Return types
 

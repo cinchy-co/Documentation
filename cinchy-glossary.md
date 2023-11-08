@@ -1,4 +1,4 @@
-# Cinchy Glossary
+# Glossary
 
 ## Overview
 
@@ -18,14 +18,14 @@ The [Cinchy Administrator](guides-for-using-cinchy/administrator-guide.md) is a 
 
 A Builder Admin can:
 
-- Modify **all** table data (including system tables), **all** schema, and **all** data controls
-  - This includes setting up and configuring users, assigning them to groups, and assigning which users have builder access
-- View **all** tables (including system tables) and queries in the platform
+* Modify **all** table data (including system tables), **all** schema, and **all** data controls
+  * This includes setting up and configuring users, assigning them to groups, and assigning which users have builder access
+* View **all** tables (including system tables) and queries in the platform
 
 A Non-Builder Admin can:
 
-- View **all** tables (including system tables) and queries in the platform
-- Modify data controls for tables
+* View **all** tables (including system tables) and queries in the platform
+* Modify data controls for tables
 
 #### Cinchy Builder
 
@@ -33,16 +33,16 @@ A Non-Builder Admin can:
 
 The “Cinchy Builder” has access to perform the following capabilities:
 
-- Change Table Schema (use Cinchy’s “Design Table” functionality)
-- Grant access (use Cinchy’s “Design Controls” functionality)
-- Edit Cinchy Data in Cinchy System Tables
-- Create, Save, and Share Cinchy Queries
-- Perform specific Cinchy Queries on the Cinchy data network
-- Import/export packaged business capabilities (such as deployment packages)
-- Build Cinchy Experiences
-- Perform integration with Cinchy (Cinchy Command Line Interface \[CLI] operations)
-- Create and Deliver an unlimited number of Customer Use Cases within Cinchy
-- A builder can be part of the[ Administrators group](guides-for-using-cinchy/administrator-guide.md)
+* Change Table Schema (use Cinchy’s “Design Table” functionality)
+* Grant access (use Cinchy’s “Design Controls” functionality)
+* Edit Cinchy Data in Cinchy System Tables
+* Create, Save, and Share Cinchy Queries
+* Perform specific Cinchy Queries on the Cinchy data network
+* Import/export packaged business capabilities (such as deployment packages)
+* Build Cinchy Experiences
+* Perform integration with Cinchy (Cinchy Command Line Interface \[CLI] operations)
+* Create and Deliver an unlimited number of Customer Use Cases within Cinchy
+* A builder can be part of the[ Administrators group](guides-for-using-cinchy/administrator-guide.md)
 
 #### Cinchy CLI
 
@@ -62,9 +62,9 @@ Cinchy ID is a unique identifier assigned automatically to all records within a 
 
 **Cinchy Query Language can be used in many ways, including but not limited to:**
 
-- ​Building queries through the query editor that can return, insert, delete, and otherwise manage your data.
-- ​Creating, altering or dropping views for tables​
-- ​Creating, altering or dropping indexes​
+* ​Building queries through the query editor that can return, insert, delete, and otherwise manage your data.
+* ​Creating, altering or dropping views for tables​
+* ​Creating, altering or dropping indexes​
 
 #### Cinchy Upgrade Utility
 
@@ -74,17 +74,17 @@ Cinchy ID is a unique identifier assigned automatically to all records within a 
 
 [The **“End-Users”**](guides-for-using-cinchy/user-guides/) of the Cinchy platform are those that apply the functionalities created by the **“Cinchy Builders”** to their business objectives. This can be employees, customers, partners, or systems. Cinchy has two types of end-user: direct and indirect.
 
-- **Direct Users** log into Cinchy via the data browser
-- **Indirect Users** (also commonly referred to as "external users") view/edit data via a third-party application/page that connects to Cinchy via API
+* **Direct Users** log into Cinchy via the data browser
+* **Indirect Users** (also commonly referred to as "external users") view/edit data via a third-party application/page that connects to Cinchy via API
 
 Cinchy End-Users are able to:
 
-- Create and save personal queries. Unlike traditional saved queries made by builders, _**personal**_ saved queries can't be shared and aren't auto exposed as APIs.
-- Use Tables, Saved Queries, and Experiences created by [“Builders"](guides-for-using-cinchy/builder-guides/README.md/#what-builders-do)
-- Track version history for the full lifecycle of data
-- Bookmark and manage data
-- Access data through application experiences
-- An end-user can be part of the [Administrators group](guides-for-using-cinchy/administrator-guide.md)
+* Create and save personal queries. Unlike traditional saved queries made by builders, _**personal**_ saved queries can't be shared and aren't auto exposed as APIs.
+* Use Tables, Saved Queries, and Experiences created by [“Builders"](guides-for-using-cinchy/builder-guides/#what-builders-do)
+* Track version history for the full lifecycle of data
+* Bookmark and manage data
+* Access data through application experiences
+* An end-user can be part of the [Administrators group](guides-for-using-cinchy/administrator-guide.md)
 
 #### Connections Experience
 
@@ -122,11 +122,11 @@ Data Synchronizations ("Data Syncs") are a powerful and important aspect of the 
 
 Entitlements refers to the set of permissions that you are granted for any piece of data. Cinchy allows entitlements to be set at a granular level, meaning you can give individual users or user groups access to things like:
 
-- Viewing a data sync
-- Running a job
-- Viewing a specific table row or column
-- Editing a specific table cell
-- Etc.
+* Viewing a data sync
+* Running a job
+* Viewing a specific table row or column
+* Editing a specific table cell
+* Etc.
 
 Entitlements can persist across the platform when using features such as link columns or the [Network Map.](cinchy-glossary.md#network-map)
 
@@ -138,20 +138,20 @@ Rather than traditional code-centric applications which creates data silos, you 
 
 #### Listener configuration
 
-Real-time data syncs need to [set up a Cinchy listener configuration](/data-syncs/supported-real-time-sources/the-listener-configuration-table.md) for [event stream sources ](data-syncs/supported-real-time-sources/)so that it knows what data to pull/push through your sync. As of 5.7, this can now be done under the **Sources** section in the **Listener** tab. Each stream source has different variables and parameters that you can use to refine your sync. The Listener only needs to be configured for [real-time syncs](cinchy-glossary.md#real-time-sync), not for [batch syncs.](cinchy-glossary.md#batch-sync)
+Real-time data syncs need to [set up a Cinchy listener configuration](data-syncs/supported-real-time-sources/the-listener-configuration-table.md) for [event stream sources ](data-syncs/supported-real-time-sources/)so that it knows what data to pull/push through your sync. As of 5.7, this can now be done under the **Sources** section in the **Listener** tab. Each stream source has different variables and parameters that you can use to refine your sync. The Listener only needs to be configured for [real-time syncs](cinchy-glossary.md#real-time-sync), not for [batch syncs.](cinchy-glossary.md#batch-sync)
 
 ## M
 
 #### MDQE
 
-MDQE, which stands for [**Metadata Quality Exceptions**](guides-for-using-cinchy/additional-guides/mdqe.md), can send out notifications based on a set of rules and the “exceptions” that break them. This powerful tool can be used to send notifications for exceptions such as:
+MDQE, which stands for [**Metadata Quality Exceptions**](broken-reference), can send out notifications based on a set of rules and the “exceptions” that break them. This powerful tool can be used to send notifications for exceptions such as:
 
-- Healthchecks returning a critical status
-- Upcoming Project Due Dates/Timelines
-- Client Risk Ratings reaching a high threshold
-- Tracking Ticket Urgency or Status markers
-- Unfulfilled and Pending Tasks/Deliverables
-- Etc.
+* Healthchecks returning a critical status
+* Upcoming Project Due Dates/Timelines
+* Client Risk Ratings reaching a high threshold
+* Tracking Ticket Urgency or Status markers
+* Unfulfilled and Pending Tasks/Deliverables
+* Etc.
 
 MDQE monitors for specific changes in data, and then pushes out notifications when that change occurs.
 
