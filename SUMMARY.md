@@ -190,7 +190,7 @@
 * [IIS installation](data-syncs/installation-and-maintenance/README.md)
   * [Install Connections](data-syncs/installation-and-maintenance/installing-connections.md)
   * [Install the Worker/Listener](data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-  * [Install the CLI and the Maintenance CLI](data-syncs/installation-and-maintenance/install-the-cli.md)
+  * [Install the Connections CLI](data-syncs/installation-and-maintenance/install-the-cli.md)
 * [Build data syncs](data-syncs/building-data-syncs/README.md)
   * [Data sync types](data-syncs/building-data-syncs/types-of-data-syncs.md)
   * [Design patterns](data-syncs/building-data-syncs/common-design-patterns.md)
