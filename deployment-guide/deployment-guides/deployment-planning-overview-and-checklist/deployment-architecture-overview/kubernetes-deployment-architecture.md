@@ -83,7 +83,7 @@ Tip: Click on an image to enlarge it.
 
 ![Image 5: Instance Component Overview](<../../../../.gitbook/assets/Instance components Technical Deep Dive - Tech Stack copy.png>)
 
-* **Meta Experiences:** Cinchy offers pre-packaged experiences that you can import into your Cinchy environment and use on your data network. This includes experiences like [Meta-Forms](https://cinchy.gitbook.io/cinchy-meta-forms/) and [Meta-Reports](https://cinchy.gitbook.io/cinchy-meta-reports/).
+* **Meta Experiences:** Cinchy offers pre-packaged experiences that you can import into your Cinchy environment and use on your data network. This includes experiences like [Meta-Forms](https://cinchy.gitbook.io/cinchy-meta-forms/).
 * **Connections:** Use the Cinchy Connections experience to create data syncs in/out of the platform. It features persistent storage.
 * **Data Browser:** Cinchy’s data collaboration platform features a Universal Data Browser that allows users to view, change, analyze, and otherwise interact with all data on the network. The Data Browser even enables non-technical business users to manage and update data, build models, and set controls, all through an easy and intuitive UI.
 * **Identity Provider:** An Identity Provider (IdP) creates and manages user credentials and associated identity attributes. Cinchy uses IdPs authentication services to authenticate end-users.
