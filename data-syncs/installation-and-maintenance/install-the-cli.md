@@ -1,16 +1,25 @@
-# Install the CLI and the Maintenance CLI
+# Install the Connections CLI and the Maintenance CLI
 
-## Overview
+### Command Line Interface (CLI) for Cinchy
 
-The **Command Line Interface (CLI)** offers utilities to get data in and out of Cinchy.
+### Overview
 
-## Deploy the CLI
+The Command Line Interface (CLI) in Cinchy provides tools for data import and export. 
 
-1. Navigate to the[ Cinchy Releases table ](https://cinchy.net/Tables/1477?rowHeight=Expanded)and download the latest **Cinchy Connections.zip** file from the **Release Artifacts** column.
+### Maintenance CLI
 
-{% hint style="info" %}
-The  **Cinchy Connections v5.8.zip** file contains: Worker.zip, WebApi.zip, and CLI.zip.
-{% endhint %}
+Use the maintenance CLI for tasks like data erasure and compression deletions. Consult the [CLI commands list](../cli-commands-list.md) for more information.
 
-2. Extract the **Cinchy Maintenance CLI v 5.8.zip**.
-3. Run the **Cinchy.CLI.exe** to deploy the CLI.
+#### Deploy the CLI
+
+1. **Download:** Go to the **Cinchy Releases** table and download the `Cinchy Connections v X.X.zip` file from the Release Artifacts column. This zip file includes `Worker.zip`, `WebApi.zip`, and `CLI.zip`.
+3. **Installation:**
+   - Extract `CLI.zip`.
+   - Execute `Cinchy.CLI.exe` to install the CLI.
+
+#### Deploy the Maintenance CLI
+
+1. **Download:** Access the Cinchy Releases table and download the `Maintenance CLI vX.X.zip` from the Release Artifacts column.
+2. **Installation:**
+   - Extract `Maintenance CLI.zip`.
+   - Run `Cinchy.Maintenance.CLI.exe` to install the Maintenance CLI.
