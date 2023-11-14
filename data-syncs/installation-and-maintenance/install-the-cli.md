@@ -4,7 +4,7 @@
 
 The **Command Line Interface (CLI)** offers utilities to get data in and out of Cinchy.
 
-## Deploy the CLI
+## Deploy the Maintenance CLI
 
 1. Navigate to the[ Cinchy Releases table ](https://cinchy.net/Tables/1477?rowHeight=Expanded)and download the latest **Cinchy Connections.zip** file from the **Release Artifacts** column.
 
