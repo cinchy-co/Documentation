@@ -1,4 +1,4 @@
-# Build data syncs in Cinchy
+# Build data syncs
 
 A data sync in Cinchy synchronizes information between a source and a destination. This guide walks you through the process of setting up your data syncs.
 
@@ -7,11 +7,11 @@ A data sync in Cinchy synchronizes information between a source and a destinatio
 The basic workflow of a data sync in Cinchy is:
 
 1. [Install the necessary components](../installation-and-maintenance/).
-1. [Choose your data sync type](types-of-data-syncs.md).
-1. [Choose your design pattern](common-design-patterns.md).
-1. [Define and configure your data sync source](../supported-data-sync-sources/).
-1. [Set up your data sync destination](../supported-data-sync-destinations/).
-1. [Specify Sync Actions](sync-actions.md).
+2. [Choose your data sync type](types-of-data-syncs.md).
+3. [Choose your design pattern](common-design-patterns.md).
+4. [Define and configure your data sync source](../supported-data-sync-sources/).
+5. [Set up your data sync destination](../supported-data-sync-destinations/).
+6. [Specify Sync Actions](sync-actions.md).
 
 ### Overview
 
@@ -24,31 +24,32 @@ You have two ways to set up a data sync in Cinchy:
 
 To use the Connections UI, open the **Connections Experience**.
 
-<figure><img src="../../.gitbook/assets/image (413).png" alt=""><figcaption>Image 1: Cinchy's Connections Experience</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (413).png" alt=""><figcaption><p>Image 1: Cinchy's Connections Experience</p></figcaption></figure>
 
 #### Connections UI workflow
 
 The UI has six tabs. Each tab requires data for your connection setup:
 
 1. Info
-1. Source
-1. Destination
-1. Sync Actions
-1. Post Sync (Optional)
-1. Jobs (Optional)
+2. Source
+3. Destination
+4. Sync Actions
+5. Post Sync (Optional)
+6. Jobs (Optional)
 
-<figure><img src="../../.gitbook/assets/image (389).png" alt=""><figcaption>Image 2: Overview of the Tabs</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (389).png" alt=""><figcaption><p>Image 2: Overview of the Tabs</p></figcaption></figure>
 
 #### **Info Tab**
 
-The **Info Tab** has fundamental details about your data sync, such as its name and access controls. You must add a name and select an Admin Group. You can also [use variables](advanced-settings/variables.md) for advanced functionality. 
-<figure><img src="../../.gitbook/assets/image (680).png" alt=""><figcaption>Image 3: Working with the Info Tab</figcaption></figure>
+The **Info Tab** has fundamental details about your data sync, such as its name and access controls. You must add a name and select an Admin Group. You can also [use variables](advanced-settings/variables.md) for advanced functionality.
+
+<figure><img src="../../.gitbook/assets/image (680).png" alt=""><figcaption><p>Image 3: Working with the Info Tab</p></figcaption></figure>
 
 #### **Source Tab**
 
 The **Source Tab** defines the origin of your data sync. Each data source type, from specific file formats to integrated software systems, requires unique parameters. See the [Supported Data Sources list](../supported-data-sync-sources/) for available options.
 
-<figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption>Image 4: Setting up the Source Tab</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (741).png" alt=""><figcaption><p>Image 4: Setting up the Source Tab</p></figcaption></figure>
 
 {% hint style="info" %}
 When working with real-time sync sources, you'll notice an extra tab for Listener configuration. The adjustments you make here directly influence the **Listener Config** table. Navigate through the options and set up as needed. For more info, see the [Listener Config](../supported-real-time-sources/) and [Sync Source](../supported-data-sync-sources/) pages.
@@ -60,31 +61,31 @@ When working with real-time sync sources, you'll notice an extra tab for Listene
 
 The **Destination Tab** identifies where your data sync goes. Each destination comes with its own set of parameters. You must map each destination to its source. Consult the [Supported Destinations directory](../supported-data-sync-destinations/) for specifics.
 
-<figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption>Image 5: Setting the Destination Course</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption><p>Image 5: Setting the Destination Course</p></figcaption></figure>
 
 #### **Sync Actions Tab**
 
 In the **Sync Actions Tab**, you can choose your preferred data action. Your main options are **Full File Sync** and **Delta Sync**. Not sure about the differences? Check out this [comparison](sync-actions.md) for more details.
 
-<figure><img src="../../.gitbook/assets/image (713).png" alt=""><figcaption>Image 6: Sync Action Choices</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (713).png" alt=""><figcaption><p>Image 6: Sync Action Choices</p></figcaption></figure>
 
 #### **Post Sync Tab (Optional)**
 
-In the **Post Sync Tab**, you can use [Cinchy Query Language (CQL)](../../cql/the-basics-of-cql/README.md) to refine the post-sync data. For example, you could set up a post-sync script to push retrieved data values into a specific Cinchy table. You can find more on this in the [Post-sync scripts](advanced-settings/post-sync-scripts.md) page.
+In the **Post Sync Tab**, you can use [Cinchy Query Language (CQL)](../../cql/the-basics-of-cql/) to refine the post-sync data. For example, you could set up a post-sync script to push retrieved data values into a specific Cinchy table. You can find more on this in the [Post-sync scripts](advanced-settings/post-sync-scripts.md) page.
 
-<figure><img src="../../.gitbook/assets/image (660).png" alt=""><figcaption>Image 7: Mastering Post Sync Operations</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (660).png" alt=""><figcaption><p>Image 7: Mastering Post Sync Operations</p></figcaption></figure>
 
 #### **Jobs Tab (For Batch Data Syncs)**
 
 In the **Jobs tab**, you can start, monitor, and troubleshoot batch jobs. You can also view sync outputs or download detailed logs for analysis. For non-default user operations, ensure you have the right credentials and permissions.
 
-<figure><img src="../../.gitbook/assets/image (698).png" alt=""><figcaption>Image 8: Handling Batch Data Jobs</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (698).png" alt=""><figcaption><p>Image 8: Handling Batch Data Jobs</p></figcaption></figure>
 
 #### **Execution Tab (For Real-time Syncs)**
 
 Track potential issues with your real-time syncs. Syncs become operational once the Listener Config is enabled—no need for manual job starts.
 
-<figure><img src="../../.gitbook/assets/image (678).png" alt=""><figcaption>Image 9: Keeping an Eye on Execution</figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (678).png" alt=""><figcaption><p>Image 9: Keeping an Eye on Execution</p></figcaption></figure>
 
 ### Set up a data sync with Config XML
 
@@ -94,26 +95,28 @@ You can also set up a data sync in Cinchy by uploading a formatted XML into the 
 Unique XML patterns may exist across different sources and targets. If you're unfamiliar with this process, check out the [Delimited File source to Cinchy Table batch data sync example](batch-data-sync-example.md) first.
 {% endhint %}
 
-1.  **Access the Data Sync Config Table**: In the Cinchy platform, open the **Data Sync Configurations** table.
-<figure><img src="../../.gitbook/assets/image (177).png" alt=""><figcaption>Image 10: Data Sync Configurations table</figcaption></figure>
+1. **Access the Data Sync Config Table**: In the Cinchy platform, open the **Data Sync Configurations** table.
 
-2.  **Insert Data Sync XML**: For a new row, double-click the **Config XML** column and paste your **Data Sync XML**.
+<figure><img src="../../.gitbook/assets/image (177).png" alt=""><figcaption><p>Image 10: Data Sync Configurations table</p></figcaption></figure>
 
-3.  **Define Group Permissions**: Adjust the required permissions in the appropriate columns.
-
+2. **Insert Data Sync XML**: For a new row, double-click the **Config XML** column and paste your **Data Sync XML**.
+3. **Define Group Permissions**: Adjust the required permissions in the appropriate columns.
 4.  **Review the XML Data**: After finalizing your Data Sync XML, return to the **Data Sync Configurations** table.
-    <figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption>Image 11: Config XML Entry</figcaption></figure>
 
-        {% hint style="info" %}
-        The Config XML auto populates columns like Name and Config Version.
-        {% endhint %}
+    <figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption><p>Image 11: Config XML Entry</p></figcaption></figure>
 
-5.  **Initiate Sync with the CLI**: If you haven't installed the CLI, refer to the [CLI installation guide](../installation-and-maintenance/install-the-cli.md). Otherwise, launch PowerShell and navigate to the Cinchy CLI directory.
+{% hint style="info" %}
+```
+    The Config XML auto populates columns like Name and Config Version.
+    
+```
+{% endhint %}
 
-6.  **Run the CLI Command**:
+5. **Initiate Sync with the CLI**: If you haven't installed the CLI, refer to the [CLI installation guide](../installation-and-maintenance/install-the-cli.md). Otherwise, launch PowerShell and navigate to the Cinchy CLI directory.
+6. **Run the CLI Command**:
 
 ```bash
-.\Cinchy.CLI.exe syncdata -s "pilot.cinchy.co/Training/Cinchy/" -u "admin" -p "DESuEGqmx55yl2PYxa4ncc+5+bLkoVIFpgs0Lq6hkcU=" -f "Data Sync Name"
+.\Cinchy.Connections.CLI.exe syncdata -s "pilot.cinchy.co/Training/Cinchy/" -u "admin" -p "DESuEGqmx55yl2PYxa4ncc+5+bLkoVIFpgs0Lq6hkcU=" -f "Data Sync Name"
 ```
 
 More details on CLI commands can be found in the [CLI commands list](../cli-commands-list.md).
@@ -133,5 +136,5 @@ If you are setting up a real-time sync, you must set up a listener configuration
 
 The following pages show basic examples of both batch and real-time data syncs. Use these examples as a reference point for learning more about Cinchy data syncs.
 
-- [Batch Data Sync Example](batch-data-sync-example.md)
-- [Real-Time Data Sync Example](real-time-sync-example.md)
+* [Batch Data Sync Example](batch-data-sync-example.md)
+* [Real-Time Data Sync Example](real-time-sync-example.md)
