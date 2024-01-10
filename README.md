@@ -1,10 +1,12 @@
----
-description: This page provides a brief overview of data collaboration
----
-
 # Data Collaboration Overview
 
-**You are currently browsing the Cinchy v5.8 platform documentation.** For documentation about other versions of the platform, please navigate to the relevant space(s) via the drop-down menu in the upper left of the page.
+
+
+{% hint style="info" %}
+Documentation for Cinchy 5.9 has moved to a new site. Please visit [docs.cinchy.com](https://docs.cinchy.com) to access the latest documentation for Cinchy.
+{% endhint %}
+
+**You are currently browsing the Cinchy v5.8 platform documentation.** For documentation about other versions of the platform, please navigate to the relevant space(s) via the drop-down menu.
 
 ## What’s the purpose of Data Collaboration?
 
@@ -20,9 +22,9 @@ Over time, this never-ending cycle of copying data between fragmented apps gets 
 
 Facing the rising costs and complexities of traditional data integration? You're not alone. At Cinchy, we understand that the 'Integration Tax' is a growing burden for modern organizations. As your enterprise expands its technology stack, the maze of required integrations becomes exponentially more intricate and expensive to manage. It's not just about initial setup; maintenance, updates, and reconfigurations add up, consuming a large portion of your IT budget and holding back your agility.
 
-### **“Every year, as the level of new technologies and digital transformation grows, the amount spent on integration increases. So much so that companies collectively spend $700B globally.”**&#x20;
+### **“Every year, as the level of new technologies and digital transformation grows, the amount spent on integration increases. So much so that companies collectively spend $700B globally.”**
 
-_Source: Large Integration Company_&#x20;
+_Source: Large Integration Company_
 
 <figure><img src=".gitbook/assets/Screenshot 2023-10-23 at 9.05.37 AM.png" alt=""><figcaption><p>Image 2: The growing cost of integration</p></figcaption></figure>
 
@@ -32,17 +34,13 @@ That's where Cinchy's Data Collaboration Platform comes in. By introducing a pla
 
 ## **Using Data "Co-Production" to Accelerate IT Delivery**
 
-With data collaboration, you shift your approach from copy-based **integration for sharing back and forth between collaborators** to using an access-based real-time approach_._
-
-
+With data collaboration, you shift your approach from copy-based **integration for sharing back and forth between collaborators** to using an access-based real-time approach\_.\_
 
 <figure><img src=".gitbook/assets/Screenshot 2023-10-23 at 9.06.51 AM.png" alt=""><figcaption><p>Image 3: The shift to data collaboration via "co-production"</p></figcaption></figure>
 
 For every co-production use case built using cinchy, you're avoiding what otherwise would have been a bespoke integration-heavy solution. Also, individual solutions now "pay it forward" by liberating relevant data to participate in future collaboration use cases without any integration effort.
 
 The Cinchy data collaboration platform does for data what the **power grid** does for electricity. In the same way that buildings no longer need to generate their power thanks to the power grid, with a data collaboration platform, new solutions no longer need to manage, integrate, and protect their own data _(Image 4)._
-
-
 
 <figure><img src=".gitbook/assets/Screenshot 2023-10-23 at 9.09.33 AM.png" alt=""><figcaption><p>Image 4: Data collaboration is like the power grid</p></figcaption></figure>
 

@@ -5,6 +5,7 @@
 ## Release notes
 
 * [Release notes](release-notes/release-notes/README.md)
+  * [5.9 release notes](release-notes/release-notes/5.9-release-notes.md)
   * [5.8 Release Notes](release-notes/release-notes/5.8-release-notes.md)
   * [5.7 Release Notes](release-notes/release-notes/5.7-release-notes.md)
   * [5.6 Release Notes](release-notes/release-notes/5.6-release-notes.md)
