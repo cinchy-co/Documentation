@@ -6,47 +6,42 @@ description: This guide serves as a walkthrough of how to deploy v5 on IIS.
 
 ## Overview
 
-Cinchy version 5 on IIS comes bundled with common components such as
-Connections, Meta Forms, and the Event Listener. This page details the
-configuration and deployment instructions for the Cinchy Platform, including
-SSO.
+Cinchy version 5 on IIS comes bundled with common components such as Connections, Meta Forms, and the Event Listener. This page details the configuration and deployment instructions for the Cinchy Platform, including SSO.
 
 ## Prerequisites
 
 ### System Requirements
 
-- SQL SERVER 2017+
-- SSMS (optional)
-- Install IIS 7.5+ / enable IIS from Windows features
-- Dotnet 6
+* SQL SERVER 2017+
+* SSMS (optional)
+* Install IIS 7.5+ / enable IIS from Windows features
+* Dotnet 6
 
 ### DotNet 6 Installation
 
-- [DotNet Core 6 SDK which includes ASP.NET Core /.NET Core Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-- [DotNet Core 6 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.23-windows-hosting-bundle-installer)
+* [DotNet Core 6 SDK which includes ASP.NET Core /.NET Core Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+* [DotNet Core 6 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.23-windows-hosting-bundle-installer)
 
-{% hint style="warning" %} Dotnet 7 isn't supported with Cinchy 5.x
+{% hint style="warning" %}
+Dotnet 7 isn't supported with Cinchy 5.x
 {% endhint %}
 
 ### Minimum Hardware Requirements
 
-- 2 × 2 GHz Processor
-- 8 GB RAM
-- 4 GB Hard Disk storage available
+* 2 × 2 GHz Processor
+* 8 GB RAM
+* 4 GB Hard Disk storage available
 
 ### Minimum Database Server Hardware Recommendations
 
-- 4 × 2 GHz Processor
-- 12 GB RAM
-- Hard disk storage dependent upon use case. Cinchy maintains historical
-  versions of data and performs soft deletes which will add to the storage
-  requirements.
+* 4 × 2 GHz Processor
+* 12 GB RAM
+* Hard disk storage dependent upon use case. Cinchy maintains historical versions of data and performs soft deletes which will add to the storage requirements.
 
 ## Get Access to Cinchy.net (Cinchy Prod Access)
 
-- Access to Cinchy.net (Cinchy Prod) can be obtained during onboarding.
-- Alternatively, users can request access by sending an email to
-  [support@cinchy.com](mailto:support@cinchy.com).
+* Access to Cinchy.net (Cinchy Prod) can be obtained during onboarding.
+* Alternatively, users can request access by sending an email to [support@cinchy.com](mailto:support@cinchy.com).
 
 ### Access Cinchy Releases Table from Cinchy UI
 
@@ -56,35 +51,31 @@ Navigate to the **Cinchy Releases** table from the Cinchy user interface.
 
 Download the following items from the "Release Artifacts" column:
 
-- Cinchy VX.X.zip
-- Cinchy Connection
-- Cinchy Event Listener
-- Cinchy Meta-Forms (optional)
-- Cinchy Maintenance CLI (optional)
+* Cinchy VX.X.zip
+* Cinchy Connection
+* Cinchy Event Listener
+* Cinchy Meta-Forms (optional)
+* Cinchy Maintenance CLI (optional)
 
 ## Create a Database
 
-{% hint style="success" %} For more information about creating a database in SQL
-server, see the
-[Microsoft Create a database page](https://learn.microsoft.com/en-us/sql/relational-databases/databases/create-a-database?view=sql-server-ver16).
+{% hint style="success" %}
+For more information about creating a database in SQL server, see the [Microsoft Create a database page](https://learn.microsoft.com/en-us/sql/relational-databases/databases/create-a-database?view=sql-server-ver16).
 {% endhint %}
 
-1. On your SQL Server 2017+ instance, **create a new database** and name it
-   **Cinchy**. {% hint style="success" %} If you choose an alternate name, use
-   the name in the rest of the instructions instead of **Cinchy**. {% endhint %}
-2. Create a single user account with `db_owner privileges` for Cinchy to connect
-   to the database. If you choose to use Windows Authentication instead of SQL
-   Server Authentication, the authorized account must be the same account that
-   runs the IIS Application Pool.
+1. On your SQL Server 2017+ instance, **create a new database** and name it **Cinchy**.
+
+{% hint style="success" %}
+If you choose an alternate name, use the name in the rest of the instructions instead of \*\*Cinchy\*\*.
+{% endhint %}
+
+2. Create a single user account with `db_owner privileges` for Cinchy to connect to the database. If you choose to use Windows Authentication instead of SQL Server Authentication, the authorized account must be the same account that runs the IIS Application Pool.
 
 ## Create an IIS application pool
 
-1. On the Windows Server machine, launch an instance of PowerShell as
-   Administrator.
-2. Copy and run the PowerShell snippet below to create the application pool and
-   set its priorities. You can also manually create the app pool via the
-   [IIS Manager](https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/).
-3. Verify Db_name → Security → Users → select the user → properties → membership
+1. On the Windows Server machine, launch an instance of PowerShell as Administrator.
+2. Copy and run the PowerShell snippet below to create the application pool and set its priorities. You can also manually create the app pool via the [IIS Manager](https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/).
+3. Verify Db\_name → Security → Users → select the user → properties → membership
 
 ```powershell
 Import-Module WebAdministration
@@ -104,12 +95,11 @@ Set-ItemProperty "IIS:\AppPools\$applicationPoolNameWeb" -Name ProcessModel.idle
 Set-ItemProperty "IIS:\AppPools\$applicationPoolNameWeb" -Name Recycling.periodicRestart.privateMemory -Value 0
 ```
 
-3. If you use Windows Authentication in the database or want to run the
-   application under a different user account, execute the commands below to
-   change the application pool identity.
+3. If you use Windows Authentication in the database or want to run the application under a different user account, execute the commands below to change the application pool identity.
 
-{% hint style="info" %} You can also use an alternate name in the application
-pool. {% endhint %}
+{% hint style="info" %}
+You can also use an alternate name in the application pool.
+{% endhint %}
 
 ```powershell
 $credentials = (Get-Credential -Message "Please enter the Login credentials including your Domain Name").GetNetworkCredential()
@@ -123,16 +113,9 @@ Set-ItemProperty "IIS:\AppPools\$applicationPoolNameSSO" -name processModel.user
 
 ## Create the application directories
 
-1. Download and unzip the **"Cinchy vX.X"** application package from the
-   [Releases Table](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded).
-   This will create two directories: `Cinchy `and `CinchySSO`. For example, if
-   you unzip at the root of your C drive, the two directories will be
-   `C:\Cinchy `and `C:\CinchySSO`.
-1. Make sure your application pool accounts has read and execute access to these
-   directories.
-1.
-1. Run the below commands in the Administrator instance of PowerShell to create
-   separate directories for Errorlogs and Logs.
+1. Download and unzip the **"Cinchy vX.X"** application package from the [Releases Table](https://cinchy.net/Cinchy/Tables/1477?rowHeight=Expanded). This will create two directories: `Cinchy` and `CinchySSO`. For example, if you unzip at the root of your C drive, the two directories will be `C:\Cinchy` and `C:\CinchySSO`.
+2. Make sure your application pool accounts has read and execute access to these directories.
+3. Run the below commands in the Administrator instance of PowerShell to create separate directories for Errorlogs and Logs.
 
 ```powershell
 md C:\CinchyLogs\Cinchy
@@ -140,26 +123,21 @@ md C:\CinchyLogs\CinchySSO
 md C:\CinchyErrors
 ```
 
-{% hint style="info" %} You can create it under your single folder as well. For
-example, `md C:\your_folder_name\CinchyLogs\Cinchy`. If you do, make sure to
-replace any related directory instructions with the your folder path. pool.
+{% hint style="info" %}
+You can create it under your single folder as well. For example, `md C:\your_folder_name\CinchyLogs\Cinchy`. If you do, make sure to replace any related directory instructions with the your folder path. pool.
 {% endhint %}
 
 ## Update the CinchySSO appsettings.json
 
-1. Open the `C:\CinchySSO\appsettings.json` file in a text editor and update the
-   values below.
+1. Open the `C:\CinchySSO\appsettings.json` file in a text editor and update the values below.
 
 ### App Settings
 
 1. Under **AppSettings** section, update the values outlined in the table.
 
-{% hint style="info" %} Replace `<base url>` with your chosen protocol and
-domain. For example, if using HTTPS on `app.cinchy.co`, substitute `<base url>`
-with `https://app.cinchy.co`. For localhost, use `http://localhost/Cinchy`.
+{% hint style="info" %}
+Replace `<base url>` with your chosen protocol and domain. For example, if using HTTPS on `app.cinchy.co`, substitute `<base url>` with `https://app.cinchy.co`. For localhost, use `http://localhost/Cinchy`.
 {% endhint %}
-
-   <!-- markdown-link-check-enable -->
 
 | Parameter                   | Description                                                                       | Example                                                     |
 | --------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -172,8 +150,7 @@ with `https://app.cinchy.co`. For localhost, use `http://localhost/Cinchy`.
 
 #### SSO installation
 
-For more information on the SSO installation, please seee the
-[SSO installation page](../deployment-guides/deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/README.md)
+For more information on the SSO installation, please see the [SSO installation page](deployment-planning-overview-and-checklist/deployment-prerequisites/single-sign-on-sso-integration/)
 
 ### Connection string
 
@@ -199,12 +176,11 @@ To connect the application to the database, you must set the `SqlServer` value.
 
 ### Serilog
 
-Cinchy has a `serilog` property that configures where the logs are located. In
-the below code, update the following:
+Cinchy has a `serilog` property that configures where the logs are located. In the below code, update the following:
 
-- `"Name"` must be set to "File" so it writes to a physical file on the disk.
-- Set `"path"` to the file path to where you want it to log.
-- Replace `"WriteTo"` section with following:
+* `"Name"` must be set to "File" so it writes to a physical file on the disk.
+* Set `"path"` to the file path to where you want it to log.
+* Replace `"WriteTo"` section with following:
 
 ```json
 "WriteTo": [
@@ -246,8 +222,7 @@ the below code, update the following:
 
 ### Setup the connection string
 
-To connect the application to the database, the `SqlServer` value needs to be
-set.
+To connect the application to the database, the `SqlServer` value needs to be set.
 
 #### SQL Server Authentication example
 
@@ -264,9 +239,7 @@ set.
 ## Create the IIS applications
 
 1. Open an administrator instance of PowerShell.
-2. Execute the below commands to create the IIS applications and enable
-   anonymous authentication. (This is required to allow authentication to be
-   handled by the application).
+2. Execute the below commands to create the IIS applications and enable anonymous authentication. (This is required to allow authentication to be handled by the application).
 
 ```powershell
 New-WebApplication -Name Cinchy -Site 'Default Web Site' -PhysicalPath C:\Cinchy -ApplicationPool CinchyWeb
@@ -274,23 +247,21 @@ New-WebApplication -Name CinchySSO -Site 'Default Web Site' -PhysicalPath C:\Cin
 Set-WebConfigurationProperty -Filter "/system.webServer/security/authentication/anonymousAuthentication" -Name Enabled -Value True -PSPath IIS:\ -Location "Default Web Site"
 ```
 
-{% hint style="info" %} To enable HTTPS, you must load the server certificate
-and the standard IIS configuration completed at the Web Site level to add the
-binding. {% endhint %}
+{% hint style="info" %}
+To enable HTTPS, you must load the server certificate and the standard IIS configuration completed at the Web Site level to add the binding.
+{% endhint %}
 
 ## Test the application
 
-1. Access the `<base url>/Cinchy` (http://app.cinchy.co/Cinchy) through a web
-   browser.
+1. Access the `<base url>/Cinchy` (http://app.cinchy.co/Cinchy) through a web browser.
 2. Once the login screen appears, enter the credentials:
-   - The default username is **admin** and the password is **cinchy**.
-   - You will be prompted to change your password the first time you log in.
+   * The default username is **admin** and the password is **cinchy**.
+   * You will be prompted to change your password the first time you log in.
 
 ## Next steps
 
-Navigate to the following sub-pages to deploy the following bundled v5
-components:
+Navigate to the following sub-pages to deploy the following bundled v5 components:
 
-- [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
-- [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
-- [Maintenance CLI](../../data-syncs/installation-and-maintenance/install-the-cli.md)
+* [Connections Deployment](../../data-syncs/installation-and-maintenance/installing-connections.md)
+* [Event Listener/Worker Deployment](../../data-syncs/installation-and-maintenance/installing-the-worker-listener.md)
+* [Maintenance CLI](../../data-syncs/installation-and-maintenance/install-the-cli.md)
